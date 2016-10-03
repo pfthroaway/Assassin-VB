@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5845587F-CCD7-4FED-A415-0430B61178CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Assassin.My.MyApplication</StartupObject>
+    <RootNamespace>Assassin</RootNamespace>
+    <AssemblyName>Assassin</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Assassin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Assassin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A89E40441E45D438FD95A1AF9422FE42050A600B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Assassin_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Enemies Form.Designer.vb">
+      <DependentUpon>Admin Enemies Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Enemies Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Form.Designer.vb">
+      <DependentUpon>Admin Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Guild Form.Designer.vb">
+      <DependentUpon>Admin Guild Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Guild Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Users Form.designer.vb">
+      <DependentUpon>Admin Users Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Users Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Login Form.Designer.vb">
+      <DependentUpon>Admin Login Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Login Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Armor.vb" />
+    <Compile Include="Bank Form.Designer.vb">
+      <DependentUpon>Bank Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Armoury Form.Designer.vb">
+      <DependentUpon>Armoury Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Armoury Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Battle Form.Designer.vb">
+      <DependentUpon>Battle Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Battle Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BattleUser.vb" />
+    <Compile Include="Bar Form.Designer.vb">
+      <DependentUpon>Bar Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bar Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Character Form.Designer.vb">
+      <DependentUpon>Character Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Character Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild Options Form.Designer.vb">
+      <DependentUpon>Guild Options Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild Options Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thieves Guild Form.Designer.vb">
+      <DependentUpon>Thieves Guild Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Thieves Guild Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions.vb" />
+    <Compile Include="Guild Donate Form.Designer.vb">
+      <DependentUpon>Guild Donate Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild Donate Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild Transfer Form.Designer.vb">
+      <DependentUpon>Guild Transfer Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild Transfer Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help Form.Designer.vb">
+      <DependentUpon>Help Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Applications Form.Designer.vb">
+      <DependentUpon>Manage Applications Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Applications Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild Manage Form.Designer.vb">
+      <DependentUpon>Guild Manage Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild Manage Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Henchman.vb" />
+    <Compile Include="Hire Henchmen Form.Designer.vb">
+      <DependentUpon>Hire Henchmen Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hire Henchmen Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jobs Form.Designer.vb">
+      <DependentUpon>Jobs Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Jobs Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members Form.Designer.vb">
+      <DependentUpon>Members Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Members Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages Form.Designer.vb">
+      <DependentUpon>Messages Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change Password Form.Designer.vb">
+      <DependentUpon>Change Password Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Change Password Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mystic Form.Designer.vb">
+      <DependentUpon>Mystic Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mystic Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raid Form.Designer.vb">
+      <DependentUpon>Raid Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Raid Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rob Form.Designer.vb">
+      <DependentUpon>Rob Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rob Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Court Form.Designer.vb">
+      <DependentUpon>Court Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Court Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild Form.Designer.vb">
+      <DependentUpon>Guild Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild List Form.Designer.vb">
+      <DependentUpon>Guild List Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guild List Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guild.vb" />
+    <Compile Include="Inventory Form.Designer.vb">
+      <DependentUpon>Inventory Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jail Form.Designer.vb">
+      <DependentUpon>Jail Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Jail Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual Form.Designer.vb">
+      <DependentUpon>Manual Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manual Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New User Form.designer.vb">
+      <DependentUpon>New User Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="New User Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enemy.vb" />
+    <Compile Include="Game Form.Designer.vb">
+      <DependentUpon>Game Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form.Designer.vb">
+      <DependentUpon>Main Form.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Assassination Form.Designer.vb">
+      <DependentUpon>Assassination Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Assassination Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shops Form.Designer.vb">
+      <DependentUpon>Shops Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shops Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Train Form.designer.vb">
+      <DependentUpon>Train Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Train Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.vb" />
+    <Compile Include="Weapon.vb" />
+    <Compile Include="Weapons Form.Designer.vb">
+      <DependentUpon>Weapons Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Weapons Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin Enemies Form.resx">
+      <DependentUpon>Admin Enemies Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form.resx">
+      <DependentUpon>Admin Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Guild Form.resx">
+      <DependentUpon>Admin Guild Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Users Form.resx">
+      <DependentUpon>Admin Users Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Login Form.resx">
+      <DependentUpon>Admin Login Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Form.resx">
+      <DependentUpon>Bank Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Armoury Form.resx">
+      <DependentUpon>Armoury Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Battle Form.resx">
+      <DependentUpon>Battle Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bar Form.resx">
+      <DependentUpon>Bar Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Character Form.resx">
+      <DependentUpon>Character Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild Options Form.resx">
+      <DependentUpon>Guild Options Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thieves Guild Form.resx">
+      <DependentUpon>Thieves Guild Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild Donate Form.resx">
+      <DependentUpon>Guild Donate Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild Transfer Form.resx">
+      <DependentUpon>Guild Transfer Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help Form.resx">
+      <DependentUpon>Help Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Applications Form.resx">
+      <DependentUpon>Manage Applications Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild Manage Form.resx">
+      <DependentUpon>Guild Manage Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hire Henchmen Form.resx">
+      <DependentUpon>Hire Henchmen Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jobs Form.resx">
+      <DependentUpon>Jobs Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members Form.resx">
+      <DependentUpon>Members Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages Form.resx">
+      <DependentUpon>Messages Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change Password Form.resx">
+      <DependentUpon>Change Password Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mystic Form.resx">
+      <DependentUpon>Mystic Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raid Form.resx">
+      <DependentUpon>Raid Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rob Form.resx">
+      <DependentUpon>Rob Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Court Form.resx">
+      <DependentUpon>Court Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild Form.resx">
+      <DependentUpon>Guild Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guild List Form.resx">
+      <DependentUpon>Guild List Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Form.resx">
+      <DependentUpon>Inventory Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jail Form.resx">
+      <DependentUpon>Jail Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual Form.resx">
+      <DependentUpon>Manual Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New User Form.resx">
+      <DependentUpon>New User Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game Form.resx">
+      <DependentUpon>Game Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Form.resx">
+      <DependentUpon>Main Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assassination Form.resx">
+      <DependentUpon>Assassination Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shops Form.resx">
+      <DependentUpon>Shops Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Train Form.resx">
+      <DependentUpon>Train Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weapons Form.resx">
+      <DependentUpon>Weapons Form.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question-25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assassin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
