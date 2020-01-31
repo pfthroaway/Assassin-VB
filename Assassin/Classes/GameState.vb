@@ -224,6 +224,8 @@ Namespace Classes
 
 #End Region
 
+#Region "Database"
+
         ''' <summary>Manages all the necessary files for the application.</summary>
         Public Sub FileManagement()
 
@@ -238,6 +240,8 @@ Namespace Classes
         Public Sub VerifyDatabaseIntegrity()
             DatabaseInteraction.VerifyDatabaseIntegrity()
         End Sub
+
+#End Region
 
         ''' <summary>Changes the admin password in the database.</summary>
         ''' <param name="newPass">New password</param>

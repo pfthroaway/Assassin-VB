@@ -12,120 +12,28 @@ Imports Assassin.Classes.Items
 
 Namespace Classes.Entities
 
+    ''' <summary>Represents an <see cref="Enemy"/> that the <see cref="User"/> fights.</summary>
     Public Class Enemy
-        Private _name As String
+        Inherits LivingEntity
 
-        Private _level As Integer, _currentEndurance As Integer, _maximumEndurance As Integer, _goldOnHand As Integer, _weaponSkill As Integer, _blocking As Integer,
-                _slipping As Integer
+#Region "Modifying Properties"
 
-        Private _weapon As New Weapon()
-        Private _armor As New Armor()
+        ''' <summary>The <see cref="Enemy"/>'s Weapon.</summary>
+        Public Property Weapon As New Weapon()
 
-#Region "Properties"
+        ''' <summary>The <see cref="Enemy"/>'s Armor.</summary>
+        Public Property Armor As New Armor()
 
-        Public Property Name() As String
-            Get
-                Return _name
-            End Get
-            Set
-                _name = Value
-            End Set
-        End Property
-
-        Public Property Level() As Integer
-            Get
-                Return _level
-            End Get
-            Set
-                _level = Value
-            End Set
-        End Property
-
-        Public Property CurrentEndurance() As Integer
-            Get
-                Return _currentEndurance
-            End Get
-            Set
-                _currentEndurance = Value
-            End Set
-        End Property
-
-        Public Property MaximumEndurance() As Integer
-            Get
-                Return _maximumEndurance
-            End Get
-            Set
-                _maximumEndurance = Value
-            End Set
-        End Property
-
-        Public ReadOnly Property EnduranceToString() As String
-            Get
-                Return CurrentEndurance.ToString("N0") + " / " + MaximumEndurance.ToString("N0")
-            End Get
-        End Property
-
-        Public Property Weapon() As Weapon
-            Get
-                Return _weapon
-            End Get
-            Set
-                _weapon = Value
-            End Set
-        End Property
-
-        Public Property Armor() As Armor
-            Get
-                Return _armor
-            End Get
-            Set
-                _armor = Value
-            End Set
-        End Property
-
-        Public Property GoldOnHand() As Integer
-            Get
-                Return _goldOnHand
-            End Get
-            Set
-                _goldOnHand = Value
-            End Set
-        End Property
-
-        Public Property WeaponSkill() As Integer
-            Get
-                Return _weaponSkill
-            End Get
-            Set
-                _weaponSkill = Value
-            End Set
-        End Property
-
-        Public Property Blocking() As Integer
-            Get
-                Return _blocking
-            End Get
-            Set
-                _blocking = Value
-            End Set
-        End Property
-
-        Public Property Slipping() As Integer
-            Get
-                Return _slipping
-            End Get
-            Set
-                _slipping = Value
-            End Set
-        End Property
+        ''' <summary>The <see cref="Enemy"/>'s skill with their Weapon.</summary>
+        Public Property WeaponSkill As Integer
 
 #End Region
 
 #Region "Health Manipulation"
 
-        ''' <summary>The Enemy takes damage.</summary>
+        ''' <summary>The <see cref="Enemy"/> takes damage.</summary>
         ''' <param name="damage">Amount of damage taken.</param>
-        ''' <returns>String saying the Enemy took damage</returns>
+        ''' <returns>String saying the <see cref="Enemy"/> took damage</returns>
         Friend Function TakeDamage(damage As Integer) As String
             CurrentEndurance -= damage
             Return $"The {Name} takes {damage:N0} damage."
@@ -136,28 +44,20 @@ Namespace Classes.Entities
 #Region "Override Operators"
 
         Public Overloads Function Equals(left As Enemy, right As Enemy) As Boolean
-            If ReferenceEquals(Nothing, left) AndAlso ReferenceEquals(Nothing, right) Then
+            If left Is Nothing AndAlso right Is Nothing Then
                 Return True
             End If
-            If ReferenceEquals(Nothing, left) Xor ReferenceEquals(Nothing, right) Then
+            If left Is Nothing Xor right Is Nothing Then
                 Return False
             End If
             Return (left.Name = right.Name) AndAlso (left.Level = right.Level) AndAlso (left.CurrentEndurance = right.CurrentEndurance) AndAlso (left.MaximumEndurance = right.MaximumEndurance) AndAlso (left.Weapon = right.Weapon) AndAlso (left.Armor = right.Armor) AndAlso (left.GoldOnHand = right.GoldOnHand) AndAlso (left.WeaponSkill = right.WeaponSkill) AndAlso (left.Blocking = right.Blocking) AndAlso (left.Slipping = right.Slipping)
         End Function
 
         Public Overloads Function Equals(otherEnemy As Enemy) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, otherEnemy)
         End Function
 
         Public Overloads Overrides Function Equals(obj As Object) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, TryCast(obj, Enemy))
         End Function
 
@@ -181,7 +81,7 @@ Namespace Classes.Entities
 
 #Region "Constructors"
 
-        ''' <summary>Initializes a new instance of the Enemy class.</summary>
+        ''' <summary>Initializes a new instance of the <see cref="Enemy"/> class.</summary>
         Friend Sub New()
             Name = ""
             Level = 1
@@ -195,17 +95,17 @@ Namespace Classes.Entities
             Slipping = 10
         End Sub
 
-        ''' <summary>Initializes a new instance of the Enemy class by assigning Property values.</summary>
-        ''' <param name="newName">Name of Enemy</param>
-        ''' <param name="newLevel">Level of Enemy</param>
-        ''' <param name="newCurrentEndurance">Amount of Endurance the Enemy currently has</param>
-        ''' <param name="newMaximumEndurance">Maximum amount of Endurance the Enemy can have</param>
-        ''' <param name="newWeapon">Weapon equipped by the Enemy</param>
-        ''' <param name="newArmor">Armor equipped by the Enemy</param>
-        ''' <param name="newGoldOnHand">Amount of Gold the Enemy is currently carrying</param>
-        ''' <param name="newWeaponSkill">Amount of skill the Enemy has with their Weapon</param>
-        ''' <param name="newBlocking">Amount of skill the Enemy has with blocking incoming attacks</param>
-        ''' <param name="newSlipping">Amount of skill the Enemy has with dodging attacks and fleeing battles</param>
+        ''' <summary>Initializes a new instance of the <see cref="Enemy"/> class by assigning Property values.</summary>
+        ''' <param name="newName">Name of <see cref="Enemy"/></param>
+        ''' <param name="newLevel">Level of <see cref="Enemy"/></param>
+        ''' <param name="newCurrentEndurance">Amount of Endurance the <see cref="Enemy"/> currently has</param>
+        ''' <param name="newMaximumEndurance">Maximum amount of Endurance the <see cref="Enemy"/> can have</param>
+        ''' <param name="newWeapon">Weapon equipped by the <see cref="Enemy"/></param>
+        ''' <param name="newArmor">Armor equipped by the <see cref="Enemy"/></param>
+        ''' <param name="newGoldOnHand">Amount of Gold the <see cref="Enemy"/> is currently carrying</param>
+        ''' <param name="newWeaponSkill">Amount of skill the <see cref="Enemy"/> has with their Weapon</param>
+        ''' <param name="newBlocking">Amount of skill the <see cref="Enemy"/> has with blocking incoming attacks</param>
+        ''' <param name="newSlipping">Amount of skill the <see cref="Enemy"/> has with dodging attacks and fleeing battles</param>
         Friend Sub New(newName As String, newLevel As Integer, newCurrentEndurance As Integer, newMaximumEndurance As Integer, newWeapon As Weapon, newArmor As Armor, newGoldOnHand As Integer, newWeaponSkill As Integer, newBlocking As Integer, newSlipping As Integer)
             Name = newName
             Level = newLevel
@@ -219,10 +119,8 @@ Namespace Classes.Entities
             Slipping = newSlipping
         End Sub
 
-        ''' <summary>
-        ''' Replaces this instance of Enemy with another instance.
-        ''' </summary>
-        ''' <param name="otherEnemy">Enemy to replace this instance</param>
+        ''' <summary>Replaces this instance of <see cref="Enemy"/> with another instance.</summary>
+        ''' <param name="otherEnemy"><see cref="Enemy"/> to replace this instance</param>
         Friend Sub New(otherEnemy As Enemy)
             Name = otherEnemy.Name
             Level = otherEnemy.Level

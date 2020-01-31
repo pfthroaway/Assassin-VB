@@ -15,335 +15,65 @@ Namespace Classes.Entities
 
     ''' <summary>Represents a character in the game.</summary>
     Public Class User
-        Private _name As String, _password As String, _currentLocation As String
-
-        Private _level As Integer, _experience As Integer, _skillPoints As Integer, _currentEndurance As Integer, _maximumEndurance As Integer, _hunger As Integer,
-                _thirst As Integer, _lockpicks As Integer, _goldOnHand As Integer, _goldInBank As Integer, _goldOnLoan As Integer, _lightWeaponSkill As Integer,
-                _heavyWeaponSkill As Integer, _twoHandedWeaponSkill As Integer, _blocking As Integer, _slipping As Integer, _stealth As Integer, _henchmenLevel1 As Integer,
-                _henchmenLevel2 As Integer, _henchmenLevel3 As Integer, _henchmenLevel4 As Integer, _henchmenLevel5 As Integer
-
-        Private _alive As Boolean, _shovel As Boolean, _lantern As Boolean, _amulet As Boolean
-        Private _currentWeaponType As WeaponType
-        Private _lightWeapon As Weapon, _heavyWeapon As Weapon, _twoHandedWeapon As Weapon
-        Private _armor As New Armor()
-        Private _potion As Potion
+        Inherits LivingEntity
 
 #Region "Modifying Properties"
 
-        Public Property Name As String
-            Get
-                Return _name
-            End Get
-            Set(value As String)
-                _name = value
-            End Set
-        End Property
-
         Public Property Password As String
-            Get
-                Return _password
-            End Get
-            Set(value As String)
-                _password = value
-            End Set
-        End Property
-
-        Public Property Level As Integer
-            Get
-                Return _level
-            End Get
-            Set(value As Integer)
-                _level = value
-            End Set
-        End Property
 
         Public Property Experience As Integer
-            Get
-                Return _experience
-            End Get
-            Set(value As Integer)
-                _experience = value
-            End Set
-        End Property
 
         Public Property SkillPoints As Integer
-            Get
-                Return _skillPoints
-            End Get
-            Set(value As Integer)
-                _skillPoints = value
-            End Set
-        End Property
 
         Public Property Alive As Boolean
-            Get
-                Return _alive
-            End Get
-            Set(value As Boolean)
-                _alive = value
-            End Set
-        End Property
 
         Public Property CurrentLocation As String
-            Get
-                Return _currentLocation
-            End Get
-            Set(value As String)
-                _currentLocation = value
-            End Set
-        End Property
-
-        Public Property CurrentEndurance As Integer
-            Get
-                Return _currentEndurance
-            End Get
-            Set(value As Integer)
-                _currentEndurance = value
-            End Set
-        End Property
-
-        Public Property MaximumEndurance As Integer
-            Get
-                Return _maximumEndurance
-            End Get
-            Set(value As Integer)
-                _maximumEndurance = value
-            End Set
-        End Property
 
         Public Property Hunger As Integer
-            Get
-                Return _hunger
-            End Get
-            Set(value As Integer)
-                _hunger = value
-            End Set
-        End Property
 
         Public Property Thirst As Integer
-            Get
-                Return _thirst
-            End Get
-            Set(value As Integer)
-                _thirst = value
-            End Set
-        End Property
 
         Public Property CurrentWeaponType As WeaponType
-            Get
-                Return _currentWeaponType
-            End Get
-            Set(value As WeaponType)
-                _currentWeaponType = value
-            End Set
-        End Property
 
         Public Property LightWeapon As Weapon
-            Get
-                Return _lightWeapon
-            End Get
-            Set(value As Weapon)
-                _lightWeapon = value
-            End Set
-        End Property
 
         Public Property HeavyWeapon As Weapon
-            Get
-                Return _heavyWeapon
-            End Get
-            Set(value As Weapon)
-                _heavyWeapon = value
-            End Set
-        End Property
 
         Public Property TwoHandedWeapon As Weapon
-            Get
-                Return _twoHandedWeapon
-            End Get
-            Set(value As Weapon)
-                _twoHandedWeapon = value
-            End Set
-        End Property
 
-        Public Property Armor As Armor
-            Get
-                Return _armor
-            End Get
-            Set(value As Armor)
-                _armor = value
-            End Set
-        End Property
+        Public Property Armor As New Armor()
 
         Public Property Potion As Potion
-            Get
-                Return _potion
-            End Get
-            Set(value As Potion)
-                _potion = value
-            End Set
-        End Property
 
         Public Property Lockpicks As Integer
-            Get
-                Return _lockpicks
-            End Get
-            Set(value As Integer)
-                _lockpicks = value
-            End Set
-        End Property
 
         Public Property Shovel As Boolean
-            Get
-                Return _shovel
-            End Get
-            Set(value As Boolean)
-                _shovel = value
-            End Set
-        End Property
 
         Public Property Lantern As Boolean
-            Get
-                Return _lantern
-            End Get
-            Set(value As Boolean)
-                _lantern = value
-            End Set
-        End Property
 
         Public Property Amulet As Boolean
-            Get
-                Return _amulet
-            End Get
-            Set(value As Boolean)
-                _amulet = value
-            End Set
-        End Property
-
-        Public Property GoldOnHand As Integer
-            Get
-                Return _goldOnHand
-            End Get
-            Set(value As Integer)
-                _goldOnHand = value
-            End Set
-        End Property
 
         Public Property GoldInBank As Integer
-            Get
-                Return _goldInBank
-            End Get
-            Set(value As Integer)
-                _goldInBank = value
-            End Set
-        End Property
 
         Public Property GoldOnLoan As Integer
-            Get
-                Return _goldOnLoan
-            End Get
-            Set(value As Integer)
-                _goldOnLoan = value
-            End Set
-        End Property
 
         Public Property LightWeaponSkill As Integer
-            Get
-                Return _lightWeaponSkill
-            End Get
-            Set(value As Integer)
-                _lightWeaponSkill = value
-            End Set
-        End Property
 
         Public Property HeavyWeaponSkill As Integer
-            Get
-                Return _heavyWeaponSkill
-            End Get
-            Set(value As Integer)
-                _heavyWeaponSkill = value
-            End Set
-        End Property
 
         Public Property TwoHandedWeaponSkill As Integer
-            Get
-                Return _twoHandedWeaponSkill
-            End Get
-            Set(value As Integer)
-                _twoHandedWeaponSkill = value
-            End Set
-        End Property
-
-        Public Property Blocking As Integer
-            Get
-                Return _blocking
-            End Get
-            Set(value As Integer)
-                _blocking = value
-            End Set
-        End Property
-
-        Public Property Slipping As Integer
-            Get
-                Return _slipping
-            End Get
-            Set(value As Integer)
-                _slipping = value
-            End Set
-        End Property
 
         Public Property Stealth As Integer
-            Get
-                Return _stealth
-            End Get
-            Set(value As Integer)
-                _stealth = value
-            End Set
-        End Property
 
         Public Property HenchmenLevel1 As Integer
-            Get
-                Return _henchmenLevel1
-            End Get
-            Set(value As Integer)
-                _henchmenLevel1 = value
-            End Set
-        End Property
 
         Public Property HenchmenLevel2 As Integer
-            Get
-                Return _henchmenLevel2
-            End Get
-            Set(value As Integer)
-                _henchmenLevel2 = value
-            End Set
-        End Property
 
         Public Property HenchmenLevel3 As Integer
-            Get
-                Return _henchmenLevel3
-            End Get
-            Set(value As Integer)
-                _henchmenLevel3 = value
-            End Set
-        End Property
 
         Public Property HenchmenLevel4 As Integer
-            Get
-                Return _henchmenLevel4
-            End Get
-            Set(value As Integer)
-                _henchmenLevel4 = value
-            End Set
-        End Property
 
         Public Property HenchmenLevel5 As Integer
-            Get
-                Return _henchmenLevel5
-            End Get
-            Set(value As Integer)
-                _henchmenLevel5 = value
-            End Set
-        End Property
 
 #End Region
 
@@ -365,7 +95,7 @@ Namespace Classes.Entities
 
         Public ReadOnly Property CurrentWeaponSkill As Integer
             Get
-                Select Case (CurrentWeaponType)
+                Select Case CurrentWeaponType
                     Case WeaponType.Light
                         Return LightWeaponSkill
                     Case WeaponType.Heavy
@@ -386,12 +116,6 @@ Namespace Classes.Entities
         Public ReadOnly Property SkillPointsToString As String
             Get
                 Return $"{SkillPoints:N0} Skill Points Available"
-            End Get
-        End Property
-
-        Public ReadOnly Property EnduranceToString As String
-            Get
-                Return $"{CurrentEndurance:N0} / {MaximumEndurance:N0}"
             End Get
         End Property
 

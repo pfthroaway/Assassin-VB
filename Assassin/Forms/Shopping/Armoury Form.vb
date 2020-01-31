@@ -15,6 +15,7 @@ Imports Assassin.Classes.Items
 Namespace Forms.Shopping
 
     Public Class FrmArmor
+        ' TODO Find out why armor is out of order and doesn't show value.
 
         Dim _nl As String = ControlChars.NewLine 'new line
         Public BlnLoaded As Boolean = False     'has form loaded?
