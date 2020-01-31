@@ -176,7 +176,7 @@ Namespace Forms
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
             FrmBattle.Show()
-            FrmBattle.surprise()
+            FrmBattle.Surprise()
             If FrmBattle.txtBattle.TextLength = 0 Then FrmBattle.txtBattle.Text = "You stalk your opponent."
             FrmBattle.Display()
             FrmBattle.BlnJob = True

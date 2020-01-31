@@ -8,6 +8,7 @@ Imports Extensions
 Imports Extensions.DatabaseHelp
 Imports Extensions.DataTypeHelpers
 Imports System.Data.SQLite
+Imports System.IO
 Imports System.Reflection
 Imports System.Threading.Tasks
 
@@ -17,12 +18,13 @@ Namespace Classes.Database
         Implements IDatabaseInteraction
 
         Private Const _databasename As String = "Assassin.sqlite"
-        ReadOnly _con As String = $"Data Source = {_databasename}; foreign keys = TRUE; Version=3"
+        ReadOnly UsersDatabaseLocation As String = Path.Combine(AppData.Location, _databasename)
+        ReadOnly _con As String = $"Data Source = {UsersDatabaseLocation}; foreign keys = TRUE; Version=3"
 
         ''' <summary>Verifies that the requested database exists and that its file size is greater than zero. If not, it extracts the embedded database file to the local output folder.</summary>
         Public Sub VerifyDatabaseIntegrity() Implements IDatabaseInteraction.VerifyDatabaseIntegrity
             Functions.VerifyFileIntegrity(
-                Assembly.GetExecutingAssembly().GetManifestResourceStream($"Sulimn.{_databasename}"), _databasename)
+                Assembly.GetExecutingAssembly().GetManifestResourceStream($"Assassin.{_databasename}"), _databasename, AppData.Location)
         End Sub
 
         ''' <summary>Changes the admin password in the database.</summary>

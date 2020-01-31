@@ -277,7 +277,7 @@ Namespace Forms
                     Await MemberJoinsGuild(newUser, AllGuilds(0))
 
                     FrmGame.Show()
-                    FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}!\n\nYou enter the city of thieves to take your place among the legends!"
+                    FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}! {ControlChars.NewLine + ControlChars.NewLine}You enter the city of thieves to take your place among the legends!"
                     FrmGame.Display()
                     _blnStart = True
                     Me.Close()

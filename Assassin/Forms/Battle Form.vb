@@ -120,7 +120,7 @@ Namespace Forms
         End Function
 
         Public Sub AddText(newText As String)
-            AddTextToTextBox(txtBattle, newText)
+            AddTextToTextBox(TxtBattle, newText)
         End Sub
 
         Public Sub Display()
@@ -552,7 +552,7 @@ Namespace Forms
 
         End Sub
 
-        Public Sub surprise()
+        Public Sub Surprise()
             '* * * * *
             '* This method determines if you surprise the enemy when first attacking them.
             '* * * * *
@@ -729,10 +729,10 @@ Namespace Forms
                 If BlnJob = False Then
                     FrmGame.Show()
                     FrmGame.Display()
-                    FrmGame.AddText(txtBattle.Text)
+                    FrmGame.AddText(TxtBattle.Text)
                 Else
                     FrmJobs.Show()
-                    FrmJobs.AddText(txtBattle.Text)
+                    FrmJobs.AddText(TxtBattle.Text)
                     FrmJobs.DisableButtons()
                     If _blnWin = True Then
                         FrmJobs.ArrText.Add("You take your opponent's engraved weapon back to your employer.")

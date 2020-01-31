@@ -2,6 +2,7 @@
 Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Items
 Imports Extensions
+Imports System.IO
 Imports System.Threading.Tasks
 
 Namespace Classes
@@ -223,6 +224,16 @@ Namespace Classes
 
 #End Region
 
+        ''' <summary>Manages all the necessary files for the application.</summary>
+        Public Sub FileManagement()
+
+            If Not Directory.Exists(AppData.Location) Then
+                Directory.CreateDirectory(AppData.Location)
+            End If
+
+            VerifyDatabaseIntegrity()
+        End Sub
+
         ''' <summary>Verifies that the requested database exists and that its file size is greater than zero. If not, it extracts the embedded database file to the local output folder.</summary>
         Public Sub VerifyDatabaseIntegrity()
             DatabaseInteraction.VerifyDatabaseIntegrity()
@@ -245,7 +256,7 @@ Namespace Classes
 
         ''' <summary>Loads almost everything required from the database.</summary>
         Public Async Function LoadAll() As Task
-            VerifyDatabaseIntegrity()
+            FileManagement()
             Await LoadAdminPasssword()
             Await LoadArmor()
             Await LoadGuilds()

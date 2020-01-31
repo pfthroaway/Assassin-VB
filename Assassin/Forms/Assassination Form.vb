@@ -90,7 +90,7 @@ Namespace Forms
             If _blnBattle = True Then    'if going to battle
                 FrmBattle.Show()
                 FrmBattle.TxtBattle.Text = $"You approach the {CurrentEnemy.Name}.\n\n{TxtAssassinate.Text}"
-                FrmBattle.surprise()
+                FrmBattle.Surprise()
                 FrmBattle.Display()
             Else                        'if not going to battle
                 FrmGame.Show()

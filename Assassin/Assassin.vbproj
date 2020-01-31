@@ -128,6 +128,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppData.vb" />
     <Compile Include="Classes\Database\IDatabaseInteraction.vb" />
     <Compile Include="Classes\Database\SQLiteDatabaseInteraction.vb" />
     <Compile Include="Classes\Enums\Stance.vb" />
@@ -535,6 +536,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EmbeddedResource Include="Assassin.sqlite" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
