@@ -1,43 +1,24 @@
 ﻿Namespace Classes.Items
 
+    ''' <summary>Represents an <see cref="Item"/> that can be carried or used.</summary>
     Public Class Item
-        Dim _name As String
-        Dim _value As Integer
-        Dim _hidden As Boolean
 
 #Region "Modifying Properties"
 
+        ''' <summary>The name of the <see cref="Item"/>.</summary>
         Public Property Name As String
-            Get
-                Return _name
-            End Get
-            Set
-                _name = Value
-            End Set
-        End Property
 
+        ''' <summary>The value of the <see cref="Item"/>.</summary>
         Public Property Value As Integer
-            Get
-                Return _value
-            End Get
-            Set
-                _value = Value
-            End Set
-        End Property
 
+        ''' <summary>Is the <see cref="Item"/> hidden from being sold?</summary>
         Public Property Hidden As Boolean
-            Get
-                Return _hidden
-            End Get
-            Set
-                _hidden = Value
-            End Set
-        End Property
 
 #End Region
 
 #Region "Helper Properties"
 
+        ''' <summary>The value of the <see cref="Item"/>, formatted.</summary>
         Public ReadOnly Property ValueToString As String
             Get
                 Return Value.ToString("N0")

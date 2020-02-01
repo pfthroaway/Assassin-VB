@@ -12,54 +12,33 @@ Imports Assassin.Classes.Enums
 
 Namespace Classes.Items
 
+    ''' <summary>Represents a <see cref="Weapon"/> that can do damage in a battle.</summary>
     Public Class Weapon
         Inherits Item
-        Private _damage As Integer
-        Private _type As WeaponType
 
+        ''' <summary>Amount of damage the <see cref="Weapon"/> does.</summary>
         Public Property Damage As Integer
-            Get
-                Return _damage
-            End Get
-            Set(val As Integer)
-                _damage = val
-            End Set
-        End Property
 
+        ''' <summary>The <see cref="WeaponType"/> of the <see cref="Weapon"/>.</summary>
         Public Property Type As WeaponType
-            Get
-                Return _type
-            End Get
-            Set
-                _type = Value
-            End Set
-        End Property
 
 #Region "Override Operators"
 
         Public Overloads Function Equals(left As Weapon, right As Weapon) As Boolean
-            If ReferenceEquals(Nothing, left) AndAlso ReferenceEquals(Nothing, right) Then
+            If left Is Nothing AndAlso right Is Nothing Then
                 Return True
             End If
-            If ReferenceEquals(Nothing, left) Xor ReferenceEquals(Nothing, right) Then
+            If left Is Nothing Xor right Is Nothing Then
                 Return False
             End If
             Return (left.Name = right.Name) AndAlso (left.Damage = right.Damage) AndAlso (left.Value = right.Value) AndAlso (left.Hidden = right.Hidden)
         End Function
 
         Public Overloads Function Equals(otherWeapon As Weapon) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, otherWeapon)
         End Function
 
         Public Overloads Overrides Function Equals(obj As Object) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, TryCast(obj, Weapon))
         End Function
 
@@ -83,7 +62,7 @@ Namespace Classes.Items
 
 #Region "Constructors"
 
-        ''' <summary>Initializes a default instance of Weapon.</summary>
+        ''' <summary>Initializes a default instance of <see cref="Weapon"/>.</summary>
         Public Sub New()
             Name = "Hands"
             Damage = 4
@@ -91,7 +70,7 @@ Namespace Classes.Items
             Hidden = False
         End Sub
 
-        ''' <summary>Initializes a new instance of Weapon by assigning Property values.</summary>
+        ''' <summary>Initializes a new instance of <see cref="Weapon"/> by assigning Property values.</summary>
         ''' <param name="newName">Name</param>
         ''' <param name="newDamage">Damage</param>
         ''' <param name="newValue">Value</param>
@@ -105,8 +84,8 @@ Namespace Classes.Items
             Type = newType
         End Sub
 
-        ''' <summary>Replaces this instance of Weapon with a new instance.</summary>
-        ''' <param name="otherWeapon">Instance of Weapon to replace this instance.</param>
+        ''' <summary>Replaces this instance of <see cref="Weapon"/> with a new instance.</summary>
+        ''' <param name="otherWeapon">Instance of <see cref="Weapon"/> to replace this instance.</param>
         Public Sub New(otherWeapon As Weapon)
             Name = otherWeapon.Name
             Damage = otherWeapon.Damage

@@ -10,112 +10,41 @@ Option Explicit On
 
 Namespace Classes.Entities
 
+    ''' <summary>Represents a <see cref="Guild"/> that players can join.</summary>
     Public Class Guild
 
-        Private _id As Integer, _fee As Integer, _gold As Integer, _henchmenLevel1 As Integer, _henchmenLevel2 As Integer, _henchmenLevel3 As Integer,
-                _henchmenLevel4 As Integer, _henchmenLevel5 As Integer
+        ''' <summary>The <see cref="Guild"/>'s ID.</summary>
+        Public Property ID As Integer
 
-        Private _name As String, _master As String
-        Private _members As New List(Of String)()
+        ''' <summary>The name of the <see cref="Guild"/>.</summary>
+        Public Property Name As String
 
-        Public Property ID() As Integer
-            Get
-                Return _id
-            End Get
-            Set
-                _id = Value
-            End Set
-        End Property
+        ''' <summary>The master of the <see cref="Guild"/>.</summary>
+        Public Property Master As String
 
-        Public Property Name() As String
-            Get
-                Return _name
-            End Get
-            Set
-                _name = Value
-            End Set
-        End Property
+        ''' <summary>The fee required to join the <see cref="Guild"/>.</summary>
+        Public Property Fee As Integer
 
-        Public Property Master() As String
-            Get
-                Return _master
-            End Get
-            Set
-                _master = Value
-            End Set
-        End Property
+        ''' <summary>The amount of gold the <see cref="Guild"/> has.</summary>
+        Public Property Gold As Integer
 
-        Public Property Fee() As Integer
-            Get
-                Return _fee
-            End Get
-            Set
-                _fee = Value
-            End Set
-        End Property
+        ''' <summary>The members of the <see cref="Guild"/>.</summary>
+        Public Property Members As New List(Of String)
 
-        Public Property Gold() As Integer
-            Get
-                Return _gold
-            End Get
-            Set
-                _gold = Value
-            End Set
-        End Property
+        ''' <summary>The amount of level 1 Henchmen employed by the <see cref="Guild"/>.</summary>
+        Public Property HenchmenLevel1 As Integer
 
-        Public Property Members() As List(Of String)
-            Get
-                Return _members
-            End Get
-            Set
-                _members = Value
-            End Set
-        End Property
+        ''' <summary>The amount of level 2 Henchmen employed by the <see cref="Guild"/>.</summary>
+        Public Property HenchmenLevel2 As Integer
 
-        Public Property HenchmenLevel1() As Integer
-            Get
-                Return _henchmenLevel1
-            End Get
-            Set
-                _henchmenLevel1 = Value
-            End Set
-        End Property
+        ''' <summary>The amount of level 3 Henchmen employed by the <see cref="Guild"/>.</summary>
+        Public Property HenchmenLevel3 As Integer
 
-        Public Property HenchmenLevel2() As Integer
-            Get
-                Return _henchmenLevel2
-            End Get
-            Set
-                _henchmenLevel2 = Value
-            End Set
-        End Property
+        ''' <summary>The amount of level 4 Henchmen employed by the <see cref="Guild"/>.</summary>
+        Public Property HenchmenLevel4 As Integer
 
-        Public Property HenchmenLevel3() As Integer
-            Get
-                Return _henchmenLevel3
-            End Get
-            Set
-                _henchmenLevel3 = Value
-            End Set
-        End Property
-
-        Public Property HenchmenLevel4() As Integer
-            Get
-                Return _henchmenLevel4
-            End Get
-            Set
-                _henchmenLevel4 = Value
-            End Set
-        End Property
-
-        Public Property HenchmenLevel5() As Integer
-            Get
-                Return _henchmenLevel5
-            End Get
-            Set
-                _henchmenLevel5 = Value
-            End Set
-        End Property
+        ''' <summary>The amount of level 5 Henchmen employed by the <see cref="Guild"/>.</summary>
+        Public Property HenchmenLevel5 As Integer
 
         ''' <summary>Initializes a new instance of the Guild class.</summary>
         Friend Sub New()
@@ -124,7 +53,7 @@ Namespace Classes.Entities
             Master = "Computer"
             Fee = 50
             Gold = 500
-            Members = New List(Of String)()
+            Members = New List(Of String)
             HenchmenLevel1 = 0
             HenchmenLevel2 = 0
             HenchmenLevel3 = 0

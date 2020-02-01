@@ -136,7 +136,6 @@
     <Compile Include="Classes\Enums\WeaponType.vb" />
     <Compile Include="Classes\Items\Drink.vb" />
     <Compile Include="Classes\Items\Food.vb" />
-    <Compile Include="Classes\Items\IItem.vb" />
     <Compile Include="Classes\Items\Item.vb" />
     <Compile Include="Classes\Items\Potion.vb" />
     <Compile Include="Classes\Message.vb" />
@@ -221,7 +220,6 @@
     <Compile Include="Forms\Shopping\Thieves Guild Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\Functions.vb" />
     <Compile Include="Forms\GuildForms\Guild Donate Form.Designer.vb">
       <DependentUpon>Guild Donate Form.vb</DependentUpon>
     </Compile>

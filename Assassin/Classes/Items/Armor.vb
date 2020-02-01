@@ -12,42 +12,27 @@ Namespace Classes.Items
 
     Public Class Armor
         Inherits Item
-        Private _defense As Integer
 
+        ''' <summary>The amount of defense the <see cref="Armor"/> has.</summary>
         Public Property Defense As Integer
-            Get
-                Return _defense
-            End Get
-            Set(val As Integer)
-                _defense = val
-            End Set
-        End Property
 
 #Region "Override Operators"
 
         Public Overloads Function Equals(left As Armor, right As Armor) As Boolean
-            If ReferenceEquals(Nothing, left) AndAlso ReferenceEquals(Nothing, right) Then
+            If left Is Nothing AndAlso right Is Nothing Then
                 Return True
             End If
-            If ReferenceEquals(Nothing, left) Xor ReferenceEquals(Nothing, right) Then
+            If left Is Nothing Xor right Is Nothing Then
                 Return False
             End If
             Return (left.Name = right.Name) AndAlso (left.Defense = right.Defense) AndAlso (left.Value = right.Value) AndAlso (left.Hidden = right.Hidden)
         End Function
 
         Public Overloads Function Equals(otherArmor As Armor) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, otherArmor)
         End Function
 
         Public Overloads Overrides Function Equals(obj As Object) As Boolean
-            '* * * * *
-            '* This method overloads the Equals function with a more simple comparison.
-            '* * * * *
-
             Return Equals(Me, TryCast(obj, Armor))
         End Function
 
@@ -71,7 +56,7 @@ Namespace Classes.Items
 
 #Region "Constructors"
 
-        ''' <summary>Initializes a default instance of Armor.</summary>
+        ''' <summary>Initializes a default instance of <see cref="Armor"/>.</summary>
         Public Sub New()
             Name = "Clothes"
             Defense = 4
@@ -79,7 +64,7 @@ Namespace Classes.Items
             Hidden = False
         End Sub
 
-        ''' <summary>Initializes a new instance of Armor by assigning Property values.</summary>
+        ''' <summary>Initializes a new instance of <see cref="Armor"/> by assigning Property values.</summary>
         ''' <param name="newName">Name</param>
         ''' <param name="newDefense">Defense</param>
         ''' <param name="newValue">Value</param>
@@ -91,8 +76,8 @@ Namespace Classes.Items
             Hidden = newHidden
         End Sub
 
-        ''' <summary>Replaces this instance of Armor with a new instance.</summary>
-        ''' <param name="otherArmor">Instance of Armor to replace this instance.</param>
+        ''' <summary>Replaces this instance of <see cref="Armor"/> with a new instance.</summary>
+        ''' <param name="otherArmor">Instance of <see cref="Armor"/> to replace this instance.</param>
         Public Sub New(otherArmor As Armor)
             Name = otherArmor.Name
             Defense = otherArmor.Defense

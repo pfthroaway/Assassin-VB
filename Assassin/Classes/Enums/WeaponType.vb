@@ -1,5 +1,8 @@
-﻿Namespace Classes.Enums
+﻿Imports Assassin.Classes.Items
 
+Namespace Classes.Enums
+
+    ''' <summary>Represents a type of <see cref="Weapon"/>.</summary>
     Public Enum WeaponType
         Light
         Heavy

@@ -1,5 +1,6 @@
 ﻿Namespace Classes.Enums
 
+    ''' <summary>Represents a <see cref="Stance"/> that can be taken during a round of battle.</summary>
     Public Enum Stance
 
         ''' <summary>1 stamina cost, 1x weapon damage</summary>
