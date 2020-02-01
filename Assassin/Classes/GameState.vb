@@ -3,6 +3,7 @@ Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Items
 Imports Extensions
 Imports System.IO
+Imports System.Linq
 Imports System.Threading.Tasks
 
 Namespace Classes
@@ -270,6 +271,13 @@ Namespace Classes
             Await LoadRanks()
             Await LoadWeapons()
             Await LoadEnemies()
+            AllArmor = AllArmor.OrderBy(Function(obj) obj.Value)
+            AllGuilds = AllGuilds.OrderBy(Function(obj) obj.ID)
+            AllFood = AllFood.OrderBy(Function(obj) obj.Value)
+            AllDrinks = AllDrinks.OrderBy(Function(obj) obj.Value)
+            AllPotions = AllPotions.OrderBy(Function(obj) obj.Value)
+            AllWeapons = AllWeapons.OrderBy(Function(obj) obj.Value)
+            AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level)
         End Function
 
         '''<summary>Loads all Armor from the database.</summary>

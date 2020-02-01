@@ -24,7 +24,19 @@
                 Return Value.ToString("N0")
             End Get
         End Property
+        ''' <summary>The sell value of the <see cref="Item"/>.</summary>
+        Public ReadOnly Property SellValue As Integer
+            Get
+                Return Value \ 2
+            End Get
+        End Property
 
+        ''' <summary>The sell value of the <see cref="Item"/>, formatted.</summary>
+        Public ReadOnly Property SellValueToString As String
+            Get
+                Return SellValue.ToString("N0")
+            End Get
+        End Property
 #End Region
 
     End Class
