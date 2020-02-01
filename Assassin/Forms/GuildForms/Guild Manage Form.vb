@@ -50,7 +50,7 @@ Namespace Forms.GuildForms
             FrmManageApplications.Show()
             FrmManageApplications.GetApplicants()
 
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
@@ -58,7 +58,7 @@ Namespace Forms.GuildForms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnHire_Click(sender As Object, e As EventArgs) Handles BtnHire.Click
@@ -69,7 +69,7 @@ Namespace Forms.GuildForms
             FrmHireHenchmen.Show()
             FrmHireHenchmen.SetGuild()
             FrmHireHenchmen.BlnGuild = True
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
@@ -80,7 +80,7 @@ Namespace Forms.GuildForms
             FrmMembers.Show()
             FrmMembers.loc = "Manage"
             FrmMembers.LoadMembers()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnOptions_Click(sender As Object, e As EventArgs) Handles BtnOptions.Click
@@ -90,7 +90,7 @@ Namespace Forms.GuildForms
 
             FrmGuildOptions.Show()
             FrmGuildOptions.LoadOptions()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnTransfer_Click(sender As Object, e As EventArgs) Handles BtnTransfer.Click
@@ -100,7 +100,7 @@ Namespace Forms.GuildForms
 
             FrmGuildTransfer.Show()
             FrmGuildTransfer.LoadTransfer()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub FrmGuildManage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

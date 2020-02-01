@@ -112,7 +112,7 @@ Namespace Forms.GuildForms
             '* This method closes the form on clicking the Exit button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Async Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click

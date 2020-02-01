@@ -23,24 +23,14 @@ Namespace Forms
         Dim _index As Integer                    'index on arraylist
         Dim _reason As String                    'reason arrested
 
-        Public Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtRob.Text
-            TxtRob.Clear()
-
-            TxtRob.Text = newText & _nl & _nl & currText
-            TxtRob.Select(0, 0)
-            TxtRob.ScrollToCaret()
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Private Sub AddText(newText As String)
+            AddTextToTextBox(TxtRob, newText)
         End Sub
 
+        ''' <summary>Checks a user's hunger and thirst.</summary>
         Public Sub CheckHungerThirst()
-            '* * * * *
-            '* This method checks a user's hunger and thirst.
-            '* * * * *
-
             If CurrentUser.Hunger >= 24 OrElse CurrentUser.Thirst >= 24 Then
                 BtnNewVictim.Enabled = False
                 BtnPickpocket.Enabled = False
@@ -63,22 +53,16 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Disables all the buttons while a robbery is in progress or while searching for a new victim.</summary>
         Private Sub DisableButtons()
-            '* * * * *
-            '* This method disables all the buttons while a robbery is in progress or while searching for a new victim.
-            '* * * * *
-
             BtnBack.Enabled = False
             BtnPickpocket.Enabled = False
             BtnWaylay.Enabled = False
             BtnNewVictim.Enabled = False
         End Sub
 
+        ''' <summary>Displays text while the Timer is active.</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays text while the Timer is active.
-            '* * * * *
-
             If _index < _arrText.Count Then
                 AddText(_arrText(_index).ToString)
                 _index += 1
@@ -92,38 +76,25 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Enables all the buttons after a robbery is completed or after searching for a new victim.</summary>
         Private Sub EnableButtons()
-            '* * * * *
-            '* This method enabled all the buttons after a robbery is completed or after searching for a new victim.
-            '* * * * *
-
             BtnBack.Enabled = True
             BtnPickpocket.Enabled = True
             BtnWaylay.Enabled = True
             BtnNewVictim.Enabled = True
         End Sub
 
-        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
+#Region "Click"
 
-            Me.Close()
+        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+            Close()
         End Sub
 
         Private Sub BtnNewVictim_Click(sender As Object, e As EventArgs) Handles BtnNewVictim.Click
-            '* * * * *
-            '* This method gets a new enemy.
-            '* * * * *
-
             GetEnemy()
         End Sub
 
         Private Async Sub BtnPickpocket_Click(sender As Object, e As EventArgs) Handles BtnPickpocket.Click
-            '* * * * *
-            '* This method produces the result of attempting to pickpocket an opponent.
-            '* * * * *
-
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
 
@@ -174,10 +145,6 @@ Namespace Forms
         End Sub
 
         Private Async Sub BtnWaylay_Click(sender As Object, e As EventArgs) Handles BtnWaylay.Click
-            '* * * * *
-            '* This method handles the attempt made to Waylay an opponent.
-            '* * * * *
-
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
 
@@ -227,32 +194,23 @@ Namespace Forms
             End If
         End Sub
 
-        Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-            '* * * * *
-            '* This method calls the display method every time a tick passes on the Timer.
-            '* * * * *
+#End Region
 
+        Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
             Display()
         End Sub
 
+        ''' <summary>Displays the court form after a user is caught.</summary>
         Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-            '* * * * *
-            '* This method displays the court form after a user is caught.
-            '* * * * *
-
             FrmCourt.Show()
             FrmCourt.Reason = _reason
             FrmCourt.TxtCourt.Text = "You have been caught!"
             FrmCourt.Setup()
             _blnCourt = True
-            Me.Close()
+            Close()
         End Sub
 
         Private Async Sub FrmRob_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method determines which form to show on form closing.
-            '* * * * *
-
             If _blnCourt = False Then
                 FrmGame.Show()
                 Await SaveUser(CurrentUser)

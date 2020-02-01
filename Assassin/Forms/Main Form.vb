@@ -46,7 +46,59 @@ Namespace Forms
             FrmGame.Show()          'show Game form
             FrmGame.Awaken()        'display awakening text
 
-            Me.Hide()
+            Hide()
+        End Sub
+
+#Region "Click"
+
+        Private Async Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+            If TxtUsername.TextLength > 0 AndAlso TxtPswd.TextLength > 0 Then
+                If Await CheckLogin() Then
+                    Login()
+                End If
+            Else
+                MessageBox.Show("Please enter a username and password to login.", "Assassin", MessageBoxButtons.OK)
+            End If
+        End Sub
+
+        Private Sub BtnNewUser_Click(sender As Object, e As EventArgs) Handles BtnNewUser.Click
+            FrmNewUser.Show()
+            Hide()
+        End Sub
+
+        Private Sub MnuAdmin_Click(sender As Object, e As EventArgs) Handles mnuAdmin.Click
+            FrmAdminLogin.Show()
+            TxtUsername.Clear()
+            TxtPswd.Clear()
+            TxtUsername.Focus()
+            Hide()
+        End Sub
+
+        Private Sub MnuFileExit_Click(sender As Object, e As EventArgs) Handles mnuFileExit.Click
+            Close()
+        End Sub
+
+        Private Sub MnuHelpAbout_Click(sender As Object, e As EventArgs) Handles mnuHelpAbout.Click
+            Dim nl As String = Environment.NewLine
+            MessageBox.Show("Assassin" & nl &
+                            "v1.0" & nl &
+                            "Original version:" & nl &
+                            "Copyright 1990-1995 Kevin MacFarland" & nl &
+                            "Recreated for Windows:" & nl &
+                            "Copyright 2012 pfthroaway", "Assassin", MessageBoxButtons.OK)
+        End Sub
+
+        Private Sub MnuHelpManual_Click(sender As Object, e As EventArgs) Handles mnuHelpManual.Click
+            FrmManual.Show()
+            Hide()
+        End Sub
+
+#End Region
+
+#Region "Form Management"
+
+        Private Async Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            Await LoadAll()
         End Sub
 
         Private Sub TxtPswd_GotFocus(sender As Object, e As EventArgs) Handles TxtPswd.GotFocus
@@ -71,51 +123,7 @@ Namespace Forms
             BtnLogin.Enabled = TxtUsername.TextLength > 0 AndAlso TxtPswd.TextLength > 0
         End Sub
 
-        Private Async Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-            If TxtUsername.TextLength > 0 AndAlso TxtPswd.TextLength > 0 Then
-                If Await CheckLogin() Then
-                    Login()
-                End If
-            Else
-                MessageBox.Show("Please enter a username and password to login.", "Assassin", MessageBoxButtons.OK)
-            End If
-        End Sub
-
-        Private Sub BtnNewUser_Click(sender As Object, e As EventArgs) Handles BtnNewUser.Click
-            FrmNewUser.Show()
-            Me.Hide()
-        End Sub
-
-        Private Sub MnuAdmin_Click(sender As Object, e As EventArgs) Handles mnuAdmin.Click
-            FrmAdminLogin.Show()
-            TxtUsername.Clear()
-            TxtPswd.Clear()
-            TxtUsername.Focus()
-            Me.Hide()
-        End Sub
-
-        Private Sub MnuFileExit_Click(sender As Object, e As EventArgs) Handles mnuFileExit.Click
-            Me.Close()
-        End Sub
-
-        Private Sub MnuHelpAbout_Click(sender As Object, e As EventArgs) Handles mnuHelpAbout.Click
-            Dim nl As String = Environment.NewLine
-            MessageBox.Show("Assassin" & nl &
-                            "v1.0" & nl &
-                            "Original version:" & nl &
-                            "Copyright 1990-1995 Kevin MacFarland" & nl &
-                            "Recreated for Windows:" & nl &
-                            "Copyright 2012 pfthroaway", "Assassin", MessageBoxButtons.OK)
-        End Sub
-
-        Private Sub MnuHelpManual_Click(sender As Object, e As EventArgs) Handles mnuHelpManual.Click
-            FrmManual.Show()
-            Me.Hide()
-        End Sub
-
-        Private Async Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            Await LoadAll()
-        End Sub
+#End Region
 
     End Class
 

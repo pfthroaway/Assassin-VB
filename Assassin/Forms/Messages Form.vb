@@ -118,7 +118,7 @@ Namespace Forms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click

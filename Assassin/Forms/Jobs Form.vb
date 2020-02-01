@@ -180,7 +180,7 @@ Namespace Forms
             If FrmBattle.txtBattle.TextLength = 0 Then FrmBattle.txtBattle.Text = "You stalk your opponent."
             FrmBattle.Display()
             FrmBattle.BlnJob = True
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnDecline_Click(sender As Object, e As EventArgs) Handles BtnDecline.Click
@@ -199,7 +199,7 @@ Namespace Forms
             '* This method leaves the table.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

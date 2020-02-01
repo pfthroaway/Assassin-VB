@@ -41,7 +41,7 @@ Namespace Forms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub FrmHelp_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

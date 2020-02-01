@@ -36,7 +36,7 @@ Namespace Forms.Shopping
             FrmArmor.Show()
             FrmArmor.BlnLoaded = True
             FrmArmor.DisplayArmor()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
@@ -44,7 +44,7 @@ Namespace Forms.Shopping
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnGenStore_Click(sender As Object, e As EventArgs) Handles BtnGenStore.Click
@@ -62,7 +62,7 @@ Namespace Forms.Shopping
 
             FrmThievesGuild.Show()
             FrmThievesGuild.Display()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnWeapons_Click(sender As Object, e As EventArgs) Handles BtnWeapons.Click
@@ -72,7 +72,7 @@ Namespace Forms.Shopping
 
             FrmWeapons.Show()
             FrmWeapons.DisplayWeapons()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub FrmShops_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

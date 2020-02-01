@@ -4,26 +4,23 @@
 ' Creation Date:  : 05/25/2012
 ' Filename        : Manual Form.vb
 ' Description     : This form allows the player to read information about the game.
+
+Imports Assassin.Classes
+
 Namespace Forms
 
     Public Class FrmManual
 
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Private Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-            Dim nl As String = ControlChars.NewLine
-
-            TxtManual.Text += newText & nl
-            TxtManual.Select(0, 0)
-            TxtManual.ScrollToCaret()
+            AddTextToTextBox(TxtManual, newText)
         End Sub
 
-        Private Sub City()
-            '* * * * *
-            '* This method displays information about the City.
-            '* * * * *
+#Region "Display"
 
+        ''' <summary>Displays information about the City.</summary>
+        Private Sub City()
             AddText(" * * * THE CITY * * * ")
             AddText("")
 
@@ -76,19 +73,13 @@ Namespace Forms
 
         End Sub
 
+        ''' <summary>Clears the Textbox.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method clears the Textbox.
-            '* * * * *
-
             TxtManual.Clear()
         End Sub
 
+        ''' <summary>Displays information about Combat.</summary>
         Private Sub Combat()
-            '* * * * *
-            '* This method displays information about Combat.
-            '* * * * *
-
             AddText(" * * * COMBAT * * * ")
             AddText("")
 
@@ -123,11 +114,8 @@ Namespace Forms
             AddText("You can also change your weapon if it proves ineffective during the battle.")
         End Sub
 
+        ''' <summary>Displays introductory information about the game.</summary>
         Private Sub Intro()
-            '* * * * *
-            '* This method displays introductory information about the game.
-            '* * * * *
-
             AddText(" * * * ASSASSIN * * *")
             AddText("")
             AddText("Lightning crackles through the the stormy skies, as screams are heard in the distance.")
@@ -152,11 +140,8 @@ Namespace Forms
             AddText("As the game progresses, you will learn of other missions to complete.")
         End Sub
 
+        ''' <summary>Displays information about how to play the game.</summary>
         Private Sub Playing()
-            '* * * * *
-            '* This method displays information about how to play the game.
-            '* * * * *
-
             AddText(" * * * PLAYING THE GAME * * * ")
             AddText("")
 
@@ -218,11 +203,8 @@ Namespace Forms
 
         End Sub
 
+        ''' <summary>Displays information about Skills.</summary>
         Private Sub Skills()
-            '* * * * *
-            '* This method displays information about Skills.
-            '* * * * *
-
             AddText(" * * * SKILLS * * * ")
             AddText("")
 
@@ -267,74 +249,52 @@ Namespace Forms
             AddText("The more stealth you have, the better you will fare.")
         End Sub
 
-        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
+#End Region
 
-            Me.Close()
+#Region "Click"
+
+        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+            Close()
         End Sub
 
         Private Sub BtnCity_Click(sender As Object, e As EventArgs) Handles BtnCity.Click
-            '* * * * *
-            '* This method displays information about the City.
-            '* * * * *
-
             Clear()
             City()
         End Sub
 
         Private Sub BtnCombat_Click(sender As Object, e As EventArgs) Handles BtnCombat.Click
-            '* * * * *
-            '* This method displays information about Combat.
-            '* * * * *
-
             Clear()
             Combat()
         End Sub
 
         Private Sub BtnIntro_Click(sender As Object, e As EventArgs) Handles BtnIntro.Click
-            '* * * * *
-            '* This method displays introductory information about the game.
-            '* * * * *
-
             Clear()
             Intro()
         End Sub
 
         Private Sub BtnPlaying_Click(sender As Object, e As EventArgs) Handles BtnPlaying.Click
-            '* * * * *
-            '* This method displays information about how to play the game.
-            '* * * * *
-
             Clear()
             Playing()
         End Sub
 
         Private Sub BtnSkills_Click(sender As Object, e As EventArgs) Handles BtnSkills.Click
-            '* * * * *
-            '* This method displays information about Skills.
-            '* * * * *
-
             Clear()
             Skills()
         End Sub
 
-        Private Sub FrmManual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            '* * * * *
-            '* This method displays introductory information about the game when the form loads.
-            '* * * * *
+#End Region
 
+#Region "Form Management"
+
+        Private Sub FrmManual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             Intro()
         End Sub
 
         Private Sub FrmManual_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method displays the main form on form closing.
-            '* * * * *
-
             FrmMain.Show()
         End Sub
+
+#End Region
 
     End Class
 

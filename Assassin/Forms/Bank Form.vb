@@ -17,7 +17,7 @@ Namespace Forms
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
         Private Sub AddText(newText As String)
-            AddTextToTextBox(txtBank, newText)
+            AddTextToTextBox(TxtBank, newText)
         End Sub
 
         ''' <summary>Displays the current player's bank account.</summary>
@@ -33,8 +33,10 @@ Namespace Forms
             BtnPayLoan.Enabled = CurrentUser.GoldOnLoan > 0
         End Sub
 
+#Region "Click"
+
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            Me.Close()
+            Close()
         End Sub
 
         Private Async Sub BtnDeposit_Click(sender As Object, e As EventArgs) Handles BtnDeposit.Click
@@ -109,11 +111,13 @@ Namespace Forms
             End If
         End Sub
 
+#End Region
+
         Private Sub FrmBank_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             AddText("You exit the bank.")
             FrmGame.Show()
             FrmGame.Display()
-            FrmGame.AddText(txtBank.Text)
+            FrmGame.AddText(TxtBank.Text)
         End Sub
 
     End Class

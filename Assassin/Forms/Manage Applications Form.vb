@@ -123,7 +123,7 @@ Namespace Forms
             '* This method closes the form.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnConfirm_Click(sender As Object, e As EventArgs) Handles BtnConfirm.Click

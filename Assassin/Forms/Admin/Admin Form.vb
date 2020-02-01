@@ -17,7 +17,7 @@ Namespace Forms.Admin
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnChangePassword_Click(sender As Object, e As EventArgs) Handles BtnChangePassword.Click
@@ -27,7 +27,7 @@ Namespace Forms.Admin
 
             FrmChangePassword.Show()
             FrmChangePassword.BlnAdmin = True
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnEnemies_Click(sender As Object, e As EventArgs) Handles BtnEnemies.Click
@@ -36,7 +36,7 @@ Namespace Forms.Admin
             '* * * * *
 
             FrmAdminEnemies.Show()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnGuilds_Click(sender As Object, e As EventArgs) Handles BtnGuilds.Click
@@ -45,7 +45,7 @@ Namespace Forms.Admin
             '* * * * *
 
             FrmAdminGuilds.Show()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
@@ -54,7 +54,7 @@ Namespace Forms.Admin
             '* * * * *
 
             FrmAdminUsers.Show()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub FrmAdmin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

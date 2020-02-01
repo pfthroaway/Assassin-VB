@@ -356,7 +356,7 @@ Namespace Forms.GuildForms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
@@ -399,7 +399,7 @@ Namespace Forms.GuildForms
             '* * * * *
 
             Dim cur As Cursor = Cursors.Hand
-            Me.Cursor = cur
+            Cursor = cur
         End Sub
 
         Private Sub pctHelp_MouseLeave(sender As Object, e As EventArgs) Handles pctHelp.MouseLeave
@@ -408,7 +408,7 @@ Namespace Forms.GuildForms
             '* * * * *
 
             Dim cur As Cursor = Cursors.Default
-            Me.Cursor = cur
+            Cursor = cur
         End Sub
 
     End Class

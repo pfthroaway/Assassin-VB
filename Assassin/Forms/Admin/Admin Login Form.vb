@@ -23,7 +23,7 @@ Namespace Forms.Admin
 
             If Argon2.ValidatePassword(AdminPassword, TxtPassword.Text) Then
                 _blnAdmin = True
-                Me.Close()
+                Close()
             Else
                 MessageBox.Show("Please enter the correct password.", "Assassin", MessageBoxButtons.OK)
                 TxtPassword.SelectAll()

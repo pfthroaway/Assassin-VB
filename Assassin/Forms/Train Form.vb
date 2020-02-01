@@ -9,7 +9,6 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
-Imports Assassin.Classes.Entities
 
 Namespace Forms
 
@@ -24,81 +23,8 @@ Namespace Forms
         Dim _stealth As Integer      'stealth skill
         Dim _skillPts As Integer     'current skill points
 
-        Private Sub BtnMinus(ByRef stat As Integer)
-            '* * * * *
-            '* This method accepts a stat and decreases it.
-            '* * * * *
-
-            _skillPts += 1   'increase skill points
-            stat -= 8       'decrease stat
-
-            Display()       'display stats
-        End Sub
-
-        Private Sub BtnPlus(ByRef stat As Integer)
-            '* * * * *
-            '* This method accepts a stat and increases it.
-            '* * * * *
-
-            _skillPts -= 1   'decrease skill points
-            stat += 8       'increase stat
-
-            Display()       'display stats
-        End Sub
-
-        Private Sub CheckPlusButtons()
-            '* * * * *
-            '* This method checks whether a plus button should be enabled or not.
-            '* * * * *
-
-            If CurrentUser.MaximumEndurance + _maxEnd < 9980 Then
-                BtnEndPlus.Enabled = True
-            Else
-                BtnEndPlus.Enabled = False
-            End If
-
-            If (CurrentUser.LightWeaponSkill + _light) < 90 Then
-                BtnLightPlus.Enabled = True
-            Else
-                BtnLightPlus.Enabled = False
-            End If
-
-            If (CurrentUser.HeavyWeaponSkill + _heavy) < 90 Then
-                BtnHeavyPlus.Enabled = True
-            Else
-                BtnHeavyPlus.Enabled = False
-            End If
-
-            If (CurrentUser.TwoHandedWeaponSkill + _twoH) < 90 Then
-                BtnTwoPlus.Enabled = True
-            Else
-                BtnTwoPlus.Enabled = False
-            End If
-
-            If (CurrentUser.Blocking + _blocking) < 90 Then
-                BtnBlockPlus.Enabled = True
-            Else
-                BtnBlockPlus.Enabled = False
-            End If
-
-            If (CurrentUser.Slipping + _slipping) < 90 Then
-                BtnSlippingPlus.Enabled = True
-            Else
-                BtnSlippingPlus.Enabled = False
-            End If
-
-            If (CurrentUser.Stealth + _stealth) < 90 Then
-                BtnStealthPlus.Enabled = True
-            Else
-                BtnStealthPlus.Enabled = False
-            End If
-        End Sub
-
+        ''' <summary>Resets all stats.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method resets all stats.
-            '* * * * *
-
             _maxEnd = 0
             _light = 0
             _heavy = 0
@@ -112,12 +38,8 @@ Namespace Forms
             Display()               'display stats
         End Sub
 
+        ''' <summary>Displays all stats.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays all stats.
-            '* * * * *
-
-            'display all stats
             lblEndCurr.Text = (CurrentUser.MaximumEndurance + _maxEnd).ToString + "%"
             lblLightCurr.Text = (CurrentUser.LightWeaponSkill + _light).ToString + "%"
             lblHeavyCurr.Text = (CurrentUser.HeavyWeaponSkill + _heavy).ToString + "%"
@@ -129,7 +51,7 @@ Namespace Forms
 
             If _skillPts = 0 Then
                 DisablePlusButtons()
-            Else    'skillpts > 0
+            Else
                 CheckPlusButtons()
             End If
             If _skillPts = CurrentUser.SkillPoints Then
@@ -142,11 +64,45 @@ Namespace Forms
             End If
         End Sub
 
-        Private Sub DisableMinusButtons()
-            '* * * * *
-            '* This method disables minus buttons.
-            '* * * * *
+        ''' <summary>Performs operations on loading.</summary>
+        Public Sub LoadUser()
+            _skillPts = CurrentUser.SkillPoints
+            Display()
+        End Sub
 
+#Region "Button Management"
+
+        ''' <summary>Accepts a stat and decreases it.</summary>
+        ''' <param name="stat">Stat to be decreased</param>
+        Private Sub BtnMinus(ByRef stat As Integer)
+            _skillPts += 1
+            stat -= 8
+
+            Display()
+        End Sub
+
+        ''' <summary>Accepts a stat and increases it.</summary>
+        ''' <param name="stat">Stat to be increased</param>
+        Private Sub BtnPlus(ByRef stat As Integer)
+            _skillPts -= 1
+            stat += 8
+
+            Display()
+        End Sub
+
+        ''' <summary>Checks whether the plus buttons should be enabled.</summary>
+        Private Sub CheckPlusButtons()
+            BtnEndPlus.Enabled = (CurrentUser.MaximumEndurance + _maxEnd) < 9980
+            BtnLightPlus.Enabled = (CurrentUser.LightWeaponSkill + _light) < 90
+            BtnHeavyPlus.Enabled = (CurrentUser.HeavyWeaponSkill + _heavy) < 90
+            BtnTwoPlus.Enabled = (CurrentUser.TwoHandedWeaponSkill + _twoH) < 90
+            BtnBlockPlus.Enabled = (CurrentUser.Blocking + _blocking) < 90
+            BtnSlippingPlus.Enabled = (CurrentUser.Slipping + _slipping) < 90
+            BtnStealthPlus.Enabled = (CurrentUser.Stealth + _stealth) < 90
+        End Sub
+
+        ''' <summary>Disables minus buttons.</summary>
+        Private Sub DisableMinusButtons()
             BtnEndMinus.Enabled = False
             BtnLightMinus.Enabled = False
             BtnHeavyMinus.Enabled = False
@@ -156,11 +112,8 @@ Namespace Forms
             BtnStealthMinus.Enabled = False
         End Sub
 
+        ''' <summary>Disables plus buttons.</summary>
         Private Sub DisablePlusButtons()
-            '* * * * *
-            '* This method disables plus buttons.
-            '* * * * *
-
             BtnEndPlus.Enabled = False
             BtnLightPlus.Enabled = False
             BtnHeavyPlus.Enabled = False
@@ -170,11 +123,8 @@ Namespace Forms
             BtnStealthPlus.Enabled = False
         End Sub
 
+        ''' <summary>Enables all plus buttons.</summary>
         Private Sub EnablePlusButtons()
-            '* * * * *
-            '* This method enables all plus buttons.
-            '* * * * *
-
             BtnEndPlus.Enabled = True
             BtnLightPlus.Enabled = True
             BtnHeavyPlus.Enabled = True
@@ -184,127 +134,68 @@ Namespace Forms
             BtnStealthPlus.Enabled = True
         End Sub
 
-        Public Sub LoadUser()
-            '* * * * *
-            '* This method performs operations on loading.
-            '* * * * *
+#End Region
 
-            _skillPts = CurrentUser.SkillPoints
-            Display()
-        End Sub
+#Region "Click"
 
         Private Sub BtnBlockMinus_Click(sender As Object, e As EventArgs) Handles BtnBlockMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_blocking)
-
             If _blocking = 0 Then BtnBlockMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnBlockPlus_Click(sender As Object, e As EventArgs) Handles BtnBlockPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_blocking)
             BtnBlockMinus.Enabled = True
             Display()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This button clears all stats and TextBoxes.
-            '* * * * *
-
             Clear()
         End Sub
 
         Private Sub BtnEndMinus_Click(sender As Object, e As EventArgs) Handles BtnEndMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             _skillPts += 1     'add a skillpoint
-
             _maxEnd -= 20      'subtract 20 from maximum endurance
-
             Display()
         End Sub
 
         Private Sub BtnEndPlus_Click(sender As Object, e As EventArgs) Handles BtnEndPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             _skillPts -= 1
             BtnEndMinus.Enabled = True
-
             _maxEnd += 20  'add 20 to maximum endurance
-
             Display()
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-            '* * * * *
-            '* This button closes the program.
-            '* * * * *
-
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnHeavyMinus_Click(sender As Object, e As EventArgs) Handles BtnHeavyMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_heavy)
-
             If _heavy = 0 Then BtnHeavyMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnHeavyPlus_Click(sender As Object, e As EventArgs) Handles BtnHeavyPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_heavy)
             BtnHeavyMinus.Enabled = True
             Display()
         End Sub
 
         Private Sub BtnLightMinus_Click(sender As Object, e As EventArgs) Handles BtnLightMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_light)
-
             If _light = 0 Then BtnLightMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnLightPlus_Click(sender As Object, e As EventArgs) Handles BtnLightPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_light)
             BtnLightMinus.Enabled = True
             Display()
         End Sub
 
         Private Async Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
-            '* * * * *
-            '* This method saves the user on clicking the Save button.
-            '* * * * *
-
             CurrentUser.SkillPoints = _skillPts
             CurrentUser.MaximumEndurance += _maxEnd
             CurrentUser.CurrentEndurance += _maxEnd
@@ -324,76 +215,44 @@ Namespace Forms
         End Sub
 
         Private Sub BtnSlippingMinus_Click(sender As Object, e As EventArgs) Handles BtnSlippingMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_slipping)
-
             If _slipping = 0 Then BtnSlippingMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnSlippingPlus_Click(sender As Object, e As EventArgs) Handles BtnSlippingPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_slipping)
             BtnSlippingMinus.Enabled = True
             Display()
         End Sub
 
         Private Sub BtnStealthMinus_Click(sender As Object, e As EventArgs) Handles BtnStealthMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_stealth)
-
             If _stealth = 0 Then BtnStealthMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnStealthPlus_Click(sender As Object, e As EventArgs) Handles BtnStealthPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_stealth)
             BtnStealthMinus.Enabled = True
             Display()
         End Sub
 
         Private Sub BtnTwoMinus_Click(sender As Object, e As EventArgs) Handles BtnTwoMinus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnMinus(_twoH)
-
             If _twoH = 0 Then BtnTwoMinus.Enabled = False
-
             Display()
         End Sub
 
         Private Sub BtnTwoPlus_Click(sender As Object, e As EventArgs) Handles BtnTwoPlus.Click
-            '* * * * *
-            '* This button changes stats based on button click.
-            '* * * * *
-
             BtnPlus(_twoH)
             BtnTwoMinus.Enabled = True
             Display()
         End Sub
 
-        Private Sub FrmNewUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This button determines what form to show on closing.
-            '* * * * *
+#End Region
 
+        Private Sub FrmNewUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGame.Show()
             FrmGame.Display()
         End Sub

@@ -543,7 +543,7 @@ Namespace Forms
         Private Sub BtnInventory_Click(sender As Object, e As EventArgs) Handles BtnInventory.Click
             FrmInventory.Show()
             FrmInventory.BlnBattle = True
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnLunge_Click(sender As Object, e As EventArgs) Handles BtnLunge.Click

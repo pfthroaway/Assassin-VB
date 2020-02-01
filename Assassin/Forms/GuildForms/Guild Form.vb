@@ -102,7 +102,7 @@ Namespace Forms.GuildForms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnBar_Click(sender As Object, e As EventArgs) Handles BtnBar.Click
@@ -113,7 +113,7 @@ Namespace Forms.GuildForms
             FrmBar.Show()
             FrmBar.loc = "Guild"
             FrmBar.DisplayPurchases()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnChallenge_Click(sender As Object, e As EventArgs) Handles BtnChallenge.Click
@@ -131,7 +131,7 @@ Namespace Forms.GuildForms
 
             FrmGuildDonate.Show()
             FrmGuildDonate.LoadDonate()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnHire_Click(sender As Object, e As EventArgs) Handles BtnHire.Click
@@ -141,7 +141,7 @@ Namespace Forms.GuildForms
 
             FrmHireHenchmen.Show()
             FrmHireHenchmen.SetUser()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnJobs_Click(sender As Object, e As EventArgs) Handles BtnJobs.Click
@@ -151,7 +151,7 @@ Namespace Forms.GuildForms
 
             FrmJobs.Show()
             FrmJobs.LoadJobs()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnManage_Click(sender As Object, e As EventArgs) Handles BtnManage.Click
@@ -160,7 +160,7 @@ Namespace Forms.GuildForms
             '* * * * *
 
             FrmGuildManage.Show()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
@@ -171,7 +171,7 @@ Namespace Forms.GuildForms
             FrmMembers.Show()
             FrmMembers.loc = "Guild"
             FrmMembers.LoadMembers()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnRaid_Click(sender As Object, e As EventArgs) Handles BtnRaid.Click
@@ -181,7 +181,7 @@ Namespace Forms.GuildForms
 
             FrmRaid.Show()
             FrmRaid.LoadRaid()
-            Me.Hide()
+            Hide()
 
         End Sub
 

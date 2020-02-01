@@ -59,7 +59,7 @@ Namespace Forms
             '* This method closes the form on clicking the Back button.
             '* * * * *
 
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
@@ -105,7 +105,7 @@ Namespace Forms
             FrmMessages.StartSend()
             FrmMessages.loc = "Members"
             FrmMessages.TxtFrom.Text = LstMembers.SelectedItem.ToString
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged

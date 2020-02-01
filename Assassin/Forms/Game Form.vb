@@ -17,6 +17,8 @@ Namespace Forms
 
     Public Class FrmGame
 
+        ''' <summary>Adds text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Public Sub AddText(newText As String)
             AddTextToTextBox(TxtGame, newText)
         End Sub
@@ -51,11 +53,9 @@ Namespace Forms
             Display()   'display all information
         End Sub
 
+        ''' <summary>Checks whether a jailed user has served their time.</summary>
         Private Sub CheckJailed()
             'TODO Fix Check Jail Game Form
-            ''* * * * *
-            ''* This method checks whether a jailed user has served their time.
-            ''* * * * *
 
             '_sql = "SELECT * FROM Jail WHERE Username='" & CurrentUser.Name & "'"
             '_table = "Jail"
@@ -83,11 +83,8 @@ Namespace Forms
             'End If
         End Sub
 
+        ''' <summary>Disables the buttons if a user goes to jail.</summary>
         Public Sub DisableButtons()
-            '* * * * *
-            '* This method disables the buttons if a user goes to jail.
-            '* * * * *
-
             BtnAssassinate.Enabled = False
             BtnBank.Enabled = False
             BtnChapel.Enabled = False
@@ -105,11 +102,8 @@ Namespace Forms
             BtnTrain.Enabled = False
         End Sub
 
+        ''' <summary>Displays all the statistics of the character.</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays all the statistics of the character.
-            '* * * * *
-
             lblName.Text = CurrentUser.Name
             lblRank.Text = AllRanks(CurrentUser.Level - 1)
             lblExpAmt.Text = CurrentUser.Experience.ToString
@@ -165,11 +159,8 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Enables the buttons if a user exits jail.</summary>
         Private Sub EnableButtons()
-            '* * * * *
-            '* This method enables the buttons if a user exits jail.
-            '* * * * *
-
             BtnAssassinate.Enabled = True
             BtnBank.Enabled = True
             BtnChapel.Enabled = True
@@ -185,24 +176,22 @@ Namespace Forms
             BtnTrain.Enabled = True
         End Sub
 
+#Region "Click"
+
         Private Sub BtnAssassinate_Click(sender As Object, e As EventArgs) Handles BtnAssassinate.Click
             FrmAssassinate.Show()
             FrmAssassinate.NewEnemy()
             FrmAssassinate.CheckHungerThirst()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnBank_Click(sender As Object, e As EventArgs) Handles BtnBank.Click
             FrmBank.Show()
             FrmBank.Display()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Async Sub BtnChapel_Click(sender As Object, e As EventArgs) Handles BtnChapel.Click
-            '* * * * *
-            '* This method displays the Chapel information.
-            '* * * * *
-
             If CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2) Then 'if user has less than 20% health, the priest will heal them
                 AddText("The priest welcomes you into his chapel. He sees your grievous injuries and blesses you. You have been healed!")
                 CurrentUser.CurrentEndurance = CurrentUser.MaximumEndurance
@@ -214,131 +203,78 @@ Namespace Forms
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-            '* * * * *
-            '* This method closes the form on clicking the Exit button.
-            '* * * * *
-
-            Me.Close()
+            Close()
         End Sub
 
-        Private Sub BtnGuild_Click(sender As Object, e As EventArgs) Handles BtnGuild.Click '* * * * *
-            '* This method displays the Guild form.
-            '* * * * *
-
+        Private Sub BtnGuild_Click(sender As Object, e As EventArgs) Handles BtnGuild.Click
             FrmGuildList.Show()
             FrmGuildList.lblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnInn_Click(sender As Object, e As EventArgs) Handles BtnInn.Click
-            '* * * * *
-            '* This method displays the Inn form.
-            '* * * * *
-
             AddText("Sorry, that feature is currently unavailable.")
         End Sub
 
         Private Sub BtnInventory_Click(sender As Object, e As EventArgs) Handles BtnInventory.Click
-            '* * * * *
-            '* This method displays the Inventory form.
-            '* * * * *
-
             FrmInventory.Show()
             FrmInventory.Display()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnJail_Click(sender As Object, e As EventArgs) Handles BtnJail.Click
-            '* * * * *
-            '* This method displays the Jail form.
-            '* * * * *
-
             FrmJail.Show()
         End Sub
 
         Private Sub BtnMessages_Click(sender As Object, e As EventArgs) Handles BtnMessages.Click
-            '* * * * *
-            '* This method handles clicking the Messages button.
-            '* * * * *
-
             FrmMessages.Show()
             FrmMessages.LoadMessages()
             FrmMessages.loc = "Streets"
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnMystic_Click(sender As Object, e As EventArgs) Handles BtnMystic.Click
-            '* * * * *
-            '* This method displays the Mystic form.
-            '* * * * *
-
             AddText("Sorry, that feature is currently unavailable.")
         End Sub
 
         Private Sub BtnOptions_Click(sender As Object, e As EventArgs) Handles BtnOptions.Click
-            '* * * * *
-            '* This button displays the Options form.
-            '* * * * *
-
             FrmChangePassword.Show()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnOthers_Click(sender As Object, e As EventArgs) Handles BtnOthers.Click
-            '* * * * *
-            '* This method displays the Others form.
-            '* * * * *
-
             FrmMembers.Show()
             FrmMembers.loc = "Streets"
             FrmMembers.LoadMembers()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnPub_Click(sender As Object, e As EventArgs) Handles BtnPub.Click
-            '* * * * *
-            '* This method displays the Pub form.
-            '* * * * *
-
             AddText("Sorry, that feature is currently unavailable.")
         End Sub
 
         Private Sub BtnRob_Click(sender As Object, e As EventArgs) Handles BtnRob.Click
-            '* * * * *
-            '* This method displays the Robbery form.
-            '* * * * *
-
             FrmRob.Show()
             FrmRob.TxtRob.Text = "You proceed to look for someone to rob."
             GetEnemy()
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnShops_Click(sender As Object, e As EventArgs) Handles BtnShops.Click
-            '* * * * *
-            '* This method displays the Shops form.
-            '* * * * *
-
             FrmShops.Show()
             FrmShops.TxtShops.Text = "You enter the shopping district."
-            Me.Hide()
+            Hide()
         End Sub
 
         Private Sub BtnTrain_Click(sender As Object, e As EventArgs) Handles BtnTrain.Click
-            '* * * * *
-            '* This method displays the Training form.
-            '* * * * *
-
             FrmTrain.Show()
             FrmTrain.LoadUser()
-            Me.Hide()
+            Hide()
         End Sub
 
-        Private Async Sub FrmGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method shows the Main form on form closing.
-            '* * * * *
+#End Region
 
+        Private Async Sub FrmGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             Await SaveUser(CurrentUser)
             FrmMain.Show()
         End Sub

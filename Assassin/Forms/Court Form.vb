@@ -116,7 +116,7 @@ Namespace Forms
 
             AddText("You beat a hasty retreat and return to the streets.")
             _blnFinished = True
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnJail_Click(sender As Object, e As EventArgs) Handles BtnJail.Click
@@ -133,7 +133,7 @@ Namespace Forms
             FrmGame.btnJail.Enabled = True
             CurrentUser.CurrentLocation = "Jail"
             _blnFinished = True
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnPayFine_Click(sender As Object, e As EventArgs) Handles BtnPayFine.Click
@@ -144,7 +144,7 @@ Namespace Forms
             AddText("You decide it is best to pay the fine and depart.")
             CurrentUser.GoldOnHand -= _fine
             _blnFinished = True
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
