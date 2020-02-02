@@ -70,7 +70,7 @@ Namespace Classes.Entities
         End Operator
 
         Public Shared Operator <>(left As Enemy, right As Enemy) As Boolean
-            Return Not (left = right)
+            Return Not left = right
         End Operator
 
         Public Overrides Function ToString() As String

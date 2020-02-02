@@ -110,7 +110,7 @@ Namespace Classes.Entities
         ''' <summary>The <see cref="Weapon"/> currently equipped by the <see cref="User"/>.</summary>
         Public ReadOnly Property CurrentWeapon As Weapon
             Get
-                Select Case (CurrentWeaponType)
+                Select Case CurrentWeaponType
                     Case WeaponType.Light
                         Return LightWeapon
                     Case WeaponType.Heavy
@@ -284,7 +284,7 @@ Namespace Classes.Entities
         End Operator
 
         Public Shared Operator <>(left As User, right As User) As Boolean
-            Return Not (left = right)
+            Return Not left = right
         End Operator
 
         Public Overrides Function ToString() As String

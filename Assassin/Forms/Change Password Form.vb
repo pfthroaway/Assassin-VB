@@ -40,7 +40,7 @@ Namespace Forms
                         End If
                     Else
                         If Argon2.ValidatePassword(AdminPassword, TxtOldPswd.Text) Then
-                            If Await (ChangeAdminPassword(newPass)) Then
+                            If Await ChangeAdminPassword(newPass) Then
                                 MessageBox.Show("Password successfully changed.", "Assassin", MessageBoxButtons.OK)
                                 Close()
                             End If

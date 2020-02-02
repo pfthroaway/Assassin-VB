@@ -76,7 +76,7 @@ Namespace Forms
         Private Sub FrmAssassinate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             If _blnBattle = True Then    'if going to battle
                 FrmBattle.Show()
-                FrmBattle.TxtBattle.Text = $"You approach the {CurrentEnemy.Name}.\n\n{TxtAssassinate.Text}"
+                FrmBattle.TxtBattle.Text = $"You approach the {CurrentEnemy.Name}.{ControlChars.NewLine & ControlChars.NewLine & TxtAssassinate.Text}"
                 FrmBattle.Surprise()
                 FrmBattle.Display()
             Else                        'if not going to battle

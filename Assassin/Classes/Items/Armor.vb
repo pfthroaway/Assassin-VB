@@ -16,6 +16,13 @@ Namespace Classes.Items
         ''' <summary>The amount of defense the <see cref="Armor"/> has.</summary>
         Public Property Defense As Integer
 
+        ''' <summary>The amount of defense the <see cref="Armor"/> has, formatted.</summary>
+        Public ReadOnly Property DefenseToString As String
+            Get
+                Return Defense.ToString("N0")
+            End Get
+        End Property
+
 #Region "Override Operators"
 
         Public Overloads Function Equals(left As Armor, right As Armor) As Boolean
@@ -45,7 +52,7 @@ Namespace Classes.Items
         End Operator
 
         Public Shared Operator <>(left As Armor, right As Armor) As Boolean
-            Return Not (left = right)
+            Return Not left = right
         End Operator
 
         Public Overrides Function ToString() As String

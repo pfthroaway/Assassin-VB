@@ -102,7 +102,7 @@ Namespace Forms
             '* This function determines the number of henchmen the enemy has at that level.
             '* * * * *
 
-            Return (_eneHench.HenchmenLevel1 + _eneHench.HenchmenLevel2 + _eneHench.HenchmenLevel3 + _eneHench.HenchmenLevel4 + _eneHench.HenchmenLevel5)
+            Return _eneHench.HenchmenLevel1 + _eneHench.HenchmenLevel2 + _eneHench.HenchmenLevel3 + _eneHench.HenchmenLevel4 + _eneHench.HenchmenLevel5
         End Function
 
         Private Function PlrCount() As Integer
@@ -110,7 +110,7 @@ Namespace Forms
             '* This function determines the number of henchmen the player has at that level.
             '* * * * *
 
-            Return (_plrHench.HenchmenLevel1 + _plrHench.HenchmenLevel2 + _plrHench.HenchmenLevel3 + _plrHench.HenchmenLevel4 + _plrHench.HenchmenLevel5)
+            Return _plrHench.HenchmenLevel1 + _plrHench.HenchmenLevel2 + _plrHench.HenchmenLevel3 + _plrHench.HenchmenLevel4 + _plrHench.HenchmenLevel5
         End Function
 
         Public Sub AddText(newText As String)

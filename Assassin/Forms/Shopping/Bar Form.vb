@@ -108,10 +108,10 @@ Namespace Forms.Shopping
             CurrentUser.GoldOnHand -= _selectedItem.Value
 
             If CmbDrinks.Checked = True Then
-                CurrentUser.Thirst -= (LstPurchases.SelectedIndex + 1)
+                CurrentUser.Thirst -= LstPurchases.SelectedIndex + 1
                 If CurrentUser.Thirst < 0 Then CurrentUser.Thirst = 0
             ElseIf CmbFood.Checked = True Then
-                CurrentUser.Hunger -= (LstPurchases.SelectedIndex + 1)
+                CurrentUser.Hunger -= LstPurchases.SelectedIndex + 1
                 If CurrentUser.Hunger < 0 Then CurrentUser.Hunger = 0
             End If
 

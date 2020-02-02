@@ -271,13 +271,13 @@ Namespace Classes
             Await LoadRanks()
             Await LoadWeapons()
             Await LoadEnemies()
-            AllArmor = AllArmor.OrderBy(Function(obj) obj.Value)
-            AllGuilds = AllGuilds.OrderBy(Function(obj) obj.ID)
-            AllFood = AllFood.OrderBy(Function(obj) obj.Value)
-            AllDrinks = AllDrinks.OrderBy(Function(obj) obj.Value)
-            AllPotions = AllPotions.OrderBy(Function(obj) obj.Value)
-            AllWeapons = AllWeapons.OrderBy(Function(obj) obj.Value)
-            AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level)
+            AllArmor = AllArmor.OrderBy(Function(obj) obj.Value).ToList()
+            AllGuilds = AllGuilds.OrderBy(Function(obj) obj.ID).ToList()
+            AllFood = AllFood.OrderBy(Function(obj) obj.Value).ToList()
+            AllDrinks = AllDrinks.OrderBy(Function(obj) obj.Value).ToList()
+            AllPotions = AllPotions.OrderBy(Function(obj) obj.Value).ToList()
+            AllWeapons = AllWeapons.OrderBy(Function(obj) obj.Value).ToList()
+            AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level).ToList()
         End Function
 
         '''<summary>Loads all Armor from the database.</summary>
@@ -337,7 +337,7 @@ Namespace Classes
         ''' <param name="name">User to be loaded</param>
         ''' <returns>User</returns>
         Public Async Function LoadUser(name As String) As Task(Of User)
-            Return Await DatabaseInteraction.LoadUser((name))
+            Return Await DatabaseInteraction.LoadUser(name)
         End Function
 
         ''' <summary>Loads all Users from the database.</summary>

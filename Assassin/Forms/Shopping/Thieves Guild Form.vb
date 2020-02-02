@@ -67,7 +67,7 @@ Namespace Forms.Shopping
 
             If lockpicks > 0 AndAlso lockpicks <= maxLockpicks Then
                 CurrentUser.Lockpicks += lockpicks
-                CurrentUser.GoldOnHand -= (lockpicks * 300)
+                CurrentUser.GoldOnHand -= lockpicks * 300
                 AddText("You purchase " & lockpicks & " for " & (lockpicks * 300) & " gold.")
                 Await SaveUser(CurrentUser)
 

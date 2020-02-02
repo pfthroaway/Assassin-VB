@@ -38,7 +38,6 @@ Namespace Forms
 
         ''' <summary>When a valid login has occurred, log the character in.</summary>
         Private Sub Login()
-
             TxtUsername.Clear()     'clear username TextBox
             TxtPswd.Clear()         'clear password TextBox
             TxtUsername.Focus()     'set focus to username TextBox
@@ -102,12 +101,10 @@ Namespace Forms
         End Sub
 
         Private Sub TxtPswd_GotFocus(sender As Object, e As EventArgs) Handles TxtPswd.GotFocus
-
             TxtPswd.SelectAll()
         End Sub
 
         Private Sub TxtUsername_GotFocus(sender As Object, e As EventArgs) Handles TxtUsername.GotFocus
-
             TxtUsername.SelectAll()
         End Sub
 

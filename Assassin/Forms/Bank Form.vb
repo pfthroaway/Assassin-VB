@@ -41,7 +41,7 @@ Namespace Forms
 
         Private Async Sub BtnDeposit_Click(sender As Object, e As EventArgs) Handles BtnDeposit.Click
             Dim deposit As Integer  'amount of gold being deposited
-            Integer.TryParse(InputBox($"How much gold would you like to deposit?\nYou can enter a number between 1 and {CurrentUser.GoldOnHand}.", "Deposit"), deposit)
+            Integer.TryParse(InputBox($"How much gold would you like to deposit?{ControlChars.NewLine}You can enter a number between 1 and {CurrentUser.GoldOnHand}.", "Deposit"), deposit)
 
             If deposit > 0 AndAlso deposit <= CurrentUser.GoldOnHand Then      'if in bounds
                 CurrentUser.GoldOnHand -= deposit
@@ -56,7 +56,7 @@ Namespace Forms
 
         Private Async Sub BtnGetLoan_Click(sender As Object, e As EventArgs) Handles BtnGetLoan.Click
             Dim getLoan As Integer  'amount of gold being received as a loan
-            Integer.TryParse(InputBox($"How much gold would you like to take out as a loan? 5% interest will be required in repayment.\nYou can enter a number between 1 and {CurrentUser.LoanAvailable}.", "Get Loan"), getLoan)
+            Integer.TryParse(InputBox($"How much gold would you like to take out as a loan? 5% interest will be required in repayment.{ControlChars.NewLine}You can enter a number between 1 and {CurrentUser.LoanAvailable}.", "Get Loan"), getLoan)
 
             If getLoan > 0 AndAlso getLoan <= CurrentUser.LoanAvailable Then                'if in bounds
                 CurrentUser.GoldOnHand += getLoan
@@ -72,13 +72,13 @@ Namespace Forms
         Private Async Sub BtnPayLoan_Click(sender As Object, e As EventArgs) Handles BtnPayLoan.Click
             Dim payLoan As Integer  'amount of gold being paid on your loan
             If CurrentUser.GoldOnHand < CurrentUser.GoldOnLoan Then   'if you don't have enough for a complete payoff
-                Integer.TryParse(InputBox($"How much gold would you like to pay back on your loan?\nYou can enter a number between 1 and {CurrentUser.GoldOnHandToString}.", "Pay Loan"), payLoan)
+                Integer.TryParse(InputBox($"How much gold would you like to pay back on your loan?{ControlChars.NewLine}You can enter a number between 1 and {CurrentUser.GoldOnHandToString}.", "Pay Loan"), payLoan)
                 If payLoan < 0 OrElse payLoan > CurrentUser.GoldOnHand Then    'if out of bounds
                     MessageBox.Show($"Please enter a number between 1 and {CurrentUser.GoldOnHandToString}.", "Pay Loan", MessageBoxButtons.OK)
                     Exit Sub
                 End If
             Else                                                'if you do have enough for a complete payoff
-                Integer.TryParse(InputBox($"How much gold would you like to pay back on your loan?\nYou can enter a number between 1 and {CurrentUser.GoldOnLoanToString}.", "Pay Loan"), payLoan)
+                Integer.TryParse(InputBox($"How much gold would you like to pay back on your loan?{ControlChars.NewLine}You can enter a number between 1 and {CurrentUser.GoldOnLoanToString}.", "Pay Loan"), payLoan)
                 If payLoan < 0 OrElse payLoan > CurrentUser.GoldOnLoan Then    'if out of bounds
                     MessageBox.Show($"Please enter a number between 1 and {CurrentUser.GoldOnLoanToString}.", "Pay Loan", MessageBoxButtons.OK)
                     Exit Sub
@@ -98,7 +98,7 @@ Namespace Forms
 
         Private Async Sub BtnWithdraw_Click(sender As Object, e As EventArgs) Handles BtnWithdraw.Click
             Dim withdrawal As Integer   'amount of gold being withdrawn
-            Integer.TryParse(InputBox($"How much gold would you like to withdraw?\nYou can enter a number between 1 and {CurrentUser.GoldInBank}.", "Withdrawal"), withdrawal)
+            Integer.TryParse(InputBox($"How much gold would you like to withdraw?{ControlChars.NewLine}You can enter a number between 1 and {CurrentUser.GoldInBank}.", "Withdrawal"), withdrawal)
 
             If withdrawal > 0 AndAlso withdrawal <= CurrentUser.GoldInBank Then    'if in bounds
                 CurrentUser.GoldInBank -= withdrawal

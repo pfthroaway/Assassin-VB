@@ -19,8 +19,9 @@ Namespace Forms
         Dim _blnDone As Boolean = False          'battle over?
         Public BlnJob As Boolean = False        'on the job?
         Dim _blnWin As Boolean = False           'win?
-        Dim _userStamina As Integer = 20
-        Dim _enemyStamina As Integer = 20
+        ReadOnly _maxStamina As Integer = 100
+        Dim _userStamina As Integer = _maxStamina
+        Dim _enemyStamina As Integer = _maxStamina
         Dim _userStance As Stance
         Dim _enemyStance As Stance
         Dim _playerBlocking As Integer = 0
@@ -31,7 +32,6 @@ Namespace Forms
         Dim _enemyWeaponSkill As Integer = 0
 
         ' TODO Make hit much more often. It's brutally long now.
-        ' TODO Maybe implement more stamina.
 
         ''' <summary>Gives a user a bonus.</summary>
         ''' <returns>Bonus amount</returns>
@@ -48,34 +48,18 @@ Namespace Forms
         ''' <summary>Displays all the displayable information in the labels on the form.</summary>
         Public Sub Display()
             lblPlrName.Text = CurrentUser.Name
-            If CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2) Then
-                lblPlrEnd.ForeColor = Color.Red
-            Else
-                lblPlrEnd.ForeColor = Color.Black
-            End If
+            lblPlrEnd.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
             lblPlrEnd.Text = CurrentUser.CurrentEndurance & " / " & CurrentUser.MaximumEndurance
             lblPlrStatus.Text = GetStatusText(_userStamina)
-            If _userStamina < 3 Then
-                lblPlrStatus.ForeColor = Color.Red
-            Else
-                lblPlrStatus.ForeColor = Color.Black
-            End If
+            lblPlrStatus.ForeColor = If(_userStamina < 3, Color.Red, Color.Black)
             lblPlrWeapon.Text = CurrentUser.CurrentWeapon.Name
             lblPlrArmor.Text = CurrentUser.Armor.Name
 
             lblEnemyName.Text = CurrentEnemy.Name
-            If CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2) Then
-                lblEneEnd.ForeColor = Color.Red
-            Else
-                lblEneEnd.ForeColor = Color.Black
-            End If
+            lblEneEnd.ForeColor = If(CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2), Color.Red, Color.Black)
             lblEneEnd.Text = CurrentEnemy.CurrentEndurance & " / " & CurrentEnemy.MaximumEndurance
             lblEneStatus.Text = GetStatusText(_enemyStamina)
-            If _enemyStamina < 3 Then
-                lblEneStatus.ForeColor = Color.Red
-            Else
-                lblEneStatus.ForeColor = Color.Black
-            End If
+            lblEneStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
             lblEneWeapon.Text = CurrentEnemy.Weapon.Name
             lblEneArmor.Text = CurrentEnemy.Armor.Name
 
@@ -107,7 +91,7 @@ Namespace Forms
             Dim plrDefend As Integer = Functions.GenerateRandomNumber(CurrentUser.Armor.Defense \ 2, CurrentUser.Armor.Defense)
             If eneDamage > plrDefend Then
                 AddText("Your opponent attacks you for " & eneDamage & " damage, but your armor absorbs " & plrDefend & " damage.")
-                CurrentUser.CurrentEndurance -= (eneDamage - plrDefend)
+                CurrentUser.CurrentEndurance -= eneDamage - plrDefend
             Else
                 AddText("Your opponent attacks you for " & eneDamage & " damage, but your armor absorbs all of it.")
             End If
@@ -120,7 +104,7 @@ Namespace Forms
 
             If plrDamage > eneDefend Then
                 AddText("You attack your opponent for " & plrDamage & " damage, but their armor absorbs " & eneDefend & " damage.")
-                CurrentEnemy.CurrentEndurance -= (plrDamage - eneDefend)
+                CurrentEnemy.CurrentEndurance -= plrDamage - eneDefend
             Else
                 AddText("You attacks you for " & plrDamage & " damage, but their armor absorbs all of it.")
             End If
@@ -136,7 +120,7 @@ Namespace Forms
             If _userStance <> Stance.Parry Then
                 HitPlayer()
             Else
-                If SkillCheck(CurrentUser.CurrentWeaponSkill) Then
+                If SkillCheck(CurrentUser.CurrentWeaponSkill + Bonus()) Then
                     AddText("You parry your opponent's attack!")
                     HitEnemy()
                 Else
@@ -188,11 +172,7 @@ Namespace Forms
             End If
 
             If _enemyStance = Stance.Defend Then
-                If _enemyBlocking >= 45 Then        'if blocking can't be doubled
-                    _enemyBlocking = 90             'set blocking to max
-                Else
-                    _enemyBlocking *= 2             'double blocking
-                End If
+                _enemyBlocking = If(_enemyBlocking >= 45, 90, _enemyBlocking * 2)
                 AddText("Your opponent goes on the defensive and attempts to regain stamina.")
             End If
 
@@ -208,7 +188,7 @@ Namespace Forms
 
             If _enemyStance <> Stance.Defend Then
                 If SkillCheck(_enemyWeaponSkill) Then
-                    If SkillCheck(_playerBlocking) = False Then
+                    If SkillCheck(_playerBlocking + Bonus()) = False Then
                         EnemyAttack()
                     Else
                         AddText("You block your opponent's attack.")
@@ -270,7 +250,7 @@ Namespace Forms
         Private Sub AdjustStamina(stance As Stance, ByRef stamina As Integer)
             Select Case stance
                 Case Stance.Defend
-                    If stamina < 20 Then
+                    If stamina < _maxStamina Then
                         stamina += 1
                     End If
                 Case Stance.Berserk
@@ -285,7 +265,7 @@ Namespace Forms
         ''' <returns>Status text</returns>
         Private Function GetStatusText(stamina As Integer) As String
             Select Case stamina
-                Case 19, 20
+                Case > 18
                     Return "Vigorous"
                 Case 17, 18
                     Return "Robust"
@@ -370,7 +350,7 @@ Namespace Forms
         ''' <param name="skill">Skill to be tested against</param>
         ''' <returns>True if successful hit</returns>
         Private Function SkillCheck(skill As Integer) As Boolean
-            Return Functions.GenerateRandomNumber(1, 100) <= skill
+            Return Functions.GenerateRandomNumber(1, 100) <= If(skill > 90, 90, skill)
         End Function
 
 #End Region
@@ -389,11 +369,7 @@ Namespace Forms
                     _playerDamage *= 2
                     _playerWeaponSkill \= 2
                 Case Stance.Defend
-                    If _playerBlocking >= 45 Then
-                        _playerBlocking = 90
-                    Else
-                        _playerBlocking *= 2
-                    End If
+                    _playerBlocking = If(_playerBlocking >= 45, 90, _playerBlocking * 2)
             End Select
 
         End Sub
@@ -442,7 +418,7 @@ Namespace Forms
         ''' <summary>Handles the Player's stance in QuickCombat.</summary>
         Private Sub QuickCombatPlayerStance()
             Select Case _userStamina
-                Case 2 To 20
+                Case > 2
                     Dim percent As Integer = Functions.GenerateRandomNumber(1, 100)
                     Select Case percent
                         Case 1 To 20
@@ -476,7 +452,7 @@ Namespace Forms
         ''' <summary>The Player's turn.</summary>
         Private Sub PlayerTurn()
             If _userStance <> Stance.Defend AndAlso _userStance <> Stance.Flee Then
-                If SkillCheck(_playerWeaponSkill) Then
+                If SkillCheck(_playerWeaponSkill + Bonus()) Then
                     If SkillCheck(_enemyBlocking) = False Then
                         PlayerAttack()
                     Else
@@ -491,7 +467,7 @@ Namespace Forms
         ''' <summary>Determines if you surprise the Enemy when first attacking them.</summary>
         Public Sub Surprise()
             LoadBattle()
-            If SkillCheck(CurrentUser.Stealth) Then
+            If SkillCheck(CurrentUser.Stealth + Bonus()) Then
                 _playerDamage *= 2
                 AddText("You surprise your opponent!")
                 HitEnemy()
@@ -521,8 +497,8 @@ Namespace Forms
         End Sub
 
         Private Sub BtnFlee_Click(sender As Object, e As EventArgs) Handles BtnFlee.Click
-            If SkillCheck(CurrentUser.Slipping) Then 'if flee has chance to be successful
-                If SkillCheck(_enemyBlocking) Then  'successful flee
+            If SkillCheck(CurrentUser.Slipping + Bonus()) Then 'if flee has chance to be successful
+                If SkillCheck(_enemyBlocking - Bonus()) Then  'successful flee
                     PlayerFlee()
                 Else 'blocked flee
                     _userStance = Stance.Flee

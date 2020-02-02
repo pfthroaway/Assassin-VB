@@ -39,7 +39,7 @@ Namespace Forms
             '* * * * *
             '* This method displays the message.
             '* * * * *
-            If (_messages.Count <= _currentIndex) Then
+            If _messages.Count <= _currentIndex Then
                 Dim message As Message = _messages(_currentIndex)
                 TxtFrom.Text = message.UserFrom
                 TxtDate.Text = message.DateSent.ToString

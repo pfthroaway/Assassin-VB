@@ -26,13 +26,10 @@ Namespace Forms.Shopping
             '* * * * *
             '* This method clears all labels and the Listbox.
             '* * * * *
-
             lblGold.Text = ""
-
             lblCurrent.Text = ""
             lblValue.Text = ""
             lblCurrentDamage.Text = ""
-
             lblSelected.Text = ""
             lblPrice.Text = ""
             lblSelectedDamage.Text = ""
@@ -75,7 +72,6 @@ Namespace Forms.Shopping
 
         Private Sub Display()
             If LstWeapons.SelectedIndex >= 0 Then   'display selected weapon information
-
                 If CmbLight.Checked Then
                     _selectedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = LstWeapons.SelectedItem.ToString AndAlso weapon.Type = WeaponType.Light)
                     BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso Not _selectedWeapon.Equals(CurrentUser.LightWeapon)
@@ -101,7 +97,7 @@ Namespace Forms.Shopping
 
             lblGold.Text = CurrentUser.GoldOnHand.ToString
             lblCurrent.Text = CurrentUser.CurrentWeapon.Name
-            lblValue.Text = (CurrentUser.CurrentWeapon.Value \ 2).ToString
+            lblValue.Text = CurrentUser.CurrentWeapon.SellValue.ToString
             lblCurrentDamage.Text = CurrentUser.CurrentWeapon.Damage.ToString
 
             BtnSell.Enabled = CurrentUser.CurrentWeapon.Value > 0
@@ -119,15 +115,15 @@ Namespace Forms.Shopping
 
             If CmbLight.Checked = True Then
                 If Not CurrentUser.LightWeapon.Name = "Hands" Then
-                    dlgQuestion += $"\nYou will sell your {CurrentUser.LightWeapon.Name} for {(CurrentUser.LightWeapon.Value \ 2)} gold."
+                    dlgQuestion += $"{ControlChars.NewLine}You will sell your {CurrentUser.LightWeapon.Name} for {CurrentUser.LightWeapon.SellValue} gold."
                 End If
             ElseIf CmbHeavy.Checked = True Then
                 If Not CurrentUser.HeavyWeapon.Name = "Hands" Then
-                    dlgQuestion += $"\nYou will sell your {CurrentUser.HeavyWeapon.Name} for {(CurrentUser.HeavyWeapon.Value \ 2)} gold."
+                    dlgQuestion += $"{ControlChars.NewLine}You will sell your {CurrentUser.HeavyWeapon.Name} for {CurrentUser.HeavyWeapon.SellValue} gold."
                 End If
             ElseIf CmbTwoH.Checked = True Then
                 If Not CurrentUser.TwoHandedWeapon.Name = "Hands" Then
-                    dlgQuestion += $"\nYou will sell your {CurrentUser.TwoHandedWeapon.Name} for {(CurrentUser.TwoHandedWeapon.Value \ 2)} gold."
+                    dlgQuestion += $"{ControlChars.NewLine}You will sell your {CurrentUser.TwoHandedWeapon.Name} for {CurrentUser.TwoHandedWeapon.SellValue} gold."
                 End If
             End If
 
@@ -137,20 +133,20 @@ Namespace Forms.Shopping
                 Select Case _selectedWeapon.Type
                     Case WeaponType.Light
                         If Not CurrentUser.LightWeapon.Name = "Hands" Then
-                            AddText($"You sell your {CurrentUser.LightWeapon.Name} for {(CurrentUser.LightWeapon.Value \ 2)} gold.")
-                            CurrentUser.GoldOnHand += CurrentUser.LightWeapon.Value \ 2
+                            AddText($"You sell your {CurrentUser.LightWeapon.Name} for {CurrentUser.LightWeapon.SellValue} gold.")
+                            CurrentUser.GoldOnHand += CurrentUser.LightWeapon.SellValue
                         End If
                         CurrentUser.LightWeapon = _selectedWeapon
                     Case WeaponType.Heavy
                         If Not CurrentUser.HeavyWeapon.Name = "Hands" Then
-                            AddText($"You sell your {CurrentUser.HeavyWeapon.Name} for {(CurrentUser.HeavyWeapon.Value \ 2)} gold.")
-                            CurrentUser.GoldOnHand += CurrentUser.HeavyWeapon.Value \ 2
+                            AddText($"You sell your {CurrentUser.HeavyWeapon.Name} for {CurrentUser.HeavyWeapon.SellValue} gold.")
+                            CurrentUser.GoldOnHand += CurrentUser.HeavyWeapon.SellValue
                         End If
                         CurrentUser.HeavyWeapon = _selectedWeapon
                     Case WeaponType.TwoHanded
                         If Not CurrentUser.TwoHandedWeapon.Name = "Hands" Then
-                            AddText($"You sell your {CurrentUser.TwoHandedWeapon.Name} for {(CurrentUser.TwoHandedWeapon.Value \ 2)} gold.")
-                            CurrentUser.GoldOnHand += CurrentUser.TwoHandedWeapon.Value \ 2
+                            AddText($"You sell your {CurrentUser.TwoHandedWeapon.Name} for {CurrentUser.TwoHandedWeapon.SellValue} gold.")
+                            CurrentUser.GoldOnHand += CurrentUser.TwoHandedWeapon.SellValue
                         End If
                         CurrentUser.TwoHandedWeapon = _selectedWeapon
                 End Select
@@ -171,11 +167,11 @@ Namespace Forms.Shopping
 
             Dim dlg As DialogResult
 
-            dlg = MessageBox.Show($"Are you sure you want to sell this {CurrentUser.CurrentWeapon.Name} for {CurrentUser.CurrentWeapon.Value \ 2} gold?", "Assassin", MessageBoxButtons.YesNo)
+            dlg = MessageBox.Show($"Are you sure you want to sell this {CurrentUser.CurrentWeapon.Name} for {CurrentUser.CurrentWeapon.SellValue} gold?", "Assassin", MessageBoxButtons.YesNo)
 
             If dlg = DialogResult.Yes Then
-                AddText($"You sell your {CurrentUser.CurrentWeapon.Name} for {CurrentUser.CurrentWeapon.Value \ 2} gold.")
-                CurrentUser.GoldOnHand += CurrentUser.CurrentWeapon.Value \ 2
+                AddText($"You sell your {CurrentUser.CurrentWeapon.Name} for {CurrentUser.CurrentWeapon.SellValue} gold.")
+                CurrentUser.GoldOnHand += CurrentUser.CurrentWeapon.SellValue
 
                 Select Case CurrentUser.CurrentWeapon.Type
                     Case WeaponType.Light

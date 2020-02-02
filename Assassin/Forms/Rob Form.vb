@@ -107,14 +107,14 @@ Namespace Forms
                     CurrentUser.GoldOnHand += gold
                 ElseIf type = 2 Then                'weapon only
                     AddText("You manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weaponsmith and sell it for " & (CurrentEnemy.Weapon.Value \ 2) & " gold!")
-                    CurrentUser.GoldOnHand += (CurrentEnemy.Weapon.Value \ 2)
+                    _arrText.Add("You bring it to the weaponsmith and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue
                     Timer1.Start()
                 ElseIf type = 3 Then                'weapon and gold
                     AddText("You manage to steal a pouch containing " & gold & " gold!")
                     _arrText.Add("You also manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weapon shop and sell it for " & (CurrentEnemy.Weapon.Value \ 2) & " gold!")
-                    CurrentUser.GoldOnHand += (CurrentEnemy.Weapon.Value \ 2) + gold
+                    _arrText.Add("You bring it to the weapon shop and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue + gold
                     Timer1.Start()
                 End If
 
@@ -157,14 +157,14 @@ Namespace Forms
                     CurrentUser.GoldOnHand += gold
                 ElseIf type = 2 Then                'weapon only
                     AddText("You manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weaponsmith and sell it for " & (CurrentEnemy.Weapon.Value \ 2) & " gold!")
-                    CurrentUser.GoldOnHand += (CurrentEnemy.Weapon.Value \ 2)
+                    _arrText.Add("You bring it to the weaponsmith and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue
                     Timer1.Start()
                 ElseIf type = 3 Then                'weapon and gold
                     AddText("You manage to steal a pouch containing " & gold & " gold!")
                     _arrText.Add("You also manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weapon shop and sell it for " & (CurrentEnemy.Weapon.Value \ 2) & " gold!")
-                    CurrentUser.GoldOnHand += (CurrentEnemy.Weapon.Value \ 2) + gold
+                    _arrText.Add("You bring it to the weapon shop and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue + gold
                     Timer1.Start()
                 End If
 

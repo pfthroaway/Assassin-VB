@@ -124,26 +124,13 @@ Namespace Forms
             BtnStealthPlus.Enabled = False
         End Sub
 
-        ''' <summary>Enables all plus buttons.</summary>
-        Private Sub EnablePlusButtons()
-            BtnEndPlus.Enabled = True
-            BtnLightPlus.Enabled = True
-            BtnHeavyPlus.Enabled = True
-            BtnTwoPlus.Enabled = True
-            BtnBlockPlus.Enabled = True
-            BtnSlippingPlus.Enabled = True
-            BtnStealthPlus.Enabled = True
-        End Sub
-
 #End Region
 
 #Region "Click"
 
         Private Sub BtnBlockMinus_Click(sender As Object, e As EventArgs) Handles BtnBlockMinus.Click
             BtnMinus(_blocking)
-
             If _blocking = 10 Then BtnBlockMinus.Enabled = False
-
             Display()
         End Sub
 
@@ -277,11 +264,8 @@ Namespace Forms
 #Region "Form Management"
 
         Private Sub KeyChars(sender As Object, e As KeyPressEventArgs) Handles TxtName.KeyPress, TxtPass.KeyPress, TxtConfirm.KeyPress
-            If Char.IsLetterOrDigit(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like Chr(8) Then 'letters, numbers, backspace, space
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+            'letters, numbers, backspace, space
+            e.Handled = Not (Char.IsLetterOrDigit(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub TextChange(sender As Object, e As EventArgs) Handles TxtName.TextChanged, TxtPass.TextChanged, TxtConfirm.TextChanged

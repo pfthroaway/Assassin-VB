@@ -19,6 +19,13 @@ Namespace Classes.Items
         ''' <summary>Amount of damage the <see cref="Weapon"/> does.</summary>
         Public Property Damage As Integer
 
+        ''' <summary>Amount of damage the <see cref="Armor"/> does, formatted.</summary>
+        Public ReadOnly Property DamageToString As String
+            Get
+                Return Damage.ToString("N0")
+            End Get
+        End Property
+
         ''' <summary>The <see cref="WeaponType"/> of the <see cref="Weapon"/>.</summary>
         Public Property Type As WeaponType
 
@@ -51,7 +58,7 @@ Namespace Classes.Items
         End Operator
 
         Public Shared Operator <>(left As Weapon, right As Weapon) As Boolean
-            Return Not (left = right)
+            Return Not left = right
         End Operator
 
         Public Overrides Function ToString() As String
