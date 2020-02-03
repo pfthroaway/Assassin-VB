@@ -9,7 +9,6 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
-Imports Assassin.Classes.Entities
 Imports Assassin.Forms.GuildForms
 
 Namespace Forms

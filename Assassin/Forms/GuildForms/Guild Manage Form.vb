@@ -8,9 +8,6 @@
 Option Strict On
 Option Explicit On
 
-Imports Assassin.Classes
-Imports Assassin.Classes.Entities
-
 Namespace Forms.GuildForms
 
     Public Class FrmGuildManage

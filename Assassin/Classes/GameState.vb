@@ -3,7 +3,6 @@ Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Items
 Imports Extensions
 Imports System.IO
-Imports System.Linq
 Imports System.Threading.Tasks
 
 Namespace Classes
@@ -400,6 +399,22 @@ Namespace Classes
 #End Region
 
 #Region "Guild Management"
+
+        ''' <summary><see cref="User"/> applies for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="joinUser"><see cref="User"/> applying to join the <see cref="Guild"/>.</param>
+        ''' <param name="joinGuild"><see cref="Guild"/> being applied to</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
+            Return Await DatabaseInteraction.ApplyToGuild(joinUser, joinGuild)
+        End Function
+
+        ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
+        ''' <param name="joinUser">User joining the Guild.</param>
+        ''' <param name="joinGuild">Guild being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function HasAppliedToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
+            Return Await DatabaseInteraction.HasAppliedToGuild(joinUser, joinGuild)
+        End Function
 
         ''' <summary>Member of a Guild gains membership with that Guild, applied to database.</summary>
         ''' <param name="joinUser">User joining the Guild.</param>

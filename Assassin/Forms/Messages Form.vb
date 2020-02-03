@@ -10,7 +10,6 @@ Option Explicit On
 
 Imports System.Threading.Tasks
 Imports Assassin.Classes
-Imports Assassin.Classes.Entities
 
 Namespace Forms
 
@@ -73,11 +72,8 @@ Namespace Forms
             End If
         End Function
 
+        ''' <summary>Thsi method loads all names into the CmbNames ComboBox to be used in sending new messages.</summary>
         Private Sub LoadNames()
-            '* * * * *
-            '* This method loads names into the CmbNames ComboBox.
-            '* * * * *
-            'TODO Figure out why the hell I did this.
             'cmbNames.Items.Clear()
 
             '_sql1 = "SELECT Username FROM Users ORDER BY ID Asc"

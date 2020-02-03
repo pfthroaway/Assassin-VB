@@ -21,24 +21,16 @@ Namespace Forms.Shopping
         Public loc As String = ""               'location
         Dim _selectedItem As Item
 
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Private Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds formatted text to the TextBox.
-            '* * * * *
-
-            Dim currText As String = TxtBar.Text
-            TxtBar.Clear()
-
-            TxtBar.Text = newText & _nl & _nl & currText
-            TxtBar.Select(0, 0)
-            TxtBar.ScrollToCaret()
+            AddTextToTextBox(TxtBar, newText)
         End Sub
 
-        Private Sub Clear()
-            '* * * * *
-            '* This method clears all labels and the Listbox.
-            '* * * * *
+#Region "Display Management"
 
+        ''' <summary>Clears all labels and the Listbox.</summary>
+        Private Sub Clear()
             lblGold.Text = ""
             lblPrice.Text = ""
             LstPurchases.ClearSelected()
@@ -47,31 +39,15 @@ Namespace Forms.Shopping
             CmbDrinks.Checked = True
         End Sub
 
-        Public Sub DisplayPurchases()
-            '* * * * *
-            '* This method populates the ListBox with item names.
-            '* * * * *
-
-            LstPurchases.Items.Clear()  'clear Listbox so no duplicates
-
-            If CmbDrinks.Checked = True Then
-                For Each drink As Drink In GameState.AllDrinks
-                    LstPurchases.Items.Add(drink.Name)
-                Next
-            ElseIf CmbFood.Checked = True Then
-                For Each food As Food In GameState.AllFood
-                    LstPurchases.Items.Add(food.Name)
-                Next
-            End If
-
+        ''' <summary>Clears and displays everything.</summary>
+        Public Sub ClearAndDisplay()
+            Clear()
+            DisplayPurchases()
             Display()
         End Sub
 
+        ''' <summary>Displays all the <see cref="User"/>'s information.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays all the user's information.
-            '* * * * *
-
             lblGold.Text = CurrentUser.GoldOnHandToString
             lblHunger.Text = GetHunger(CurrentUser.Hunger)
             lblThirst.Text = GetThirst(CurrentUser.Thirst)
@@ -100,11 +76,27 @@ Namespace Forms.Shopping
             End If
         End Sub
 
-        Private Async Sub Purchase()
-            '* * * * *
-            '* This method purchases an item.
-            '* * * * *
+        ''' <summary>Populates the ListBox with <see cref="Food"/> or <see cref="Drink"/> names.</summary>
+        Public Sub DisplayPurchases()
+            LstPurchases.Items.Clear()
 
+            If CmbDrinks.Checked = True Then
+                For Each drink As Drink In GameState.AllDrinks
+                    LstPurchases.Items.Add(drink.Name)
+                Next
+            ElseIf CmbFood.Checked = True Then
+                For Each food As Food In GameState.AllFood
+                    LstPurchases.Items.Add(food.Name)
+                Next
+            End If
+
+            Display()
+        End Sub
+
+#End Region
+
+        ''' <summary>Purchases a <see cref="Food"/> or <see cref="Drink"/>.</summary>
+        Private Async Sub Purchase()
             CurrentUser.GoldOnHand -= _selectedItem.Value
 
             If CmbDrinks.Checked = True Then
@@ -117,58 +109,36 @@ Namespace Forms.Shopping
 
             AddText($"You purchase the {_selectedItem.Name}  for {_selectedItem.ValueToString} gold.")
 
-            Display()               'display gold and stats
-            Await SaveUser(CurrentUser)    'save
+            Display()
+            Await SaveUser(CurrentUser)
         End Sub
 
-        Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbDrinks.CheckedChanged, CmbFood.CheckedChanged
-            '* * * * *
-            '* This method detects when one of the Radio buttons has changed.
-            '* * * * *
+#Region "Click"
 
+        Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbDrinks.CheckedChanged, CmbFood.CheckedChanged
             lblPrice.Text = ""
             DisplayPurchases()
         End Sub
 
         Private Sub LstWeapons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstPurchases.SelectedIndexChanged
-            '* * * * *
-            '* This method calls the display method when a user changes Listbox selections.
-            '* * * * *
-
             Display()
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This method clears and resets all form data.
-            '* * * * *
-
-            Clear()
-            DisplayPurchases()
-            Display()
+            ClearAndDisplay()
         End Sub
 
         Private Sub BtnPurchase_Click(sender As Object, e As EventArgs) Handles BtnPurchase.Click
-            '* * * * *
-            '* This method purchases a weapon.
-            '* * * * *
-
             Purchase()
         End Sub
 
-        Private Sub FrmBar_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method closes the form and saves information to the previous form.
-            '* * * * *
+#End Region
 
+        Private Sub FrmBar_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             AddText("You walk away from the bar.")
 
             If loc = "Pub" Then

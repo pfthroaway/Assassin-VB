@@ -9,6 +9,7 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums
 Imports Assassin.Classes.Items
 
@@ -18,14 +19,16 @@ Namespace Forms.Shopping
         Dim _weaponList As New List(Of Weapon)
         Dim _selectedWeapon As New Weapon
 
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Private Sub AddText(newText As String)
             AddTextToTextBox(TxtWeapons, newText)
         End Sub
 
+#Region "Display Management"
+
+        ''' <summary>Clears all labels and the Listbox.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method clears all labels and the Listbox.
-            '* * * * *
             lblGold.Text = ""
             lblCurrent.Text = ""
             lblValue.Text = ""
@@ -43,35 +46,16 @@ Namespace Forms.Shopping
             DisplayWeapons()
         End Sub
 
-        Public Sub DisplayWeapons()
-            '* * * * *
-            '* This method populates the ListBox with weapon names.
-            '* * * * *
-
-            LstWeapons.Items.Clear()                        'clear Listbox so no duplicates
-            _weaponList.Clear()
-
-            If CmbLight.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Light).ToList()
-            ElseIf CmbHeavy.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Heavy).ToList()
-            ElseIf CmbTwoH.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.TwoHanded).ToList()
-            End If
-
-            For Each weapon As Weapon In _weaponList
-                LstWeapons.Items.Add(weapon.Name)
-            Next
-
-            If LstWeapons.Items.Contains("Hands") Then
-                LstWeapons.Items.Remove("Hands")
-            End If
-
+        ''' <summary>Clears and displays everything.</summary>
+        Public Sub ClearAndDisplay()
+            Clear()
+            DisplayWeapons()
             Display()
         End Sub
 
+        ''' <summary>Displays all the <see cref="User"/>'s information.</summary>
         Private Sub Display()
-            If LstWeapons.SelectedIndex >= 0 Then   'display selected weapon information
+            If LstWeapons.SelectedIndex >= 0 Then
                 If CmbLight.Checked Then
                     _selectedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = LstWeapons.SelectedItem.ToString AndAlso weapon.Type = WeaponType.Light)
                     BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso Not _selectedWeapon.Equals(CurrentUser.LightWeapon)
@@ -103,15 +87,39 @@ Namespace Forms.Shopping
             BtnSell.Enabled = CurrentUser.CurrentWeapon.Value > 0
         End Sub
 
-        Private Async Sub Purchase()
-            '* * * * *
-            '* This method purchases a weapon.
-            '* * * * *
+        ''' <summary>Populates the ListBox with <see cref="Weapon"/> names.</summary>
+        Public Sub DisplayWeapons()
+            LstWeapons.Items.Clear()
+            _weaponList.Clear()
 
-            Dim dlgQuestion As String = ""
+            If CmbLight.Checked Then
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Light).ToList()
+            ElseIf CmbHeavy.Checked Then
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Heavy).ToList()
+            ElseIf CmbTwoH.Checked Then
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.TwoHanded).ToList()
+            End If
+
+            For Each weapon As Weapon In _weaponList
+                LstWeapons.Items.Add(weapon.Name)
+            Next
+
+            If LstWeapons.Items.Contains("Hands") Then
+                LstWeapons.Items.Remove("Hands")
+            End If
+
+            Display()
+        End Sub
+
+#End Region
+
+#Region "Transactions"
+
+        ''' <summary>Purchases a <see cref="Weapon"/>.</summary>
+        Private Async Sub Purchase()
             Dim dlg As DialogResult
 
-            dlgQuestion = $"Are you sure you want to purchase this {_selectedWeapon.Name}?"
+            Dim dlgQuestion As String = $"Are you sure you want to purchase this {_selectedWeapon.Name}?"
 
             If CmbLight.Checked = True Then
                 If Not CurrentUser.LightWeapon.Name = "Hands" Then
@@ -152,19 +160,13 @@ Namespace Forms.Shopping
                 End Select
                 CurrentUser.GoldOnHand -= _selectedWeapon.Value
                 AddText($"You purchase the {_selectedWeapon.Name} for {_selectedWeapon.Value} gold.")
-
-                Clear()             'set to defaults
-                DisplayWeapons()    'display weapons
-                Display()           'display gold and weapon name
+                ClearAndDisplay()
                 Await SaveUser(CurrentUser)
             End If
         End Sub
 
+        ''' <summary>Sells a <see cref="Weapon"/>.</summary>
         Private Async Sub Sell()
-            '* * * * *
-            '* This method sells a weapon.
-            '* * * * *
-
             Dim dlg As DialogResult
 
             dlg = MessageBox.Show($"Are you sure you want to sell this {CurrentUser.CurrentWeapon.Name} for {CurrentUser.CurrentWeapon.SellValue} gold?", "Assassin", MessageBoxButtons.YesNo)
@@ -182,69 +184,42 @@ Namespace Forms.Shopping
                         CurrentUser.TwoHandedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = "Hands" AndAlso weapon.Type = WeaponType.TwoHanded)
                 End Select
             End If
-
-            Clear()             'set to defaults
-            DisplayWeapons()    'display weapons
-            Display()           'display gold and weapon name
-            Await SaveUser(CurrentUser)              'save
+            ClearAndDisplay()
+            Await SaveUser(CurrentUser)
         End Sub
 
-        Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbLight.CheckedChanged, CmbHeavy.CheckedChanged, CmbTwoH.CheckedChanged
-            '* * * * *
-            '* This method detects when one of the Radio buttons has changed.
-            '* * * * *
+#End Region
 
+#Region "Click"
+
+        Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbLight.CheckedChanged, CmbHeavy.CheckedChanged, CmbTwoH.CheckedChanged
             lblPrice.Text = ""
             DisplayWeapons()
         End Sub
 
         Private Sub LstWeapons_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstWeapons.SelectedIndexChanged
-            '* * * * *
-            '* This method calls the display method when a user changes Listbox selections.
-            '* * * * *
-
             Display()
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This method clears and resets all form data.
-            '* * * * *
-
-            Clear()
-            DisplayWeapons()
-            Display()
+            ClearAndDisplay()
         End Sub
 
         Private Sub BtnPurchase_Click(sender As Object, e As EventArgs) Handles BtnPurchase.Click
-            '* * * * *
-            '* This method purchases a weapon.
-            '* * * * *
-
             Purchase()
         End Sub
 
         Private Sub BtnSell_Click(sender As Object, e As EventArgs) Handles BtnSell.Click
-            '* * * * *
-            '* This method sells a weapon.
-            '* * * * *
-
             Sell()
         End Sub
 
-        Private Sub FrmWeapons_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method closes the form and saves information to the previous form.
-            '* * * * *
+#End Region
 
+        Private Sub FrmWeapons_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             AddText("You exit the weapon shop.")
             FrmShops.Show()
             FrmShops.AddText(TxtWeapons.Text)

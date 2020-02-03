@@ -34,7 +34,7 @@ namespace Extensions.DatabaseHelp
                 }
                 catch (SQLiteException ex)
                 {
-                    Application.Current.Dispatcher.Invoke(() => new Notification(ex.Message, "Error Filling DataSet", NotificationButton.OK).ShowDialog());
+                    DisplayNotification(ex.Message, "Error Filling DataSet");
                 }
                 finally
                 {
@@ -63,7 +63,7 @@ namespace Extensions.DatabaseHelp
                 }
                 catch (SQLiteException ex)
                 {
-                    Application.Current.Dispatcher.Invoke(() => new Notification(ex.Message, "Error Filling DataSet", NotificationButton.OK).ShowDialog());
+                    DisplayNotification(ex.Message, "Error Filling DataSet");
                 }
                 finally
                 {
@@ -99,11 +99,7 @@ namespace Extensions.DatabaseHelp
                     }
                     catch (SQLiteException ex)
                     {
-                        Application.Current.Dispatcher.Invoke(() =>
-                        {
-                            new Notification(ex.Message, "Error Executing Command", NotificationButton.OK)
-                                .ShowDialog();
-                        });
+                        DisplayNotification(ex.Message, "Error Executing Command");
                     }
                     finally
                     {
@@ -112,14 +108,19 @@ namespace Extensions.DatabaseHelp
                 }).ConfigureAwait(false);
             }
             else
-            {
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    new Notification("Connection string cannot be empty!", "Cannot Connect To Database",
-                        NotificationButton.OK).ShowDialog();
-                });
-            }
+                DisplayNotification("Connection string cannot be empty!", "Cannot Connect To Database");
+
             return success;
+        }
+
+        [STAThread]
+        private static void DisplayNotification(string text, string title)
+        {
+            MessageBox.Show(text, title);
+            //if (Application.Current == null)
+            //    new Application();
+
+            //Application.Current.Dispatcher.Invoke(() => new Notification(text, title, NotificationButton.OK).ShowDialog());
         }
     }
 }

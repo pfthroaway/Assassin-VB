@@ -461,13 +461,37 @@ Namespace Classes.Database
 
 #Region "Guild Management"
 
+        ''' <summary><see cref="User"/> applies for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="joinUser"><see cref="User"/> applying to join the <see cref="Guild"/>.</param>
+        ''' <param name="joinGuild"><see cref="Guild"/> being applied to</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
+            Dim guildID As String = $"Guild{joinGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Applications([Username], [Guild])VALUES(@name, @guild)"}
+            cmd.Parameters.AddWithValue("@name", joinUser.Name)
+            cmd.Parameters.AddWithValue("@guild", joinGuild.ID)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
+        ''' <param name="checkUser"><see cref="User"/> to check if has applied to the <see cref="Guild"/>.</param>
+        ''' <param name="checkGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if has applied</returns>
+        Public Async Function HasAppliedToGuild(checkUser As User, checkGuild As Guild) As Task(Of Boolean)
+            Dim guildID As String = $"Guild{checkGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"SELECT * FROM {guildID} Where [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", checkUser.Name)
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, cmd)
+            Return ds.Tables(0).Rows.Count > 0
+        End Function
+
         ''' <summary>Member of a <see cref="Guild"/> gains membership with that <see cref="Guild"/>, applied to database.</summary>
         ''' <param name="joinUser"><see cref="User"/> joining the <see cref="Guild"/>.</param>
         ''' <param name="joinGuild"><see cref="Guild"/> being joined</param>
         ''' <returns>True if successful</returns>
         Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.MemberJoinsGuild
             Dim guildID As String = $"Guild{joinGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM {guildID} WHERE [Username] = @name"}
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO {guildID}([Username])VALUES(@name)"}
             cmd.Parameters.AddWithValue("@name", joinUser.Name)
             Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
@@ -488,7 +512,7 @@ Namespace Classes.Database
         Public Async Function SaveGuild(guildSave As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.SaveGuild
             Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Guilds SET [GuildName] = @guildName, [Guildmaster] = @guildmaster, [GuildFee] = @guildFee, [GuildGold] = @guildGold, [HenchmenLevel1] = @henchmenLevel1, [HenchmenLevel2] = @henchmenLevel2, [HenchmenLevel3] = @henchmenLevel3, [HenchmenLevel4] = @henchmenLevel4, [HenchmenLevel5] = @henchmenLevel5 WHERE [ID] = @id"}
 
-            cmd.Parameters.AddWithValue("@name", guildSave.Name)
+            cmd.Parameters.AddWithValue("@guildName", guildSave.Name)
             cmd.Parameters.AddWithValue("@guildmaster", guildSave.Master)
             cmd.Parameters.AddWithValue("@guildFee", guildSave.Fee)
             cmd.Parameters.AddWithValue("@guildGold", guildSave.Gold)

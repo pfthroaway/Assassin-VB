@@ -24,6 +24,8 @@ Namespace Forms.Shopping
             AddTextToTextBox(TxtArmor, newText)
         End Sub
 
+#Region "Display Management"
+
         ''' <summary>Clears all labels and the Listbox.</summary>
         Private Sub Clear()
             LblGold.Text = ""
@@ -40,14 +42,10 @@ Namespace Forms.Shopping
             BtnClear.Enabled = False
         End Sub
 
-        ''' <summary>Populates the ListBox with armor names.</summary>
-        Public Sub DisplayArmor()
-            For Each armor As Armor In AllArmor
-                If armor.Name <> "Clothes" Then
-                    LstArmor.Items.Add(armor.Name)
-                End If
-            Next
-
+        ''' <summary>Clears and displays everything.</summary>
+        Public Sub ClearAndDisplay()
+            Clear()
+            DisplayArmor()
             Display()
         End Sub
 
@@ -69,6 +67,21 @@ Namespace Forms.Shopping
                 LblPrice.Text = _buyArmor.ValueToString
             End If
         End Sub
+
+        ''' <summary>Populates the ListBox with <see cref="Armor"/> names.</summary>
+        Public Sub DisplayArmor()
+            For Each armor As Armor In AllArmor
+                If armor.Name <> "Clothes" Then
+                    LstArmor.Items.Add(armor.Name)
+                End If
+            Next
+
+            Display()
+        End Sub
+
+#End Region
+
+#Region "Transactions"
 
         ''' <summary>The <see cref="User"/> purchases <see cref="Armor"/>.</summary>
         Private Async Sub Purchase()
@@ -115,6 +128,8 @@ Namespace Forms.Shopping
             Await SaveUser(CurrentUser)
         End Sub
 
+#End Region
+
 #Region "Click"
 
         Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs)
@@ -131,9 +146,7 @@ Namespace Forms.Shopping
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            Clear()
-            DisplayArmor()
-            Display()
+            ClearAndDisplay()
         End Sub
 
         Private Sub BtnPurchase_Click(sender As Object, e As EventArgs) Handles BtnPurchase.Click

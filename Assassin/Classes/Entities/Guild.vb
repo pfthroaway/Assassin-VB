@@ -13,6 +13,8 @@ Namespace Classes.Entities
     ''' <summary>Represents a <see cref="Guild"/> that players can join.</summary>
     Public Class Guild
 
+#Region "Properties"
+
         ''' <summary>The <see cref="Guild"/>'s ID.</summary>
         Public Property ID As Integer
 
@@ -45,6 +47,46 @@ Namespace Classes.Entities
 
         ''' <summary>The amount of level 5 Henchmen employed by the <see cref="Guild"/>.</summary>
         Public Property HenchmenLevel5 As Integer
+
+#End Region
+
+#Region "Override Operators"
+
+        Public Overloads Function Equals(left As Guild, right As Guild) As Boolean
+            If left Is Nothing AndAlso right Is Nothing Then
+                Return True
+            End If
+            If left Is Nothing Xor right Is Nothing Then
+                Return False
+            End If
+            Return left.ID = right.ID AndAlso left.Name = right.Name AndAlso left.Master = right.Master AndAlso left.Fee = right.Fee AndAlso left.Gold = right.Gold AndAlso left.HenchmenLevel1 = right.HenchmenLevel1 AndAlso left.HenchmenLevel2 = right.HenchmenLevel2 AndAlso left.HenchmenLevel3 = right.HenchmenLevel3 AndAlso left.HenchmenLevel4 = right.HenchmenLevel4 AndAlso left.HenchmenLevel5 = right.HenchmenLevel5 AndAlso Not left.Members.Except(right.Members).Any() AndAlso Not right.Members.Except(left.Members).Any()
+        End Function
+
+        Public Overloads Function Equals(otherGuild As Guild) As Boolean
+            Return Equals(Me, otherGuild)
+        End Function
+
+        Public Overloads Overrides Function Equals(obj As Object) As Boolean
+            Return Equals(Me, TryCast(obj, Guild))
+        End Function
+
+        Public Overrides Function GetHashCode() As Integer
+            Return MyBase.GetHashCode() Xor 17
+        End Function
+
+        Public Shared Operator =(left As Guild, right As Guild) As Boolean
+            Return left.Equals(right)
+        End Operator
+
+        Public Shared Operator <>(left As Guild, right As Guild) As Boolean
+            Return Not left = right
+        End Operator
+
+        Public Overrides Function ToString() As String
+            Return Name
+        End Function
+
+#End Region
 
         ''' <summary>Initializes a new instance of the Guild class.</summary>
         Friend Sub New()

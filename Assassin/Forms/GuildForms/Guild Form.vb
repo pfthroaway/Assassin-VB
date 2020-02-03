@@ -16,11 +16,14 @@ Namespace Forms.GuildForms
 
     Public Class FrmGuild
 
-        Private Function LevelOk() As Boolean
-            '* * * * *
-            '* This method checks whether the character is too high to be in Guild 1.
-            '* * * * *
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Public Sub AddText(newText As String)
+            AddTextToTextBox(TxtGuild, newText)
+        End Sub
 
+        ''' <summary>Checks whether the character is too high to be in Guild 1.</summary>
+        Private Function LevelOk() As Boolean
             If CurrentGuild.ID = 1 AndAlso CurrentUser.Level > 5 Then
                 DisableButtons()
                 AddText("An invisible wall blocks you as you attempt to enter the guild. The guildmaster looms in the doorway.{ControlChars.NewLine}""You are now too experienced to belong to this guild. Good luck to you in the future.{ControlChars.NewLine}""You are pushed back to the streets.")
@@ -32,15 +35,8 @@ Namespace Forms.GuildForms
             End If
         End Function
 
-        Public Sub AddText(newText As String)
-            AddTextToTextBox(TxtGuild, newText)
-        End Sub
-
+        ''' <summary>Checks to see if the CurrentUser is the Guildmaster.</summary>
         Private Sub CheckLeader()
-            '* * * * *
-            '* This method checks to see if the CurrentUser is the Guildmaster.
-            '* * * * *
-
             If CurrentUser.Name = CurrentGuild.Master Then
                 BtnChallenge.Enabled = False
                 BtnManage.Enabled = True
@@ -52,11 +48,8 @@ Namespace Forms.GuildForms
             End If
         End Sub
 
+        ''' <summary>Disables all the buttons on the form.</summary>
         Private Sub DisableButtons()
-            '* * * * *
-            '* This method disables all the buttons on the form.
-            '* * * * *
-
             BtnChallenge.Enabled = False
             BtnBar.Enabled = False
             BtnDonate.Enabled = False
@@ -70,46 +63,31 @@ Namespace Forms.GuildForms
             BtnTransfer.Enabled = False
         End Sub
 
+        ''' <summary>Displays the guild name.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays the guild name.
-            '* * * * *
-
             lblGuildName.Text = CurrentGuild.Name
         End Sub
 
+        ''' <summary>Makes a <see cref="User"/> leave the <see cref="Guild"/>.</summary>
         Private Async Sub LeaveGuild()
-            '* * * * *
-            '* This method makes a user leave the guild.
-            '* * * * *
-
             If (Await MemberLeavesGuild(CurrentUser, CurrentGuild)) Then
                 DisableButtons()
             End If
         End Sub
 
+        ''' <summary>Loads important information when the form loads.</summary>
         Public Sub LoadGuild()
-            '* * * * *
-            '* This method loads important information when the form loads.
-            '* * * * *
-
             Display()
             If LevelOk() Then CheckLeader()
         End Sub
 
-        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
+#Region "Click"
 
+        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
             Close()
         End Sub
 
         Private Sub BtnBar_Click(sender As Object, e As EventArgs) Handles BtnBar.Click
-            '* * * * *
-            '* This method displays the Bar form on clicking the Bar button.
-            '* * * * *
-
             FrmBar.Show()
             FrmBar.loc = "Guild"
             FrmBar.DisplayPurchases()
@@ -117,79 +95,46 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnChallenge_Click(sender As Object, e As EventArgs) Handles BtnChallenge.Click
-            '* * * * *
-            '* This method handles clicking the Challenge button.
-            '* * * * *
-
             AddText("This feature is currently unavailable.")
         End Sub
 
         Private Sub BtnDonate_Click(sender As Object, e As EventArgs) Handles BtnDonate.Click
-            '* * * * *
-            '* This method lets you donate to the guild.
-            '* * * * *
-
             FrmGuildDonate.Show()
             FrmGuildDonate.LoadDonate()
             Hide()
         End Sub
 
         Private Sub BtnHire_Click(sender As Object, e As EventArgs) Handles BtnHire.Click
-            '* * * * *
-            '* This method handles clicking the Hire button.
-            '* * * * *
-
             FrmHireHenchmen.Show()
             FrmHireHenchmen.SetUser()
             Hide()
         End Sub
 
         Private Sub BtnJobs_Click(sender As Object, e As EventArgs) Handles BtnJobs.Click
-            '* * * * *
-            '* This method handles clicking the Jobs button.
-            '* * * * *
-
             FrmJobs.Show()
             FrmJobs.LoadJobs()
             Hide()
         End Sub
 
         Private Sub BtnManage_Click(sender As Object, e As EventArgs) Handles BtnManage.Click
-            '* * * * *
-            '* This method handles clicking the Manage button.
-            '* * * * *
-
             FrmGuildManage.Show()
             Hide()
         End Sub
 
-        Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
-            '* * * * *
-            '* This method handles clicking the Members button.
-            '* * * * *
-
+        Private Async Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Guild"
-            FrmMembers.LoadMembers()
+            Await FrmMembers.LoadMembers()
             Hide()
         End Sub
 
         Private Sub BtnRaid_Click(sender As Object, e As EventArgs) Handles BtnRaid.Click
-            '* * * * *
-            '*  This button click displays the Raid form.
-            '* * * * *
-
             FrmRaid.Show()
             FrmRaid.LoadRaid()
             Hide()
-
         End Sub
 
         Private Sub BtnQuit_Click(sender As Object, e As EventArgs) Handles BtnQuit.Click
-            '* * * * *
-            '* This method verifies if a user wants to quit the guild.
-            '* * * * *
-
             Dim dlg As DialogResult
             dlg = MessageBox.Show("Are you sure you want to quit the guild?", "Assassin", MessageBoxButtons.YesNo)
             If dlg = DialogResult.Yes Then
@@ -199,10 +144,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Async Sub BtnSleep_Click(sender As Object, e As EventArgs) Handles BtnSleep.Click
-            '* * * * *
-            '* This method lets a user sleep in the guild.
-            '* * * * *
-
             CurrentUser.CurrentLocation = "Guild"
             Await SaveUser(CurrentUser)
             DisableButtons()
@@ -211,18 +152,12 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnTransfer_Click(sender As Object, e As EventArgs) Handles BtnTransfer.Click
-            '* * * * *
-            '* This method displays the Transfer Items form.
-            '* * * * *
-
             AddText("This feature is currently unavailable.")
         End Sub
 
-        Private Async Sub FrmGuild_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
+#End Region
 
+        Private Async Sub FrmGuild_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGame.Show()
             FrmGame.Display()
             FrmGame.AddText(TxtGuild.Text)

@@ -148,25 +148,22 @@ Namespace Forms
             Dim username As String = TxtName.Text
             Dim newUser As New User
 
-            If TxtPass.Text = TxtConfirm.Text Then 'if passwords match
-                If Await LoadUser(username) <> New User() OrElse username = "Computer" Then  'if user name is in use
+            If TxtPass.Text = TxtConfirm.Text Then
+                If Await LoadUser(username) <> New User() OrElse username = "Computer" Then
                     MessageBox.Show("This username has already been used.", "Assassin", MessageBoxButtons.OK)
                 Else
-                    'character
-                    newUser.Name = TxtName.Text                     'add Username
-                    newUser.Password = Argon2.HashPassword(TxtPass.Text)  'add Password
-                    newUser.CurrentEndurance = _maxEnd                        'add Current Endurance
-                    newUser.MaximumEndurance = _maxEnd                         'add Maximum Endurance
-
-                    'skills
-                    newUser.LightWeaponSkill = _light                'add Light Weapon Skill
-                    newUser.HeavyWeaponSkill = _heavy                'add Heavy Weapon Skill
-                    newUser.TwoHandedWeaponSkill = _twoH                  'add Two-Handed Weapon Skill
-                    newUser.Blocking = _blocking                     'add Blocking Skill
-                    newUser.Slipping = _slipping                     'add Slipping Skill
-                    newUser.Stealth = _stealth                       'add Stealth Skill
-                    newUser.SkillPoints = _skillPts                     'set skill points
-                    Await GameState.NewUser(newUser)                          'add newUser to database
+                    newUser.Name = TxtName.Text
+                    newUser.Password = Argon2.HashPassword(TxtPass.Text)
+                    newUser.CurrentEndurance = _maxEnd
+                    newUser.MaximumEndurance = _maxEnd
+                    newUser.LightWeaponSkill = _light
+                    newUser.HeavyWeaponSkill = _heavy
+                    newUser.TwoHandedWeaponSkill = _twoH
+                    newUser.Blocking = _blocking
+                    newUser.Slipping = _slipping
+                    newUser.Stealth = _stealth
+                    newUser.SkillPoints = _skillPts
+                    Await GameState.NewUser(newUser)
                     Await MemberJoinsGuild(newUser, AllGuilds(0))
 
                     FrmGame.Show()
