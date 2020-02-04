@@ -9,12 +9,12 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 Imports Assassin.Forms.GuildForms
 
 Namespace Forms
 
     Public Class FrmHireHenchmen
-
         Dim _goldOnHand As Integer
         Dim _goldRemaining As Integer
         Dim _buy1 As Integer
@@ -28,134 +28,51 @@ Namespace Forms
         Dim _henchmenLevel4 As Integer
         Dim _henchmenLevel5 As Integer
         Public BlnGuild As Boolean = False
-        Dim _nl As String = ControlChars.NewLine
 
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Public Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds formatted text to the TextBox.
-            '* * * * *
-
-            Dim currText As String = TxtHire.Text
-            TxtHire.Clear()
-
-            TxtHire.Text = newText & _nl & _nl & currText
-            TxtHire.Select(0, 0)
-            TxtHire.ScrollToCaret()
+            AddTextToTextBox(TxtHire, newText)
         End Sub
 
+        ''' <summary>Checks whether you have the maximum number of henchmen for a given level.</summary>
         Private Sub CheckMax()
-            '* * * * *
-            '* This method checks whether you have the maximum number of henchmen for a given level.
-            '* * * * *
+            Btn1P1.Enabled = _henchmenLevel1 > 998
+            Btn1P5.Enabled = _henchmenLevel1 > 994
 
-            If _henchmenLevel1 > 998 Then
-                Btn1P1.Enabled = False
-                Btn1P5.Enabled = False
-            ElseIf _henchmenLevel1 > 994 Then
-                Btn1P5.Enabled = False
-            End If
+            Btn2P1.Enabled = _henchmenLevel2 > 998
+            Btn2P5.Enabled = _henchmenLevel2 > 994
 
-            If _henchmenLevel2 > 998 Then
-                Btn2P1.Enabled = False
-                Btn2P5.Enabled = False
-            ElseIf _henchmenLevel2 > 994 Then
-                Btn2P5.Enabled = False
-            End If
+            Btn3P1.Enabled = _henchmenLevel3 > 998
+            Btn3P5.Enabled = _henchmenLevel3 > 994
 
-            If _henchmenLevel3 > 998 Then
-                Btn3P1.Enabled = False
-                Btn3P5.Enabled = False
-            ElseIf _henchmenLevel3 > 994 Then
-                Btn3P5.Enabled = False
-            End If
+            Btn4P1.Enabled = _henchmenLevel4 > 998
+            Btn4P5.Enabled = _henchmenLevel4 > 994
 
-            If _henchmenLevel4 > 998 Then
-                Btn4P1.Enabled = False
-                Btn4P5.Enabled = False
-            ElseIf _henchmenLevel4 > 994 Then
-                Btn4P5.Enabled = False
-            End If
-
-            If _henchmenLevel5 > 998 Then
-                Btn5P1.Enabled = False
-                Btn5P5.Enabled = False
-            ElseIf _henchmenLevel5 > 994 Then
-                Btn5P5.Enabled = False
-            End If
+            Btn5P1.Enabled = _henchmenLevel5 > 998
+            Btn5P5.Enabled = _henchmenLevel5 > 994
         End Sub
 
+        ''' <summary>Checks all Minus buttons.</summary>
         Private Sub CheckMinusButtons()
-            '* * * * *
-            '* This method checks all Minus buttons.
-            '* * * * *
-
             If (_buy1 + _buy2 + _buy3 + _buy4 + _buy5) > 0 Then
                 BtnHire.Enabled = True
                 BtnClear.Enabled = True
-                If _buy1 > 0 Then
-                    If _buy1 >= 5 Then
-                        Btn1M5.Enabled = True
-                        Btn1M1.Enabled = True
-                    Else
-                        Btn1M1.Enabled = True
-                        Btn1M5.Enabled = False
-                    End If
-                Else
-                    Btn1M1.Enabled = False
-                    Btn1M5.Enabled = False
-                End If
 
-                If _buy2 > 0 Then
-                    If _buy2 >= 5 Then
-                        Btn2M5.Enabled = True
-                        Btn2M1.Enabled = True
-                    Else
-                        Btn2M1.Enabled = True
-                        Btn2M5.Enabled = False
-                    End If
-                Else
-                    Btn2M1.Enabled = False
-                    Btn2M5.Enabled = False
-                End If
+                Btn1M5.Enabled = _buy1 >= 5
+                Btn1M1.Enabled = _buy1 >= 1
 
-                If _buy3 > 0 Then
-                    If _buy3 >= 5 Then
-                        Btn3M5.Enabled = True
-                        Btn3M1.Enabled = True
-                    Else
-                        Btn3M1.Enabled = True
-                        Btn3M5.Enabled = False
-                    End If
-                Else
-                    Btn3M1.Enabled = False
-                    Btn3M5.Enabled = False
-                End If
+                Btn2M5.Enabled = _buy2 >= 5
+                Btn2M1.Enabled = _buy2 >= 1
 
-                If _buy4 > 0 Then
-                    If _buy4 >= 5 Then
-                        Btn4M5.Enabled = True
-                        Btn4M1.Enabled = True
-                    Else
-                        Btn4M1.Enabled = True
-                        Btn4M5.Enabled = False
-                    End If
-                Else
-                    Btn4M1.Enabled = False
-                    Btn4M5.Enabled = False
-                End If
+                Btn3M5.Enabled = _buy3 >= 5
+                Btn3M1.Enabled = _buy3 >= 1
 
-                If _buy5 > 0 Then
-                    If _buy5 >= 5 Then
-                        Btn5M5.Enabled = True
-                        Btn5M1.Enabled = True
-                    Else
-                        Btn5M1.Enabled = True
-                        Btn5M5.Enabled = False
-                    End If
-                Else
-                    Btn5M1.Enabled = False
-                    Btn5M5.Enabled = False
-                End If
+                Btn4M5.Enabled = _buy4 >= 5
+                Btn4M1.Enabled = _buy4 >= 1
+
+                Btn5M5.Enabled = _buy5 >= 5
+                Btn5M1.Enabled = _buy5 >= 1
             Else
                 DisableAllMinus()
                 BtnHire.Enabled = False
@@ -163,63 +80,57 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Checks whether Plus buttons should be enabled.</summary>
         Private Sub CheckPlusButtons()
-            '* * * * *
-            '* This method checks whether Plus buttons should be enabled.
-            '* * * * *
-
             If _goldRemaining >= 100 Then
                 If _goldRemaining >= 2500 Then
-                    EnableAllPlus()
+                    ToggleAllPlus(True)
                 ElseIf _goldRemaining >= 2000 Then
-                    EnableAllPlus()
+                    ToggleAllPlus(True)
                     Btn5P5.Enabled = False
                 ElseIf _goldRemaining >= 1500 Then
-                    EnableAllPlus()
+                    ToggleAllPlus(True)
                     Btn5P5.Enabled = False
                     Btn4P5.Enabled = False
                 ElseIf _goldRemaining >= 1000 Then
-                    EnableAllPlus()
+                    ToggleAllPlus(True)
                     Btn5P5.Enabled = False
                     Btn4P5.Enabled = False
                     Btn3P5.Enabled = False
                 ElseIf _goldRemaining >= 500 Then
-                    EnableAllPlus()
+                    ToggleAllPlus(True)
                     Btn5P5.Enabled = False
                     Btn4P5.Enabled = False
                     Btn3P5.Enabled = False
                     Btn2P5.Enabled = False
                 ElseIf _goldRemaining >= 400 Then
-                    DisableAllPlus()
+                    ToggleAllPlus(False)
                     Btn1P1.Enabled = True
                     Btn2P1.Enabled = True
                     Btn3P1.Enabled = True
                     Btn4P1.Enabled = True
                 ElseIf _goldRemaining >= 300 Then
-                    DisableAllPlus()
+                    ToggleAllPlus(False)
                     Btn1P1.Enabled = True
                     Btn2P1.Enabled = True
                     Btn3P1.Enabled = True
                 ElseIf _goldRemaining >= 200 Then
-                    DisableAllPlus()
+                    ToggleAllPlus(False)
                     Btn1P1.Enabled = True
                     Btn2P1.Enabled = True
                 ElseIf _goldRemaining >= 100 Then
-                    DisableAllPlus()
+                    ToggleAllPlus(False)
                     Btn1P1.Enabled = True
                 End If
 
                 CheckMax()
             Else
-                DisableAllPlus()
+                ToggleAllPlus(False)
             End If
         End Sub
 
+        ''' <summary>Clears all relevant data on the form.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method clears all relevant data on the form.
-            '* * * * *
-
             _buy1 = 0
             _buy2 = 0
             _buy3 = 0
@@ -229,11 +140,8 @@ Namespace Forms
             Display()
         End Sub
 
+        ''' <summary>Disables all the minus buttons.</summary>
         Private Sub DisableAllMinus()
-            '* * * * *
-            '* This method disables all the minus buttons.
-            '* * * * *
-
             Btn1M5.Enabled = False
             Btn2M5.Enabled = False
             Btn3M5.Enabled = False
@@ -247,59 +155,32 @@ Namespace Forms
             Btn5M1.Enabled = False
         End Sub
 
-        Private Sub DisableAllPlus()
-            '* * * * *
-            '* This method disables all Plus buttons.
-            '* * * * *
-
-            Btn1P1.Enabled = False
-            Btn2P1.Enabled = False
-            Btn3P1.Enabled = False
-            Btn4P1.Enabled = False
-            Btn5P1.Enabled = False
-            Btn1P5.Enabled = False
-            Btn2P5.Enabled = False
-            Btn3P5.Enabled = False
-            Btn4P5.Enabled = False
-            Btn5P5.Enabled = False
+        ''' <summary>Toggles all Plus Buttons.</summary>
+        ''' <param name="enabled">Should the Buttons be enabled?</param>
+        Private Sub ToggleAllPlus(enabled As Boolean)
+            Btn1P1.Enabled = enabled
+            Btn2P1.Enabled = enabled
+            Btn3P1.Enabled = enabled
+            Btn4P1.Enabled = enabled
+            Btn5P1.Enabled = enabled
+            Btn1P5.Enabled = enabled
+            Btn2P5.Enabled = enabled
+            Btn3P5.Enabled = enabled
+            Btn4P5.Enabled = enabled
+            Btn5P5.Enabled = enabled
         End Sub
 
-        Public Sub Disablebuttons()
-            '* * * * *
-            '* This method disables all buttons except for Back.
-            '* * * * *
-
-            Btn1M5.Enabled = False
-            Btn2M5.Enabled = False
-            Btn3M5.Enabled = False
-            Btn4M5.Enabled = False
-            Btn5M5.Enabled = False
-            Btn1M1.Enabled = False
-            Btn2M1.Enabled = False
-            Btn2M1.Enabled = False
-            Btn3M1.Enabled = False
-            Btn4M1.Enabled = False
-            Btn5M1.Enabled = False
-            Btn1P1.Enabled = False
-            Btn2P1.Enabled = False
-            Btn3P1.Enabled = False
-            Btn4P1.Enabled = False
-            Btn5P1.Enabled = False
-            Btn1P5.Enabled = False
-            Btn2P5.Enabled = False
-            Btn3P5.Enabled = False
-            Btn4P5.Enabled = False
-            Btn5P5.Enabled = False
+        ''' <summary>Disables all buttons except for Back.</summary>
+        Public Sub DisableButtons()
+            DisableAllMinus()
+            ToggleAllPlus(False)
 
             BtnHire.Enabled = False
             BtnClear.Enabled = False
         End Sub
 
+        ''' <summary>Displays all relevant data on the form.</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays all relevant data on the form.
-            '* * * * *
-
             CheckPlusButtons()
             CheckMinusButtons()
             lblGoldOnHand.Text = _goldOnHand.ToString("N0")
@@ -317,28 +198,8 @@ Namespace Forms
             TxtBuy5.Text = _buy5.ToString
         End Sub
 
-        Public Sub EnableAllPlus()
-            '* * * * *
-            '* This method enables all Plus buttons.
-            '* * * * *
-
-            Btn1P1.Enabled = True
-            Btn2P1.Enabled = True
-            Btn3P1.Enabled = True
-            Btn4P1.Enabled = True
-            Btn5P1.Enabled = True
-            Btn1P5.Enabled = True
-            Btn2P5.Enabled = True
-            Btn3P5.Enabled = True
-            Btn4P5.Enabled = True
-            Btn5P5.Enabled = True
-        End Sub
-
+        ''' <summary>Handles adding text to the Textbox based on who was hired.</summary>
         Public Sub HireText()
-            '* * * * *
-            '* This method handles adding text to the Textbox based on who was hired.
-            '* * * * *
-
             Dim textHire As String = "You hire "
 
             If _buy1 > 0 Then
@@ -390,11 +251,8 @@ Namespace Forms
             AddText(textHire)
         End Sub
 
+        ''' <summary>Sets up a player to buy henchmen.</summary>
         Public Sub SetUser()
-            '* * * * *
-            '* This method sets up a player to buy henchmen.
-            '* * * * *
-
             _goldOnHand = CurrentUser.GoldOnHand
             _goldRemaining = _goldOnHand
             _henchmenLevel1 = CurrentUser.HenchmenLevel1
@@ -405,12 +263,8 @@ Namespace Forms
             Display()
         End Sub
 
+        ''' <summary>Sets up a <see cref="Guild"/> to buy henchmen.</summary>
         Public Sub SetGuild()
-
-            '* * * * *
-            '* This method sets up a guild to buy henchmen.
-            '* * * * *
-
             _goldOnHand = CurrentGuild.Gold
             _goldRemaining = _goldOnHand
             _henchmenLevel1 = CurrentGuild.HenchmenLevel1
@@ -421,228 +275,138 @@ Namespace Forms
             Display()
         End Sub
 
-        Private Sub Btn1M5_Click(sender As Object, e As EventArgs) Handles Btn1M5.Click
-            '* * * * *
-            '* This method removes 5 Level 1 Henchmen from the queue.
-            '* * * * *
-
-            _buy1 -= 5
-            _goldRemaining += 500
+        ''' <summary>Adjusts the number of level 1 Henchmen being hired.</summary>
+        ''' <param name="amount">Amount of henchmen to hire</param>
+        Private Sub AdjustLevel1(amount As Integer)
+            _buy1 += amount
+            _goldRemaining += amount * 100
             Display()
+        End Sub
+
+        ''' <summary>Adjusts the number of level 2 Henchmen being hired.</summary>
+        ''' <param name="amount">Amount of henchmen to hire</param>
+        Private Sub AdjustLevel2(amount As Integer)
+            _buy2 += amount
+            _goldRemaining += amount * 200
+            Display()
+        End Sub
+
+        ''' <summary>Adjusts the number of level 3 Henchmen being hired.</summary>
+        ''' <param name="amount">Amount of henchmen to hire</param>
+        Private Sub AdjustLevel3(amount As Integer)
+            _buy3 += amount
+            _goldRemaining += amount * 300
+            Display()
+        End Sub
+
+        ''' <summary>Adjusts the number of level 4 Henchmen being hired.</summary>
+        ''' <param name="amount">Amount of henchmen to hire</param>
+        Private Sub AdjustLevel4(amount As Integer)
+            _buy4 += amount
+            _goldRemaining += amount * 400
+            Display()
+        End Sub
+
+        ''' <summary>Adjusts the number of level 5 Henchmen being hired.</summary>
+        ''' <param name="amount">Amount of henchmen to hire</param>
+        Private Sub AdjustLevel5(amount As Integer)
+            _buy5 += amount
+            _goldRemaining += amount * 500
+            Display()
+        End Sub
+
+#Region "Click"
+
+        Private Sub Btn1M5_Click(sender As Object, e As EventArgs) Handles Btn1M5.Click
+            AdjustLevel1(-5)
         End Sub
 
         Private Sub Btn1M1_Click(sender As Object, e As EventArgs) Handles Btn1M1.Click
-            '* * * * *
-            '* This method removes 1 Level 1 Henchman from the queue.
-            '* * * * *
-
-            _buy1 -= 1
-            _goldRemaining += 100
-            Display()
+            AdjustLevel1(-1)
         End Sub
 
         Private Sub Btn1P1_Click(sender As Object, e As EventArgs) Handles Btn1P1.Click
-            '* * * * *
-            '* This method adds 1 Level 1 Henchman to the queue.
-            '* * * * *
-
-            _buy1 += 1
-            _goldRemaining -= 100
-            Display()
+            AdjustLevel1(1)
         End Sub
 
         Private Sub Btn1P5_Click(sender As Object, e As EventArgs) Handles Btn1P5.Click
-            '* * * * *
-            '* This method adds 5 Level 1 Henchmen to the queue.
-            '* * * * *
-
-            _buy1 += 5
-            _goldRemaining -= 500
-            Display()
+            AdjustLevel1(5)
         End Sub
 
         Private Sub Btn2M5_Click(sender As Object, e As EventArgs) Handles Btn2M5.Click
-            '* * * * *
-            '* This method removes 5 Level 2 Henchmen from the queue.
-            '* * * * *
-
-            _buy2 -= 5
-            _goldRemaining += 1000
-            Display()
+            AdjustLevel2(-5)
         End Sub
 
         Private Sub Btn2M1_Click(sender As Object, e As EventArgs) Handles Btn2M1.Click
-            '* * * * *
-            '* This method removes 1 Level 2 Henchman to the queue.
-            '* * * * *
-
-            _buy2 -= 1
-            _goldRemaining += 200
-            Display()
+            AdjustLevel2(-1)
         End Sub
 
         Private Sub Btn2P1_Click(sender As Object, e As EventArgs) Handles Btn2P1.Click
-            '* * * * *
-            '* This method adds 1 Level 2 Henchman to the queue.
-            '* * * * *
-
-            _buy2 += 1
-            _goldRemaining -= 200
-            Display()
+            AdjustLevel2(1)
         End Sub
 
         Private Sub Btn2P5_Click(sender As Object, e As EventArgs) Handles Btn2P5.Click
-            '* * * * *
-            '* This method adds 5 Level 2 Henchmen to the queue.
-            '* * * * *
-
-            _buy2 += 5
-            _goldRemaining -= 1000
-            Display()
+            AdjustLevel2(5)
         End Sub
 
         Private Sub Btn3M5_Click(sender As Object, e As EventArgs) Handles Btn3M5.Click
-            '* * * * *
-            '* This method removes 5 Level 3 Henchmen from the queue.
-            '* * * * *
-
-            _buy3 -= 5
-            _goldRemaining += 1500
-            Display()
+            AdjustLevel3(-5)
         End Sub
 
         Private Sub Btn3M1_Click(sender As Object, e As EventArgs) Handles Btn3M1.Click
-            '* * * * *
-            '* This method removes 1 Level 3 Henchman from the queue.
-            '* * * * *
-
-            _buy3 -= 1
-            _goldRemaining += 300
-            Display()
+            AdjustLevel3(-1)
         End Sub
 
         Private Sub Btn3P1_Click(sender As Object, e As EventArgs) Handles Btn3P1.Click
-            '* * * * *
-            '* This method adds 1 Level 3 Henchman to the queue.
-            '* * * * *
-
-            _buy3 += 1
-            _goldRemaining -= 300
-            Display()
+            AdjustLevel3(1)
         End Sub
 
         Private Sub Btn3P5_Click(sender As Object, e As EventArgs) Handles Btn3P5.Click
-            '* * * * *
-            '* This method adds 5 Level 3 Henchmen to the queue.
-            '* * * * *
-
-            _buy3 += 5
-            _goldRemaining -= 1500
-            Display()
+            AdjustLevel3(5)
         End Sub
 
         Private Sub Btn4M5_Click(sender As Object, e As EventArgs) Handles Btn4M5.Click
-            '* * * * *
-            '* This method removes 5 Level 4 Henchmen from the queue.
-            '* * * * *
-
-            _buy4 -= 5
-            _goldRemaining += 2000
-            Display()
+            AdjustLevel4(-5)
         End Sub
 
         Private Sub Btn4M1_Click(sender As Object, e As EventArgs) Handles Btn4M1.Click
-            '* * * * *
-            '* This method removes 1 Level 4 Henchman from the queue.
-            '* * * * *
-
-            _buy4 -= 1
-            _goldRemaining += 400
-            Display()
+            AdjustLevel4(-1)
         End Sub
 
         Private Sub Btn4P1_Click(sender As Object, e As EventArgs) Handles Btn4P1.Click
-            '* * * * *
-            '* This method adds 1 Level 4 Henchman to the queue.
-            '* * * * *
-
-            _buy4 += 1
-            _goldRemaining -= 400
-            Display()
+            AdjustLevel4(1)
         End Sub
 
         Private Sub Btn4P5_Click(sender As Object, e As EventArgs) Handles Btn4P5.Click
-            '* * * * *
-            '* This method adds 5 Level 4 Henchmen to the queue.
-            '* * * * *
-
-            _buy4 += 5
-            _goldRemaining -= 2000
-            Display()
+            AdjustLevel4(5)
         End Sub
 
         Private Sub Btn5M5_Click(sender As Object, e As EventArgs) Handles Btn5M5.Click
-            '* * * * *
-            '* This method removes 5 Level 5 Henchmen from the queue.
-            '* * * * *
-
-            _buy5 -= 5
-            _goldRemaining += 2500
-            Display()
+            AdjustLevel5(-5)
         End Sub
 
         Private Sub Btn5M1_Click(sender As Object, e As EventArgs) Handles Btn5M1.Click
-            '* * * * *
-            '* This method removes 1 Level 5 Henchman from the queue.
-            '* * * * *
-
-            _buy5 -= 1
-            _goldRemaining += 500
-            Display()
+            AdjustLevel5(-1)
         End Sub
 
         Private Sub Btn5P1_Click(sender As Object, e As EventArgs) Handles Btn5P1.Click
-            '* * * * *
-            '* This method adds 1 Level 5 Henchman to the queue.
-            '* * * * *
-
-            _buy5 += 1
-            _goldRemaining -= 500
-            Display()
+            AdjustLevel5(1)
         End Sub
 
         Private Sub Btn5P5_Click(sender As Object, e As EventArgs) Handles Btn5P5.Click
-            '* * * * *
-            '* This method adds 5 Level 5 Henchmen to the queue.
-            '* * * * *
-
-            _buy5 += 5
-            _goldRemaining -= 2500
-            Display()
+            AdjustLevel5(5)
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This method clears all data on the form.
-            '* * * * *
-
             Clear()
         End Sub
 
         Private Async Sub BtnHire_Click(sender As Object, e As EventArgs) Handles BtnHire.Click
-            '* * * * *
-            '* This method hires the henchmen allocated.
-            '* * * * *
-
-            If BlnGuild = True Then 'hire henchmen for guild
+            If BlnGuild = True Then
                 CurrentGuild.HenchmenLevel1 += _buy1
                 CurrentGuild.HenchmenLevel2 += _buy2
                 CurrentGuild.HenchmenLevel3 += _buy3
@@ -651,7 +415,7 @@ Namespace Forms
                 CurrentGuild.Gold = _goldRemaining
                 Await SaveGuild(CurrentGuild)
                 SetGuild()
-            Else                    'hire henchmen for user
+            Else
                 CurrentUser.HenchmenLevel1 += _buy1
                 CurrentUser.HenchmenLevel2 += _buy2
                 CurrentUser.HenchmenLevel3 += _buy3
@@ -667,11 +431,9 @@ Namespace Forms
             Clear()
         End Sub
 
-        Private Sub FrmHireHenchmen_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
+#End Region
 
+        Private Sub FrmHireHenchmen_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             If BlnGuild = True Then
                 FrmGuildManage.Show()
                 FrmGuildManage.AddText(TxtHire.Text)

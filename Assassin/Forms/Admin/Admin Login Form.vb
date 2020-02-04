@@ -17,10 +17,6 @@ Namespace Forms.Admin
         Dim _blnAdmin As Boolean = False
 
         Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-            '* * * * *
-            '* This method handles clicking the Submit button.
-            '* * * * *
-
             If Argon2.ValidatePassword(AdminPassword, TxtPassword.Text) Then
                 _blnAdmin = True
                 Close()
@@ -31,10 +27,6 @@ Namespace Forms.Admin
         End Sub
 
         Private Sub FrmAdminLogin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
             If _blnAdmin = True Then
                 FrmAdmin.Show()
             Else

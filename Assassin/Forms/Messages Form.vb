@@ -19,11 +19,8 @@ Namespace Forms
         Dim _currentIndex As Integer = 0
         Public loc As String        'location to return to
 
+        ''' <summary>Clears all the information on the form.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method clears all the information on the form.
-            '* * * * *
-
             BtnNext.Enabled = False
             BtnPrev.Enabled = False
             BtnDelete.Enabled = False
@@ -34,10 +31,8 @@ Namespace Forms
             TxtMessage.Clear()
         End Sub
 
+        ''' <summary>Displays the message.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays the message.
-            '* * * * *
             If _messages.Count <= _currentIndex Then
                 Dim message As Message = _messages(_currentIndex)
                 TxtFrom.Text = message.UserFrom
@@ -57,10 +52,8 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Loads messages for the current user.</summary>
         Public Async Function LoadMessages() As Task
-            '* * * * *
-            '* This method loads messages for the current user.
-            '* * * * *
             Await GameState.LoadMessages(CurrentUser)
 
             If _messages.Count > 0 Then
@@ -72,7 +65,7 @@ Namespace Forms
             End If
         End Function
 
-        ''' <summary>Thsi method loads all names into the CmbNames ComboBox to be used in sending new messages.</summary>
+        ''' <summary>This method loads all names into the CmbNames ComboBox to be used in sending new messages.</summary>
         Private Sub LoadNames()
             'cmbNames.Items.Clear()
 
@@ -87,12 +80,9 @@ Namespace Forms
             'cmbNames.Items.Remove(CurrentUser.Name)
         End Sub
 
-        Public Sub StartSend()
-            '* * * * *
-            '* This method starts the form being able to send messages.
-            '* * * * *
-
-            LoadMessages()
+        ''' <summary>Starts the form being able to send messages.</summary>
+        Public Async Sub StartSend()
+            Await LoadMessages()
             BtnReply.Enabled = True
             BtnDelete.Enabled = True
             BtnReply.Text = "&Send"     'change text to Send
@@ -110,10 +100,6 @@ Namespace Forms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
@@ -146,19 +132,11 @@ Namespace Forms
         End Sub
 
         Private Sub BtnNew_Click(sender As Object, e As EventArgs) Handles BtnNew.Click
-            '* * * * *
-            '* This method allows a user to create a new message.
-            '* * * * *
-
             BtnNew.Enabled = False
             StartSend()
         End Sub
 
         Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             If _currentIndex = _messages.Count - 1 Then
                 _currentIndex = 0
             Else
@@ -169,10 +147,6 @@ Namespace Forms
         End Sub
 
         Private Sub BtnPrev_Click(sender As Object, e As EventArgs) Handles BtnPrev.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             If _currentIndex = 0 Then
                 _currentIndex = _messages.Count - 1
             Else

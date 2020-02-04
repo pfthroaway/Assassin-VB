@@ -21,11 +21,15 @@ Namespace Forms
         Dim selectedUser As User
         Public loc As String            'location
 
-        Public Async Function LoadMembers() As Task
-            '* * * * *
-            '* This method loads members of the current guild.
-            '* * * * *
+        ''' <summary>Disables most buttons.</summary>
+        Private Sub DisableButtons()
+            BtnMessage.Enabled = False
+            BtnExpel.Enabled = False
+            BtnAttack.Enabled = False
+        End Sub
 
+        ''' <summary>Loads members of the current <see cref="Guild"/>.</summary>
+        Public Async Function LoadMembers() As Task
             LstMembers.Items.Clear()
 
             If loc = "Manage" OrElse loc = "Guild" Then
@@ -48,24 +52,13 @@ Namespace Forms
         End Function
 
         Private Sub BtnAttack_Click(sender As Object, e As EventArgs) Handles BtnAttack.Click
-            '* * * * *
-            '* This method attacks another player.
-            '* * * * *
-
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
-            '* * * * *
-            '* This method expels the selected user.
-            '* * * * *
             'TODO Fix Guild Expulsion
             'Dim dlg As DialogResult
             'Dim expelName As String = LstMembers.SelectedItem.ToString
@@ -97,10 +90,6 @@ Namespace Forms
         End Sub
 
         Private Sub BtnMessage_Click(sender As Object, e As EventArgs) Handles BtnMessage.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             FrmMessages.Show()
             FrmMessages.StartSend()
             FrmMessages.loc = "Members"
@@ -109,39 +98,23 @@ Namespace Forms
         End Sub
 
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             If LstMembers.SelectedIndex >= 0 Then
                 If LstMembers.SelectedItem.ToString <> CurrentUser.Name Then
                     selectedUser = allUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString)
                     BtnMessage.Enabled = True
                     BtnExpel.Enabled = True
                     If loc = "Streets" Then
-                        If selectedUser.CurrentLocation = "Streets" Then
-                            BtnAttack.Enabled = True
-                        Else
-                            BtnAttack.Enabled = False
-                        End If
+                        BtnAttack.Enabled = selectedUser.CurrentLocation = "Streets"
                     End If
                 Else
-                    BtnMessage.Enabled = False
-                    BtnExpel.Enabled = False
-                    BtnAttack.Enabled = False
+                    DisableButtons()
                 End If
             Else
-                BtnMessage.Enabled = False
-                BtnExpel.Enabled = False
-                BtnAttack.Enabled = False
+                DisableButtons()
             End If
         End Sub
 
         Private Sub FrmMembers_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
-
             If loc = "Manage" Then
                 FrmGuildManage.Show()
             ElseIf loc = "Guild" Then

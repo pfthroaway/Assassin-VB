@@ -138,7 +138,7 @@ Namespace Classes.Database
 
             If ds.Tables(0).Rows.Count > 0 Then
                 For Each dr As DataRow In ds.Tables(0).Rows
-                    _messages.Add(New Message(loadUser.Name, dr("UserFrom").ToString, dr("Message").ToString, DateTimeHelper.Parse(dr("DateSent").ToString), BoolHelper.Parse("GuildMessage")))
+                    _messages.Add(New Message(Int32Helper.Parse(dr("ID")), loadUser.Name, dr("UserFrom").ToString, dr("Message").ToString, DateTimeHelper.Parse(dr("DateSent").ToString), BoolHelper.Parse("GuildMessage")))
                 Next
             End If
             Return _messages
@@ -247,6 +247,32 @@ Namespace Classes.Database
                 Next
             End If
             Return allWeapons
+        End Function
+
+#End Region
+
+#Region "Message Management"
+
+        ''' <summary>Deletes a <see cref="Message"/> from the database.</summary>
+        ''' <param name="message"><see cref="Message"/> to be deleted</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteMessage(message As Message) As Task(Of Boolean)
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Messages WHERE [ID] = @id"}
+            cmd.Parameters.AddWithValue("@id", message.ID)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Sends a <see cref="Message"/> between <see cref="User"/>s.</summary>
+        ''' <param name="message"><see cref="Message"/> sent</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function SendMessage(message As Message) As Task(Of Boolean)
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Messages([UserTo], [UserFrom], [Message], [DateSent], [GuildMessage])VALUES(@userTo, @userFrom, @message, @dateSent, @guildMessage)"}
+            cmd.Parameters.AddWithValue("@userTo", message.UserTo)
+            cmd.Parameters.AddWithValue("@userFrom", message.UserFrom)
+            cmd.Parameters.AddWithValue("@message", message.Contents)
+            cmd.Parameters.AddWithValue("@dateSent", message.DateSent)
+            cmd.Parameters.AddWithValue("@guildMessage", Int32Helper.Parse(message.GuildMessage))
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
 
 #End Region
@@ -471,6 +497,33 @@ Namespace Classes.Database
             cmd.Parameters.AddWithValue("@name", joinUser.Name)
             cmd.Parameters.AddWithValue("@guild", joinGuild.ID)
             Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
+        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
+            Return Await DeleteGuildApplication(approveUser, approveGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), approveGuild.Name, approveUser.Name, $"Your application to join the {approveGuild.Name.Replace("'", "''")} guild has been approved. Welcome!", Now, True)) AndAlso Await MemberJoinsGuild(approveUser, approveGuild)
+        End Function
+
+        ''' <summary>Deletes a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
+        ''' <param name="deleteUser"><see cref="User"/> whose application is deleted</param>
+        ''' <param name="deleteGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was deleted</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteGuildApplication(deleteUser As User, deleteGuild As Guild) As Task(Of Boolean)
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Applications WHERE [Username] = @name AND [Guild] = @guild"}
+            cmd.Parameters.AddWithValue("@name", deleteUser.Name)
+            cmd.Parameters.AddWithValue("@guild", deleteGuild.ID)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Denies a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
+        ''' <param name="denyUser"><see cref="User"/> whose application is denied</param>
+        ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean)
+            Return Await DeleteGuildApplication(denyUser, denyGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), denyGuild.Name, denyUser.Name, $"Your application to join the {CurrentGuild.Name.Replace("'", "''")} guild has been denied.", Now, True))
         End Function
 
         ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>

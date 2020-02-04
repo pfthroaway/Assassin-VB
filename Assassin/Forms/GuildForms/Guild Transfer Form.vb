@@ -199,11 +199,7 @@ Namespace Forms.GuildForms
             '* This method handles KeyPresses for all editable fields.
             '* * * * *
 
-            If Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8) Then
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+            e.Handled = Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub TxtTransfer1_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer1.TextChanged

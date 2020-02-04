@@ -112,19 +112,11 @@ Namespace Forms
 
             lblHunger.Text = GetHunger(CurrentUser.Hunger)
 
-            If CurrentUser.Hunger < 20 Then
-                lblHunger.ForeColor = Color.Black
-            Else
-                lblHunger.ForeColor = Color.Red
-            End If
+            lblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
 
             lblThirst.Text = GetThirst(CurrentUser.Thirst)
 
-            If CurrentUser.Thirst < 20 Then
-                lblThirst.ForeColor = Color.Black
-            Else
-                lblThirst.ForeColor = Color.Red
-            End If
+            lblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
 
             lblWeaponName.Text = CurrentUser.CurrentWeapon.Name
             lblArmorName.Text = CurrentUser.Armor.Name
@@ -140,23 +132,11 @@ Namespace Forms
             lblSlippingAmt.Text = CurrentUser.Slipping.ToString & "%"
             lblStealthAmt.Text = CurrentUser.Stealth.ToString & "%"
 
-            If CurrentUser.CurrentWeapon.Name = "Hands" Then
-                lblWeaponName.ForeColor = Color.Red
-            Else
-                lblWeaponName.ForeColor = Color.Black
-            End If
+            lblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
 
-            If CurrentUser.Armor.Name = "Clothes" Then
-                lblArmorName.ForeColor = Color.Red
-            Else
-                lblArmorName.ForeColor = Color.Black
-            End If
+            lblArmorName.ForeColor = If(CurrentUser.Armor.Name = "Clothes", Color.Red, Color.Black)
 
-            If CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2) Then
-                lblEndAmt.ForeColor = Color.Red
-            Else
-                lblEndAmt.ForeColor = Color.Black
-            End If
+            lblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
         End Sub
 
         ''' <summary>Enables the buttons if a user exits jail.</summary>

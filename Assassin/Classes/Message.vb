@@ -3,6 +3,9 @@
 ''' <summary>Represents a <see cref="Message"/> sent to a <see cref="User"/>.</summary>
 Public Class Message
 
+    ''' <summary>ID of the <see cref="Message"/>.</summary>
+    Public Property ID As Integer
+
     ''' <summary><see cref="User"/> who sent the <see cref="Message"/>.</summary>
     Public Property UserFrom As String
 
@@ -24,7 +27,8 @@ Public Class Message
     ''' <param name="msg">What the <see cref="Message"/> says</param>
     ''' <param name="sent">Date the <see cref="Message"/> was sent</param>
     ''' <param name="guildMsg">Was this <see cref="Message"/> sent by a guild leader?</param>
-    Public Sub New(sentFrom As String, sentTo As String, msg As String, sent As Date, guildMsg As Boolean)
+    Public Sub New(msgID As Integer, sentFrom As String, sentTo As String, msg As String, sent As Date, guildMsg As Boolean)
+        ID = msgID
         UserFrom = sentFrom
         UserTo = sentTo
         Contents = msg
@@ -35,6 +39,7 @@ Public Class Message
     ''' <summary>Constructs a new instance of <see cref="Message"/> by copying another <see cref="Message"/>.</summary>
     ''' <param name="other"><see cref="Message"/> to be copied</param>
     Public Sub New(other As Message)
+        ID = other.ID
         UserFrom = other.UserFrom
         UserTo = other.UserTo
         Contents = other.Contents

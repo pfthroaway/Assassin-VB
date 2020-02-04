@@ -12,31 +12,20 @@ Namespace Forms
 
     Public Class FrmCourt
         Public Reason As String = ""            'reason for being sent to court
-        Dim _nl As String = ControlChars.NewLine 'new line
         Dim _arrText As New ArrayList            'ArrayList of text
         Dim _index As Integer = 0                'index for ArrayList
         Dim _fine As Integer = 0                 'fine if found guilty
         Dim _blnGuilty As Boolean = False        'boolean for being found guilty
         Dim _blnFinished As Boolean = False      'boolean for being finished
 
-        Public Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtCourt.Text
-            TxtCourt.Clear()
-
-            TxtCourt.Text = newText & _nl & _nl & currText
-            TxtCourt.Select(0, 0)
-            TxtCourt.ScrollToCaret()
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Private Sub AddText(newText As String)
+            AddTextToTextBox(TxtCourt, newText)
         End Sub
 
+        ''' <summary>Displays text from the Arraylist.</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays text from the Arraylist.
-            '* * * * *
-
             If _index < _arrText.Count Then
                 AddText(_arrText(_index))
                 _index += 1
@@ -49,11 +38,8 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Administers justice!</summary>
         Public Sub Justice()
-            '* * * * *
-            '* This method administers justice!
-            '* * * * *
-
             If _blnGuilty = True Then
                 If CurrentUser.GoldOnHand >= _fine Then
                     BtnPayFine.Enabled = True
@@ -64,11 +50,8 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Sets up the court scenario.</summary>
         Public Sub Setup()
-            '* * * * *
-            '* This method sets up the court scenario.
-            '* * * * *
-
             _arrText.Add("You are dragged to the courts of justice.")
             _arrText.Add("The judge stares at you. . .")
             If CurrentUser.Level > 6 Then
@@ -101,69 +84,50 @@ Namespace Forms
             Start()
         End Sub
 
+        ''' <summary>Starts the Timer.</summary>
         Public Sub Start()
-            '* * * * *
-            '* This method starts the Timer.
-            '* * * * *
-
             Timer1.Start()
         End Sub
 
-        Private Sub BtnFreedom_Click(sender As Object, e As EventArgs) Handles BtnFreedom.Click
-            '* * * * *
-            '* This method displays a message and then the Game form.
-            '* * * * *
+#Region "Click"
 
+        Private Sub BtnFreedom_Click(sender As Object, e As EventArgs) Handles BtnFreedom.Click
             AddText("You beat a hasty retreat and return to the streets.")
             _blnFinished = True
             Close()
         End Sub
 
         Private Sub BtnJail_Click(sender As Object, e As EventArgs) Handles BtnJail.Click
-            '* * * * *
-            '* This method sends the user to jail.
-            '* * * * *
-
             If CurrentUser.GoldOnHand < _fine Then
                 AddText("You don't have the money required to pay the fine.")
             Else
                 AddText("You decide it is best to spend the night in jail.")
             End If
             FrmGame.DisableButtons()
-            FrmGame.btnJail.Enabled = True
+            FrmGame.BtnJail.Enabled = True
             CurrentUser.CurrentLocation = "Jail"
             _blnFinished = True
             Close()
         End Sub
 
         Private Sub BtnPayFine_Click(sender As Object, e As EventArgs) Handles BtnPayFine.Click
-            '* * * * *
-            '* This method pays the fine.
-            '* * * * *
-
             AddText("You decide it is best to pay the fine and depart.")
             CurrentUser.GoldOnHand -= _fine
             _blnFinished = True
             Close()
         End Sub
 
-        Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-            '* * * * *
-            '* This method calls the display method on the Timer Tick.
-            '* * * * *
+#End Region
 
+        Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
             Display()
         End Sub
 
         Private Async Sub FrmCourt_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method closes the form.
-            '* * * * *
-
             If _blnFinished = True Then
                 FrmGame.Show()
                 FrmGame.Display()
-                FrmGame.AddText(txtCourt.Text)
+                FrmGame.AddText(TxtCourt.Text)
                 Await SaveUser(CurrentUser)
             Else
                 MessageBox.Show("You must make a decision first.", "Assassin", MessageBoxButtons.OK)

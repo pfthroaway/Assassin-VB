@@ -17,7 +17,6 @@ Namespace Forms.Shopping
 
     Public Class FrmBar
 
-        Dim _nl As String = ControlChars.NewLine 'new line
         Public loc As String = ""               'location
         Dim _selectedItem As Item
 
@@ -52,17 +51,9 @@ Namespace Forms.Shopping
             lblHunger.Text = GetHunger(CurrentUser.Hunger)
             lblThirst.Text = GetThirst(CurrentUser.Thirst)
 
-            If CurrentUser.Hunger < 20 Then
-                lblHunger.ForeColor = Color.Black
-            Else
-                lblHunger.ForeColor = Color.Red
-            End If
+            lblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
 
-            If CurrentUser.Thirst < 20 Then
-                lblThirst.ForeColor = Color.Black
-            Else
-                lblThirst.ForeColor = Color.Red
-            End If
+            lblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
 
             If LstPurchases.SelectedIndex >= 0 Then
                 If CmbDrinks.Checked Then
@@ -81,11 +72,11 @@ Namespace Forms.Shopping
             LstPurchases.Items.Clear()
 
             If CmbDrinks.Checked = True Then
-                For Each drink As Drink In GameState.AllDrinks
+                For Each drink As Drink In AllDrinks
                     LstPurchases.Items.Add(drink.Name)
                 Next
             ElseIf CmbFood.Checked = True Then
-                For Each food As Food In GameState.AllFood
+                For Each food As Food In AllFood
                     LstPurchases.Items.Add(food.Name)
                 Next
             End If

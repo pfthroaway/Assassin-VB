@@ -13,52 +13,34 @@ Imports Assassin.Classes
 Namespace Forms.GuildForms
 
     Public Class FrmGuildOptions
-
-        Dim _nl As String = ControlChars.NewLine
         Dim _oldName As String
         Dim _oldMaster As String
         Dim _oldFee As Integer
         Dim _blnMasterChanged As Boolean
 
-        Private Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtOptions.Text
-            TxtOptions.Clear()
-
-            TxtOptions.Text = newText & _nl & _nl & currText
-            TxtOptions.Select(0, 0)
-            TxtOptions.ScrollToCaret()
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Public Sub AddText(newText As String)
+            AddTextToTextBox(TxtOptions, newText)
         End Sub
 
+        ''' <summary>Disables everything on the form.</summary>
         Private Sub Disable()
-            '* * * * *
-            '* This method disables everything on the form.
-            '* * * * *
-
             TxtName.Enabled = False
             TxtEntranceFee.Enabled = False
             CmbGuildmaster.Enabled = False
             BtnSave.Enabled = False
         End Sub
 
+        ''' <summary>Displays options.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays options.
-            '* * * * *
-
             TxtName.Text = CurrentGuild.Name
             CmbGuildmaster.SelectedItem = CurrentGuild.Master
             TxtEntranceFee.Text = CurrentGuild.Fee.ToString
         End Sub
 
+        ''' <summary>Gets the members of a guild.</summary>
         Private Sub GetMembers()
-            '* * * * *
-            '* This method gets the members of a guild.
-            '* * * * *
-
             CmbGuildmaster.Items.Clear()
             CmbGuildmaster.Items.Add("Computer")
 
@@ -69,11 +51,8 @@ Namespace Forms.GuildForms
             CmbGuildmaster.SelectedItem = CurrentGuild.Master
         End Sub
 
+        ''' <summary>Loads the options.</summary>
         Public Sub LoadOptions()
-            '* * * * *
-            '* This method loads the options.
-            '* * * * *
-
             _oldName = CurrentGuild.Name
             _oldMaster = CurrentGuild.Master
             _oldFee = CurrentGuild.Fee
@@ -83,42 +62,18 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtEntranceFee_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtEntranceFee.KeyPress
-            '* * * * *
-            '* This method handles what buttons can be pressed in this TextBox.
-            '* * * * *
-
-            If Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8) Then
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+            e.Handled = Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub TxtName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtName.KeyPress
-            '* * * * *
-            '* This method handles what buttons can be pressed in this TextBox.
-            '* * * * *
-
-            If Char.IsLetter(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like "'" OrElse e.KeyChar Like Chr(8) Then
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+            e.Handled = Char.IsLetter(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like "'" OrElse e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-            '* * * * *
-            '* This method closes the form on clicking the Exit button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Async Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
-            '* * * * *
-            '* This method saves the guild.
-            '* * * * *
-
             CurrentGuild.Name = TxtName.Text
             CurrentGuild.Master = CmbGuildmaster.SelectedItem.ToString
             Integer.TryParse(TxtEntranceFee.Text, CurrentGuild.Fee)
@@ -148,10 +103,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub FrmGuildOptions_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
             FrmGuildManage.Show()
             FrmGuildManage.AddText(TxtOptions.Text)
             If _blnMasterChanged = True Then

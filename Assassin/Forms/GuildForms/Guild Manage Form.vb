@@ -8,30 +8,20 @@
 Option Strict On
 Option Explicit On
 
+Imports Assassin.Classes
+
 Namespace Forms.GuildForms
 
     Public Class FrmGuildManage
 
-        Dim _nl As String = ControlChars.NewLine
-
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Public Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtGuild.Text
-            TxtGuild.Clear()
-
-            TxtGuild.Text = newText & _nl & _nl & currText
-            TxtGuild.Select(0, 0)
-            TxtGuild.ScrollToCaret()
+            AddTextToTextBox(TxtGuild, newText)
         End Sub
 
+        ''' <summary>Disables all buttons on the form if master of the guild is changed.</summary>
         Public Sub Disable()
-            '* * * * *
-            '* This method disables all buttons on the form if master of the guild is changed.
-            '* * * * *
-
             BtnApplications.Enabled = False
             BtnHire.Enabled = False
             BtnMembers.Enabled = False
@@ -39,72 +29,48 @@ Namespace Forms.GuildForms
             BtnTransfer.Enabled = False
         End Sub
 
-        Private Sub BtnApplications_Click(sender As Object, e As EventArgs) Handles BtnApplications.Click
-            '* * * * *
-            '* This method handles clicking the Applications button.
-            '* * * * *
+#Region "Click"
 
+        Private Async Sub BtnApplications_Click(sender As Object, e As EventArgs) Handles BtnApplications.Click
             FrmManageApplications.Show()
-            FrmManageApplications.GetApplicants()
+            Await FrmManageApplications.GetApplicants()
 
             Hide()
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnHire_Click(sender As Object, e As EventArgs) Handles BtnHire.Click
-            '* * * * *
-            '* This method handles clicking the Hire button.
-            '* * * * *
-
             FrmHireHenchmen.Show()
             FrmHireHenchmen.SetGuild()
             FrmHireHenchmen.BlnGuild = True
             Hide()
         End Sub
 
-        Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
-            '* * * * *
-            '* This method allows the guildmaster to manage the members of his guild.
-            '* * * * *
-
+        Private Async Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Manage"
-            FrmMembers.LoadMembers()
+            Await FrmMembers.LoadMembers()
             Hide()
         End Sub
 
         Private Sub BtnOptions_Click(sender As Object, e As EventArgs) Handles BtnOptions.Click
-            '* * * * *
-            '* This method displays the Guild Options form.
-            '* * * * *
-
             FrmGuildOptions.Show()
             FrmGuildOptions.LoadOptions()
             Hide()
         End Sub
 
         Private Sub BtnTransfer_Click(sender As Object, e As EventArgs) Handles BtnTransfer.Click
-            '* * * * *
-            '* This method displays the form which allows a guildmaster to transfer gold and henchmen.
-            '* * * * *
-
             FrmGuildTransfer.Show()
             FrmGuildTransfer.LoadTransfer()
             Hide()
         End Sub
 
-        Private Sub FrmGuildManage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
+#End Region
 
+        Private Sub FrmGuildManage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGuild.Show()
             FrmGuild.AddText(TxtGuild.Text)
             FrmGuild.LoadGuild()

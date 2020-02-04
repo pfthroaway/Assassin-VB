@@ -12,56 +12,36 @@ Namespace Forms.Admin
 
     Public Class FrmAdmin
 
-        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
+#Region "Click"
 
+        Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
             Close()
         End Sub
 
         Private Sub BtnChangePassword_Click(sender As Object, e As EventArgs) Handles BtnChangePassword.Click
-            '* * * * *
-            '* This method displays the Change password form.
-            '* * * * *
-
             FrmChangePassword.Show()
             FrmChangePassword.BlnAdmin = True
             Hide()
         End Sub
 
         Private Sub BtnEnemies_Click(sender As Object, e As EventArgs) Handles BtnEnemies.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             FrmAdminEnemies.Show()
             Hide()
         End Sub
 
         Private Sub BtnGuilds_Click(sender As Object, e As EventArgs) Handles BtnGuilds.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             FrmAdminGuilds.Show()
             Hide()
         End Sub
 
         Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             FrmAdminUsers.Show()
             Hide()
         End Sub
 
-        Private Sub FrmAdmin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
+#End Region
 
+        Private Sub FrmAdmin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmMain.Show()
         End Sub
 

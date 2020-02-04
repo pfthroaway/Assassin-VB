@@ -29,11 +29,7 @@ Namespace Classes
         ''' <param name="newText">Text to be added</param>
         Public Sub AddTextToTextBox(tb As TextBox, newText As String)
             Dim nl As String = Environment.NewLine
-            If String.IsNullOrWhiteSpace(tb.Text) Then
-                tb.Text = newText
-            Else
-                tb.Text = $"{tb.Text}{nl}{nl}{newText}"
-            End If
+            tb.Text = If(String.IsNullOrWhiteSpace(tb.Text), newText, $"{tb.Text}{nl}{nl}{newText}")
             tb.Select(tb.Text.Length - 1, 0)
             tb.ScrollToCaret()
         End Sub
@@ -44,10 +40,6 @@ Namespace Classes
 
         ''' <summary>Generates an enemy based on a player's current level.</summary>
         Public Sub GetEnemy()
-            '* * * * *
-            '* This method generates an enemy based on a player's current level.
-            '* * * * *
-
             Dim enemyNum As Integer = 0
             Dim enemy As Integer = Functions.GenerateRandomNumber(1, 100)
             Select Case CurrentUser.Level
@@ -171,17 +163,13 @@ Namespace Classes
                     End Select
             End Select
 
-            CurrentEnemy = New Enemy(AllEnemies(enemyNum))
+            CurrentEnemy = New Enemy(AllEnemies(enemyNum - 1))
         End Sub
 
         ''' <summary>Gets the hunger of a user and returns it as a String.</summary>
         ''' <param name="hunger">Current hunger</param>
         ''' <returns>String regarding hunger</returns>
         Public Function GetHunger(hunger As Integer) As String
-            '* * * * *
-            '* This method gets the hunger of a user and returns it as a String.
-            '* * * * *
-
             Select Case hunger
                 Case 0 To 4
                     Return "Full"
@@ -202,10 +190,6 @@ Namespace Classes
         ''' <param name="thirst">Current thirst</param>
         ''' <returns>String regarding thirst</returns>
         Public Function GetThirst(thirst As Integer) As String
-            '* * * * *
-            '* This method gets the thirst of a user and returns it as a String.
-            '* * * * *
-
             Select Case thirst
                 Case 0 To 4
                     Return "Quenched"
@@ -353,6 +337,24 @@ Namespace Classes
 
 #End Region
 
+#Region "Message Management"
+
+        ''' <summary>Deletes a <see cref="Message"/> from the database.</summary>
+        ''' <param name="message"><see cref="Message"/> to be deleted</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteMessage(message As Message) As Task(Of Boolean)
+            Return Await DatabaseInteraction.DeleteMessage(message)
+        End Function
+
+        ''' <summary>Sends a <see cref="Message"/> between <see cref="User"/>s.</summary>
+        ''' <param name="message"><see cref="Message"/> sent</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function SendMessage(message As Message) As Task(Of Boolean)
+            Return Await DatabaseInteraction.SendMessage(message)
+        End Function
+
+#End Region
+
 #Region "User Management"
 
         ''' <summary>Adds a User.</summary>
@@ -406,6 +408,22 @@ Namespace Classes
         ''' <returns>True if successful</returns>
         Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
             Return Await DatabaseInteraction.ApplyToGuild(joinUser, joinGuild)
+        End Function
+
+        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
+        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
+            Return Await DatabaseInteraction.ApproveGuildApplication(approveUser, approveGuild)
+        End Function
+
+        ''' <summary>Denies a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
+        ''' <param name="denyUser"><see cref="User"/> whose application is denied</param>
+        ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean)
+            Return Await DatabaseInteraction.DenyGuildApplication(denyUser, denyGuild)
         End Function
 
         ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>

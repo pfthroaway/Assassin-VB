@@ -59,19 +59,11 @@ Namespace Forms
 #Region "Form Management"
 
         Private Sub TxtOldPswd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtOldPswd.KeyPress, TxtNewPswd.KeyPress, TxtConfPswd.KeyPress
-            If Char.IsLetterOrDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8) Then    'letters, numbers, backspace
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+            e.Handled = Not Char.IsLetterOrDigit(e.KeyChar) AndAlso Not e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub PswdTextChanged(sender As Object, e As EventArgs) Handles TxtOldPswd.TextChanged, TxtNewPswd.TextChanged, TxtConfPswd.TextChanged
-            If TxtOldPswd.TextLength > 0 AndAlso TxtNewPswd.TextLength > 0 AndAlso TxtConfPswd.TextLength > 0 Then
-                BtnSubmit.Enabled = True
-            Else
-                BtnSubmit.Enabled = False
-            End If
+            BtnSubmit.Enabled = TxtOldPswd.TextLength > 0 AndAlso TxtNewPswd.TextLength > 0 AndAlso TxtConfPswd.TextLength > 0
         End Sub
 
         Private Sub FrmChangePassword_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

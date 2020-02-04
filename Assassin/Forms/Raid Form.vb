@@ -18,64 +18,36 @@ Namespace Forms
     Public Class FrmRaid
 
         Dim _raidGuild As New Guild              'guild selected to be raided
-        Dim _plrHench As New Henchman            'player's henchmen
-        Dim _eneHench As New Henchman            'enemy's henchmen
+        Dim _playerHenchmen As New Henchman            'player's henchmen
+        Dim _enemyHenchmen As New Henchman            'enemy's henchmen
 
-        Private Function CheckPlrMax() As Integer
-            '* * * * *
-            '* This function determines the highest level of henchmen the player has.
-            '* * * * *
-
-            If _plrHench.HenchmenLevel5 > 0 Then
-                _plrHench.Number = _plrHench.HenchmenLevel5
+        ''' <summary>Determines the highest level of henchmen the enemy has.</summary>
+        ''' <returns>the highest level of henchmen the enemy has</returns>
+        Private Function CheckMaxHenchmanLevel(ByRef henchmen As Henchman) As Integer
+            If henchmen.HenchmenLevel5 > 0 Then
+                henchmen.Number = henchmen.HenchmenLevel5
                 Return 5
-            ElseIf _plrHench.HenchmenLevel4 > 0 Then
-                _plrHench.Number = _plrHench.HenchmenLevel4
+            ElseIf henchmen.HenchmenLevel4 > 0 Then
+                henchmen.Number = henchmen.HenchmenLevel4
                 Return 4
-            ElseIf _plrHench.HenchmenLevel3 > 0 Then
-                _plrHench.Number = _plrHench.HenchmenLevel3
+            ElseIf henchmen.HenchmenLevel3 > 0 Then
+                henchmen.Number = henchmen.HenchmenLevel3
                 Return 3
-            ElseIf _plrHench.HenchmenLevel2 > 0 Then
-                _plrHench.Number = _plrHench.HenchmenLevel2
+            ElseIf henchmen.HenchmenLevel2 > 0 Then
+                henchmen.Number = henchmen.HenchmenLevel2
                 Return 2
-            ElseIf _plrHench.HenchmenLevel1 > 0 Then
-                _plrHench.Number = _plrHench.HenchmenLevel1
+            ElseIf henchmen.HenchmenLevel1 > 0 Then
+                henchmen.Number = henchmen.HenchmenLevel1
                 Return 1
             Else
                 Return 0
             End If
         End Function
 
-        Private Function CheckEneMax() As Integer
-            '* * * * *
-            '* This function determines the highest level of henchmen the enemy has.
-            '* * * * *
-
-            If _eneHench.HenchmenLevel5 > 0 Then
-                _eneHench.Number = _plrHench.HenchmenLevel5
-                Return 5
-            ElseIf _eneHench.HenchmenLevel4 > 0 Then
-                _eneHench.Number = _plrHench.HenchmenLevel4
-                Return 4
-            ElseIf _eneHench.HenchmenLevel3 > 0 Then
-                _eneHench.Number = _plrHench.HenchmenLevel3
-                Return 3
-            ElseIf _eneHench.HenchmenLevel2 > 0 Then
-                _eneHench.Number = _plrHench.HenchmenLevel2
-                Return 2
-            ElseIf _eneHench.HenchmenLevel1 > 0 Then
-                _eneHench.Number = _plrHench.HenchmenLevel1
-                Return 1
-            Else
-                Return 0
-            End If
-        End Function
-
-        Private Function DecHench(hench As Henchman) As Henchman
-            '* * * * *
-            '* This method decrements the henchman at that level.
-            '* * * * *
-
+        ''' <summary>Decrements the henchman at that level.</summary>
+        ''' <param name="hench">Level of henchmen</param>
+        ''' <returns>Modified henchmen</returns>
+        Private Function DecreaseHenchmen(hench As Henchman) As Henchman
             Select Case hench.Level
                 Case 5
                     hench.Number -= 1
@@ -97,53 +69,43 @@ Namespace Forms
             Return hench
         End Function
 
-        Private Function EneCount() As Integer
-            '* * * * *
-            '* This function determines the number of henchmen the enemy has at that level.
-            '* * * * *
-
-            Return _eneHench.HenchmenLevel1 + _eneHench.HenchmenLevel2 + _eneHench.HenchmenLevel3 + _eneHench.HenchmenLevel4 + _eneHench.HenchmenLevel5
+        ''' <summary>Determines the number of henchmen the enemy has.</summary>
+        ''' <returns>The number of henchmen the enemy has</returns>
+        Private Function EnemyCount() As Integer
+            Return _enemyHenchmen.HenchmenLevel1 + _enemyHenchmen.HenchmenLevel2 + _enemyHenchmen.HenchmenLevel3 + _enemyHenchmen.HenchmenLevel4 + _enemyHenchmen.HenchmenLevel5
         End Function
 
-        Private Function PlrCount() As Integer
-            '* * * * *
-            '* This function determines the number of henchmen the player has at that level.
-            '* * * * *
-
-            Return _plrHench.HenchmenLevel1 + _plrHench.HenchmenLevel2 + _plrHench.HenchmenLevel3 + _plrHench.HenchmenLevel4 + _plrHench.HenchmenLevel5
+        ''' <summary>Determines the number of henchmen the player has.</summary>
+        ''' <returns>The number of henchmen the player has</returns>
+        Private Function PlayerCount() As Integer
+            Return _playerHenchmen.HenchmenLevel1 + _playerHenchmen.HenchmenLevel2 + _playerHenchmen.HenchmenLevel3 + _playerHenchmen.HenchmenLevel4 + _playerHenchmen.HenchmenLevel5
         End Function
 
         Public Sub AddText(newText As String)
             AddTextToTextBox(TxtRaid, newText)
         End Sub
 
+        ''' <summary>Handles raiding.</summary>
         Private Sub Battle()
-            '* * * * *
-            '* This method handles raiding.
-            '* * * * *
-
-            While _plrHench.Number > 0 AndAlso _eneHench.Number > 0
+            While _playerHenchmen.Number > 0 AndAlso _enemyHenchmen.Number > 0
                 Dim first As Integer = Functions.GenerateRandomNumber(1, 100)
                 If first <= 50 Then
-                    PlayerAtt()
-                    If _eneHench.Number > 0 Then
-                        EnemyAtt()
+                    PlayerAttack()
+                    If _enemyHenchmen.Number > 0 Then
+                        EnemyAttack()
                     End If
                 Else
-                    EnemyAtt()
-                    If _plrHench.Number > 0 Then
-                        PlayerAtt()
+                    EnemyAttack()
+                    If _playerHenchmen.Number > 0 Then
+                        PlayerAttack()
                     End If
                 End If
             End While
 
         End Sub
 
+        ''' <summary>Checks whether you can click the Raid button.</summary>
         Private Sub CheckRaid()
-            '* * * * *
-            '* This method checks whether you can click the Raid button
-            '* * * * *
-
             If CmbRaid.SelectedIndex <> CurrentGuild.ID AndAlso CmbRaid.SelectedIndex <> 1 Then
                 Dim henchmenLevel1 As Integer
                 Dim henchmenLevel2 As Integer
@@ -156,11 +118,7 @@ Namespace Forms
                 Integer.TryParse(TxtHenchmenLevel4.Text, henchmenLevel4)
                 Integer.TryParse(TxtHenchmenLevel5.Text, henchmenLevel5)
 
-                If (henchmenLevel1 + henchmenLevel2 + henchmenLevel3 + henchmenLevel4 + henchmenLevel5) > 0 AndAlso CmbRaid.SelectedIndex >= 0 Then
-                    BtnRaid.Enabled = True
-                Else
-                    BtnRaid.Enabled = False
-                End If
+                BtnRaid.Enabled = (henchmenLevel1 + henchmenLevel2 + henchmenLevel3 + henchmenLevel4 + henchmenLevel5) > 0 AndAlso CmbRaid.SelectedIndex >= 0
             ElseIf CmbRaid.SelectedIndex = 1 Then
                 MessageBox.Show("You cannot raid The Master's Tavern.", "Assassin", MessageBoxButtons.OK)
                 BtnRaid.Enabled = False
@@ -170,11 +128,8 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Disables everything except the Back button.</summary>
         Private Sub DisableButtons()
-            '* * * * *
-            '* This method disables everything except the Back button.
-            '* * * * *
-
             CmbRaid.Enabled = False
             BtnRaid.Enabled = False
             BtnClear.Enabled = False
@@ -185,32 +140,26 @@ Namespace Forms
             TxtHenchmenLevel5.Enabled = False
         End Sub
 
-        Private Sub EnemyAtt()
-            '* * * * *
-            '* This method handles the enemy's henchman attacking.
-            '* * * * *
+        ''' <summary>Handles the enemy's henchman attacking.</summary>
+        Private Sub EnemyAttack()
+            Dim toHit As Integer = Functions.GenerateRandomNumber(1, 100)
+            Dim plrBlock As Integer = Functions.GenerateRandomNumber(1, 100)
 
-            Dim toHit As Integer = Functions.GenerateRandomNumber(1, 100)             'random number for enemy to hit
-            Dim plrBlock As Integer = Functions.GenerateRandomNumber(1, 100)          'random number for player to block
-
-            If toHit <= _plrHench.WeaponSkill Then                         'potential to hit
-                If plrBlock >= _plrHench.Blocking Then               'player didn't block
-                    _plrHench.Health -= _eneHench.Damage              'player loses health
-                    If _plrHench.Health <= 0 Then                    'if player has no health
-                        _plrHench = DecHench(_plrHench)
-                        If _plrHench.Number > 0 Then                 'if player still has members
-                            _plrHench.Health = _plrHench.Level * 2    'set health to max
+            If toHit <= _playerHenchmen.WeaponSkill Then                         'potential to hit
+                If plrBlock >= _playerHenchmen.Blocking Then               'player didn't block
+                    _playerHenchmen.Health -= _enemyHenchmen.Damage              'player loses health
+                    If _playerHenchmen.Health <= 0 Then                    'if player has no health
+                        _playerHenchmen = DecreaseHenchmen(_playerHenchmen)
+                        If _playerHenchmen.Number > 0 Then                 'if player still has members
+                            _playerHenchmen.Health = _playerHenchmen.Level * 2    'set health to max
                         End If
                     End If
                 End If
             End If
         End Sub
 
+        ''' <summary>Loads all the information on the form.</summary>
         Public Sub LoadRaid()
-            '* * * * *
-            '* This method loads all the information on the form.
-            '* * * * *
-
             CmbRaid.Items.Add("Bank")
             For Each guild As Guild In AllGuilds
                 CmbRaid.Items.Add(guild.Name)
@@ -223,73 +172,56 @@ Namespace Forms
             TxtMax5.Text = CurrentUser.HenchmenLevel5.ToString
         End Sub
 
+        ''' <summary>Handles the player failing the raiding.</summary>
         Private Sub LoseBattle()
-            '* * * * *
-            '* This method handles the player failing the raiding.
-            '* * * * *
-
             AddText("You failed to raid the " & CmbRaid.SelectedItem.ToString & ".")
             CmbRaid.Enabled = False
             BtnRaid.Enabled = False
             BtnClear.Enabled = False
-
         End Sub
 
-        Private Sub PlayerAtt()
-            '* * * * *
-            '* This method handles the player's henchman attacking.
-            '* * * * *
+        ''' <summary>Handles the player's henchman attacking.</summary>
+        Private Sub PlayerAttack()
+            Dim toHit As Integer = Functions.GenerateRandomNumber(1, 100)
+            Dim eneBlock As Integer = Functions.GenerateRandomNumber(1, 100)
 
-            Dim toHit As Integer = Functions.GenerateRandomNumber(1, 100)             'random number for player to hit
-            Dim eneBlock As Integer = Functions.GenerateRandomNumber(1, 100)          'random number for enemy to block
-
-            If toHit <= _plrHench.WeaponSkill Then                         'potential to hit
-                If eneBlock >= _eneHench.Blocking Then               'enemy didn't block
-                    _eneHench.Health -= _plrHench.Damage              'enemy loses health
-                    If _eneHench.Health <= 0 Then                    'if enemy has no health
-                        DecHench(_eneHench)
-                        If _eneHench.Number > 0 Then                 'if enemy still has members
-                            _eneHench.Health = _eneHench.Level * 2    'set health to max
+            If toHit <= _playerHenchmen.WeaponSkill Then                         'potential to hit
+                If eneBlock >= _enemyHenchmen.Blocking Then               'enemy didn't block
+                    _enemyHenchmen.Health -= _playerHenchmen.Damage              'enemy loses health
+                    If _enemyHenchmen.Health <= 0 Then                    'if enemy has no health
+                        DecreaseHenchmen(_enemyHenchmen)
+                        If _enemyHenchmen.Number > 0 Then                 'if enemy still has members
+                            _enemyHenchmen.Health = _enemyHenchmen.Level * 2    'set health to max
                         End If
                     End If
                 End If
             End If
         End Sub
 
+        ''' <summary>Sets the number of henchmen for both parties.</summary>
         Private Sub SetHenchmen()
-            '* * * * *
-            '* This method sets the number of henchmen for both parties.
-            '* * * * *
+            _playerHenchmen.HenchmenLevel1 = CurrentUser.HenchmenLevel1
+            _playerHenchmen.HenchmenLevel2 = CurrentUser.HenchmenLevel2
+            _playerHenchmen.HenchmenLevel3 = CurrentUser.HenchmenLevel3
+            _playerHenchmen.HenchmenLevel4 = CurrentUser.HenchmenLevel4
+            _playerHenchmen.HenchmenLevel5 = CurrentUser.HenchmenLevel5
 
-            _plrHench.HenchmenLevel1 = CurrentUser.HenchmenLevel1
-            _plrHench.HenchmenLevel2 = CurrentUser.HenchmenLevel2
-            _plrHench.HenchmenLevel3 = CurrentUser.HenchmenLevel3
-            _plrHench.HenchmenLevel4 = CurrentUser.HenchmenLevel4
-            _plrHench.HenchmenLevel5 = CurrentUser.HenchmenLevel5
-
-            _eneHench.HenchmenLevel1 = _raidGuild.HenchmenLevel1
-            _eneHench.HenchmenLevel2 = _raidGuild.HenchmenLevel2
-            _eneHench.HenchmenLevel3 = _raidGuild.HenchmenLevel3
-            _eneHench.HenchmenLevel4 = _raidGuild.HenchmenLevel4
-            _eneHench.HenchmenLevel5 = _raidGuild.HenchmenLevel5
+            _enemyHenchmen.HenchmenLevel1 = _raidGuild.HenchmenLevel1
+            _enemyHenchmen.HenchmenLevel2 = _raidGuild.HenchmenLevel2
+            _enemyHenchmen.HenchmenLevel3 = _raidGuild.HenchmenLevel3
+            _enemyHenchmen.HenchmenLevel4 = _raidGuild.HenchmenLevel4
+            _enemyHenchmen.HenchmenLevel5 = _raidGuild.HenchmenLevel5
         End Sub
 
-        Private Async Sub Winbattle()
-            '* * * * *
-            '* This method handles the player successfully raiding.
-            '* * * * *
-
-            Dim number As Integer = PlrCount()
+        ''' <summary>Handles the player successfully raiding.</summary>
+        Private Async Sub WinBattle()
+            Dim number As Integer = PlayerCount()
             Dim maxgold As Integer
             Dim stolenGold As Integer
 
             If CmbRaid.SelectedItem.ToString <> "Bank" Then
                 maxgold = _raidGuild.Gold
-                If (number * 100) <= _raidGuild.Gold Then
-                    stolenGold = number * 100
-                Else
-                    stolenGold = maxgold
-                End If
+                stolenGold = If((number * 100) <= _raidGuild.Gold, number * 100, maxgold)
 
                 _raidGuild.Gold -= stolenGold
                 _raidGuild.HenchmenLevel1 = 0
@@ -303,11 +235,11 @@ Namespace Forms
                 stolenGold = number * 100
             End If
 
-            CurrentUser.HenchmenLevel1 = _plrHench.HenchmenLevel1
-            CurrentUser.HenchmenLevel2 = _plrHench.HenchmenLevel2
-            CurrentUser.HenchmenLevel3 = _plrHench.HenchmenLevel3
-            CurrentUser.HenchmenLevel4 = _plrHench.HenchmenLevel4
-            CurrentUser.HenchmenLevel5 = _plrHench.HenchmenLevel5
+            CurrentUser.HenchmenLevel1 = _playerHenchmen.HenchmenLevel1
+            CurrentUser.HenchmenLevel2 = _playerHenchmen.HenchmenLevel2
+            CurrentUser.HenchmenLevel3 = _playerHenchmen.HenchmenLevel3
+            CurrentUser.HenchmenLevel4 = _playerHenchmen.HenchmenLevel4
+            CurrentUser.HenchmenLevel5 = _playerHenchmen.HenchmenLevel5
 
             AddText("You have won the battle! Your " & number & " remaining henchmen make off with " & stolenGold & " gold.")
             CurrentUser.GoldOnHand += stolenGold
@@ -323,32 +255,15 @@ Namespace Forms
             BtnClear.Enabled = False
         End Sub
 
-        Private Sub HenchKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtHenchmenLevel1.KeyPress, TxtHenchmenLevel2.KeyPress,
-                                                                                                         TxtHenchmenLevel3.KeyPress, TxtHenchmenLevel4.KeyPress, TxtHenchmenLevel5.KeyPress
-            '* * * * *
-            '* This method only allows numbers to be entered into the Textboxes on the form.
-            '* * * * *
-
-            If Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8) Then
-                e.Handled = False
-            Else
-                e.Handled = True
-            End If
+        Private Sub HenchKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtHenchmenLevel1.KeyPress, TxtHenchmenLevel2.KeyPress, TxtHenchmenLevel3.KeyPress, TxtHenchmenLevel4.KeyPress, TxtHenchmenLevel5.KeyPress
+            e.Handled = Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub CmbRaid_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbRaid.SelectedIndexChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button
-            '* * * * *
-
             CheckRaid()
         End Sub
 
         Private Sub TxtHenchmenLevel1_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel1.TextChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button after text changed.
-            '* * * * *
-
             Dim currHench As Integer
             Integer.TryParse(TxtHenchmenLevel1.Text, currHench)
             If currHench > CurrentUser.HenchmenLevel1 Then
@@ -359,10 +274,6 @@ Namespace Forms
         End Sub
 
         Private Sub TxtHenchmenLevel2_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel2.TextChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button after text changed.
-            '* * * * *
-
             Dim currHench As Integer
             Integer.TryParse(TxtHenchmenLevel2.Text, currHench)
             If currHench > CurrentUser.HenchmenLevel2 Then
@@ -373,10 +284,6 @@ Namespace Forms
         End Sub
 
         Private Sub TxtHenchmenLevel3_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel3.TextChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button after text changed.
-            '* * * * *
-
             Dim currHench As Integer
             Integer.TryParse(TxtHenchmenLevel3.Text, currHench)
             If currHench > CurrentUser.HenchmenLevel3 Then
@@ -387,10 +294,6 @@ Namespace Forms
         End Sub
 
         Private Sub TxtHenchmenLevel4_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel4.TextChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button after text changed.
-            '* * * * *
-
             Dim currHench As Integer
             Integer.TryParse(TxtHenchmenLevel4.Text, currHench)
             If currHench > CurrentUser.HenchmenLevel4 Then
@@ -401,10 +304,6 @@ Namespace Forms
         End Sub
 
         Private Sub TxtHenchmenLevel5_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel5.TextChanged
-            '* * * * *
-            '* This method checks whether you can click the Raid button after text changed.
-            '* * * * *
-
             Dim currHench As Integer
             Integer.TryParse(TxtHenchmenLevel5.Text, currHench)
             If currHench > CurrentUser.HenchmenLevel5 Then
@@ -415,18 +314,10 @@ Namespace Forms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This method clears everything on the form.
-            '* * * * *
-
             CmbRaid.SelectedIndex = -1
 
             TxtHenchmenLevel1.Text = ""
@@ -439,68 +330,60 @@ Namespace Forms
         End Sub
 
         Private Sub BtnRaid_Click(sender As Object, e As EventArgs) Handles BtnRaid.Click
-            '* * * * *
-            '* This method handles clicking the Raid button.
-            '* * * * *
-
             If CmbRaid.SelectedItem.ToString <> "Bank" Then
                 _raidGuild = AllGuilds(CmbRaid.SelectedIndex - 1)
 
                 SetHenchmen()
                 Dim round As Integer = 1
 
-                While PlrCount() > 0 AndAlso EneCount() > 0
-                    _plrHench.Level = CheckPlrMax()
-                    Select Case _plrHench.Level
+                While PlayerCount() > 0 AndAlso EnemyCount() > 0
+                    _playerHenchmen.Level = CheckMaxHenchmanLevel(_playerHenchmen)
+                    Select Case _playerHenchmen.Level
                         Case 5
-                            _plrHench.Number = _plrHench.HenchmenLevel5
+                            _playerHenchmen.Number = _playerHenchmen.HenchmenLevel5
                         Case 4
-                            _plrHench.Number = _plrHench.HenchmenLevel4
+                            _playerHenchmen.Number = _playerHenchmen.HenchmenLevel4
                         Case 3
-                            _plrHench.Number = _plrHench.HenchmenLevel3
+                            _playerHenchmen.Number = _playerHenchmen.HenchmenLevel3
                         Case 2
-                            _plrHench.Number = _plrHench.HenchmenLevel2
+                            _playerHenchmen.Number = _playerHenchmen.HenchmenLevel2
                         Case 1
-                            _plrHench.Number = _plrHench.HenchmenLevel1
+                            _playerHenchmen.Number = _playerHenchmen.HenchmenLevel1
                     End Select
-                    _eneHench.Level = CheckEneMax()
-                    Select Case _eneHench.Level
+                    _enemyHenchmen.Level = CheckMaxHenchmanLevel(_enemyHenchmen)
+                    Select Case _enemyHenchmen.Level
                         Case 5
-                            _eneHench.Number = _eneHench.HenchmenLevel5
+                            _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel5
                         Case 4
-                            _eneHench.Number = _eneHench.HenchmenLevel4
+                            _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel4
                         Case 3
-                            _eneHench.Number = _eneHench.HenchmenLevel3
+                            _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel3
                         Case 2
-                            _eneHench.Number = _eneHench.HenchmenLevel2
+                            _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel2
                         Case 1
-                            _eneHench.Number = _eneHench.HenchmenLevel1
+                            _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel1
                     End Select
 
-                    AddText("You begin Round " & round & " with " & _plrHench.Number & " Level " & _plrHench.Level &
-                            " Henchmen. Your opponent begins the round with " & _eneHench.Number & " Level " & _eneHench.Level & " Henchmen.")
+                    AddText("You begin Round " & round & " with " & _playerHenchmen.Number & " Level " & _playerHenchmen.Level &
+                            " Henchmen. Your opponent begins the round with " & _enemyHenchmen.Number & " Level " & _enemyHenchmen.Level & " Henchmen.")
 
                     Battle()
 
-                    AddText("You end Round " & round & " with " & _plrHench.Number & " Level " & _plrHench.Level &
-                            " Henchmen. Your opponent ends the round with " & _eneHench.Number & " Level " & _eneHench.Level & " Henchmen.")
+                    AddText("You end Round " & round & " with " & _playerHenchmen.Number & " Level " & _playerHenchmen.Level &
+                            " Henchmen. Your opponent ends the round with " & _enemyHenchmen.Number & " Level " & _enemyHenchmen.Level & " Henchmen.")
 
                     round += 1
                 End While
             End If
 
-            If PlrCount() > 0 AndAlso EneCount() <= 0 Then
-                Winbattle()
-            ElseIf EneCount() > 0 AndAlso PlrCount() <= 0 Then
+            If PlayerCount() > 0 AndAlso EnemyCount() <= 0 Then
+                WinBattle()
+            ElseIf EnemyCount() > 0 AndAlso PlayerCount() <= 0 Then
                 LoseBattle()
             End If
         End Sub
 
         Private Sub FrmRaid_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
             FrmGuild.Show()
         End Sub
 

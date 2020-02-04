@@ -14,54 +14,31 @@ Namespace Forms.Shopping
 
     Public Class FrmThievesGuild
 
-        Dim _nl As String = ControlChars.NewLine 'new line
-
-        Private Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds formatted text to the TextBox.
-            '* * * * *
-
-            Dim currText As String = TxtThievesGuild.Text
-            TxtThievesGuild.Clear()
-
-            TxtThievesGuild.Text = newText & _nl & _nl & currText
-            TxtThievesGuild.Select(0, 0)
-            TxtThievesGuild.ScrollToCaret()
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Public Sub AddText(newText As String)
+            AddTextToTextBox(TxtThievesGuild, newText)
         End Sub
 
+        ''' <summary>Displays the player's current gold and number of lockpicks.</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays the player's current gold and number of lockpicks.
-            '* * * * *
-
             TxtThievesGuild.Select(0, 0)
             TxtThievesGuild.ScrollToCaret()
 
             lblGold.Text = CurrentUser.GoldOnHand.ToString("N0")
             lblLockpicks.Text = CurrentUser.Lockpicks.ToString("N0")
 
-            If CurrentUser.GoldOnHand >= 300 AndAlso CurrentUser.Lockpicks < 99 Then
-                BtnPurchase.Enabled = True
-            Else
-                BtnPurchase.Enabled = False
-            End If
+            BtnPurchase.Enabled = CurrentUser.GoldOnHand >= 300 AndAlso CurrentUser.Lockpicks < 99
         End Sub
 
+        ''' <summary>Purchases lockpicks.</summary>
         Public Async Sub Purchase()
-            '* * * * *
-            '* This method purchases lockpicks.
-            '* * * * *
-
             Dim lockpicks As Integer
             Dim maxLockpicks As Integer
 
-            If CurrentUser.Lockpicks + maxLockpicks > 99 Then
-                maxLockpicks = 99 - CurrentUser.Lockpicks
-            Else
-                maxLockpicks = CurrentUser.GoldOnHand \ 300
-            End If
+            maxLockpicks = If(CurrentUser.Lockpicks + maxLockpicks > 99, 99 - CurrentUser.Lockpicks, CurrentUser.GoldOnHand \ 300)
 
-            Integer.TryParse(InputBox("How many lockpicks would you like to purchase?" & _nl &
+            Integer.TryParse(InputBox("How many lockpicks would you like to purchase?" & ControlChars.NewLine &
                                       "You can enter a number between 1 and " & maxLockpicks & "."), lockpicks)
 
             If lockpicks > 0 AndAlso lockpicks <= maxLockpicks Then
@@ -77,26 +54,14 @@ Namespace Forms.Shopping
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnPurchase_Click(sender As Object, e As EventArgs) Handles BtnPurchase.Click
-            '* * * * *
-            '* This method allows a user to purchase lockpicks.
-            '* * * * *
-
             Purchase()
         End Sub
 
         Private Sub FrmThievesGuild_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
             FrmShops.Show()
         End Sub
 

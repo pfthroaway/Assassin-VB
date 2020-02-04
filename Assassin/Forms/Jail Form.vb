@@ -30,7 +30,7 @@ Namespace Forms
             lblFine.Text = ""
             lblReason.Text = ""
 
-            _jailedUsers = Await GameState.LoadUsers()
+            _jailedUsers = Await LoadUsers()
 
             For Each user As User In _jailedUsers
                 If user.CurrentLocation <> "Jail" Then
