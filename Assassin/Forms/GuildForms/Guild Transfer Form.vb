@@ -14,7 +14,6 @@ Namespace Forms.GuildForms
 
     Public Class FrmGuildTransfer
 
-        Dim _nl As String = ControlChars.NewLine 'new line
         Dim _henchmenLevel1 As Integer                   'level1 henchmen to donate
         Dim _henchmenLevel2 As Integer                   'level2 henchmen to donate
         Dim _henchmenLevel3 As Integer                   'level3 henchmen to donate
@@ -22,24 +21,14 @@ Namespace Forms.GuildForms
         Dim _henchmenLevel5 As Integer                   'level5 henchmen to donate
         Dim _gold As Integer                     'gold to donate
 
-        Private Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtTransfer.Text
-            TxtTransfer.Clear()
-
-            TxtTransfer.Text = newText & _nl & _nl & currText
-            TxtTransfer.Select(0, 0)
-            TxtTransfer.ScrollToCaret()
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
+        Public Sub AddText(newText As String)
+            AddTextToTextBox(TxtTransfer, newText)
         End Sub
 
+        ''' <summary>Checks whether a transfer is viable.</summary>
         Private Sub CheckTransfer()
-            '* * * * *
-            '* This method checks whether a transfer is viable.
-            '* * * * *
-
             If (_henchmenLevel1 + _henchmenLevel2 + _henchmenLevel3 + _henchmenLevel4 + _henchmenLevel5 + _gold) > 0 Then
                 BtnTransfer.Enabled = True
                 BtnClear.Enabled = True
@@ -49,11 +38,8 @@ Namespace Forms.GuildForms
             End If
         End Sub
 
+        ''' <summary>Clears everything on the form.</summary>
         Private Sub Clear()
-            '* * * * *
-            '* This method clears everything on the form.
-            '* * * * *
-
             TxtTransfer1.Clear()
             TxtTransfer2.Clear()
             TxtTransfer3.Clear()
@@ -65,11 +51,8 @@ Namespace Forms.GuildForms
             BtnClear.Enabled = False
         End Sub
 
+        ''' <summary>Displays information on the form.</summary>
         Private Sub Display()
-            '* * * * *
-            '* This method displays information on the form.
-            '* * * * *
-
             TxtGuild1.Text = CurrentGuild.HenchmenLevel1.ToString("N0")
             TxtGuild2.Text = CurrentGuild.HenchmenLevel2.ToString("N0")
             TxtGuild3.Text = CurrentGuild.HenchmenLevel3.ToString("N0")
@@ -87,19 +70,13 @@ Namespace Forms.GuildForms
             CheckTransfer()
         End Sub
 
+        ''' <summary>loads all the important information on the form.</summary>
         Public Sub LoadTransfer()
-            '* * * * *
-            '* This method loads all the important information on the form.
-            '* * * * *
-
             Display()
         End Sub
 
+        ''' <summary>Transfers everything.</summary>
         Private Async Sub Transfer()
-            '* * * * *
-            '* This method transfers everything.
-            '* * * * *
-
             If radGuild.Checked = True Then
                 CurrentGuild.HenchmenLevel1 += _henchmenLevel1
                 CurrentGuild.HenchmenLevel2 += _henchmenLevel2
@@ -138,11 +115,8 @@ Namespace Forms.GuildForms
             Display()
         End Sub
 
+        ''' <summary>Handles adding text to the Textbox based on who was donated.</summary>
         Private Sub TransferText()
-            '* * * * *
-            '* This method handles adding text to the Textbox based on who was donated.
-            '* * * * *
-
             Dim textDonate As String = "You transfer "
 
             If _henchmenLevel1 > 0 Then
@@ -195,18 +169,10 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TransferKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTransfer1.KeyPress, TxtTransfer2.KeyPress, TxtTransfer3.KeyPress, TxtTransfer4.KeyPress, TxtTransfer5.KeyPress, TxtTransferGold.KeyPress
-            '* * * * *
-            '* This method handles KeyPresses for all editable fields.
-            '* * * * *
-
             e.Handled = Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar Like Chr(8)
         End Sub
 
         Private Sub TxtTransfer1_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer1.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransfer1.Text, _henchmenLevel1)
 
             If radGuild.Checked = True Then
@@ -227,10 +193,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer2_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer2.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransfer2.Text, _henchmenLevel2)
 
             If radGuild.Checked = True Then
@@ -251,10 +213,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer3_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer3.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransfer3.Text, _henchmenLevel3)
 
             If radGuild.Checked = True Then
@@ -275,10 +233,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer4_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer4.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransfer4.Text, _henchmenLevel4)
 
             If radGuild.Checked = True Then
@@ -299,10 +253,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer5_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer5.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransfer5.Text, _henchmenLevel5)
 
             If radGuild.Checked = True Then
@@ -323,10 +273,6 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransferGold_TextChanged(sender As Object, e As EventArgs) Handles TxtTransferGold.TextChanged
-            '* * * * *
-            '* This method handles the TextBox's text being chnaged.
-            '* * * * *
-
             Integer.TryParse(TxtTransferGold.Text, _gold)
 
             If radGuild.Checked = True Then
@@ -347,61 +293,33 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-            '* * * * *
-            '* This method clears everything on the form.
-            '* * * * *
-
             Clear()
         End Sub
 
         Private Sub BtnTransfer_Click(sender As Object, e As EventArgs) Handles BtnTransfer.Click
-            '* * * * *
-            '* This method transfers everything.
-            '* * * * *
-
             Transfer()
         End Sub
 
         Private Sub FrmGuildTransfer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
             FrmGuildManage.Show()
         End Sub
 
         Private Sub pctHelp_Click(sender As Object, e As EventArgs) Handles pctHelp.Click
-            '* * * * *
-            '* This method handles clicking the Question Mark picture.
-            '* * * * *
-
             FrmHelp.Show()
             FrmHelp.loc = "Guild Transfer"
             FrmHelp.Display()
         End Sub
 
         Private Sub pctHelp_MouseHover(sender As Object, e As EventArgs) Handles pctHelp.MouseHover
-            '* * * * *
-            '* This method handles the mouse hovering over the Question Mark icon.
-            '* * * * *
-
             Dim cur As Cursor = Cursors.Hand
             Cursor = cur
         End Sub
 
         Private Sub pctHelp_MouseLeave(sender As Object, e As EventArgs) Handles pctHelp.MouseLeave
-            '* * * * *
-            '* This method handles the mouse leaving the Question Mark icon.
-            '* * * * *
-
             Dim cur As Cursor = Cursors.Default
             Cursor = cur
         End Sub

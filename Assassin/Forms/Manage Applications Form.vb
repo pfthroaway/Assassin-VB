@@ -16,7 +16,6 @@ Imports Assassin.Forms.GuildForms
 Namespace Forms
 
     Public Class FrmManageApplications
-
         Dim _applicant As User
 
         ''' <summary>Resets all the data in the form.</summary>

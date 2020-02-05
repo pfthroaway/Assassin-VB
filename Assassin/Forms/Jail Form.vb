@@ -21,12 +21,8 @@ Namespace Forms
 
         ''' <summary>Displays all the users currently in jail.</summary>
         Public Async Sub Display()
-            '* * * * *
-            '* This method
-            '* * * * *
-
-            LstJailed.Items.Clear()     'clear ListBox
-            LstJailed.ClearSelected()   'deselect ListBox items
+            LstJailed.Items.Clear()
+            LstJailed.ClearSelected()
             lblFine.Text = ""
             lblReason.Text = ""
 
@@ -46,10 +42,6 @@ Namespace Forms
         End Sub
 
         Private Sub LstJailed_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJailed.SelectedIndexChanged
-            '* * * * *
-            '* This method displays jail information about the selected user.
-            '* * * * *
-
             'If LstJailed.SelectedIndex >= 0 Then
             '    _username = LstJailed.SelectedItem.ToString
             '    _ds.Clear()
@@ -71,17 +63,10 @@ Namespace Forms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub BtnBailOut_Click(sender As Object, e As EventArgs) Handles BtnBailOut.Click
-            '* * * * *
-            '* This method bails a user out of jail.
-            '* * * * *
             'TODO Fix Bail Out Jail
             '_ds.Clear()                          'clear dataSet
             '_sql = "SELECT * FROM Jail WHERE Username='" & _username & "'"
@@ -105,18 +90,10 @@ Namespace Forms
         End Sub
 
         Private Sub FrmJail_Load(sender As Object, e As EventArgs) Handles Me.Load
-            '* * * * *
-            '* This method handles what happens on loading the form.
-            '* * * * *
-
             Display()
         End Sub
 
         Private Async Sub FrmJail_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method manages closing the form.
-            '* * * * *
-
             FrmGame.Show()
             Await SaveUser(CurrentUser)
         End Sub

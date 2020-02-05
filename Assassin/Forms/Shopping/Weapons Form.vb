@@ -93,11 +93,11 @@ Namespace Forms.Shopping
             _weaponList.Clear()
 
             If CmbLight.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Light).ToList()
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Light AndAlso Not weapon.Hidden).ToList()
             ElseIf CmbHeavy.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Heavy).ToList()
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.Heavy AndAlso Not weapon.Hidden).ToList()
             ElseIf CmbTwoH.Checked Then
-                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.TwoHanded).ToList()
+                _weaponList = AllWeapons.Where(Function(weapon) weapon.Type = WeaponType.TwoHanded AndAlso Not weapon.Hidden).ToList()
             End If
 
             For Each weapon As Weapon In _weaponList

@@ -14,22 +14,16 @@ Namespace Forms
         Public loc As String
         Dim _nl As String = ControlChars.NewLine
 
+        ''' <summary>displays the correct help depending on the location</summary>
         Public Sub Display()
-            '* * * * *
-            '* This method displays the correct help depending on the location
-            '* * * * *
-
             Select Case loc
                 Case "Guild Transfer"
                     GuildTransfer()
             End Select
         End Sub
 
+        ''' <summary>Displays help for the Guild Transfer form.</summary>
         Private Sub GuildTransfer()
-            '* * * * *
-            '* This method displays help for the Guild Transfer form.
-            '* * * * *
-
             TxtHelp.Text = "This form allows a guildmaster to transfer gold and henchmen between the guild and the guildmaster." & _nl & _nl &
                            "At the top, there is a choice between transferring to the guild and to the player." & _nl & _nl &
                            "The left two columns display the number of henchmen and gold the guild and the player currently have." & _nl & _nl &
@@ -37,18 +31,10 @@ Namespace Forms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub FrmHelp_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles the form closing.
-            '* * * * *
-
         End Sub
 
     End Class

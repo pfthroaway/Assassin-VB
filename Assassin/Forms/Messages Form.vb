@@ -54,7 +54,7 @@ Namespace Forms
 
         ''' <summary>Loads messages for the current user.</summary>
         Public Async Function LoadMessages() As Task
-            Await GameState.LoadMessages(CurrentUser)
+            _messages = Await GameState.LoadMessages(CurrentUser)
 
             If _messages.Count > 0 Then
                 _currentIndex = 0

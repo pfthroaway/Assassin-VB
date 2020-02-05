@@ -9,6 +9,7 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums
 Imports Extensions
 
@@ -16,9 +17,9 @@ Namespace Forms
 
     Public Class FrmBattle
 
-        Dim _blnDone As Boolean = False          'battle over?
-        Public BlnJob As Boolean = False        'on the job?
-        Dim _blnWin As Boolean = False           'win?
+        Dim _blnDone As Boolean = False
+        Public BlnJob As Boolean = False
+        Dim _blnWin As Boolean = False
         ReadOnly _maxStamina As Integer = 100
         Dim _userStamina As Integer = _maxStamina
         Dim _enemyStamina As Integer = _maxStamina
@@ -33,7 +34,7 @@ Namespace Forms
 
         ' TODO Make hit much more often. It's brutally long now.
 
-        ''' <summary>Gives a user a bonus.</summary>
+        ''' <summary>Gives a <see cref="User"/> a bonus.</summary>
         ''' <returns>Bonus amount</returns>
         Private Function Bonus() As Integer
             Return If(CurrentUser.Level <= 4, (11 - CurrentUser.Level) * 5, 0)
@@ -63,11 +64,7 @@ Namespace Forms
             lblEneWeapon.Text = CurrentEnemy.Weapon.Name
             lblEneArmor.Text = CurrentEnemy.Armor.Name
 
-            If _userStamina > 0 AndAlso Not _blnDone Then
-                ToggleButtons(True)
-            Else
-                ToggleButtons(False)
-            End If
+            ToggleButtons(_userStamina > 0 AndAlso Not _blnDone)
         End Sub
 
         ''' <summary>Toggles all buttons.</summary>
@@ -85,7 +82,7 @@ Namespace Forms
 
 #Region "Hit"
 
-        ''' <summary>The Enemy hits the Player.</summary>
+        ''' <summary>The <see cref="Enemy"/> hits the <see cref="User"/>.</summary>
         Private Sub HitPlayer()
             Dim eneDamage As Integer = Functions.GenerateRandomNumber(_enemyDamage \ 2, _enemyDamage)
             Dim plrDefend As Integer = Functions.GenerateRandomNumber(CurrentUser.Armor.Defense \ 2, CurrentUser.Armor.Defense)
@@ -97,7 +94,7 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>The Player hits the Enemy.</summary>
+        ''' <summary>The <see cref="User"/> hits the <see cref="Enemy"/>.</summary>
         Private Sub HitEnemy()
             Dim plrDamage As Integer = Functions.GenerateRandomNumber(_playerDamage \ 2, _playerDamage)
             Dim eneDefend As Integer = Functions.GenerateRandomNumber(CurrentEnemy.Armor.Defense \ 2, CurrentEnemy.Armor.Defense)
@@ -114,7 +111,7 @@ Namespace Forms
 
 #Region "Enemy"
 
-        ''' <summary>Handle's an Enemy's attack.</summary>
+        ''' <summary>Handle's an <see cref="Enemy"/>'s attack.</summary>
         Private Sub EnemyAttack()
 
             If _userStance <> Stance.Parry Then
@@ -129,7 +126,7 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>Chooses an Enemy's stance.</summary>
+        ''' <summary>Chooses an <see cref="Enemy"/>'s <see cref="Stance"/>.</summary>
         Private Sub EnemyStance()
             If _enemyStamina > 2 Then
                 'if enemy's stamina is above 2, any option
@@ -178,7 +175,7 @@ Namespace Forms
 
         End Sub
 
-        ''' <summary>The Enemy's turn.</summary>
+        ''' <summary>The <see cref="Enemy"/>'s turn.</summary>
         Private Sub EnemyTurn()
 
             ' If the Enemy is not defending
@@ -244,8 +241,8 @@ Namespace Forms
 
 #Region "Battle Management"
 
-        ''' <summary>Adjusts the stamina for a given stance.</summary>
-        ''' <param name="stance">Given stance</param>
+        ''' <summary>Adjusts the stamina for a given <see cref="Stance"/>.</summary>
+        ''' <param name="stance">Given <see cref="Stance"/></param>
         ''' <param name="stamina">Reference to current stamina value</param>
         Private Sub AdjustStamina(stance As Stance, ByRef stamina As Integer)
             Select Case stance
@@ -290,7 +287,7 @@ Namespace Forms
             End Select
         End Function
 
-        ''' <summary>Sets default values for Player and Enemy blocking, damage, and weapon skill.</summary>
+        ''' <summary>Sets default values for <see cref="User"/> and <see cref="Enemy"/> blocking, damage, and weapon skill.</summary>
         Private Sub LoadBattle()
             _playerBlocking = CurrentUser.Blocking
             _enemyBlocking = CurrentEnemy.Blocking
@@ -333,7 +330,7 @@ Namespace Forms
             Display()
         End Sub
 
-        ''' <summary>Resets Player and Enemy stats after a round.</summary>
+        ''' <summary>Resets <see cref="User"/> and <see cref="Enemy"/> stats after a round.</summary>
         Private Sub RoundReset()
             AdjustStamina(_userStance, _userStamina)
             _playerBlocking = CurrentUser.Blocking
@@ -357,8 +354,8 @@ Namespace Forms
 
 #Region "Player Stance Management"
 
-        ''' <summary>Sets the Player's Stance.</summary>
-        ''' <param name="stance">Stance to be set</param>
+        ''' <summary>Sets the <see cref="User"/>'s <see cref="Stance"/>.</summary>
+        ''' <param name="stance"><see cref="Stance"/> to be set</param>
         Private Sub SetPlayerStance(stance As Stance)
             _userStance = stance
 
@@ -374,7 +371,7 @@ Namespace Forms
 
         End Sub
 
-        ''' <summary>Sets the Player's Stance and starts a new round.</summary>
+        ''' <summary>Sets the <see cref="User"/>'s <see cref="Stance"/> and starts a new round.</summary>
         ''' <param name="stance">Stance to be set</param>
         Private Sub SetPlayerStanceNewRound(stance As Stance)
             SetPlayerStance(stance)
@@ -385,7 +382,7 @@ Namespace Forms
 
 #Region "Player"
 
-        ''' <summary>The Player attacks.</summary>
+        ''' <summary>The <see cref="User"/> attacks.</summary>
         Private Sub PlayerAttack()
             If _enemyStance <> Stance.Parry Then
                 HitEnemy()
@@ -399,7 +396,7 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>The Player flees the battle.</summary>
+        ''' <summary>The <see cref="User"/> flees the battle.</summary>
         Private Sub PlayerFlee()
             AddText("You have escaped the battle!")
 
@@ -415,7 +412,7 @@ Namespace Forms
             _blnDone = True                      'allow the form to exit
         End Sub
 
-        ''' <summary>Handles the Player's stance in QuickCombat.</summary>
+        ''' <summary>Handles the <see cref="User"/>'s <see cref="Stance"/> in QuickCombat.</summary>
         Private Sub QuickCombatPlayerStance()
             Select Case _userStamina
                 Case > 2
@@ -449,7 +446,7 @@ Namespace Forms
             End Select
         End Sub
 
-        ''' <summary>The Player's turn.</summary>
+        ''' <summary>The <see cref="User"/>'s turn.</summary>
         Private Sub PlayerTurn()
             If _userStance <> Stance.Defend AndAlso _userStance <> Stance.Flee Then
                 If SkillCheck(_playerWeaponSkill + Bonus()) Then
@@ -464,7 +461,7 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>Determines if you surprise the Enemy when first attacking them.</summary>
+        ''' <summary>Determines if you surprise the <see cref="Enemy"/> when first attacking them.</summary>
         Public Sub Surprise()
             LoadBattle()
             If SkillCheck(CurrentUser.Stealth + Bonus()) Then
@@ -552,7 +549,7 @@ Namespace Forms
                 Else
                     FrmJobs.Show()
                     FrmJobs.AddText(TxtBattle.Text)
-                    FrmJobs.DisableButtons()
+                    FrmJobs.BtnLeave.Enabled = True
                     If _blnWin = True Then
                         FrmJobs.ArrText.Add("You take your opponent's engraved weapon back to your employer.")
                         FrmJobs.GetPaid()

@@ -9,40 +9,28 @@ Option Explicit On
 Option Strict On
 
 Imports Assassin.Classes
-Imports Assassin.Classes.Entities
 Imports Assassin.Forms.GuildForms
 Imports Extensions
 
 Namespace Forms
 
     Public Class FrmJobs
-        Private _employers As New ArrayList      'employers Arraylist
-        Dim CurrentEnemy As New Enemy              'current enemy
-        Public ArrText As New ArrayList         'ArrayList of text to be added
-        Dim _nl As String = ControlChars.NewLine 'new line
-        Dim _index As Integer                    'index in employers ArrayList
-        Dim _currEmployer As String              'current employer name
-        Dim _bounty As Integer                   'bounty
-        Dim _blnDone As Boolean = False          'done?
+        ReadOnly _employers As New List(Of String)
+        Public ArrText As New List(Of String)
+        ReadOnly _nl As String = ControlChars.NewLine
+        Dim _index As Integer
+        Dim _currEmployer As String
+        Dim _bounty As Integer
+        Dim _blnDone As Boolean = False
 
+        ''' <summary>Add text to the TextBox.</summary>
+        ''' <param name="newText">Text to be added</param>
         Public Sub AddText(newText As String)
-            '* * * * *
-            '* This method adds text to the Textbox.
-            '* * * * *
-
-            Dim currText As String = TxtJobs.Text
-            TxtJobs.Clear()
-
-            TxtJobs.Text = newText & _nl & _nl & currText
-            TxtJobs.Select(0, 0)
-            TxtJobs.ScrollToCaret()
+            AddTextToTextBox(TxtJobs, newText)
         End Sub
 
+        ''' <summary>Checks a user's hunger and thirst.</summary>
         Public Sub CheckHungerThirst()
-            '* * * * *
-            '* This method checks a user's hunger and thirst.
-            '* * * * *
-
             If CurrentUser.Hunger >= 24 OrElse CurrentUser.Thirst >= 24 Then
                 BtnAccept.Enabled = False
                 BtnDecline.Enabled = False
@@ -64,17 +52,14 @@ Namespace Forms
             End If
         End Sub
 
+        ''' <summary>Cycles the text in the ArrayList on the Timer's tick.</summary>
         Private Sub CycleText()
-            '* * * * *
-            '* This method cycles the text in the ArrayList on the Timer's tick.
-            '* * * * *
-
             AddText(ArrText(_index).ToString)
             _index += 1
 
             If _index = ArrText.Count Then
                 If _blnDone = False Then
-                    EnableButtons()
+                    ToggleButtons(True)
                     Timer1.Stop()
                     _index = 0
                     ArrText.Clear()
@@ -87,31 +72,17 @@ Namespace Forms
             End If
         End Sub
 
-        Public Sub DisableButtons()
-            '* * * * *
-            '* This method disabled the buttons on the form
-            '* * * * *
+        ''' <summary>Toggles all buttons on the form.</summary>
+        ''' <param name="enabled">Should the buttons be enabled?</param>
 
-            BtnAccept.Enabled = False
-            BtnDecline.Enabled = False
-            BtnLeave.Enabled = False
+        Public Sub ToggleButtons(enabled As Boolean)
+            BtnAccept.Enabled = enabled
+            BtnDecline.Enabled = enabled
+            BtnLeave.Enabled = enabled
         End Sub
 
-        Private Sub EnableButtons()
-            '* * * * *
-            '* This method enables the buttons on the form
-            '* * * * *
-
-            BtnAccept.Enabled = True
-            BtnDecline.Enabled = True
-            BtnLeave.Enabled = True
-        End Sub
-
+        ''' <summary>Fills the employers List with employers.</summary>
         Private Sub GetEmployers()
-            '* * * * *
-            '* This method fills the employers Arraylist with employers.
-            '* * * * *
-
             _employers.Add("A youthful man")
             _employers.Add("A middle-aged man")
             _employers.Add("An old man")
@@ -120,12 +91,9 @@ Namespace Forms
             _employers.Add("An old woman")
         End Sub
 
+        ''' <summary>Gets a job opportunity from an employer.</summary>
         Private Sub GetJob()
-            '* * * * *
-            '* This method gets a job opportunity from an employer.
-            '* * * * *
-
-            DisableButtons()
+            ToggleButtons(False)
             Dim employer As Integer = Functions.GenerateRandomNumber(0, 5)
             _currEmployer = _employers(employer).ToString
             ArrText.Add(_currEmployer & " approaches you.")
@@ -140,12 +108,9 @@ Namespace Forms
             Timer1.Start()
         End Sub
 
+        ''' <summary>Handles getting paid.</summary>
         Public Async Sub GetPaid()
-            '* * * * *
-            '* This method handles getting paid.
-            '* * * * *
-
-            DisableButtons()
+            ToggleButtons(False)
             ArrText.Add("The " & _currEmployer.Substring(_currEmployer.IndexOf(" ") + 1) & " welcomes your return." & _nl &
                         Chr(34) & "Well done. Here is your payment." & Chr(34) & _nl &
                         "You are handed " & _bounty & " gold.")
@@ -158,36 +123,25 @@ Namespace Forms
             Await SaveUser(CurrentUser)
         End Sub
 
+        ''' <summary>Loads everything needed for the Jobs form.</summary>
         Public Sub LoadJobs()
-            '* * * * *
-            '* This method loads everything needed for the Jobs form.
-            '* * * * *
-
             TxtJobs.ScrollToCaret()
             GetEmployers()
             GetJob()
         End Sub
 
         Private Sub BtnAccept_Click(sender As Object, e As EventArgs) Handles BtnAccept.Click
-            '* * * * *
-            '* This method accepts the job.
-            '* * * * *
-
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
             FrmBattle.Show()
             FrmBattle.Surprise()
-            If FrmBattle.txtBattle.TextLength = 0 Then FrmBattle.txtBattle.Text = "You stalk your opponent."
+            If FrmBattle.TxtBattle.TextLength = 0 Then FrmBattle.TxtBattle.Text = "You stalk your opponent."
             FrmBattle.Display()
             FrmBattle.BlnJob = True
             Hide()
         End Sub
 
         Private Sub BtnDecline_Click(sender As Object, e As EventArgs) Handles BtnDecline.Click
-            '* * * * *
-            '* This method declines the job.
-            '* * * * *
-
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
             GetJob()
@@ -195,28 +149,16 @@ Namespace Forms
         End Sub
 
         Private Sub BtnLeave_Click(sender As Object, e As EventArgs) Handles BtnLeave.Click
-            '* * * * *
-            '* This method leaves the table.
-            '* * * * *
-
             Close()
         End Sub
 
         Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-            '* * * * *
-            '* This method handles what happens on the timer's tick.
-            '* * * * *
-
             CycleText()
         End Sub
 
         Private Sub FrmJobs_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
-
             FrmGuild.Show()
-            FrmGuild.AddText(txtJobs.Text)
+            FrmGuild.AddText(TxtJobs.Text)
         End Sub
 
     End Class

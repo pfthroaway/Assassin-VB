@@ -206,9 +206,9 @@ Namespace Forms
             FrmJail.Show()
         End Sub
 
-        Private Sub BtnMessages_Click(sender As Object, e As EventArgs) Handles BtnMessages.Click
+        Private Async Sub BtnMessages_Click(sender As Object, e As EventArgs) Handles BtnMessages.Click
             FrmMessages.Show()
-            FrmMessages.LoadMessages()
+            Await FrmMessages.LoadMessages()
             FrmMessages.loc = "Streets"
             Hide()
         End Sub
@@ -222,10 +222,10 @@ Namespace Forms
             Hide()
         End Sub
 
-        Private Sub BtnOthers_Click(sender As Object, e As EventArgs) Handles BtnOthers.Click
+        Private Async Sub BtnOthers_Click(sender As Object, e As EventArgs) Handles BtnOthers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Streets"
-            FrmMembers.LoadMembers()
+            Await FrmMembers.LoadMembers()
             Hide()
         End Sub
 
