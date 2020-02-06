@@ -3,6 +3,6 @@
 Public Class AppData
 
     Public Shared Location As String = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Assassin")
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PF Software", "Assassin")
 
 End Class

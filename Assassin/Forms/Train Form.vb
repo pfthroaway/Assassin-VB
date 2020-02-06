@@ -14,14 +14,14 @@ Namespace Forms
 
     Public Class FrmTrain
 
-        Dim _maxEnd As Integer       'maximum endurance
-        Dim _light As Integer        'light weapon skill
-        Dim _heavy As Integer        'heavy weapon skill
-        Dim _twoH As Integer         'two-handed weapon skill
-        Dim _blocking As Integer     'blocking skill
-        Dim _slipping As Integer     'slipping skill
-        Dim _stealth As Integer      'stealth skill
-        Dim _skillPts As Integer     'current skill points
+        Dim _maxEnd As Integer
+        Dim _light As Integer
+        Dim _heavy As Integer
+        Dim _twoH As Integer
+        Dim _blocking As Integer
+        Dim _slipping As Integer
+        Dim _stealth As Integer
+        Dim _skillPts As Integer
 
         ''' <summary>Resets all stats.</summary>
         Private Sub Clear()
@@ -155,15 +155,15 @@ Namespace Forms
         End Sub
 
         Private Sub BtnEndMinus_Click(sender As Object, e As EventArgs) Handles BtnEndMinus.Click
-            _skillPts += 1     'add a skillpoint
-            _maxEnd -= 20      'subtract 20 from maximum endurance
+            _skillPts += 1
+            _maxEnd -= 20
             Display()
         End Sub
 
         Private Sub BtnEndPlus_Click(sender As Object, e As EventArgs) Handles BtnEndPlus.Click
             _skillPts -= 1
             BtnEndMinus.Enabled = True
-            _maxEnd += 20  'add 20 to maximum endurance
+            _maxEnd += 20
             Display()
         End Sub
 

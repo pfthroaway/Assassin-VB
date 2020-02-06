@@ -36,10 +36,10 @@ Namespace Forms
                 End If
             Else
                 If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText("You are " & GetHunger(CurrentUser.Hunger).ToLower & ".")
+                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
                 End If
                 If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText("You are " & GetThirst(CurrentUser.Thirst).ToLower & ".")
+                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
                 End If
             End If
         End Sub

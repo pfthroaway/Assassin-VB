@@ -38,18 +38,17 @@ Namespace Forms.Shopping
 
             maxLockpicks = If(CurrentUser.Lockpicks + maxLockpicks > 99, 99 - CurrentUser.Lockpicks, CurrentUser.GoldOnHand \ 300)
 
-            Integer.TryParse(InputBox("How many lockpicks would you like to purchase?" & ControlChars.NewLine &
-                                      "You can enter a number between 1 and " & maxLockpicks & "."), lockpicks)
+            Integer.TryParse(InputBox($"How many lockpicks would you like to purchase?{ControlChars.NewLine}You can enter a number between 1 and {maxLockpicks}."), lockpicks)
 
             If lockpicks > 0 AndAlso lockpicks <= maxLockpicks Then
                 CurrentUser.Lockpicks += lockpicks
                 CurrentUser.GoldOnHand -= lockpicks * 300
-                AddText("You purchase " & lockpicks & " for " & (lockpicks * 300) & " gold.")
+                AddText($"You purchase {lockpicks} for {lockpicks * 300} gold.")
                 Await SaveUser(CurrentUser)
 
                 Display()
             Else
-                MessageBox.Show("Please enter a number between 1 and " & maxLockpicks & ".", "Assassin", MessageBoxButtons.OK)
+                MessageBox.Show($"Please enter a number between 1 and {maxLockpicks}.", "Assassin", MessageBoxButtons.OK)
             End If
         End Sub
 

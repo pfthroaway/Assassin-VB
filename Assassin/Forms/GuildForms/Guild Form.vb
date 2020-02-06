@@ -26,11 +26,11 @@ Namespace Forms.GuildForms
         Private Function LevelOk() As Boolean
             If CurrentGuild.ID = 1 AndAlso CurrentUser.Level > 5 Then
                 DisableButtons()
-                AddText("An invisible wall blocks you as you attempt to enter the guild. The guildmaster looms in the doorway.{ControlChars.NewLine}""You are now too experienced to belong to this guild. Good luck to you in the future.{ControlChars.NewLine}""You are pushed back to the streets.")
+                AddText($"An invisible wall blocks you as you attempt to enter the guild. The guildmaster looms in the doorway.{ControlChars.NewLine}""You are now too experienced to belong to this guild. Good luck to you in the future.{ControlChars.NewLine}""You are pushed back to the streets.")
                 LeaveGuild()
                 Return False
             Else
-                AddText("You enter " & lblGuildName.Text & ".")
+                AddText($"You enter {lblGuildName.Text}.")
                 Return True
             End If
         End Function

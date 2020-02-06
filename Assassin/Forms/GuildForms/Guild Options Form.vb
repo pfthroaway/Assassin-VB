@@ -81,16 +81,16 @@ Namespace Forms.GuildForms
             Await SaveGuild(CurrentGuild)
 
             If CurrentGuild.Name <> _oldName Then
-                AddText("You change the name of the guild to " & CurrentGuild.Name & ".")
+                AddText($"You change the name of the guild to {CurrentGuild.Name}.")
             End If
 
             If CurrentGuild.Fee <> _oldFee Then
-                AddText("You change the guild fee to " & CurrentGuild.Fee.ToString & ".")
+                AddText($"You change the guild fee to {CurrentGuild.Fee.ToString}.")
             End If
 
             If CurrentGuild.Master <> _oldMaster Then
                 Disable()
-                AddText("You transfer guildmastership to " & CurrentGuild.Master & ".")
+                AddText($"You transfer guildmastership to {CurrentGuild.Master}.")
                 _blnMasterChanged = True
             End If
 

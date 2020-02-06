@@ -50,7 +50,7 @@ Namespace Forms
         Public Sub Display()
             lblPlrName.Text = CurrentUser.Name
             lblPlrEnd.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            lblPlrEnd.Text = CurrentUser.CurrentEndurance & " / " & CurrentUser.MaximumEndurance
+            lblPlrEnd.Text = CurrentUser.EnduranceToString
             lblPlrStatus.Text = GetStatusText(_userStamina)
             lblPlrStatus.ForeColor = If(_userStamina < 3, Color.Red, Color.Black)
             lblPlrWeapon.Text = CurrentUser.CurrentWeapon.Name
@@ -58,7 +58,7 @@ Namespace Forms
 
             lblEnemyName.Text = CurrentEnemy.Name
             lblEneEnd.ForeColor = If(CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            lblEneEnd.Text = CurrentEnemy.CurrentEndurance & " / " & CurrentEnemy.MaximumEndurance
+            lblEneEnd.Text = CurrentEnemy.EnduranceToString
             lblEneStatus.Text = GetStatusText(_enemyStamina)
             lblEneStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
             lblEneWeapon.Text = CurrentEnemy.Weapon.Name
@@ -87,10 +87,10 @@ Namespace Forms
             Dim eneDamage As Integer = Functions.GenerateRandomNumber(_enemyDamage \ 2, _enemyDamage)
             Dim plrDefend As Integer = Functions.GenerateRandomNumber(CurrentUser.Armor.Defense \ 2, CurrentUser.Armor.Defense)
             If eneDamage > plrDefend Then
-                AddText("Your opponent attacks you for " & eneDamage & " damage, but your armor absorbs " & plrDefend & " damage.")
+                AddText($"Your opponent attacks you for {eneDamage} damage, but your armor absorbs {plrDefend} damage.")
                 CurrentUser.CurrentEndurance -= eneDamage - plrDefend
             Else
-                AddText("Your opponent attacks you for " & eneDamage & " damage, but your armor absorbs all of it.")
+                AddText($"Your opponent attacks you for {eneDamage} damage, but your armor absorbs all of it.")
             End If
         End Sub
 
@@ -100,10 +100,10 @@ Namespace Forms
             Dim eneDefend As Integer = Functions.GenerateRandomNumber(CurrentEnemy.Armor.Defense \ 2, CurrentEnemy.Armor.Defense)
 
             If plrDamage > eneDefend Then
-                AddText("You attack your opponent for " & plrDamage & " damage, but their armor absorbs " & eneDefend & " damage.")
+                AddText($"You attack your opponent for {plrDamage} damage, but their armor absorbs {eneDefend} damage.")
                 CurrentEnemy.CurrentEndurance -= plrDamage - eneDefend
             Else
-                AddText("You attacks you for " & plrDamage & " damage, but their armor absorbs all of it.")
+                AddText($"You attacks you for {plrDamage} damage, but their armor absorbs all of it.")
             End If
         End Sub
 
@@ -226,7 +226,7 @@ Namespace Forms
 
             Dim gold As Integer = Functions.GenerateRandomNumber(CurrentEnemy.GoldOnHand \ 2, CurrentEnemy.MaximumEndurance)
             CurrentUser.GoldOnHand += gold
-            AddText("You frisk your opponent's body and find " & gold & " gold.")
+            AddText($"You frisk your opponent's body and find {gold} gold.")
 
             ToggleButtons(False)
             BtnDefend.Enabled = False

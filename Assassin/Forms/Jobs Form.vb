@@ -44,10 +44,10 @@ Namespace Forms
                 End If
             Else
                 If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText("You are " & GetHunger(CurrentUser.Hunger).ToLower & ".")
+                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
                 End If
                 If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText("You are " & GetThirst(CurrentUser.Thirst).ToLower & ".")
+                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
                 End If
             End If
         End Sub
@@ -96,14 +96,10 @@ Namespace Forms
             ToggleButtons(False)
             Dim employer As Integer = Functions.GenerateRandomNumber(0, 5)
             _currEmployer = _employers(employer).ToString
-            ArrText.Add(_currEmployer & " approaches you.")
+            ArrText.Add($"{_currEmployer} approaches you.")
             GetEnemy()
             _bounty = Functions.GenerateRandomNumber(CurrentEnemy.CurrentEndurance, CurrentEnemy.CurrentEndurance * 2)
-            ArrText.Add(Chr(34) & "Greetings, " & AllRanks(CurrentUser.Level) & "." & _nl &
-                                                        "I have an opportunity for you." & _nl &
-                                                        "It concerns the elimination of a " & CurrentEnemy.Name & "." & _nl &
-                                                        "I will pay you " & _bounty & " gold." & _nl &
-                                                        "Are you interested?" & Chr(34))
+            ArrText.Add($"""Greetings, {AllRanks(CurrentUser.Level)}.{_nl}I have an opportunity for you.{_nl}It concerns the elimination of a {CurrentEnemy.Name}.{_nl}I will pay you {_bounty} gold.{_nl}Are you interested?""")
 
             Timer1.Start()
         End Sub
@@ -111,9 +107,7 @@ Namespace Forms
         ''' <summary>Handles getting paid.</summary>
         Public Async Sub GetPaid()
             ToggleButtons(False)
-            ArrText.Add("The " & _currEmployer.Substring(_currEmployer.IndexOf(" ") + 1) & " welcomes your return." & _nl &
-                        Chr(34) & "Well done. Here is your payment." & Chr(34) & _nl &
-                        "You are handed " & _bounty & " gold.")
+            ArrText.Add($"The {_currEmployer.Substring(_currEmployer.IndexOf(" ") + 1)} welcomes your return.{_nl}""Well done. Here is your payment.""{_nl}You are handed {_bounty} gold.")
             CurrentUser.GoldOnHand += _bounty
 
             _blnDone = True

@@ -16,8 +16,6 @@ Namespace Forms
 
     Public Class FrmRob
 
-        Dim CurrentEnemy As New Enemy              'current enemy
-        Dim _nl As String = ControlChars.NewLine 'new line
         Dim _blnCourt As Boolean = False         'boolean if going to court
         Dim _arrText As New ArrayList            'arraylist of text
         Dim _index As Integer                    'index on arraylist
@@ -45,10 +43,10 @@ Namespace Forms
                 End If
             Else
                 If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText("You are " & GetHunger(CurrentUser.Hunger).ToLower & ".")
+                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
                 End If
                 If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText("You are " & GetThirst(CurrentUser.Thirst).ToLower & ".")
+                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
                 End If
             End If
         End Sub
@@ -103,17 +101,17 @@ Namespace Forms
                 Dim type As Integer = Functions.GenerateRandomNumber(1, 3)
                 Dim gold As Integer = Functions.GenerateRandomNumber(1, CurrentEnemy.MaximumEndurance)
                 If type = 1 Then                    'gold only
-                    AddText("You manage to steal a pouch containing " & gold & " gold!")
+                    AddText($"You manage to steal a pouch containing {gold} gold!")
                     CurrentUser.GoldOnHand += gold
                 ElseIf type = 2 Then                'weapon only
-                    AddText("You manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weaponsmith and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    AddText($"You manage to pickpocket their {CurrentEnemy.Weapon.Name}!")
+                    _arrText.Add($"You bring it to the weaponsmith and sell it for {CurrentEnemy.Weapon.SellValue} gold!")
                     CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue
                     Timer1.Start()
                 ElseIf type = 3 Then                'weapon and gold
-                    AddText("You manage to steal a pouch containing " & gold & " gold!")
-                    _arrText.Add("You also manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weapon shop and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    AddText($"You manage to steal a pouch containing {gold} gold!")
+                    _arrText.Add($"You also manage to pickpocket their {CurrentEnemy.Weapon.Name}!")
+                    _arrText.Add($"You bring it to the weapon shop and sell it for {CurrentEnemy.Weapon.SellValue} gold!")
                     CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue + gold
                     Timer1.Start()
                 End If
@@ -128,7 +126,7 @@ Namespace Forms
                     GetEnemy()
                 Else                                'caught
                     _arrText.Add("You have been noticed!")
-                    _arrText.Add("The " & CurrentEnemy.Name & " cries out, " & Chr(34) & "Guards, a thief!" & Chr(34))
+                    _arrText.Add($"The {CurrentEnemy.Name} cries out, ""Guards, a thief!""")
                     _arrText.Add("You hide. . .")
                     Dim spot As Integer = Functions.GenerateRandomNumber(1, 100)
                     If spot <= CurrentUser.Stealth Then    'not spotted
@@ -153,17 +151,17 @@ Namespace Forms
                 Dim type As Integer = Functions.GenerateRandomNumber(1, 3)
                 Dim gold As Integer = Functions.GenerateRandomNumber(1, CurrentEnemy.MaximumEndurance)
                 If type = 1 Then                    'gold only
-                    AddText("You manage to steal a pouch containing " & gold & " gold!")
+                    AddText($"You manage to steal a pouch containing {gold} gold!")
                     CurrentUser.GoldOnHand += gold
                 ElseIf type = 2 Then                'weapon only
-                    AddText("You manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weaponsmith and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    AddText($"You manage to pickpocket their {CurrentEnemy.Weapon.Name}!")
+                    _arrText.Add($"You bring it to the weaponsmith and sell it for {CurrentEnemy.Weapon.SellValue} gold!")
                     CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue
                     Timer1.Start()
                 ElseIf type = 3 Then                'weapon and gold
-                    AddText("You manage to steal a pouch containing " & gold & " gold!")
-                    _arrText.Add("You also manage to pickpocket their " & CurrentEnemy.Weapon.Name & "!")
-                    _arrText.Add("You bring it to the weapon shop and sell it for " & CurrentEnemy.Weapon.SellValue & " gold!")
+                    AddText($"You manage to steal a pouch containing {gold} gold!")
+                    _arrText.Add($"You also manage to pickpocket their {CurrentEnemy.Weapon.Name}!")
+                    _arrText.Add($"You bring it to the weapon shop and sell it for {CurrentEnemy.Weapon.SellValue} gold!")
                     CurrentUser.GoldOnHand += CurrentEnemy.Weapon.SellValue + gold
                     Timer1.Start()
                 End If
@@ -178,7 +176,7 @@ Namespace Forms
                     GetEnemy()
                 Else                                'caught
                     _arrText.Add("You have been noticed!")
-                    _arrText.Add("The " & CurrentEnemy.Name & " cries out, " & Chr(34) & "Guards, a thief!" & Chr(34))
+                    _arrText.Add($"The {CurrentEnemy.Name} cries out, ""Guards, a thief!""")
                     _arrText.Add("You hide. . .")
                     Dim spot As Integer = Functions.GenerateRandomNumber(1, 100)
                     If spot <= CurrentUser.Stealth Then    'not spotted

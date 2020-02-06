@@ -55,8 +55,8 @@ Namespace Forms
             _arrText.Add("You are dragged to the courts of justice.")
             _arrText.Add("The judge stares at you. . .")
             If CurrentUser.Level > 6 Then
-                _arrText.Add(Chr(34) & "Well, if it isn't the " & AllRanks(CurrentUser.Level) & ", " & CurrentUser.Name & "." & Chr(34))
-                _arrText.Add(Chr(34) & "Don't worry, I will be impartial," & Chr(34) & " he laughs.")
+                _arrText.Add($"""Well, if it isn't the {AllRanks(CurrentUser.Level)}, {CurrentUser.Name}.""")
+                _arrText.Add("""Don't worry, I will be impartial,"" he laughs.")
             End If
             _arrText.Add("The trial begins. . .")
             If Reason = "Pickpocket" Then
@@ -77,7 +77,7 @@ Namespace Forms
                 _arrText.Add("The judge finds you. . . innocent!")
             Else                                            'guilty
                 _arrText.Add("The judge finds you. . . guilty!")
-                _arrText.Add(Chr(34) & "You are to pay " & _fine & " gold as a fine. Pay it, or you will be jailed for the night." & Chr(34))
+                _arrText.Add($"""You are to pay {_fine} gold as a fine. Pay it, or you will be jailed for the night.""")
                 _blnGuilty = True
             End If
 

@@ -174,7 +174,7 @@ Namespace Forms
 
         ''' <summary>Handles the player failing the raiding.</summary>
         Private Sub LoseBattle()
-            AddText("You failed to raid the " & CmbRaid.SelectedItem.ToString & ".")
+            AddText($"You failed to raid the {CmbRaid.SelectedItem.ToString}.")
             CmbRaid.Enabled = False
             BtnRaid.Enabled = False
             BtnClear.Enabled = False
@@ -241,7 +241,7 @@ Namespace Forms
             CurrentUser.HenchmenLevel4 = _playerHenchmen.HenchmenLevel4
             CurrentUser.HenchmenLevel5 = _playerHenchmen.HenchmenLevel5
 
-            AddText("You have won the battle! Your " & number & " remaining henchmen make off with " & stolenGold & " gold.")
+            AddText($"You have won the battle! Your {number} remaining henchmen make off with {stolenGold} gold.")
             CurrentUser.GoldOnHand += stolenGold
             Await SaveUser(CurrentUser)
 
@@ -364,13 +364,11 @@ Namespace Forms
                             _enemyHenchmen.Number = _enemyHenchmen.HenchmenLevel1
                     End Select
 
-                    AddText("You begin Round " & round & " with " & _playerHenchmen.Number & " Level " & _playerHenchmen.Level &
-                            " Henchmen. Your opponent begins the round with " & _enemyHenchmen.Number & " Level " & _enemyHenchmen.Level & " Henchmen.")
+                    AddText($"You begin Round {round} with {_playerHenchmen.Number} Level {_playerHenchmen.Level} Henchmen. Your opponent begins the round with {_enemyHenchmen.Number} Level {_enemyHenchmen.Level} Henchmen.")
 
                     Battle()
 
-                    AddText("You end Round " & round & " with " & _playerHenchmen.Number & " Level " & _playerHenchmen.Level &
-                            " Henchmen. Your opponent ends the round with " & _enemyHenchmen.Number & " Level " & _enemyHenchmen.Level & " Henchmen.")
+                    AddText($"You end Round {round} with {_playerHenchmen.Number} Level {_playerHenchmen.Level} Henchmen. Your opponent ends the round with {_enemyHenchmen.Number} Level {_enemyHenchmen.Level} Henchmen.")
 
                     round += 1
                 End While

@@ -43,7 +43,7 @@ Namespace Forms.GuildForms
                         Case 2
                             lblGuildmaster.Text = "Rathskeller"
                         Case Else
-                            lblGuildmaster.Text = CurrentGuild.Name & " Master"
+                            lblGuildmaster.Text = $"{CurrentGuild.Name} Master"
                     End Select
                 Else
                     lblGuildmaster.Text = CurrentGuild.Master.ToString
@@ -103,17 +103,17 @@ Namespace Forms.GuildForms
 
         Private Async Sub BtnApply_Click(sender As Object, e As EventArgs) Handles BtnApply.Click
             Dim dlg As DialogResult
-            dlg = MessageBox.Show("Are you sure you want to apply for this guild? It will cost " & CurrentGuild.Fee & " gold.", "Assassin", MessageBoxButtons.YesNo)
+            dlg = MessageBox.Show($"Are you sure you want to apply for this guild? It will cost {CurrentGuild.Fee} gold.", "Assassin", MessageBoxButtons.YesNo)
 
             If dlg = DialogResult.Yes Then  'if applying
                 If CurrentGuild.Master = "Computer" Then
                     'if guildmaster is Computer, always accept
                     Await MemberJoinsGuild(CurrentUser, CurrentGuild)
-                    AddText("You paid " & CurrentGuild.Fee & " gold to join the " & CurrentGuild.Name & " guild, and have been accepted!")
+                    AddText($"You paid {CurrentGuild.Fee} gold to join the {CurrentGuild.Name} guild, and have been accepted!")
                 Else
                     'submit new application
                     Await ApplyToGuild(CurrentUser, CurrentGuild)
-                    AddText("You paid " & CurrentGuild.Fee & " gold and applied for the " & CurrentGuild.Name & " guild.")
+                    AddText($"You paid {CurrentGuild.Fee} gold and applied for the {CurrentGuild.Name} guild.")
                 End If
 
                 BtnApply.Enabled = False

@@ -29,7 +29,7 @@ Namespace Forms
                 Select Case CurrentUser.CurrentLocation
                     Case "Streets"
                         Dim loseEnd As Integer = Functions.GenerateRandomNumber(1, 5)
-                        TxtGame.Text = "You awaken on the streets. After a rough night sleeping on the ground, you have lost " & loseEnd & " Endurance."
+                        TxtGame.Text = $"You awaken on the streets. After a rough night sleeping on the ground, you have lost {loseEnd} Endurance."
                         CurrentUser.CurrentEndurance -= loseEnd
                         If CurrentUser.CurrentEndurance < 1 Then CurrentUser.CurrentEndurance = 1
                     Case "Jail"
@@ -108,7 +108,7 @@ Namespace Forms
             lblRank.Text = AllRanks(CurrentUser.Level - 1)
             lblExpAmt.Text = CurrentUser.Experience.ToString
             lblSkillPtsAmt.Text = CurrentUser.SkillPoints.ToString
-            lblEndAmt.Text = CurrentUser.CurrentEndurance.ToString("N0") & " / " & CurrentUser.MaximumEndurance.ToString("N0")
+            lblEndAmt.Text = CurrentUser.EnduranceToString
 
             lblHunger.Text = GetHunger(CurrentUser.Hunger)
 
@@ -125,12 +125,12 @@ Namespace Forms
             lblGoldBankAmt.Text = CurrentUser.GoldInBank.ToString("N0")
             lblGoldLoanAmt.Text = CurrentUser.GoldOnLoan.ToString("N0")
 
-            lblLightAmt.Text = CurrentUser.LightWeaponSkill.ToString & "%"
-            lblHeavyAmt.Text = CurrentUser.HeavyWeaponSkill.ToString & "%"
-            lblTwoAmt.Text = CurrentUser.TwoHandedWeaponSkill.ToString & "%"
-            lblBlockingAmt.Text = CurrentUser.Blocking.ToString & "%"
-            lblSlippingAmt.Text = CurrentUser.Slipping.ToString & "%"
-            lblStealthAmt.Text = CurrentUser.Stealth.ToString & "%"
+            lblLightAmt.Text = CurrentUser.LightWeaponSkillToString
+            lblHeavyAmt.Text = CurrentUser.HeavyWeaponSkillToString
+            lblTwoAmt.Text = CurrentUser.TwoHandedWeaponSkillToString
+            lblBlockingAmt.Text = CurrentUser.BlockingToString
+            lblSlippingAmt.Text = CurrentUser.SlippingToString
+            lblStealthAmt.Text = CurrentUser.StealthToString
 
             lblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
 

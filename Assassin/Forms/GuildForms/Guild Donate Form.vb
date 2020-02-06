@@ -87,7 +87,7 @@ Namespace Forms.GuildForms
 
             DonateText()
             If _gold > 0 Then
-                AddText("You donate " & _gold & " gold.")
+                AddText($"You donate {_gold} gold.")
             End If
 
             Await SaveUser(CurrentUser)

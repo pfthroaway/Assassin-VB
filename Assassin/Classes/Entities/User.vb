@@ -140,7 +140,7 @@ Namespace Classes.Entities
         ''' <summary>The <see cref="User"/>'s rank.</summary>
         Public ReadOnly Property Rank As String
             Get
-                Return AllRanks(Level)
+                Return AllRanks(Level - 1)
             End Get
         End Property
 
@@ -204,6 +204,34 @@ Namespace Classes.Entities
         Public ReadOnly Property LoanAvailableToString As String
             Get
                 Return LoanAvailable.ToString("N0")
+            End Get
+        End Property
+
+        ''' <summary>The amount of skill the <see cref="User"/> has in using Light <see cref="Weapon"/>s, formatted.</summary>
+        Public ReadOnly Property LightWeaponSkillToString As String
+            Get
+                Return $"{LightWeaponSkill:N0}%"
+            End Get
+        End Property
+
+        ''' <summary>The amount of skill the <see cref="User"/> has in using Heavy <see cref="Weapon"/>s, formatted.</summary>
+        Public ReadOnly Property HeavyWeaponSkillToString As String
+            Get
+                Return $"{HeavyWeaponSkill:N0}%"
+            End Get
+        End Property
+
+        ''' <summary>The amount of skill the <see cref="User"/> has in using Two-Handed <see cref="Weapon"/>s, formatted.</summary>
+        Public ReadOnly Property TwoHandedWeaponSkillToString As String
+            Get
+                Return $"{TwoHandedWeaponSkill:N0}%"
+            End Get
+        End Property
+
+        ''' <summary>The amount of skill the <see cref="User"/> has in stealth, formatted.</summary>
+        Public ReadOnly Property StealthToString As String
+            Get
+                Return $"{Stealth:N0}%"
             End Get
         End Property
 

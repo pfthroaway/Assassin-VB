@@ -47,6 +47,23 @@ Public MustInherit Class LivingEntity
         End Get
     End Property
 
+    ''' <summary>Blocking skill of the Entity, formatted.</summary>
+    Public ReadOnly Property BlockingToString As String
+        Get
+            Return $"{Blocking:N0}%"
+        End Get
+    End Property
+
+    ''' <summary>Slipping skill of the Entity, formatted.</summary>
+    Public Property SlippingToString As String
+        Get
+            Return $"{Slipping:N0}%"
+        End Get
+        Set(value As String)
+
+        End Set
+    End Property
+
 #End Region
 
 End Class

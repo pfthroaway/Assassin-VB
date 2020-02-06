@@ -118,8 +118,8 @@ Namespace Forms.Shopping
 
             If dlg = DialogResult.Yes Then
                 AddText($"You sell your {CurrentUser.Armor.Name} for {CurrentUser.Armor.SellValue} gold.")
-
                 CurrentUser.GoldOnHand += CurrentUser.Armor.SellValue
+                CurrentUser.Armor = AllArmor.Find(Function(armor) armor.Name = "Clothes")
             End If
 
             Clear()

@@ -188,7 +188,7 @@ Namespace Forms
             Me.txtBank.ScrollBars = ScrollBars.Vertical
             Me.txtBank.Size = New Size(320, 150)
             Me.txtBank.TabIndex = 13
-            Me.txtBank.Text = "You enter the bank. The teller greets you." & ChrW(13) & ChrW(10) & """Welcome to The Bank, the only secure" & _
+            Me.TxtBank.Text = "You enter the bank. The teller greets you." & ChrW(13) & ChrW(10) & """Welcome to The Bank, the only secure" &
                               " place to store gold in the city!"""
             '
             'frmBank
