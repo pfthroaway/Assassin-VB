@@ -31,7 +31,7 @@ Namespace Classes
         Public Sub AddTextToTextBox(tb As TextBox, newText As String)
             Dim nl As String = Environment.NewLine
             tb.Text = If(String.IsNullOrWhiteSpace(tb.Text), newText, $"{tb.Text}{nl}{nl}{newText}")
-            tb.Select(tb.Text.Length - 1, 0)
+            tb.Select(tb.Text.Length, 0)
             tb.ScrollToCaret()
         End Sub
 
