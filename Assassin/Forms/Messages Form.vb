@@ -17,7 +17,7 @@ Namespace Forms
 
         Dim _messages As List(Of Message)
         Dim _currentIndex As Integer = 0
-        Public loc As String        'location to return to
+        Public loc As String
 
         ''' <summary>Clears all the information on the form.</summary>
         Private Sub Clear()

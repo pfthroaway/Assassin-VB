@@ -2,12 +2,12 @@
 Imports Microsoft.VisualBasic.CompilerServices
 
 Namespace Forms
-    <DesignerGenerated()> _
+    <DesignerGenerated()>
     Partial Class FrmRob
         Inherits Form
 
         'Form overrides dispose to clean up the component list.
-        <DebuggerNonUserCode()> _
+        <DebuggerNonUserCode()>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             Try
                 If disposing AndAlso components IsNot Nothing Then
@@ -24,104 +24,99 @@ Namespace Forms
         'NOTE: The following procedure is required by the Windows Form Designer
         'It can be modified using the Windows Form Designer.  
         'Do not modify it using the code editor.
-        <DebuggerStepThrough()> _
+        <DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.components = New Container()
-            Me.txtRob = New TextBox()
-            Me.btnPickpocket = New Button()
-            Me.btnWaylay = New Button()
-            Me.btnNewVictim = New Button()
-            Me.btnBack = New Button()
-            Me.Timer1 = New Timer(Me.components)
-            Me.Timer2 = New Timer(Me.components)
+            Me.components = New System.ComponentModel.Container()
+            Me.TxtRob = New System.Windows.Forms.TextBox()
+            Me.BtnPickpocket = New System.Windows.Forms.Button()
+            Me.BtnWaylay = New System.Windows.Forms.Button()
+            Me.BtnNewVictim = New System.Windows.Forms.Button()
+            Me.BtnBack = New System.Windows.Forms.Button()
+            Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
             Me.SuspendLayout()
             '
-            'txtRob
+            'TxtRob
             '
-            Me.txtRob.BorderStyle = BorderStyle.FixedSingle
-            Me.txtRob.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtRob.Location = New Point(12, 12)
-            Me.txtRob.MaximumSize = New Size(308, 150)
-            Me.txtRob.MinimumSize = New Size(308, 150)
-            Me.txtRob.Multiline = True
-            Me.txtRob.Name = "txtRob"
-            Me.txtRob.ReadOnly = True
-            Me.txtRob.ScrollBars = ScrollBars.Vertical
-            Me.txtRob.Size = New Size(308, 150)
-            Me.txtRob.TabIndex = 0
+            Me.TxtRob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.TxtRob.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtRob.Location = New System.Drawing.Point(12, 12)
+            Me.TxtRob.MaximumSize = New System.Drawing.Size(308, 150)
+            Me.TxtRob.MinimumSize = New System.Drawing.Size(308, 308)
+            Me.TxtRob.Multiline = True
+            Me.TxtRob.Name = "TxtRob"
+            Me.TxtRob.ReadOnly = True
+            Me.TxtRob.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+            Me.TxtRob.Size = New System.Drawing.Size(308, 308)
+            Me.TxtRob.TabIndex = 0
             '
-            'btnPickpocket
+            'BtnPickpocket
             '
-            Me.btnPickpocket.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPickpocket.Location = New Point(13, 169)
-            Me.btnPickpocket.Margin = New Padding(4)
-            Me.btnPickpocket.Name = "btnPickpocket"
-            Me.btnPickpocket.Size = New Size(150, 30)
-            Me.btnPickpocket.TabIndex = 1
-            Me.btnPickpocket.Text = "&Pickpocket"
-            Me.btnPickpocket.UseVisualStyleBackColor = True
+            Me.BtnPickpocket.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnPickpocket.Location = New System.Drawing.Point(13, 327)
+            Me.BtnPickpocket.Margin = New System.Windows.Forms.Padding(4)
+            Me.BtnPickpocket.Name = "BtnPickpocket"
+            Me.BtnPickpocket.Size = New System.Drawing.Size(150, 30)
+            Me.BtnPickpocket.TabIndex = 1
+            Me.BtnPickpocket.Text = "&Pickpocket"
+            Me.BtnPickpocket.UseVisualStyleBackColor = True
             '
-            'btnWaylay
+            'BtnWaylay
             '
-            Me.btnWaylay.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnWaylay.Location = New Point(171, 169)
-            Me.btnWaylay.Margin = New Padding(4)
-            Me.btnWaylay.Name = "btnWaylay"
-            Me.btnWaylay.Size = New Size(150, 30)
-            Me.btnWaylay.TabIndex = 2
-            Me.btnWaylay.Text = "&Waylay"
-            Me.btnWaylay.UseVisualStyleBackColor = True
+            Me.BtnWaylay.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnWaylay.Location = New System.Drawing.Point(171, 327)
+            Me.BtnWaylay.Margin = New System.Windows.Forms.Padding(4)
+            Me.BtnWaylay.Name = "BtnWaylay"
+            Me.BtnWaylay.Size = New System.Drawing.Size(150, 30)
+            Me.BtnWaylay.TabIndex = 2
+            Me.BtnWaylay.Text = "&Waylay"
+            Me.BtnWaylay.UseVisualStyleBackColor = True
             '
-            'btnNewVictim
+            'BtnNewVictim
             '
-            Me.btnNewVictim.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNewVictim.Location = New Point(13, 207)
-            Me.btnNewVictim.Margin = New Padding(4)
-            Me.btnNewVictim.Name = "btnNewVictim"
-            Me.btnNewVictim.Size = New Size(150, 30)
-            Me.btnNewVictim.TabIndex = 3
-            Me.btnNewVictim.Text = "&Stalk New Victim"
-            Me.btnNewVictim.TextAlign = ContentAlignment.MiddleRight
-            Me.btnNewVictim.UseVisualStyleBackColor = True
+            Me.BtnNewVictim.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnNewVictim.Location = New System.Drawing.Point(13, 365)
+            Me.BtnNewVictim.Margin = New System.Windows.Forms.Padding(4)
+            Me.BtnNewVictim.Name = "BtnNewVictim"
+            Me.BtnNewVictim.Size = New System.Drawing.Size(150, 30)
+            Me.BtnNewVictim.TabIndex = 3
+            Me.BtnNewVictim.Text = "&Stalk New Victim"
+            Me.BtnNewVictim.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.BtnNewVictim.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(171, 207)
-            Me.btnBack.Margin = New Padding(4)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(150, 30)
-            Me.btnBack.TabIndex = 4
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.BtnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New System.Drawing.Point(171, 365)
+            Me.BtnBack.Margin = New System.Windows.Forms.Padding(4)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New System.Drawing.Size(150, 30)
+            Me.BtnBack.TabIndex = 4
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
             'Timer1
             '
             Me.Timer1.Interval = 1500
             '
-            'Timer2
+            'FrmRob
             '
-            Me.Timer2.Interval = 5000
-            '
-            'frmRob
-            '
-            Me.AutoScaleDimensions = New SizeF(7.0!, 16.0!)
-            Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
-            Me.ClientSize = New Size(332, 249)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnNewVictim)
-            Me.Controls.Add(Me.btnWaylay)
-            Me.Controls.Add(Me.btnPickpocket)
-            Me.Controls.Add(Me.txtRob)
-            Me.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Margin = New Padding(3, 4, 3, 4)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.CancelButton = Me.BtnBack
+            Me.ClientSize = New System.Drawing.Size(332, 407)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnNewVictim)
+            Me.Controls.Add(Me.BtnWaylay)
+            Me.Controls.Add(Me.BtnPickpocket)
+            Me.Controls.Add(Me.TxtRob)
+            Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.MaximizeBox = False
-            Me.MaximumSize = New Size(348, 288)
-            Me.MinimumSize = New Size(348, 288)
-            Me.Name = "frmRob"
-            Me.StartPosition = FormStartPosition.CenterScreen
+            Me.MaximumSize = New System.Drawing.Size(348, 446)
+            Me.MinimumSize = New System.Drawing.Size(348, 446)
+            Me.Name = "FrmRob"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Robbery"
             Me.ResumeLayout(False)
             Me.PerformLayout()
@@ -133,6 +128,5 @@ Namespace Forms
         Friend WithEvents BtnNewVictim As Button
         Friend WithEvents BtnBack As Button
         Friend WithEvents Timer1 As Timer
-        Friend WithEvents Timer2 As Timer
     End Class
 End NameSpace

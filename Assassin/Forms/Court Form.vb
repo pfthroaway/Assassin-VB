@@ -6,17 +6,18 @@
 ' Description     : This form conducts the court activities after a player has been apprehended.
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Enums
 Imports Extensions
 
 Namespace Forms
 
     Public Class FrmCourt
-        Public Reason As String = ""            'reason for being sent to court
-        Dim _arrText As New ArrayList            'ArrayList of text
-        Dim _index As Integer = 0                'index for ArrayList
-        Dim _fine As Integer = 0                 'fine if found guilty
-        Dim _blnGuilty As Boolean = False        'boolean for being found guilty
-        Dim _blnFinished As Boolean = False      'boolean for being finished
+        Public Reason As Crime
+        Dim _arrText As New ArrayList
+        Dim _index As Integer = 0
+        Dim _fine As Integer = 0
+        Dim _blnGuilty As Boolean = False
+        Dim _blnFinished As Boolean = False
 
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
@@ -55,28 +56,31 @@ Namespace Forms
             _arrText.Add("You are dragged to the courts of justice.")
             _arrText.Add("The judge stares at you. . .")
             If CurrentUser.Level > 6 Then
-                _arrText.Add($"""Well, if it isn't the {AllRanks(CurrentUser.Level)}, {CurrentUser.Name}.""")
+                _arrText.Add($"""Well, if it isn't the {CurrentUser.Rank}, {CurrentUser.Name}.""")
                 _arrText.Add("""Don't worry, I will be impartial,"" he laughs.")
             End If
             _arrText.Add("The trial begins. . .")
-            If Reason = "Pickpocket" Then
-                _arrText.Add("You are charged with the crime of attempted theft of property.")
-                _fine = 50
-            ElseIf Reason = "Assault" Then
-                _arrText.Add("You are charged with the crime of attempted assault and robbery.")
-                _fine = 100
-            ElseIf Reason = "Assassinate" Then
-                _arrText.Add("You are charged with the crime of attempted murder.")
-                _fine = 250
-            End If
+
+            Select Case Reason
+                Case Crime.Assault
+                    _arrText.Add("You are charged with the crime of attempted assault and robbery.")
+                    _fine = 100
+                Case Crime.AttemptedMurder
+                    _arrText.Add("You are charged with the crime of attempted murder.")
+                    _fine = 250
+                Case Crime.Pickpocket
+                    _arrText.Add("You are charged with the crime of attempted theft of property.")
+                    _fine = 50
+            End Select
+
             _arrText.Add("Prosecution. . .")
             _arrText.Add("Defense. . .")
-
+            _arrText.Add("The judge finds you. . .")
             Dim guilty As Integer = Functions.GenerateRandomNumber(1, 100)
-            If guilty <= (100 - (CurrentUser.Level * 5)) Then  'not guilty
-                _arrText.Add("The judge finds you. . . innocent!")
-            Else                                            'guilty
-                _arrText.Add("The judge finds you. . . guilty!")
+            If guilty <= (100 - (CurrentUser.Level * 5)) Then 'not guilty
+                _arrText.Add("innocent!")
+            Else 'guilty
+                _arrText.Add("guilty!")
                 _arrText.Add($"""You are to pay {_fine} gold as a fine. Pay it, or you will be jailed for the night.""")
                 _blnGuilty = True
             End If
@@ -105,7 +109,7 @@ Namespace Forms
             End If
             FrmGame.DisableButtons()
             FrmGame.BtnJail.Enabled = True
-            CurrentUser.CurrentLocation = "Jail"
+            CurrentUser.CurrentLocation = SleepLocation.Jail
             _blnFinished = True
             Close()
         End Sub

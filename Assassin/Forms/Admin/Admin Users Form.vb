@@ -396,7 +396,7 @@ Namespace Forms.Admin
 
         '            SaveUser()
         '            'TODO Try to understand this mess
-        '            'If CurrentUser.CurrentLocation = "Jail" Then
+        '            'If CurrentUser.CurrentLocation = SleepLocation.Jail Then
         '            '    _sql = "SELECT * FROM Jail WHERE Username='" & LstUsers.SelectedItem.ToString & "'"
         '            '    _table = "Jail"
 

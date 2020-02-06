@@ -16,7 +16,6 @@ Imports Assassin.Forms.GuildForms
 
 Namespace Forms
 
-    ' TODO 2019-08-23 - Fixing all instances where CurrentUser/Guild or DataSets were being used.
     Public Class FrmMembers
         Dim allUsers As List(Of User)
         Dim selectedUser As User

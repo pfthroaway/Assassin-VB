@@ -71,7 +71,7 @@ Namespace Forms
             '    AddText("You awaken in a jail cell. A guard looms over you. He barks at you, " & Chr(34) & "You're free to go!" & Chr(34) &
             '            " You briskly leave the jail.")
 
-            '    CurrentUser.CurrentLocation = "Streets"
+            '    CurrentUser.CurrentLocation = SleepLocation.Streets
             '    EnableButtons()
 
             '    Display()
@@ -106,7 +106,7 @@ Namespace Forms
         ''' <summary>Displays all the statistics of the character.</summary>
         Public Sub Display()
             lblName.Text = CurrentUser.Name
-            lblRank.Text = AllRanks(CurrentUser.Level - 1)
+            lblRank.Text = CurrentUser.Rank
             lblExpAmt.Text = CurrentUser.Experience.ToString
             lblSkillPtsAmt.Text = CurrentUser.SkillPoints.ToString
             lblEndAmt.Text = CurrentUser.EnduranceToString
@@ -236,8 +236,7 @@ Namespace Forms
 
         Private Sub BtnRob_Click(sender As Object, e As EventArgs) Handles BtnRob.Click
             FrmRob.Show()
-            FrmRob.TxtRob.Text = "You proceed to look for someone to rob."
-            GetEnemy()
+            FrmRob.LoadRobbery()
             Hide()
         End Sub
 

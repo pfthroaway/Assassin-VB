@@ -99,7 +99,7 @@ Namespace Forms
             ArrText.Add($"{_currEmployer} approaches you.")
             GetEnemy()
             _bounty = Functions.GenerateRandomNumber(CurrentEnemy.CurrentEndurance, CurrentEnemy.CurrentEndurance * 2)
-            ArrText.Add($"""Greetings, {AllRanks(CurrentUser.Level)}.{_nl}I have an opportunity for you.{_nl}It concerns the elimination of a {CurrentEnemy.Name}.{_nl}I will pay you {_bounty} gold.{_nl}Are you interested?""")
+            ArrText.Add($"""Greetings, {CurrentUser.Rank}.{_nl}I have an opportunity for you.{_nl}It concerns the elimination of a {CurrentEnemy.Name}.{_nl}I will pay you {_bounty} gold.{_nl}Are you interested?""")
 
             Timer1.Start()
         End Sub

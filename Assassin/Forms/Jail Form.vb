@@ -21,13 +21,13 @@ Namespace Forms
         Dim _fine As Integer                     'fine
 
         ''' <summary>Displays all the users currently in jail.</summary>
-        Public Async Sub Display()
+        Public Sub Display()
             LstJailed.Items.Clear()
             LstJailed.ClearSelected()
             lblFine.Text = ""
             lblReason.Text = ""
 
-            _jailedUsers = Await LoadUsers()
+            _jailedUsers = AllUsers.Where(Function(user) user.CurrentLocation = SleepLocation.Jail).ToList()
 
             For Each user As User In _jailedUsers
                 If user.CurrentLocation <> SleepLocation.Jail Then

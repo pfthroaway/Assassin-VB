@@ -32,8 +32,6 @@ Namespace Forms
         Dim _playerWeaponSkill As Integer = 0
         Dim _enemyWeaponSkill As Integer = 0
 
-        ' TODO Make hit much more often. It's brutally long now.
-
         ''' <summary>Gives a <see cref="User"/> a bonus.</summary>
         ''' <returns>Bonus amount</returns>
         Private Function Bonus() As Integer

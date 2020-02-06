@@ -7,8 +7,6 @@
 
 Option Strict On
 Option Explicit On
-
-Imports System.Threading.Tasks
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
 
