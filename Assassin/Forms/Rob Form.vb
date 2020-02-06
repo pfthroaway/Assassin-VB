@@ -167,6 +167,7 @@ Namespace Forms
                     If type = 1 Then 'gold only
                         AddText($"You manage to steal a pouch containing {gold} gold!")
                         CurrentUser.GoldOnHand += gold
+                        ToggleBackNewVictim(True)
                     ElseIf type = 2 Then 'weapon only
                         AddText($"You manage to pickpocket their {CurrentEnemy.Weapon.Name}!")
                         _arrText.Add($"You bring it to the weaponsmith and sell it for {CurrentEnemy.Weapon.SellValue} gold!")
