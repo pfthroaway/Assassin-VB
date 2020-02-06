@@ -9,6 +9,7 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Enums
 Imports Assassin.Forms.GuildForms
 Imports Assassin.Forms.Shopping
 Imports Extensions
@@ -25,32 +26,32 @@ Namespace Forms
 
         ''' <summary>Displays the appropriate text when a user awakens.</summary>
         Public Async Sub Awaken()
-            If CurrentUser.Alive Then  'if alive
+            If CurrentUser.Alive Then
                 Select Case CurrentUser.CurrentLocation
-                    Case "Streets"
+                    Case SleepLocation.Streets
                         Dim loseEnd As Integer = Functions.GenerateRandomNumber(1, 5)
                         TxtGame.Text = $"You awaken on the streets. After a rough night sleeping on the ground, you have lost {loseEnd} Endurance."
                         CurrentUser.CurrentEndurance -= loseEnd
                         If CurrentUser.CurrentEndurance < 1 Then CurrentUser.CurrentEndurance = 1
-                    Case "Jail"
+                    Case SleepLocation.Jail
                         CheckJailed()
                         Exit Sub
-                    Case "Inn"
+                    Case SleepLocation.Inn
                         TxtGame.Text = "You awaken in the inn. You feel refreshed. You exit to the streets."
                         CurrentUser.CurrentEndurance += 10
-                    Case "Guild"
+                    Case SleepLocation.Guild
                         TxtGame.Text = "You awaken in the guild. You exit to the streets."
                 End Select
-            Else                'if dead
+            Else
                 TxtGame.Text = "You were slain. You have been resurrected by the gods."
-                CurrentUser.Alive = True           'set to alive
-                CurrentUser.CurrentEndurance = 1            'set current endurance to 1
+                CurrentUser.Alive = True
+                CurrentUser.CurrentEndurance = 1
                 Await SaveUser(CurrentUser)
             End If
 
-            CurrentUser.CurrentLocation = "Streets"    'set location to streets
+            CurrentUser.CurrentLocation = SleepLocation.Streets
 
-            Display()   'display all information
+            Display()
         End Sub
 
         ''' <summary>Checks whether a jailed user has served their time.</summary>

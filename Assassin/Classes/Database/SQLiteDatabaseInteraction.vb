@@ -19,8 +19,8 @@ Namespace Classes.Database
         Implements IDatabaseInteraction
 
         Private Const _databasename As String = "Assassin.sqlite"
-        ReadOnly UsersDatabaseLocation As String = Path.Combine(AppData.Location, _databasename)
-        ReadOnly _con As String = $"Data Source = {UsersDatabaseLocation}; foreign keys = TRUE; Version=3"
+        ReadOnly DatabaseLocation As String = Path.Combine(AppData.Location, _databasename)
+        ReadOnly _con As String = $"Data Source = {DatabaseLocation}; foreign keys = TRUE; Version=3"
 
         ''' <summary>Verifies that the requested database exists and that its file size is greater than zero. If not, it extracts the embedded database file to the local output folder.</summary>
         Public Sub VerifyDatabaseIntegrity() Implements IDatabaseInteraction.VerifyDatabaseIntegrity
@@ -295,7 +295,7 @@ Namespace Classes.Database
                 .SkillPoints = Int32Helper.Parse(dr.Item("SkillPoints").ToString()),
                 .Alive = BoolHelper.Parse(dr.Item("Alive")),
                 .CurrentEndurance = Int32Helper.Parse(dr.Item("CurrentEndurance").ToString()),
-                .CurrentLocation = dr.Item("Location").ToString(),
+                .CurrentLocation = EnumHelper.Parse(Of SleepLocation)(dr.Item("Location").ToString()),
                 .MaximumEndurance = Int32Helper.Parse(dr.Item("MaximumEndurance").ToString()),
                 .Hunger = Int32Helper.Parse(dr.Item("Hunger").ToString()),
                 .Thirst = Int32Helper.Parse(dr.Item("Thirst").ToString()),
@@ -379,14 +379,14 @@ Namespace Classes.Database
         ''' <param name="userSave"><see cref="User"/> to be saved</param>
         ''' <returns>True if successful</returns>
         Public Async Function SaveUser(userSave As User) As Task(Of Boolean) Implements IDatabaseInteraction.SaveUser
-            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Users SET [Password] = @password, [Level] = @level, [Experience] = @experience, [SkillPoints] = @skillPoints, [Alive] = @alive, [Location] = location, [CurrentEndurance] = @currentEndurance, [MaximumEndurance] = @maximumEndurance, [Hunger] = @hunger, [Thirst] = @thirst, [CurrentWeapon] = @currentWeapon, [LightWeapon] = @lightWeapon, [HeavyWeapon] = @heavyWeapon, [TwoHandedWeapon] = @twoHandedWeapon, [Armor] = @armor, [Potion] = @potion, [Lockpicks] = @lockpicks, [GoldOnHand] = @goldOnHand, [GoldInBank] = @goldInBank, [GoldOnLoan] = @goldOnLoan, [Shovel] = @shovel, [Lantern] = @lantern, [Amulet] = @amulet, [LightWeaponSkill] = @lightWeaponSkill, [HeavyWeaponSkill] = @heavyWeaponSkill, [TwoHandedWeaponSkill] = @twoHandedWeaponSkill, [Blocking] = @blocking, [Slipping] = @slipping, [Stealth] = @stealth, [HenchmenLevel1] = @henchmenLevel1, [HenchmenLevel2] = @henchmenLevel2, [HenchmenLevel3] = @henchmenLevel3, [HenchmenLevel4] = @henchmenLevel4, [HenchmenLevel5] = @henchmenLevel5 WHERE [Username] = @name"}
+            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Users SET [Password] = @password, [Level] = @level, [Experience] = @experience, [SkillPoints] = @skillPoints, [Alive] = @alive, [Location] = @location, [CurrentEndurance] = @currentEndurance, [MaximumEndurance] = @maximumEndurance, [Hunger] = @hunger, [Thirst] = @thirst, [CurrentWeapon] = @currentWeapon, [LightWeapon] = @lightWeapon, [HeavyWeapon] = @heavyWeapon, [TwoHandedWeapon] = @twoHandedWeapon, [Armor] = @armor, [Potion] = @potion, [Lockpicks] = @lockpicks, [GoldOnHand] = @goldOnHand, [GoldInBank] = @goldInBank, [GoldOnLoan] = @goldOnLoan, [Shovel] = @shovel, [Lantern] = @lantern, [Amulet] = @amulet, [LightWeaponSkill] = @lightWeaponSkill, [HeavyWeaponSkill] = @heavyWeaponSkill, [TwoHandedWeaponSkill] = @twoHandedWeaponSkill, [Blocking] = @blocking, [Slipping] = @slipping, [Stealth] = @stealth, [HenchmenLevel1] = @henchmenLevel1, [HenchmenLevel2] = @henchmenLevel2, [HenchmenLevel3] = @henchmenLevel3, [HenchmenLevel4] = @henchmenLevel4, [HenchmenLevel5] = @henchmenLevel5 WHERE [Username] = @name"}
 
             cmd.Parameters.AddWithValue("@password", userSave.Password.Replace("\0", ""))
             cmd.Parameters.AddWithValue("@level", userSave.Level)
             cmd.Parameters.AddWithValue("@experience", userSave.Experience)
             cmd.Parameters.AddWithValue("@skillPoints", userSave.SkillPoints)
             cmd.Parameters.AddWithValue("@alive", Int32Helper.Parse(userSave.Alive))
-            cmd.Parameters.AddWithValue("@location", userSave.CurrentLocation)
+            cmd.Parameters.AddWithValue("@location", userSave.CurrentLocation.ToString())
             cmd.Parameters.AddWithValue("@currentEndurance", userSave.CurrentEndurance)
             cmd.Parameters.AddWithValue("@maximumEndurance", userSave.MaximumEndurance)
             cmd.Parameters.AddWithValue("@hunger", userSave.Hunger)

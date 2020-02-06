@@ -10,6 +10,7 @@ Option Explicit On
 
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
+Imports Assassin.Classes.Enums
 Imports Assassin.Forms.Shopping
 
 Namespace Forms.GuildForms
@@ -144,7 +145,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Async Sub BtnSleep_Click(sender As Object, e As EventArgs) Handles BtnSleep.Click
-            CurrentUser.CurrentLocation = "Guild"
+            CurrentUser.CurrentLocation = SleepLocation.Guild
             Await SaveUser(CurrentUser)
             DisableButtons()
             FrmGame.DisableButtons()

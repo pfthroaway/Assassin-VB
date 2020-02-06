@@ -11,6 +11,7 @@ Option Explicit On
 Imports System.Threading.Tasks
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
+Imports Assassin.Classes.Enums
 Imports Assassin.Forms.GuildForms
 
 Namespace Forms
@@ -33,14 +34,15 @@ Namespace Forms
             LstMembers.Items.Clear()
 
             If loc = "Manage" OrElse loc = "Guild" Then
-
                 If loc = "Manage" Then
                     BtnExpel.Show()
                 End If
 
                 lblName.Text = CurrentGuild.Name & " Members"
 
-                LstMembers.Items.Add(CurrentGuild.Members)
+                For Each member As String In CurrentGuild.Members
+                    LstMembers.Items.Add(member)
+                Next
             ElseIf loc = "Streets" Then
                 BtnAttack.Show()
                 lblName.Text = "All Players"
@@ -52,41 +54,17 @@ Namespace Forms
         End Function
 
         Private Sub BtnAttack_Click(sender As Object, e As EventArgs) Handles BtnAttack.Click
+            MessageBox.Show("This feature is currently unavailable.")
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
             Close()
         End Sub
 
-        Private Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
-            'TODO Fix Guild Expulsion
-            'Dim dlg As DialogResult
-            'Dim expelName As String = LstMembers.SelectedItem.ToString
-            'dlg = MessageBox.Show("Are you sure you want to expel " & expelName & "?", "Assassin", MessageBoxButtons.YesNo)
-            'If dlg = DialogResult.Yes Then
-            '    _sql = "SELECT * FROM Guild" & CurrentGuild.ID & "Members WHERE Username='" & expelName & "'"
-            '    _table = "Members"
-
-            '    .DeleteRecord(_sql, _table, _ds)
-
-            '    MessageBox.Show("Member successfully expelled.")
-
-            '    _sql = "SELECT * FROM Messages WHERE UserTo='" & expelName & "' AND UserFrom='" & CurrentGuild.Name.Replace("'", "''") &
-            '           "' AND Message='You have been expelled from " & CurrentGuild.Name.Replace("'", "''") & ".'"
-            '    _table = "Messages"
-
-            '    Dim dsNewRow As DataRow
-            '    dsNewRow = _ds.Tables(0).NewRow()
-            '    dsNewRow.Item("UserTo") = expelName
-            '    dsNewRow.Item("UserFrom") = CurrentGuild.Name
-            '    dsNewRow.Item("Message") = "You have been expelled from " & CurrentGuild.Name & "."
-            '    dsNewRow.Item("DateSent") = Now
-            '    dsNewRow.Item("GuildMessage") = True
-
-            '    _ds.Tables(0).Rows.Add(dsNewRow)
-            '    .UpdateRecord(_sql, _table, _ds)
-            '    LoadMembers()
-            'End If
+        Private Async Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
+            If Await MemberLeavesGuild(selectedUser, CurrentGuild) Then
+                MessageBox.Show($"{selectedUser.Name} has been expelled from {CurrentGuild.Name}.")
+            End If
         End Sub
 
         Private Sub BtnMessage_Click(sender As Object, e As EventArgs) Handles BtnMessage.Click
@@ -104,7 +82,7 @@ Namespace Forms
                     BtnMessage.Enabled = True
                     BtnExpel.Enabled = True
                     If loc = "Streets" Then
-                        BtnAttack.Enabled = selectedUser.CurrentLocation = "Streets"
+                        BtnAttack.Enabled = selectedUser.CurrentLocation = SleepLocation.Streets
                     End If
                 Else
                     DisableButtons()

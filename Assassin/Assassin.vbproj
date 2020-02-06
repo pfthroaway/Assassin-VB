@@ -132,6 +132,7 @@
     <Compile Include="Classes\Database\IDatabaseInteraction.vb" />
     <Compile Include="Classes\Database\SQLiteDatabaseInteraction.vb" />
     <Compile Include="Classes\Entities\LivingEntity.vb" />
+    <Compile Include="Classes\Enums\SleepLocation.vb" />
     <Compile Include="Classes\Enums\Stance.vb" />
     <Compile Include="Classes\Enums\WeaponType.vb" />
     <Compile Include="Classes\Items\Drink.vb" />

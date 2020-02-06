@@ -10,6 +10,7 @@ Option Explicit On
 
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
+Imports Assassin.Classes.Enums
 
 Namespace Forms
 
@@ -29,7 +30,7 @@ Namespace Forms
             _jailedUsers = Await LoadUsers()
 
             For Each user As User In _jailedUsers
-                If user.CurrentLocation <> "Jail" Then
+                If user.CurrentLocation <> SleepLocation.Jail Then
                     _jailedUsers.Remove(user)
                 End If
             Next

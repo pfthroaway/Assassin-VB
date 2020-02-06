@@ -32,10 +32,9 @@ Namespace Forms.GuildForms
 
         ''' <summary>Displays information about the selected <see cref="Guild"/>.</summary>
         Public Async Sub Display()
-            If LstGuilds.SelectedIndex > -1 Then
+            If LstGuilds.SelectedIndex >= 0 Then
                 CurrentGuild = AllGuilds.Find(Function(guild) guild.ID = LstGuilds.SelectedIndex + 1)
                 lblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
-
                 If CurrentGuild.Master = "Computer" Then
                     Select Case CurrentGuild.ID
                         Case 1
@@ -110,6 +109,8 @@ Namespace Forms.GuildForms
                     'if guildmaster is Computer, always accept
                     Await MemberJoinsGuild(CurrentUser, CurrentGuild)
                     AddText($"You paid {CurrentGuild.Fee} gold to join the {CurrentGuild.Name} guild, and have been accepted!")
+                    CurrentGuild.Members.Add(CurrentUser.Name)
+                    BtnEnter.Enabled = True
                 Else
                     'submit new application
                     Await ApplyToGuild(CurrentUser, CurrentGuild)
@@ -117,10 +118,10 @@ Namespace Forms.GuildForms
                 End If
 
                 BtnApply.Enabled = False
-                CurrentUser.GoldOnHand -= CurrentGuild.Fee    'subtract gold from CurrentUser
-                CurrentGuild.Gold += CurrentGuild.Fee         'add gold to currGuild
-                Await SaveGuild(CurrentGuild)              'save currGuild
-                Await SaveUser(CurrentUser)                    'save CurrentUser
+                CurrentUser.GoldOnHand -= CurrentGuild.Fee
+                CurrentGuild.Gold += CurrentGuild.Fee
+                Await SaveGuild(CurrentGuild)
+                Await SaveUser(CurrentUser)
 
                 Display()
             End If

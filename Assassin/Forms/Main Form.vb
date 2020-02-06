@@ -13,46 +13,40 @@ Imports Assassin.Classes
 Imports Assassin.Classes.Entities
 Imports Assassin.Forms.Admin
 Imports Extensions.Encryption
-Imports System.Threading.Tasks
 
 Namespace Forms
 
     Public Class FrmMain
 
         ''' <summary>Checks whether a valid login has occurred.</summary>
-        ''' <returns></returns>
-        Private Async Function CheckLogin() As Task(Of Boolean)
-            Dim newUser As User = Await LoadUser(TxtUsername.Text)
-            If newUser <> New User() Then
-                If Argon2.ValidatePassword(newUser.Password, TxtPswd.Text) Then
-                    CurrentUser = newUser
-                    Return True
-                Else
-                    MessageBox.Show("Unable to verify credentials.", "Assassin", MessageBoxButtons.OK)
-                End If
-            Else
-                MessageBox.Show("Unable to verify credentials.", "Assassin", MessageBoxButtons.OK)
+        ''' <returns>True if successful login</returns>
+        Private Function CheckLogin() As Boolean
+            Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
+            If NewUser <> New User AndAlso Argon2.ValidatePassword(NewUser.Password, TxtPswd.Text) Then
+                CurrentUser = NewUser
+                Return True
             End If
+            MessageBox.Show("Unable to verify credentials.", "Assassin", MessageBoxButtons.OK)
             Return False
         End Function
 
         ''' <summary>When a valid login has occurred, log the character in.</summary>
         Private Sub Login()
-            TxtUsername.Clear()     'clear username TextBox
-            TxtPswd.Clear()         'clear password TextBox
-            TxtUsername.Focus()     'set focus to username TextBox
+            TxtUsername.Clear()
+            TxtPswd.Clear()
+            TxtUsername.Focus()
 
-            FrmGame.Show()          'show Game form
-            FrmGame.Awaken()        'display awakening text
+            FrmGame.Show()
+            FrmGame.Awaken()
 
             Hide()
         End Sub
 
 #Region "Click"
 
-        Private Async Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+        Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
             If TxtUsername.TextLength > 0 AndAlso TxtPswd.TextLength > 0 Then
-                If Await CheckLogin() Then
+                If CheckLogin() Then
                     Login()
                 End If
             Else
@@ -84,7 +78,7 @@ Namespace Forms
                             "Original version:" & nl &
                             "Copyright 1990-1995 Kevin MacFarland" & nl &
                             "Recreated for Windows:" & nl &
-                            "Copyright 2012 pfthroaway", "Assassin", MessageBoxButtons.OK)
+                            "Copyright 2012-2020 pfthroaway", "Assassin", MessageBoxButtons.OK)
         End Sub
 
         Private Sub MnuHelpManual_Click(sender As Object, e As EventArgs) Handles mnuHelpManual.Click

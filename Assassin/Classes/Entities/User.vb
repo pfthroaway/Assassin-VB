@@ -32,7 +32,7 @@ Namespace Classes.Entities
         Public Property Alive As Boolean
 
         ''' <summary>The <see cref="User"/>'s current location.</summary>
-        Public Property CurrentLocation As String
+        Public Property CurrentLocation As SleepLocation
 
         ''' <summary>The <see cref="User"/>'s current hunger.</summary>
         Public Property Hunger As Integer
@@ -331,7 +331,7 @@ Namespace Classes.Entities
             Experience = 0
             SkillPoints = 5
             Alive = True
-            CurrentLocation = "Streets"
+            CurrentLocation = SleepLocation.Streets
             CurrentEndurance = 100
             MaximumEndurance = 100
             Hunger = 0
@@ -401,7 +401,7 @@ Namespace Classes.Entities
         ''' <param name="newHenchmenLevel3">Amount of Level 3 Henchmen employed by the <see cref="User"/></param>
         ''' <param name="newHenchmenLevel4">Amount of Level 4 Henchmen employed by the <see cref="User"/></param>
         ''' <param name="newHenchmenLevel5">Amount of Level 5 Henchmen employed by the <see cref="User"/></param>
-        Friend Sub New(newName As String, newPassword As String, newLevel As Integer, newExperience As Integer, newSkillPoints As Integer, newAlive As Boolean, newCurrentLocation As String, newCurrentEndurance As Integer, newMaximumEndurance As Integer, newHunger As Integer, newThirst As Integer, newCurrentWeapon As WeaponType, newLightWeapon As Weapon, newHeavyWeapon As Weapon, newTwoHandedWeapon As Weapon, newArmor As Armor, newPotion As Potion, newLockpicks As Integer, newGoldOnHand As Integer, newGoldInBank As Integer, newGoldOnLoan As Integer, newShovel As Boolean, newLantern As Boolean, newAmulet As Boolean, newLightWeaponSkill As Integer, newHeavyWeaponSkill As Integer, newTwoHandedWeaponSkill As Integer, newBlocking As Integer, newSlipping As Integer, newStealth As Integer, newHenchmenLevel1 As Integer, newHenchmenLevel2 As Integer, newHenchmenLevel3 As Integer, newHenchmenLevel4 As Integer, newHenchmenLevel5 As Integer)
+        Friend Sub New(newName As String, newPassword As String, newLevel As Integer, newExperience As Integer, newSkillPoints As Integer, newAlive As Boolean, newCurrentLocation As SleepLocation, newCurrentEndurance As Integer, newMaximumEndurance As Integer, newHunger As Integer, newThirst As Integer, newCurrentWeapon As WeaponType, newLightWeapon As Weapon, newHeavyWeapon As Weapon, newTwoHandedWeapon As Weapon, newArmor As Armor, newPotion As Potion, newLockpicks As Integer, newGoldOnHand As Integer, newGoldInBank As Integer, newGoldOnLoan As Integer, newShovel As Boolean, newLantern As Boolean, newAmulet As Boolean, newLightWeaponSkill As Integer, newHeavyWeaponSkill As Integer, newTwoHandedWeaponSkill As Integer, newBlocking As Integer, newSlipping As Integer, newStealth As Integer, newHenchmenLevel1 As Integer, newHenchmenLevel2 As Integer, newHenchmenLevel3 As Integer, newHenchmenLevel4 As Integer, newHenchmenLevel5 As Integer)
             Name = newName
             Password = newPassword
             Level = newLevel
