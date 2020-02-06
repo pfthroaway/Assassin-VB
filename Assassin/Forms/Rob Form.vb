@@ -51,14 +51,6 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>Disables all the buttons while a robbery is in progress or while searching for a new victim.</summary>
-        Private Sub DisableButtons()
-            BtnBack.Enabled = False
-            BtnPickpocket.Enabled = False
-            BtnWaylay.Enabled = False
-            BtnNewVictim.Enabled = False
-        End Sub
-
         ''' <summary>Displays text while the Timer is active.</summary>
         Public Sub Display()
             If _index < _arrText.Count Then
@@ -68,18 +60,18 @@ Namespace Forms
                     _arrText.Clear()
                     Timer1.Stop()
                     _index = 0
-                    EnableButtons()
+                    ToggleButtons(True)
                     CheckHungerThirst()
                 End If
             End If
         End Sub
 
-        ''' <summary>Enables all the buttons after a robbery is completed or after searching for a new victim.</summary>
-        Private Sub EnableButtons()
-            BtnBack.Enabled = True
-            BtnPickpocket.Enabled = True
-            BtnWaylay.Enabled = True
-            BtnNewVictim.Enabled = True
+        ''' <summary>Toggles all the buttons after a robbery is completed or after searching for a new victim.</summary>
+        Private Sub ToggleButtons(enabled As Boolean)
+            BtnBack.Enabled = enabled
+            BtnPickpocket.Enabled = enabled
+            BtnWaylay.Enabled = enabled
+            BtnNewVictim.Enabled = enabled
         End Sub
 
 #Region "Click"
@@ -93,6 +85,7 @@ Namespace Forms
         End Sub
 
         Private Async Sub BtnPickpocket_Click(sender As Object, e As EventArgs) Handles BtnPickpocket.Click
+            ToggleButtons(False)
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
 
