@@ -29,10 +29,12 @@ Namespace Classes
         ''' <param name="tb">TextBox</param>
         ''' <param name="newText">Text to be added</param>
         Public Sub AddTextToTextBox(tb As TextBox, newText As String)
-            Dim nl As String = Environment.NewLine
-            tb.Text = If(String.IsNullOrWhiteSpace(tb.Text), newText, $"{tb.Text}{nl}{nl}{newText}")
-            tb.Select(tb.Text.Length, 0)
-            tb.ScrollToCaret()
+            If Not String.IsNullOrWhiteSpace(newText) Then
+                Dim nl As String = Environment.NewLine
+                tb.Text = If(String.IsNullOrWhiteSpace(tb.Text), newText, $"{tb.Text}{nl}{nl}{newText}")
+                tb.Select(tb.Text.Length, 0)
+                tb.ScrollToCaret()
+            End If
         End Sub
 
 #End Region

@@ -74,7 +74,7 @@ Namespace Forms
             'lblPlrArmor
             '
             Me.lblPlrArmor.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrArmor.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlrArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPlrArmor.Location = New Point(528, 100)
             Me.lblPlrArmor.Name = "lblPlrArmor"
             Me.lblPlrArmor.Size = New Size(101, 23)
@@ -84,7 +84,7 @@ Namespace Forms
             'Label8
             '
             Me.Label8.BorderStyle = BorderStyle.FixedSingle
-            Me.Label8.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New Point(428, 100)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New Size(101, 23)
@@ -95,7 +95,7 @@ Namespace Forms
             'lblPlrWeapon
             '
             Me.lblPlrWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrWeapon.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlrWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPlrWeapon.Location = New Point(528, 78)
             Me.lblPlrWeapon.Name = "lblPlrWeapon"
             Me.lblPlrWeapon.Size = New Size(101, 23)
@@ -105,7 +105,7 @@ Namespace Forms
             'lblPlrStatus
             '
             Me.lblPlrStatus.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrStatus.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlrStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPlrStatus.Location = New Point(528, 56)
             Me.lblPlrStatus.Name = "lblPlrStatus"
             Me.lblPlrStatus.Size = New Size(101, 23)
@@ -115,7 +115,7 @@ Namespace Forms
             'Label6
             '
             Me.Label6.BorderStyle = BorderStyle.FixedSingle
-            Me.Label6.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label6.Location = New Point(428, 78)
             Me.Label6.Name = "Label6"
             Me.Label6.Size = New Size(101, 23)
@@ -126,7 +126,7 @@ Namespace Forms
             'lblPlrEnd
             '
             Me.lblPlrEnd.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrEnd.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlrEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPlrEnd.Location = New Point(528, 34)
             Me.lblPlrEnd.Name = "lblPlrEnd"
             Me.lblPlrEnd.Size = New Size(101, 23)
@@ -136,7 +136,7 @@ Namespace Forms
             'Label4
             '
             Me.Label4.BorderStyle = BorderStyle.FixedSingle
-            Me.Label4.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New Point(428, 56)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New Size(101, 23)
@@ -147,7 +147,7 @@ Namespace Forms
             'lblPlrName
             '
             Me.lblPlrName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrName.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPlrName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPlrName.Location = New Point(428, 12)
             Me.lblPlrName.Name = "lblPlrName"
             Me.lblPlrName.Size = New Size(201, 23)
@@ -157,7 +157,7 @@ Namespace Forms
             'Label2
             '
             Me.Label2.BorderStyle = BorderStyle.FixedSingle
-            Me.Label2.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New Point(428, 34)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New Size(101, 23)
@@ -168,7 +168,7 @@ Namespace Forms
             'lblEneArmor
             '
             Me.lblEneArmor.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneArmor.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEneArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEneArmor.Location = New Point(528, 311)
             Me.lblEneArmor.Name = "lblEneArmor"
             Me.lblEneArmor.Size = New Size(101, 23)
@@ -178,7 +178,7 @@ Namespace Forms
             'Label10
             '
             Me.Label10.BorderStyle = BorderStyle.FixedSingle
-            Me.Label10.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New Point(428, 311)
             Me.Label10.Name = "Label10"
             Me.Label10.Size = New Size(101, 23)
@@ -189,7 +189,7 @@ Namespace Forms
             'lblEneWeapon
             '
             Me.lblEneWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneWeapon.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEneWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEneWeapon.Location = New Point(528, 289)
             Me.lblEneWeapon.Name = "lblEneWeapon"
             Me.lblEneWeapon.Size = New Size(101, 23)
@@ -199,7 +199,7 @@ Namespace Forms
             'lblEneStatus
             '
             Me.lblEneStatus.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneStatus.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEneStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEneStatus.Location = New Point(528, 267)
             Me.lblEneStatus.Name = "lblEneStatus"
             Me.lblEneStatus.Size = New Size(101, 23)
@@ -209,7 +209,7 @@ Namespace Forms
             'Label13
             '
             Me.Label13.BorderStyle = BorderStyle.FixedSingle
-            Me.Label13.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label13.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label13.Location = New Point(428, 289)
             Me.Label13.Name = "Label13"
             Me.Label13.Size = New Size(101, 23)
@@ -220,7 +220,7 @@ Namespace Forms
             'lblEneEnd
             '
             Me.lblEneEnd.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneEnd.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEneEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEneEnd.Location = New Point(528, 245)
             Me.lblEneEnd.Name = "lblEneEnd"
             Me.lblEneEnd.Size = New Size(101, 23)
@@ -230,7 +230,7 @@ Namespace Forms
             'Label15
             '
             Me.Label15.BorderStyle = BorderStyle.FixedSingle
-            Me.Label15.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label15.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label15.Location = New Point(428, 267)
             Me.Label15.Name = "Label15"
             Me.Label15.Size = New Size(101, 23)
@@ -241,7 +241,7 @@ Namespace Forms
             'Label16
             '
             Me.Label16.BorderStyle = BorderStyle.FixedSingle
-            Me.Label16.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label16.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label16.Location = New Point(428, 245)
             Me.Label16.Name = "Label16"
             Me.Label16.Size = New Size(101, 23)
@@ -252,7 +252,7 @@ Namespace Forms
             'lblEnemyName
             '
             Me.lblEnemyName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEnemyName.Font = New Font("Microsoft Sans Serif", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEnemyName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEnemyName.Location = New Point(428, 223)
             Me.lblEnemyName.Name = "lblEnemyName"
             Me.lblEnemyName.Size = New Size(201, 23)

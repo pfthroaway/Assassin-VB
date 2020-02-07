@@ -241,7 +241,7 @@ Namespace Forms
             'Label12
             '
             Me.Label12.BorderStyle = BorderStyle.FixedSingle
-            Me.Label12.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label12.Location = New Point(0, 395)
             Me.Label12.Name = "Label12"
             Me.Label12.Size = New Size(115, 23)
@@ -252,7 +252,7 @@ Namespace Forms
             'Label11
             '
             Me.Label11.BorderStyle = BorderStyle.FixedSingle
-            Me.Label11.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label11.Location = New Point(0, 373)
             Me.Label11.Name = "Label11"
             Me.Label11.Size = New Size(115, 23)
@@ -263,7 +263,7 @@ Namespace Forms
             'Label9
             '
             Me.Label9.BorderStyle = BorderStyle.FixedSingle
-            Me.Label9.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.Location = New Point(0, 351)
             Me.Label9.Name = "Label9"
             Me.Label9.Size = New Size(115, 23)
@@ -274,7 +274,7 @@ Namespace Forms
             'lblArmor
             '
             Me.lblArmor.BorderStyle = BorderStyle.FixedSingle
-            Me.lblArmor.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblArmor.Location = New Point(0, 197)
             Me.lblArmor.Name = "lblArmor"
             Me.lblArmor.Size = New Size(115, 23)
@@ -285,7 +285,7 @@ Namespace Forms
             'Label5
             '
             Me.Label5.BorderStyle = BorderStyle.FixedSingle
-            Me.Label5.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New Point(0, 329)
             Me.Label5.Name = "Label5"
             Me.Label5.Size = New Size(115, 23)
@@ -296,7 +296,7 @@ Namespace Forms
             'lblWeapon
             '
             Me.lblWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblWeapon.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblWeapon.Location = New Point(0, 175)
             Me.lblWeapon.Name = "lblWeapon"
             Me.lblWeapon.Size = New Size(115, 23)
@@ -307,7 +307,7 @@ Namespace Forms
             'Label8
             '
             Me.Label8.BorderStyle = BorderStyle.FixedSingle
-            Me.Label8.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New Point(0, 417)
             Me.Label8.Name = "Label8"
             Me.Label8.Size = New Size(115, 23)
@@ -318,7 +318,7 @@ Namespace Forms
             'lblWeaponName
             '
             Me.lblWeaponName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblWeaponName.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblWeaponName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblWeaponName.Location = New Point(114, 175)
             Me.lblWeaponName.Name = "lblWeaponName"
             Me.lblWeaponName.Size = New Size(114, 23)
@@ -328,7 +328,7 @@ Namespace Forms
             'lblInventory
             '
             Me.lblInventory.BorderStyle = BorderStyle.FixedSingle
-            Me.lblInventory.Font = New Font("Arial", 9.75!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblInventory.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.lblInventory.Location = New Point(0, 153)
             Me.lblInventory.Name = "lblInventory"
             Me.lblInventory.Size = New Size(228, 23)
@@ -339,7 +339,7 @@ Namespace Forms
             'lblArmorName
             '
             Me.lblArmorName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblArmorName.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblArmorName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblArmorName.Location = New Point(114, 197)
             Me.lblArmorName.Name = "lblArmorName"
             Me.lblArmorName.Size = New Size(114, 23)
@@ -349,7 +349,7 @@ Namespace Forms
             'lblSpecial
             '
             Me.lblSpecial.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSpecial.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSpecial.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblSpecial.Location = New Point(0, 219)
             Me.lblSpecial.Name = "lblSpecial"
             Me.lblSpecial.Size = New Size(115, 23)
@@ -360,7 +360,7 @@ Namespace Forms
             'lblEndAmt
             '
             Me.lblEndAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEndAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblEndAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblEndAmt.Location = New Point(114, 88)
             Me.lblEndAmt.Name = "lblEndAmt"
             Me.lblEndAmt.Size = New Size(114, 23)
@@ -370,7 +370,7 @@ Namespace Forms
             'lblPotion
             '
             Me.lblPotion.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPotion.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPotion.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPotion.Location = New Point(114, 219)
             Me.lblPotion.Name = "lblPotion"
             Me.lblPotion.Size = New Size(114, 23)
@@ -380,7 +380,7 @@ Namespace Forms
             'Label1
             '
             Me.Label1.BorderStyle = BorderStyle.FixedSingle
-            Me.Label1.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New Point(0, 88)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New Size(115, 23)
@@ -391,7 +391,7 @@ Namespace Forms
             'Label4
             '
             Me.Label4.BorderStyle = BorderStyle.FixedSingle
-            Me.Label4.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New Point(0, 439)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New Size(115, 23)
@@ -402,7 +402,7 @@ Namespace Forms
             'lblGoldLoanAmt
             '
             Me.lblGoldLoanAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldLoanAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldLoanAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldLoanAmt.Location = New Point(114, 285)
             Me.lblGoldLoanAmt.Name = "lblGoldLoanAmt"
             Me.lblGoldLoanAmt.Size = New Size(114, 23)
@@ -412,7 +412,7 @@ Namespace Forms
             'lblTwoAmt
             '
             Me.lblTwoAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblTwoAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblTwoAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblTwoAmt.Location = New Point(114, 373)
             Me.lblTwoAmt.Name = "lblTwoAmt"
             Me.lblTwoAmt.Size = New Size(114, 23)
@@ -422,7 +422,7 @@ Namespace Forms
             'lblGoldBankAmt
             '
             Me.lblGoldBankAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldBankAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldBankAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldBankAmt.Location = New Point(114, 263)
             Me.lblGoldBankAmt.Name = "lblGoldBankAmt"
             Me.lblGoldBankAmt.Size = New Size(114, 23)
@@ -432,7 +432,7 @@ Namespace Forms
             'lblBlockingAmt
             '
             Me.lblBlockingAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblBlockingAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblBlockingAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblBlockingAmt.Location = New Point(114, 395)
             Me.lblBlockingAmt.Name = "lblBlockingAmt"
             Me.lblBlockingAmt.Size = New Size(114, 23)
@@ -442,7 +442,7 @@ Namespace Forms
             'lblGoldLoan
             '
             Me.lblGoldLoan.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldLoan.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldLoan.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldLoan.Location = New Point(0, 285)
             Me.lblGoldLoan.Name = "lblGoldLoan"
             Me.lblGoldLoan.Size = New Size(115, 23)
@@ -453,7 +453,7 @@ Namespace Forms
             'lblHeavyAmt
             '
             Me.lblHeavyAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHeavyAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHeavyAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHeavyAmt.Location = New Point(114, 351)
             Me.lblHeavyAmt.Name = "lblHeavyAmt"
             Me.lblHeavyAmt.Size = New Size(114, 23)
@@ -463,7 +463,7 @@ Namespace Forms
             'lblRank
             '
             Me.lblRank.BorderStyle = BorderStyle.FixedSingle
-            Me.lblRank.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblRank.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblRank.Location = New Point(0, 22)
             Me.lblRank.Name = "lblRank"
             Me.lblRank.Size = New Size(228, 23)
@@ -473,7 +473,7 @@ Namespace Forms
             'lblSlippingAmt
             '
             Me.lblSlippingAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSlippingAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSlippingAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblSlippingAmt.Location = New Point(114, 417)
             Me.lblSlippingAmt.Name = "lblSlippingAmt"
             Me.lblSlippingAmt.Size = New Size(114, 23)
@@ -483,7 +483,7 @@ Namespace Forms
             'lblGoldHandAmt
             '
             Me.lblGoldHandAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldHandAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldHandAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldHandAmt.Location = New Point(114, 241)
             Me.lblGoldHandAmt.Name = "lblGoldHandAmt"
             Me.lblGoldHandAmt.Size = New Size(114, 23)
@@ -493,7 +493,7 @@ Namespace Forms
             'lblWeaponSkills
             '
             Me.lblWeaponSkills.BorderStyle = BorderStyle.FixedSingle
-            Me.lblWeaponSkills.Font = New Font("Arial", 9.75!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblWeaponSkills.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.lblWeaponSkills.Location = New Point(0, 307)
             Me.lblWeaponSkills.Name = "lblWeaponSkills"
             Me.lblWeaponSkills.Size = New Size(228, 23)
@@ -504,7 +504,7 @@ Namespace Forms
             'lblExp
             '
             Me.lblExp.BorderStyle = BorderStyle.FixedSingle
-            Me.lblExp.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblExp.Location = New Point(0, 44)
             Me.lblExp.Name = "lblExp"
             Me.lblExp.Size = New Size(115, 23)
@@ -515,7 +515,7 @@ Namespace Forms
             'lblStealthAmt
             '
             Me.lblStealthAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblStealthAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblStealthAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblStealthAmt.Location = New Point(114, 439)
             Me.lblStealthAmt.Name = "lblStealthAmt"
             Me.lblStealthAmt.Size = New Size(114, 23)
@@ -525,7 +525,7 @@ Namespace Forms
             'lblExpAmt
             '
             Me.lblExpAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblExpAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblExpAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblExpAmt.Location = New Point(114, 44)
             Me.lblExpAmt.Name = "lblExpAmt"
             Me.lblExpAmt.Size = New Size(114, 23)
@@ -535,7 +535,7 @@ Namespace Forms
             'lblLightAmt
             '
             Me.lblLightAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLightAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblLightAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblLightAmt.Location = New Point(114, 329)
             Me.lblLightAmt.Name = "lblLightAmt"
             Me.lblLightAmt.Size = New Size(114, 23)
@@ -545,7 +545,7 @@ Namespace Forms
             'lblSkillPts
             '
             Me.lblSkillPts.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSkillPts.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblSkillPts.Location = New Point(0, 66)
             Me.lblSkillPts.Name = "lblSkillPts"
             Me.lblSkillPts.Size = New Size(115, 23)
@@ -556,7 +556,7 @@ Namespace Forms
             'Label3
             '
             Me.Label3.BorderStyle = BorderStyle.FixedSingle
-            Me.Label3.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New Point(0, 110)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New Size(115, 23)
@@ -567,7 +567,7 @@ Namespace Forms
             'lblGoldHand
             '
             Me.lblGoldHand.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldHand.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldHand.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldHand.Location = New Point(0, 241)
             Me.lblGoldHand.Name = "lblGoldHand"
             Me.lblGoldHand.Size = New Size(115, 23)
@@ -578,7 +578,7 @@ Namespace Forms
             'lblHunger
             '
             Me.lblHunger.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHunger.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHunger.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHunger.Location = New Point(114, 110)
             Me.lblHunger.Name = "lblHunger"
             Me.lblHunger.Size = New Size(114, 23)
@@ -588,7 +588,7 @@ Namespace Forms
             'lblSkillPtsAmt
             '
             Me.lblSkillPtsAmt.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSkillPtsAmt.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSkillPtsAmt.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblSkillPtsAmt.Location = New Point(114, 66)
             Me.lblSkillPtsAmt.Name = "lblSkillPtsAmt"
             Me.lblSkillPtsAmt.Size = New Size(114, 23)
@@ -598,7 +598,7 @@ Namespace Forms
             'Label7
             '
             Me.Label7.BorderStyle = BorderStyle.FixedSingle
-            Me.Label7.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.Location = New Point(0, 131)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New Size(115, 23)
@@ -609,7 +609,7 @@ Namespace Forms
             'lblName
             '
             Me.lblName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblName.Font = New Font("Arial", 9.75!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.lblName.Location = New Point(0, 0)
             Me.lblName.Name = "lblName"
             Me.lblName.Size = New Size(228, 23)
@@ -619,7 +619,7 @@ Namespace Forms
             'lblThirst
             '
             Me.lblThirst.BorderStyle = BorderStyle.FixedSingle
-            Me.lblThirst.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblThirst.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblThirst.Location = New Point(114, 131)
             Me.lblThirst.Name = "lblThirst"
             Me.lblThirst.Size = New Size(114, 23)
@@ -629,7 +629,7 @@ Namespace Forms
             'lblGoldBank
             '
             Me.lblGoldBank.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldBank.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblGoldBank.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblGoldBank.Location = New Point(0, 263)
             Me.lblGoldBank.Name = "lblGoldBank"
             Me.lblGoldBank.Size = New Size(115, 23)

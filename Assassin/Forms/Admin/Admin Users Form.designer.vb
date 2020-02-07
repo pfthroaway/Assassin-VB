@@ -127,7 +127,7 @@ Namespace Forms.Admin
             'lblName
             '
             Me.lblName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblName.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblName.Location = New Point(251, 47)
             Me.lblName.Margin = New Padding(4, 0, 4, 0)
             Me.lblName.Name = "lblName"
@@ -139,7 +139,7 @@ Namespace Forms.Admin
             'lblLevel
             '
             Me.lblLevel.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLevel.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblLevel.Location = New Point(251, 305)
             Me.lblLevel.Margin = New Padding(4, 0, 4, 0)
             Me.lblLevel.Name = "lblLevel"
@@ -151,7 +151,7 @@ Namespace Forms.Admin
             'lblMaximumEndurance
             '
             Me.lblMaximumEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.lblMaximumEndurance.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblMaximumEndurance.Location = New Point(251, 485)
             Me.lblMaximumEndurance.Margin = New Padding(4, 0, 4, 0)
             Me.lblMaximumEndurance.Name = "lblMaximumEndurance"
@@ -163,7 +163,7 @@ Namespace Forms.Admin
             'lblCurrentEndurance
             '
             Me.lblCurrentEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.lblCurrentEndurance.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblCurrentEndurance.Location = New Point(251, 455)
             Me.lblCurrentEndurance.Margin = New Padding(4, 0, 4, 0)
             Me.lblCurrentEndurance.Name = "lblCurrentEndurance"
@@ -175,7 +175,7 @@ Namespace Forms.Admin
             'lblSkillPts
             '
             Me.lblSkillPts.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSkillPts.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblSkillPts.Location = New Point(251, 365)
             Me.lblSkillPts.Margin = New Padding(4, 0, 4, 0)
             Me.lblSkillPts.Name = "lblSkillPts"
@@ -187,7 +187,7 @@ Namespace Forms.Admin
             'lblExp
             '
             Me.lblExp.BorderStyle = BorderStyle.FixedSingle
-            Me.lblExp.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblExp.Location = New Point(251, 335)
             Me.lblExp.Margin = New Padding(4, 0, 4, 0)
             Me.lblExp.Name = "lblExp"
@@ -199,7 +199,7 @@ Namespace Forms.Admin
             'lblAlive
             '
             Me.lblAlive.BorderStyle = BorderStyle.FixedSingle
-            Me.lblAlive.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblAlive.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblAlive.Location = New Point(251, 395)
             Me.lblAlive.Margin = New Padding(4, 0, 4, 0)
             Me.lblAlive.Name = "lblAlive"
@@ -211,7 +211,7 @@ Namespace Forms.Admin
             'Label1
             '
             Me.Label1.BorderStyle = BorderStyle.FixedSingle
-            Me.Label1.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New Point(882, 167)
             Me.Label1.Margin = New Padding(4, 0, 4, 0)
             Me.Label1.Name = "Label1"
@@ -223,7 +223,7 @@ Namespace Forms.Admin
             'lblHenchmenLevel1
             '
             Me.lblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel1.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHenchmenLevel1.Location = New Point(882, 424)
             Me.lblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
             Me.lblHenchmenLevel1.Name = "lblHenchmenLevel1"
@@ -235,7 +235,7 @@ Namespace Forms.Admin
             'Label3
             '
             Me.Label3.BorderStyle = BorderStyle.FixedSingle
-            Me.Label3.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label3.Location = New Point(882, 197)
             Me.Label3.Margin = New Padding(4, 0, 4, 0)
             Me.Label3.Name = "Label3"
@@ -247,7 +247,7 @@ Namespace Forms.Admin
             'Label4
             '
             Me.Label4.BorderStyle = BorderStyle.FixedSingle
-            Me.Label4.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label4.Location = New Point(567, 47)
             Me.Label4.Margin = New Padding(4, 0, 4, 0)
             Me.Label4.Name = "Label4"
@@ -259,7 +259,7 @@ Namespace Forms.Admin
             'lblLocation
             '
             Me.lblLocation.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLocation.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblLocation.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblLocation.Location = New Point(251, 425)
             Me.lblLocation.Margin = New Padding(4, 0, 4, 0)
             Me.lblLocation.Name = "lblLocation"
@@ -271,7 +271,7 @@ Namespace Forms.Admin
             'txtName
             '
             Me.txtName.Enabled = False
-            Me.txtName.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtName.Location = New Point(384, 48)
             Me.txtName.Margin = New Padding(4)
             Me.txtName.MaxLength = 30
@@ -283,7 +283,7 @@ Namespace Forms.Admin
             'lblHenchmenLevel2
             '
             Me.lblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel2.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHenchmenLevel2.Location = New Point(882, 454)
             Me.lblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
             Me.lblHenchmenLevel2.Name = "lblHenchmenLevel2"
@@ -295,7 +295,7 @@ Namespace Forms.Admin
             'lblHenchmenLevel3
             '
             Me.lblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel3.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHenchmenLevel3.Location = New Point(882, 484)
             Me.lblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
             Me.lblHenchmenLevel3.Name = "lblHenchmenLevel3"
@@ -307,7 +307,7 @@ Namespace Forms.Admin
             'lblHenchmenLevel4
             '
             Me.lblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel4.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHenchmenLevel4.Location = New Point(882, 515)
             Me.lblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
             Me.lblHenchmenLevel4.Name = "lblHenchmenLevel4"
@@ -319,7 +319,7 @@ Namespace Forms.Admin
             'lblHenchmenLevel5
             '
             Me.lblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel5.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblHenchmenLevel5.Location = New Point(882, 545)
             Me.lblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
             Me.lblHenchmenLevel5.Name = "lblHenchmenLevel5"
@@ -331,7 +331,7 @@ Namespace Forms.Admin
             'txtSkillPts
             '
             Me.txtSkillPts.Enabled = False
-            Me.txtSkillPts.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtSkillPts.Location = New Point(384, 366)
             Me.txtSkillPts.Margin = New Padding(4)
             Me.txtSkillPts.MaxLength = 3
@@ -343,7 +343,7 @@ Namespace Forms.Admin
             'txtGoldBank
             '
             Me.txtGoldBank.Enabled = False
-            Me.txtGoldBank.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtGoldBank.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtGoldBank.Location = New Point(699, 288)
             Me.txtGoldBank.Margin = New Padding(4)
             Me.txtGoldBank.MaxLength = 6
@@ -355,7 +355,7 @@ Namespace Forms.Admin
             'txtGoldLoan
             '
             Me.txtGoldLoan.Enabled = False
-            Me.txtGoldLoan.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtGoldLoan.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtGoldLoan.Location = New Point(699, 318)
             Me.txtGoldLoan.Margin = New Padding(4)
             Me.txtGoldLoan.MaxLength = 6
@@ -367,7 +367,7 @@ Namespace Forms.Admin
             'txtCurrentEndurance
             '
             Me.txtCurrentEndurance.Enabled = False
-            Me.txtCurrentEndurance.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtCurrentEndurance.Location = New Point(384, 456)
             Me.txtCurrentEndurance.Margin = New Padding(4)
             Me.txtCurrentEndurance.MaxLength = 4
@@ -379,7 +379,7 @@ Namespace Forms.Admin
             'txtMaximumEndurance
             '
             Me.txtMaximumEndurance.Enabled = False
-            Me.txtMaximumEndurance.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtMaximumEndurance.Location = New Point(384, 486)
             Me.txtMaximumEndurance.Margin = New Padding(4)
             Me.txtMaximumEndurance.MaxLength = 4
@@ -391,7 +391,7 @@ Namespace Forms.Admin
             'txtExp
             '
             Me.txtExp.Enabled = False
-            Me.txtExp.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtExp.Location = New Point(384, 336)
             Me.txtExp.Margin = New Padding(4)
             Me.txtExp.MaxLength = 3
@@ -403,7 +403,7 @@ Namespace Forms.Admin
             'txtLevel
             '
             Me.txtLevel.Enabled = False
-            Me.txtLevel.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtLevel.Location = New Point(384, 306)
             Me.txtLevel.Margin = New Padding(4)
             Me.txtLevel.MaxLength = 2
@@ -415,7 +415,7 @@ Namespace Forms.Admin
             'txtTwoH
             '
             Me.txtTwoH.Enabled = False
-            Me.txtTwoH.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtTwoH.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtTwoH.Location = New Point(1015, 108)
             Me.txtTwoH.Margin = New Padding(4)
             Me.txtTwoH.MaxLength = 2
@@ -427,7 +427,7 @@ Namespace Forms.Admin
             'Label2
             '
             Me.Label2.BorderStyle = BorderStyle.FixedSingle
-            Me.Label2.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label2.Location = New Point(567, 317)
             Me.Label2.Margin = New Padding(4, 0, 4, 0)
             Me.Label2.Name = "Label2"
@@ -439,7 +439,7 @@ Namespace Forms.Admin
             'Label5
             '
             Me.Label5.BorderStyle = BorderStyle.FixedSingle
-            Me.Label5.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label5.Location = New Point(882, 47)
             Me.Label5.Margin = New Padding(4, 0, 4, 0)
             Me.Label5.Name = "Label5"
@@ -451,7 +451,7 @@ Namespace Forms.Admin
             'Label6
             '
             Me.Label6.BorderStyle = BorderStyle.FixedSingle
-            Me.Label6.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label6.Location = New Point(882, 77)
             Me.Label6.Margin = New Padding(4, 0, 4, 0)
             Me.Label6.Name = "Label6"
@@ -463,7 +463,7 @@ Namespace Forms.Admin
             'Label7
             '
             Me.Label7.BorderStyle = BorderStyle.FixedSingle
-            Me.Label7.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label7.Location = New Point(882, 107)
             Me.Label7.Margin = New Padding(4, 0, 4, 0)
             Me.Label7.Name = "Label7"
@@ -475,7 +475,7 @@ Namespace Forms.Admin
             'Label8
             '
             Me.Label8.BorderStyle = BorderStyle.FixedSingle
-            Me.Label8.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label8.Location = New Point(882, 137)
             Me.Label8.Margin = New Padding(4, 0, 4, 0)
             Me.Label8.Name = "Label8"
@@ -487,7 +487,7 @@ Namespace Forms.Admin
             'Label9
             '
             Me.Label9.BorderStyle = BorderStyle.FixedSingle
-            Me.Label9.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label9.Location = New Point(567, 287)
             Me.Label9.Margin = New Padding(4, 0, 4, 0)
             Me.Label9.Name = "Label9"
@@ -499,7 +499,7 @@ Namespace Forms.Admin
             'Label10
             '
             Me.Label10.BorderStyle = BorderStyle.FixedSingle
-            Me.Label10.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label10.Location = New Point(567, 257)
             Me.Label10.Margin = New Padding(4, 0, 4, 0)
             Me.Label10.Name = "Label10"
@@ -511,7 +511,7 @@ Namespace Forms.Admin
             'Label11
             '
             Me.Label11.BorderStyle = BorderStyle.FixedSingle
-            Me.Label11.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label11.Location = New Point(567, 197)
             Me.Label11.Margin = New Padding(4, 0, 4, 0)
             Me.Label11.Name = "Label11"
@@ -523,7 +523,7 @@ Namespace Forms.Admin
             'Label12
             '
             Me.Label12.BorderStyle = BorderStyle.FixedSingle
-            Me.Label12.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label12.Location = New Point(567, 167)
             Me.Label12.Margin = New Padding(4, 0, 4, 0)
             Me.Label12.Name = "Label12"
@@ -535,7 +535,7 @@ Namespace Forms.Admin
             'txtGoldHand
             '
             Me.txtGoldHand.Enabled = False
-            Me.txtGoldHand.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtGoldHand.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtGoldHand.Location = New Point(700, 258)
             Me.txtGoldHand.Margin = New Padding(4)
             Me.txtGoldHand.MaxLength = 6
@@ -547,7 +547,7 @@ Namespace Forms.Admin
             'txtHeavy
             '
             Me.txtHeavy.Enabled = False
-            Me.txtHeavy.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHeavy.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHeavy.Location = New Point(1015, 78)
             Me.txtHeavy.Margin = New Padding(4)
             Me.txtHeavy.MaxLength = 2
@@ -559,7 +559,7 @@ Namespace Forms.Admin
             'txtLight
             '
             Me.txtLight.Enabled = False
-            Me.txtLight.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLight.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtLight.Location = New Point(1015, 48)
             Me.txtLight.Margin = New Padding(4)
             Me.txtLight.MaxLength = 2
@@ -571,7 +571,7 @@ Namespace Forms.Admin
             'txtBlocking
             '
             Me.txtBlocking.Enabled = False
-            Me.txtBlocking.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtBlocking.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtBlocking.Location = New Point(1015, 138)
             Me.txtBlocking.Margin = New Padding(4)
             Me.txtBlocking.MaxLength = 2
@@ -583,7 +583,7 @@ Namespace Forms.Admin
             'txtHenchmenLevel5
             '
             Me.txtHenchmenLevel5.Enabled = False
-            Me.txtHenchmenLevel5.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHenchmenLevel5.Location = New Point(1015, 546)
             Me.txtHenchmenLevel5.Margin = New Padding(4)
             Me.txtHenchmenLevel5.MaxLength = 3
@@ -595,7 +595,7 @@ Namespace Forms.Admin
             'txtHenchmenLevel4
             '
             Me.txtHenchmenLevel4.Enabled = False
-            Me.txtHenchmenLevel4.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHenchmenLevel4.Location = New Point(1015, 516)
             Me.txtHenchmenLevel4.Margin = New Padding(4)
             Me.txtHenchmenLevel4.MaxLength = 3
@@ -607,7 +607,7 @@ Namespace Forms.Admin
             'txtHenchmenLevel3
             '
             Me.txtHenchmenLevel3.Enabled = False
-            Me.txtHenchmenLevel3.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHenchmenLevel3.Location = New Point(1015, 485)
             Me.txtHenchmenLevel3.Margin = New Padding(4)
             Me.txtHenchmenLevel3.MaxLength = 3
@@ -619,7 +619,7 @@ Namespace Forms.Admin
             'txtHenchmenLevel2
             '
             Me.txtHenchmenLevel2.Enabled = False
-            Me.txtHenchmenLevel2.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHenchmenLevel2.Location = New Point(1015, 455)
             Me.txtHenchmenLevel2.Margin = New Padding(4)
             Me.txtHenchmenLevel2.MaxLength = 3
@@ -631,7 +631,7 @@ Namespace Forms.Admin
             'txtHenchmenLevel1
             '
             Me.txtHenchmenLevel1.Enabled = False
-            Me.txtHenchmenLevel1.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHenchmenLevel1.Location = New Point(1015, 425)
             Me.txtHenchmenLevel1.Margin = New Padding(4)
             Me.txtHenchmenLevel1.MaxLength = 3
@@ -643,7 +643,7 @@ Namespace Forms.Admin
             'txtStealth
             '
             Me.txtStealth.Enabled = False
-            Me.txtStealth.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtStealth.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtStealth.Location = New Point(1015, 198)
             Me.txtStealth.Margin = New Padding(4)
             Me.txtStealth.MaxLength = 2
@@ -655,7 +655,7 @@ Namespace Forms.Admin
             'txtSlipping
             '
             Me.txtSlipping.Enabled = False
-            Me.txtSlipping.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtSlipping.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtSlipping.Location = New Point(1015, 168)
             Me.txtSlipping.Margin = New Padding(4)
             Me.txtSlipping.MaxLength = 2
@@ -714,7 +714,7 @@ Namespace Forms.Admin
             'lblPass
             '
             Me.lblPass.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPass.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblPass.Location = New Point(251, 77)
             Me.lblPass.Margin = New Padding(4, 0, 4, 0)
             Me.lblPass.Name = "lblPass"
@@ -726,7 +726,7 @@ Namespace Forms.Admin
             'txtChangePass
             '
             Me.txtChangePass.Enabled = False
-            Me.txtChangePass.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtChangePass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtChangePass.Location = New Point(384, 78)
             Me.txtChangePass.Margin = New Padding(4)
             Me.txtChangePass.MaxLength = 16
@@ -739,7 +739,7 @@ Namespace Forms.Admin
             'Label14
             '
             Me.Label14.BorderStyle = BorderStyle.FixedSingle
-            Me.Label14.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label14.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label14.Location = New Point(567, 77)
             Me.Label14.Margin = New Padding(4, 0, 4, 0)
             Me.Label14.Name = "Label14"
@@ -752,7 +752,7 @@ Namespace Forms.Admin
             'Label15
             '
             Me.Label15.BorderStyle = BorderStyle.FixedSingle
-            Me.Label15.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label15.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label15.Location = New Point(567, 107)
             Me.Label15.Margin = New Padding(4, 0, 4, 0)
             Me.Label15.Name = "Label15"
@@ -764,7 +764,7 @@ Namespace Forms.Admin
             'Label16
             '
             Me.Label16.BorderStyle = BorderStyle.FixedSingle
-            Me.Label16.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label16.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label16.Location = New Point(567, 137)
             Me.Label16.Margin = New Padding(4, 0, 4, 0)
             Me.Label16.Name = "Label16"
@@ -788,7 +788,7 @@ Namespace Forms.Admin
             'Label18
             '
             Me.Label18.BorderStyle = BorderStyle.FixedSingle
-            Me.Label18.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label18.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label18.Location = New Point(567, 227)
             Me.Label18.Margin = New Padding(4, 0, 4, 0)
             Me.Label18.Name = "Label18"
@@ -800,7 +800,7 @@ Namespace Forms.Admin
             'txtLockpicks
             '
             Me.txtLockpicks.Enabled = False
-            Me.txtLockpicks.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtLockpicks.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtLockpicks.Location = New Point(700, 228)
             Me.txtLockpicks.Margin = New Padding(4)
             Me.txtLockpicks.MaxLength = 2
@@ -812,7 +812,7 @@ Namespace Forms.Admin
             'Label17
             '
             Me.Label17.BorderStyle = BorderStyle.FixedSingle
-            Me.Label17.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label17.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label17.Location = New Point(251, 107)
             Me.Label17.Margin = New Padding(4, 0, 4, 0)
             Me.Label17.Name = "Label17"
@@ -824,7 +824,7 @@ Namespace Forms.Admin
             'txtConfPass
             '
             Me.txtConfPass.Enabled = False
-            Me.txtConfPass.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtConfPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtConfPass.Location = New Point(384, 108)
             Me.txtConfPass.Margin = New Padding(4)
             Me.txtConfPass.MaxLength = 16
@@ -885,7 +885,7 @@ Namespace Forms.Admin
             'Label23
             '
             Me.Label23.BorderStyle = BorderStyle.FixedSingle
-            Me.Label23.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label23.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label23.Location = New Point(251, 515)
             Me.Label23.Margin = New Padding(4, 0, 4, 0)
             Me.Label23.Name = "Label23"
@@ -897,7 +897,7 @@ Namespace Forms.Admin
             'txtHunger
             '
             Me.txtHunger.Enabled = False
-            Me.txtHunger.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtHunger.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtHunger.Location = New Point(384, 516)
             Me.txtHunger.Margin = New Padding(4)
             Me.txtHunger.MaxLength = 2
@@ -909,7 +909,7 @@ Namespace Forms.Admin
             'Label24
             '
             Me.Label24.BorderStyle = BorderStyle.FixedSingle
-            Me.Label24.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Label24.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Label24.Location = New Point(251, 545)
             Me.Label24.Margin = New Padding(4, 0, 4, 0)
             Me.Label24.Name = "Label24"
@@ -921,7 +921,7 @@ Namespace Forms.Admin
             'txtThirst
             '
             Me.txtThirst.Enabled = False
-            Me.txtThirst.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.txtThirst.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.txtThirst.Location = New Point(384, 546)
             Me.txtThirst.Margin = New Padding(4)
             Me.txtThirst.MaxLength = 2
@@ -958,7 +958,7 @@ Namespace Forms.Admin
             '
             Me.cmbCurrWeapon.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbCurrWeapon.Enabled = False
-            Me.cmbCurrWeapon.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbCurrWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbCurrWeapon.FormattingEnabled = True
             Me.cmbCurrWeapon.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
             Me.cmbCurrWeapon.Location = New Point(699, 47)
@@ -969,7 +969,7 @@ Namespace Forms.Admin
             'cmbLoc
             '
             Me.cmbLoc.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbLoc.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbLoc.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbLoc.FormattingEnabled = True
             Me.cmbLoc.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
             Me.cmbLoc.Location = New Point(383, 425)
@@ -981,7 +981,7 @@ Namespace Forms.Admin
             '
             Me.cmbLightWeapon.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbLightWeapon.Enabled = False
-            Me.cmbLightWeapon.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbLightWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbLightWeapon.FormattingEnabled = True
             Me.cmbLightWeapon.Location = New Point(699, 77)
             Me.cmbLightWeapon.Name = "cmbLightWeapon"
@@ -992,7 +992,7 @@ Namespace Forms.Admin
             '
             Me.cmbHeavyWeapon.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbHeavyWeapon.Enabled = False
-            Me.cmbHeavyWeapon.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbHeavyWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbHeavyWeapon.FormattingEnabled = True
             Me.cmbHeavyWeapon.Location = New Point(699, 108)
             Me.cmbHeavyWeapon.Name = "cmbHeavyWeapon"
@@ -1003,7 +1003,7 @@ Namespace Forms.Admin
             '
             Me.cmbTwoHWeapon.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbTwoHWeapon.Enabled = False
-            Me.cmbTwoHWeapon.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbTwoHWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbTwoHWeapon.FormattingEnabled = True
             Me.cmbTwoHWeapon.Location = New Point(699, 138)
             Me.cmbTwoHWeapon.Name = "cmbTwoHWeapon"
@@ -1014,7 +1014,7 @@ Namespace Forms.Admin
             '
             Me.cmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbArmor.Enabled = False
-            Me.cmbArmor.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbArmor.FormattingEnabled = True
             Me.cmbArmor.Location = New Point(699, 168)
             Me.cmbArmor.Name = "cmbArmor"
@@ -1025,7 +1025,7 @@ Namespace Forms.Admin
             '
             Me.cmbPotion.DropDownStyle = ComboBoxStyle.DropDownList
             Me.cmbPotion.Enabled = False
-            Me.cmbPotion.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.cmbPotion.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.cmbPotion.FormattingEnabled = True
             Me.cmbPotion.Location = New Point(699, 198)
             Me.cmbPotion.Name = "cmbPotion"
@@ -1047,7 +1047,7 @@ Namespace Forms.Admin
             'lblShovel
             '
             Me.lblShovel.BorderStyle = BorderStyle.FixedSingle
-            Me.lblShovel.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblShovel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblShovel.Location = New Point(567, 347)
             Me.lblShovel.Margin = New Padding(4, 0, 4, 0)
             Me.lblShovel.Name = "lblShovel"
@@ -1071,7 +1071,7 @@ Namespace Forms.Admin
             'lblLantern
             '
             Me.lblLantern.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLantern.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblLantern.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblLantern.Location = New Point(567, 377)
             Me.lblLantern.Margin = New Padding(4, 0, 4, 0)
             Me.lblLantern.Name = "lblLantern"
@@ -1095,7 +1095,7 @@ Namespace Forms.Admin
             'lblAmulet
             '
             Me.lblAmulet.BorderStyle = BorderStyle.FixedSingle
-            Me.lblAmulet.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.lblAmulet.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.lblAmulet.Location = New Point(567, 407)
             Me.lblAmulet.Margin = New Padding(4, 0, 4, 0)
             Me.lblAmulet.Name = "lblAmulet"

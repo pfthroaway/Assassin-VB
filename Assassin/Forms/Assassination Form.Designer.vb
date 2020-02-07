@@ -92,7 +92,7 @@ Namespace Forms
             Me.Controls.Add(Me.btnNewVictim)
             Me.Controls.Add(Me.btnAssassinate)
             Me.Controls.Add(Me.txtAssassinate)
-            Me.Font = New Font("Arial", 9.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(3, 4, 3, 4)
             Me.MaximizeBox = False
             Me.MaximumSize = New Size(348, 288)
