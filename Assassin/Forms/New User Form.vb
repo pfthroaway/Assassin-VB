@@ -146,28 +146,29 @@ Namespace Forms
 
         Private Async Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
             Dim username As String = TxtName.Text
-            Dim newUser As New User
 
             If TxtPass.Text = TxtConfirm.Text Then
-                If Await LoadUser(username) <> New User() OrElse username = "Computer" Then
+                If AllUsers.Exists(Function(user As User) user.Name = username) OrElse username = "Computer" Then
                     MessageBox.Show("This username has already been used.", "Assassin", MessageBoxButtons.OK)
                 Else
-                    newUser.Name = TxtName.Text
-                    newUser.Password = Argon2.HashPassword(TxtPass.Text)
-                    newUser.CurrentEndurance = _maxEnd
-                    newUser.MaximumEndurance = _maxEnd
-                    newUser.LightWeaponSkill = _light
-                    newUser.HeavyWeaponSkill = _heavy
-                    newUser.TwoHandedWeaponSkill = _twoH
-                    newUser.Blocking = _blocking
-                    newUser.Slipping = _slipping
-                    newUser.Stealth = _stealth
-                    newUser.SkillPoints = _skillPts
+                    Dim newUser As New User With {
+                        .Name = username,
+                        .Password = Argon2.HashPassword(TxtPass.Text),
+                        .CurrentEndurance = _maxEnd,
+                        .MaximumEndurance = _maxEnd,
+                        .LightWeaponSkill = _light,
+                        .HeavyWeaponSkill = _heavy,
+                        .TwoHandedWeaponSkill = _twoH,
+                        .Blocking = _blocking,
+                        .Slipping = _slipping,
+                        .Stealth = _stealth,
+                        .SkillPoints = _skillPts
+                    }
                     Await GameState.NewUser(newUser)
                     Await MemberJoinsGuild(newUser, AllGuilds(0))
 
                     FrmGame.Show()
-                    FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}! {ControlChars.NewLine + ControlChars.NewLine}You enter the city of thieves to take your place among the legends!"
+                    FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}!{ControlChars.NewLine}{ControlChars.NewLine}You enter the city of thieves to take your place among the legends!"
                     FrmGame.Display()
                     _blnStart = True
                     Close()

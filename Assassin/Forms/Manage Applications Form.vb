@@ -45,7 +45,7 @@ Namespace Forms
         ''' <summary>Gets all applicants for the current <see cref="Guild"/>.</summary>
         Public Async Function GetApplicants() As Task
             Clear()
-            Dim applicants As List(Of String) = Await LoadGuildApplicants(CurrentGuild)
+            Dim applicants As List(Of String) = Await GameState.DatabaseInteraction.LoadGuildApplicants(CurrentGuild)
 
             If applicants.Count > 0 Then
                 For Each applicant As Integer In applicants
@@ -68,9 +68,9 @@ Namespace Forms
             Deny()
         End Sub
 
-        Private Async Sub LstApplications_SelectedIndexChangedAsync(sender As Object, e As EventArgs) Handles LstApplications.SelectedIndexChanged
+        Private Sub LstApplications_SelectedIndexChangedAsync(sender As Object, e As EventArgs) Handles LstApplications.SelectedIndexChanged
             If LstApplications.SelectedIndex >= 0 Then
-                _applicant = Await LoadUser(LstApplications.SelectedItem.ToString)
+                _applicant = AllUsers.Find(Function(user) user.Name = LstApplications.SelectedItem.ToString)
                 BtnConfirm.Enabled = True
                 BtnDeny.Enabled = True
             Else

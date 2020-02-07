@@ -96,22 +96,27 @@ Namespace Forms
 #Region "Click"
 
         Private Sub BtnFreedom_Click(sender As Object, e As EventArgs) Handles BtnFreedom.Click
-            AddText("You beat a hasty retreat and return to the streets.")
-            _blnFinished = True
+            If CurrentUser.CurrentLocation <> SleepLocation.Jail Then
+                AddText("You beat a hasty retreat and return to the streets.")
+                _blnFinished = True
+            End If
             Close()
         End Sub
 
-        Private Sub BtnJail_Click(sender As Object, e As EventArgs) Handles BtnJail.Click
-            If CurrentUser.GoldOnHand < _fine Then
-                AddText("You don't have the money required to pay the fine.")
-            Else
-                AddText("You decide it is best to spend the night in jail.")
+        Private Async Sub BtnJail_Click(sender As Object, e As EventArgs) Handles BtnJail.Click
+            AddText(If(CurrentUser.GoldOnHand < _fine, "You don't have the money required to pay the fine.", "You decide it is best to spend the night in jail."))
+            FrmGame.ToggleButtons(False)
+            Dim jailedUser As New JailedUser(CurrentUser.Name, Reason, _fine, Date.UtcNow)
+            If Await DatabaseInteraction.SendToJail(jailedUser) Then
+                BtnPayFine.Enabled = False
+                BtnJail.Enabled = False
+                CurrentUser.CurrentLocation = SleepLocation.Jail
+                AllJailedUsers.Add(jailedUser)
+                _blnFinished = True
+                BtnFreedom.Enabled = True
+                BtnFreedom.Text = "&Back"
             End If
-            FrmGame.DisableButtons()
-            FrmGame.BtnJail.Enabled = True
-            CurrentUser.CurrentLocation = SleepLocation.Jail
-            _blnFinished = True
-            Close()
+
         End Sub
 
         Private Sub BtnPayFine_Click(sender As Object, e As EventArgs) Handles BtnPayFine.Click
@@ -132,6 +137,9 @@ Namespace Forms
                 FrmGame.Show()
                 FrmGame.Display()
                 FrmGame.AddText(TxtCourt.Text)
+                If CurrentUser.CurrentLocation = SleepLocation.Jail Then
+                    FrmGame.CheckJailed()
+                End If
                 Await SaveUser(CurrentUser)
             Else
                 MessageBox.Show("You must make a decision first.", "Assassin", MessageBoxButtons.OK)

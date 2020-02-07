@@ -17,6 +17,8 @@ Imports Extensions
 Namespace Forms
 
     Public Class FrmGame
+        Dim jailTimeSpan As TimeSpan
+        Dim jailedUser As JailedUser
 
         ''' <summary>Adds text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
@@ -55,52 +57,23 @@ Namespace Forms
         End Sub
 
         ''' <summary>Checks whether a jailed user has served their time.</summary>
-        Private Sub CheckJailed()
-            'TODO Fix Check Jail Game Form
+        Public Async Sub CheckJailed()
+            jailedUser = AllJailedUsers.Find(Function(user) user.Name = CurrentUser.Name)
+            jailTimeSpan = Date.UtcNow - jailedUser.DateJailed
+            If jailTimeSpan.Seconds >= jailedUser.Fine \ 10 Then
+                AddText($"You awaken in a jail cell. A guard looms over you.{ControlChars.NewLine}He barks at you, ""You're free to go!""{ControlChars.NewLine}You briskly leave the jail.")
+                Await DatabaseInteraction.FreeFromJail(jailedUser)
+                CurrentUser.CurrentLocation = SleepLocation.Streets
+                ToggleButtons(True)
 
-            '_sql = "SELECT * FROM Jail WHERE Username='" & CurrentUser.Name & "'"
-            '_table = "Jail"
-            'Ds = Await .FillDs(_sql, _table)
+                Display()
 
-            'Dim dateJailed As DateTime
-            'DateTime.TryParse(Ds.Tables(0).Rows(0).Item("DateJailed").ToString, dateJailed)
-            'Dim ts As TimeSpan = Today - dateJailed
-            'If ts.Days >= 1 Then
-            '    _sql = "SELECT * FROM Jail WHERE Username='" & CurrentUser.Name & "'"
-            '    .DeleteRecord(_sql, _table, Ds)
-            '    AddText("You awaken in a jail cell. A guard looms over you. He barks at you, " & Chr(34) & "You're free to go!" & Chr(34) &
-            '            " You briskly leave the jail.")
-
-            '    CurrentUser.CurrentLocation = SleepLocation.Streets
-            '    EnableButtons()
-
-            '    Display()
-
-            '    SaveUser(CurrentUser)
-            'Else
-            '    DisableButtons()
-            '    BtnJail.Enabled = True
-            '    AddText("You awaken in a jail cell. You have not yet finished your sentence.")
-            'End If
-        End Sub
-
-        ''' <summary>Disables the buttons if a user goes to jail.</summary>
-        Public Sub DisableButtons()
-            BtnAssassinate.Enabled = False
-            BtnBank.Enabled = False
-            BtnChapel.Enabled = False
-            BtnGuild.Enabled = False
-            BtnInn.Enabled = False
-            BtnInventory.Enabled = False
-            BtnJail.Enabled = False
-            BtnMessages.Enabled = False
-            BtnMystic.Enabled = False
-            BtnOptions.Enabled = False
-            BtnOthers.Enabled = False
-            BtnPub.Enabled = False
-            BtnRob.Enabled = False
-            BtnShops.Enabled = False
-            BtnTrain.Enabled = False
+                Await SaveUser(CurrentUser)
+            Else
+                ToggleButtons(False)
+                AddText($"You awaken in a jail cell. You have not yet finished your sentence. You have {jailedUser.Fine \ 10 - jailTimeSpan.Seconds} seconds remaining.")
+                Timer1.Start()
+            End If
         End Sub
 
         ''' <summary>Displays all the statistics of the character.</summary>
@@ -140,21 +113,24 @@ Namespace Forms
             lblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
         End Sub
 
-        ''' <summary>Enables the buttons if a user exits jail.</summary>
-        Private Sub EnableButtons()
-            BtnAssassinate.Enabled = True
-            BtnBank.Enabled = True
-            BtnChapel.Enabled = True
-            BtnGuild.Enabled = True
-            BtnInn.Enabled = True
-            BtnInventory.Enabled = True
-            BtnJail.Enabled = True
-            BtnMystic.Enabled = True
-            BtnOthers.Enabled = True
-            BtnPub.Enabled = True
-            BtnRob.Enabled = True
-            BtnShops.Enabled = True
-            BtnTrain.Enabled = True
+        ''' <summary>Toggles all the Buttons on the Form.</summary>
+        ''' <param name="enabled">Should the Buttons be enabled?</param>
+        Public Sub ToggleButtons(enabled As Boolean)
+            BtnAssassinate.Enabled = enabled
+            BtnBank.Enabled = enabled
+            BtnChapel.Enabled = enabled
+            BtnGuild.Enabled = enabled
+            BtnInn.Enabled = enabled
+            BtnInventory.Enabled = enabled
+            BtnJail.Enabled = enabled
+            BtnMessages.Enabled = enabled
+            BtnMystic.Enabled = enabled
+            BtnOptions.Enabled = enabled
+            BtnOthers.Enabled = enabled
+            BtnPub.Enabled = enabled
+            BtnRob.Enabled = enabled
+            BtnShops.Enabled = enabled
+            BtnTrain.Enabled = enabled
         End Sub
 
 #Region "Click"
@@ -223,10 +199,10 @@ Namespace Forms
             Hide()
         End Sub
 
-        Private Async Sub BtnOthers_Click(sender As Object, e As EventArgs) Handles BtnOthers.Click
+        Private Sub BtnOthers_Click(sender As Object, e As EventArgs) Handles BtnOthers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Streets"
-            Await FrmMembers.LoadMembers()
+            FrmMembers.LoadMembers()
             Hide()
         End Sub
 
@@ -254,10 +230,22 @@ Namespace Forms
 
 #End Region
 
+#Region "Form Manipulation"
+
+        Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+            jailTimeSpan = Date.UtcNow - jailedUser.DateJailed
+            If jailTimeSpan.Seconds >= jailedUser.Fine \ 10 Then
+                CheckJailed()
+                Timer1.Stop()
+            End If
+        End Sub
+
         Private Async Sub FrmGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             Await SaveUser(CurrentUser)
             FrmMain.Show()
         End Sub
+
+#End Region
 
     End Class
 

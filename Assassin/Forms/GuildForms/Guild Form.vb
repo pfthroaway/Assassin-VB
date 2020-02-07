@@ -122,10 +122,10 @@ Namespace Forms.GuildForms
             Hide()
         End Sub
 
-        Private Async Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
+        Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Guild"
-            Await FrmMembers.LoadMembers()
+            FrmMembers.LoadMembers()
             Hide()
         End Sub
 
@@ -148,7 +148,7 @@ Namespace Forms.GuildForms
             CurrentUser.CurrentLocation = SleepLocation.Guild
             Await SaveUser(CurrentUser)
             DisableButtons()
-            FrmGame.DisableButtons()
+            FrmGame.ToggleButtons(False)
             AddText("You find an empty room and sleep.")
         End Sub
 

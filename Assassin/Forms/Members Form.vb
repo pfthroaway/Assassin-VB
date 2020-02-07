@@ -17,7 +17,6 @@ Imports Assassin.Forms.GuildForms
 Namespace Forms
 
     Public Class FrmMembers
-        Dim allUsers As List(Of User)
         Dim selectedUser As User
         Public loc As String            'location
 
@@ -29,7 +28,7 @@ Namespace Forms
         End Sub
 
         ''' <summary>Loads members of the current <see cref="Guild"/>.</summary>
-        Public Async Function LoadMembers() As Task
+        Public Function LoadMembers() As Task
             LstMembers.Items.Clear()
 
             If loc = "Manage" OrElse loc = "Guild" Then
@@ -45,8 +44,7 @@ Namespace Forms
             ElseIf loc = "Streets" Then
                 BtnAttack.Show()
                 lblName.Text = "All Players"
-                allUsers = Await LoadUsers()
-                For Each user As User In allUsers
+                For Each user As User In AllUsers
                     LstMembers.Items.Add(user.Name)
                 Next
             End If
@@ -77,7 +75,7 @@ Namespace Forms
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged
             If LstMembers.SelectedIndex >= 0 Then
                 If LstMembers.SelectedItem.ToString <> CurrentUser.Name Then
-                    selectedUser = allUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString)
+                    selectedUser = AllUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString)
                     BtnMessage.Enabled = True
                     BtnExpel.Enabled = True
                     If loc = "Streets" Then

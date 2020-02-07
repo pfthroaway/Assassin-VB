@@ -49,10 +49,10 @@ Namespace Forms.GuildForms
             Hide()
         End Sub
 
-        Private Async Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
+        Private Sub BtnMembers_Click(sender As Object, e As EventArgs) Handles BtnMembers.Click
             FrmMembers.Show()
             FrmMembers.loc = "Manage"
-            Await FrmMembers.LoadMembers()
+            FrmMembers.LoadMembers()
             Hide()
         End Sub
 

@@ -131,6 +131,7 @@
     <Compile Include="AppData.vb" />
     <Compile Include="Classes\Database\IDatabaseInteraction.vb" />
     <Compile Include="Classes\Database\SQLiteDatabaseInteraction.vb" />
+    <Compile Include="Classes\Entities\JailedUser.vb" />
     <Compile Include="Classes\Entities\LivingEntity.vb" />
     <Compile Include="Classes\Enums\Crime.vb" />
     <Compile Include="Classes\Enums\SleepLocation.vb" />

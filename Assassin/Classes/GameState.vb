@@ -21,7 +21,8 @@ Namespace Classes
         Friend CurrentUser As New User
         Friend CurrentEnemy As New Enemy
         Friend CurrentGuild As New Guild
-        ReadOnly DatabaseInteraction As New SQLiteDatabaseInteraction
+        Friend AllJailedUsers As List(Of JailedUser)
+        Public ReadOnly DatabaseInteraction As New SQLiteDatabaseInteraction
 
 #Region "Control Manipulation"
 
@@ -244,15 +245,16 @@ Namespace Classes
         Public Async Function LoadAll() As Task
             FileManagement()
             AdminPassword = Await LoadAdminPasssword()
-            AllArmor = Await LoadArmor()
-            AllGuilds = Await LoadGuilds()
-            AllFood = Await LoadFood()
-            AllDrinks = Await LoadDrinks()
-            AllPotions = Await LoadPotions()
-            AllRanks = Await LoadRanks()
-            AllWeapons = Await LoadWeapons()
-            AllEnemies = Await LoadEnemies()
-            AllUsers = Await LoadUsers()
+            AllArmor = Await DatabaseInteraction.LoadArmor()
+            AllGuilds = Await DatabaseInteraction.LoadGuilds()
+            AllFood = Await DatabaseInteraction.LoadFood()
+            AllDrinks = Await DatabaseInteraction.LoadDrinks()
+            AllPotions = Await DatabaseInteraction.LoadPotions()
+            AllRanks = Await DatabaseInteraction.LoadRanks()
+            AllWeapons = Await DatabaseInteraction.LoadWeapons()
+            AllEnemies = Await DatabaseInteraction.LoadEnemies()
+            AllUsers = Await DatabaseInteraction.LoadUsers()
+            AllJailedUsers = Await DatabaseInteraction.LoadJailedUsers()
             AllArmor = AllArmor.OrderBy(Function(obj) obj.Value).ToList()
             AllGuilds = AllGuilds.OrderBy(Function(obj) obj.ID).ToList()
             AllFood = AllFood.OrderBy(Function(obj) obj.Value).ToList()
@@ -260,78 +262,6 @@ Namespace Classes
             AllPotions = AllPotions.OrderBy(Function(obj) obj.Value).ToList()
             AllWeapons = AllWeapons.OrderBy(Function(obj) obj.Value).ToList()
             AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level).ToList()
-        End Function
-
-        '''<summary>Loads all Armor from the database.</summary>
-        ''' <returns>All Armor</returns>
-        Public Async Function LoadArmor() As Task(Of List(Of Armor))
-            Return Await DatabaseInteraction.LoadArmor()
-        End Function
-
-        ''' <summary>Loads all Enemies from the database.</summary>
-        ''' <returns>All Enemies</returns>
-        Public Async Function LoadEnemies() As Task(Of List(Of Enemy))
-            Return Await DatabaseInteraction.LoadEnemies()
-        End Function
-
-        ''' <summary>Loads all <see cref="Guild"/>s from the database.</summary>
-        ''' <returns>All <see cref="Guild"/>s</returns>
-        Public Async Function LoadGuilds() As Task(Of List(Of Guild))
-            Return Await DatabaseInteraction.LoadGuilds()
-        End Function
-
-        ''' <summary>Loads all applicants for a selected <see cref="Guild"/>.</summary>
-        ''' <param name="currentGuild"><see cref="Guild"/> whose applicants are to be loaded</param>
-        ''' <returns>All applicants for a selected <see cref="Guild"/></returns>
-        Public Async Function LoadGuildApplicants(currentGuild As Guild) As Task(Of List(Of String))
-            Return Await DatabaseInteraction.LoadGuildApplicants(currentGuild)
-        End Function
-
-        Public Async Function LoadMessages(loadUser As User) As Task(Of List(Of Message))
-            Return Await DatabaseInteraction.LoadMessages(loadUser)
-        End Function
-
-        ''' <summary>Loads all <see cref="Food"/> from the database.</summary>
-        ''' <returns>All <see cref="Food"/></returns>
-        Public Async Function LoadFood() As Task(Of List(Of Food))
-            Return Await DatabaseInteraction.LoadFood()
-        End Function
-
-        ''' <summary> Loads all <see cref="Drink"/>s from the database.</summary>
-        ''' <returns>All <see cref="Drink"/>s</returns>
-        Public Async Function LoadDrinks() As Task(Of List(Of Drink))
-            Return Await DatabaseInteraction.LoadDrinks()
-        End Function
-
-        ''' <summary>Loads all <see cref="Potion"/>s from the database.</summary>
-        ''' <returns>All <see cref="Potion"/>s</returns>
-        Public Async Function LoadPotions() As Task(Of List(Of Potion))
-            Return Await DatabaseInteraction.LoadPotions()
-        End Function
-
-        ''' <summary>Loads all Ranks from the database.</summary>
-        ''' <returns>All Ranks</returns>
-        Public Async Function LoadRanks() As Task(Of List(Of String))
-            Return Await DatabaseInteraction.LoadRanks()
-        End Function
-
-        ''' <summary>Loads a <see cref="User"/> from the database.</summary>
-        ''' <param name="name"><see cref="User"/> to be loaded</param>
-        ''' <returns><see cref="User"/></returns>
-        Public Async Function LoadUser(name As String) As Task(Of User)
-            Return Await DatabaseInteraction.LoadUser(name)
-        End Function
-
-        ''' <summary>Loads all <see cref="User"/>s from the database.</summary>
-        ''' <returns>All <see cref="User"/>s</returns>
-        Public Async Function LoadUsers() As Task(Of List(Of User))
-            Return Await DatabaseInteraction.LoadUsers()
-        End Function
-
-        ''' <summary>Loads all <see cref="Weapon"/>s from the database.</summary>
-        ''' <returns>All <see cref="Weapon"/>s</returns>
-        Public Async Function LoadWeapons() As Task(Of List(Of Weapon))
-            Return Await DatabaseInteraction.LoadWeapons()
         End Function
 
 #End Region

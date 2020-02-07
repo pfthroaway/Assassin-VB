@@ -15,27 +15,16 @@ Imports Assassin.Classes.Enums
 Namespace Forms
 
     Public Class FrmJail
-        Dim _jailedUsers As List(Of User)
-        Dim _username As String                  'selected username
-        Dim _reason As String                    'reason jailed
-        Dim _fine As Integer                     'fine
+        Dim _selectedJailedUser As JailedUser
 
         ''' <summary>Displays all the users currently in jail.</summary>
-        Public Sub Display()
+        Public Sub Clear()
             LstJailed.Items.Clear()
             LstJailed.ClearSelected()
             lblFine.Text = ""
             lblReason.Text = ""
 
-            _jailedUsers = AllUsers.Where(Function(user) user.CurrentLocation = SleepLocation.Jail).ToList()
-
-            For Each user As User In _jailedUsers
-                If user.CurrentLocation <> SleepLocation.Jail Then
-                    _jailedUsers.Remove(user)
-                End If
-            Next
-
-            For Each user As User In _jailedUsers
+            For Each user As JailedUser In AllJailedUsers
                 LstJailed.Items.Add(user.Name)
             Next
 
@@ -43,55 +32,28 @@ Namespace Forms
         End Sub
 
         Private Sub LstJailed_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJailed.SelectedIndexChanged
-            'If LstJailed.SelectedIndex >= 0 Then
-            '    _username = LstJailed.SelectedItem.ToString
-            '    _ds.Clear()
-            '    _sql = "SELECT * FROM Jail WHERE Username='" & _username & "'"
-            '    _table = "Jail"
-
-            '    _reason = _ds.Tables(0).Rows(0).Item("Reason").ToString
-            '    Integer.TryParse(_ds.Tables(0).Rows(0).Item("Fine").ToString, _fine)
-
-            '    lblReason.Text = _reason
-            '    lblFine.Text = _fine.ToString
-
-            '    If CurrentUser.GoldOnHand >= _fine Then
-            '        BtnBailOut.Enabled = True
-            '    Else
-            '        BtnBailOut.Enabled = False
-            '    End If
-            'End If
+            If LstJailed.SelectedIndex >= 0 Then
+                _selectedJailedUser = AllJailedUsers.Find(Function(user) user.Name = LstJailed.SelectedItem.ToString())
+                lblReason.Text = _selectedJailedUser.Reason.ToString()
+                lblFine.Text = _selectedJailedUser.Fine.ToString("N0")
+                BtnBailOut.Enabled = CurrentUser.GoldOnHand >= _selectedJailedUser.Fine
+            End If
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
             Close()
         End Sub
 
-        Private Sub BtnBailOut_Click(sender As Object, e As EventArgs) Handles BtnBailOut.Click
-            'TODO Fix Bail Out Jail
-            '_ds.Clear()                          'clear dataSet
-            '_sql = "SELECT * FROM Jail WHERE Username='" & _username & "'"
-            '_table = "Jail"
-            ''fill DataSet
-
-            '.DeleteRecord(_sql, _table, _ds)  'delete record
-
-            'CurrentUser.GoldOnHand -= _fine
-            '_ds.Clear()                          'clear DataSet
-
-            '_sql = "SELECT * FROM Users WHERE Username='" & _username & "'"
-            '_table = "Users"
-            ''fill DataSet
-
-            '_ds.Tables(0).Rows(0).Item("Location") = "Streets" 'change location to street
-
-            '.UpdateRecord(_sql, _table, _ds)  'update Record
-
-            Display()
+        Private Async Sub BtnBailOut_Click(sender As Object, e As EventArgs) Handles BtnBailOut.Click
+            If Await DatabaseInteraction.FreeFromJail(_selectedJailedUser) Then
+                CurrentUser.GoldOnHand -= _selectedJailedUser.Fine
+                AllUsers.Find(Function(user) user.Name = _selectedJailedUser.Name).CurrentLocation = SleepLocation.Streets
+                Clear()
+            End If
         End Sub
 
         Private Sub FrmJail_Load(sender As Object, e As EventArgs) Handles Me.Load
-            Display()
+            Clear()
         End Sub
 
         Private Async Sub FrmJail_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

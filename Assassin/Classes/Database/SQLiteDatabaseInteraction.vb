@@ -129,6 +129,20 @@ Namespace Classes.Database
             Return applicants
         End Function
 
+        ''' <summary>Loads all <see cref="JailedUser"/>s.</summary>
+        ''' <returns>All <see cref="JailedUser"/>s</returns>
+        Public Async Function LoadJailedUsers() As Task(Of List(Of JailedUser))
+            Dim jailedUsers As New List(Of JailedUser)
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM Jail")
+
+            If ds.Tables(0).Rows.Count > 0 Then
+                For Each dr As DataRow In ds.Tables(0).Rows
+                    jailedUsers.Add(New JailedUser(dr("Username").ToString(), EnumHelper.Parse(Of Crime)(dr("Reason").ToString()), Int32Helper.Parse(dr("Fine")), DateTimeHelper.Parse(dr("DateJailed"))))
+                Next
+            End If
+            Return jailedUsers
+        End Function
+
         ''' <summary>Loads all <see cref="Message"/>s for specified <see cref="User"/>.</summary>
         ''' <param name="loadUser"><see cref="User"/> whose <see cref="Message"/>s are to be loaded</param>
         ''' <returns>List of all <see cref="Message"/>s for the specified <see cref="User"/></returns>
@@ -438,6 +452,31 @@ Namespace Classes.Database
             Else
                 Return True
             End If
+        End Function
+
+#End Region
+
+#Region "Jail Management"
+
+        ''' <summary>Frees a <see cref="JailedUser"/> from Jail.</summary>
+        ''' <param name="jailUser"><see cref="JailedUser"/> to be freed</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function FreeFromJail(jailUser As JailedUser) As Task(Of Boolean)
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Jail WHERE [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", jailUser.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Sends a <see cref="JailedUser"/> to Jail.</summary>
+        ''' <param name="jailUser"><see cref="JailedUser"/> to be jailed</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function SendToJail(jailUser As JailedUser) As Task(Of Boolean)
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Jail([Username], [Reason], [Fine], [DateJailed])VALUES(@name, @reason, @fine, @dateJailed)"}
+            cmd.Parameters.AddWithValue("@name", jailUser.Name)
+            cmd.Parameters.AddWithValue("@reason", jailUser.Reason)
+            cmd.Parameters.AddWithValue("@fine", jailUser.Fine)
+            cmd.Parameters.AddWithValue("@dateJailed", jailUser.DateJailed)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
 
 #End Region
