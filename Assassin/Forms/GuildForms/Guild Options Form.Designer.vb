@@ -27,13 +27,13 @@ Namespace Forms.GuildForms
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.txtName = New TextBox()
-            Me.lblName = New Label()
-            Me.btnExit = New Button()
-            Me.btnSave = New Button()
+            Me.LblName = New Label()
+            Me.BtnExit = New Button()
+            Me.BtnSave = New Button()
             Me.txtEntranceFee = New TextBox()
-            Me.lblFee = New Label()
-            Me.cmbGuildmaster = New ComboBox()
-            Me.lblGuildmaster = New Label()
+            Me.LblFee = New Label()
+            Me.CmbGuildmaster = New ComboBox()
+            Me.LblGuildmaster = New Label()
             Me.txtOptions = New TextBox()
             Me.SuspendLayout()
             '
@@ -48,40 +48,40 @@ Namespace Forms.GuildForms
             Me.txtName.TabIndex = 19
             Me.txtName.TextAlign = HorizontalAlignment.Center
             '
-            'lblName
+            'LblName
             '
-            Me.lblName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblName.Location = New Point(13, 168)
-            Me.lblName.Margin = New Padding(4, 0, 4, 0)
-            Me.lblName.Name = "lblName"
-            Me.lblName.Size = New Size(125, 26)
-            Me.lblName.TabIndex = 20
-            Me.lblName.Text = "Guild Name:"
-            Me.lblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.BorderStyle = BorderStyle.FixedSingle
+            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New Point(13, 168)
+            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.Name = "LblName"
+            Me.LblName.Size = New Size(125, 26)
+            Me.LblName.TabIndex = 20
+            Me.LblName.Text = "Guild Name:"
+            Me.LblName.TextAlign = ContentAlignment.MiddleRight
             '
-            'btnExit
+            'BtnExit
             '
-            Me.btnExit.DialogResult = DialogResult.Cancel
-            Me.btnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExit.Location = New Point(117, 311)
-            Me.btnExit.Margin = New Padding(4)
-            Me.btnExit.Name = "btnExit"
-            Me.btnExit.Size = New Size(125, 30)
-            Me.btnExit.TabIndex = 21
-            Me.btnExit.Text = "E&xit"
-            Me.btnExit.UseVisualStyleBackColor = True
+            Me.BtnExit.DialogResult = DialogResult.Cancel
+            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New Point(117, 311)
+            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.Name = "BtnExit"
+            Me.BtnExit.Size = New Size(125, 30)
+            Me.BtnExit.TabIndex = 21
+            Me.BtnExit.Text = "E&xit"
+            Me.BtnExit.UseVisualStyleBackColor = True
             '
-            'btnSave
+            'BtnSave
             '
-            Me.btnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSave.Location = New Point(117, 273)
-            Me.btnSave.Margin = New Padding(4)
-            Me.btnSave.Name = "btnSave"
-            Me.btnSave.Size = New Size(125, 30)
-            Me.btnSave.TabIndex = 22
-            Me.btnSave.Text = "&Save"
-            Me.btnSave.UseVisualStyleBackColor = True
+            Me.BtnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSave.Location = New Point(117, 273)
+            Me.BtnSave.Margin = New Padding(4)
+            Me.BtnSave.Name = "BtnSave"
+            Me.BtnSave.Size = New Size(125, 30)
+            Me.BtnSave.TabIndex = 22
+            Me.BtnSave.Text = "&Save"
+            Me.BtnSave.UseVisualStyleBackColor = True
             '
             'txtEntranceFee
             '
@@ -95,40 +95,40 @@ Namespace Forms.GuildForms
             Me.txtEntranceFee.Text = "4444"
             Me.txtEntranceFee.TextAlign = HorizontalAlignment.Center
             '
-            'lblFee
+            'LblFee
             '
-            Me.lblFee.BorderStyle = BorderStyle.FixedSingle
-            Me.lblFee.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFee.Location = New Point(13, 203)
-            Me.lblFee.Margin = New Padding(4, 0, 4, 0)
-            Me.lblFee.Name = "lblFee"
-            Me.lblFee.Size = New Size(125, 26)
-            Me.lblFee.TabIndex = 24
-            Me.lblFee.Text = "Entrance Fee:"
-            Me.lblFee.TextAlign = ContentAlignment.MiddleRight
+            Me.LblFee.BorderStyle = BorderStyle.FixedSingle
+            Me.LblFee.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblFee.Location = New Point(13, 203)
+            Me.LblFee.Margin = New Padding(4, 0, 4, 0)
+            Me.LblFee.Name = "LblFee"
+            Me.LblFee.Size = New Size(125, 26)
+            Me.LblFee.TabIndex = 24
+            Me.LblFee.Text = "Entrance Fee:"
+            Me.LblFee.TextAlign = ContentAlignment.MiddleRight
             '
-            'cmbGuildmaster
+            'CmbGuildmaster
             '
-            Me.cmbGuildmaster.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbGuildmaster.FormattingEnabled = True
-            Me.cmbGuildmaster.Items.AddRange(New Object() {"Computer"})
-            Me.cmbGuildmaster.Location = New Point(145, 238)
-            Me.cmbGuildmaster.Name = "cmbGuildmaster"
-            Me.cmbGuildmaster.Size = New Size(201, 26)
-            Me.cmbGuildmaster.TabIndex = 25
+            Me.CmbGuildmaster.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbGuildmaster.FormattingEnabled = True
+            Me.CmbGuildmaster.Items.AddRange(New Object() {"Computer"})
+            Me.CmbGuildmaster.Location = New Point(145, 238)
+            Me.CmbGuildmaster.Name = "CmbGuildmaster"
+            Me.CmbGuildmaster.Size = New Size(201, 26)
+            Me.CmbGuildmaster.TabIndex = 25
             '
-            'lblGuildmaster
+            'LblGuildmaster
             '
-            Me.lblGuildmaster.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGuildmaster.Location = New Point(13, 238)
-            Me.lblGuildmaster.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGuildmaster.Name = "lblGuildmaster"
-            Me.lblGuildmaster.Size = New Size(125, 26)
-            Me.lblGuildmaster.TabIndex = 26
-            Me.lblGuildmaster.Text = "Guildmaster:"
-            Me.lblGuildmaster.TextAlign = ContentAlignment.MiddleRight
+            Me.LblGuildmaster.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGuildmaster.Location = New Point(13, 238)
+            Me.LblGuildmaster.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuildmaster.Name = "LblGuildmaster"
+            Me.LblGuildmaster.Size = New Size(125, 26)
+            Me.LblGuildmaster.TabIndex = 26
+            Me.LblGuildmaster.Text = "Guildmaster:"
+            Me.LblGuildmaster.TextAlign = ContentAlignment.MiddleRight
             '
             'txtOptions
             '
@@ -150,14 +150,14 @@ Namespace Forms.GuildForms
             Me.AutoScaleMode = AutoScaleMode.Font
             Me.ClientSize = New Size(359, 354)
             Me.Controls.Add(Me.txtOptions)
-            Me.Controls.Add(Me.cmbGuildmaster)
-            Me.Controls.Add(Me.lblGuildmaster)
+            Me.Controls.Add(Me.CmbGuildmaster)
+            Me.Controls.Add(Me.LblGuildmaster)
             Me.Controls.Add(Me.txtEntranceFee)
-            Me.Controls.Add(Me.lblFee)
-            Me.Controls.Add(Me.btnSave)
-            Me.Controls.Add(Me.btnExit)
+            Me.Controls.Add(Me.LblFee)
+            Me.Controls.Add(Me.BtnSave)
+            Me.Controls.Add(Me.BtnExit)
             Me.Controls.Add(Me.txtName)
-            Me.Controls.Add(Me.lblName)
+            Me.Controls.Add(Me.LblName)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
@@ -169,13 +169,13 @@ Namespace Forms.GuildForms
 
         End Sub
         Friend WithEvents TxtName As TextBox
-        Friend WithEvents lblName As Label
+        Friend WithEvents LblName As Label
         Friend WithEvents BtnExit As Button
         Friend WithEvents BtnSave As Button
         Friend WithEvents TxtEntranceFee As TextBox
-        Friend WithEvents lblFee As Label
+        Friend WithEvents LblFee As Label
         Friend WithEvents CmbGuildmaster As ComboBox
-        Friend WithEvents lblGuildmaster As Label
+        Friend WithEvents LblGuildmaster As Label
         Friend WithEvents TxtOptions As TextBox
     End Class
 End NameSpace

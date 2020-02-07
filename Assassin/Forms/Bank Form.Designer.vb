@@ -27,17 +27,17 @@ Namespace Forms
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.Label1 = New Label()
-            Me.lblGoldOnHand = New Label()
+            Me.LblGoldOnHand = New Label()
             Me.Label2 = New Label()
-            Me.lblGoldInBank = New Label()
-            Me.lblGoldOnLoan = New Label()
+            Me.LblGoldInBank = New Label()
+            Me.LblGoldOnLoan = New Label()
             Me.Label3 = New Label()
-            Me.btnDeposit = New Button()
-            Me.btnWithdraw = New Button()
-            Me.btnGetLoan = New Button()
-            Me.btnPayLoan = New Button()
-            Me.btnBack = New Button()
-            Me.lblAvailableLoan = New Label()
+            Me.BtnDeposit = New Button()
+            Me.BtnWithdraw = New Button()
+            Me.BtnGetLoan = New Button()
+            Me.BtnPayLoan = New Button()
+            Me.BtnBack = New Button()
+            Me.LblAvailableLoan = New Label()
             Me.Label4 = New Label()
             Me.txtBank = New TextBox()
             Me.SuspendLayout()
@@ -53,15 +53,15 @@ Namespace Forms
             Me.Label1.Text = "Gold on Hand:"
             Me.Label1.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblGoldOnHand
+            'LblGoldOnHand
             '
-            Me.lblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldOnHand.Location = New Point(177, 9)
-            Me.lblGoldOnHand.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGoldOnHand.Name = "lblGoldOnHand"
-            Me.lblGoldOnHand.Size = New Size(120, 25)
-            Me.lblGoldOnHand.TabIndex = 6
-            Me.lblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldOnHand.Location = New Point(177, 9)
+            Me.LblGoldOnHand.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGoldOnHand.Name = "LblGoldOnHand"
+            Me.LblGoldOnHand.Size = New Size(120, 25)
+            Me.LblGoldOnHand.TabIndex = 6
+            Me.LblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -74,25 +74,25 @@ Namespace Forms
             Me.Label2.Text = "Gold in Bank:"
             Me.Label2.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblGoldInBank
+            'LblGoldInBank
             '
-            Me.lblGoldInBank.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldInBank.Location = New Point(177, 33)
-            Me.lblGoldInBank.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGoldInBank.Name = "lblGoldInBank"
-            Me.lblGoldInBank.Size = New Size(120, 25)
-            Me.lblGoldInBank.TabIndex = 8
-            Me.lblGoldInBank.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldInBank.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldInBank.Location = New Point(177, 33)
+            Me.LblGoldInBank.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGoldInBank.Name = "LblGoldInBank"
+            Me.LblGoldInBank.Size = New Size(120, 25)
+            Me.LblGoldInBank.TabIndex = 8
+            Me.LblGoldInBank.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGoldOnLoan
+            'LblGoldOnLoan
             '
-            Me.lblGoldOnLoan.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldOnLoan.Location = New Point(177, 57)
-            Me.lblGoldOnLoan.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGoldOnLoan.Name = "lblGoldOnLoan"
-            Me.lblGoldOnLoan.Size = New Size(120, 25)
-            Me.lblGoldOnLoan.TabIndex = 10
-            Me.lblGoldOnLoan.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldOnLoan.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldOnLoan.Location = New Point(177, 57)
+            Me.LblGoldOnLoan.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGoldOnLoan.Name = "LblGoldOnLoan"
+            Me.LblGoldOnLoan.Size = New Size(120, 25)
+            Me.LblGoldOnLoan.TabIndex = 10
+            Me.LblGoldOnLoan.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label3
             '
@@ -105,66 +105,66 @@ Namespace Forms
             Me.Label3.Text = "Gold on Loan:"
             Me.Label3.TextAlign = ContentAlignment.MiddleRight
             '
-            'btnDeposit
+            'BtnDeposit
             '
-            Me.btnDeposit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDeposit.Location = New Point(12, 273)
-            Me.btnDeposit.Name = "btnDeposit"
-            Me.btnDeposit.Size = New Size(125, 30)
-            Me.btnDeposit.TabIndex = 0
-            Me.btnDeposit.Text = "&Deposit"
-            Me.btnDeposit.UseVisualStyleBackColor = True
+            Me.BtnDeposit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDeposit.Location = New Point(12, 273)
+            Me.BtnDeposit.Name = "BtnDeposit"
+            Me.BtnDeposit.Size = New Size(125, 30)
+            Me.BtnDeposit.TabIndex = 0
+            Me.BtnDeposit.Text = "&Deposit"
+            Me.BtnDeposit.UseVisualStyleBackColor = True
             '
-            'btnWithdraw
+            'BtnWithdraw
             '
-            Me.btnWithdraw.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnWithdraw.Location = New Point(207, 273)
-            Me.btnWithdraw.Name = "btnWithdraw"
-            Me.btnWithdraw.Size = New Size(125, 30)
-            Me.btnWithdraw.TabIndex = 1
-            Me.btnWithdraw.Text = "&Withdraw"
-            Me.btnWithdraw.UseVisualStyleBackColor = True
+            Me.BtnWithdraw.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnWithdraw.Location = New Point(207, 273)
+            Me.BtnWithdraw.Name = "BtnWithdraw"
+            Me.BtnWithdraw.Size = New Size(125, 30)
+            Me.BtnWithdraw.TabIndex = 1
+            Me.BtnWithdraw.Text = "&Withdraw"
+            Me.BtnWithdraw.UseVisualStyleBackColor = True
             '
-            'btnGetLoan
+            'BtnGetLoan
             '
-            Me.btnGetLoan.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGetLoan.Location = New Point(12, 309)
-            Me.btnGetLoan.Name = "btnGetLoan"
-            Me.btnGetLoan.Size = New Size(125, 30)
-            Me.btnGetLoan.TabIndex = 2
-            Me.btnGetLoan.Text = "&Get Loan"
-            Me.btnGetLoan.UseVisualStyleBackColor = True
+            Me.BtnGetLoan.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnGetLoan.Location = New Point(12, 309)
+            Me.BtnGetLoan.Name = "BtnGetLoan"
+            Me.BtnGetLoan.Size = New Size(125, 30)
+            Me.BtnGetLoan.TabIndex = 2
+            Me.BtnGetLoan.Text = "&Get Loan"
+            Me.BtnGetLoan.UseVisualStyleBackColor = True
             '
-            'btnPayLoan
+            'BtnPayLoan
             '
-            Me.btnPayLoan.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPayLoan.Location = New Point(207, 309)
-            Me.btnPayLoan.Name = "btnPayLoan"
-            Me.btnPayLoan.Size = New Size(125, 30)
-            Me.btnPayLoan.TabIndex = 3
-            Me.btnPayLoan.Text = "&Pay Loan"
-            Me.btnPayLoan.UseVisualStyleBackColor = True
+            Me.BtnPayLoan.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnPayLoan.Location = New Point(207, 309)
+            Me.BtnPayLoan.Name = "BtnPayLoan"
+            Me.BtnPayLoan.Size = New Size(125, 30)
+            Me.BtnPayLoan.TabIndex = 3
+            Me.BtnPayLoan.Text = "&Pay Loan"
+            Me.BtnPayLoan.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(110, 345)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(125, 30)
-            Me.btnBack.TabIndex = 4
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(110, 345)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(125, 30)
+            Me.BtnBack.TabIndex = 4
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'lblAvailableLoan
+            'LblAvailableLoan
             '
-            Me.lblAvailableLoan.BorderStyle = BorderStyle.FixedSingle
-            Me.lblAvailableLoan.Location = New Point(177, 81)
-            Me.lblAvailableLoan.Margin = New Padding(4, 0, 4, 0)
-            Me.lblAvailableLoan.Name = "lblAvailableLoan"
-            Me.lblAvailableLoan.Size = New Size(120, 25)
-            Me.lblAvailableLoan.TabIndex = 12
-            Me.lblAvailableLoan.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblAvailableLoan.BorderStyle = BorderStyle.FixedSingle
+            Me.LblAvailableLoan.Location = New Point(177, 81)
+            Me.LblAvailableLoan.Margin = New Padding(4, 0, 4, 0)
+            Me.LblAvailableLoan.Name = "LblAvailableLoan"
+            Me.LblAvailableLoan.Size = New Size(120, 25)
+            Me.LblAvailableLoan.TabIndex = 12
+            Me.LblAvailableLoan.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -195,21 +195,21 @@ Namespace Forms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(344, 387)
             Me.Controls.Add(Me.txtBank)
-            Me.Controls.Add(Me.lblAvailableLoan)
+            Me.Controls.Add(Me.LblAvailableLoan)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnPayLoan)
-            Me.Controls.Add(Me.btnGetLoan)
-            Me.Controls.Add(Me.btnWithdraw)
-            Me.Controls.Add(Me.btnDeposit)
-            Me.Controls.Add(Me.lblGoldOnLoan)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnPayLoan)
+            Me.Controls.Add(Me.BtnGetLoan)
+            Me.Controls.Add(Me.BtnWithdraw)
+            Me.Controls.Add(Me.BtnDeposit)
+            Me.Controls.Add(Me.LblGoldOnLoan)
             Me.Controls.Add(Me.Label3)
-            Me.Controls.Add(Me.lblGoldInBank)
+            Me.Controls.Add(Me.LblGoldInBank)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.lblGoldOnHand)
+            Me.Controls.Add(Me.LblGoldOnHand)
             Me.Controls.Add(Me.Label1)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
@@ -224,17 +224,17 @@ Namespace Forms
 
         End Sub
         Friend WithEvents Label1 As Label
-        Friend WithEvents lblGoldOnHand As Label
+        Friend WithEvents LblGoldOnHand As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents lblGoldInBank As Label
-        Friend WithEvents lblGoldOnLoan As Label
+        Friend WithEvents LblGoldInBank As Label
+        Friend WithEvents LblGoldOnLoan As Label
         Friend WithEvents Label3 As Label
         Friend WithEvents BtnDeposit As Button
         Friend WithEvents BtnWithdraw As Button
         Friend WithEvents BtnGetLoan As Button
         Friend WithEvents BtnPayLoan As Button
         Friend WithEvents BtnBack As Button
-        Friend WithEvents lblAvailableLoan As Label
+        Friend WithEvents LblAvailableLoan As Label
         Friend WithEvents Label4 As Label
         Friend WithEvents TxtBank As TextBox
     End Class

@@ -29,13 +29,13 @@ Namespace Forms.Shopping
 
         ''' <summary>Clears all labels and the Listbox.</summary>
         Private Sub Clear()
-            lblGold.Text = ""
-            lblCurrent.Text = ""
-            lblValue.Text = ""
-            lblCurrentDamage.Text = ""
-            lblSelected.Text = ""
-            lblPrice.Text = ""
-            lblSelectedDamage.Text = ""
+            LblGold.Text = ""
+            LblCurrent.Text = ""
+            LblValue.Text = ""
+            LblCurrentDamage.Text = ""
+            LblSelected.Text = ""
+            LblPrice.Text = ""
+            LblSelectedDamage.Text = ""
 
             LstWeapons.ClearSelected()
             LstWeapons.Items.Clear()
@@ -68,21 +68,21 @@ Namespace Forms.Shopping
                 End If
                 BtnClear.Enabled = True
 
-                lblSelected.Text = _selectedWeapon.Name
-                lblPrice.Text = _selectedWeapon.Value.ToString
-                lblSelectedDamage.Text = _selectedWeapon.Damage.ToString
+                LblSelected.Text = _selectedWeapon.Name
+                LblPrice.Text = _selectedWeapon.Value.ToString
+                LblSelectedDamage.Text = _selectedWeapon.Damage.ToString
             Else
                 BtnPurchase.Enabled = False
                 BtnClear.Enabled = False
-                lblSelected.Text = ""
-                lblPrice.Text = ""
-                lblSelectedDamage.Text = ""
+                LblSelected.Text = ""
+                LblPrice.Text = ""
+                LblSelectedDamage.Text = ""
             End If
 
-            lblGold.Text = CurrentUser.GoldOnHand.ToString
-            lblCurrent.Text = CurrentUser.CurrentWeapon.Name
-            lblValue.Text = CurrentUser.CurrentWeapon.SellValue.ToString
-            lblCurrentDamage.Text = CurrentUser.CurrentWeapon.Damage.ToString
+            LblGold.Text = CurrentUser.GoldOnHand.ToString
+            LblCurrent.Text = CurrentUser.CurrentWeapon.Name
+            LblValue.Text = CurrentUser.CurrentWeapon.SellValue.ToString
+            LblCurrentDamage.Text = CurrentUser.CurrentWeapon.Damage.ToString
 
             BtnSell.Enabled = CurrentUser.CurrentWeapon.Value > 0
         End Sub
@@ -193,7 +193,7 @@ Namespace Forms.Shopping
 #Region "Click"
 
         Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbLight.CheckedChanged, CmbHeavy.CheckedChanged, CmbTwoH.CheckedChanged
-            lblPrice.Text = ""
+            LblPrice.Text = ""
             DisplayWeapons()
         End Sub
 

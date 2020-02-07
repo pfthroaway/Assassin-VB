@@ -67,7 +67,7 @@ Namespace Forms
 
         ''' <summary>This method loads all names into the CmbNames ComboBox to be used in sending new messages.</summary>
         Private Sub LoadNames()
-            'cmbNames.Items.Clear()
+            'CmbNames.Items.Clear()
 
             '_sql1 = "SELECT Username FROM Users ORDER BY ID Asc"
             '_table1 = "Users"
@@ -77,7 +77,7 @@ Namespace Forms
             '    CmbNames.Items.Add(_ds1.Tables(0).Rows(i).Item("Username").ToString)
             'Next
 
-            'cmbNames.Items.Remove(CurrentUser.Name)
+            'CmbNames.Items.Remove(CurrentUser.Name)
         End Sub
 
         ''' <summary>Starts the form being able to send messages.</summary>
@@ -87,8 +87,8 @@ Namespace Forms
             BtnDelete.Enabled = True
             BtnReply.Text = "&Send"     'change text to Send
             BtnDelete.Text = "&Clear"   'change text to Clear
-            lblFrom.Text = "To:"        'change text to To:
-            LblCount.Text = ""          'Clear lblCount
+            LblFrom.Text = "To:"        'change text to To:
+            LblCount.Text = ""          'Clear LblCount
             TxtMessage.Clear()
             TxtDate.Clear()
 
@@ -119,7 +119,7 @@ Namespace Forms
             'Else                                'Clear
             '    BtnReply.Text = "&Reply"    'change text to Send
             '    BtnDelete.Text = "&Delete"  'change text to Clear
-            '    lblFrom.Text = "From:"      'change text to From:
+            '    LblFrom.Text = "From:"      'change text to From:
 
             '    BtnNew.Enabled = True
             '    CmbNames.Enabled = False
@@ -164,8 +164,8 @@ Namespace Forms
             'If BtnReply.Text = "&Reply" Then    'reply
             '    BtnReply.Text = "&Send"         'change text to Send
             '    BtnDelete.Text = "&Clear"       'change text to Clear
-            '    lblFrom.Text = "To:"            'change text to To:
-            '    lblCount.Text = ""              'Clear lblCount
+            '    LblFrom.Text = "To:"            'change text to To:
+            '    LblCount.Text = ""              'Clear LblCount
             '    TxtDate.Clear()                 'clear Date TextBox
             '    TxtMessage.Clear()              'clear Message TextBox
 
@@ -197,7 +197,7 @@ Namespace Forms
 
             '            BtnReply.Text = "&Reply"    'change text to Send
             '            BtnDelete.Text = "&Delete"  'change text to Clear
-            '            lblFrom.Text = "From:"      'change text to From:
+            '            LblFrom.Text = "From:"      'change text to From:
 
             '            BtnNew.Enabled = True       'enable BtnNew
             '            CmbNames.Enabled = False    'enable CmbNames

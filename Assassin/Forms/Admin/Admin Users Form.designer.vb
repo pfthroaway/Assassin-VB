@@ -26,24 +26,24 @@ Namespace Forms.Admin
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.lstUsers = New ListBox()
-            Me.lblName = New Label()
-            Me.lblLevel = New Label()
-            Me.lblMaximumEndurance = New Label()
-            Me.lblCurrentEndurance = New Label()
-            Me.lblSkillPts = New Label()
-            Me.lblExp = New Label()
-            Me.lblAlive = New Label()
+            Me.LstUsers = New ListBox()
+            Me.LblName = New Label()
+            Me.LblLevel = New Label()
+            Me.LblMaximumEndurance = New Label()
+            Me.LblCurrentEndurance = New Label()
+            Me.LblSkillPts = New Label()
+            Me.LblExp = New Label()
+            Me.LblAlive = New Label()
             Me.Label1 = New Label()
-            Me.lblHenchmenLevel1 = New Label()
+            Me.LblHenchmenLevel1 = New Label()
             Me.Label3 = New Label()
             Me.Label4 = New Label()
-            Me.lblLocation = New Label()
+            Me.LblLocation = New Label()
             Me.txtName = New TextBox()
-            Me.lblHenchmenLevel2 = New Label()
-            Me.lblHenchmenLevel3 = New Label()
-            Me.lblHenchmenLevel4 = New Label()
-            Me.lblHenchmenLevel5 = New Label()
+            Me.LblHenchmenLevel2 = New Label()
+            Me.LblHenchmenLevel3 = New Label()
+            Me.LblHenchmenLevel4 = New Label()
+            Me.LblHenchmenLevel5 = New Label()
             Me.txtSkillPts = New TextBox()
             Me.txtGoldBank = New TextBox()
             Me.txtGoldLoan = New TextBox()
@@ -72,16 +72,16 @@ Namespace Forms.Admin
             Me.txtHenchmenLevel1 = New TextBox()
             Me.txtStealth = New TextBox()
             Me.txtSlipping = New TextBox()
-            Me.btnSave = New Button()
-            Me.btnExit = New Button()
-            Me.btnNewUser = New Button()
-            Me.btnDelete = New Button()
-            Me.lblPass = New Label()
+            Me.BtnSave = New Button()
+            Me.BtnExit = New Button()
+            Me.BtnNewUser = New Button()
+            Me.BtnDelete = New Button()
+            Me.LblPass = New Label()
             Me.txtChangePass = New TextBox()
             Me.Label14 = New Label()
             Me.Label15 = New Label()
             Me.Label16 = New Label()
-            Me.btnClear = New Button()
+            Me.BtnClear = New Button()
             Me.Label18 = New Label()
             Me.txtLockpicks = New TextBox()
             Me.Label17 = New Label()
@@ -96,117 +96,117 @@ Namespace Forms.Admin
             Me.txtThirst = New TextBox()
             Me.Label25 = New Label()
             Me.chkAlive = New CheckBox()
-            Me.cmbCurrWeapon = New ComboBox()
-            Me.cmbLoc = New ComboBox()
-            Me.cmbLightWeapon = New ComboBox()
-            Me.cmbHeavyWeapon = New ComboBox()
-            Me.cmbTwoHWeapon = New ComboBox()
-            Me.cmbArmor = New ComboBox()
-            Me.cmbPotion = New ComboBox()
+            Me.CmbCurrWeapon = New ComboBox()
+            Me.CmbLoc = New ComboBox()
+            Me.CmbLightWeapon = New ComboBox()
+            Me.CmbHeavyWeapon = New ComboBox()
+            Me.CmbTwoHWeapon = New ComboBox()
+            Me.CmbArmor = New ComboBox()
+            Me.CmbPotion = New ComboBox()
             Me.chkShovel = New CheckBox()
-            Me.lblShovel = New Label()
+            Me.LblShovel = New Label()
             Me.chkLantern = New CheckBox()
-            Me.lblLantern = New Label()
+            Me.LblLantern = New Label()
             Me.chkAmulet = New CheckBox()
-            Me.lblAmulet = New Label()
+            Me.LblAmulet = New Label()
             Me.SuspendLayout()
             '
-            'lstUsers
+            'LstUsers
             '
-            Me.lstUsers.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lstUsers.FormattingEnabled = True
-            Me.lstUsers.ItemHeight = 18
-            Me.lstUsers.Location = New Point(18, 17)
-            Me.lstUsers.Margin = New Padding(4)
-            Me.lstUsers.Name = "lstUsers"
-            Me.lstUsers.ScrollAlwaysVisible = True
-            Me.lstUsers.Size = New Size(225, 364)
-            Me.lstUsers.Sorted = True
-            Me.lstUsers.TabIndex = 0
+            Me.LstUsers.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LstUsers.FormattingEnabled = True
+            Me.LstUsers.ItemHeight = 18
+            Me.LstUsers.Location = New Point(18, 17)
+            Me.LstUsers.Margin = New Padding(4)
+            Me.LstUsers.Name = "LstUsers"
+            Me.LstUsers.ScrollAlwaysVisible = True
+            Me.LstUsers.Size = New Size(225, 364)
+            Me.LstUsers.Sorted = True
+            Me.LstUsers.TabIndex = 0
             '
-            'lblName
+            'LblName
             '
-            Me.lblName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblName.Location = New Point(251, 47)
-            Me.lblName.Margin = New Padding(4, 0, 4, 0)
-            Me.lblName.Name = "lblName"
-            Me.lblName.Size = New Size(125, 24)
-            Me.lblName.TabIndex = 2
-            Me.lblName.Text = "Name:"
-            Me.lblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.BorderStyle = BorderStyle.FixedSingle
+            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New Point(251, 47)
+            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.Name = "LblName"
+            Me.LblName.Size = New Size(125, 24)
+            Me.LblName.TabIndex = 2
+            Me.LblName.Text = "Name:"
+            Me.LblName.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblLevel
+            'LblLevel
             '
-            Me.lblLevel.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLevel.Location = New Point(251, 305)
-            Me.lblLevel.Margin = New Padding(4, 0, 4, 0)
-            Me.lblLevel.Name = "lblLevel"
-            Me.lblLevel.Size = New Size(125, 24)
-            Me.lblLevel.TabIndex = 3
-            Me.lblLevel.Text = "Level:"
-            Me.lblLevel.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLevel.BorderStyle = BorderStyle.FixedSingle
+            Me.LblLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLevel.Location = New Point(251, 305)
+            Me.LblLevel.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLevel.Name = "LblLevel"
+            Me.LblLevel.Size = New Size(125, 24)
+            Me.LblLevel.TabIndex = 3
+            Me.LblLevel.Text = "Level:"
+            Me.LblLevel.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblMaximumEndurance
+            'LblMaximumEndurance
             '
-            Me.lblMaximumEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.lblMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMaximumEndurance.Location = New Point(251, 485)
-            Me.lblMaximumEndurance.Margin = New Padding(4, 0, 4, 0)
-            Me.lblMaximumEndurance.Name = "lblMaximumEndurance"
-            Me.lblMaximumEndurance.Size = New Size(125, 24)
-            Me.lblMaximumEndurance.TabIndex = 4
-            Me.lblMaximumEndurance.Text = "Max Endurance:"
-            Me.lblMaximumEndurance.TextAlign = ContentAlignment.MiddleRight
+            Me.LblMaximumEndurance.BorderStyle = BorderStyle.FixedSingle
+            Me.LblMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblMaximumEndurance.Location = New Point(251, 485)
+            Me.LblMaximumEndurance.Margin = New Padding(4, 0, 4, 0)
+            Me.LblMaximumEndurance.Name = "LblMaximumEndurance"
+            Me.LblMaximumEndurance.Size = New Size(125, 24)
+            Me.LblMaximumEndurance.TabIndex = 4
+            Me.LblMaximumEndurance.Text = "Max Endurance:"
+            Me.LblMaximumEndurance.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblCurrentEndurance
+            'LblCurrentEndurance
             '
-            Me.lblCurrentEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.lblCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCurrentEndurance.Location = New Point(251, 455)
-            Me.lblCurrentEndurance.Margin = New Padding(4, 0, 4, 0)
-            Me.lblCurrentEndurance.Name = "lblCurrentEndurance"
-            Me.lblCurrentEndurance.Size = New Size(125, 24)
-            Me.lblCurrentEndurance.TabIndex = 5
-            Me.lblCurrentEndurance.Text = "Curr Endurance:"
-            Me.lblCurrentEndurance.TextAlign = ContentAlignment.MiddleRight
+            Me.LblCurrentEndurance.BorderStyle = BorderStyle.FixedSingle
+            Me.LblCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblCurrentEndurance.Location = New Point(251, 455)
+            Me.LblCurrentEndurance.Margin = New Padding(4, 0, 4, 0)
+            Me.LblCurrentEndurance.Name = "LblCurrentEndurance"
+            Me.LblCurrentEndurance.Size = New Size(125, 24)
+            Me.LblCurrentEndurance.TabIndex = 5
+            Me.LblCurrentEndurance.Text = "Curr Endurance:"
+            Me.LblCurrentEndurance.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblSkillPts
+            'LblSkillPts
             '
-            Me.lblSkillPts.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSkillPts.Location = New Point(251, 365)
-            Me.lblSkillPts.Margin = New Padding(4, 0, 4, 0)
-            Me.lblSkillPts.Name = "lblSkillPts"
-            Me.lblSkillPts.Size = New Size(125, 24)
-            Me.lblSkillPts.TabIndex = 6
-            Me.lblSkillPts.Text = "Skill Points:"
-            Me.lblSkillPts.TextAlign = ContentAlignment.MiddleRight
+            Me.LblSkillPts.BorderStyle = BorderStyle.FixedSingle
+            Me.LblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkillPts.Location = New Point(251, 365)
+            Me.LblSkillPts.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSkillPts.Name = "LblSkillPts"
+            Me.LblSkillPts.Size = New Size(125, 24)
+            Me.LblSkillPts.TabIndex = 6
+            Me.LblSkillPts.Text = "Skill Points:"
+            Me.LblSkillPts.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblExp
+            'LblExp
             '
-            Me.lblExp.BorderStyle = BorderStyle.FixedSingle
-            Me.lblExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblExp.Location = New Point(251, 335)
-            Me.lblExp.Margin = New Padding(4, 0, 4, 0)
-            Me.lblExp.Name = "lblExp"
-            Me.lblExp.Size = New Size(125, 24)
-            Me.lblExp.TabIndex = 7
-            Me.lblExp.Text = "Experience:"
-            Me.lblExp.TextAlign = ContentAlignment.MiddleRight
+            Me.LblExp.BorderStyle = BorderStyle.FixedSingle
+            Me.LblExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblExp.Location = New Point(251, 335)
+            Me.LblExp.Margin = New Padding(4, 0, 4, 0)
+            Me.LblExp.Name = "LblExp"
+            Me.LblExp.Size = New Size(125, 24)
+            Me.LblExp.TabIndex = 7
+            Me.LblExp.Text = "Experience:"
+            Me.LblExp.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblAlive
+            'LblAlive
             '
-            Me.lblAlive.BorderStyle = BorderStyle.FixedSingle
-            Me.lblAlive.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblAlive.Location = New Point(251, 395)
-            Me.lblAlive.Margin = New Padding(4, 0, 4, 0)
-            Me.lblAlive.Name = "lblAlive"
-            Me.lblAlive.Size = New Size(125, 24)
-            Me.lblAlive.TabIndex = 8
-            Me.lblAlive.Text = "Alive:"
-            Me.lblAlive.TextAlign = ContentAlignment.MiddleRight
+            Me.LblAlive.BorderStyle = BorderStyle.FixedSingle
+            Me.LblAlive.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblAlive.Location = New Point(251, 395)
+            Me.LblAlive.Margin = New Padding(4, 0, 4, 0)
+            Me.LblAlive.Name = "LblAlive"
+            Me.LblAlive.Size = New Size(125, 24)
+            Me.LblAlive.TabIndex = 8
+            Me.LblAlive.Text = "Alive:"
+            Me.LblAlive.TextAlign = ContentAlignment.MiddleRight
             '
             'Label1
             '
@@ -220,17 +220,17 @@ Namespace Forms.Admin
             Me.Label1.Text = "Slipping:"
             Me.Label1.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblHenchmenLevel1
+            'LblHenchmenLevel1
             '
-            Me.lblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHenchmenLevel1.Location = New Point(882, 424)
-            Me.lblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel1.Name = "lblHenchmenLevel1"
-            Me.lblHenchmenLevel1.Size = New Size(125, 24)
-            Me.lblHenchmenLevel1.TabIndex = 10
-            Me.lblHenchmenLevel1.Text = "Lvl 1 Henchmen:"
-            Me.lblHenchmenLevel1.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel1.Location = New Point(882, 424)
+            Me.LblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel1.Name = "LblHenchmenLevel1"
+            Me.LblHenchmenLevel1.Size = New Size(125, 24)
+            Me.LblHenchmenLevel1.TabIndex = 10
+            Me.LblHenchmenLevel1.Text = "Lvl 1 Henchmen:"
+            Me.LblHenchmenLevel1.TextAlign = ContentAlignment.MiddleRight
             '
             'Label3
             '
@@ -256,17 +256,17 @@ Namespace Forms.Admin
             Me.Label4.Text = "Current Weapon:"
             Me.Label4.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblLocation
+            'LblLocation
             '
-            Me.lblLocation.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLocation.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLocation.Location = New Point(251, 425)
-            Me.lblLocation.Margin = New Padding(4, 0, 4, 0)
-            Me.lblLocation.Name = "lblLocation"
-            Me.lblLocation.Size = New Size(125, 24)
-            Me.lblLocation.TabIndex = 13
-            Me.lblLocation.Text = "Location:"
-            Me.lblLocation.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLocation.BorderStyle = BorderStyle.FixedSingle
+            Me.LblLocation.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLocation.Location = New Point(251, 425)
+            Me.LblLocation.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLocation.Name = "LblLocation"
+            Me.LblLocation.Size = New Size(125, 24)
+            Me.LblLocation.TabIndex = 13
+            Me.LblLocation.Text = "Location:"
+            Me.LblLocation.TextAlign = ContentAlignment.MiddleRight
             '
             'txtName
             '
@@ -280,53 +280,53 @@ Namespace Forms.Admin
             Me.txtName.TabIndex = 1
             Me.txtName.TextAlign = HorizontalAlignment.Center
             '
-            'lblHenchmenLevel2
+            'LblHenchmenLevel2
             '
-            Me.lblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHenchmenLevel2.Location = New Point(882, 454)
-            Me.lblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel2.Name = "lblHenchmenLevel2"
-            Me.lblHenchmenLevel2.Size = New Size(125, 24)
-            Me.lblHenchmenLevel2.TabIndex = 15
-            Me.lblHenchmenLevel2.Text = "Lvl 2 Henchmen:"
-            Me.lblHenchmenLevel2.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel2.Location = New Point(882, 454)
+            Me.LblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel2.Name = "LblHenchmenLevel2"
+            Me.LblHenchmenLevel2.Size = New Size(125, 24)
+            Me.LblHenchmenLevel2.TabIndex = 15
+            Me.LblHenchmenLevel2.Text = "Lvl 2 Henchmen:"
+            Me.LblHenchmenLevel2.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblHenchmenLevel3
+            'LblHenchmenLevel3
             '
-            Me.lblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHenchmenLevel3.Location = New Point(882, 484)
-            Me.lblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel3.Name = "lblHenchmenLevel3"
-            Me.lblHenchmenLevel3.Size = New Size(125, 24)
-            Me.lblHenchmenLevel3.TabIndex = 16
-            Me.lblHenchmenLevel3.Text = "Lvl 3 Henchmen:"
-            Me.lblHenchmenLevel3.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel3.Location = New Point(882, 484)
+            Me.LblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel3.Name = "LblHenchmenLevel3"
+            Me.LblHenchmenLevel3.Size = New Size(125, 24)
+            Me.LblHenchmenLevel3.TabIndex = 16
+            Me.LblHenchmenLevel3.Text = "Lvl 3 Henchmen:"
+            Me.LblHenchmenLevel3.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblHenchmenLevel4
+            'LblHenchmenLevel4
             '
-            Me.lblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHenchmenLevel4.Location = New Point(882, 515)
-            Me.lblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel4.Name = "lblHenchmenLevel4"
-            Me.lblHenchmenLevel4.Size = New Size(125, 24)
-            Me.lblHenchmenLevel4.TabIndex = 17
-            Me.lblHenchmenLevel4.Text = "Lvl 4 Henchmen:"
-            Me.lblHenchmenLevel4.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel4.Location = New Point(882, 515)
+            Me.LblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel4.Name = "LblHenchmenLevel4"
+            Me.LblHenchmenLevel4.Size = New Size(125, 24)
+            Me.LblHenchmenLevel4.TabIndex = 17
+            Me.LblHenchmenLevel4.Text = "Lvl 4 Henchmen:"
+            Me.LblHenchmenLevel4.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblHenchmenLevel5
+            'LblHenchmenLevel5
             '
-            Me.lblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHenchmenLevel5.Location = New Point(882, 545)
-            Me.lblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel5.Name = "lblHenchmenLevel5"
-            Me.lblHenchmenLevel5.Size = New Size(125, 24)
-            Me.lblHenchmenLevel5.TabIndex = 18
-            Me.lblHenchmenLevel5.Text = "Lvl 5 Henchmen:"
-            Me.lblHenchmenLevel5.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel5.Location = New Point(882, 545)
+            Me.LblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel5.Name = "LblHenchmenLevel5"
+            Me.LblHenchmenLevel5.Size = New Size(125, 24)
+            Me.LblHenchmenLevel5.TabIndex = 18
+            Me.LblHenchmenLevel5.Text = "Lvl 5 Henchmen:"
+            Me.LblHenchmenLevel5.TextAlign = ContentAlignment.MiddleRight
             '
             'txtSkillPts
             '
@@ -664,64 +664,64 @@ Namespace Forms.Admin
             Me.txtSlipping.TabIndex = 27
             Me.txtSlipping.TextAlign = HorizontalAlignment.Center
             '
-            'btnSave
+            'BtnSave
             '
-            Me.btnSave.Enabled = False
-            Me.btnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSave.Location = New Point(61, 503)
-            Me.btnSave.Margin = New Padding(4)
-            Me.btnSave.Name = "btnSave"
-            Me.btnSave.Size = New Size(125, 30)
-            Me.btnSave.TabIndex = 37
-            Me.btnSave.Text = "&Save"
-            Me.btnSave.UseVisualStyleBackColor = True
+            Me.BtnSave.Enabled = False
+            Me.BtnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSave.Location = New Point(61, 503)
+            Me.BtnSave.Margin = New Padding(4)
+            Me.BtnSave.Name = "BtnSave"
+            Me.BtnSave.Size = New Size(125, 30)
+            Me.BtnSave.TabIndex = 37
+            Me.BtnSave.Text = "&Save"
+            Me.BtnSave.UseVisualStyleBackColor = True
             '
-            'btnExit
+            'BtnExit
             '
-            Me.btnExit.DialogResult = DialogResult.Cancel
-            Me.btnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExit.Location = New Point(61, 541)
-            Me.btnExit.Margin = New Padding(4)
-            Me.btnExit.Name = "btnExit"
-            Me.btnExit.Size = New Size(125, 30)
-            Me.btnExit.TabIndex = 38
-            Me.btnExit.Text = "E&xit"
-            Me.btnExit.UseVisualStyleBackColor = True
+            Me.BtnExit.DialogResult = DialogResult.Cancel
+            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New Point(61, 541)
+            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.Name = "BtnExit"
+            Me.BtnExit.Size = New Size(125, 30)
+            Me.BtnExit.TabIndex = 38
+            Me.BtnExit.Text = "E&xit"
+            Me.BtnExit.UseVisualStyleBackColor = True
             '
-            'btnNewUser
+            'BtnNewUser
             '
-            Me.btnNewUser.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnNewUser.Location = New Point(61, 389)
-            Me.btnNewUser.Margin = New Padding(4)
-            Me.btnNewUser.Name = "btnNewUser"
-            Me.btnNewUser.Size = New Size(125, 30)
-            Me.btnNewUser.TabIndex = 34
-            Me.btnNewUser.Text = "&New User"
-            Me.btnNewUser.UseVisualStyleBackColor = True
+            Me.BtnNewUser.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnNewUser.Location = New Point(61, 389)
+            Me.BtnNewUser.Margin = New Padding(4)
+            Me.BtnNewUser.Name = "BtnNewUser"
+            Me.BtnNewUser.Size = New Size(125, 30)
+            Me.BtnNewUser.TabIndex = 34
+            Me.BtnNewUser.Text = "&New User"
+            Me.BtnNewUser.UseVisualStyleBackColor = True
             '
-            'btnDelete
+            'BtnDelete
             '
-            Me.btnDelete.Enabled = False
-            Me.btnDelete.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDelete.Location = New Point(61, 427)
-            Me.btnDelete.Margin = New Padding(4)
-            Me.btnDelete.Name = "btnDelete"
-            Me.btnDelete.Size = New Size(125, 30)
-            Me.btnDelete.TabIndex = 35
-            Me.btnDelete.Text = "&Delete User"
-            Me.btnDelete.UseVisualStyleBackColor = True
+            Me.BtnDelete.Enabled = False
+            Me.BtnDelete.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDelete.Location = New Point(61, 427)
+            Me.BtnDelete.Margin = New Padding(4)
+            Me.BtnDelete.Name = "BtnDelete"
+            Me.BtnDelete.Size = New Size(125, 30)
+            Me.BtnDelete.TabIndex = 35
+            Me.BtnDelete.Text = "&Delete User"
+            Me.BtnDelete.UseVisualStyleBackColor = True
             '
-            'lblPass
+            'LblPass
             '
-            Me.lblPass.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPass.Location = New Point(251, 77)
-            Me.lblPass.Margin = New Padding(4, 0, 4, 0)
-            Me.lblPass.Name = "lblPass"
-            Me.lblPass.Size = New Size(125, 24)
-            Me.lblPass.TabIndex = 46
-            Me.lblPass.Text = "Password:"
-            Me.lblPass.TextAlign = ContentAlignment.MiddleRight
+            Me.LblPass.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPass.Location = New Point(251, 77)
+            Me.LblPass.Margin = New Padding(4, 0, 4, 0)
+            Me.LblPass.Name = "LblPass"
+            Me.LblPass.Size = New Size(125, 24)
+            Me.LblPass.TabIndex = 46
+            Me.LblPass.Text = "Password:"
+            Me.LblPass.TextAlign = ContentAlignment.MiddleRight
             '
             'txtChangePass
             '
@@ -773,17 +773,17 @@ Namespace Forms.Admin
             Me.Label16.Text = "Two-H Weapon:"
             Me.Label16.TextAlign = ContentAlignment.MiddleRight
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(61, 465)
-            Me.btnClear.Margin = New Padding(4)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(125, 30)
-            Me.btnClear.TabIndex = 36
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(61, 465)
+            Me.BtnClear.Margin = New Padding(4)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(125, 30)
+            Me.BtnClear.TabIndex = 36
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
             'Label18
             '
@@ -954,83 +954,83 @@ Namespace Forms.Admin
             Me.chkAlive.TabIndex = 7
             Me.chkAlive.UseVisualStyleBackColor = True
             '
-            'cmbCurrWeapon
+            'CmbCurrWeapon
             '
-            Me.cmbCurrWeapon.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbCurrWeapon.Enabled = False
-            Me.cmbCurrWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbCurrWeapon.FormattingEnabled = True
-            Me.cmbCurrWeapon.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
-            Me.cmbCurrWeapon.Location = New Point(699, 47)
-            Me.cmbCurrWeapon.Name = "cmbCurrWeapon"
-            Me.cmbCurrWeapon.Size = New Size(101, 24)
-            Me.cmbCurrWeapon.TabIndex = 13
+            Me.CmbCurrWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbCurrWeapon.Enabled = False
+            Me.CmbCurrWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbCurrWeapon.FormattingEnabled = True
+            Me.CmbCurrWeapon.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
+            Me.CmbCurrWeapon.Location = New Point(699, 47)
+            Me.CmbCurrWeapon.Name = "CmbCurrWeapon"
+            Me.CmbCurrWeapon.Size = New Size(101, 24)
+            Me.CmbCurrWeapon.TabIndex = 13
             '
-            'cmbLoc
+            'CmbLoc
             '
-            Me.cmbLoc.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbLoc.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbLoc.FormattingEnabled = True
-            Me.cmbLoc.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
-            Me.cmbLoc.Location = New Point(383, 425)
-            Me.cmbLoc.Name = "cmbLoc"
-            Me.cmbLoc.Size = New Size(101, 24)
-            Me.cmbLoc.TabIndex = 8
+            Me.CmbLoc.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbLoc.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbLoc.FormattingEnabled = True
+            Me.CmbLoc.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
+            Me.CmbLoc.Location = New Point(383, 425)
+            Me.CmbLoc.Name = "CmbLoc"
+            Me.CmbLoc.Size = New Size(101, 24)
+            Me.CmbLoc.TabIndex = 8
             '
-            'cmbLightWeapon
+            'CmbLightWeapon
             '
-            Me.cmbLightWeapon.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbLightWeapon.Enabled = False
-            Me.cmbLightWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbLightWeapon.FormattingEnabled = True
-            Me.cmbLightWeapon.Location = New Point(699, 77)
-            Me.cmbLightWeapon.Name = "cmbLightWeapon"
-            Me.cmbLightWeapon.Size = New Size(175, 24)
-            Me.cmbLightWeapon.TabIndex = 14
+            Me.CmbLightWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbLightWeapon.Enabled = False
+            Me.CmbLightWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbLightWeapon.FormattingEnabled = True
+            Me.CmbLightWeapon.Location = New Point(699, 77)
+            Me.CmbLightWeapon.Name = "CmbLightWeapon"
+            Me.CmbLightWeapon.Size = New Size(175, 24)
+            Me.CmbLightWeapon.TabIndex = 14
             '
-            'cmbHeavyWeapon
+            'CmbHeavyWeapon
             '
-            Me.cmbHeavyWeapon.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbHeavyWeapon.Enabled = False
-            Me.cmbHeavyWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbHeavyWeapon.FormattingEnabled = True
-            Me.cmbHeavyWeapon.Location = New Point(699, 108)
-            Me.cmbHeavyWeapon.Name = "cmbHeavyWeapon"
-            Me.cmbHeavyWeapon.Size = New Size(175, 24)
-            Me.cmbHeavyWeapon.TabIndex = 15
+            Me.CmbHeavyWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbHeavyWeapon.Enabled = False
+            Me.CmbHeavyWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbHeavyWeapon.FormattingEnabled = True
+            Me.CmbHeavyWeapon.Location = New Point(699, 108)
+            Me.CmbHeavyWeapon.Name = "CmbHeavyWeapon"
+            Me.CmbHeavyWeapon.Size = New Size(175, 24)
+            Me.CmbHeavyWeapon.TabIndex = 15
             '
-            'cmbTwoHWeapon
+            'CmbTwoHWeapon
             '
-            Me.cmbTwoHWeapon.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbTwoHWeapon.Enabled = False
-            Me.cmbTwoHWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbTwoHWeapon.FormattingEnabled = True
-            Me.cmbTwoHWeapon.Location = New Point(699, 138)
-            Me.cmbTwoHWeapon.Name = "cmbTwoHWeapon"
-            Me.cmbTwoHWeapon.Size = New Size(175, 24)
-            Me.cmbTwoHWeapon.TabIndex = 16
+            Me.CmbTwoHWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbTwoHWeapon.Enabled = False
+            Me.CmbTwoHWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbTwoHWeapon.FormattingEnabled = True
+            Me.CmbTwoHWeapon.Location = New Point(699, 138)
+            Me.CmbTwoHWeapon.Name = "CmbTwoHWeapon"
+            Me.CmbTwoHWeapon.Size = New Size(175, 24)
+            Me.CmbTwoHWeapon.TabIndex = 16
             '
-            'cmbArmor
+            'CmbArmor
             '
-            Me.cmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbArmor.Enabled = False
-            Me.cmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbArmor.FormattingEnabled = True
-            Me.cmbArmor.Location = New Point(699, 168)
-            Me.cmbArmor.Name = "cmbArmor"
-            Me.cmbArmor.Size = New Size(175, 24)
-            Me.cmbArmor.TabIndex = 17
+            Me.CmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbArmor.Enabled = False
+            Me.CmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbArmor.FormattingEnabled = True
+            Me.CmbArmor.Location = New Point(699, 168)
+            Me.CmbArmor.Name = "CmbArmor"
+            Me.CmbArmor.Size = New Size(175, 24)
+            Me.CmbArmor.TabIndex = 17
             '
-            'cmbPotion
+            'CmbPotion
             '
-            Me.cmbPotion.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbPotion.Enabled = False
-            Me.cmbPotion.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbPotion.FormattingEnabled = True
-            Me.cmbPotion.Location = New Point(699, 198)
-            Me.cmbPotion.Name = "cmbPotion"
-            Me.cmbPotion.Size = New Size(175, 24)
-            Me.cmbPotion.TabIndex = 18
+            Me.CmbPotion.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbPotion.Enabled = False
+            Me.CmbPotion.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbPotion.FormattingEnabled = True
+            Me.CmbPotion.Location = New Point(699, 198)
+            Me.CmbPotion.Name = "CmbPotion"
+            Me.CmbPotion.Size = New Size(175, 24)
+            Me.CmbPotion.TabIndex = 18
             '
             'chkShovel
             '
@@ -1044,17 +1044,17 @@ Namespace Forms.Admin
             Me.chkShovel.TabIndex = 69
             Me.chkShovel.UseVisualStyleBackColor = True
             '
-            'lblShovel
+            'LblShovel
             '
-            Me.lblShovel.BorderStyle = BorderStyle.FixedSingle
-            Me.lblShovel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblShovel.Location = New Point(567, 347)
-            Me.lblShovel.Margin = New Padding(4, 0, 4, 0)
-            Me.lblShovel.Name = "lblShovel"
-            Me.lblShovel.Size = New Size(125, 24)
-            Me.lblShovel.TabIndex = 70
-            Me.lblShovel.Text = "Shovel:"
-            Me.lblShovel.TextAlign = ContentAlignment.MiddleRight
+            Me.LblShovel.BorderStyle = BorderStyle.FixedSingle
+            Me.LblShovel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblShovel.Location = New Point(567, 347)
+            Me.LblShovel.Margin = New Padding(4, 0, 4, 0)
+            Me.LblShovel.Name = "LblShovel"
+            Me.LblShovel.Size = New Size(125, 24)
+            Me.LblShovel.TabIndex = 70
+            Me.LblShovel.Text = "Shovel:"
+            Me.LblShovel.TextAlign = ContentAlignment.MiddleRight
             '
             'chkLantern
             '
@@ -1068,17 +1068,17 @@ Namespace Forms.Admin
             Me.chkLantern.TabIndex = 71
             Me.chkLantern.UseVisualStyleBackColor = True
             '
-            'lblLantern
+            'LblLantern
             '
-            Me.lblLantern.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLantern.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLantern.Location = New Point(567, 377)
-            Me.lblLantern.Margin = New Padding(4, 0, 4, 0)
-            Me.lblLantern.Name = "lblLantern"
-            Me.lblLantern.Size = New Size(125, 24)
-            Me.lblLantern.TabIndex = 72
-            Me.lblLantern.Text = "Lantern:"
-            Me.lblLantern.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLantern.BorderStyle = BorderStyle.FixedSingle
+            Me.LblLantern.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLantern.Location = New Point(567, 377)
+            Me.LblLantern.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLantern.Name = "LblLantern"
+            Me.LblLantern.Size = New Size(125, 24)
+            Me.LblLantern.TabIndex = 72
+            Me.LblLantern.Text = "Lantern:"
+            Me.LblLantern.TextAlign = ContentAlignment.MiddleRight
             '
             'chkAmulet
             '
@@ -1092,37 +1092,37 @@ Namespace Forms.Admin
             Me.chkAmulet.TabIndex = 73
             Me.chkAmulet.UseVisualStyleBackColor = True
             '
-            'lblAmulet
+            'LblAmulet
             '
-            Me.lblAmulet.BorderStyle = BorderStyle.FixedSingle
-            Me.lblAmulet.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblAmulet.Location = New Point(567, 407)
-            Me.lblAmulet.Margin = New Padding(4, 0, 4, 0)
-            Me.lblAmulet.Name = "lblAmulet"
-            Me.lblAmulet.Size = New Size(125, 24)
-            Me.lblAmulet.TabIndex = 74
-            Me.lblAmulet.Text = "Amulet:"
-            Me.lblAmulet.TextAlign = ContentAlignment.MiddleRight
+            Me.LblAmulet.BorderStyle = BorderStyle.FixedSingle
+            Me.LblAmulet.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblAmulet.Location = New Point(567, 407)
+            Me.LblAmulet.Margin = New Padding(4, 0, 4, 0)
+            Me.LblAmulet.Name = "LblAmulet"
+            Me.LblAmulet.Size = New Size(125, 24)
+            Me.LblAmulet.TabIndex = 74
+            Me.LblAmulet.Text = "Amulet:"
+            Me.LblAmulet.TextAlign = ContentAlignment.MiddleRight
             '
             'frmAdminUsers
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnExit
+            Me.CancelButton = Me.BtnExit
             Me.ClientSize = New Size(1141, 583)
             Me.Controls.Add(Me.chkAmulet)
-            Me.Controls.Add(Me.lblAmulet)
+            Me.Controls.Add(Me.LblAmulet)
             Me.Controls.Add(Me.chkLantern)
-            Me.Controls.Add(Me.lblLantern)
+            Me.Controls.Add(Me.LblLantern)
             Me.Controls.Add(Me.chkShovel)
-            Me.Controls.Add(Me.lblShovel)
-            Me.Controls.Add(Me.cmbPotion)
-            Me.Controls.Add(Me.cmbArmor)
-            Me.Controls.Add(Me.cmbTwoHWeapon)
-            Me.Controls.Add(Me.cmbHeavyWeapon)
-            Me.Controls.Add(Me.cmbLightWeapon)
-            Me.Controls.Add(Me.cmbLoc)
-            Me.Controls.Add(Me.cmbCurrWeapon)
+            Me.Controls.Add(Me.LblShovel)
+            Me.Controls.Add(Me.CmbPotion)
+            Me.Controls.Add(Me.CmbArmor)
+            Me.Controls.Add(Me.CmbTwoHWeapon)
+            Me.Controls.Add(Me.CmbHeavyWeapon)
+            Me.Controls.Add(Me.CmbLightWeapon)
+            Me.Controls.Add(Me.CmbLoc)
+            Me.Controls.Add(Me.CmbCurrWeapon)
             Me.Controls.Add(Me.chkAlive)
             Me.Controls.Add(Me.Label25)
             Me.Controls.Add(Me.txtThirst)
@@ -1137,16 +1137,16 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label17)
             Me.Controls.Add(Me.txtLockpicks)
             Me.Controls.Add(Me.Label18)
-            Me.Controls.Add(Me.btnClear)
+            Me.Controls.Add(Me.BtnClear)
             Me.Controls.Add(Me.Label16)
             Me.Controls.Add(Me.Label15)
             Me.Controls.Add(Me.Label14)
             Me.Controls.Add(Me.txtChangePass)
-            Me.Controls.Add(Me.lblPass)
-            Me.Controls.Add(Me.btnDelete)
-            Me.Controls.Add(Me.btnNewUser)
-            Me.Controls.Add(Me.btnExit)
-            Me.Controls.Add(Me.btnSave)
+            Me.Controls.Add(Me.LblPass)
+            Me.Controls.Add(Me.BtnDelete)
+            Me.Controls.Add(Me.BtnNewUser)
+            Me.Controls.Add(Me.BtnExit)
+            Me.Controls.Add(Me.BtnSave)
             Me.Controls.Add(Me.txtSlipping)
             Me.Controls.Add(Me.txtStealth)
             Me.Controls.Add(Me.txtHenchmenLevel1)
@@ -1175,24 +1175,24 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.txtGoldLoan)
             Me.Controls.Add(Me.txtGoldBank)
             Me.Controls.Add(Me.txtSkillPts)
-            Me.Controls.Add(Me.lblHenchmenLevel5)
-            Me.Controls.Add(Me.lblHenchmenLevel4)
-            Me.Controls.Add(Me.lblHenchmenLevel3)
-            Me.Controls.Add(Me.lblHenchmenLevel2)
+            Me.Controls.Add(Me.LblHenchmenLevel5)
+            Me.Controls.Add(Me.LblHenchmenLevel4)
+            Me.Controls.Add(Me.LblHenchmenLevel3)
+            Me.Controls.Add(Me.LblHenchmenLevel2)
             Me.Controls.Add(Me.txtName)
-            Me.Controls.Add(Me.lblLocation)
+            Me.Controls.Add(Me.LblLocation)
             Me.Controls.Add(Me.Label4)
             Me.Controls.Add(Me.Label3)
-            Me.Controls.Add(Me.lblHenchmenLevel1)
+            Me.Controls.Add(Me.LblHenchmenLevel1)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.lblAlive)
-            Me.Controls.Add(Me.lblExp)
-            Me.Controls.Add(Me.lblSkillPts)
-            Me.Controls.Add(Me.lblCurrentEndurance)
-            Me.Controls.Add(Me.lblMaximumEndurance)
-            Me.Controls.Add(Me.lblLevel)
-            Me.Controls.Add(Me.lblName)
-            Me.Controls.Add(Me.lstUsers)
+            Me.Controls.Add(Me.LblAlive)
+            Me.Controls.Add(Me.LblExp)
+            Me.Controls.Add(Me.LblSkillPts)
+            Me.Controls.Add(Me.LblCurrentEndurance)
+            Me.Controls.Add(Me.LblMaximumEndurance)
+            Me.Controls.Add(Me.LblLevel)
+            Me.Controls.Add(Me.LblName)
+            Me.Controls.Add(Me.LstUsers)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
@@ -1205,23 +1205,23 @@ Namespace Forms.Admin
 
         End Sub
         Friend WithEvents LstUsers As ListBox
-        Friend WithEvents lblName As Label
-        Friend WithEvents lblLevel As Label
-        Friend WithEvents lblMaximumEndurance As Label
-        Friend WithEvents lblCurrentEndurance As Label
-        Friend WithEvents lblSkillPts As Label
-        Friend WithEvents lblExp As Label
-        Friend WithEvents lblAlive As Label
+        Friend WithEvents LblName As Label
+        Friend WithEvents LblLevel As Label
+        Friend WithEvents LblMaximumEndurance As Label
+        Friend WithEvents LblCurrentEndurance As Label
+        Friend WithEvents LblSkillPts As Label
+        Friend WithEvents LblExp As Label
+        Friend WithEvents LblAlive As Label
         Friend WithEvents Label1 As Label
-        Friend WithEvents lblHenchmenLevel1 As Label
+        Friend WithEvents LblHenchmenLevel1 As Label
         Friend WithEvents Label3 As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents lblLocation As Label
+        Friend WithEvents LblLocation As Label
         Friend WithEvents TxtName As TextBox
-        Friend WithEvents lblHenchmenLevel2 As Label
-        Friend WithEvents lblHenchmenLevel3 As Label
-        Friend WithEvents lblHenchmenLevel4 As Label
-        Friend WithEvents lblHenchmenLevel5 As Label
+        Friend WithEvents LblHenchmenLevel2 As Label
+        Friend WithEvents LblHenchmenLevel3 As Label
+        Friend WithEvents LblHenchmenLevel4 As Label
+        Friend WithEvents LblHenchmenLevel5 As Label
         Friend WithEvents TxtSkillPts As TextBox
         Friend WithEvents TxtGoldBank As TextBox
         Friend WithEvents TxtGoldLoan As TextBox
@@ -1254,7 +1254,7 @@ Namespace Forms.Admin
         Friend WithEvents BtnExit As Button
         Friend WithEvents BtnNewUser As Button
         Friend WithEvents BtnDelete As Button
-        Friend WithEvents lblPass As Label
+        Friend WithEvents LblPass As Label
         Friend WithEvents TxtChangePass As TextBox
         Friend WithEvents Label14 As Label
         Friend WithEvents Label15 As Label
@@ -1282,10 +1282,10 @@ Namespace Forms.Admin
         Friend WithEvents CmbArmor As ComboBox
         Friend WithEvents CmbPotion As ComboBox
         Friend WithEvents chkShovel As CheckBox
-        Friend WithEvents lblShovel As Label
+        Friend WithEvents LblShovel As Label
         Friend WithEvents chkLantern As CheckBox
-        Friend WithEvents lblLantern As Label
+        Friend WithEvents LblLantern As Label
         Friend WithEvents chkAmulet As CheckBox
-        Friend WithEvents lblAmulet As Label
+        Friend WithEvents LblAmulet As Label
     End Class
 End NameSpace

@@ -38,7 +38,7 @@ Namespace Forms.Admin
 
         '            _blnNewUser = False
         '            LstUsers.ClearSelected()
-        '            lblPass.Text = "Password:"
+        '            LblPass.Text = "Password:"
 
         '            'character
         '            TxtName.Clear()
@@ -256,7 +256,7 @@ Namespace Forms.Admin
         '            Clear()
         '            Enable()
         '            _blnNewUser = True
-        '            lblPass.Text = "Password:"
+        '            LblPass.Text = "Password:"
 
         '            'character
         '            TxtName.Clear()
@@ -589,7 +589,7 @@ Namespace Forms.Admin
         '                _sql = "SELECT * FROM Users WHERE UserName='" & LstUsers.SelectedItem.ToString & "'"
         '                _table = "User"
 
-        '                lblPass.Text = "Change Pass:"
+        '                LblPass.Text = "Change Pass:"
         '                LoadUser()  'load user
 
         '                'character

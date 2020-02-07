@@ -122,7 +122,7 @@ Namespace Forms.Admin
     '        '    LstMembers.Items.Add(username)
     '        'Next
 
-    '        'cmbGuildmaster.SelectedItem = _currentGuild.Master
+    '        'CmbGuildmaster.SelectedItem = _currentGuild.Master
     '    End Sub
 
     '    Private Async Sub LoadGuilds()
@@ -166,9 +166,9 @@ Namespace Forms.Admin
     '        '* This method handles selecting a guild.
     '        '* * * * *
 
-    '        '_currentGuild = Await .GetGuild(lstGuilds.SelectedIndex + 1)
+    '        '_currentGuild = Await .GetGuild(LstGuilds.SelectedIndex + 1)
     '        'Display()
-    '        'btnAddMember.Text = "&Add Member"
+    '        'BtnAddMember.Text = "&Add Member"
     '    End Sub
 
     '    Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged

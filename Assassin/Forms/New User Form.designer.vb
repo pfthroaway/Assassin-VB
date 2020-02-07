@@ -27,114 +27,114 @@ Namespace Forms
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.components = New Container()
-            Me.lblName = New Label()
-            Me.lblLightWeapons = New Label()
-            Me.lblBlocking = New Label()
-            Me.lblTwoHandedWeapons = New Label()
-            Me.lblHeavyWeapons = New Label()
-            Me.lblEndurance = New Label()
+            Me.LblName = New Label()
+            Me.LblLightWeapons = New Label()
+            Me.LblBlocking = New Label()
+            Me.LblTwoHandedWeapons = New Label()
+            Me.LblHeavyWeapons = New Label()
+            Me.LblEndurance = New Label()
             Me.txtName = New TextBox()
-            Me.lblSlipping = New Label()
-            Me.lblStealth = New Label()
-            Me.lblEndCurr = New Label()
-            Me.lblLightCurr = New Label()
-            Me.lblHeavyCurr = New Label()
-            Me.lblTwoCurr = New Label()
-            Me.lblBlockingCurr = New Label()
-            Me.lblSlippingCurr = New Label()
-            Me.lblStealthCurr = New Label()
-            Me.btnEndMinus = New Button()
-            Me.btnEndPlus = New Button()
-            Me.btnLightPlus = New Button()
-            Me.btnLightMinus = New Button()
-            Me.btnHeavyPlus = New Button()
-            Me.btnHeavyMinus = New Button()
-            Me.btnTwoPlus = New Button()
-            Me.btnTwoMinus = New Button()
-            Me.btnBlockPlus = New Button()
-            Me.btnBlockMinus = New Button()
-            Me.btnSlippingPlus = New Button()
-            Me.btnSlippingMinus = New Button()
-            Me.btnStealthPlus = New Button()
-            Me.btnStealthMinus = New Button()
-            Me.lblSkillPts = New Label()
-            Me.lblSkill = New Label()
-            Me.btnCreate = New Button()
-            Me.btnClear = New Button()
-            Me.btnExit = New Button()
+            Me.LblSlipping = New Label()
+            Me.LblStealth = New Label()
+            Me.LblEndCurr = New Label()
+            Me.LblLightCurr = New Label()
+            Me.LblHeavyCurr = New Label()
+            Me.LblTwoCurr = New Label()
+            Me.LblBlockingCurr = New Label()
+            Me.LblSlippingCurr = New Label()
+            Me.LblStealthCurr = New Label()
+            Me.BtnEndMinus = New Button()
+            Me.BtnEndPlus = New Button()
+            Me.BtnLightPlus = New Button()
+            Me.BtnLightMinus = New Button()
+            Me.BtnHeavyPlus = New Button()
+            Me.BtnHeavyMinus = New Button()
+            Me.BtnTwoPlus = New Button()
+            Me.BtnTwoMinus = New Button()
+            Me.BtnBlockPlus = New Button()
+            Me.BtnBlockMinus = New Button()
+            Me.BtnSlippingPlus = New Button()
+            Me.BtnSlippingMinus = New Button()
+            Me.BtnStealthPlus = New Button()
+            Me.BtnStealthMinus = New Button()
+            Me.LblSkillPts = New Label()
+            Me.LblSkill = New Label()
+            Me.BtnCreate = New Button()
+            Me.BtnClear = New Button()
+            Me.BtnExit = New Button()
             Me.Timer1 = New Timer(Me.components)
             Me.Timer2 = New Timer(Me.components)
             Me.txtPass = New TextBox()
-            Me.lblPass = New Label()
+            Me.LblPass = New Label()
             Me.txtConfirm = New TextBox()
-            Me.lblConfirm = New Label()
+            Me.LblConfirm = New Label()
             Me.SuspendLayout()
             '
-            'lblName
+            'LblName
             '
-            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblName.Location = New Point(48, 9)
-            Me.lblName.Margin = New Padding(4, 0, 4, 0)
-            Me.lblName.Name = "lblName"
-            Me.lblName.Size = New Size(100, 25)
-            Me.lblName.TabIndex = 0
-            Me.lblName.Text = "Name:"
-            Me.lblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New Point(48, 9)
+            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.Name = "LblName"
+            Me.LblName.Size = New Size(100, 25)
+            Me.LblName.TabIndex = 0
+            Me.LblName.Text = "Name:"
+            Me.LblName.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblLightWeapons
+            'LblLightWeapons
             '
-            Me.lblLightWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLightWeapons.Location = New Point(13, 159)
-            Me.lblLightWeapons.Margin = New Padding(4, 0, 4, 0)
-            Me.lblLightWeapons.Name = "lblLightWeapons"
-            Me.lblLightWeapons.Size = New Size(135, 25)
-            Me.lblLightWeapons.TabIndex = 1
-            Me.lblLightWeapons.Text = "Light Weapons:"
-            Me.lblLightWeapons.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLightWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLightWeapons.Location = New Point(13, 159)
+            Me.LblLightWeapons.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLightWeapons.Name = "LblLightWeapons"
+            Me.LblLightWeapons.Size = New Size(135, 25)
+            Me.LblLightWeapons.TabIndex = 1
+            Me.LblLightWeapons.Text = "Light Weapons:"
+            Me.LblLightWeapons.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblBlocking
+            'LblBlocking
             '
-            Me.lblBlocking.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblBlocking.Location = New Point(13, 255)
-            Me.lblBlocking.Margin = New Padding(4, 0, 4, 0)
-            Me.lblBlocking.Name = "lblBlocking"
-            Me.lblBlocking.Size = New Size(135, 25)
-            Me.lblBlocking.TabIndex = 2
-            Me.lblBlocking.Text = "Blocking:"
-            Me.lblBlocking.TextAlign = ContentAlignment.MiddleRight
+            Me.LblBlocking.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblBlocking.Location = New Point(13, 255)
+            Me.LblBlocking.Margin = New Padding(4, 0, 4, 0)
+            Me.LblBlocking.Name = "LblBlocking"
+            Me.LblBlocking.Size = New Size(135, 25)
+            Me.LblBlocking.TabIndex = 2
+            Me.LblBlocking.Text = "Blocking:"
+            Me.LblBlocking.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblTwoHandedWeapons
+            'LblTwoHandedWeapons
             '
-            Me.lblTwoHandedWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTwoHandedWeapons.Location = New Point(13, 223)
-            Me.lblTwoHandedWeapons.Margin = New Padding(4, 0, 4, 0)
-            Me.lblTwoHandedWeapons.Name = "lblTwoHandedWeapons"
-            Me.lblTwoHandedWeapons.Size = New Size(135, 25)
-            Me.lblTwoHandedWeapons.TabIndex = 3
-            Me.lblTwoHandedWeapons.Text = "Two-H Weapons:"
-            Me.lblTwoHandedWeapons.TextAlign = ContentAlignment.MiddleRight
+            Me.LblTwoHandedWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblTwoHandedWeapons.Location = New Point(13, 223)
+            Me.LblTwoHandedWeapons.Margin = New Padding(4, 0, 4, 0)
+            Me.LblTwoHandedWeapons.Name = "LblTwoHandedWeapons"
+            Me.LblTwoHandedWeapons.Size = New Size(135, 25)
+            Me.LblTwoHandedWeapons.TabIndex = 3
+            Me.LblTwoHandedWeapons.Text = "Two-H Weapons:"
+            Me.LblTwoHandedWeapons.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblHeavyWeapons
+            'LblHeavyWeapons
             '
-            Me.lblHeavyWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHeavyWeapons.Location = New Point(13, 191)
-            Me.lblHeavyWeapons.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHeavyWeapons.Name = "lblHeavyWeapons"
-            Me.lblHeavyWeapons.Size = New Size(135, 25)
-            Me.lblHeavyWeapons.TabIndex = 4
-            Me.lblHeavyWeapons.Text = "Heavy Weapons:"
-            Me.lblHeavyWeapons.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHeavyWeapons.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHeavyWeapons.Location = New Point(13, 191)
+            Me.LblHeavyWeapons.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHeavyWeapons.Name = "LblHeavyWeapons"
+            Me.LblHeavyWeapons.Size = New Size(135, 25)
+            Me.LblHeavyWeapons.TabIndex = 4
+            Me.LblHeavyWeapons.Text = "Heavy Weapons:"
+            Me.LblHeavyWeapons.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblEndurance
+            'LblEndurance
             '
-            Me.lblEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEndurance.Location = New Point(13, 127)
-            Me.lblEndurance.Margin = New Padding(4, 0, 4, 0)
-            Me.lblEndurance.Name = "lblEndurance"
-            Me.lblEndurance.Size = New Size(135, 25)
-            Me.lblEndurance.TabIndex = 5
-            Me.lblEndurance.Text = "Endurance:"
-            Me.lblEndurance.TextAlign = ContentAlignment.MiddleRight
+            Me.LblEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEndurance.Location = New Point(13, 127)
+            Me.LblEndurance.Margin = New Padding(4, 0, 4, 0)
+            Me.LblEndurance.Name = "LblEndurance"
+            Me.LblEndurance.Size = New Size(135, 25)
+            Me.LblEndurance.TabIndex = 5
+            Me.LblEndurance.Text = "Endurance:"
+            Me.LblEndurance.TextAlign = ContentAlignment.MiddleRight
             '
             'txtName
             '
@@ -147,345 +147,345 @@ Namespace Forms
             Me.txtName.TabIndex = 0
             Me.txtName.TextAlign = HorizontalAlignment.Center
             '
-            'lblSlipping
+            'LblSlipping
             '
-            Me.lblSlipping.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSlipping.Location = New Point(13, 287)
-            Me.lblSlipping.Margin = New Padding(4, 0, 4, 0)
-            Me.lblSlipping.Name = "lblSlipping"
-            Me.lblSlipping.Size = New Size(135, 25)
-            Me.lblSlipping.TabIndex = 7
-            Me.lblSlipping.Text = "Slipping:"
-            Me.lblSlipping.TextAlign = ContentAlignment.MiddleRight
+            Me.LblSlipping.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSlipping.Location = New Point(13, 287)
+            Me.LblSlipping.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSlipping.Name = "LblSlipping"
+            Me.LblSlipping.Size = New Size(135, 25)
+            Me.LblSlipping.TabIndex = 7
+            Me.LblSlipping.Text = "Slipping:"
+            Me.LblSlipping.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblStealth
+            'LblStealth
             '
-            Me.lblStealth.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblStealth.Location = New Point(13, 318)
-            Me.lblStealth.Margin = New Padding(4, 0, 4, 0)
-            Me.lblStealth.Name = "lblStealth"
-            Me.lblStealth.Size = New Size(135, 25)
-            Me.lblStealth.TabIndex = 8
-            Me.lblStealth.Text = "Stealth:"
-            Me.lblStealth.TextAlign = ContentAlignment.MiddleRight
+            Me.LblStealth.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblStealth.Location = New Point(13, 318)
+            Me.LblStealth.Margin = New Padding(4, 0, 4, 0)
+            Me.LblStealth.Name = "LblStealth"
+            Me.LblStealth.Size = New Size(135, 25)
+            Me.LblStealth.TabIndex = 8
+            Me.LblStealth.Text = "Stealth:"
+            Me.LblStealth.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblEndCurr
+            'LblEndCurr
             '
-            Me.lblEndCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEndCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEndCurr.Location = New Point(156, 127)
-            Me.lblEndCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblEndCurr.Name = "lblEndCurr"
-            Me.lblEndCurr.Size = New Size(50, 25)
-            Me.lblEndCurr.TabIndex = 9
-            Me.lblEndCurr.Text = "100"
-            Me.lblEndCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEndCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEndCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEndCurr.Location = New Point(156, 127)
+            Me.LblEndCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblEndCurr.Name = "LblEndCurr"
+            Me.LblEndCurr.Size = New Size(50, 25)
+            Me.LblEndCurr.TabIndex = 9
+            Me.LblEndCurr.Text = "100"
+            Me.LblEndCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblLightCurr
+            'LblLightCurr
             '
-            Me.lblLightCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblLightCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLightCurr.Location = New Point(156, 159)
-            Me.lblLightCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblLightCurr.Name = "lblLightCurr"
-            Me.lblLightCurr.Size = New Size(50, 25)
-            Me.lblLightCurr.TabIndex = 10
-            Me.lblLightCurr.Text = "10%"
-            Me.lblLightCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblLightCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblLightCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLightCurr.Location = New Point(156, 159)
+            Me.LblLightCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLightCurr.Name = "LblLightCurr"
+            Me.LblLightCurr.Size = New Size(50, 25)
+            Me.LblLightCurr.TabIndex = 10
+            Me.LblLightCurr.Text = "10%"
+            Me.LblLightCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHeavyCurr
+            'LblHeavyCurr
             '
-            Me.lblHeavyCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHeavyCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHeavyCurr.Location = New Point(156, 191)
-            Me.lblHeavyCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHeavyCurr.Name = "lblHeavyCurr"
-            Me.lblHeavyCurr.Size = New Size(50, 25)
-            Me.lblHeavyCurr.TabIndex = 11
-            Me.lblHeavyCurr.Text = "10%"
-            Me.lblHeavyCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHeavyCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHeavyCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHeavyCurr.Location = New Point(156, 191)
+            Me.LblHeavyCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHeavyCurr.Name = "LblHeavyCurr"
+            Me.LblHeavyCurr.Size = New Size(50, 25)
+            Me.LblHeavyCurr.TabIndex = 11
+            Me.LblHeavyCurr.Text = "10%"
+            Me.LblHeavyCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblTwoCurr
+            'LblTwoCurr
             '
-            Me.lblTwoCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblTwoCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTwoCurr.Location = New Point(156, 223)
-            Me.lblTwoCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblTwoCurr.Name = "lblTwoCurr"
-            Me.lblTwoCurr.Size = New Size(50, 25)
-            Me.lblTwoCurr.TabIndex = 12
-            Me.lblTwoCurr.Text = "10%"
-            Me.lblTwoCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblTwoCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblTwoCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblTwoCurr.Location = New Point(156, 223)
+            Me.LblTwoCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblTwoCurr.Name = "LblTwoCurr"
+            Me.LblTwoCurr.Size = New Size(50, 25)
+            Me.LblTwoCurr.TabIndex = 12
+            Me.LblTwoCurr.Text = "10%"
+            Me.LblTwoCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblBlockingCurr
+            'LblBlockingCurr
             '
-            Me.lblBlockingCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblBlockingCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblBlockingCurr.Location = New Point(156, 255)
-            Me.lblBlockingCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblBlockingCurr.Name = "lblBlockingCurr"
-            Me.lblBlockingCurr.Size = New Size(50, 25)
-            Me.lblBlockingCurr.TabIndex = 13
-            Me.lblBlockingCurr.Text = "10%"
-            Me.lblBlockingCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblBlockingCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblBlockingCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblBlockingCurr.Location = New Point(156, 255)
+            Me.LblBlockingCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblBlockingCurr.Name = "LblBlockingCurr"
+            Me.LblBlockingCurr.Size = New Size(50, 25)
+            Me.LblBlockingCurr.TabIndex = 13
+            Me.LblBlockingCurr.Text = "10%"
+            Me.LblBlockingCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblSlippingCurr
+            'LblSlippingCurr
             '
-            Me.lblSlippingCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSlippingCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSlippingCurr.Location = New Point(156, 287)
-            Me.lblSlippingCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblSlippingCurr.Name = "lblSlippingCurr"
-            Me.lblSlippingCurr.Size = New Size(50, 25)
-            Me.lblSlippingCurr.TabIndex = 14
-            Me.lblSlippingCurr.Text = "10%"
-            Me.lblSlippingCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblSlippingCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblSlippingCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSlippingCurr.Location = New Point(156, 287)
+            Me.LblSlippingCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSlippingCurr.Name = "LblSlippingCurr"
+            Me.LblSlippingCurr.Size = New Size(50, 25)
+            Me.LblSlippingCurr.TabIndex = 14
+            Me.LblSlippingCurr.Text = "10%"
+            Me.LblSlippingCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblStealthCurr
+            'LblStealthCurr
             '
-            Me.lblStealthCurr.BorderStyle = BorderStyle.FixedSingle
-            Me.lblStealthCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblStealthCurr.Location = New Point(156, 318)
-            Me.lblStealthCurr.Margin = New Padding(4, 0, 4, 0)
-            Me.lblStealthCurr.Name = "lblStealthCurr"
-            Me.lblStealthCurr.Size = New Size(50, 25)
-            Me.lblStealthCurr.TabIndex = 15
-            Me.lblStealthCurr.Text = "10%"
-            Me.lblStealthCurr.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblStealthCurr.BorderStyle = BorderStyle.FixedSingle
+            Me.LblStealthCurr.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblStealthCurr.Location = New Point(156, 318)
+            Me.LblStealthCurr.Margin = New Padding(4, 0, 4, 0)
+            Me.LblStealthCurr.Name = "LblStealthCurr"
+            Me.LblStealthCurr.Size = New Size(50, 25)
+            Me.LblStealthCurr.TabIndex = 15
+            Me.LblStealthCurr.Text = "10%"
+            Me.LblStealthCurr.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnEndMinus
+            'BtnEndMinus
             '
-            Me.btnEndMinus.Enabled = False
-            Me.btnEndMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEndMinus.Location = New Point(214, 127)
-            Me.btnEndMinus.Margin = New Padding(4)
-            Me.btnEndMinus.Name = "btnEndMinus"
-            Me.btnEndMinus.Size = New Size(30, 25)
-            Me.btnEndMinus.TabIndex = 3
-            Me.btnEndMinus.Text = "-"
-            Me.btnEndMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnEndMinus.UseVisualStyleBackColor = True
+            Me.BtnEndMinus.Enabled = False
+            Me.BtnEndMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnEndMinus.Location = New Point(214, 127)
+            Me.BtnEndMinus.Margin = New Padding(4)
+            Me.BtnEndMinus.Name = "BtnEndMinus"
+            Me.BtnEndMinus.Size = New Size(30, 25)
+            Me.BtnEndMinus.TabIndex = 3
+            Me.BtnEndMinus.Text = "-"
+            Me.BtnEndMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnEndMinus.UseVisualStyleBackColor = True
             '
-            'btnEndPlus
+            'BtnEndPlus
             '
-            Me.btnEndPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEndPlus.Location = New Point(252, 127)
-            Me.btnEndPlus.Margin = New Padding(4)
-            Me.btnEndPlus.Name = "btnEndPlus"
-            Me.btnEndPlus.Size = New Size(30, 25)
-            Me.btnEndPlus.TabIndex = 4
-            Me.btnEndPlus.Text = "+"
-            Me.btnEndPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnEndPlus.UseVisualStyleBackColor = True
+            Me.BtnEndPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnEndPlus.Location = New Point(252, 127)
+            Me.BtnEndPlus.Margin = New Padding(4)
+            Me.BtnEndPlus.Name = "BtnEndPlus"
+            Me.BtnEndPlus.Size = New Size(30, 25)
+            Me.BtnEndPlus.TabIndex = 4
+            Me.BtnEndPlus.Text = "+"
+            Me.BtnEndPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnEndPlus.UseVisualStyleBackColor = True
             '
-            'btnLightPlus
+            'BtnLightPlus
             '
-            Me.btnLightPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLightPlus.Location = New Point(252, 159)
-            Me.btnLightPlus.Margin = New Padding(4)
-            Me.btnLightPlus.Name = "btnLightPlus"
-            Me.btnLightPlus.Size = New Size(30, 25)
-            Me.btnLightPlus.TabIndex = 6
-            Me.btnLightPlus.Text = "+"
-            Me.btnLightPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnLightPlus.UseVisualStyleBackColor = True
+            Me.BtnLightPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnLightPlus.Location = New Point(252, 159)
+            Me.BtnLightPlus.Margin = New Padding(4)
+            Me.BtnLightPlus.Name = "BtnLightPlus"
+            Me.BtnLightPlus.Size = New Size(30, 25)
+            Me.BtnLightPlus.TabIndex = 6
+            Me.BtnLightPlus.Text = "+"
+            Me.BtnLightPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnLightPlus.UseVisualStyleBackColor = True
             '
-            'btnLightMinus
+            'BtnLightMinus
             '
-            Me.btnLightMinus.Enabled = False
-            Me.btnLightMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLightMinus.Location = New Point(214, 159)
-            Me.btnLightMinus.Margin = New Padding(4)
-            Me.btnLightMinus.Name = "btnLightMinus"
-            Me.btnLightMinus.Size = New Size(30, 25)
-            Me.btnLightMinus.TabIndex = 5
-            Me.btnLightMinus.Text = "-"
-            Me.btnLightMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnLightMinus.UseVisualStyleBackColor = True
+            Me.BtnLightMinus.Enabled = False
+            Me.BtnLightMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnLightMinus.Location = New Point(214, 159)
+            Me.BtnLightMinus.Margin = New Padding(4)
+            Me.BtnLightMinus.Name = "BtnLightMinus"
+            Me.BtnLightMinus.Size = New Size(30, 25)
+            Me.BtnLightMinus.TabIndex = 5
+            Me.BtnLightMinus.Text = "-"
+            Me.BtnLightMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnLightMinus.UseVisualStyleBackColor = True
             '
-            'btnHeavyPlus
+            'BtnHeavyPlus
             '
-            Me.btnHeavyPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnHeavyPlus.Location = New Point(252, 191)
-            Me.btnHeavyPlus.Margin = New Padding(4)
-            Me.btnHeavyPlus.Name = "btnHeavyPlus"
-            Me.btnHeavyPlus.Size = New Size(30, 25)
-            Me.btnHeavyPlus.TabIndex = 8
-            Me.btnHeavyPlus.Text = "+"
-            Me.btnHeavyPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnHeavyPlus.UseVisualStyleBackColor = True
+            Me.BtnHeavyPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnHeavyPlus.Location = New Point(252, 191)
+            Me.BtnHeavyPlus.Margin = New Padding(4)
+            Me.BtnHeavyPlus.Name = "BtnHeavyPlus"
+            Me.BtnHeavyPlus.Size = New Size(30, 25)
+            Me.BtnHeavyPlus.TabIndex = 8
+            Me.BtnHeavyPlus.Text = "+"
+            Me.BtnHeavyPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnHeavyPlus.UseVisualStyleBackColor = True
             '
-            'btnHeavyMinus
+            'BtnHeavyMinus
             '
-            Me.btnHeavyMinus.Enabled = False
-            Me.btnHeavyMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnHeavyMinus.Location = New Point(214, 191)
-            Me.btnHeavyMinus.Margin = New Padding(4)
-            Me.btnHeavyMinus.Name = "btnHeavyMinus"
-            Me.btnHeavyMinus.Size = New Size(30, 25)
-            Me.btnHeavyMinus.TabIndex = 7
-            Me.btnHeavyMinus.Text = "-"
-            Me.btnHeavyMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnHeavyMinus.UseVisualStyleBackColor = True
+            Me.BtnHeavyMinus.Enabled = False
+            Me.BtnHeavyMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnHeavyMinus.Location = New Point(214, 191)
+            Me.BtnHeavyMinus.Margin = New Padding(4)
+            Me.BtnHeavyMinus.Name = "BtnHeavyMinus"
+            Me.BtnHeavyMinus.Size = New Size(30, 25)
+            Me.BtnHeavyMinus.TabIndex = 7
+            Me.BtnHeavyMinus.Text = "-"
+            Me.BtnHeavyMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnHeavyMinus.UseVisualStyleBackColor = True
             '
-            'btnTwoPlus
+            'BtnTwoPlus
             '
-            Me.btnTwoPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnTwoPlus.Location = New Point(252, 223)
-            Me.btnTwoPlus.Margin = New Padding(4)
-            Me.btnTwoPlus.Name = "btnTwoPlus"
-            Me.btnTwoPlus.Size = New Size(30, 25)
-            Me.btnTwoPlus.TabIndex = 10
-            Me.btnTwoPlus.Text = "+"
-            Me.btnTwoPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnTwoPlus.UseVisualStyleBackColor = True
+            Me.BtnTwoPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnTwoPlus.Location = New Point(252, 223)
+            Me.BtnTwoPlus.Margin = New Padding(4)
+            Me.BtnTwoPlus.Name = "BtnTwoPlus"
+            Me.BtnTwoPlus.Size = New Size(30, 25)
+            Me.BtnTwoPlus.TabIndex = 10
+            Me.BtnTwoPlus.Text = "+"
+            Me.BtnTwoPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnTwoPlus.UseVisualStyleBackColor = True
             '
-            'btnTwoMinus
+            'BtnTwoMinus
             '
-            Me.btnTwoMinus.Enabled = False
-            Me.btnTwoMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnTwoMinus.Location = New Point(214, 223)
-            Me.btnTwoMinus.Margin = New Padding(4)
-            Me.btnTwoMinus.Name = "btnTwoMinus"
-            Me.btnTwoMinus.Size = New Size(30, 25)
-            Me.btnTwoMinus.TabIndex = 9
-            Me.btnTwoMinus.Text = "-"
-            Me.btnTwoMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnTwoMinus.UseVisualStyleBackColor = True
+            Me.BtnTwoMinus.Enabled = False
+            Me.BtnTwoMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnTwoMinus.Location = New Point(214, 223)
+            Me.BtnTwoMinus.Margin = New Padding(4)
+            Me.BtnTwoMinus.Name = "BtnTwoMinus"
+            Me.BtnTwoMinus.Size = New Size(30, 25)
+            Me.BtnTwoMinus.TabIndex = 9
+            Me.BtnTwoMinus.Text = "-"
+            Me.BtnTwoMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnTwoMinus.UseVisualStyleBackColor = True
             '
-            'btnBlockPlus
+            'BtnBlockPlus
             '
-            Me.btnBlockPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBlockPlus.Location = New Point(252, 255)
-            Me.btnBlockPlus.Margin = New Padding(4)
-            Me.btnBlockPlus.Name = "btnBlockPlus"
-            Me.btnBlockPlus.Size = New Size(30, 25)
-            Me.btnBlockPlus.TabIndex = 12
-            Me.btnBlockPlus.Text = "+"
-            Me.btnBlockPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnBlockPlus.UseVisualStyleBackColor = True
+            Me.BtnBlockPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBlockPlus.Location = New Point(252, 255)
+            Me.BtnBlockPlus.Margin = New Padding(4)
+            Me.BtnBlockPlus.Name = "BtnBlockPlus"
+            Me.BtnBlockPlus.Size = New Size(30, 25)
+            Me.BtnBlockPlus.TabIndex = 12
+            Me.BtnBlockPlus.Text = "+"
+            Me.BtnBlockPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnBlockPlus.UseVisualStyleBackColor = True
             '
-            'btnBlockMinus
+            'BtnBlockMinus
             '
-            Me.btnBlockMinus.Enabled = False
-            Me.btnBlockMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBlockMinus.Location = New Point(214, 255)
-            Me.btnBlockMinus.Margin = New Padding(4)
-            Me.btnBlockMinus.Name = "btnBlockMinus"
-            Me.btnBlockMinus.Size = New Size(30, 25)
-            Me.btnBlockMinus.TabIndex = 11
-            Me.btnBlockMinus.Text = "-"
-            Me.btnBlockMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnBlockMinus.UseVisualStyleBackColor = True
+            Me.BtnBlockMinus.Enabled = False
+            Me.BtnBlockMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBlockMinus.Location = New Point(214, 255)
+            Me.BtnBlockMinus.Margin = New Padding(4)
+            Me.BtnBlockMinus.Name = "BtnBlockMinus"
+            Me.BtnBlockMinus.Size = New Size(30, 25)
+            Me.BtnBlockMinus.TabIndex = 11
+            Me.BtnBlockMinus.Text = "-"
+            Me.BtnBlockMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnBlockMinus.UseVisualStyleBackColor = True
             '
-            'btnSlippingPlus
+            'BtnSlippingPlus
             '
-            Me.btnSlippingPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSlippingPlus.Location = New Point(252, 287)
-            Me.btnSlippingPlus.Margin = New Padding(4)
-            Me.btnSlippingPlus.Name = "btnSlippingPlus"
-            Me.btnSlippingPlus.Size = New Size(30, 25)
-            Me.btnSlippingPlus.TabIndex = 14
-            Me.btnSlippingPlus.Text = "+"
-            Me.btnSlippingPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnSlippingPlus.UseVisualStyleBackColor = True
+            Me.BtnSlippingPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSlippingPlus.Location = New Point(252, 287)
+            Me.BtnSlippingPlus.Margin = New Padding(4)
+            Me.BtnSlippingPlus.Name = "BtnSlippingPlus"
+            Me.BtnSlippingPlus.Size = New Size(30, 25)
+            Me.BtnSlippingPlus.TabIndex = 14
+            Me.BtnSlippingPlus.Text = "+"
+            Me.BtnSlippingPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnSlippingPlus.UseVisualStyleBackColor = True
             '
-            'btnSlippingMinus
+            'BtnSlippingMinus
             '
-            Me.btnSlippingMinus.Enabled = False
-            Me.btnSlippingMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSlippingMinus.Location = New Point(214, 287)
-            Me.btnSlippingMinus.Margin = New Padding(4)
-            Me.btnSlippingMinus.Name = "btnSlippingMinus"
-            Me.btnSlippingMinus.Size = New Size(30, 25)
-            Me.btnSlippingMinus.TabIndex = 13
-            Me.btnSlippingMinus.Text = "-"
-            Me.btnSlippingMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnSlippingMinus.UseVisualStyleBackColor = True
+            Me.BtnSlippingMinus.Enabled = False
+            Me.BtnSlippingMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSlippingMinus.Location = New Point(214, 287)
+            Me.BtnSlippingMinus.Margin = New Padding(4)
+            Me.BtnSlippingMinus.Name = "BtnSlippingMinus"
+            Me.BtnSlippingMinus.Size = New Size(30, 25)
+            Me.BtnSlippingMinus.TabIndex = 13
+            Me.BtnSlippingMinus.Text = "-"
+            Me.BtnSlippingMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnSlippingMinus.UseVisualStyleBackColor = True
             '
-            'btnStealthPlus
+            'BtnStealthPlus
             '
-            Me.btnStealthPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnStealthPlus.Location = New Point(252, 318)
-            Me.btnStealthPlus.Margin = New Padding(4)
-            Me.btnStealthPlus.Name = "btnStealthPlus"
-            Me.btnStealthPlus.Size = New Size(30, 25)
-            Me.btnStealthPlus.TabIndex = 16
-            Me.btnStealthPlus.Text = "+"
-            Me.btnStealthPlus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnStealthPlus.UseVisualStyleBackColor = True
+            Me.BtnStealthPlus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnStealthPlus.Location = New Point(252, 318)
+            Me.BtnStealthPlus.Margin = New Padding(4)
+            Me.BtnStealthPlus.Name = "BtnStealthPlus"
+            Me.BtnStealthPlus.Size = New Size(30, 25)
+            Me.BtnStealthPlus.TabIndex = 16
+            Me.BtnStealthPlus.Text = "+"
+            Me.BtnStealthPlus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnStealthPlus.UseVisualStyleBackColor = True
             '
-            'btnStealthMinus
+            'BtnStealthMinus
             '
-            Me.btnStealthMinus.Enabled = False
-            Me.btnStealthMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnStealthMinus.Location = New Point(214, 318)
-            Me.btnStealthMinus.Margin = New Padding(4)
-            Me.btnStealthMinus.Name = "btnStealthMinus"
-            Me.btnStealthMinus.Size = New Size(30, 25)
-            Me.btnStealthMinus.TabIndex = 15
-            Me.btnStealthMinus.Text = "-"
-            Me.btnStealthMinus.TextAlign = ContentAlignment.BottomCenter
-            Me.btnStealthMinus.UseVisualStyleBackColor = True
+            Me.BtnStealthMinus.Enabled = False
+            Me.BtnStealthMinus.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnStealthMinus.Location = New Point(214, 318)
+            Me.BtnStealthMinus.Margin = New Padding(4)
+            Me.BtnStealthMinus.Name = "BtnStealthMinus"
+            Me.BtnStealthMinus.Size = New Size(30, 25)
+            Me.BtnStealthMinus.TabIndex = 15
+            Me.BtnStealthMinus.Text = "-"
+            Me.BtnStealthMinus.TextAlign = ContentAlignment.BottomCenter
+            Me.BtnStealthMinus.UseVisualStyleBackColor = True
             '
-            'lblSkillPts
+            'LblSkillPts
             '
-            Me.lblSkillPts.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSkillPts.Location = New Point(214, 367)
-            Me.lblSkillPts.Margin = New Padding(4, 0, 4, 0)
-            Me.lblSkillPts.Name = "lblSkillPts"
-            Me.lblSkillPts.Size = New Size(68, 25)
-            Me.lblSkillPts.TabIndex = 31
-            Me.lblSkillPts.Text = "5"
-            Me.lblSkillPts.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblSkillPts.BorderStyle = BorderStyle.FixedSingle
+            Me.LblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkillPts.Location = New Point(214, 367)
+            Me.LblSkillPts.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSkillPts.Name = "LblSkillPts"
+            Me.LblSkillPts.Size = New Size(68, 25)
+            Me.LblSkillPts.TabIndex = 31
+            Me.LblSkillPts.Text = "5"
+            Me.LblSkillPts.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblSkill
+            'LblSkill
             '
-            Me.lblSkill.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSkill.Location = New Point(13, 367)
-            Me.lblSkill.Margin = New Padding(4, 0, 4, 0)
-            Me.lblSkill.Name = "lblSkill"
-            Me.lblSkill.Size = New Size(193, 25)
-            Me.lblSkill.TabIndex = 30
-            Me.lblSkill.Text = "Skill Points:"
-            Me.lblSkill.TextAlign = ContentAlignment.MiddleRight
+            Me.LblSkill.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkill.Location = New Point(13, 367)
+            Me.LblSkill.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSkill.Name = "LblSkill"
+            Me.LblSkill.Size = New Size(193, 25)
+            Me.LblSkill.TabIndex = 30
+            Me.LblSkill.Text = "Skill Points:"
+            Me.LblSkill.TextAlign = ContentAlignment.MiddleRight
             '
-            'btnCreate
+            'BtnCreate
             '
-            Me.btnCreate.Enabled = False
-            Me.btnCreate.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCreate.Location = New Point(13, 417)
-            Me.btnCreate.Margin = New Padding(4)
-            Me.btnCreate.Name = "btnCreate"
-            Me.btnCreate.Size = New Size(80, 30)
-            Me.btnCreate.TabIndex = 17
-            Me.btnCreate.Text = "&Create"
-            Me.btnCreate.UseVisualStyleBackColor = True
+            Me.BtnCreate.Enabled = False
+            Me.BtnCreate.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnCreate.Location = New Point(13, 417)
+            Me.BtnCreate.Margin = New Padding(4)
+            Me.BtnCreate.Name = "BtnCreate"
+            Me.BtnCreate.Size = New Size(80, 30)
+            Me.BtnCreate.TabIndex = 17
+            Me.BtnCreate.Text = "&Create"
+            Me.BtnCreate.UseVisualStyleBackColor = True
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(107, 417)
-            Me.btnClear.Margin = New Padding(4)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(80, 30)
-            Me.btnClear.TabIndex = 18
-            Me.btnClear.Text = "C&lear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(107, 417)
+            Me.BtnClear.Margin = New Padding(4)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(80, 30)
+            Me.BtnClear.TabIndex = 18
+            Me.BtnClear.Text = "C&lear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnExit
+            'BtnExit
             '
-            Me.btnExit.DialogResult = DialogResult.Cancel
-            Me.btnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExit.Location = New Point(202, 417)
-            Me.btnExit.Margin = New Padding(4)
-            Me.btnExit.Name = "btnExit"
-            Me.btnExit.Size = New Size(80, 30)
-            Me.btnExit.TabIndex = 19
-            Me.btnExit.Text = "E&xit"
-            Me.btnExit.UseVisualStyleBackColor = True
+            Me.BtnExit.DialogResult = DialogResult.Cancel
+            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New Point(202, 417)
+            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.Name = "BtnExit"
+            Me.BtnExit.Size = New Size(80, 30)
+            Me.BtnExit.TabIndex = 19
+            Me.BtnExit.Text = "E&xit"
+            Me.BtnExit.UseVisualStyleBackColor = True
             '
             'Timer1
             '
@@ -507,16 +507,16 @@ Namespace Forms
             Me.txtPass.TextAlign = HorizontalAlignment.Center
             Me.txtPass.UseSystemPasswordChar = True
             '
-            'lblPass
+            'LblPass
             '
-            Me.lblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPass.Location = New Point(48, 43)
-            Me.lblPass.Margin = New Padding(4, 0, 4, 0)
-            Me.lblPass.Name = "lblPass"
-            Me.lblPass.Size = New Size(100, 25)
-            Me.lblPass.TabIndex = 35
-            Me.lblPass.Text = "Password:"
-            Me.lblPass.TextAlign = ContentAlignment.MiddleRight
+            Me.LblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPass.Location = New Point(48, 43)
+            Me.LblPass.Margin = New Padding(4, 0, 4, 0)
+            Me.LblPass.Name = "LblPass"
+            Me.LblPass.Size = New Size(100, 25)
+            Me.LblPass.TabIndex = 35
+            Me.LblPass.Text = "Password:"
+            Me.LblPass.TextAlign = ContentAlignment.MiddleRight
             '
             'txtConfirm
             '
@@ -530,62 +530,62 @@ Namespace Forms
             Me.txtConfirm.TextAlign = HorizontalAlignment.Center
             Me.txtConfirm.UseSystemPasswordChar = True
             '
-            'lblConfirm
+            'LblConfirm
             '
-            Me.lblConfirm.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblConfirm.Location = New Point(48, 78)
-            Me.lblConfirm.Margin = New Padding(4, 0, 4, 0)
-            Me.lblConfirm.Name = "lblConfirm"
-            Me.lblConfirm.Size = New Size(100, 25)
-            Me.lblConfirm.TabIndex = 37
-            Me.lblConfirm.Text = "Confirm:"
-            Me.lblConfirm.TextAlign = ContentAlignment.MiddleRight
+            Me.LblConfirm.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblConfirm.Location = New Point(48, 78)
+            Me.LblConfirm.Margin = New Padding(4, 0, 4, 0)
+            Me.LblConfirm.Name = "LblConfirm"
+            Me.LblConfirm.Size = New Size(100, 25)
+            Me.LblConfirm.TabIndex = 37
+            Me.LblConfirm.Text = "Confirm:"
+            Me.LblConfirm.TextAlign = ContentAlignment.MiddleRight
             '
             'frmNewUser
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnExit
+            Me.CancelButton = Me.BtnExit
             Me.ClientSize = New Size(295, 459)
             Me.Controls.Add(Me.txtConfirm)
-            Me.Controls.Add(Me.lblConfirm)
+            Me.Controls.Add(Me.LblConfirm)
             Me.Controls.Add(Me.txtPass)
-            Me.Controls.Add(Me.lblPass)
-            Me.Controls.Add(Me.btnExit)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnCreate)
-            Me.Controls.Add(Me.lblSkillPts)
-            Me.Controls.Add(Me.lblSkill)
-            Me.Controls.Add(Me.btnStealthPlus)
-            Me.Controls.Add(Me.btnStealthMinus)
-            Me.Controls.Add(Me.btnSlippingPlus)
-            Me.Controls.Add(Me.btnSlippingMinus)
-            Me.Controls.Add(Me.btnBlockPlus)
-            Me.Controls.Add(Me.btnBlockMinus)
-            Me.Controls.Add(Me.btnTwoPlus)
-            Me.Controls.Add(Me.btnTwoMinus)
-            Me.Controls.Add(Me.btnHeavyPlus)
-            Me.Controls.Add(Me.btnHeavyMinus)
-            Me.Controls.Add(Me.btnLightPlus)
-            Me.Controls.Add(Me.btnLightMinus)
-            Me.Controls.Add(Me.btnEndPlus)
-            Me.Controls.Add(Me.btnEndMinus)
-            Me.Controls.Add(Me.lblStealthCurr)
-            Me.Controls.Add(Me.lblSlippingCurr)
-            Me.Controls.Add(Me.lblBlockingCurr)
-            Me.Controls.Add(Me.lblTwoCurr)
-            Me.Controls.Add(Me.lblHeavyCurr)
-            Me.Controls.Add(Me.lblLightCurr)
-            Me.Controls.Add(Me.lblEndCurr)
-            Me.Controls.Add(Me.lblStealth)
-            Me.Controls.Add(Me.lblSlipping)
+            Me.Controls.Add(Me.LblPass)
+            Me.Controls.Add(Me.BtnExit)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnCreate)
+            Me.Controls.Add(Me.LblSkillPts)
+            Me.Controls.Add(Me.LblSkill)
+            Me.Controls.Add(Me.BtnStealthPlus)
+            Me.Controls.Add(Me.BtnStealthMinus)
+            Me.Controls.Add(Me.BtnSlippingPlus)
+            Me.Controls.Add(Me.BtnSlippingMinus)
+            Me.Controls.Add(Me.BtnBlockPlus)
+            Me.Controls.Add(Me.BtnBlockMinus)
+            Me.Controls.Add(Me.BtnTwoPlus)
+            Me.Controls.Add(Me.BtnTwoMinus)
+            Me.Controls.Add(Me.BtnHeavyPlus)
+            Me.Controls.Add(Me.BtnHeavyMinus)
+            Me.Controls.Add(Me.BtnLightPlus)
+            Me.Controls.Add(Me.BtnLightMinus)
+            Me.Controls.Add(Me.BtnEndPlus)
+            Me.Controls.Add(Me.BtnEndMinus)
+            Me.Controls.Add(Me.LblStealthCurr)
+            Me.Controls.Add(Me.LblSlippingCurr)
+            Me.Controls.Add(Me.LblBlockingCurr)
+            Me.Controls.Add(Me.LblTwoCurr)
+            Me.Controls.Add(Me.LblHeavyCurr)
+            Me.Controls.Add(Me.LblLightCurr)
+            Me.Controls.Add(Me.LblEndCurr)
+            Me.Controls.Add(Me.LblStealth)
+            Me.Controls.Add(Me.LblSlipping)
             Me.Controls.Add(Me.txtName)
-            Me.Controls.Add(Me.lblEndurance)
-            Me.Controls.Add(Me.lblHeavyWeapons)
-            Me.Controls.Add(Me.lblTwoHandedWeapons)
-            Me.Controls.Add(Me.lblBlocking)
-            Me.Controls.Add(Me.lblLightWeapons)
-            Me.Controls.Add(Me.lblName)
+            Me.Controls.Add(Me.LblEndurance)
+            Me.Controls.Add(Me.LblHeavyWeapons)
+            Me.Controls.Add(Me.LblTwoHandedWeapons)
+            Me.Controls.Add(Me.LblBlocking)
+            Me.Controls.Add(Me.LblLightWeapons)
+            Me.Controls.Add(Me.LblName)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
@@ -598,22 +598,22 @@ Namespace Forms
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents lblName As Label
-        Friend WithEvents lblLightWeapons As Label
-        Friend WithEvents lblBlocking As Label
-        Friend WithEvents lblTwoHandedWeapons As Label
-        Friend WithEvents lblHeavyWeapons As Label
-        Friend WithEvents lblEndurance As Label
+        Friend WithEvents LblName As Label
+        Friend WithEvents LblLightWeapons As Label
+        Friend WithEvents LblBlocking As Label
+        Friend WithEvents LblTwoHandedWeapons As Label
+        Friend WithEvents LblHeavyWeapons As Label
+        Friend WithEvents LblEndurance As Label
         Friend WithEvents TxtName As TextBox
-        Friend WithEvents lblSlipping As Label
-        Friend WithEvents lblStealth As Label
-        Friend WithEvents lblEndCurr As Label
-        Friend WithEvents lblLightCurr As Label
-        Friend WithEvents lblHeavyCurr As Label
-        Friend WithEvents lblTwoCurr As Label
-        Friend WithEvents lblBlockingCurr As Label
-        Friend WithEvents lblSlippingCurr As Label
-        Friend WithEvents lblStealthCurr As Label
+        Friend WithEvents LblSlipping As Label
+        Friend WithEvents LblStealth As Label
+        Friend WithEvents LblEndCurr As Label
+        Friend WithEvents LblLightCurr As Label
+        Friend WithEvents LblHeavyCurr As Label
+        Friend WithEvents LblTwoCurr As Label
+        Friend WithEvents LblBlockingCurr As Label
+        Friend WithEvents LblSlippingCurr As Label
+        Friend WithEvents LblStealthCurr As Label
         Friend WithEvents BtnEndMinus As Button
         Friend WithEvents BtnEndPlus As Button
         Friend WithEvents BtnLightPlus As Button
@@ -628,16 +628,16 @@ Namespace Forms
         Friend WithEvents BtnSlippingMinus As Button
         Friend WithEvents BtnStealthPlus As Button
         Friend WithEvents BtnStealthMinus As Button
-        Friend WithEvents lblSkillPts As Label
-        Friend WithEvents lblSkill As Label
+        Friend WithEvents LblSkillPts As Label
+        Friend WithEvents LblSkill As Label
         Friend WithEvents BtnCreate As Button
         Friend WithEvents BtnClear As Button
         Friend WithEvents BtnExit As Button
         Friend WithEvents Timer1 As Timer
         Friend WithEvents Timer2 As Timer
         Friend WithEvents TxtPass As TextBox
-        Friend WithEvents lblPass As Label
+        Friend WithEvents LblPass As Label
         Friend WithEvents TxtConfirm As TextBox
-        Friend WithEvents lblConfirm As Label
+        Friend WithEvents LblConfirm As Label
     End Class
 End NameSpace

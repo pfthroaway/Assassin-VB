@@ -25,8 +25,8 @@ Namespace Forms.Shopping
             TxtThievesGuild.Select(0, 0)
             TxtThievesGuild.ScrollToCaret()
 
-            lblGold.Text = CurrentUser.GoldOnHand.ToString("N0")
-            lblLockpicks.Text = CurrentUser.Lockpicks.ToString("N0")
+            LblGold.Text = CurrentUser.GoldOnHand.ToString("N0")
+            LblLockpicks.Text = CurrentUser.Lockpicks.ToString("N0")
 
             BtnPurchase.Enabled = CurrentUser.GoldOnHand >= 300 AndAlso CurrentUser.Lockpicks < 99
         End Sub

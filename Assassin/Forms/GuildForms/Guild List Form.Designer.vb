@@ -26,39 +26,39 @@ Namespace Forms.GuildForms
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.lstGuilds = New ListBox()
+            Me.LstGuilds = New ListBox()
             Me.txtGuilds = New TextBox()
-            Me.btnEnter = New Button()
-            Me.btnApply = New Button()
-            Me.btnBack = New Button()
-            Me.lblGoldOnHand = New Label()
+            Me.BtnEnter = New Button()
+            Me.BtnApply = New Button()
+            Me.BtnBack = New Button()
+            Me.LblGoldOnHand = New Label()
             Me.Label4 = New Label()
-            Me.lblGuildGold = New Label()
+            Me.LblGuildGold = New Label()
             Me.Label6 = New Label()
             Me.Label7 = New Label()
             Me.Label8 = New Label()
             Me.Label9 = New Label()
             Me.Label10 = New Label()
             Me.Label11 = New Label()
-            Me.lblHenchmenLevel1 = New Label()
-            Me.lblHenchmenLevel2 = New Label()
-            Me.lblHenchmenLevel3 = New Label()
-            Me.lblHenchmenLevel4 = New Label()
-            Me.lblHenchmenLevel5 = New Label()
+            Me.LblHenchmenLevel1 = New Label()
+            Me.LblHenchmenLevel2 = New Label()
+            Me.LblHenchmenLevel3 = New Label()
+            Me.LblHenchmenLevel4 = New Label()
+            Me.LblHenchmenLevel5 = New Label()
             Me.Label2 = New Label()
-            Me.lblGuildmaster = New Label()
-            Me.lblFee = New Label()
+            Me.LblGuildmaster = New Label()
+            Me.LblFee = New Label()
             Me.Label5 = New Label()
             Me.SuspendLayout()
             '
-            'lstGuilds
+            'LstGuilds
             '
-            Me.lstGuilds.FormattingEnabled = True
-            Me.lstGuilds.ItemHeight = 18
-            Me.lstGuilds.Location = New Point(12, 159)
-            Me.lstGuilds.Name = "lstGuilds"
-            Me.lstGuilds.Size = New Size(225, 94)
-            Me.lstGuilds.TabIndex = 0
+            Me.LstGuilds.FormattingEnabled = True
+            Me.LstGuilds.ItemHeight = 18
+            Me.LstGuilds.Location = New Point(12, 159)
+            Me.LstGuilds.Name = "LstGuilds"
+            Me.LstGuilds.Size = New Size(225, 94)
+            Me.LstGuilds.TabIndex = 0
             '
             'txtGuilds
             '
@@ -73,48 +73,48 @@ Namespace Forms.GuildForms
             Me.txtGuilds.TabIndex = 4
             Me.txtGuilds.Text = "You enter the Guilds district."
             '
-            'btnEnter
+            'BtnEnter
             '
-            Me.btnEnter.Enabled = False
-            Me.btnEnter.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEnter.Location = New Point(49, 270)
-            Me.btnEnter.Name = "btnEnter"
-            Me.btnEnter.Size = New Size(150, 30)
-            Me.btnEnter.TabIndex = 1
-            Me.btnEnter.Text = "&Enter"
-            Me.btnEnter.UseVisualStyleBackColor = True
+            Me.BtnEnter.Enabled = False
+            Me.BtnEnter.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnEnter.Location = New Point(49, 270)
+            Me.BtnEnter.Name = "BtnEnter"
+            Me.BtnEnter.Size = New Size(150, 30)
+            Me.BtnEnter.TabIndex = 1
+            Me.BtnEnter.Text = "&Enter"
+            Me.BtnEnter.UseVisualStyleBackColor = True
             '
-            'btnApply
+            'BtnApply
             '
-            Me.btnApply.Enabled = False
-            Me.btnApply.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnApply.Location = New Point(49, 317)
-            Me.btnApply.Name = "btnApply"
-            Me.btnApply.Size = New Size(150, 30)
-            Me.btnApply.TabIndex = 2
-            Me.btnApply.Text = "&Apply"
-            Me.btnApply.UseVisualStyleBackColor = True
+            Me.BtnApply.Enabled = False
+            Me.BtnApply.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnApply.Location = New Point(49, 317)
+            Me.BtnApply.Name = "BtnApply"
+            Me.BtnApply.Size = New Size(150, 30)
+            Me.BtnApply.TabIndex = 2
+            Me.BtnApply.Text = "&Apply"
+            Me.BtnApply.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(49, 364)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(150, 30)
-            Me.btnBack.TabIndex = 3
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(49, 364)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(150, 30)
+            Me.BtnBack.TabIndex = 3
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'lblGoldOnHand
+            'LblGoldOnHand
             '
-            Me.lblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldOnHand.Location = New Point(363, 231)
-            Me.lblGoldOnHand.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGoldOnHand.Name = "lblGoldOnHand"
-            Me.lblGoldOnHand.Size = New Size(70, 25)
-            Me.lblGoldOnHand.TabIndex = 14
-            Me.lblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldOnHand.Location = New Point(363, 231)
+            Me.LblGoldOnHand.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGoldOnHand.Name = "LblGoldOnHand"
+            Me.LblGoldOnHand.Size = New Size(70, 25)
+            Me.LblGoldOnHand.TabIndex = 14
+            Me.LblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -127,15 +127,15 @@ Namespace Forms.GuildForms
             Me.Label4.Text = "Gold on Hand:"
             Me.Label4.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGuildGold
+            'LblGuildGold
             '
-            Me.lblGuildGold.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGuildGold.Location = New Point(363, 255)
-            Me.lblGuildGold.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGuildGold.Name = "lblGuildGold"
-            Me.lblGuildGold.Size = New Size(70, 25)
-            Me.lblGuildGold.TabIndex = 18
-            Me.lblGuildGold.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGuildGold.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGuildGold.Location = New Point(363, 255)
+            Me.LblGuildGold.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuildGold.Name = "LblGuildGold"
+            Me.LblGuildGold.Size = New Size(70, 25)
+            Me.LblGuildGold.TabIndex = 18
+            Me.LblGuildGold.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label6
             '
@@ -203,55 +203,55 @@ Namespace Forms.GuildForms
             Me.Label11.Text = "Lvl 5 Henchmen:"
             Me.Label11.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHenchmenLevel1
+            'LblHenchmenLevel1
             '
-            Me.lblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel1.Location = New Point(383, 279)
-            Me.lblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel1.Name = "lblHenchmenLevel1"
-            Me.lblHenchmenLevel1.Size = New Size(50, 25)
-            Me.lblHenchmenLevel1.TabIndex = 24
-            Me.lblHenchmenLevel1.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel1.Location = New Point(383, 279)
+            Me.LblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel1.Name = "LblHenchmenLevel1"
+            Me.LblHenchmenLevel1.Size = New Size(50, 25)
+            Me.LblHenchmenLevel1.TabIndex = 24
+            Me.LblHenchmenLevel1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHenchmenLevel2
+            'LblHenchmenLevel2
             '
-            Me.lblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel2.Location = New Point(383, 303)
-            Me.lblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel2.Name = "lblHenchmenLevel2"
-            Me.lblHenchmenLevel2.Size = New Size(50, 25)
-            Me.lblHenchmenLevel2.TabIndex = 25
-            Me.lblHenchmenLevel2.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel2.Location = New Point(383, 303)
+            Me.LblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel2.Name = "LblHenchmenLevel2"
+            Me.LblHenchmenLevel2.Size = New Size(50, 25)
+            Me.LblHenchmenLevel2.TabIndex = 25
+            Me.LblHenchmenLevel2.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHenchmenLevel3
+            'LblHenchmenLevel3
             '
-            Me.lblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel3.Location = New Point(383, 327)
-            Me.lblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel3.Name = "lblHenchmenLevel3"
-            Me.lblHenchmenLevel3.Size = New Size(50, 25)
-            Me.lblHenchmenLevel3.TabIndex = 26
-            Me.lblHenchmenLevel3.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel3.Location = New Point(383, 327)
+            Me.LblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel3.Name = "LblHenchmenLevel3"
+            Me.LblHenchmenLevel3.Size = New Size(50, 25)
+            Me.LblHenchmenLevel3.TabIndex = 26
+            Me.LblHenchmenLevel3.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHenchmenLevel4
+            'LblHenchmenLevel4
             '
-            Me.lblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel4.Location = New Point(383, 351)
-            Me.lblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel4.Name = "lblHenchmenLevel4"
-            Me.lblHenchmenLevel4.Size = New Size(50, 25)
-            Me.lblHenchmenLevel4.TabIndex = 27
-            Me.lblHenchmenLevel4.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel4.Location = New Point(383, 351)
+            Me.LblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel4.Name = "LblHenchmenLevel4"
+            Me.LblHenchmenLevel4.Size = New Size(50, 25)
+            Me.LblHenchmenLevel4.TabIndex = 27
+            Me.LblHenchmenLevel4.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblHenchmenLevel5
+            'LblHenchmenLevel5
             '
-            Me.lblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHenchmenLevel5.Location = New Point(383, 375)
-            Me.lblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
-            Me.lblHenchmenLevel5.Name = "lblHenchmenLevel5"
-            Me.lblHenchmenLevel5.Size = New Size(50, 25)
-            Me.lblHenchmenLevel5.TabIndex = 28
-            Me.lblHenchmenLevel5.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHenchmenLevel5.Location = New Point(383, 375)
+            Me.LblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel5.Name = "LblHenchmenLevel5"
+            Me.LblHenchmenLevel5.Size = New Size(50, 25)
+            Me.LblHenchmenLevel5.TabIndex = 28
+            Me.LblHenchmenLevel5.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -264,25 +264,25 @@ Namespace Forms.GuildForms
             Me.Label2.Text = "Guildmaster:"
             Me.Label2.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGuildmaster
+            'LblGuildmaster
             '
-            Me.lblGuildmaster.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGuildmaster.Location = New Point(244, 183)
-            Me.lblGuildmaster.Margin = New Padding(4, 0, 4, 0)
-            Me.lblGuildmaster.Name = "lblGuildmaster"
-            Me.lblGuildmaster.Size = New Size(189, 25)
-            Me.lblGuildmaster.TabIndex = 30
-            Me.lblGuildmaster.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGuildmaster.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGuildmaster.Location = New Point(244, 183)
+            Me.LblGuildmaster.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuildmaster.Name = "LblGuildmaster"
+            Me.LblGuildmaster.Size = New Size(189, 25)
+            Me.LblGuildmaster.TabIndex = 30
+            Me.LblGuildmaster.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblFee
+            'LblFee
             '
-            Me.lblFee.BorderStyle = BorderStyle.FixedSingle
-            Me.lblFee.Location = New Point(363, 207)
-            Me.lblFee.Margin = New Padding(4, 0, 4, 0)
-            Me.lblFee.Name = "lblFee"
-            Me.lblFee.Size = New Size(70, 25)
-            Me.lblFee.TabIndex = 34
-            Me.lblFee.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblFee.BorderStyle = BorderStyle.FixedSingle
+            Me.LblFee.Location = New Point(363, 207)
+            Me.LblFee.Margin = New Padding(4, 0, 4, 0)
+            Me.LblFee.Name = "LblFee"
+            Me.LblFee.Size = New Size(70, 25)
+            Me.LblFee.TabIndex = 34
+            Me.LblFee.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label5
             '
@@ -299,30 +299,30 @@ Namespace Forms.GuildForms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(446, 409)
-            Me.Controls.Add(Me.lblGuildmaster)
+            Me.Controls.Add(Me.LblGuildmaster)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.lblHenchmenLevel5)
-            Me.Controls.Add(Me.lblHenchmenLevel4)
-            Me.Controls.Add(Me.lblHenchmenLevel3)
-            Me.Controls.Add(Me.lblHenchmenLevel2)
-            Me.Controls.Add(Me.lblHenchmenLevel1)
+            Me.Controls.Add(Me.LblHenchmenLevel5)
+            Me.Controls.Add(Me.LblHenchmenLevel4)
+            Me.Controls.Add(Me.LblHenchmenLevel3)
+            Me.Controls.Add(Me.LblHenchmenLevel2)
+            Me.Controls.Add(Me.LblHenchmenLevel1)
             Me.Controls.Add(Me.Label11)
             Me.Controls.Add(Me.Label10)
             Me.Controls.Add(Me.Label9)
             Me.Controls.Add(Me.Label8)
             Me.Controls.Add(Me.Label7)
-            Me.Controls.Add(Me.lblGuildGold)
+            Me.Controls.Add(Me.LblGuildGold)
             Me.Controls.Add(Me.Label6)
-            Me.Controls.Add(Me.lblGoldOnHand)
+            Me.Controls.Add(Me.LblGoldOnHand)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnApply)
-            Me.Controls.Add(Me.btnEnter)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnApply)
+            Me.Controls.Add(Me.BtnEnter)
             Me.Controls.Add(Me.txtGuilds)
-            Me.Controls.Add(Me.lstGuilds)
-            Me.Controls.Add(Me.lblFee)
+            Me.Controls.Add(Me.LstGuilds)
+            Me.Controls.Add(Me.LblFee)
             Me.Controls.Add(Me.Label5)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
@@ -341,23 +341,23 @@ Namespace Forms.GuildForms
         Friend WithEvents BtnEnter As Button
         Friend WithEvents BtnApply As Button
         Friend WithEvents BtnBack As Button
-        Friend WithEvents lblGoldOnHand As Label
+        Friend WithEvents LblGoldOnHand As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents lblGuildGold As Label
+        Friend WithEvents LblGuildGold As Label
         Friend WithEvents Label6 As Label
         Friend WithEvents Label7 As Label
         Friend WithEvents Label8 As Label
         Friend WithEvents Label9 As Label
         Friend WithEvents Label10 As Label
         Friend WithEvents Label11 As Label
-        Friend WithEvents lblHenchmenLevel1 As Label
-        Friend WithEvents lblHenchmenLevel2 As Label
-        Friend WithEvents lblHenchmenLevel3 As Label
-        Friend WithEvents lblHenchmenLevel4 As Label
-        Friend WithEvents lblHenchmenLevel5 As Label
+        Friend WithEvents LblHenchmenLevel1 As Label
+        Friend WithEvents LblHenchmenLevel2 As Label
+        Friend WithEvents LblHenchmenLevel3 As Label
+        Friend WithEvents LblHenchmenLevel4 As Label
+        Friend WithEvents LblHenchmenLevel5 As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents lblGuildmaster As Label
-        Friend WithEvents lblFee As Label
+        Friend WithEvents LblGuildmaster As Label
+        Friend WithEvents LblFee As Label
         Friend WithEvents Label5 As Label
     End Class
 End NameSpace

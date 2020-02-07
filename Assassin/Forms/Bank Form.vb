@@ -22,10 +22,10 @@ Namespace Forms
 
         ''' <summary>Displays the current player's bank account.</summary>
         Public Sub Display()
-            lblGoldOnHand.Text = CurrentUser.GoldOnHandToString
-            lblGoldInBank.Text = CurrentUser.GoldInBankToString
-            lblGoldOnLoan.Text = CurrentUser.GoldOnLoanToString
-            lblAvailableLoan.Text = CurrentUser.LoanAvailableToString
+            LblGoldOnHand.Text = CurrentUser.GoldOnHandToString
+            LblGoldInBank.Text = CurrentUser.GoldInBankToString
+            LblGoldOnLoan.Text = CurrentUser.GoldOnLoanToString
+            LblAvailableLoan.Text = CurrentUser.LoanAvailableToString
 
             BtnDeposit.Enabled = CurrentUser.GoldOnHand > 0
             BtnWithdraw.Enabled = CurrentUser.GoldInBank > 0

@@ -31,7 +31,7 @@ Namespace Forms.GuildForms
                 LeaveGuild()
                 Return False
             Else
-                AddText($"You enter {lblGuildName.Text}.")
+                AddText($"You enter {LblGuildName.Text}.")
                 Return True
             End If
         End Function
@@ -66,7 +66,7 @@ Namespace Forms.GuildForms
 
         ''' <summary>Displays the guild name.</summary>
         Private Sub Display()
-            lblGuildName.Text = CurrentGuild.Name
+            LblGuildName.Text = CurrentGuild.Name
         End Sub
 
         ''' <summary>Makes a <see cref="User"/> leave the <see cref="Guild"/>.</summary>

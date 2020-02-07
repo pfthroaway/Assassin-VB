@@ -150,7 +150,7 @@ Namespace Forms.GuildForms
 
         ''' <summary>Loads all the information needed to donate.</summary>
         Public Sub LoadDonate()
-            lblDonate.Text = "Donate to " & CurrentGuild.Name
+            LblDonate.Text = "Donate to " & CurrentGuild.Name
             Display()
         End Sub
 

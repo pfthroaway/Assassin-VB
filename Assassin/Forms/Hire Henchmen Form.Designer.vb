@@ -28,9 +28,9 @@ Namespace Forms
         Private Sub InitializeComponent()
             Dim resources As ComponentResourceManager = New ComponentResourceManager(GetType(frmHireHenchmen))
             Me.txtHire = New TextBox()
-            Me.btnBack = New Button()
-            Me.btnClear = New Button()
-            Me.btnHire = New Button()
+            Me.BtnBack = New Button()
+            Me.BtnClear = New Button()
+            Me.BtnHire = New Button()
             Me.txtHenchmenLevel5 = New TextBox()
             Me.Label7 = New Label()
             Me.txtHenchmenLevel4 = New TextBox()
@@ -42,20 +42,20 @@ Namespace Forms
             Me.txtHenchmenLevel1 = New TextBox()
             Me.Label3 = New Label()
             Me.Label1 = New Label()
-            Me.lblGold1 = New Label()
-            Me.lblGoldOnHand = New Label()
-            Me.lblGoldRemaining = New Label()
+            Me.LblGold1 = New Label()
+            Me.LblGoldOnHand = New Label()
+            Me.LblGoldRemaining = New Label()
             Me.Label8 = New Label()
-            Me.btn5P1 = New Button()
-            Me.btn5M1 = New Button()
-            Me.btn4P1 = New Button()
-            Me.btn4M1 = New Button()
-            Me.btn3P1 = New Button()
-            Me.btn3M1 = New Button()
-            Me.btn2P1 = New Button()
-            Me.btn2M1 = New Button()
-            Me.btn1P1 = New Button()
-            Me.btn1M1 = New Button()
+            Me.Btn5P1 = New Button()
+            Me.Btn5M1 = New Button()
+            Me.Btn4P1 = New Button()
+            Me.Btn4M1 = New Button()
+            Me.Btn3P1 = New Button()
+            Me.Btn3M1 = New Button()
+            Me.Btn2P1 = New Button()
+            Me.Btn2M1 = New Button()
+            Me.Btn1P1 = New Button()
+            Me.Btn1M1 = New Button()
             Me.txtBuy1 = New TextBox()
             Me.txtBuy5 = New TextBox()
             Me.txtBuy4 = New TextBox()
@@ -63,16 +63,16 @@ Namespace Forms
             Me.txtBuy2 = New TextBox()
             Me.Label2 = New Label()
             Me.Label9 = New Label()
-            Me.btn5M5 = New Button()
-            Me.btn4M5 = New Button()
-            Me.btn3M5 = New Button()
-            Me.btn2M5 = New Button()
-            Me.btn1M5 = New Button()
-            Me.btn5P5 = New Button()
-            Me.btn4P5 = New Button()
-            Me.btn3P5 = New Button()
-            Me.btn2P5 = New Button()
-            Me.btn1P5 = New Button()
+            Me.Btn5M5 = New Button()
+            Me.Btn4M5 = New Button()
+            Me.Btn3M5 = New Button()
+            Me.Btn2M5 = New Button()
+            Me.Btn1M5 = New Button()
+            Me.Btn5P5 = New Button()
+            Me.Btn4P5 = New Button()
+            Me.Btn3P5 = New Button()
+            Me.Btn2P5 = New Button()
+            Me.Btn1P5 = New Button()
             Me.SuspendLayout()
             '
             'txtHire
@@ -86,38 +86,38 @@ Namespace Forms
             Me.txtHire.TabIndex = 33
             Me.txtHire.Text = resources.GetString("txtHire.Text")
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(288, 298)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(100, 30)
-            Me.btnBack.TabIndex = 22
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(288, 298)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(100, 30)
+            Me.BtnBack.TabIndex = 22
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(150, 298)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(100, 30)
-            Me.btnClear.TabIndex = 21
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(150, 298)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(100, 30)
+            Me.BtnClear.TabIndex = 21
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnHire
+            'BtnHire
             '
-            Me.btnHire.Enabled = False
-            Me.btnHire.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnHire.Location = New Point(12, 298)
-            Me.btnHire.Name = "btnHire"
-            Me.btnHire.Size = New Size(100, 30)
-            Me.btnHire.TabIndex = 20
-            Me.btnHire.Text = "&Hire"
-            Me.btnHire.UseVisualStyleBackColor = True
+            Me.BtnHire.Enabled = False
+            Me.BtnHire.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnHire.Location = New Point(12, 298)
+            Me.BtnHire.Name = "BtnHire"
+            Me.BtnHire.Size = New Size(100, 30)
+            Me.BtnHire.TabIndex = 20
+            Me.BtnHire.Text = "&Hire"
+            Me.BtnHire.UseVisualStyleBackColor = True
             '
             'txtHenchmenLevel5
             '
@@ -229,33 +229,33 @@ Namespace Forms
             Me.Label1.Text = "Hire Henchmen"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGold1
+            'LblGold1
             '
-            Me.lblGold1.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGold1.Location = New Point(426, 9)
-            Me.lblGold1.Name = "lblGold1"
-            Me.lblGold1.Size = New Size(150, 25)
-            Me.lblGold1.TabIndex = 42
-            Me.lblGold1.Text = "Gold On Hand:"
-            Me.lblGold1.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGold1.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGold1.Location = New Point(426, 9)
+            Me.LblGold1.Name = "LblGold1"
+            Me.LblGold1.Size = New Size(150, 25)
+            Me.LblGold1.TabIndex = 42
+            Me.LblGold1.Text = "Gold On Hand:"
+            Me.LblGold1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGoldOnHand
+            'LblGoldOnHand
             '
-            Me.lblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldOnHand.Location = New Point(426, 33)
-            Me.lblGoldOnHand.Name = "lblGoldOnHand"
-            Me.lblGoldOnHand.Size = New Size(150, 25)
-            Me.lblGoldOnHand.TabIndex = 43
-            Me.lblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldOnHand.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldOnHand.Location = New Point(426, 33)
+            Me.LblGoldOnHand.Name = "LblGoldOnHand"
+            Me.LblGoldOnHand.Size = New Size(150, 25)
+            Me.LblGoldOnHand.TabIndex = 43
+            Me.LblGoldOnHand.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGoldRemaining
+            'LblGoldRemaining
             '
-            Me.lblGoldRemaining.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGoldRemaining.Location = New Point(616, 33)
-            Me.lblGoldRemaining.Name = "lblGoldRemaining"
-            Me.lblGoldRemaining.Size = New Size(150, 25)
-            Me.lblGoldRemaining.TabIndex = 45
-            Me.lblGoldRemaining.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGoldRemaining.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGoldRemaining.Location = New Point(616, 33)
+            Me.LblGoldRemaining.Name = "LblGoldRemaining"
+            Me.LblGoldRemaining.Size = New Size(150, 25)
+            Me.LblGoldRemaining.TabIndex = 45
+            Me.LblGoldRemaining.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label8
             '
@@ -267,130 +267,130 @@ Namespace Forms
             Me.Label8.Text = "Gold Remaining:"
             Me.Label8.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btn5P1
+            'Btn5P1
             '
-            Me.btn5P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn5P1.Location = New Point(331, 232)
-            Me.btn5P1.Margin = New Padding(4)
-            Me.btn5P1.Name = "btn5P1"
-            Me.btn5P1.Size = New Size(40, 25)
-            Me.btn5P1.TabIndex = 18
-            Me.btn5P1.Text = "+1"
-            Me.btn5P1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn5P1.UseVisualStyleBackColor = True
+            Me.Btn5P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn5P1.Location = New Point(331, 232)
+            Me.Btn5P1.Margin = New Padding(4)
+            Me.Btn5P1.Name = "Btn5P1"
+            Me.Btn5P1.Size = New Size(40, 25)
+            Me.Btn5P1.TabIndex = 18
+            Me.Btn5P1.Text = "+1"
+            Me.Btn5P1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn5P1.UseVisualStyleBackColor = True
             '
-            'btn5M1
+            'Btn5M1
             '
-            Me.btn5M1.Enabled = False
-            Me.btn5M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn5M1.Location = New Point(283, 232)
-            Me.btn5M1.Margin = New Padding(4)
-            Me.btn5M1.Name = "btn5M1"
-            Me.btn5M1.Size = New Size(40, 25)
-            Me.btn5M1.TabIndex = 17
-            Me.btn5M1.Text = "-1"
-            Me.btn5M1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn5M1.UseVisualStyleBackColor = True
+            Me.Btn5M1.Enabled = False
+            Me.Btn5M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn5M1.Location = New Point(283, 232)
+            Me.Btn5M1.Margin = New Padding(4)
+            Me.Btn5M1.Name = "Btn5M1"
+            Me.Btn5M1.Size = New Size(40, 25)
+            Me.Btn5M1.TabIndex = 17
+            Me.Btn5M1.Text = "-1"
+            Me.Btn5M1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn5M1.UseVisualStyleBackColor = True
             '
-            'btn4P1
+            'Btn4P1
             '
-            Me.btn4P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn4P1.Location = New Point(331, 198)
-            Me.btn4P1.Margin = New Padding(4)
-            Me.btn4P1.Name = "btn4P1"
-            Me.btn4P1.Size = New Size(40, 25)
-            Me.btn4P1.TabIndex = 14
-            Me.btn4P1.Text = "+1"
-            Me.btn4P1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn4P1.UseVisualStyleBackColor = True
+            Me.Btn4P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn4P1.Location = New Point(331, 198)
+            Me.Btn4P1.Margin = New Padding(4)
+            Me.Btn4P1.Name = "Btn4P1"
+            Me.Btn4P1.Size = New Size(40, 25)
+            Me.Btn4P1.TabIndex = 14
+            Me.Btn4P1.Text = "+1"
+            Me.Btn4P1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn4P1.UseVisualStyleBackColor = True
             '
-            'btn4M1
+            'Btn4M1
             '
-            Me.btn4M1.Enabled = False
-            Me.btn4M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn4M1.Location = New Point(283, 198)
-            Me.btn4M1.Margin = New Padding(4)
-            Me.btn4M1.Name = "btn4M1"
-            Me.btn4M1.Size = New Size(40, 25)
-            Me.btn4M1.TabIndex = 13
-            Me.btn4M1.Text = "-1"
-            Me.btn4M1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn4M1.UseVisualStyleBackColor = True
+            Me.Btn4M1.Enabled = False
+            Me.Btn4M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn4M1.Location = New Point(283, 198)
+            Me.Btn4M1.Margin = New Padding(4)
+            Me.Btn4M1.Name = "Btn4M1"
+            Me.Btn4M1.Size = New Size(40, 25)
+            Me.Btn4M1.TabIndex = 13
+            Me.Btn4M1.Text = "-1"
+            Me.Btn4M1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn4M1.UseVisualStyleBackColor = True
             '
-            'btn3P1
+            'Btn3P1
             '
-            Me.btn3P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn3P1.Location = New Point(331, 164)
-            Me.btn3P1.Margin = New Padding(4)
-            Me.btn3P1.Name = "btn3P1"
-            Me.btn3P1.Size = New Size(40, 25)
-            Me.btn3P1.TabIndex = 10
-            Me.btn3P1.Text = "+1"
-            Me.btn3P1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn3P1.UseVisualStyleBackColor = True
+            Me.Btn3P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn3P1.Location = New Point(331, 164)
+            Me.Btn3P1.Margin = New Padding(4)
+            Me.Btn3P1.Name = "Btn3P1"
+            Me.Btn3P1.Size = New Size(40, 25)
+            Me.Btn3P1.TabIndex = 10
+            Me.Btn3P1.Text = "+1"
+            Me.Btn3P1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn3P1.UseVisualStyleBackColor = True
             '
-            'btn3M1
+            'Btn3M1
             '
-            Me.btn3M1.Enabled = False
-            Me.btn3M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn3M1.Location = New Point(283, 164)
-            Me.btn3M1.Margin = New Padding(4)
-            Me.btn3M1.Name = "btn3M1"
-            Me.btn3M1.Size = New Size(40, 25)
-            Me.btn3M1.TabIndex = 9
-            Me.btn3M1.Text = "-1"
-            Me.btn3M1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn3M1.UseVisualStyleBackColor = True
+            Me.Btn3M1.Enabled = False
+            Me.Btn3M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn3M1.Location = New Point(283, 164)
+            Me.Btn3M1.Margin = New Padding(4)
+            Me.Btn3M1.Name = "Btn3M1"
+            Me.Btn3M1.Size = New Size(40, 25)
+            Me.Btn3M1.TabIndex = 9
+            Me.Btn3M1.Text = "-1"
+            Me.Btn3M1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn3M1.UseVisualStyleBackColor = True
             '
-            'btn2P1
+            'Btn2P1
             '
-            Me.btn2P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn2P1.Location = New Point(331, 130)
-            Me.btn2P1.Margin = New Padding(4)
-            Me.btn2P1.Name = "btn2P1"
-            Me.btn2P1.Size = New Size(40, 25)
-            Me.btn2P1.TabIndex = 6
-            Me.btn2P1.Text = "+1"
-            Me.btn2P1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn2P1.UseVisualStyleBackColor = True
+            Me.Btn2P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn2P1.Location = New Point(331, 130)
+            Me.Btn2P1.Margin = New Padding(4)
+            Me.Btn2P1.Name = "Btn2P1"
+            Me.Btn2P1.Size = New Size(40, 25)
+            Me.Btn2P1.TabIndex = 6
+            Me.Btn2P1.Text = "+1"
+            Me.Btn2P1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn2P1.UseVisualStyleBackColor = True
             '
-            'btn2M1
+            'Btn2M1
             '
-            Me.btn2M1.Enabled = False
-            Me.btn2M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn2M1.Location = New Point(283, 130)
-            Me.btn2M1.Margin = New Padding(4)
-            Me.btn2M1.Name = "btn2M1"
-            Me.btn2M1.Size = New Size(40, 25)
-            Me.btn2M1.TabIndex = 5
-            Me.btn2M1.Text = "-1"
-            Me.btn2M1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn2M1.UseVisualStyleBackColor = True
+            Me.Btn2M1.Enabled = False
+            Me.Btn2M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn2M1.Location = New Point(283, 130)
+            Me.Btn2M1.Margin = New Padding(4)
+            Me.Btn2M1.Name = "Btn2M1"
+            Me.Btn2M1.Size = New Size(40, 25)
+            Me.Btn2M1.TabIndex = 5
+            Me.Btn2M1.Text = "-1"
+            Me.Btn2M1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn2M1.UseVisualStyleBackColor = True
             '
-            'btn1P1
+            'Btn1P1
             '
-            Me.btn1P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn1P1.Location = New Point(331, 96)
-            Me.btn1P1.Margin = New Padding(4)
-            Me.btn1P1.Name = "btn1P1"
-            Me.btn1P1.Size = New Size(40, 25)
-            Me.btn1P1.TabIndex = 2
-            Me.btn1P1.Text = "+1"
-            Me.btn1P1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn1P1.UseVisualStyleBackColor = True
+            Me.Btn1P1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn1P1.Location = New Point(331, 96)
+            Me.Btn1P1.Margin = New Padding(4)
+            Me.Btn1P1.Name = "Btn1P1"
+            Me.Btn1P1.Size = New Size(40, 25)
+            Me.Btn1P1.TabIndex = 2
+            Me.Btn1P1.Text = "+1"
+            Me.Btn1P1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn1P1.UseVisualStyleBackColor = True
             '
-            'btn1M1
+            'Btn1M1
             '
-            Me.btn1M1.Enabled = False
-            Me.btn1M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn1M1.Location = New Point(283, 96)
-            Me.btn1M1.Margin = New Padding(4)
-            Me.btn1M1.Name = "btn1M1"
-            Me.btn1M1.Size = New Size(40, 25)
-            Me.btn1M1.TabIndex = 1
-            Me.btn1M1.Text = "-1"
-            Me.btn1M1.TextAlign = ContentAlignment.BottomCenter
-            Me.btn1M1.UseVisualStyleBackColor = True
+            Me.Btn1M1.Enabled = False
+            Me.Btn1M1.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn1M1.Location = New Point(283, 96)
+            Me.Btn1M1.Margin = New Padding(4)
+            Me.Btn1M1.Name = "Btn1M1"
+            Me.Btn1M1.Size = New Size(40, 25)
+            Me.Btn1M1.TabIndex = 1
+            Me.Btn1M1.Text = "-1"
+            Me.Btn1M1.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn1M1.UseVisualStyleBackColor = True
             '
             'txtBuy1
             '
@@ -466,147 +466,147 @@ Namespace Forms
             Me.Label9.Text = "Purchase:"
             Me.Label9.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btn5M5
+            'Btn5M5
             '
-            Me.btn5M5.Enabled = False
-            Me.btn5M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn5M5.Location = New Point(235, 233)
-            Me.btn5M5.Margin = New Padding(4)
-            Me.btn5M5.Name = "btn5M5"
-            Me.btn5M5.Size = New Size(40, 25)
-            Me.btn5M5.TabIndex = 16
-            Me.btn5M5.Text = "-5"
-            Me.btn5M5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn5M5.UseVisualStyleBackColor = True
+            Me.Btn5M5.Enabled = False
+            Me.Btn5M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn5M5.Location = New Point(235, 233)
+            Me.Btn5M5.Margin = New Padding(4)
+            Me.Btn5M5.Name = "Btn5M5"
+            Me.Btn5M5.Size = New Size(40, 25)
+            Me.Btn5M5.TabIndex = 16
+            Me.Btn5M5.Text = "-5"
+            Me.Btn5M5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn5M5.UseVisualStyleBackColor = True
             '
-            'btn4M5
+            'Btn4M5
             '
-            Me.btn4M5.Enabled = False
-            Me.btn4M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn4M5.Location = New Point(235, 199)
-            Me.btn4M5.Margin = New Padding(4)
-            Me.btn4M5.Name = "btn4M5"
-            Me.btn4M5.Size = New Size(40, 25)
-            Me.btn4M5.TabIndex = 12
-            Me.btn4M5.Text = "-5"
-            Me.btn4M5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn4M5.UseVisualStyleBackColor = True
+            Me.Btn4M5.Enabled = False
+            Me.Btn4M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn4M5.Location = New Point(235, 199)
+            Me.Btn4M5.Margin = New Padding(4)
+            Me.Btn4M5.Name = "Btn4M5"
+            Me.Btn4M5.Size = New Size(40, 25)
+            Me.Btn4M5.TabIndex = 12
+            Me.Btn4M5.Text = "-5"
+            Me.Btn4M5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn4M5.UseVisualStyleBackColor = True
             '
-            'btn3M5
+            'Btn3M5
             '
-            Me.btn3M5.Enabled = False
-            Me.btn3M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn3M5.Location = New Point(235, 165)
-            Me.btn3M5.Margin = New Padding(4)
-            Me.btn3M5.Name = "btn3M5"
-            Me.btn3M5.Size = New Size(40, 25)
-            Me.btn3M5.TabIndex = 8
-            Me.btn3M5.Text = "-5"
-            Me.btn3M5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn3M5.UseVisualStyleBackColor = True
+            Me.Btn3M5.Enabled = False
+            Me.Btn3M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn3M5.Location = New Point(235, 165)
+            Me.Btn3M5.Margin = New Padding(4)
+            Me.Btn3M5.Name = "Btn3M5"
+            Me.Btn3M5.Size = New Size(40, 25)
+            Me.Btn3M5.TabIndex = 8
+            Me.Btn3M5.Text = "-5"
+            Me.Btn3M5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn3M5.UseVisualStyleBackColor = True
             '
-            'btn2M5
+            'Btn2M5
             '
-            Me.btn2M5.Enabled = False
-            Me.btn2M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn2M5.Location = New Point(235, 131)
-            Me.btn2M5.Margin = New Padding(4)
-            Me.btn2M5.Name = "btn2M5"
-            Me.btn2M5.Size = New Size(40, 25)
-            Me.btn2M5.TabIndex = 4
-            Me.btn2M5.Text = "-5"
-            Me.btn2M5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn2M5.UseVisualStyleBackColor = True
+            Me.Btn2M5.Enabled = False
+            Me.Btn2M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn2M5.Location = New Point(235, 131)
+            Me.Btn2M5.Margin = New Padding(4)
+            Me.Btn2M5.Name = "Btn2M5"
+            Me.Btn2M5.Size = New Size(40, 25)
+            Me.Btn2M5.TabIndex = 4
+            Me.Btn2M5.Text = "-5"
+            Me.Btn2M5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn2M5.UseVisualStyleBackColor = True
             '
-            'btn1M5
+            'Btn1M5
             '
-            Me.btn1M5.Enabled = False
-            Me.btn1M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn1M5.Location = New Point(235, 97)
-            Me.btn1M5.Margin = New Padding(4)
-            Me.btn1M5.Name = "btn1M5"
-            Me.btn1M5.Size = New Size(40, 25)
-            Me.btn1M5.TabIndex = 0
-            Me.btn1M5.Text = "-5"
-            Me.btn1M5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn1M5.UseVisualStyleBackColor = True
+            Me.Btn1M5.Enabled = False
+            Me.Btn1M5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn1M5.Location = New Point(235, 97)
+            Me.Btn1M5.Margin = New Padding(4)
+            Me.Btn1M5.Name = "Btn1M5"
+            Me.Btn1M5.Size = New Size(40, 25)
+            Me.Btn1M5.TabIndex = 0
+            Me.Btn1M5.Text = "-5"
+            Me.Btn1M5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn1M5.UseVisualStyleBackColor = True
             '
-            'btn5P5
+            'Btn5P5
             '
-            Me.btn5P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn5P5.Location = New Point(379, 233)
-            Me.btn5P5.Margin = New Padding(4)
-            Me.btn5P5.Name = "btn5P5"
-            Me.btn5P5.Size = New Size(40, 25)
-            Me.btn5P5.TabIndex = 19
-            Me.btn5P5.Text = "+5"
-            Me.btn5P5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn5P5.UseVisualStyleBackColor = True
+            Me.Btn5P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn5P5.Location = New Point(379, 233)
+            Me.Btn5P5.Margin = New Padding(4)
+            Me.Btn5P5.Name = "Btn5P5"
+            Me.Btn5P5.Size = New Size(40, 25)
+            Me.Btn5P5.TabIndex = 19
+            Me.Btn5P5.Text = "+5"
+            Me.Btn5P5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn5P5.UseVisualStyleBackColor = True
             '
-            'btn4P5
+            'Btn4P5
             '
-            Me.btn4P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn4P5.Location = New Point(379, 199)
-            Me.btn4P5.Margin = New Padding(4)
-            Me.btn4P5.Name = "btn4P5"
-            Me.btn4P5.Size = New Size(40, 25)
-            Me.btn4P5.TabIndex = 15
-            Me.btn4P5.Text = "+5"
-            Me.btn4P5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn4P5.UseVisualStyleBackColor = True
+            Me.Btn4P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn4P5.Location = New Point(379, 199)
+            Me.Btn4P5.Margin = New Padding(4)
+            Me.Btn4P5.Name = "Btn4P5"
+            Me.Btn4P5.Size = New Size(40, 25)
+            Me.Btn4P5.TabIndex = 15
+            Me.Btn4P5.Text = "+5"
+            Me.Btn4P5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn4P5.UseVisualStyleBackColor = True
             '
-            'btn3P5
+            'Btn3P5
             '
-            Me.btn3P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn3P5.Location = New Point(379, 165)
-            Me.btn3P5.Margin = New Padding(4)
-            Me.btn3P5.Name = "btn3P5"
-            Me.btn3P5.Size = New Size(40, 25)
-            Me.btn3P5.TabIndex = 11
-            Me.btn3P5.Text = "+5"
-            Me.btn3P5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn3P5.UseVisualStyleBackColor = True
+            Me.Btn3P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn3P5.Location = New Point(379, 165)
+            Me.Btn3P5.Margin = New Padding(4)
+            Me.Btn3P5.Name = "Btn3P5"
+            Me.Btn3P5.Size = New Size(40, 25)
+            Me.Btn3P5.TabIndex = 11
+            Me.Btn3P5.Text = "+5"
+            Me.Btn3P5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn3P5.UseVisualStyleBackColor = True
             '
-            'btn2P5
+            'Btn2P5
             '
-            Me.btn2P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn2P5.Location = New Point(379, 131)
-            Me.btn2P5.Margin = New Padding(4)
-            Me.btn2P5.Name = "btn2P5"
-            Me.btn2P5.Size = New Size(40, 25)
-            Me.btn2P5.TabIndex = 7
-            Me.btn2P5.Text = "+5"
-            Me.btn2P5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn2P5.UseVisualStyleBackColor = True
+            Me.Btn2P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn2P5.Location = New Point(379, 131)
+            Me.Btn2P5.Margin = New Padding(4)
+            Me.Btn2P5.Name = "Btn2P5"
+            Me.Btn2P5.Size = New Size(40, 25)
+            Me.Btn2P5.TabIndex = 7
+            Me.Btn2P5.Text = "+5"
+            Me.Btn2P5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn2P5.UseVisualStyleBackColor = True
             '
-            'btn1P5
+            'Btn1P5
             '
-            Me.btn1P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btn1P5.Location = New Point(379, 97)
-            Me.btn1P5.Margin = New Padding(4)
-            Me.btn1P5.Name = "btn1P5"
-            Me.btn1P5.Size = New Size(40, 25)
-            Me.btn1P5.TabIndex = 3
-            Me.btn1P5.Text = "+5"
-            Me.btn1P5.TextAlign = ContentAlignment.BottomCenter
-            Me.btn1P5.UseVisualStyleBackColor = True
+            Me.Btn1P5.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.Btn1P5.Location = New Point(379, 97)
+            Me.Btn1P5.Margin = New Padding(4)
+            Me.Btn1P5.Name = "Btn1P5"
+            Me.Btn1P5.Size = New Size(40, 25)
+            Me.Btn1P5.TabIndex = 3
+            Me.Btn1P5.Text = "+5"
+            Me.Btn1P5.TextAlign = ContentAlignment.BottomCenter
+            Me.Btn1P5.UseVisualStyleBackColor = True
             '
             'frmHireHenchmen
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(778, 339)
-            Me.Controls.Add(Me.btn5P5)
-            Me.Controls.Add(Me.btn4P5)
-            Me.Controls.Add(Me.btn3P5)
-            Me.Controls.Add(Me.btn2P5)
-            Me.Controls.Add(Me.btn1P5)
-            Me.Controls.Add(Me.btn5M5)
-            Me.Controls.Add(Me.btn4M5)
-            Me.Controls.Add(Me.btn3M5)
-            Me.Controls.Add(Me.btn2M5)
-            Me.Controls.Add(Me.btn1M5)
+            Me.Controls.Add(Me.Btn5P5)
+            Me.Controls.Add(Me.Btn4P5)
+            Me.Controls.Add(Me.Btn3P5)
+            Me.Controls.Add(Me.Btn2P5)
+            Me.Controls.Add(Me.Btn1P5)
+            Me.Controls.Add(Me.Btn5M5)
+            Me.Controls.Add(Me.Btn4M5)
+            Me.Controls.Add(Me.Btn3M5)
+            Me.Controls.Add(Me.Btn2M5)
+            Me.Controls.Add(Me.Btn1M5)
             Me.Controls.Add(Me.Label9)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.txtBuy5)
@@ -614,24 +614,24 @@ Namespace Forms
             Me.Controls.Add(Me.txtBuy3)
             Me.Controls.Add(Me.txtBuy2)
             Me.Controls.Add(Me.txtBuy1)
-            Me.Controls.Add(Me.btn5P1)
-            Me.Controls.Add(Me.btn5M1)
-            Me.Controls.Add(Me.btn4P1)
-            Me.Controls.Add(Me.btn4M1)
-            Me.Controls.Add(Me.btn3P1)
-            Me.Controls.Add(Me.btn3M1)
-            Me.Controls.Add(Me.btn2P1)
-            Me.Controls.Add(Me.btn2M1)
-            Me.Controls.Add(Me.btn1P1)
-            Me.Controls.Add(Me.btn1M1)
-            Me.Controls.Add(Me.lblGoldRemaining)
+            Me.Controls.Add(Me.Btn5P1)
+            Me.Controls.Add(Me.Btn5M1)
+            Me.Controls.Add(Me.Btn4P1)
+            Me.Controls.Add(Me.Btn4M1)
+            Me.Controls.Add(Me.Btn3P1)
+            Me.Controls.Add(Me.Btn3M1)
+            Me.Controls.Add(Me.Btn2P1)
+            Me.Controls.Add(Me.Btn2M1)
+            Me.Controls.Add(Me.Btn1P1)
+            Me.Controls.Add(Me.Btn1M1)
+            Me.Controls.Add(Me.LblGoldRemaining)
             Me.Controls.Add(Me.Label8)
-            Me.Controls.Add(Me.lblGoldOnHand)
-            Me.Controls.Add(Me.lblGold1)
+            Me.Controls.Add(Me.LblGoldOnHand)
+            Me.Controls.Add(Me.LblGold1)
             Me.Controls.Add(Me.txtHire)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnHire)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnHire)
             Me.Controls.Add(Me.txtHenchmenLevel5)
             Me.Controls.Add(Me.Label7)
             Me.Controls.Add(Me.txtHenchmenLevel4)
@@ -670,9 +670,9 @@ Namespace Forms
         Friend WithEvents TxtHenchmenLevel1 As TextBox
         Friend WithEvents Label3 As Label
         Friend WithEvents Label1 As Label
-        Friend WithEvents lblGold1 As Label
-        Friend WithEvents lblGoldOnHand As Label
-        Friend WithEvents lblGoldRemaining As Label
+        Friend WithEvents LblGold1 As Label
+        Friend WithEvents LblGoldOnHand As Label
+        Friend WithEvents LblGoldRemaining As Label
         Friend WithEvents Label8 As Label
         Friend WithEvents Btn5P1 As Button
         Friend WithEvents Btn5M1 As Button

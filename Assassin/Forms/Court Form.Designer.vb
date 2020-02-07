@@ -29,9 +29,9 @@ Namespace Forms
             Me.components = New Container()
             Me.Timer1 = New Timer(Me.components)
             Me.txtCourt = New TextBox()
-            Me.btnPayFine = New Button()
-            Me.btnJail = New Button()
-            Me.btnFreedom = New Button()
+            Me.BtnPayFine = New Button()
+            Me.BtnJail = New Button()
+            Me.BtnFreedom = New Button()
             Me.SuspendLayout()
             '
             'Timer1
@@ -52,52 +52,52 @@ Namespace Forms
             Me.txtCourt.Size = New Size(308, 150)
             Me.txtCourt.TabIndex = 3
             '
-            'btnPayFine
+            'BtnPayFine
             '
-            Me.btnPayFine.Enabled = False
-            Me.btnPayFine.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPayFine.Location = New Point(13, 169)
-            Me.btnPayFine.Margin = New Padding(4)
-            Me.btnPayFine.MaximumSize = New Size(150, 30)
-            Me.btnPayFine.MinimumSize = New Size(150, 30)
-            Me.btnPayFine.Name = "btnPayFine"
-            Me.btnPayFine.Size = New Size(150, 30)
-            Me.btnPayFine.TabIndex = 0
-            Me.btnPayFine.Text = "&Pay Fine"
-            Me.btnPayFine.UseVisualStyleBackColor = True
+            Me.BtnPayFine.Enabled = False
+            Me.BtnPayFine.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnPayFine.Location = New Point(13, 169)
+            Me.BtnPayFine.Margin = New Padding(4)
+            Me.BtnPayFine.MaximumSize = New Size(150, 30)
+            Me.BtnPayFine.MinimumSize = New Size(150, 30)
+            Me.BtnPayFine.Name = "BtnPayFine"
+            Me.BtnPayFine.Size = New Size(150, 30)
+            Me.BtnPayFine.TabIndex = 0
+            Me.BtnPayFine.Text = "&Pay Fine"
+            Me.BtnPayFine.UseVisualStyleBackColor = True
             '
-            'btnJail
+            'BtnJail
             '
-            Me.btnJail.Enabled = False
-            Me.btnJail.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnJail.Location = New Point(171, 169)
-            Me.btnJail.Margin = New Padding(4)
-            Me.btnJail.Name = "btnJail"
-            Me.btnJail.Size = New Size(150, 30)
-            Me.btnJail.TabIndex = 1
-            Me.btnJail.Text = "&Go to Jail"
-            Me.btnJail.UseVisualStyleBackColor = True
+            Me.BtnJail.Enabled = False
+            Me.BtnJail.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnJail.Location = New Point(171, 169)
+            Me.BtnJail.Margin = New Padding(4)
+            Me.BtnJail.Name = "BtnJail"
+            Me.BtnJail.Size = New Size(150, 30)
+            Me.BtnJail.TabIndex = 1
+            Me.BtnJail.Text = "&Go to Jail"
+            Me.BtnJail.UseVisualStyleBackColor = True
             '
-            'btnFreedom
+            'BtnFreedom
             '
-            Me.btnFreedom.Enabled = False
-            Me.btnFreedom.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnFreedom.Location = New Point(91, 207)
-            Me.btnFreedom.Margin = New Padding(4)
-            Me.btnFreedom.Name = "btnFreedom"
-            Me.btnFreedom.Size = New Size(150, 30)
-            Me.btnFreedom.TabIndex = 2
-            Me.btnFreedom.Text = "&Freedom!"
-            Me.btnFreedom.UseVisualStyleBackColor = True
+            Me.BtnFreedom.Enabled = False
+            Me.BtnFreedom.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnFreedom.Location = New Point(91, 207)
+            Me.BtnFreedom.Margin = New Padding(4)
+            Me.BtnFreedom.Name = "BtnFreedom"
+            Me.BtnFreedom.Size = New Size(150, 30)
+            Me.BtnFreedom.TabIndex = 2
+            Me.BtnFreedom.Text = "&Freedom!"
+            Me.BtnFreedom.UseVisualStyleBackColor = True
             '
             'frmCourt
             '
             Me.AutoScaleDimensions = New SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
             Me.ClientSize = New Size(332, 250)
-            Me.Controls.Add(Me.btnFreedom)
-            Me.Controls.Add(Me.btnJail)
-            Me.Controls.Add(Me.btnPayFine)
+            Me.Controls.Add(Me.BtnFreedom)
+            Me.Controls.Add(Me.BtnJail)
+            Me.Controls.Add(Me.BtnPayFine)
             Me.Controls.Add(Me.txtCourt)
             Me.MaximizeBox = False
             Me.MaximumSize = New Size(348, 288)

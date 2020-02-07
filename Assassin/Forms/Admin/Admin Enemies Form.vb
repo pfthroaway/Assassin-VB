@@ -63,7 +63,7 @@ Namespace Forms.Admin
 
         '    'txtName.Text = _currentEnemy.Name
         '    'txtEndurance.Text = _currentEnemy.MaximumEndurance.ToString
-        '    'cmbWeaponType.SelectedItem = _currentEnemy.Stance
+        '    'CmbWeaponType.SelectedItem = _currentEnemy.Stance
         '    'If _weaponType = "Light" Then
         '    '    LoadLightWeapons()
         '    'ElseIf _weaponType = "Heavy" Then
@@ -71,8 +71,8 @@ Namespace Forms.Admin
         '    'ElseIf _weaponType = "Two-H" Then
         '    '    LoadTwoHWeapons()
         '    'End If
-        '    'cmbWeapon.SelectedItem = _currentEnemy.Weapon.Name
-        '    'cmbArmor.SelectedItem = _currentEnemy.Armor.Name
+        '    'CmbWeapon.SelectedItem = _currentEnemy.Weapon.Name
+        '    'CmbArmor.SelectedItem = _currentEnemy.Armor.Name
         '    'txtWeaponSkill.Text = _currentEnemy.AttackSkill.ToString
         '    'txtBlocking.Text = _currentEnemy.Blocking.ToString
         '    'txtSlipping.Text = _currentEnemy.Slipping.ToString

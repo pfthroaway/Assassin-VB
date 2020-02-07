@@ -28,33 +28,33 @@ Namespace Forms
         Private Sub InitializeComponent()
             Me.components = New Container()
             Me.txtBattle = New TextBox()
-            Me.lblPlrArmor = New Label()
+            Me.LblPlrArmor = New Label()
             Me.Label8 = New Label()
-            Me.lblPlrWeapon = New Label()
-            Me.lblPlrStatus = New Label()
+            Me.LblPlrWeapon = New Label()
+            Me.LblPlrStatus = New Label()
             Me.Label6 = New Label()
-            Me.lblPlrEnd = New Label()
+            Me.LblPlrEnd = New Label()
             Me.Label4 = New Label()
-            Me.lblPlrName = New Label()
+            Me.LblPlrName = New Label()
             Me.Label2 = New Label()
-            Me.lblEneArmor = New Label()
+            Me.LblEneArmor = New Label()
             Me.Label10 = New Label()
-            Me.lblEneWeapon = New Label()
-            Me.lblEneStatus = New Label()
+            Me.LblEneWeapon = New Label()
+            Me.LblEneStatus = New Label()
             Me.Label13 = New Label()
-            Me.lblEneEnd = New Label()
+            Me.LblEneEnd = New Label()
             Me.Label15 = New Label()
             Me.Label16 = New Label()
-            Me.lblEnemyName = New Label()
-            Me.btnAttack = New Button()
-            Me.btnBerserk = New Button()
-            Me.btnDefend = New Button()
-            Me.btnFlee = New Button()
-            Me.btnInventory = New Button()
-            Me.btnLunge = New Button()
-            Me.btnParry = New Button()
-            Me.btnQuickCombat = New Button()
-            Me.btnExit = New Button()
+            Me.LblEnemyName = New Label()
+            Me.BtnAttack = New Button()
+            Me.BtnBerserk = New Button()
+            Me.BtnDefend = New Button()
+            Me.BtnFlee = New Button()
+            Me.BtnInventory = New Button()
+            Me.BtnLunge = New Button()
+            Me.BtnParry = New Button()
+            Me.BtnQuickCombat = New Button()
+            Me.BtnExit = New Button()
             Me.Timer1 = New Timer(Me.components)
             Me.SuspendLayout()
             '
@@ -71,15 +71,15 @@ Namespace Forms
             Me.txtBattle.Size = New Size(400, 200)
             Me.txtBattle.TabIndex = 1
             '
-            'lblPlrArmor
+            'LblPlrArmor
             '
-            Me.lblPlrArmor.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlrArmor.Location = New Point(528, 100)
-            Me.lblPlrArmor.Name = "lblPlrArmor"
-            Me.lblPlrArmor.Size = New Size(101, 23)
-            Me.lblPlrArmor.TabIndex = 42
-            Me.lblPlrArmor.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPlrArmor.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPlrArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlrArmor.Location = New Point(528, 100)
+            Me.LblPlrArmor.Name = "LblPlrArmor"
+            Me.LblPlrArmor.Size = New Size(101, 23)
+            Me.LblPlrArmor.TabIndex = 42
+            Me.LblPlrArmor.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label8
             '
@@ -92,25 +92,25 @@ Namespace Forms
             Me.Label8.Text = "Armor:"
             Me.Label8.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblPlrWeapon
+            'LblPlrWeapon
             '
-            Me.lblPlrWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlrWeapon.Location = New Point(528, 78)
-            Me.lblPlrWeapon.Name = "lblPlrWeapon"
-            Me.lblPlrWeapon.Size = New Size(101, 23)
-            Me.lblPlrWeapon.TabIndex = 40
-            Me.lblPlrWeapon.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPlrWeapon.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPlrWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlrWeapon.Location = New Point(528, 78)
+            Me.LblPlrWeapon.Name = "LblPlrWeapon"
+            Me.LblPlrWeapon.Size = New Size(101, 23)
+            Me.LblPlrWeapon.TabIndex = 40
+            Me.LblPlrWeapon.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblPlrStatus
+            'LblPlrStatus
             '
-            Me.lblPlrStatus.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlrStatus.Location = New Point(528, 56)
-            Me.lblPlrStatus.Name = "lblPlrStatus"
-            Me.lblPlrStatus.Size = New Size(101, 23)
-            Me.lblPlrStatus.TabIndex = 38
-            Me.lblPlrStatus.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPlrStatus.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPlrStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlrStatus.Location = New Point(528, 56)
+            Me.LblPlrStatus.Name = "LblPlrStatus"
+            Me.LblPlrStatus.Size = New Size(101, 23)
+            Me.LblPlrStatus.TabIndex = 38
+            Me.LblPlrStatus.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label6
             '
@@ -123,15 +123,15 @@ Namespace Forms
             Me.Label6.Text = "Weapon"
             Me.Label6.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblPlrEnd
+            'LblPlrEnd
             '
-            Me.lblPlrEnd.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlrEnd.Location = New Point(528, 34)
-            Me.lblPlrEnd.Name = "lblPlrEnd"
-            Me.lblPlrEnd.Size = New Size(101, 23)
-            Me.lblPlrEnd.TabIndex = 36
-            Me.lblPlrEnd.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPlrEnd.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPlrEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlrEnd.Location = New Point(528, 34)
+            Me.LblPlrEnd.Name = "LblPlrEnd"
+            Me.LblPlrEnd.Size = New Size(101, 23)
+            Me.LblPlrEnd.TabIndex = 36
+            Me.LblPlrEnd.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -144,15 +144,15 @@ Namespace Forms
             Me.Label4.Text = "Status:"
             Me.Label4.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblPlrName
+            'LblPlrName
             '
-            Me.lblPlrName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPlrName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPlrName.Location = New Point(428, 12)
-            Me.lblPlrName.Name = "lblPlrName"
-            Me.lblPlrName.Size = New Size(201, 23)
-            Me.lblPlrName.TabIndex = 35
-            Me.lblPlrName.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPlrName.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPlrName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlrName.Location = New Point(428, 12)
+            Me.LblPlrName.Name = "LblPlrName"
+            Me.LblPlrName.Size = New Size(201, 23)
+            Me.LblPlrName.TabIndex = 35
+            Me.LblPlrName.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -165,15 +165,15 @@ Namespace Forms
             Me.Label2.Text = "Endurance:"
             Me.Label2.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblEneArmor
+            'LblEneArmor
             '
-            Me.lblEneArmor.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEneArmor.Location = New Point(528, 311)
-            Me.lblEneArmor.Name = "lblEneArmor"
-            Me.lblEneArmor.Size = New Size(101, 23)
-            Me.lblEneArmor.TabIndex = 51
-            Me.lblEneArmor.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEneArmor.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEneArmor.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEneArmor.Location = New Point(528, 311)
+            Me.LblEneArmor.Name = "LblEneArmor"
+            Me.LblEneArmor.Size = New Size(101, 23)
+            Me.LblEneArmor.TabIndex = 51
+            Me.LblEneArmor.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label10
             '
@@ -186,25 +186,25 @@ Namespace Forms
             Me.Label10.Text = "Armor:"
             Me.Label10.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblEneWeapon
+            'LblEneWeapon
             '
-            Me.lblEneWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEneWeapon.Location = New Point(528, 289)
-            Me.lblEneWeapon.Name = "lblEneWeapon"
-            Me.lblEneWeapon.Size = New Size(101, 23)
-            Me.lblEneWeapon.TabIndex = 49
-            Me.lblEneWeapon.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEneWeapon.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEneWeapon.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEneWeapon.Location = New Point(528, 289)
+            Me.LblEneWeapon.Name = "LblEneWeapon"
+            Me.LblEneWeapon.Size = New Size(101, 23)
+            Me.LblEneWeapon.TabIndex = 49
+            Me.LblEneWeapon.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblEneStatus
+            'LblEneStatus
             '
-            Me.lblEneStatus.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEneStatus.Location = New Point(528, 267)
-            Me.lblEneStatus.Name = "lblEneStatus"
-            Me.lblEneStatus.Size = New Size(101, 23)
-            Me.lblEneStatus.TabIndex = 47
-            Me.lblEneStatus.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEneStatus.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEneStatus.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEneStatus.Location = New Point(528, 267)
+            Me.LblEneStatus.Name = "LblEneStatus"
+            Me.LblEneStatus.Size = New Size(101, 23)
+            Me.LblEneStatus.TabIndex = 47
+            Me.LblEneStatus.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label13
             '
@@ -217,15 +217,15 @@ Namespace Forms
             Me.Label13.Text = "Weapon"
             Me.Label13.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblEneEnd
+            'LblEneEnd
             '
-            Me.lblEneEnd.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEneEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEneEnd.Location = New Point(528, 245)
-            Me.lblEneEnd.Name = "lblEneEnd"
-            Me.lblEneEnd.Size = New Size(101, 23)
-            Me.lblEneEnd.TabIndex = 45
-            Me.lblEneEnd.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEneEnd.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEneEnd.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEneEnd.Location = New Point(528, 245)
+            Me.LblEneEnd.Name = "LblEneEnd"
+            Me.LblEneEnd.Size = New Size(101, 23)
+            Me.LblEneEnd.TabIndex = 45
+            Me.LblEneEnd.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label15
             '
@@ -249,107 +249,107 @@ Namespace Forms
             Me.Label16.Text = "Endurance:"
             Me.Label16.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblEnemyName
+            'LblEnemyName
             '
-            Me.lblEnemyName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEnemyName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEnemyName.Location = New Point(428, 223)
-            Me.lblEnemyName.Name = "lblEnemyName"
-            Me.lblEnemyName.Size = New Size(201, 23)
-            Me.lblEnemyName.TabIndex = 44
-            Me.lblEnemyName.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblEnemyName.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEnemyName.Font = New Font("Microsoft Sans Serif", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnemyName.Location = New Point(428, 223)
+            Me.LblEnemyName.Name = "LblEnemyName"
+            Me.LblEnemyName.Size = New Size(201, 23)
+            Me.LblEnemyName.TabIndex = 44
+            Me.LblEnemyName.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnAttack
+            'BtnAttack
             '
-            Me.btnAttack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAttack.Location = New Point(12, 223)
-            Me.btnAttack.Name = "btnAttack"
-            Me.btnAttack.Size = New Size(120, 32)
-            Me.btnAttack.TabIndex = 53
-            Me.btnAttack.Text = "&Attack"
-            Me.btnAttack.UseVisualStyleBackColor = True
+            Me.BtnAttack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnAttack.Location = New Point(12, 223)
+            Me.BtnAttack.Name = "BtnAttack"
+            Me.BtnAttack.Size = New Size(120, 32)
+            Me.BtnAttack.TabIndex = 53
+            Me.BtnAttack.Text = "&Attack"
+            Me.BtnAttack.UseVisualStyleBackColor = True
             '
-            'btnBerserk
+            'BtnBerserk
             '
-            Me.btnBerserk.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBerserk.Location = New Point(152, 223)
-            Me.btnBerserk.Name = "btnBerserk"
-            Me.btnBerserk.Size = New Size(120, 32)
-            Me.btnBerserk.TabIndex = 54
-            Me.btnBerserk.Text = "&Berserk"
-            Me.btnBerserk.UseVisualStyleBackColor = True
+            Me.BtnBerserk.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBerserk.Location = New Point(152, 223)
+            Me.BtnBerserk.Name = "BtnBerserk"
+            Me.BtnBerserk.Size = New Size(120, 32)
+            Me.BtnBerserk.TabIndex = 54
+            Me.BtnBerserk.Text = "&Berserk"
+            Me.BtnBerserk.UseVisualStyleBackColor = True
             '
-            'btnDefend
+            'BtnDefend
             '
-            Me.btnDefend.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDefend.Location = New Point(292, 223)
-            Me.btnDefend.Name = "btnDefend"
-            Me.btnDefend.Size = New Size(120, 32)
-            Me.btnDefend.TabIndex = 55
-            Me.btnDefend.Text = "&Defend"
-            Me.btnDefend.UseVisualStyleBackColor = True
+            Me.BtnDefend.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDefend.Location = New Point(292, 223)
+            Me.BtnDefend.Name = "BtnDefend"
+            Me.BtnDefend.Size = New Size(120, 32)
+            Me.BtnDefend.TabIndex = 55
+            Me.BtnDefend.Text = "&Defend"
+            Me.BtnDefend.UseVisualStyleBackColor = True
             '
-            'btnFlee
+            'BtnFlee
             '
-            Me.btnFlee.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnFlee.Location = New Point(12, 266)
-            Me.btnFlee.Name = "btnFlee"
-            Me.btnFlee.Size = New Size(120, 32)
-            Me.btnFlee.TabIndex = 56
-            Me.btnFlee.Text = "&Flee"
-            Me.btnFlee.UseVisualStyleBackColor = True
+            Me.BtnFlee.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnFlee.Location = New Point(12, 266)
+            Me.BtnFlee.Name = "BtnFlee"
+            Me.BtnFlee.Size = New Size(120, 32)
+            Me.BtnFlee.TabIndex = 56
+            Me.BtnFlee.Text = "&Flee"
+            Me.BtnFlee.UseVisualStyleBackColor = True
             '
-            'btnInventory
+            'BtnInventory
             '
-            Me.btnInventory.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnInventory.Location = New Point(470, 157)
-            Me.btnInventory.Name = "btnInventory"
-            Me.btnInventory.Size = New Size(120, 32)
-            Me.btnInventory.TabIndex = 57
-            Me.btnInventory.Text = "&Inventory"
-            Me.btnInventory.UseVisualStyleBackColor = True
+            Me.BtnInventory.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnInventory.Location = New Point(470, 157)
+            Me.BtnInventory.Name = "BtnInventory"
+            Me.BtnInventory.Size = New Size(120, 32)
+            Me.BtnInventory.TabIndex = 57
+            Me.BtnInventory.Text = "&Inventory"
+            Me.BtnInventory.UseVisualStyleBackColor = True
             '
-            'btnLunge
+            'BtnLunge
             '
-            Me.btnLunge.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLunge.Location = New Point(152, 266)
-            Me.btnLunge.Name = "btnLunge"
-            Me.btnLunge.Size = New Size(120, 32)
-            Me.btnLunge.TabIndex = 58
-            Me.btnLunge.Text = "&Lunge"
-            Me.btnLunge.UseVisualStyleBackColor = True
+            Me.BtnLunge.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnLunge.Location = New Point(152, 266)
+            Me.BtnLunge.Name = "BtnLunge"
+            Me.BtnLunge.Size = New Size(120, 32)
+            Me.BtnLunge.TabIndex = 58
+            Me.BtnLunge.Text = "&Lunge"
+            Me.BtnLunge.UseVisualStyleBackColor = True
             '
-            'btnParry
+            'BtnParry
             '
-            Me.btnParry.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnParry.Location = New Point(292, 266)
-            Me.btnParry.Name = "btnParry"
-            Me.btnParry.Size = New Size(120, 32)
-            Me.btnParry.TabIndex = 59
-            Me.btnParry.Text = "&Parry"
-            Me.btnParry.UseVisualStyleBackColor = True
+            Me.BtnParry.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnParry.Location = New Point(292, 266)
+            Me.BtnParry.Name = "BtnParry"
+            Me.BtnParry.Size = New Size(120, 32)
+            Me.BtnParry.TabIndex = 59
+            Me.BtnParry.Text = "&Parry"
+            Me.BtnParry.UseVisualStyleBackColor = True
             '
-            'btnQuickCombat
+            'BtnQuickCombat
             '
-            Me.btnQuickCombat.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnQuickCombat.Location = New Point(38, 309)
-            Me.btnQuickCombat.Name = "btnQuickCombat"
-            Me.btnQuickCombat.Size = New Size(150, 32)
-            Me.btnQuickCombat.TabIndex = 60
-            Me.btnQuickCombat.Text = "&Quick Combat"
-            Me.btnQuickCombat.UseVisualStyleBackColor = True
+            Me.BtnQuickCombat.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnQuickCombat.Location = New Point(38, 309)
+            Me.BtnQuickCombat.Name = "BtnQuickCombat"
+            Me.BtnQuickCombat.Size = New Size(150, 32)
+            Me.BtnQuickCombat.TabIndex = 60
+            Me.BtnQuickCombat.Text = "&Quick Combat"
+            Me.BtnQuickCombat.UseVisualStyleBackColor = True
             '
-            'btnExit
+            'BtnExit
             '
-            Me.btnExit.DialogResult = DialogResult.Cancel
-            Me.btnExit.Enabled = False
-            Me.btnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExit.Location = New Point(238, 309)
-            Me.btnExit.Name = "btnExit"
-            Me.btnExit.Size = New Size(150, 32)
-            Me.btnExit.TabIndex = 61
-            Me.btnExit.Text = "E&xit"
-            Me.btnExit.UseVisualStyleBackColor = True
+            Me.BtnExit.DialogResult = DialogResult.Cancel
+            Me.BtnExit.Enabled = False
+            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New Point(238, 309)
+            Me.BtnExit.Name = "BtnExit"
+            Me.BtnExit.Size = New Size(150, 32)
+            Me.BtnExit.TabIndex = 61
+            Me.BtnExit.Text = "E&xit"
+            Me.BtnExit.UseVisualStyleBackColor = True
             '
             'Timer1
             '
@@ -359,34 +359,34 @@ Namespace Forms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnExit
+            Me.CancelButton = Me.BtnExit
             Me.ClientSize = New Size(641, 352)
-            Me.Controls.Add(Me.btnExit)
-            Me.Controls.Add(Me.btnQuickCombat)
-            Me.Controls.Add(Me.btnParry)
-            Me.Controls.Add(Me.btnLunge)
-            Me.Controls.Add(Me.btnInventory)
-            Me.Controls.Add(Me.btnFlee)
-            Me.Controls.Add(Me.btnDefend)
-            Me.Controls.Add(Me.btnBerserk)
-            Me.Controls.Add(Me.btnAttack)
-            Me.Controls.Add(Me.lblEneArmor)
+            Me.Controls.Add(Me.BtnExit)
+            Me.Controls.Add(Me.BtnQuickCombat)
+            Me.Controls.Add(Me.BtnParry)
+            Me.Controls.Add(Me.BtnLunge)
+            Me.Controls.Add(Me.BtnInventory)
+            Me.Controls.Add(Me.BtnFlee)
+            Me.Controls.Add(Me.BtnDefend)
+            Me.Controls.Add(Me.BtnBerserk)
+            Me.Controls.Add(Me.BtnAttack)
+            Me.Controls.Add(Me.LblEneArmor)
             Me.Controls.Add(Me.Label10)
-            Me.Controls.Add(Me.lblEneWeapon)
-            Me.Controls.Add(Me.lblEneStatus)
+            Me.Controls.Add(Me.LblEneWeapon)
+            Me.Controls.Add(Me.LblEneStatus)
             Me.Controls.Add(Me.Label13)
-            Me.Controls.Add(Me.lblEneEnd)
+            Me.Controls.Add(Me.LblEneEnd)
             Me.Controls.Add(Me.Label15)
             Me.Controls.Add(Me.Label16)
-            Me.Controls.Add(Me.lblEnemyName)
-            Me.Controls.Add(Me.lblPlrArmor)
+            Me.Controls.Add(Me.LblEnemyName)
+            Me.Controls.Add(Me.LblPlrArmor)
             Me.Controls.Add(Me.Label8)
-            Me.Controls.Add(Me.lblPlrWeapon)
-            Me.Controls.Add(Me.lblPlrStatus)
+            Me.Controls.Add(Me.LblPlrWeapon)
+            Me.Controls.Add(Me.LblPlrStatus)
             Me.Controls.Add(Me.Label6)
-            Me.Controls.Add(Me.lblPlrEnd)
+            Me.Controls.Add(Me.LblPlrEnd)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.lblPlrName)
+            Me.Controls.Add(Me.LblPlrName)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.txtBattle)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
@@ -402,24 +402,24 @@ Namespace Forms
 
         End Sub
         Friend WithEvents TxtBattle As TextBox
-        Friend WithEvents lblPlrArmor As Label
+        Friend WithEvents LblPlrArmor As Label
         Friend WithEvents Label8 As Label
-        Friend WithEvents lblPlrWeapon As Label
-        Friend WithEvents lblPlrStatus As Label
+        Friend WithEvents LblPlrWeapon As Label
+        Friend WithEvents LblPlrStatus As Label
         Friend WithEvents Label6 As Label
-        Friend WithEvents lblPlrEnd As Label
+        Friend WithEvents LblPlrEnd As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents lblPlrName As Label
+        Friend WithEvents LblPlrName As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents lblEneArmor As Label
+        Friend WithEvents LblEneArmor As Label
         Friend WithEvents Label10 As Label
-        Friend WithEvents lblEneWeapon As Label
-        Friend WithEvents lblEneStatus As Label
+        Friend WithEvents LblEneWeapon As Label
+        Friend WithEvents LblEneStatus As Label
         Friend WithEvents Label13 As Label
-        Friend WithEvents lblEneEnd As Label
+        Friend WithEvents LblEneEnd As Label
         Friend WithEvents Label15 As Label
         Friend WithEvents Label16 As Label
-        Friend WithEvents lblEnemyName As Label
+        Friend WithEvents LblEnemyName As Label
         Friend WithEvents BtnAttack As Button
         Friend WithEvents BtnBerserk As Button
         Friend WithEvents BtnDefend As Button

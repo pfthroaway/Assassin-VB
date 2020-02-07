@@ -48,14 +48,14 @@ Namespace Forms
 
         ''' <summary>displays all stats.</summary>
         Private Sub Display()
-            lblEndCurr.Text = _maxEnd.ToString + "%"
-            lblLightCurr.Text = _light.ToString + "%"
-            lblHeavyCurr.Text = _heavy.ToString + "%"
-            lblTwoCurr.Text = _twoH.ToString + "%"
-            lblBlockingCurr.Text = _blocking.ToString + "%"
-            lblSlippingCurr.Text = _slipping.ToString + "%"
-            lblStealthCurr.Text = _stealth.ToString + "%"
-            lblSkillPts.Text = _skillPts.ToString
+            LblEndCurr.Text = _maxEnd.ToString + "%"
+            LblLightCurr.Text = _light.ToString + "%"
+            LblHeavyCurr.Text = _heavy.ToString + "%"
+            LblTwoCurr.Text = _twoH.ToString + "%"
+            LblBlockingCurr.Text = _blocking.ToString + "%"
+            LblSlippingCurr.Text = _slipping.ToString + "%"
+            LblStealthCurr.Text = _stealth.ToString + "%"
+            LblSkillPts.Text = _skillPts.ToString
 
             If _skillPts = 0 Then
                 DisablePlusButtons()

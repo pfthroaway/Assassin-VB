@@ -183,8 +183,8 @@ Namespace Forms
         Public Sub Display()
             CheckPlusButtons()
             CheckMinusButtons()
-            lblGoldOnHand.Text = _goldOnHand.ToString("N0")
-            lblGoldRemaining.Text = _goldRemaining.ToString("N0")
+            LblGoldOnHand.Text = _goldOnHand.ToString("N0")
+            LblGoldRemaining.Text = _goldRemaining.ToString("N0")
 
             TxtHenchmenLevel1.Text = _henchmenLevel1.ToString
             TxtBuy1.Text = _buy1.ToString

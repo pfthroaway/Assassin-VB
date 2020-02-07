@@ -29,9 +29,9 @@ Namespace Forms.GuildForms
             Me.txtTransferGold = New TextBox()
             Me.txtGuildGold = New TextBox()
             Me.Label1 = New Label()
-            Me.btnBack = New Button()
-            Me.btnClear = New Button()
-            Me.btnTransfer = New Button()
+            Me.BtnBack = New Button()
+            Me.BtnClear = New Button()
+            Me.BtnTransfer = New Button()
             Me.txtTransfer = New TextBox()
             Me.Label9 = New Label()
             Me.Label2 = New Label()
@@ -95,38 +95,38 @@ Namespace Forms.GuildForms
             Me.Label1.Text = "Gold:"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(228, 337)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(100, 30)
-            Me.btnBack.TabIndex = 9
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(228, 337)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(100, 30)
+            Me.BtnBack.TabIndex = 9
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(119, 337)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(100, 30)
-            Me.btnClear.TabIndex = 8
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(119, 337)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(100, 30)
+            Me.BtnClear.TabIndex = 8
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnTransfer
+            'BtnTransfer
             '
-            Me.btnTransfer.Enabled = False
-            Me.btnTransfer.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnTransfer.Location = New Point(10, 337)
-            Me.btnTransfer.Name = "btnTransfer"
-            Me.btnTransfer.Size = New Size(100, 30)
-            Me.btnTransfer.TabIndex = 7
-            Me.btnTransfer.Text = "&Transfer"
-            Me.btnTransfer.UseVisualStyleBackColor = True
+            Me.BtnTransfer.Enabled = False
+            Me.BtnTransfer.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnTransfer.Location = New Point(10, 337)
+            Me.BtnTransfer.Name = "BtnTransfer"
+            Me.BtnTransfer.Size = New Size(100, 30)
+            Me.BtnTransfer.TabIndex = 7
+            Me.BtnTransfer.Text = "&Transfer"
+            Me.BtnTransfer.UseVisualStyleBackColor = True
             '
             'txtTransfer
             '
@@ -429,7 +429,7 @@ Namespace Forms.GuildForms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(690, 379)
             Me.Controls.Add(Me.pctHelp)
             Me.Controls.Add(Me.grpTransfer)
@@ -443,9 +443,9 @@ Namespace Forms.GuildForms
             Me.Controls.Add(Me.txtTransferGold)
             Me.Controls.Add(Me.txtGuildGold)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnTransfer)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnTransfer)
             Me.Controls.Add(Me.txtTransfer)
             Me.Controls.Add(Me.Label9)
             Me.Controls.Add(Me.Label2)

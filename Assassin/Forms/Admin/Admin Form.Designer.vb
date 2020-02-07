@@ -26,61 +26,61 @@ Namespace Forms.Admin
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.btnGuilds = New Button()
-            Me.btnEnemies = New Button()
-            Me.btnUsers = New Button()
-            Me.btnBack = New Button()
+            Me.BtnGuilds = New Button()
+            Me.BtnEnemies = New Button()
+            Me.BtnUsers = New Button()
+            Me.BtnBack = New Button()
             Me.Label1 = New Label()
-            Me.btnChangePassword = New Button()
+            Me.BtnChangePassword = New Button()
             Me.SuspendLayout()
             '
-            'btnGuilds
+            'BtnGuilds
             '
-            Me.btnGuilds.DialogResult = DialogResult.Cancel
-            Me.btnGuilds.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnGuilds.Location = New Point(13, 81)
-            Me.btnGuilds.Margin = New Padding(4)
-            Me.btnGuilds.Name = "btnGuilds"
-            Me.btnGuilds.Size = New Size(175, 30)
-            Me.btnGuilds.TabIndex = 1
-            Me.btnGuilds.Text = "&Guilds"
-            Me.btnGuilds.UseVisualStyleBackColor = True
+            Me.BtnGuilds.DialogResult = DialogResult.Cancel
+            Me.BtnGuilds.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnGuilds.Location = New Point(13, 81)
+            Me.BtnGuilds.Margin = New Padding(4)
+            Me.BtnGuilds.Name = "BtnGuilds"
+            Me.BtnGuilds.Size = New Size(175, 30)
+            Me.BtnGuilds.TabIndex = 1
+            Me.BtnGuilds.Text = "&Guilds"
+            Me.BtnGuilds.UseVisualStyleBackColor = True
             '
-            'btnEnemies
+            'BtnEnemies
             '
-            Me.btnEnemies.DialogResult = DialogResult.Cancel
-            Me.btnEnemies.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnEnemies.Location = New Point(13, 43)
-            Me.btnEnemies.Margin = New Padding(4)
-            Me.btnEnemies.Name = "btnEnemies"
-            Me.btnEnemies.Size = New Size(175, 30)
-            Me.btnEnemies.TabIndex = 0
-            Me.btnEnemies.Text = "&Enemies"
-            Me.btnEnemies.UseVisualStyleBackColor = True
+            Me.BtnEnemies.DialogResult = DialogResult.Cancel
+            Me.BtnEnemies.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnEnemies.Location = New Point(13, 43)
+            Me.BtnEnemies.Margin = New Padding(4)
+            Me.BtnEnemies.Name = "BtnEnemies"
+            Me.BtnEnemies.Size = New Size(175, 30)
+            Me.BtnEnemies.TabIndex = 0
+            Me.BtnEnemies.Text = "&Enemies"
+            Me.BtnEnemies.UseVisualStyleBackColor = True
             '
-            'btnUsers
+            'BtnUsers
             '
-            Me.btnUsers.DialogResult = DialogResult.Cancel
-            Me.btnUsers.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnUsers.Location = New Point(13, 119)
-            Me.btnUsers.Margin = New Padding(4)
-            Me.btnUsers.Name = "btnUsers"
-            Me.btnUsers.Size = New Size(175, 30)
-            Me.btnUsers.TabIndex = 2
-            Me.btnUsers.Text = "&Users"
-            Me.btnUsers.UseVisualStyleBackColor = True
+            Me.BtnUsers.DialogResult = DialogResult.Cancel
+            Me.BtnUsers.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnUsers.Location = New Point(13, 119)
+            Me.BtnUsers.Margin = New Padding(4)
+            Me.BtnUsers.Name = "BtnUsers"
+            Me.BtnUsers.Size = New Size(175, 30)
+            Me.BtnUsers.TabIndex = 2
+            Me.BtnUsers.Text = "&Users"
+            Me.BtnUsers.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(13, 195)
-            Me.btnBack.Margin = New Padding(4)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(175, 30)
-            Me.btnBack.TabIndex = 3
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(13, 195)
+            Me.BtnBack.Margin = New Padding(4)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(175, 30)
+            Me.BtnBack.TabIndex = 3
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
             'Label1
             '
@@ -92,30 +92,30 @@ Namespace Forms.Admin
             Me.Label1.Text = "Admin"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnChangePassword
+            'BtnChangePassword
             '
-            Me.btnChangePassword.DialogResult = DialogResult.Cancel
-            Me.btnChangePassword.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnChangePassword.Location = New Point(13, 157)
-            Me.btnChangePassword.Margin = New Padding(4)
-            Me.btnChangePassword.Name = "btnChangePassword"
-            Me.btnChangePassword.Size = New Size(175, 30)
-            Me.btnChangePassword.TabIndex = 5
-            Me.btnChangePassword.Text = "&Change Password"
-            Me.btnChangePassword.UseVisualStyleBackColor = True
+            Me.BtnChangePassword.DialogResult = DialogResult.Cancel
+            Me.BtnChangePassword.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnChangePassword.Location = New Point(13, 157)
+            Me.BtnChangePassword.Margin = New Padding(4)
+            Me.BtnChangePassword.Name = "BtnChangePassword"
+            Me.BtnChangePassword.Size = New Size(175, 30)
+            Me.BtnChangePassword.TabIndex = 5
+            Me.BtnChangePassword.Text = "&Change Password"
+            Me.BtnChangePassword.UseVisualStyleBackColor = True
             '
             'frmAdmin
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(201, 237)
-            Me.Controls.Add(Me.btnChangePassword)
+            Me.Controls.Add(Me.BtnChangePassword)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnUsers)
-            Me.Controls.Add(Me.btnEnemies)
-            Me.Controls.Add(Me.btnGuilds)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnUsers)
+            Me.Controls.Add(Me.BtnEnemies)
+            Me.Controls.Add(Me.BtnGuilds)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False

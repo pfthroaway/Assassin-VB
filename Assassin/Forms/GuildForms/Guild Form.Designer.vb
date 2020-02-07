@@ -38,7 +38,7 @@ Namespace Forms.GuildForms
             Me.BtnTransfer = New System.Windows.Forms.Button()
             Me.BtnQuit = New System.Windows.Forms.Button()
             Me.BtnManage = New System.Windows.Forms.Button()
-            Me.lblGuildName = New System.Windows.Forms.Label()
+            Me.LblGuildName = New System.Windows.Forms.Label()
             Me.BtnDonate = New System.Windows.Forms.Button()
             Me.SuspendLayout()
             '
@@ -168,15 +168,15 @@ Namespace Forms.GuildForms
             Me.BtnManage.Text = "Manage &Guild"
             Me.BtnManage.UseVisualStyleBackColor = True
             '
-            'lblGuildName
+            'LblGuildName
             '
-            Me.lblGuildName.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGuildName.Location = New System.Drawing.Point(15, 13)
-            Me.lblGuildName.Name = "lblGuildName"
-            Me.lblGuildName.Size = New System.Drawing.Size(477, 40)
-            Me.lblGuildName.TabIndex = 14
-            Me.lblGuildName.Text = "Guild Name Here"
-            Me.lblGuildName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblGuildName.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGuildName.Location = New System.Drawing.Point(15, 13)
+            Me.LblGuildName.Name = "LblGuildName"
+            Me.LblGuildName.Size = New System.Drawing.Size(477, 40)
+            Me.LblGuildName.TabIndex = 14
+            Me.LblGuildName.Text = "Guild Name Here"
+            Me.LblGuildName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'BtnDonate
             '
@@ -195,7 +195,7 @@ Namespace Forms.GuildForms
             Me.CancelButton = Me.BtnBack
             Me.ClientSize = New System.Drawing.Size(510, 349)
             Me.Controls.Add(Me.BtnDonate)
-            Me.Controls.Add(Me.lblGuildName)
+            Me.Controls.Add(Me.LblGuildName)
             Me.Controls.Add(Me.BtnManage)
             Me.Controls.Add(Me.BtnQuit)
             Me.Controls.Add(Me.BtnTransfer)
@@ -232,7 +232,7 @@ Namespace Forms.GuildForms
         Friend WithEvents BtnTransfer As Button
         Friend WithEvents BtnQuit As Button
         Friend WithEvents BtnManage As Button
-        Friend WithEvents lblGuildName As Label
+        Friend WithEvents LblGuildName As Label
         Friend WithEvents BtnDonate As Button
     End Class
 End NameSpace

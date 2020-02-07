@@ -28,9 +28,9 @@ Namespace Forms
         Private Sub InitializeComponent()
             Me.components = New Container()
             Me.txtJobs = New TextBox()
-            Me.btnAccept = New Button()
-            Me.btnDecline = New Button()
-            Me.btnLeave = New Button()
+            Me.BtnAccept = New Button()
+            Me.BtnDecline = New Button()
+            Me.BtnLeave = New Button()
             Me.Timer1 = New Timer(Me.components)
             Me.SuspendLayout
             '
@@ -48,38 +48,38 @@ Namespace Forms
             Me.txtJobs.TabIndex = 3
             Me.txtJobs.Text = "You sit at a table and wait."
             '
-            'btnAccept
+            'BtnAccept
             '
-            Me.btnAccept.Enabled = False
-            Me.btnAccept.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnAccept.Location = New Point(60, 170)
-            Me.btnAccept.Name = "btnAccept"
-            Me.btnAccept.Size = New Size(150, 30)
-            Me.btnAccept.TabIndex = 0
-            Me.btnAccept.Text = "&Accept"
-            Me.btnAccept.UseVisualStyleBackColor = True
+            Me.BtnAccept.Enabled = False
+            Me.BtnAccept.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnAccept.Location = New Point(60, 170)
+            Me.BtnAccept.Name = "BtnAccept"
+            Me.BtnAccept.Size = New Size(150, 30)
+            Me.BtnAccept.TabIndex = 0
+            Me.BtnAccept.Text = "&Accept"
+            Me.BtnAccept.UseVisualStyleBackColor = True
             '
-            'btnDecline
+            'BtnDecline
             '
-            Me.btnDecline.Enabled = False
-            Me.btnDecline.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDecline.Location = New Point(216, 170)
-            Me.btnDecline.Name = "btnDecline"
-            Me.btnDecline.Size = New Size(150, 30)
-            Me.btnDecline.TabIndex = 1
-            Me.btnDecline.Text = "&Decline"
-            Me.btnDecline.UseVisualStyleBackColor = True
+            Me.BtnDecline.Enabled = False
+            Me.BtnDecline.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDecline.Location = New Point(216, 170)
+            Me.BtnDecline.Name = "BtnDecline"
+            Me.BtnDecline.Size = New Size(150, 30)
+            Me.BtnDecline.TabIndex = 1
+            Me.BtnDecline.Text = "&Decline"
+            Me.BtnDecline.UseVisualStyleBackColor = True
             '
-            'btnLeave
+            'BtnLeave
             '
-            Me.btnLeave.Enabled = False
-            Me.btnLeave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnLeave.Location = New Point(138, 206)
-            Me.btnLeave.Name = "btnLeave"
-            Me.btnLeave.Size = New Size(150, 30)
-            Me.btnLeave.TabIndex = 2
-            Me.btnLeave.Text = "&Leave Table"
-            Me.btnLeave.UseVisualStyleBackColor = True
+            Me.BtnLeave.Enabled = False
+            Me.BtnLeave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnLeave.Location = New Point(138, 206)
+            Me.BtnLeave.Name = "BtnLeave"
+            Me.BtnLeave.Size = New Size(150, 30)
+            Me.BtnLeave.TabIndex = 2
+            Me.BtnLeave.Text = "&Leave Table"
+            Me.BtnLeave.UseVisualStyleBackColor = True
             '
             'Timer1
             '
@@ -89,11 +89,11 @@ Namespace Forms
             '
             Me.AutoScaleDimensions = New SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnLeave
+            Me.CancelButton = Me.BtnLeave
             Me.ClientSize = New Size(426, 247)
-            Me.Controls.Add(Me.btnLeave)
-            Me.Controls.Add(Me.btnDecline)
-            Me.Controls.Add(Me.btnAccept)
+            Me.Controls.Add(Me.BtnLeave)
+            Me.Controls.Add(Me.BtnDecline)
+            Me.Controls.Add(Me.BtnAccept)
             Me.Controls.Add(Me.txtJobs)
             Me.MaximizeBox = False
             Me.MaximumSize = New Size(442, 286)

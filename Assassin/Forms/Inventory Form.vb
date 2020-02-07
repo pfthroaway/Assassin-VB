@@ -18,11 +18,11 @@ Namespace Forms
 
         ''' <summary>Displays the user's inventory.</summary>
         Public Sub Display()
-            lblLight.Text = CurrentUser.LightWeapon.Name
-            lblHeavy.Text = CurrentUser.HeavyWeapon.Name
-            lblTwoH.Text = CurrentUser.TwoHandedWeapon.Name
-            lblPotion.Text = CurrentUser.Potion.Name
-            lblLockpicks.Text = CurrentUser.Lockpicks.ToString
+            LblLight.Text = CurrentUser.LightWeapon.Name
+            LblHeavy.Text = CurrentUser.HeavyWeapon.Name
+            LblTwoH.Text = CurrentUser.TwoHandedWeapon.Name
+            LblPotion.Text = CurrentUser.Potion.Name
+            LblLockpicks.Text = CurrentUser.Lockpicks.ToString
 
             BtnLight.Enabled = CurrentUser.CurrentWeaponType = WeaponType.Light
             BtnHeavy.Enabled = CurrentUser.CurrentWeaponType = WeaponType.Heavy

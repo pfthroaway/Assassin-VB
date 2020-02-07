@@ -44,10 +44,10 @@ Namespace Forms.GuildForms
             Me.txtHenchmenLevel1 = New TextBox()
             Me.Label3 = New Label()
             Me.txtDonate = New TextBox()
-            Me.lblDonate = New Label()
-            Me.btnBack = New Button()
-            Me.btnClear = New Button()
-            Me.btnDonate = New Button()
+            Me.LblDonate = New Label()
+            Me.BtnBack = New Button()
+            Me.BtnClear = New Button()
+            Me.BtnDonate = New Button()
             Me.txtDonateGold = New TextBox()
             Me.txtGold = New TextBox()
             Me.Label1 = New Label()
@@ -232,48 +232,48 @@ Namespace Forms.GuildForms
             Me.txtDonate.TabIndex = 9
             Me.txtDonate.Text = "What would you like to donate?"
             '
-            'lblDonate
+            'LblDonate
             '
-            Me.lblDonate.Font = New Font("Arial", 15.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblDonate.Location = New Point(17, 3)
-            Me.lblDonate.Name = "lblDonate"
-            Me.lblDonate.Size = New Size(548, 40)
-            Me.lblDonate.TabIndex = 60
-            Me.lblDonate.Text = "Donate"
-            Me.lblDonate.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblDonate.Font = New Font("Arial", 15.75!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblDonate.Location = New Point(17, 3)
+            Me.LblDonate.Name = "LblDonate"
+            Me.LblDonate.Size = New Size(548, 40)
+            Me.LblDonate.TabIndex = 60
+            Me.LblDonate.Text = "Donate"
+            Me.LblDonate.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(83, 347)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(100, 30)
-            Me.btnBack.TabIndex = 8
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(83, 347)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(100, 30)
+            Me.BtnBack.TabIndex = 8
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(157, 311)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(100, 30)
-            Me.btnClear.TabIndex = 7
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(157, 311)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(100, 30)
+            Me.BtnClear.TabIndex = 7
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnDonate
+            'BtnDonate
             '
-            Me.btnDonate.Enabled = False
-            Me.btnDonate.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnDonate.Location = New Point(15, 311)
-            Me.btnDonate.Name = "btnDonate"
-            Me.btnDonate.Size = New Size(100, 30)
-            Me.btnDonate.TabIndex = 6
-            Me.btnDonate.Text = "&Donate"
-            Me.btnDonate.UseVisualStyleBackColor = True
+            Me.BtnDonate.Enabled = False
+            Me.BtnDonate.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDonate.Location = New Point(15, 311)
+            Me.BtnDonate.Name = "BtnDonate"
+            Me.BtnDonate.Size = New Size(100, 30)
+            Me.BtnDonate.TabIndex = 6
+            Me.BtnDonate.Text = "&Donate"
+            Me.BtnDonate.UseVisualStyleBackColor = True
             '
             'txtDonateGold
             '
@@ -309,16 +309,16 @@ Namespace Forms.GuildForms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(577, 388)
             Me.Controls.Add(Me.txtDonateGold)
             Me.Controls.Add(Me.txtGold)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnDonate)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnDonate)
             Me.Controls.Add(Me.txtDonate)
-            Me.Controls.Add(Me.lblDonate)
+            Me.Controls.Add(Me.LblDonate)
             Me.Controls.Add(Me.Label9)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.txtDonate5)
@@ -366,7 +366,7 @@ Namespace Forms.GuildForms
         Friend WithEvents TxtHenchmenLevel1 As TextBox
         Friend WithEvents Label3 As Label
         Friend WithEvents TxtDonate As TextBox
-        Friend WithEvents lblDonate As Label
+        Friend WithEvents LblDonate As Label
         Friend WithEvents BtnBack As Button
         Friend WithEvents BtnClear As Button
         Friend WithEvents BtnDonate As Button

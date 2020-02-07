@@ -33,8 +33,8 @@ Namespace Forms
             Me.txtOldPswd = New TextBox()
             Me.txtNewPswd = New TextBox()
             Me.txtConfPswd = New TextBox()
-            Me.btnSubmit = New Button()
-            Me.btnBack = New Button()
+            Me.BtnSubmit = New Button()
+            Me.BtnBack = New Button()
             Me.SuspendLayout()
             '
             'Label1
@@ -119,36 +119,36 @@ Namespace Forms
             Me.txtConfPswd.TextAlign = HorizontalAlignment.Center
             Me.txtConfPswd.UseSystemPasswordChar = True
             '
-            'btnSubmit
+            'BtnSubmit
             '
-            Me.btnSubmit.Enabled = False
-            Me.btnSubmit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSubmit.Location = New Point(91, 138)
-            Me.btnSubmit.Name = "btnSubmit"
-            Me.btnSubmit.Size = New Size(125, 30)
-            Me.btnSubmit.TabIndex = 20
-            Me.btnSubmit.Text = "&Submit"
-            Me.btnSubmit.UseVisualStyleBackColor = True
+            Me.BtnSubmit.Enabled = False
+            Me.BtnSubmit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSubmit.Location = New Point(91, 138)
+            Me.BtnSubmit.Name = "BtnSubmit"
+            Me.BtnSubmit.Size = New Size(125, 30)
+            Me.BtnSubmit.TabIndex = 20
+            Me.BtnSubmit.Text = "&Submit"
+            Me.BtnSubmit.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(91, 174)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(125, 30)
-            Me.btnBack.TabIndex = 21
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(91, 174)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(125, 30)
+            Me.BtnBack.TabIndex = 21
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
             'frmChangePassword
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(307, 215)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnSubmit)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnSubmit)
             Me.Controls.Add(Me.txtConfPswd)
             Me.Controls.Add(Me.txtNewPswd)
             Me.Controls.Add(Me.txtOldPswd)

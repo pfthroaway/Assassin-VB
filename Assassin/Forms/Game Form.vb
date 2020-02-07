@@ -78,39 +78,39 @@ Namespace Forms
 
         ''' <summary>Displays all the statistics of the character.</summary>
         Public Sub Display()
-            lblName.Text = CurrentUser.Name
-            lblRank.Text = CurrentUser.Rank
-            lblExpAmt.Text = CurrentUser.Experience.ToString
-            lblSkillPtsAmt.Text = CurrentUser.SkillPoints.ToString
-            lblEndAmt.Text = CurrentUser.EnduranceToString
+            LblName.Text = CurrentUser.Name
+            LblRank.Text = CurrentUser.Rank
+            LblExpAmt.Text = CurrentUser.Experience.ToString
+            LblSkillPtsAmt.Text = CurrentUser.SkillPoints.ToString
+            LblEndAmt.Text = CurrentUser.EnduranceToString
 
-            lblHunger.Text = GetHunger(CurrentUser.Hunger)
+            LblHunger.Text = GetHunger(CurrentUser.Hunger)
 
-            lblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
+            LblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
 
-            lblThirst.Text = GetThirst(CurrentUser.Thirst)
+            LblThirst.Text = GetThirst(CurrentUser.Thirst)
 
-            lblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
+            LblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
 
-            lblWeaponName.Text = CurrentUser.CurrentWeapon.Name
-            lblArmorName.Text = CurrentUser.Armor.Name
-            lblPotion.Text = CurrentUser.Potion.Name
-            lblGoldHandAmt.Text = CurrentUser.GoldOnHand.ToString("N0")
-            lblGoldBankAmt.Text = CurrentUser.GoldInBank.ToString("N0")
-            lblGoldLoanAmt.Text = CurrentUser.GoldOnLoan.ToString("N0")
+            LblWeaponName.Text = CurrentUser.CurrentWeapon.Name
+            LblArmorName.Text = CurrentUser.Armor.Name
+            LblPotion.Text = CurrentUser.Potion.Name
+            LblGoldHandAmt.Text = CurrentUser.GoldOnHand.ToString("N0")
+            LblGoldBankAmt.Text = CurrentUser.GoldInBank.ToString("N0")
+            LblGoldLoanAmt.Text = CurrentUser.GoldOnLoan.ToString("N0")
 
-            lblLightAmt.Text = CurrentUser.LightWeaponSkillToString
-            lblHeavyAmt.Text = CurrentUser.HeavyWeaponSkillToString
-            lblTwoAmt.Text = CurrentUser.TwoHandedWeaponSkillToString
-            lblBlockingAmt.Text = CurrentUser.BlockingToString
-            lblSlippingAmt.Text = CurrentUser.SlippingToString
-            lblStealthAmt.Text = CurrentUser.StealthToString
+            LblLightAmt.Text = CurrentUser.LightWeaponSkillToString
+            LblHeavyAmt.Text = CurrentUser.HeavyWeaponSkillToString
+            LblTwoAmt.Text = CurrentUser.TwoHandedWeaponSkillToString
+            LblBlockingAmt.Text = CurrentUser.BlockingToString
+            LblSlippingAmt.Text = CurrentUser.SlippingToString
+            LblStealthAmt.Text = CurrentUser.StealthToString
 
-            lblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
+            LblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
 
-            lblArmorName.ForeColor = If(CurrentUser.Armor.Name = "Clothes", Color.Red, Color.Black)
+            LblArmorName.ForeColor = If(CurrentUser.Armor.Name = "Clothes", Color.Red, Color.Black)
 
-            lblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
+            LblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
         End Sub
 
         ''' <summary>Toggles all the Buttons on the Form.</summary>
@@ -165,7 +165,7 @@ Namespace Forms
 
         Private Sub BtnGuild_Click(sender As Object, e As EventArgs) Handles BtnGuild.Click
             FrmGuildList.Show()
-            FrmGuildList.lblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
+            FrmGuildList.LblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
             Hide()
         End Sub
 

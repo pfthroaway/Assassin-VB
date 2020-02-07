@@ -45,21 +45,21 @@ Namespace Forms
 
         ''' <summary>Displays all the displayable information in the labels on the form.</summary>
         Public Sub Display()
-            lblPlrName.Text = CurrentUser.Name
-            lblPlrEnd.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            lblPlrEnd.Text = CurrentUser.EnduranceToString
-            lblPlrStatus.Text = GetStatusText(_userStamina)
-            lblPlrStatus.ForeColor = If(_userStamina < 3, Color.Red, Color.Black)
-            lblPlrWeapon.Text = CurrentUser.CurrentWeapon.Name
-            lblPlrArmor.Text = CurrentUser.Armor.Name
+            LblPlrName.Text = CurrentUser.Name
+            LblPlrEnd.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
+            LblPlrEnd.Text = CurrentUser.EnduranceToString
+            LblPlrStatus.Text = GetStatusText(_userStamina)
+            LblPlrStatus.ForeColor = If(_userStamina < 3, Color.Red, Color.Black)
+            LblPlrWeapon.Text = CurrentUser.CurrentWeapon.Name
+            LblPlrArmor.Text = CurrentUser.Armor.Name
 
-            lblEnemyName.Text = CurrentEnemy.Name
-            lblEneEnd.ForeColor = If(CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            lblEneEnd.Text = CurrentEnemy.EnduranceToString
-            lblEneStatus.Text = GetStatusText(_enemyStamina)
-            lblEneStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
-            lblEneWeapon.Text = CurrentEnemy.Weapon.Name
-            lblEneArmor.Text = CurrentEnemy.Armor.Name
+            LblEnemyName.Text = CurrentEnemy.Name
+            LblEneEnd.ForeColor = If(CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2), Color.Red, Color.Black)
+            LblEneEnd.Text = CurrentEnemy.EnduranceToString
+            LblEneStatus.Text = GetStatusText(_enemyStamina)
+            LblEneStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
+            LblEneWeapon.Text = CurrentEnemy.Weapon.Name
+            LblEneArmor.Text = CurrentEnemy.Armor.Name
 
             ToggleButtons(_userStamina > 0 AndAlso Not _blnDone)
         End Sub

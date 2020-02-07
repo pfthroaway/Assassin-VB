@@ -26,19 +26,19 @@ Namespace Forms.Admin
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.lstEnemies = New ListBox()
-            Me.btnClear = New Button()
-            Me.btnExit = New Button()
-            Me.btnSave = New Button()
+            Me.LstEnemies = New ListBox()
+            Me.BtnClear = New Button()
+            Me.BtnExit = New Button()
+            Me.BtnSave = New Button()
             Me.txtName = New TextBox()
-            Me.lblName = New Label()
+            Me.LblName = New Label()
             Me.txtEndurance = New TextBox()
-            Me.lblEnd = New Label()
-            Me.cmbWeaponType = New ComboBox()
-            Me.lblWeaponType = New Label()
-            Me.lblWeapon = New Label()
-            Me.cmbWeapon = New ComboBox()
-            Me.cmbArmor = New ComboBox()
+            Me.LblEnd = New Label()
+            Me.CmbWeaponType = New ComboBox()
+            Me.LblWeaponType = New Label()
+            Me.LblWeapon = New Label()
+            Me.CmbWeapon = New ComboBox()
+            Me.CmbArmor = New ComboBox()
             Me.Label12 = New Label()
             Me.txtWeaponSkill = New TextBox()
             Me.Label5 = New Label()
@@ -48,53 +48,53 @@ Namespace Forms.Admin
             Me.Label1 = New Label()
             Me.SuspendLayout()
             '
-            'lstEnemies
+            'LstEnemies
             '
-            Me.lstEnemies.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lstEnemies.FormattingEnabled = True
-            Me.lstEnemies.ItemHeight = 18
-            Me.lstEnemies.Location = New Point(13, 13)
-            Me.lstEnemies.Margin = New Padding(4)
-            Me.lstEnemies.Name = "lstEnemies"
-            Me.lstEnemies.ScrollAlwaysVisible = True
-            Me.lstEnemies.Size = New Size(225, 184)
-            Me.lstEnemies.TabIndex = 0
+            Me.LstEnemies.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LstEnemies.FormattingEnabled = True
+            Me.LstEnemies.ItemHeight = 18
+            Me.LstEnemies.Location = New Point(13, 13)
+            Me.LstEnemies.Margin = New Padding(4)
+            Me.LstEnemies.Name = "LstEnemies"
+            Me.LstEnemies.ScrollAlwaysVisible = True
+            Me.LstEnemies.Size = New Size(225, 184)
+            Me.LstEnemies.TabIndex = 0
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Enabled = False
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(63, 205)
-            Me.btnClear.Margin = New Padding(4)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(125, 30)
-            Me.btnClear.TabIndex = 40
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Enabled = False
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(63, 205)
+            Me.BtnClear.Margin = New Padding(4)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(125, 30)
+            Me.BtnClear.TabIndex = 40
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnExit
+            'BtnExit
             '
-            Me.btnExit.DialogResult = DialogResult.Cancel
-            Me.btnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnExit.Location = New Point(63, 281)
-            Me.btnExit.Margin = New Padding(4)
-            Me.btnExit.Name = "btnExit"
-            Me.btnExit.Size = New Size(125, 30)
-            Me.btnExit.TabIndex = 42
-            Me.btnExit.Text = "E&xit"
-            Me.btnExit.UseVisualStyleBackColor = True
+            Me.BtnExit.DialogResult = DialogResult.Cancel
+            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New Point(63, 281)
+            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.Name = "BtnExit"
+            Me.BtnExit.Size = New Size(125, 30)
+            Me.BtnExit.TabIndex = 42
+            Me.BtnExit.Text = "E&xit"
+            Me.BtnExit.UseVisualStyleBackColor = True
             '
-            'btnSave
+            'BtnSave
             '
-            Me.btnSave.Enabled = False
-            Me.btnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSave.Location = New Point(63, 243)
-            Me.btnSave.Margin = New Padding(4)
-            Me.btnSave.Name = "btnSave"
-            Me.btnSave.Size = New Size(125, 30)
-            Me.btnSave.TabIndex = 41
-            Me.btnSave.Text = "&Save"
-            Me.btnSave.UseVisualStyleBackColor = True
+            Me.BtnSave.Enabled = False
+            Me.BtnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSave.Location = New Point(63, 243)
+            Me.BtnSave.Margin = New Padding(4)
+            Me.BtnSave.Name = "BtnSave"
+            Me.BtnSave.Size = New Size(125, 30)
+            Me.BtnSave.TabIndex = 41
+            Me.BtnSave.Text = "&Save"
+            Me.BtnSave.UseVisualStyleBackColor = True
             '
             'txtName
             '
@@ -108,17 +108,17 @@ Namespace Forms.Admin
             Me.txtName.TabIndex = 1
             Me.txtName.TextAlign = HorizontalAlignment.Center
             '
-            'lblName
+            'LblName
             '
-            Me.lblName.BorderStyle = BorderStyle.FixedSingle
-            Me.lblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblName.Location = New Point(246, 13)
-            Me.lblName.Margin = New Padding(4, 0, 4, 0)
-            Me.lblName.Name = "lblName"
-            Me.lblName.Size = New Size(125, 24)
-            Me.lblName.TabIndex = 44
-            Me.lblName.Text = "Name:"
-            Me.lblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.BorderStyle = BorderStyle.FixedSingle
+            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New Point(246, 13)
+            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.Name = "LblName"
+            Me.LblName.Size = New Size(125, 24)
+            Me.LblName.TabIndex = 44
+            Me.LblName.Text = "Name:"
+            Me.LblName.TextAlign = ContentAlignment.MiddleRight
             '
             'txtEndurance
             '
@@ -132,76 +132,76 @@ Namespace Forms.Admin
             Me.txtEndurance.TabIndex = 2
             Me.txtEndurance.TextAlign = HorizontalAlignment.Center
             '
-            'lblEnd
+            'LblEnd
             '
-            Me.lblEnd.BorderStyle = BorderStyle.FixedSingle
-            Me.lblEnd.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEnd.Location = New Point(246, 51)
-            Me.lblEnd.Margin = New Padding(4, 0, 4, 0)
-            Me.lblEnd.Name = "lblEnd"
-            Me.lblEnd.Size = New Size(125, 24)
-            Me.lblEnd.TabIndex = 45
-            Me.lblEnd.Text = "Endurance:"
-            Me.lblEnd.TextAlign = ContentAlignment.MiddleRight
+            Me.LblEnd.BorderStyle = BorderStyle.FixedSingle
+            Me.LblEnd.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnd.Location = New Point(246, 51)
+            Me.LblEnd.Margin = New Padding(4, 0, 4, 0)
+            Me.LblEnd.Name = "LblEnd"
+            Me.LblEnd.Size = New Size(125, 24)
+            Me.LblEnd.TabIndex = 45
+            Me.LblEnd.Text = "Endurance:"
+            Me.LblEnd.TextAlign = ContentAlignment.MiddleRight
             '
-            'cmbWeaponType
+            'CmbWeaponType
             '
-            Me.cmbWeaponType.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbWeaponType.Enabled = False
-            Me.cmbWeaponType.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbWeaponType.FormattingEnabled = True
-            Me.cmbWeaponType.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
-            Me.cmbWeaponType.Location = New Point(379, 89)
-            Me.cmbWeaponType.Name = "cmbWeaponType"
-            Me.cmbWeaponType.Size = New Size(101, 24)
-            Me.cmbWeaponType.TabIndex = 3
+            Me.CmbWeaponType.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbWeaponType.Enabled = False
+            Me.CmbWeaponType.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbWeaponType.FormattingEnabled = True
+            Me.CmbWeaponType.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
+            Me.CmbWeaponType.Location = New Point(379, 89)
+            Me.CmbWeaponType.Name = "CmbWeaponType"
+            Me.CmbWeaponType.Size = New Size(101, 24)
+            Me.CmbWeaponType.TabIndex = 3
             '
-            'lblWeaponType
+            'LblWeaponType
             '
-            Me.lblWeaponType.BorderStyle = BorderStyle.FixedSingle
-            Me.lblWeaponType.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblWeaponType.Location = New Point(246, 89)
-            Me.lblWeaponType.Margin = New Padding(4, 0, 4, 0)
-            Me.lblWeaponType.Name = "lblWeaponType"
-            Me.lblWeaponType.Size = New Size(125, 24)
-            Me.lblWeaponType.TabIndex = 74
-            Me.lblWeaponType.Text = "Weapon Type:"
-            Me.lblWeaponType.TextAlign = ContentAlignment.MiddleRight
+            Me.LblWeaponType.BorderStyle = BorderStyle.FixedSingle
+            Me.LblWeaponType.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblWeaponType.Location = New Point(246, 89)
+            Me.LblWeaponType.Margin = New Padding(4, 0, 4, 0)
+            Me.LblWeaponType.Name = "LblWeaponType"
+            Me.LblWeaponType.Size = New Size(125, 24)
+            Me.LblWeaponType.TabIndex = 74
+            Me.LblWeaponType.Text = "Weapon Type:"
+            Me.LblWeaponType.TextAlign = ContentAlignment.MiddleRight
             '
-            'lblWeapon
+            'LblWeapon
             '
-            Me.lblWeapon.BorderStyle = BorderStyle.FixedSingle
-            Me.lblWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblWeapon.Location = New Point(246, 129)
-            Me.lblWeapon.Margin = New Padding(4, 0, 4, 0)
-            Me.lblWeapon.Name = "lblWeapon"
-            Me.lblWeapon.Size = New Size(125, 24)
-            Me.lblWeapon.TabIndex = 73
-            Me.lblWeapon.Tag = ""
-            Me.lblWeapon.Text = "Weapon:"
-            Me.lblWeapon.TextAlign = ContentAlignment.MiddleRight
+            Me.LblWeapon.BorderStyle = BorderStyle.FixedSingle
+            Me.LblWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblWeapon.Location = New Point(246, 129)
+            Me.LblWeapon.Margin = New Padding(4, 0, 4, 0)
+            Me.LblWeapon.Name = "LblWeapon"
+            Me.LblWeapon.Size = New Size(125, 24)
+            Me.LblWeapon.TabIndex = 73
+            Me.LblWeapon.Tag = ""
+            Me.LblWeapon.Text = "Weapon:"
+            Me.LblWeapon.TextAlign = ContentAlignment.MiddleRight
             '
-            'cmbWeapon
+            'CmbWeapon
             '
-            Me.cmbWeapon.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbWeapon.Enabled = False
-            Me.cmbWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbWeapon.FormattingEnabled = True
-            Me.cmbWeapon.Location = New Point(379, 129)
-            Me.cmbWeapon.Name = "cmbWeapon"
-            Me.cmbWeapon.Size = New Size(175, 24)
-            Me.cmbWeapon.TabIndex = 4
+            Me.CmbWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbWeapon.Enabled = False
+            Me.CmbWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbWeapon.FormattingEnabled = True
+            Me.CmbWeapon.Location = New Point(379, 129)
+            Me.CmbWeapon.Name = "CmbWeapon"
+            Me.CmbWeapon.Size = New Size(175, 24)
+            Me.CmbWeapon.TabIndex = 4
             '
-            'cmbArmor
+            'CmbArmor
             '
-            Me.cmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbArmor.Enabled = False
-            Me.cmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.cmbArmor.FormattingEnabled = True
-            Me.cmbArmor.Location = New Point(379, 169)
-            Me.cmbArmor.Name = "cmbArmor"
-            Me.cmbArmor.Size = New Size(175, 24)
-            Me.cmbArmor.TabIndex = 5
+            Me.CmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbArmor.Enabled = False
+            Me.CmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbArmor.FormattingEnabled = True
+            Me.CmbArmor.Location = New Point(379, 169)
+            Me.CmbArmor.Name = "CmbArmor"
+            Me.CmbArmor.Size = New Size(175, 24)
+            Me.CmbArmor.TabIndex = 5
             '
             'Label12
             '
@@ -291,7 +291,7 @@ Namespace Forms.Admin
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnExit
+            Me.CancelButton = Me.BtnExit
             Me.ClientSize = New Size(567, 323)
             Me.Controls.Add(Me.txtSlipping)
             Me.Controls.Add(Me.txtBlocking)
@@ -299,20 +299,20 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.txtWeaponSkill)
             Me.Controls.Add(Me.Label5)
-            Me.Controls.Add(Me.cmbArmor)
+            Me.Controls.Add(Me.CmbArmor)
             Me.Controls.Add(Me.Label12)
-            Me.Controls.Add(Me.cmbWeaponType)
-            Me.Controls.Add(Me.lblWeaponType)
-            Me.Controls.Add(Me.cmbWeapon)
-            Me.Controls.Add(Me.lblWeapon)
+            Me.Controls.Add(Me.CmbWeaponType)
+            Me.Controls.Add(Me.LblWeaponType)
+            Me.Controls.Add(Me.CmbWeapon)
+            Me.Controls.Add(Me.LblWeapon)
             Me.Controls.Add(Me.txtEndurance)
-            Me.Controls.Add(Me.lblEnd)
+            Me.Controls.Add(Me.LblEnd)
             Me.Controls.Add(Me.txtName)
-            Me.Controls.Add(Me.lblName)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnExit)
-            Me.Controls.Add(Me.btnSave)
-            Me.Controls.Add(Me.lstEnemies)
+            Me.Controls.Add(Me.LblName)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnExit)
+            Me.Controls.Add(Me.BtnSave)
+            Me.Controls.Add(Me.LstEnemies)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
@@ -330,12 +330,12 @@ Namespace Forms.Admin
         Friend WithEvents BtnExit As Button
         Friend WithEvents BtnSave As Button
         Friend WithEvents TxtName As TextBox
-        Friend WithEvents lblName As Label
+        Friend WithEvents LblName As Label
         Friend WithEvents TxtEndurance As TextBox
-        Friend WithEvents lblEnd As Label
+        Friend WithEvents LblEnd As Label
         Friend WithEvents CmbWeaponType As ComboBox
-        Friend WithEvents lblWeaponType As Label
-        Friend WithEvents lblWeapon As Label
+        Friend WithEvents LblWeaponType As Label
+        Friend WithEvents LblWeapon As Label
         Friend WithEvents CmbWeapon As ComboBox
         Friend WithEvents CmbArmor As ComboBox
         Friend WithEvents Label12 As Label

@@ -40,14 +40,14 @@ Namespace Forms
 
         ''' <summary>Displays all stats.</summary>
         Private Sub Display()
-            lblEndCurr.Text = (CurrentUser.MaximumEndurance + _maxEnd).ToString + "%"
-            lblLightCurr.Text = (CurrentUser.LightWeaponSkill + _light).ToString + "%"
-            lblHeavyCurr.Text = (CurrentUser.HeavyWeaponSkill + _heavy).ToString + "%"
-            lblTwoCurr.Text = (CurrentUser.TwoHandedWeaponSkill + _twoH).ToString + "%"
-            lblBlockingCurr.Text = (CurrentUser.Blocking + _blocking).ToString + "%"
-            lblSlippingCurr.Text = (CurrentUser.Slipping + _slipping).ToString + "%"
-            lblStealthCurr.Text = (CurrentUser.Stealth + _stealth).ToString + "%"
-            lblSkillPts.Text = _skillPts.ToString
+            LblEndCurr.Text = (CurrentUser.MaximumEndurance + _maxEnd).ToString + "%"
+            LblLightCurr.Text = (CurrentUser.LightWeaponSkill + _light).ToString + "%"
+            LblHeavyCurr.Text = (CurrentUser.HeavyWeaponSkill + _heavy).ToString + "%"
+            LblTwoCurr.Text = (CurrentUser.TwoHandedWeaponSkill + _twoH).ToString + "%"
+            LblBlockingCurr.Text = (CurrentUser.Blocking + _blocking).ToString + "%"
+            LblSlippingCurr.Text = (CurrentUser.Slipping + _slipping).ToString + "%"
+            LblStealthCurr.Text = (CurrentUser.Stealth + _stealth).ToString + "%"
+            LblSkillPts.Text = _skillPts.ToString
 
             If _skillPts = 0 Then
                 DisablePlusButtons()

@@ -45,41 +45,41 @@ Namespace Forms
             Me.Label12 = New System.Windows.Forms.Label()
             Me.Label11 = New System.Windows.Forms.Label()
             Me.Label9 = New System.Windows.Forms.Label()
-            Me.lblArmor = New System.Windows.Forms.Label()
+            Me.LblArmor = New System.Windows.Forms.Label()
             Me.Label5 = New System.Windows.Forms.Label()
-            Me.lblWeapon = New System.Windows.Forms.Label()
+            Me.LblWeapon = New System.Windows.Forms.Label()
             Me.Label8 = New System.Windows.Forms.Label()
-            Me.lblWeaponName = New System.Windows.Forms.Label()
-            Me.lblInventory = New System.Windows.Forms.Label()
-            Me.lblArmorName = New System.Windows.Forms.Label()
-            Me.lblSpecial = New System.Windows.Forms.Label()
-            Me.lblEndAmt = New System.Windows.Forms.Label()
-            Me.lblPotion = New System.Windows.Forms.Label()
+            Me.LblWeaponName = New System.Windows.Forms.Label()
+            Me.LblInventory = New System.Windows.Forms.Label()
+            Me.LblArmorName = New System.Windows.Forms.Label()
+            Me.LblSpecial = New System.Windows.Forms.Label()
+            Me.LblEndAmt = New System.Windows.Forms.Label()
+            Me.LblPotion = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
-            Me.lblGoldLoanAmt = New System.Windows.Forms.Label()
-            Me.lblTwoAmt = New System.Windows.Forms.Label()
-            Me.lblGoldBankAmt = New System.Windows.Forms.Label()
-            Me.lblBlockingAmt = New System.Windows.Forms.Label()
-            Me.lblGoldLoan = New System.Windows.Forms.Label()
-            Me.lblHeavyAmt = New System.Windows.Forms.Label()
-            Me.lblRank = New System.Windows.Forms.Label()
-            Me.lblSlippingAmt = New System.Windows.Forms.Label()
-            Me.lblGoldHandAmt = New System.Windows.Forms.Label()
-            Me.lblWeaponSkills = New System.Windows.Forms.Label()
-            Me.lblExp = New System.Windows.Forms.Label()
-            Me.lblStealthAmt = New System.Windows.Forms.Label()
-            Me.lblExpAmt = New System.Windows.Forms.Label()
-            Me.lblLightAmt = New System.Windows.Forms.Label()
-            Me.lblSkillPts = New System.Windows.Forms.Label()
+            Me.LblGoldLoanAmt = New System.Windows.Forms.Label()
+            Me.LblTwoAmt = New System.Windows.Forms.Label()
+            Me.LblGoldBankAmt = New System.Windows.Forms.Label()
+            Me.LblBlockingAmt = New System.Windows.Forms.Label()
+            Me.LblGoldLoan = New System.Windows.Forms.Label()
+            Me.LblHeavyAmt = New System.Windows.Forms.Label()
+            Me.LblRank = New System.Windows.Forms.Label()
+            Me.LblSlippingAmt = New System.Windows.Forms.Label()
+            Me.LblGoldHandAmt = New System.Windows.Forms.Label()
+            Me.LblWeaponSkills = New System.Windows.Forms.Label()
+            Me.LblExp = New System.Windows.Forms.Label()
+            Me.LblStealthAmt = New System.Windows.Forms.Label()
+            Me.LblExpAmt = New System.Windows.Forms.Label()
+            Me.LblLightAmt = New System.Windows.Forms.Label()
+            Me.LblSkillPts = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
-            Me.lblGoldHand = New System.Windows.Forms.Label()
-            Me.lblHunger = New System.Windows.Forms.Label()
-            Me.lblSkillPtsAmt = New System.Windows.Forms.Label()
+            Me.LblGoldHand = New System.Windows.Forms.Label()
+            Me.LblHunger = New System.Windows.Forms.Label()
+            Me.LblSkillPtsAmt = New System.Windows.Forms.Label()
             Me.Label7 = New System.Windows.Forms.Label()
-            Me.lblName = New System.Windows.Forms.Label()
-            Me.lblThirst = New System.Windows.Forms.Label()
-            Me.lblGoldBank = New System.Windows.Forms.Label()
+            Me.LblName = New System.Windows.Forms.Label()
+            Me.LblThirst = New System.Windows.Forms.Label()
+            Me.LblGoldBank = New System.Windows.Forms.Label()
             Me.pnlStats = New System.Windows.Forms.Panel()
             Me.BtnOptions = New System.Windows.Forms.Button()
             Me.BtnMessages = New System.Windows.Forms.Button()
@@ -273,16 +273,16 @@ Namespace Forms
             Me.Label9.Text = "Heavy Weapon:"
             Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblArmor
+            'LblArmor
             '
-            Me.lblArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblArmor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblArmor.Location = New System.Drawing.Point(0, 197)
-            Me.lblArmor.Name = "lblArmor"
-            Me.lblArmor.Size = New System.Drawing.Size(115, 23)
-            Me.lblArmor.TabIndex = 96
-            Me.lblArmor.Text = "Armor:"
-            Me.lblArmor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblArmor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblArmor.Location = New System.Drawing.Point(0, 197)
+            Me.LblArmor.Name = "LblArmor"
+            Me.LblArmor.Size = New System.Drawing.Size(115, 23)
+            Me.LblArmor.TabIndex = 96
+            Me.LblArmor.Text = "Armor:"
+            Me.LblArmor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label5
             '
@@ -295,16 +295,16 @@ Namespace Forms
             Me.Label5.Text = "Light Weapon:"
             Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblWeapon
+            'LblWeapon
             '
-            Me.lblWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblWeapon.Location = New System.Drawing.Point(0, 175)
-            Me.lblWeapon.Name = "lblWeapon"
-            Me.lblWeapon.Size = New System.Drawing.Size(115, 23)
-            Me.lblWeapon.TabIndex = 95
-            Me.lblWeapon.Text = "Current Weapon:"
-            Me.lblWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblWeapon.Location = New System.Drawing.Point(0, 175)
+            Me.LblWeapon.Name = "LblWeapon"
+            Me.LblWeapon.Size = New System.Drawing.Size(115, 23)
+            Me.LblWeapon.TabIndex = 95
+            Me.LblWeapon.Text = "Current Weapon:"
+            Me.LblWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label8
             '
@@ -317,67 +317,67 @@ Namespace Forms
             Me.Label8.Text = "Slipping:"
             Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblWeaponName
+            'LblWeaponName
             '
-            Me.lblWeaponName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblWeaponName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblWeaponName.Location = New System.Drawing.Point(114, 175)
-            Me.lblWeaponName.Name = "lblWeaponName"
-            Me.lblWeaponName.Size = New System.Drawing.Size(114, 23)
-            Me.lblWeaponName.TabIndex = 94
-            Me.lblWeaponName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblWeaponName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblWeaponName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblWeaponName.Location = New System.Drawing.Point(114, 175)
+            Me.LblWeaponName.Name = "LblWeaponName"
+            Me.LblWeaponName.Size = New System.Drawing.Size(114, 23)
+            Me.LblWeaponName.TabIndex = 94
+            Me.LblWeaponName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblInventory
+            'LblInventory
             '
-            Me.lblInventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblInventory.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblInventory.Location = New System.Drawing.Point(0, 153)
-            Me.lblInventory.Name = "lblInventory"
-            Me.lblInventory.Size = New System.Drawing.Size(228, 23)
-            Me.lblInventory.TabIndex = 97
-            Me.lblInventory.Text = "Inventory:"
-            Me.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblInventory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblInventory.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblInventory.Location = New System.Drawing.Point(0, 153)
+            Me.LblInventory.Name = "LblInventory"
+            Me.LblInventory.Size = New System.Drawing.Size(228, 23)
+            Me.LblInventory.TabIndex = 97
+            Me.LblInventory.Text = "Inventory:"
+            Me.LblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblArmorName
+            'LblArmorName
             '
-            Me.lblArmorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblArmorName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblArmorName.Location = New System.Drawing.Point(114, 197)
-            Me.lblArmorName.Name = "lblArmorName"
-            Me.lblArmorName.Size = New System.Drawing.Size(114, 23)
-            Me.lblArmorName.TabIndex = 93
-            Me.lblArmorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblArmorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblArmorName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblArmorName.Location = New System.Drawing.Point(114, 197)
+            Me.LblArmorName.Name = "LblArmorName"
+            Me.LblArmorName.Size = New System.Drawing.Size(114, 23)
+            Me.LblArmorName.TabIndex = 93
+            Me.LblArmorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblSpecial
+            'LblSpecial
             '
-            Me.lblSpecial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblSpecial.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSpecial.Location = New System.Drawing.Point(0, 219)
-            Me.lblSpecial.Name = "lblSpecial"
-            Me.lblSpecial.Size = New System.Drawing.Size(115, 23)
-            Me.lblSpecial.TabIndex = 98
-            Me.lblSpecial.Text = "Potion:"
-            Me.lblSpecial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblSpecial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblSpecial.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSpecial.Location = New System.Drawing.Point(0, 219)
+            Me.LblSpecial.Name = "LblSpecial"
+            Me.LblSpecial.Size = New System.Drawing.Size(115, 23)
+            Me.LblSpecial.TabIndex = 98
+            Me.LblSpecial.Text = "Potion:"
+            Me.LblSpecial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblEndAmt
+            'LblEndAmt
             '
-            Me.lblEndAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblEndAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblEndAmt.Location = New System.Drawing.Point(114, 88)
-            Me.lblEndAmt.Name = "lblEndAmt"
-            Me.lblEndAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblEndAmt.TabIndex = 91
-            Me.lblEndAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblEndAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblEndAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEndAmt.Location = New System.Drawing.Point(114, 88)
+            Me.LblEndAmt.Name = "LblEndAmt"
+            Me.LblEndAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblEndAmt.TabIndex = 91
+            Me.LblEndAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblPotion
+            'LblPotion
             '
-            Me.lblPotion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblPotion.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPotion.Location = New System.Drawing.Point(114, 219)
-            Me.lblPotion.Name = "lblPotion"
-            Me.lblPotion.Size = New System.Drawing.Size(114, 23)
-            Me.lblPotion.TabIndex = 99
-            Me.lblPotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPotion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPotion.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPotion.Location = New System.Drawing.Point(114, 219)
+            Me.LblPotion.Name = "LblPotion"
+            Me.LblPotion.Size = New System.Drawing.Size(114, 23)
+            Me.LblPotion.TabIndex = 99
+            Me.LblPotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label1
             '
@@ -401,159 +401,159 @@ Namespace Forms
             Me.Label4.Text = "Stealth:"
             Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblGoldLoanAmt
+            'LblGoldLoanAmt
             '
-            Me.lblGoldLoanAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldLoanAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldLoanAmt.Location = New System.Drawing.Point(114, 285)
-            Me.lblGoldLoanAmt.Name = "lblGoldLoanAmt"
-            Me.lblGoldLoanAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblGoldLoanAmt.TabIndex = 88
-            Me.lblGoldLoanAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblGoldLoanAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldLoanAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldLoanAmt.Location = New System.Drawing.Point(114, 285)
+            Me.LblGoldLoanAmt.Name = "LblGoldLoanAmt"
+            Me.LblGoldLoanAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblGoldLoanAmt.TabIndex = 88
+            Me.LblGoldLoanAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblTwoAmt
+            'LblTwoAmt
             '
-            Me.lblTwoAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblTwoAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTwoAmt.Location = New System.Drawing.Point(114, 373)
-            Me.lblTwoAmt.Name = "lblTwoAmt"
-            Me.lblTwoAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblTwoAmt.TabIndex = 77
-            Me.lblTwoAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblTwoAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblTwoAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblTwoAmt.Location = New System.Drawing.Point(114, 373)
+            Me.LblTwoAmt.Name = "LblTwoAmt"
+            Me.LblTwoAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblTwoAmt.TabIndex = 77
+            Me.LblTwoAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblGoldBankAmt
+            'LblGoldBankAmt
             '
-            Me.lblGoldBankAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldBankAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldBankAmt.Location = New System.Drawing.Point(114, 263)
-            Me.lblGoldBankAmt.Name = "lblGoldBankAmt"
-            Me.lblGoldBankAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblGoldBankAmt.TabIndex = 89
-            Me.lblGoldBankAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblGoldBankAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldBankAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldBankAmt.Location = New System.Drawing.Point(114, 263)
+            Me.LblGoldBankAmt.Name = "LblGoldBankAmt"
+            Me.LblGoldBankAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblGoldBankAmt.TabIndex = 89
+            Me.LblGoldBankAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblBlockingAmt
+            'LblBlockingAmt
             '
-            Me.lblBlockingAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblBlockingAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblBlockingAmt.Location = New System.Drawing.Point(114, 395)
-            Me.lblBlockingAmt.Name = "lblBlockingAmt"
-            Me.lblBlockingAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblBlockingAmt.TabIndex = 80
-            Me.lblBlockingAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblBlockingAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblBlockingAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblBlockingAmt.Location = New System.Drawing.Point(114, 395)
+            Me.LblBlockingAmt.Name = "LblBlockingAmt"
+            Me.LblBlockingAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblBlockingAmt.TabIndex = 80
+            Me.LblBlockingAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblGoldLoan
+            'LblGoldLoan
             '
-            Me.lblGoldLoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldLoan.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldLoan.Location = New System.Drawing.Point(0, 285)
-            Me.lblGoldLoan.Name = "lblGoldLoan"
-            Me.lblGoldLoan.Size = New System.Drawing.Size(115, 23)
-            Me.lblGoldLoan.TabIndex = 85
-            Me.lblGoldLoan.Text = "Gold on Loan:"
-            Me.lblGoldLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblGoldLoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldLoan.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldLoan.Location = New System.Drawing.Point(0, 285)
+            Me.LblGoldLoan.Name = "LblGoldLoan"
+            Me.LblGoldLoan.Size = New System.Drawing.Size(115, 23)
+            Me.LblGoldLoan.TabIndex = 85
+            Me.LblGoldLoan.Text = "Gold on Loan:"
+            Me.LblGoldLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblHeavyAmt
+            'LblHeavyAmt
             '
-            Me.lblHeavyAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblHeavyAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHeavyAmt.Location = New System.Drawing.Point(114, 351)
-            Me.lblHeavyAmt.Name = "lblHeavyAmt"
-            Me.lblHeavyAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblHeavyAmt.TabIndex = 73
-            Me.lblHeavyAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblHeavyAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHeavyAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHeavyAmt.Location = New System.Drawing.Point(114, 351)
+            Me.LblHeavyAmt.Name = "LblHeavyAmt"
+            Me.LblHeavyAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblHeavyAmt.TabIndex = 73
+            Me.LblHeavyAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblRank
+            'LblRank
             '
-            Me.lblRank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblRank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblRank.Location = New System.Drawing.Point(0, 22)
-            Me.lblRank.Name = "lblRank"
-            Me.lblRank.Size = New System.Drawing.Size(228, 23)
-            Me.lblRank.TabIndex = 74
-            Me.lblRank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblRank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblRank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblRank.Location = New System.Drawing.Point(0, 22)
+            Me.LblRank.Name = "LblRank"
+            Me.LblRank.Size = New System.Drawing.Size(228, 23)
+            Me.LblRank.TabIndex = 74
+            Me.LblRank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblSlippingAmt
+            'LblSlippingAmt
             '
-            Me.lblSlippingAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblSlippingAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSlippingAmt.Location = New System.Drawing.Point(114, 417)
-            Me.lblSlippingAmt.Name = "lblSlippingAmt"
-            Me.lblSlippingAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblSlippingAmt.TabIndex = 87
-            Me.lblSlippingAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblSlippingAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblSlippingAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSlippingAmt.Location = New System.Drawing.Point(114, 417)
+            Me.LblSlippingAmt.Name = "LblSlippingAmt"
+            Me.LblSlippingAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblSlippingAmt.TabIndex = 87
+            Me.LblSlippingAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblGoldHandAmt
+            'LblGoldHandAmt
             '
-            Me.lblGoldHandAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldHandAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldHandAmt.Location = New System.Drawing.Point(114, 241)
-            Me.lblGoldHandAmt.Name = "lblGoldHandAmt"
-            Me.lblGoldHandAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblGoldHandAmt.TabIndex = 86
-            Me.lblGoldHandAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblGoldHandAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldHandAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldHandAmt.Location = New System.Drawing.Point(114, 241)
+            Me.LblGoldHandAmt.Name = "LblGoldHandAmt"
+            Me.LblGoldHandAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblGoldHandAmt.TabIndex = 86
+            Me.LblGoldHandAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblWeaponSkills
+            'LblWeaponSkills
             '
-            Me.lblWeaponSkills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblWeaponSkills.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblWeaponSkills.Location = New System.Drawing.Point(0, 307)
-            Me.lblWeaponSkills.Name = "lblWeaponSkills"
-            Me.lblWeaponSkills.Size = New System.Drawing.Size(228, 23)
-            Me.lblWeaponSkills.TabIndex = 100
-            Me.lblWeaponSkills.Text = "Skills:"
-            Me.lblWeaponSkills.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblWeaponSkills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblWeaponSkills.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblWeaponSkills.Location = New System.Drawing.Point(0, 307)
+            Me.LblWeaponSkills.Name = "LblWeaponSkills"
+            Me.LblWeaponSkills.Size = New System.Drawing.Size(228, 23)
+            Me.LblWeaponSkills.TabIndex = 100
+            Me.LblWeaponSkills.Text = "Skills:"
+            Me.LblWeaponSkills.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblExp
+            'LblExp
             '
-            Me.lblExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblExp.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblExp.Location = New System.Drawing.Point(0, 44)
-            Me.lblExp.Name = "lblExp"
-            Me.lblExp.Size = New System.Drawing.Size(115, 23)
-            Me.lblExp.TabIndex = 75
-            Me.lblExp.Text = "Experience:"
-            Me.lblExp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblExp.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblExp.Location = New System.Drawing.Point(0, 44)
+            Me.LblExp.Name = "LblExp"
+            Me.LblExp.Size = New System.Drawing.Size(115, 23)
+            Me.LblExp.TabIndex = 75
+            Me.LblExp.Text = "Experience:"
+            Me.LblExp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblStealthAmt
+            'LblStealthAmt
             '
-            Me.lblStealthAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblStealthAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblStealthAmt.Location = New System.Drawing.Point(114, 439)
-            Me.lblStealthAmt.Name = "lblStealthAmt"
-            Me.lblStealthAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblStealthAmt.TabIndex = 90
-            Me.lblStealthAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblStealthAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblStealthAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblStealthAmt.Location = New System.Drawing.Point(114, 439)
+            Me.LblStealthAmt.Name = "LblStealthAmt"
+            Me.LblStealthAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblStealthAmt.TabIndex = 90
+            Me.LblStealthAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblExpAmt
+            'LblExpAmt
             '
-            Me.lblExpAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblExpAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblExpAmt.Location = New System.Drawing.Point(114, 44)
-            Me.lblExpAmt.Name = "lblExpAmt"
-            Me.lblExpAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblExpAmt.TabIndex = 78
-            Me.lblExpAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblExpAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblExpAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblExpAmt.Location = New System.Drawing.Point(114, 44)
+            Me.LblExpAmt.Name = "LblExpAmt"
+            Me.LblExpAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblExpAmt.TabIndex = 78
+            Me.LblExpAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblLightAmt
+            'LblLightAmt
             '
-            Me.lblLightAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblLightAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLightAmt.Location = New System.Drawing.Point(114, 329)
-            Me.lblLightAmt.Name = "lblLightAmt"
-            Me.lblLightAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblLightAmt.TabIndex = 92
-            Me.lblLightAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblLightAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLightAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLightAmt.Location = New System.Drawing.Point(114, 329)
+            Me.LblLightAmt.Name = "LblLightAmt"
+            Me.LblLightAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblLightAmt.TabIndex = 92
+            Me.LblLightAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblSkillPts
+            'LblSkillPts
             '
-            Me.lblSkillPts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblSkillPts.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSkillPts.Location = New System.Drawing.Point(0, 66)
-            Me.lblSkillPts.Name = "lblSkillPts"
-            Me.lblSkillPts.Size = New System.Drawing.Size(115, 23)
-            Me.lblSkillPts.TabIndex = 72
-            Me.lblSkillPts.Text = "Skill Points:"
-            Me.lblSkillPts.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblSkillPts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblSkillPts.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkillPts.Location = New System.Drawing.Point(0, 66)
+            Me.LblSkillPts.Name = "LblSkillPts"
+            Me.LblSkillPts.Size = New System.Drawing.Size(115, 23)
+            Me.LblSkillPts.TabIndex = 72
+            Me.LblSkillPts.Text = "Skill Points:"
+            Me.LblSkillPts.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label3
             '
@@ -566,36 +566,36 @@ Namespace Forms
             Me.Label3.Text = "Hunger:"
             Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblGoldHand
+            'LblGoldHand
             '
-            Me.lblGoldHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldHand.Location = New System.Drawing.Point(0, 241)
-            Me.lblGoldHand.Name = "lblGoldHand"
-            Me.lblGoldHand.Size = New System.Drawing.Size(115, 23)
-            Me.lblGoldHand.TabIndex = 82
-            Me.lblGoldHand.Text = "Gold on Hand:"
-            Me.lblGoldHand.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblGoldHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldHand.Location = New System.Drawing.Point(0, 241)
+            Me.LblGoldHand.Name = "LblGoldHand"
+            Me.LblGoldHand.Size = New System.Drawing.Size(115, 23)
+            Me.LblGoldHand.TabIndex = 82
+            Me.LblGoldHand.Text = "Gold on Hand:"
+            Me.LblGoldHand.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblHunger
+            'LblHunger
             '
-            Me.lblHunger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblHunger.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHunger.Location = New System.Drawing.Point(114, 110)
-            Me.lblHunger.Name = "lblHunger"
-            Me.lblHunger.Size = New System.Drawing.Size(114, 23)
-            Me.lblHunger.TabIndex = 102
-            Me.lblHunger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblHunger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHunger.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHunger.Location = New System.Drawing.Point(114, 110)
+            Me.LblHunger.Name = "LblHunger"
+            Me.LblHunger.Size = New System.Drawing.Size(114, 23)
+            Me.LblHunger.TabIndex = 102
+            Me.LblHunger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblSkillPtsAmt
+            'LblSkillPtsAmt
             '
-            Me.lblSkillPtsAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblSkillPtsAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSkillPtsAmt.Location = New System.Drawing.Point(114, 66)
-            Me.lblSkillPtsAmt.Name = "lblSkillPtsAmt"
-            Me.lblSkillPtsAmt.Size = New System.Drawing.Size(114, 23)
-            Me.lblSkillPtsAmt.TabIndex = 79
-            Me.lblSkillPtsAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblSkillPtsAmt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblSkillPtsAmt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkillPtsAmt.Location = New System.Drawing.Point(114, 66)
+            Me.LblSkillPtsAmt.Name = "LblSkillPtsAmt"
+            Me.LblSkillPtsAmt.Size = New System.Drawing.Size(114, 23)
+            Me.LblSkillPtsAmt.TabIndex = 79
+            Me.LblSkillPtsAmt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label7
             '
@@ -608,74 +608,74 @@ Namespace Forms
             Me.Label7.Text = "Thirst:"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'lblName
+            'LblName
             '
-            Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblName.Location = New System.Drawing.Point(0, 0)
-            Me.lblName.Name = "lblName"
-            Me.lblName.Size = New System.Drawing.Size(228, 23)
-            Me.lblName.TabIndex = 69
-            Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New System.Drawing.Point(0, 0)
+            Me.LblName.Name = "LblName"
+            Me.LblName.Size = New System.Drawing.Size(228, 23)
+            Me.LblName.TabIndex = 69
+            Me.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblThirst
+            'LblThirst
             '
-            Me.lblThirst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblThirst.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblThirst.Location = New System.Drawing.Point(114, 131)
-            Me.lblThirst.Name = "lblThirst"
-            Me.lblThirst.Size = New System.Drawing.Size(114, 23)
-            Me.lblThirst.TabIndex = 104
-            Me.lblThirst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblThirst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblThirst.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblThirst.Location = New System.Drawing.Point(114, 131)
+            Me.LblThirst.Name = "LblThirst"
+            Me.LblThirst.Size = New System.Drawing.Size(114, 23)
+            Me.LblThirst.TabIndex = 104
+            Me.LblThirst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblGoldBank
+            'LblGoldBank
             '
-            Me.lblGoldBank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblGoldBank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGoldBank.Location = New System.Drawing.Point(0, 263)
-            Me.lblGoldBank.Name = "lblGoldBank"
-            Me.lblGoldBank.Size = New System.Drawing.Size(115, 23)
-            Me.lblGoldBank.TabIndex = 105
-            Me.lblGoldBank.Text = "Gold in Bank:"
-            Me.lblGoldBank.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.LblGoldBank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGoldBank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGoldBank.Location = New System.Drawing.Point(0, 263)
+            Me.LblGoldBank.Name = "LblGoldBank"
+            Me.LblGoldBank.Size = New System.Drawing.Size(115, 23)
+            Me.LblGoldBank.TabIndex = 105
+            Me.LblGoldBank.Text = "Gold in Bank:"
+            Me.LblGoldBank.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'pnlStats
             '
-            Me.pnlStats.Controls.Add(Me.lblGoldBank)
-            Me.pnlStats.Controls.Add(Me.lblThirst)
-            Me.pnlStats.Controls.Add(Me.lblName)
+            Me.pnlStats.Controls.Add(Me.LblGoldBank)
+            Me.pnlStats.Controls.Add(Me.LblThirst)
+            Me.pnlStats.Controls.Add(Me.LblName)
             Me.pnlStats.Controls.Add(Me.Label7)
-            Me.pnlStats.Controls.Add(Me.lblSkillPtsAmt)
-            Me.pnlStats.Controls.Add(Me.lblHunger)
-            Me.pnlStats.Controls.Add(Me.lblGoldHand)
+            Me.pnlStats.Controls.Add(Me.LblSkillPtsAmt)
+            Me.pnlStats.Controls.Add(Me.LblHunger)
+            Me.pnlStats.Controls.Add(Me.LblGoldHand)
             Me.pnlStats.Controls.Add(Me.Label3)
-            Me.pnlStats.Controls.Add(Me.lblSkillPts)
-            Me.pnlStats.Controls.Add(Me.lblLightAmt)
-            Me.pnlStats.Controls.Add(Me.lblExpAmt)
-            Me.pnlStats.Controls.Add(Me.lblStealthAmt)
-            Me.pnlStats.Controls.Add(Me.lblExp)
-            Me.pnlStats.Controls.Add(Me.lblWeaponSkills)
-            Me.pnlStats.Controls.Add(Me.lblGoldHandAmt)
-            Me.pnlStats.Controls.Add(Me.lblSlippingAmt)
-            Me.pnlStats.Controls.Add(Me.lblRank)
-            Me.pnlStats.Controls.Add(Me.lblHeavyAmt)
-            Me.pnlStats.Controls.Add(Me.lblGoldLoan)
-            Me.pnlStats.Controls.Add(Me.lblBlockingAmt)
-            Me.pnlStats.Controls.Add(Me.lblGoldBankAmt)
-            Me.pnlStats.Controls.Add(Me.lblTwoAmt)
-            Me.pnlStats.Controls.Add(Me.lblGoldLoanAmt)
+            Me.pnlStats.Controls.Add(Me.LblSkillPts)
+            Me.pnlStats.Controls.Add(Me.LblLightAmt)
+            Me.pnlStats.Controls.Add(Me.LblExpAmt)
+            Me.pnlStats.Controls.Add(Me.LblStealthAmt)
+            Me.pnlStats.Controls.Add(Me.LblExp)
+            Me.pnlStats.Controls.Add(Me.LblWeaponSkills)
+            Me.pnlStats.Controls.Add(Me.LblGoldHandAmt)
+            Me.pnlStats.Controls.Add(Me.LblSlippingAmt)
+            Me.pnlStats.Controls.Add(Me.LblRank)
+            Me.pnlStats.Controls.Add(Me.LblHeavyAmt)
+            Me.pnlStats.Controls.Add(Me.LblGoldLoan)
+            Me.pnlStats.Controls.Add(Me.LblBlockingAmt)
+            Me.pnlStats.Controls.Add(Me.LblGoldBankAmt)
+            Me.pnlStats.Controls.Add(Me.LblTwoAmt)
+            Me.pnlStats.Controls.Add(Me.LblGoldLoanAmt)
             Me.pnlStats.Controls.Add(Me.Label4)
             Me.pnlStats.Controls.Add(Me.Label1)
-            Me.pnlStats.Controls.Add(Me.lblPotion)
-            Me.pnlStats.Controls.Add(Me.lblEndAmt)
-            Me.pnlStats.Controls.Add(Me.lblSpecial)
-            Me.pnlStats.Controls.Add(Me.lblArmorName)
-            Me.pnlStats.Controls.Add(Me.lblInventory)
-            Me.pnlStats.Controls.Add(Me.lblWeaponName)
+            Me.pnlStats.Controls.Add(Me.LblPotion)
+            Me.pnlStats.Controls.Add(Me.LblEndAmt)
+            Me.pnlStats.Controls.Add(Me.LblSpecial)
+            Me.pnlStats.Controls.Add(Me.LblArmorName)
+            Me.pnlStats.Controls.Add(Me.LblInventory)
+            Me.pnlStats.Controls.Add(Me.LblWeaponName)
             Me.pnlStats.Controls.Add(Me.Label8)
-            Me.pnlStats.Controls.Add(Me.lblWeapon)
+            Me.pnlStats.Controls.Add(Me.LblWeapon)
             Me.pnlStats.Controls.Add(Me.Label5)
-            Me.pnlStats.Controls.Add(Me.lblArmor)
+            Me.pnlStats.Controls.Add(Me.LblArmor)
             Me.pnlStats.Controls.Add(Me.Label9)
             Me.pnlStats.Controls.Add(Me.Label11)
             Me.pnlStats.Controls.Add(Me.Label12)
@@ -762,41 +762,41 @@ Namespace Forms
         Friend WithEvents Label12 As Label
         Friend WithEvents Label11 As Label
         Friend WithEvents Label9 As Label
-        Friend WithEvents lblArmor As Label
+        Friend WithEvents LblArmor As Label
         Friend WithEvents Label5 As Label
-        Friend WithEvents lblWeapon As Label
+        Friend WithEvents LblWeapon As Label
         Friend WithEvents Label8 As Label
-        Friend WithEvents lblWeaponName As Label
-        Friend WithEvents lblInventory As Label
-        Friend WithEvents lblArmorName As Label
-        Friend WithEvents lblSpecial As Label
-        Friend WithEvents lblEndAmt As Label
-        Friend WithEvents lblPotion As Label
+        Friend WithEvents LblWeaponName As Label
+        Friend WithEvents LblInventory As Label
+        Friend WithEvents LblArmorName As Label
+        Friend WithEvents LblSpecial As Label
+        Friend WithEvents LblEndAmt As Label
+        Friend WithEvents LblPotion As Label
         Friend WithEvents Label1 As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents lblGoldLoanAmt As Label
-        Friend WithEvents lblTwoAmt As Label
-        Friend WithEvents lblGoldBankAmt As Label
-        Friend WithEvents lblBlockingAmt As Label
-        Friend WithEvents lblGoldLoan As Label
-        Friend WithEvents lblHeavyAmt As Label
-        Friend WithEvents lblRank As Label
-        Friend WithEvents lblSlippingAmt As Label
-        Friend WithEvents lblGoldHandAmt As Label
-        Friend WithEvents lblWeaponSkills As Label
-        Friend WithEvents lblExp As Label
-        Friend WithEvents lblStealthAmt As Label
-        Friend WithEvents lblExpAmt As Label
-        Friend WithEvents lblLightAmt As Label
-        Friend WithEvents lblSkillPts As Label
+        Friend WithEvents LblGoldLoanAmt As Label
+        Friend WithEvents LblTwoAmt As Label
+        Friend WithEvents LblGoldBankAmt As Label
+        Friend WithEvents LblBlockingAmt As Label
+        Friend WithEvents LblGoldLoan As Label
+        Friend WithEvents LblHeavyAmt As Label
+        Friend WithEvents LblRank As Label
+        Friend WithEvents LblSlippingAmt As Label
+        Friend WithEvents LblGoldHandAmt As Label
+        Friend WithEvents LblWeaponSkills As Label
+        Friend WithEvents LblExp As Label
+        Friend WithEvents LblStealthAmt As Label
+        Friend WithEvents LblExpAmt As Label
+        Friend WithEvents LblLightAmt As Label
+        Friend WithEvents LblSkillPts As Label
         Friend WithEvents Label3 As Label
-        Friend WithEvents lblGoldHand As Label
-        Friend WithEvents lblHunger As Label
-        Friend WithEvents lblSkillPtsAmt As Label
+        Friend WithEvents LblGoldHand As Label
+        Friend WithEvents LblHunger As Label
+        Friend WithEvents LblSkillPtsAmt As Label
         Friend WithEvents Label7 As Label
-        Friend WithEvents lblName As Label
-        Friend WithEvents lblThirst As Label
-        Friend WithEvents lblGoldBank As Label
+        Friend WithEvents LblName As Label
+        Friend WithEvents LblThirst As Label
+        Friend WithEvents LblGoldBank As Label
         Friend WithEvents pnlStats As Panel
         Friend WithEvents BtnOptions As Button
         Friend WithEvents BtnMessages As Button

@@ -32,8 +32,8 @@ Namespace Forms
             Me.BtnDelete = New System.Windows.Forms.Button()
             Me.BtnBack = New System.Windows.Forms.Button()
             Me.BtnReply = New System.Windows.Forms.Button()
-            Me.lblMessages = New System.Windows.Forms.Label()
-            Me.lblFrom = New System.Windows.Forms.Label()
+            Me.LblMessages = New System.Windows.Forms.Label()
+            Me.LblFrom = New System.Windows.Forms.Label()
             Me.LblCount = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.TxtDate = New System.Windows.Forms.TextBox()
@@ -110,25 +110,25 @@ Namespace Forms
             Me.BtnReply.Text = "&Reply"
             Me.BtnReply.UseVisualStyleBackColor = True
             '
-            'lblMessages
+            'LblMessages
             '
-            Me.lblMessages.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblMessages.Location = New System.Drawing.Point(12, 9)
-            Me.lblMessages.Name = "lblMessages"
-            Me.lblMessages.Size = New System.Drawing.Size(252, 35)
-            Me.lblMessages.TabIndex = 14
-            Me.lblMessages.Text = "Messages"
-            Me.lblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblMessages.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblMessages.Location = New System.Drawing.Point(12, 9)
+            Me.LblMessages.Name = "LblMessages"
+            Me.LblMessages.Size = New System.Drawing.Size(252, 35)
+            Me.LblMessages.TabIndex = 14
+            Me.LblMessages.Text = "Messages"
+            Me.LblMessages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'lblFrom
+            'LblFrom
             '
-            Me.lblFrom.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblFrom.Location = New System.Drawing.Point(14, 49)
-            Me.lblFrom.Name = "lblFrom"
-            Me.lblFrom.Size = New System.Drawing.Size(50, 20)
-            Me.lblFrom.TabIndex = 15
-            Me.lblFrom.Text = "From:"
-            Me.lblFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblFrom.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblFrom.Location = New System.Drawing.Point(14, 49)
+            Me.LblFrom.Name = "LblFrom"
+            Me.LblFrom.Size = New System.Drawing.Size(50, 20)
+            Me.LblFrom.TabIndex = 15
+            Me.LblFrom.Text = "From:"
+            Me.LblFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'LblCount
             '
@@ -199,8 +199,8 @@ Namespace Forms
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.TxtDate)
             Me.Controls.Add(Me.LblCount)
-            Me.Controls.Add(Me.lblFrom)
-            Me.Controls.Add(Me.lblMessages)
+            Me.Controls.Add(Me.LblFrom)
+            Me.Controls.Add(Me.LblMessages)
             Me.Controls.Add(Me.BtnReply)
             Me.Controls.Add(Me.BtnBack)
             Me.Controls.Add(Me.BtnDelete)
@@ -225,8 +225,8 @@ Namespace Forms
         Friend WithEvents BtnDelete As Button
         Friend WithEvents BtnBack As Button
         Friend WithEvents BtnReply As Button
-        Friend WithEvents lblMessages As Label
-        Friend WithEvents lblFrom As Label
+        Friend WithEvents LblMessages As Label
+        Friend WithEvents LblFrom As Label
         Friend WithEvents LblCount As Label
         Friend WithEvents Label1 As Label
         Friend WithEvents TxtDate As TextBox

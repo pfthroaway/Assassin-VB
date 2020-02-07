@@ -36,14 +36,14 @@ Namespace Forms
                     BtnExpel.Show()
                 End If
 
-                lblName.Text = CurrentGuild.Name & " Members"
+                LblName.Text = CurrentGuild.Name & " Members"
 
                 For Each member As String In CurrentGuild.Members
                     LstMembers.Items.Add(member)
                 Next
             ElseIf loc = "Streets" Then
                 BtnAttack.Show()
-                lblName.Text = "All Players"
+                LblName.Text = "All Players"
                 For Each user As User In AllUsers
                     LstMembers.Items.Add(user.Name)
                 Next

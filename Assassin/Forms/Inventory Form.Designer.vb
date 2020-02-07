@@ -26,32 +26,32 @@ Namespace Forms
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.lblLight = New System.Windows.Forms.Label()
+            Me.LblLight = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.BtnLight = New System.Windows.Forms.Button()
             Me.BtnHeavy = New System.Windows.Forms.Button()
-            Me.lblHeavy = New System.Windows.Forms.Label()
+            Me.LblHeavy = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.BtnTwoH = New System.Windows.Forms.Button()
-            Me.lblTwoH = New System.Windows.Forms.Label()
+            Me.LblTwoH = New System.Windows.Forms.Label()
             Me.Label5 = New System.Windows.Forms.Label()
             Me.BtnDrink = New System.Windows.Forms.Button()
-            Me.lblPotion = New System.Windows.Forms.Label()
+            Me.LblPotion = New System.Windows.Forms.Label()
             Me.Label7 = New System.Windows.Forms.Label()
             Me.BtnBack = New System.Windows.Forms.Button()
-            Me.lblLockpicks = New System.Windows.Forms.Label()
+            Me.LblLockpicks = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
             Me.SuspendLayout()
             '
-            'lblLight
+            'LblLight
             '
-            Me.lblLight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblLight.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLight.Location = New System.Drawing.Point(138, 9)
-            Me.lblLight.Name = "lblLight"
-            Me.lblLight.Size = New System.Drawing.Size(228, 30)
-            Me.lblLight.TabIndex = 1
-            Me.lblLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblLight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLight.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLight.Location = New System.Drawing.Point(138, 9)
+            Me.LblLight.Name = "LblLight"
+            Me.LblLight.Size = New System.Drawing.Size(228, 30)
+            Me.LblLight.TabIndex = 1
+            Me.LblLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label1
             '
@@ -83,15 +83,15 @@ Namespace Forms
             Me.BtnHeavy.Text = "Equip"
             Me.BtnHeavy.UseVisualStyleBackColor = True
             '
-            'lblHeavy
+            'LblHeavy
             '
-            Me.lblHeavy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblHeavy.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHeavy.Location = New System.Drawing.Point(138, 43)
-            Me.lblHeavy.Name = "lblHeavy"
-            Me.lblHeavy.Size = New System.Drawing.Size(228, 30)
-            Me.lblHeavy.TabIndex = 4
-            Me.lblHeavy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblHeavy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHeavy.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHeavy.Location = New System.Drawing.Point(138, 43)
+            Me.LblHeavy.Name = "LblHeavy"
+            Me.LblHeavy.Size = New System.Drawing.Size(228, 30)
+            Me.LblHeavy.TabIndex = 4
+            Me.LblHeavy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label3
             '
@@ -113,15 +113,15 @@ Namespace Forms
             Me.BtnTwoH.Text = "Equip"
             Me.BtnTwoH.UseVisualStyleBackColor = True
             '
-            'lblTwoH
+            'LblTwoH
             '
-            Me.lblTwoH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblTwoH.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblTwoH.Location = New System.Drawing.Point(138, 77)
-            Me.lblTwoH.Name = "lblTwoH"
-            Me.lblTwoH.Size = New System.Drawing.Size(228, 30)
-            Me.lblTwoH.TabIndex = 7
-            Me.lblTwoH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblTwoH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblTwoH.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblTwoH.Location = New System.Drawing.Point(138, 77)
+            Me.LblTwoH.Name = "LblTwoH"
+            Me.LblTwoH.Size = New System.Drawing.Size(228, 30)
+            Me.LblTwoH.TabIndex = 7
+            Me.LblTwoH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label5
             '
@@ -143,15 +143,15 @@ Namespace Forms
             Me.BtnDrink.Text = "&Drink"
             Me.BtnDrink.UseVisualStyleBackColor = True
             '
-            'lblPotion
+            'LblPotion
             '
-            Me.lblPotion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblPotion.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPotion.Location = New System.Drawing.Point(138, 111)
-            Me.lblPotion.Name = "lblPotion"
-            Me.lblPotion.Size = New System.Drawing.Size(228, 30)
-            Me.lblPotion.TabIndex = 10
-            Me.lblPotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPotion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPotion.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPotion.Location = New System.Drawing.Point(138, 111)
+            Me.LblPotion.Name = "LblPotion"
+            Me.LblPotion.Size = New System.Drawing.Size(228, 30)
+            Me.LblPotion.TabIndex = 10
+            Me.LblPotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label7
             '
@@ -175,15 +175,15 @@ Namespace Forms
             Me.BtnBack.Text = "&Back"
             Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'lblLockpicks
+            'LblLockpicks
             '
-            Me.lblLockpicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.lblLockpicks.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.lblLockpicks.Location = New System.Drawing.Point(138, 145)
-            Me.lblLockpicks.Name = "lblLockpicks"
-            Me.lblLockpicks.Size = New System.Drawing.Size(50, 30)
-            Me.lblLockpicks.TabIndex = 14
-            Me.lblLockpicks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblLockpicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLockpicks.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLockpicks.Location = New System.Drawing.Point(138, 145)
+            Me.LblLockpicks.Name = "LblLockpicks"
+            Me.LblLockpicks.Size = New System.Drawing.Size(50, 30)
+            Me.LblLockpicks.TabIndex = 14
+            Me.LblLockpicks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -201,20 +201,20 @@ Namespace Forms
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnBack
             Me.ClientSize = New System.Drawing.Size(459, 227)
-            Me.Controls.Add(Me.lblLockpicks)
+            Me.Controls.Add(Me.LblLockpicks)
             Me.Controls.Add(Me.Label4)
             Me.Controls.Add(Me.BtnBack)
             Me.Controls.Add(Me.BtnDrink)
-            Me.Controls.Add(Me.lblPotion)
+            Me.Controls.Add(Me.LblPotion)
             Me.Controls.Add(Me.Label7)
             Me.Controls.Add(Me.BtnTwoH)
-            Me.Controls.Add(Me.lblTwoH)
+            Me.Controls.Add(Me.LblTwoH)
             Me.Controls.Add(Me.Label5)
             Me.Controls.Add(Me.BtnHeavy)
-            Me.Controls.Add(Me.lblHeavy)
+            Me.Controls.Add(Me.LblHeavy)
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.BtnLight)
-            Me.Controls.Add(Me.lblLight)
+            Me.Controls.Add(Me.LblLight)
             Me.Controls.Add(Me.Label1)
             Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New System.Windows.Forms.Padding(4)
@@ -227,20 +227,20 @@ Namespace Forms
             Me.ResumeLayout(False)
 
         End Sub
-        Friend WithEvents lblLight As Label
+        Friend WithEvents LblLight As Label
         Friend WithEvents Label1 As Label
         Friend WithEvents BtnLight As Button
         Friend WithEvents BtnHeavy As Button
-        Friend WithEvents lblHeavy As Label
+        Friend WithEvents LblHeavy As Label
         Friend WithEvents Label3 As Label
         Friend WithEvents BtnTwoH As Button
-        Friend WithEvents lblTwoH As Label
+        Friend WithEvents LblTwoH As Label
         Friend WithEvents Label5 As Label
         Friend WithEvents BtnDrink As Button
-        Friend WithEvents lblPotion As Label
+        Friend WithEvents LblPotion As Label
         Friend WithEvents Label7 As Label
         Friend WithEvents BtnBack As Button
-        Friend WithEvents lblLockpicks As Label
+        Friend WithEvents LblLockpicks As Label
         Friend WithEvents Label4 As Label
     End Class
 End NameSpace

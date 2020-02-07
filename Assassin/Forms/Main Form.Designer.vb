@@ -26,9 +26,9 @@ Namespace Forms
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.lblUsername = New System.Windows.Forms.Label()
-        Me.lblPswd = New System.Windows.Forms.Label()
+        Me.LblTitle = New System.Windows.Forms.Label()
+        Me.LblUsername = New System.Windows.Forms.Label()
+        Me.LblPswd = New System.Windows.Forms.Label()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
         Me.TxtPswd = New System.Windows.Forms.TextBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
@@ -43,35 +43,35 @@ Namespace Forms
         Me.mnu.SuspendLayout
         Me.SuspendLayout
         '
-        'lblTitle
+        'LblTitle
         '
-        Me.lblTitle.Font = New System.Drawing.Font("Viner Hand ITC", 24!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(50, 35)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(150, 45)
-        Me.lblTitle.TabIndex = 4
-        Me.lblTitle.Text = "Assassin"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblTitle.Font = New System.Drawing.Font("Viner Hand ITC", 24!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.LblTitle.Location = New System.Drawing.Point(50, 35)
+        Me.LblTitle.Name = "LblTitle"
+        Me.LblTitle.Size = New System.Drawing.Size(150, 45)
+        Me.LblTitle.TabIndex = 4
+        Me.LblTitle.Text = "Assassin"
+        Me.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblUsername
+        'LblUsername
         '
-        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.lblUsername.Location = New System.Drawing.Point(12, 80)
-        Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(226, 25)
-        Me.lblUsername.TabIndex = 5
-        Me.lblUsername.Text = "Username:"
-        Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.LblUsername.Location = New System.Drawing.Point(12, 80)
+        Me.LblUsername.Name = "LblUsername"
+        Me.LblUsername.Size = New System.Drawing.Size(226, 25)
+        Me.LblUsername.TabIndex = 5
+        Me.LblUsername.Text = "Username:"
+        Me.LblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblPswd
+        'LblPswd
         '
-        Me.lblPswd.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.lblPswd.Location = New System.Drawing.Point(58, 145)
-        Me.lblPswd.Name = "lblPswd"
-        Me.lblPswd.Size = New System.Drawing.Size(105, 25)
-        Me.lblPswd.TabIndex = 6
-        Me.lblPswd.Text = "Password:"
-        Me.lblPswd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblPswd.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.LblPswd.Location = New System.Drawing.Point(58, 145)
+        Me.LblPswd.Name = "LblPswd"
+        Me.LblPswd.Size = New System.Drawing.Size(105, 25)
+        Me.LblPswd.TabIndex = 6
+        Me.LblPswd.Text = "Password:"
+        Me.LblPswd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TxtUsername
         '
@@ -180,9 +180,9 @@ Namespace Forms
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.TxtPswd)
         Me.Controls.Add(Me.TxtUsername)
-        Me.Controls.Add(Me.lblPswd)
-        Me.Controls.Add(Me.lblUsername)
-        Me.Controls.Add(Me.lblTitle)
+        Me.Controls.Add(Me.LblPswd)
+        Me.Controls.Add(Me.LblUsername)
+        Me.Controls.Add(Me.LblTitle)
         Me.Controls.Add(Me.mnu)
         Me.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.MainMenuStrip = Me.mnu
@@ -198,9 +198,9 @@ Namespace Forms
         Me.PerformLayout
 
 End Sub
-        Friend WithEvents lblTitle As Label
-        Friend WithEvents lblUsername As Label
-        Friend WithEvents lblPswd As Label
+        Friend WithEvents LblTitle As Label
+        Friend WithEvents LblUsername As Label
+        Friend WithEvents LblPswd As Label
         Friend WithEvents TxtUsername As TextBox
         Friend WithEvents TxtPswd As TextBox
         Friend WithEvents BtnLogin As Button

@@ -27,12 +27,12 @@ Namespace Forms
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.txtManual = New TextBox()
-            Me.btnBack = New Button()
-            Me.btnIntro = New Button()
-            Me.btnSkills = New Button()
-            Me.btnCity = New Button()
-            Me.btnPlaying = New Button()
-            Me.btnCombat = New Button()
+            Me.BtnBack = New Button()
+            Me.BtnIntro = New Button()
+            Me.BtnSkills = New Button()
+            Me.BtnCity = New Button()
+            Me.BtnPlaying = New Button()
+            Me.BtnCombat = New Button()
             Me.SuspendLayout()
             '
             'txtManual
@@ -47,85 +47,85 @@ Namespace Forms
             Me.txtManual.Size = New Size(550, 350)
             Me.txtManual.TabIndex = 0
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(569, 332)
-            Me.btnBack.Margin = New Padding(4)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(150, 30)
-            Me.btnBack.TabIndex = 6
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(569, 332)
+            Me.BtnBack.Margin = New Padding(4)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(150, 30)
+            Me.BtnBack.TabIndex = 6
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'btnIntro
+            'BtnIntro
             '
-            Me.btnIntro.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnIntro.Location = New Point(569, 13)
-            Me.btnIntro.Margin = New Padding(4)
-            Me.btnIntro.Name = "btnIntro"
-            Me.btnIntro.Size = New Size(150, 30)
-            Me.btnIntro.TabIndex = 1
-            Me.btnIntro.Text = "&Introduction"
-            Me.btnIntro.UseVisualStyleBackColor = True
+            Me.BtnIntro.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnIntro.Location = New Point(569, 13)
+            Me.BtnIntro.Margin = New Padding(4)
+            Me.BtnIntro.Name = "BtnIntro"
+            Me.BtnIntro.Size = New Size(150, 30)
+            Me.BtnIntro.TabIndex = 1
+            Me.BtnIntro.Text = "&Introduction"
+            Me.BtnIntro.UseVisualStyleBackColor = True
             '
-            'btnSkills
+            'BtnSkills
             '
-            Me.btnSkills.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnSkills.Location = New Point(569, 140)
-            Me.btnSkills.Margin = New Padding(4)
-            Me.btnSkills.Name = "btnSkills"
-            Me.btnSkills.Size = New Size(150, 30)
-            Me.btnSkills.TabIndex = 3
-            Me.btnSkills.Text = "&Skills"
-            Me.btnSkills.UseVisualStyleBackColor = True
+            Me.BtnSkills.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSkills.Location = New Point(569, 140)
+            Me.BtnSkills.Margin = New Padding(4)
+            Me.BtnSkills.Name = "BtnSkills"
+            Me.BtnSkills.Size = New Size(150, 30)
+            Me.BtnSkills.TabIndex = 3
+            Me.BtnSkills.Text = "&Skills"
+            Me.BtnSkills.UseVisualStyleBackColor = True
             '
-            'btnCity
+            'BtnCity
             '
-            Me.btnCity.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCity.Location = New Point(569, 77)
-            Me.btnCity.Margin = New Padding(4)
-            Me.btnCity.Name = "btnCity"
-            Me.btnCity.Size = New Size(150, 30)
-            Me.btnCity.TabIndex = 2
-            Me.btnCity.Text = "&The City"
-            Me.btnCity.UseVisualStyleBackColor = True
+            Me.BtnCity.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnCity.Location = New Point(569, 77)
+            Me.BtnCity.Margin = New Padding(4)
+            Me.BtnCity.Name = "BtnCity"
+            Me.BtnCity.Size = New Size(150, 30)
+            Me.BtnCity.TabIndex = 2
+            Me.BtnCity.Text = "&The City"
+            Me.BtnCity.UseVisualStyleBackColor = True
             '
-            'btnPlaying
+            'BtnPlaying
             '
-            Me.btnPlaying.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnPlaying.Location = New Point(569, 203)
-            Me.btnPlaying.Margin = New Padding(4)
-            Me.btnPlaying.Name = "btnPlaying"
-            Me.btnPlaying.Size = New Size(150, 30)
-            Me.btnPlaying.TabIndex = 4
-            Me.btnPlaying.Text = "&Playing"
-            Me.btnPlaying.UseVisualStyleBackColor = True
+            Me.BtnPlaying.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnPlaying.Location = New Point(569, 203)
+            Me.BtnPlaying.Margin = New Padding(4)
+            Me.BtnPlaying.Name = "BtnPlaying"
+            Me.BtnPlaying.Size = New Size(150, 30)
+            Me.BtnPlaying.TabIndex = 4
+            Me.BtnPlaying.Text = "&Playing"
+            Me.BtnPlaying.UseVisualStyleBackColor = True
             '
-            'btnCombat
+            'BtnCombat
             '
-            Me.btnCombat.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnCombat.Location = New Point(569, 266)
-            Me.btnCombat.Margin = New Padding(4)
-            Me.btnCombat.Name = "btnCombat"
-            Me.btnCombat.Size = New Size(150, 30)
-            Me.btnCombat.TabIndex = 5
-            Me.btnCombat.Text = "&Combat"
-            Me.btnCombat.UseVisualStyleBackColor = True
+            Me.BtnCombat.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnCombat.Location = New Point(569, 266)
+            Me.BtnCombat.Margin = New Padding(4)
+            Me.BtnCombat.Name = "BtnCombat"
+            Me.BtnCombat.Size = New Size(150, 30)
+            Me.BtnCombat.TabIndex = 5
+            Me.BtnCombat.Text = "&Combat"
+            Me.BtnCombat.UseVisualStyleBackColor = True
             '
             'frmManual
             '
             Me.AutoScaleDimensions = New SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(732, 374)
-            Me.Controls.Add(Me.btnCombat)
-            Me.Controls.Add(Me.btnPlaying)
-            Me.Controls.Add(Me.btnCity)
-            Me.Controls.Add(Me.btnSkills)
-            Me.Controls.Add(Me.btnIntro)
-            Me.Controls.Add(Me.btnBack)
+            Me.Controls.Add(Me.BtnCombat)
+            Me.Controls.Add(Me.BtnPlaying)
+            Me.Controls.Add(Me.BtnCity)
+            Me.Controls.Add(Me.BtnSkills)
+            Me.Controls.Add(Me.BtnIntro)
+            Me.Controls.Add(Me.BtnBack)
             Me.Controls.Add(Me.txtManual)
             Me.MaximizeBox = False
             Me.MaximumSize = New Size(748, 413)

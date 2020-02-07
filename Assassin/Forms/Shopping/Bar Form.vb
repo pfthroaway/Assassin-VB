@@ -30,8 +30,8 @@ Namespace Forms.Shopping
 
         ''' <summary>Clears all labels and the Listbox.</summary>
         Private Sub Clear()
-            lblGold.Text = ""
-            lblPrice.Text = ""
+            LblGold.Text = ""
+            LblPrice.Text = ""
             LstPurchases.ClearSelected()
             LstPurchases.Items.Clear()
             BtnPurchase.Enabled = False
@@ -47,13 +47,13 @@ Namespace Forms.Shopping
 
         ''' <summary>Displays all the <see cref="User"/>'s information.</summary>
         Private Sub Display()
-            lblGold.Text = CurrentUser.GoldOnHandToString
-            lblHunger.Text = GetHunger(CurrentUser.Hunger)
-            lblThirst.Text = GetThirst(CurrentUser.Thirst)
+            LblGold.Text = CurrentUser.GoldOnHandToString
+            LblHunger.Text = GetHunger(CurrentUser.Hunger)
+            LblThirst.Text = GetThirst(CurrentUser.Thirst)
 
-            lblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
+            LblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
 
-            lblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
+            LblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
 
             If LstPurchases.SelectedIndex >= 0 Then
                 If CmbDrinks.Checked Then
@@ -61,7 +61,7 @@ Namespace Forms.Shopping
                 ElseIf CmbFood.Checked Then
                     _selectedItem = AllFood.Find(Function(food) food.Name = LstPurchases.SelectedItem.ToString)
                 End If
-                lblPrice.Text = _selectedItem.ValueToString
+                LblPrice.Text = _selectedItem.ValueToString
 
                 BtnPurchase.Enabled = CurrentUser.GoldOnHand >= _selectedItem.Value
             End If
@@ -107,7 +107,7 @@ Namespace Forms.Shopping
 #Region "Click"
 
         Private Sub Cmb_CheckedChanged(sender As Object, e As EventArgs) Handles CmbDrinks.CheckedChanged, CmbFood.CheckedChanged
-            lblPrice.Text = ""
+            LblPrice.Text = ""
             DisplayPurchases()
         End Sub
 

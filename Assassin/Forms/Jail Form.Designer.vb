@@ -26,23 +26,23 @@ Namespace Forms
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.lstJailed = New ListBox()
+            Me.LstJailed = New ListBox()
             Me.Label1 = New Label()
-            Me.lblReason = New Label()
-            Me.lblFine = New Label()
+            Me.LblReason = New Label()
+            Me.LblFine = New Label()
             Me.Label3 = New Label()
-            Me.btnBack = New Button()
-            Me.btnBailOut = New Button()
+            Me.BtnBack = New Button()
+            Me.BtnBailOut = New Button()
             Me.SuspendLayout()
             '
-            'lstJailed
+            'LstJailed
             '
-            Me.lstJailed.FormattingEnabled = True
-            Me.lstJailed.ItemHeight = 18
-            Me.lstJailed.Location = New Point(13, 13)
-            Me.lstJailed.Name = "lstJailed"
-            Me.lstJailed.Size = New Size(200, 184)
-            Me.lstJailed.TabIndex = 0
+            Me.LstJailed.FormattingEnabled = True
+            Me.LstJailed.ItemHeight = 18
+            Me.LstJailed.Location = New Point(13, 13)
+            Me.LstJailed.Name = "LstJailed"
+            Me.LstJailed.Size = New Size(200, 184)
+            Me.LstJailed.TabIndex = 0
             '
             'Label1
             '
@@ -54,23 +54,23 @@ Namespace Forms
             Me.Label1.Text = "Reason Jailed:"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblReason
+            'LblReason
             '
-            Me.lblReason.BorderStyle = BorderStyle.FixedSingle
-            Me.lblReason.Location = New Point(219, 37)
-            Me.lblReason.Name = "lblReason"
-            Me.lblReason.Size = New Size(150, 25)
-            Me.lblReason.TabIndex = 2
-            Me.lblReason.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblReason.BorderStyle = BorderStyle.FixedSingle
+            Me.LblReason.Location = New Point(219, 37)
+            Me.LblReason.Name = "LblReason"
+            Me.LblReason.Size = New Size(150, 25)
+            Me.LblReason.TabIndex = 2
+            Me.LblReason.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblFine
+            'LblFine
             '
-            Me.lblFine.BorderStyle = BorderStyle.FixedSingle
-            Me.lblFine.Location = New Point(219, 95)
-            Me.lblFine.Name = "lblFine"
-            Me.lblFine.Size = New Size(150, 25)
-            Me.lblFine.TabIndex = 4
-            Me.lblFine.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblFine.BorderStyle = BorderStyle.FixedSingle
+            Me.LblFine.Location = New Point(219, 95)
+            Me.LblFine.Name = "LblFine"
+            Me.LblFine.Size = New Size(150, 25)
+            Me.LblFine.TabIndex = 4
+            Me.LblFine.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label3
             '
@@ -82,41 +82,41 @@ Namespace Forms
             Me.Label3.Text = "Fine:"
             Me.Label3.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(219, 167)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(150, 30)
-            Me.btnBack.TabIndex = 15
-            Me.btnBack.Text = "E&xit"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(219, 167)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(150, 30)
+            Me.BtnBack.TabIndex = 15
+            Me.BtnBack.Text = "E&xit"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'btnBailOut
+            'BtnBailOut
             '
-            Me.btnBailOut.Enabled = False
-            Me.btnBailOut.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBailOut.Location = New Point(219, 131)
-            Me.btnBailOut.Name = "btnBailOut"
-            Me.btnBailOut.Size = New Size(150, 30)
-            Me.btnBailOut.TabIndex = 16
-            Me.btnBailOut.Text = "&Bail Out"
-            Me.btnBailOut.UseVisualStyleBackColor = True
+            Me.BtnBailOut.Enabled = False
+            Me.BtnBailOut.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBailOut.Location = New Point(219, 131)
+            Me.BtnBailOut.Name = "BtnBailOut"
+            Me.BtnBailOut.Size = New Size(150, 30)
+            Me.BtnBailOut.TabIndex = 16
+            Me.BtnBailOut.Text = "&Bail Out"
+            Me.BtnBailOut.UseVisualStyleBackColor = True
             '
             'frmJail
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(381, 208)
-            Me.Controls.Add(Me.btnBailOut)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.lblFine)
+            Me.Controls.Add(Me.BtnBailOut)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.LblFine)
             Me.Controls.Add(Me.Label3)
-            Me.Controls.Add(Me.lblReason)
+            Me.Controls.Add(Me.LblReason)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.lstJailed)
+            Me.Controls.Add(Me.LstJailed)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
@@ -130,8 +130,8 @@ Namespace Forms
         End Sub
         Friend WithEvents LstJailed As ListBox
         Friend WithEvents Label1 As Label
-        Friend WithEvents lblReason As Label
-        Friend WithEvents lblFine As Label
+        Friend WithEvents LblReason As Label
+        Friend WithEvents LblFine As Label
         Friend WithEvents Label3 As Label
         Friend WithEvents BtnBack As Button
         Friend WithEvents BtnBailOut As Button

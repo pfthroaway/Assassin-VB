@@ -27,7 +27,7 @@ Namespace Forms.Admin
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
             Me.Label1 = New Label()
-            Me.btnSubmit = New Button()
+            Me.BtnSubmit = New Button()
             Me.txtPassword = New TextBox()
             Me.SuspendLayout()
             '
@@ -40,14 +40,14 @@ Namespace Forms.Admin
             Me.Label1.Text = "Enter the Password:"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnSubmit
+            'BtnSubmit
             '
-            Me.btnSubmit.Location = New Point(52, 80)
-            Me.btnSubmit.Name = "btnSubmit"
-            Me.btnSubmit.Size = New Size(80, 30)
-            Me.btnSubmit.TabIndex = 1
-            Me.btnSubmit.Text = "&Submit"
-            Me.btnSubmit.UseVisualStyleBackColor = True
+            Me.BtnSubmit.Location = New Point(52, 80)
+            Me.BtnSubmit.Name = "BtnSubmit"
+            Me.BtnSubmit.Size = New Size(80, 30)
+            Me.BtnSubmit.TabIndex = 1
+            Me.BtnSubmit.Text = "&Submit"
+            Me.BtnSubmit.UseVisualStyleBackColor = True
             '
             'txtPassword
             '
@@ -60,12 +60,12 @@ Namespace Forms.Admin
             '
             'frmAdminLogin
             '
-            Me.AcceptButton = Me.btnSubmit
+            Me.AcceptButton = Me.BtnSubmit
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
             Me.ClientSize = New Size(184, 122)
             Me.Controls.Add(Me.txtPassword)
-            Me.Controls.Add(Me.btnSubmit)
+            Me.Controls.Add(Me.BtnSubmit)
             Me.Controls.Add(Me.Label1)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)

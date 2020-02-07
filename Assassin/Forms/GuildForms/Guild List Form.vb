@@ -7,6 +7,7 @@
 
 Option Strict On
 Option Explicit On
+
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
 
@@ -32,27 +33,27 @@ Namespace Forms.GuildForms
         Public Async Sub Display()
             If LstGuilds.SelectedIndex >= 0 Then
                 CurrentGuild = AllGuilds.Find(Function(guild) guild.ID = LstGuilds.SelectedIndex + 1)
-                lblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
+                LblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
                 If CurrentGuild.Master = "Computer" Then
                     Select Case CurrentGuild.ID
                         Case 1
-                            lblGuildmaster.Text = "The Master"
+                            LblGuildmaster.Text = "The Master"
                         Case 2
-                            lblGuildmaster.Text = "Rathskeller"
+                            LblGuildmaster.Text = "Rathskeller"
                         Case Else
-                            lblGuildmaster.Text = $"{CurrentGuild.Name} Master"
+                            LblGuildmaster.Text = $"{CurrentGuild.Name} Master"
                     End Select
                 Else
-                    lblGuildmaster.Text = CurrentGuild.Master.ToString
+                    LblGuildmaster.Text = CurrentGuild.Master.ToString
                 End If
 
-                lblFee.Text = CurrentGuild.Fee.ToString("N0")
-                lblGuildGold.Text = CurrentGuild.Gold.ToString("N0")
-                lblHenchmenLevel1.Text = CurrentGuild.HenchmenLevel1.ToString("N0")
-                lblHenchmenLevel2.Text = CurrentGuild.HenchmenLevel2.ToString("N0")
-                lblHenchmenLevel3.Text = CurrentGuild.HenchmenLevel3.ToString("N0")
-                lblHenchmenLevel4.Text = CurrentGuild.HenchmenLevel4.ToString("N0")
-                lblHenchmenLevel5.Text = CurrentGuild.HenchmenLevel5.ToString("N0")
+                LblFee.Text = CurrentGuild.Fee.ToString("N0")
+                LblGuildGold.Text = CurrentGuild.Gold.ToString("N0")
+                LblHenchmenLevel1.Text = CurrentGuild.HenchmenLevel1.ToString("N0")
+                LblHenchmenLevel2.Text = CurrentGuild.HenchmenLevel2.ToString("N0")
+                LblHenchmenLevel3.Text = CurrentGuild.HenchmenLevel3.ToString("N0")
+                LblHenchmenLevel4.Text = CurrentGuild.HenchmenLevel4.ToString("N0")
+                LblHenchmenLevel5.Text = CurrentGuild.HenchmenLevel5.ToString("N0")
 
                 If IsMember() Then
                     'if CurrentUser is a member of selected guild
@@ -73,10 +74,10 @@ Namespace Forms.GuildForms
                         ElseIf CurrentUser.GoldOnHand < CurrentGuild.Fee Then
                             'if user doesn't have enough gold
                             BtnApply.Enabled = False
-                            lblFee.Text = CurrentGuild.Fee.ToString("N0")
+                            LblFee.Text = CurrentGuild.Fee.ToString("N0")
                         Else
                             BtnApply.Enabled = True
-                            lblFee.Text = CurrentGuild.Fee.ToString("N0")
+                            LblFee.Text = CurrentGuild.Fee.ToString("N0")
                         End If
                     End If
                 End If

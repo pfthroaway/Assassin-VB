@@ -21,8 +21,8 @@ Namespace Forms
         Public Sub Clear()
             LstJailed.Items.Clear()
             LstJailed.ClearSelected()
-            lblFine.Text = ""
-            lblReason.Text = ""
+            LblFine.Text = ""
+            LblReason.Text = ""
 
             For Each user As JailedUser In AllJailedUsers
                 LstJailed.Items.Add(user.Name)
@@ -34,8 +34,8 @@ Namespace Forms
         Private Sub LstJailed_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJailed.SelectedIndexChanged
             If LstJailed.SelectedIndex >= 0 Then
                 _selectedJailedUser = AllJailedUsers.Find(Function(user) user.Name = LstJailed.SelectedItem.ToString())
-                lblReason.Text = _selectedJailedUser.Reason.ToString()
-                lblFine.Text = _selectedJailedUser.Fine.ToString("N0")
+                LblReason.Text = _selectedJailedUser.Reason.ToString()
+                LblFine.Text = _selectedJailedUser.Fine.ToString("N0")
                 BtnBailOut.Enabled = CurrentUser.GoldOnHand >= _selectedJailedUser.Fine
             End If
         End Sub

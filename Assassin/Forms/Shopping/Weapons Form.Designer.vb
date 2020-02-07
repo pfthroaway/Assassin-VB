@@ -32,22 +32,22 @@ Namespace Forms.Shopping
             Me.CmbLight = New RadioButton()
             Me.LstWeapons = New ListBox()
             Me.BtnSell = New Button()
-            Me.lblValue = New Label()
+            Me.LblValue = New Label()
             Me.Label4 = New Label()
-            Me.lblCurrent = New Label()
+            Me.LblCurrent = New Label()
             Me.BtnPurchase = New Button()
-            Me.lblPrice = New Label()
+            Me.LblPrice = New Label()
             Me.Label2 = New Label()
-            Me.lblGold = New Label()
+            Me.LblGold = New Label()
             Me.Label1 = New Label()
             Me.BtnBack = New Button()
             Me.TxtWeapons = New TextBox()
             Me.BtnClear = New Button()
-            Me.lblSelected = New Label()
-            Me.lblCurrentDamage = New Label()
+            Me.LblSelected = New Label()
+            Me.LblCurrentDamage = New Label()
             Me.Label5 = New Label()
             Me.Label6 = New Label()
-            Me.lblSelectedDamage = New Label()
+            Me.LblSelectedDamage = New Label()
             Me.grpWeaponType.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -64,67 +64,67 @@ Namespace Forms.Shopping
             Me.grpWeaponType.TabStop = False
             Me.grpWeaponType.Text = "Weapon Type"
             '
-            'cmbTwoH
+            'CmbTwoH
             '
             Me.CmbTwoH.AutoSize = True
             Me.CmbTwoH.Location = New Point(148, 21)
-            Me.CmbTwoH.Name = "cmbTwoH"
+            Me.CmbTwoH.Name = "CmbTwoH"
             Me.CmbTwoH.Size = New Size(70, 22)
             Me.CmbTwoH.TabIndex = 3
             Me.CmbTwoH.TabStop = True
             Me.CmbTwoH.Text = "&Two-H"
             Me.CmbTwoH.UseVisualStyleBackColor = True
             '
-            'cmbHeavy
+            'CmbHeavy
             '
             Me.CmbHeavy.AutoSize = True
             Me.CmbHeavy.Location = New Point(73, 21)
-            Me.CmbHeavy.Name = "cmbHeavy"
+            Me.CmbHeavy.Name = "CmbHeavy"
             Me.CmbHeavy.Size = New Size(69, 22)
             Me.CmbHeavy.TabIndex = 2
             Me.CmbHeavy.TabStop = True
             Me.CmbHeavy.Text = "&Heavy"
             Me.CmbHeavy.UseVisualStyleBackColor = True
             '
-            'cmbLight
+            'CmbLight
             '
             Me.CmbLight.AutoSize = True
             Me.CmbLight.Location = New Point(7, 21)
-            Me.CmbLight.Name = "cmbLight"
+            Me.CmbLight.Name = "CmbLight"
             Me.CmbLight.Size = New Size(60, 22)
             Me.CmbLight.TabIndex = 1
             Me.CmbLight.TabStop = True
             Me.CmbLight.Text = "&Light"
             Me.CmbLight.UseVisualStyleBackColor = True
             '
-            'lstWeapons
+            'LstWeapons
             '
             Me.LstWeapons.FormattingEnabled = True
             Me.LstWeapons.ItemHeight = 18
             Me.LstWeapons.Location = New Point(13, 67)
-            Me.LstWeapons.Name = "lstWeapons"
+            Me.LstWeapons.Name = "LstWeapons"
             Me.LstWeapons.Size = New Size(224, 166)
             Me.LstWeapons.TabIndex = 4
             '
-            'btnSell
+            'BtnSell
             '
             Me.BtnSell.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnSell.Location = New Point(47, 288)
-            Me.BtnSell.Name = "btnSell"
+            Me.BtnSell.Name = "BtnSell"
             Me.BtnSell.Size = New Size(150, 35)
             Me.BtnSell.TabIndex = 6
             Me.BtnSell.Text = "&Sell"
             Me.BtnSell.UseVisualStyleBackColor = True
             '
-            'lblValue
+            'LblValue
             '
-            Me.lblValue.BorderStyle = BorderStyle.FixedSingle
-            Me.lblValue.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblValue.Location = New Point(392, 94)
-            Me.lblValue.Name = "lblValue"
-            Me.lblValue.Size = New Size(150, 25)
-            Me.lblValue.TabIndex = 15
-            Me.lblValue.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblValue.BorderStyle = BorderStyle.FixedSingle
+            Me.LblValue.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblValue.Location = New Point(392, 94)
+            Me.LblValue.Name = "LblValue"
+            Me.LblValue.Size = New Size(150, 25)
+            Me.LblValue.TabIndex = 15
+            Me.LblValue.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -137,37 +137,37 @@ Namespace Forms.Shopping
             Me.Label4.Text = "Value:"
             Me.Label4.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblCurrent
+            'LblCurrent
             '
-            Me.lblCurrent.BorderStyle = BorderStyle.FixedSingle
-            Me.lblCurrent.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCurrent.Location = New Point(243, 70)
-            Me.lblCurrent.Name = "lblCurrent"
-            Me.lblCurrent.Size = New Size(299, 25)
-            Me.lblCurrent.TabIndex = 13
-            Me.lblCurrent.Text = "Current Weapon"
-            Me.lblCurrent.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblCurrent.BorderStyle = BorderStyle.FixedSingle
+            Me.LblCurrent.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblCurrent.Location = New Point(243, 70)
+            Me.LblCurrent.Name = "LblCurrent"
+            Me.LblCurrent.Size = New Size(299, 25)
+            Me.LblCurrent.TabIndex = 13
+            Me.LblCurrent.Text = "Current Weapon"
+            Me.LblCurrent.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnPurchase
+            'BtnPurchase
             '
             Me.BtnPurchase.Enabled = False
             Me.BtnPurchase.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnPurchase.Location = New Point(47, 247)
-            Me.BtnPurchase.Name = "btnPurchase"
+            Me.BtnPurchase.Name = "BtnPurchase"
             Me.BtnPurchase.Size = New Size(150, 35)
             Me.BtnPurchase.TabIndex = 5
             Me.BtnPurchase.Text = "&Purchase"
             Me.BtnPurchase.UseVisualStyleBackColor = True
             '
-            'lblPrice
+            'LblPrice
             '
-            Me.lblPrice.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPrice.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPrice.Location = New Point(392, 190)
-            Me.lblPrice.Name = "lblPrice"
-            Me.lblPrice.Size = New Size(150, 25)
-            Me.lblPrice.TabIndex = 11
-            Me.lblPrice.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPrice.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPrice.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPrice.Location = New Point(392, 190)
+            Me.LblPrice.Name = "LblPrice"
+            Me.LblPrice.Size = New Size(150, 25)
+            Me.LblPrice.TabIndex = 11
+            Me.LblPrice.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -180,15 +180,15 @@ Namespace Forms.Shopping
             Me.Label2.Text = "Price:"
             Me.Label2.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGold
+            'LblGold
             '
-            Me.lblGold.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGold.Location = New Point(392, 22)
-            Me.lblGold.Name = "lblGold"
-            Me.lblGold.Size = New Size(150, 25)
-            Me.lblGold.TabIndex = 9
-            Me.lblGold.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGold.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGold.Location = New Point(392, 22)
+            Me.LblGold.Name = "LblGold"
+            Me.LblGold.Size = New Size(150, 25)
+            Me.LblGold.TabIndex = 9
+            Me.LblGold.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label1
             '
@@ -201,12 +201,12 @@ Namespace Forms.Shopping
             Me.Label1.Text = "Gold on Hand:"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnBack
+            'BtnBack
             '
             Me.BtnBack.DialogResult = DialogResult.Cancel
             Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnBack.Location = New Point(47, 370)
-            Me.BtnBack.Name = "btnBack"
+            Me.BtnBack.Name = "BtnBack"
             Me.BtnBack.Size = New Size(150, 35)
             Me.BtnBack.TabIndex = 8
             Me.BtnBack.Text = "&Back"
@@ -226,36 +226,36 @@ Namespace Forms.Shopping
             Me.TxtWeapons.Text = "You enter Weapons 'R Us. The weaponsmith greets you." & ChrW(13) & ChrW(10) & """Weapons 'R Us is the name," &
                                  " tools of destruction is our game."""
             '
-            'btnClear
+            'BtnClear
             '
             Me.BtnClear.Enabled = False
             Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnClear.Location = New Point(47, 329)
-            Me.BtnClear.Name = "btnClear"
+            Me.BtnClear.Name = "BtnClear"
             Me.BtnClear.Size = New Size(150, 35)
             Me.BtnClear.TabIndex = 7
             Me.BtnClear.Text = "&Clear"
             Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'lblSelected
+            'LblSelected
             '
-            Me.lblSelected.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSelected.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSelected.Location = New Point(243, 166)
-            Me.lblSelected.Name = "lblSelected"
-            Me.lblSelected.Size = New Size(299, 25)
-            Me.lblSelected.TabIndex = 16
-            Me.lblSelected.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblSelected.BorderStyle = BorderStyle.FixedSingle
+            Me.LblSelected.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSelected.Location = New Point(243, 166)
+            Me.LblSelected.Name = "LblSelected"
+            Me.LblSelected.Size = New Size(299, 25)
+            Me.LblSelected.TabIndex = 16
+            Me.LblSelected.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblCurrentDamage
+            'LblCurrentDamage
             '
-            Me.lblCurrentDamage.BorderStyle = BorderStyle.FixedSingle
-            Me.lblCurrentDamage.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblCurrentDamage.Location = New Point(392, 118)
-            Me.lblCurrentDamage.Name = "lblCurrentDamage"
-            Me.lblCurrentDamage.Size = New Size(150, 25)
-            Me.lblCurrentDamage.TabIndex = 18
-            Me.lblCurrentDamage.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblCurrentDamage.BorderStyle = BorderStyle.FixedSingle
+            Me.LblCurrentDamage.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblCurrentDamage.Location = New Point(392, 118)
+            Me.LblCurrentDamage.Name = "LblCurrentDamage"
+            Me.LblCurrentDamage.Size = New Size(150, 25)
+            Me.LblCurrentDamage.TabIndex = 18
+            Me.LblCurrentDamage.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label5
             '
@@ -279,15 +279,15 @@ Namespace Forms.Shopping
             Me.Label6.Text = "Damage:"
             Me.Label6.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblSelectedDamage
+            'LblSelectedDamage
             '
-            Me.lblSelectedDamage.BorderStyle = BorderStyle.FixedSingle
-            Me.lblSelectedDamage.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblSelectedDamage.Location = New Point(392, 214)
-            Me.lblSelectedDamage.Name = "lblSelectedDamage"
-            Me.lblSelectedDamage.Size = New Size(150, 25)
-            Me.lblSelectedDamage.TabIndex = 20
-            Me.lblSelectedDamage.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblSelectedDamage.BorderStyle = BorderStyle.FixedSingle
+            Me.LblSelectedDamage.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSelectedDamage.Location = New Point(392, 214)
+            Me.LblSelectedDamage.Name = "LblSelectedDamage"
+            Me.LblSelectedDamage.Size = New Size(150, 25)
+            Me.LblSelectedDamage.TabIndex = 20
+            Me.LblSelectedDamage.TextAlign = ContentAlignment.MiddleCenter
             '
             'frmWeapons
             '
@@ -295,22 +295,22 @@ Namespace Forms.Shopping
             Me.AutoScaleMode = AutoScaleMode.Font
             Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(559, 415)
-            Me.Controls.Add(Me.lblSelectedDamage)
+            Me.Controls.Add(Me.LblSelectedDamage)
             Me.Controls.Add(Me.Label6)
-            Me.Controls.Add(Me.lblCurrentDamage)
+            Me.Controls.Add(Me.LblCurrentDamage)
             Me.Controls.Add(Me.Label5)
-            Me.Controls.Add(Me.lblSelected)
+            Me.Controls.Add(Me.LblSelected)
             Me.Controls.Add(Me.BtnClear)
             Me.Controls.Add(Me.TxtWeapons)
             Me.Controls.Add(Me.BtnBack)
             Me.Controls.Add(Me.BtnSell)
-            Me.Controls.Add(Me.lblValue)
+            Me.Controls.Add(Me.LblValue)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.lblCurrent)
+            Me.Controls.Add(Me.LblCurrent)
             Me.Controls.Add(Me.BtnPurchase)
-            Me.Controls.Add(Me.lblPrice)
+            Me.Controls.Add(Me.LblPrice)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.lblGold)
+            Me.Controls.Add(Me.LblGold)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.LstWeapons)
             Me.Controls.Add(Me.grpWeaponType)
@@ -334,21 +334,21 @@ Namespace Forms.Shopping
         Friend WithEvents CmbLight As RadioButton
         Friend WithEvents LstWeapons As ListBox
         Friend WithEvents BtnSell As Button
-        Friend WithEvents lblValue As Label
+        Friend WithEvents LblValue As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents lblCurrent As Label
+        Friend WithEvents LblCurrent As Label
         Friend WithEvents BtnPurchase As Button
-        Friend WithEvents lblPrice As Label
+        Friend WithEvents LblPrice As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents lblGold As Label
+        Friend WithEvents LblGold As Label
         Friend WithEvents Label1 As Label
         Friend WithEvents BtnBack As Button
         Friend WithEvents TxtWeapons As TextBox
         Friend WithEvents BtnClear As Button
-        Friend WithEvents lblSelected As Label
-        Friend WithEvents lblCurrentDamage As Label
+        Friend WithEvents LblSelected As Label
+        Friend WithEvents LblCurrentDamage As Label
         Friend WithEvents Label5 As Label
         Friend WithEvents Label6 As Label
-        Friend WithEvents lblSelectedDamage As Label
+        Friend WithEvents LblSelectedDamage As Label
     End Class
 End Namespace

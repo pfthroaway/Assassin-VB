@@ -30,17 +30,17 @@ Namespace Forms.Shopping
             Me.CmbFood = New RadioButton()
             Me.CmbDrinks = New RadioButton()
             Me.LstPurchases = New ListBox()
-            Me.lblThirst = New Label()
+            Me.LblThirst = New Label()
             Me.Label4 = New Label()
             Me.BtnPurchase = New Button()
-            Me.lblPrice = New Label()
+            Me.LblPrice = New Label()
             Me.Label2 = New Label()
-            Me.lblGold = New Label()
+            Me.LblGold = New Label()
             Me.Label1 = New Label()
             Me.BtnBack = New Button()
             Me.TxtBar = New TextBox()
             Me.BtnClear = New Button()
-            Me.lblHunger = New Label()
+            Me.LblHunger = New Label()
             Me.Label3 = New Label()
             Me.grpPurchases.SuspendLayout()
             Me.SuspendLayout()
@@ -57,46 +57,46 @@ Namespace Forms.Shopping
             Me.grpPurchases.TabStop = False
             Me.grpPurchases.Text = "Purchases"
             '
-            'cmbFood
+            'CmbFood
             '
             Me.CmbFood.AutoSize = True
             Me.CmbFood.Location = New Point(84, 21)
-            Me.CmbFood.Name = "cmbFood"
+            Me.CmbFood.Name = "CmbFood"
             Me.CmbFood.Size = New Size(63, 22)
             Me.CmbFood.TabIndex = 2
             Me.CmbFood.TabStop = True
             Me.CmbFood.Text = "&Food"
             Me.CmbFood.UseVisualStyleBackColor = True
             '
-            'cmbDrinks
+            'CmbDrinks
             '
             Me.CmbDrinks.AutoSize = True
             Me.CmbDrinks.Location = New Point(7, 21)
-            Me.CmbDrinks.Name = "cmbDrinks"
+            Me.CmbDrinks.Name = "CmbDrinks"
             Me.CmbDrinks.Size = New Size(71, 22)
             Me.CmbDrinks.TabIndex = 1
             Me.CmbDrinks.TabStop = True
             Me.CmbDrinks.Text = "&Drinks"
             Me.CmbDrinks.UseVisualStyleBackColor = True
             '
-            'lstPurchases
+            'LstPurchases
             '
             Me.LstPurchases.FormattingEnabled = True
             Me.LstPurchases.ItemHeight = 18
             Me.LstPurchases.Location = New Point(13, 67)
-            Me.LstPurchases.Name = "lstPurchases"
+            Me.LstPurchases.Name = "LstPurchases"
             Me.LstPurchases.Size = New Size(224, 166)
             Me.LstPurchases.TabIndex = 4
             '
-            'lblThirst
+            'LblThirst
             '
-            Me.lblThirst.BorderStyle = BorderStyle.FixedSingle
-            Me.lblThirst.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblThirst.Location = New Point(399, 102)
-            Me.lblThirst.Name = "lblThirst"
-            Me.lblThirst.Size = New Size(150, 25)
-            Me.lblThirst.TabIndex = 15
-            Me.lblThirst.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblThirst.BorderStyle = BorderStyle.FixedSingle
+            Me.LblThirst.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblThirst.Location = New Point(399, 102)
+            Me.LblThirst.Name = "LblThirst"
+            Me.LblThirst.Size = New Size(150, 25)
+            Me.LblThirst.TabIndex = 15
+            Me.LblThirst.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -109,26 +109,26 @@ Namespace Forms.Shopping
             Me.Label4.Text = "Thirst:"
             Me.Label4.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnPurchase
+            'BtnPurchase
             '
             Me.BtnPurchase.Enabled = False
             Me.BtnPurchase.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnPurchase.Location = New Point(243, 144)
-            Me.BtnPurchase.Name = "btnPurchase"
+            Me.BtnPurchase.Name = "BtnPurchase"
             Me.BtnPurchase.Size = New Size(150, 35)
             Me.BtnPurchase.TabIndex = 5
             Me.BtnPurchase.Text = "&Purchase"
             Me.BtnPurchase.UseVisualStyleBackColor = True
             '
-            'lblPrice
+            'LblPrice
             '
-            Me.lblPrice.BorderStyle = BorderStyle.FixedSingle
-            Me.lblPrice.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblPrice.Location = New Point(243, 102)
-            Me.lblPrice.Name = "lblPrice"
-            Me.lblPrice.Size = New Size(150, 25)
-            Me.lblPrice.TabIndex = 11
-            Me.lblPrice.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblPrice.BorderStyle = BorderStyle.FixedSingle
+            Me.LblPrice.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPrice.Location = New Point(243, 102)
+            Me.LblPrice.Name = "LblPrice"
+            Me.LblPrice.Size = New Size(150, 25)
+            Me.LblPrice.TabIndex = 11
+            Me.LblPrice.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -141,15 +141,15 @@ Namespace Forms.Shopping
             Me.Label2.Text = "Price:"
             Me.Label2.TextAlign = ContentAlignment.MiddleCenter
             '
-            'lblGold
+            'LblGold
             '
-            Me.lblGold.BorderStyle = BorderStyle.FixedSingle
-            Me.lblGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblGold.Location = New Point(243, 35)
-            Me.lblGold.Name = "lblGold"
-            Me.lblGold.Size = New Size(150, 25)
-            Me.lblGold.TabIndex = 9
-            Me.lblGold.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGold.BorderStyle = BorderStyle.FixedSingle
+            Me.LblGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGold.Location = New Point(243, 35)
+            Me.LblGold.Name = "LblGold"
+            Me.LblGold.Size = New Size(150, 25)
+            Me.LblGold.TabIndex = 9
+            Me.LblGold.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label1
             '
@@ -162,12 +162,12 @@ Namespace Forms.Shopping
             Me.Label1.Text = "Current Gold:"
             Me.Label1.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnBack
+            'BtnBack
             '
             Me.BtnBack.DialogResult = DialogResult.Cancel
             Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnBack.Location = New Point(399, 198)
-            Me.BtnBack.Name = "btnBack"
+            Me.BtnBack.Name = "BtnBack"
             Me.BtnBack.Size = New Size(150, 35)
             Me.BtnBack.TabIndex = 8
             Me.BtnBack.Text = "&Back"
@@ -186,25 +186,25 @@ Namespace Forms.Shopping
             Me.TxtBar.TabIndex = 9
             Me.TxtBar.Text = "You approach the bar."
             '
-            'btnClear
+            'BtnClear
             '
             Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
             Me.BtnClear.Location = New Point(243, 198)
-            Me.BtnClear.Name = "btnClear"
+            Me.BtnClear.Name = "BtnClear"
             Me.BtnClear.Size = New Size(150, 35)
             Me.BtnClear.TabIndex = 7
             Me.BtnClear.Text = "&Clear"
             Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'lblHunger
+            'LblHunger
             '
-            Me.lblHunger.BorderStyle = BorderStyle.FixedSingle
-            Me.lblHunger.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.lblHunger.Location = New Point(399, 35)
-            Me.lblHunger.Name = "lblHunger"
-            Me.lblHunger.Size = New Size(150, 25)
-            Me.lblHunger.TabIndex = 13
-            Me.lblHunger.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblHunger.BorderStyle = BorderStyle.FixedSingle
+            Me.LblHunger.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHunger.Location = New Point(399, 35)
+            Me.LblHunger.Name = "LblHunger"
+            Me.LblHunger.Size = New Size(150, 25)
+            Me.LblHunger.TabIndex = 13
+            Me.LblHunger.TextAlign = ContentAlignment.MiddleCenter
             '
             'Label3
             '
@@ -226,14 +226,14 @@ Namespace Forms.Shopping
             Me.Controls.Add(Me.BtnClear)
             Me.Controls.Add(Me.TxtBar)
             Me.Controls.Add(Me.BtnBack)
-            Me.Controls.Add(Me.lblThirst)
+            Me.Controls.Add(Me.LblThirst)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.lblHunger)
+            Me.Controls.Add(Me.LblHunger)
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.BtnPurchase)
-            Me.Controls.Add(Me.lblPrice)
+            Me.Controls.Add(Me.LblPrice)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.lblGold)
+            Me.Controls.Add(Me.LblGold)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.LstPurchases)
             Me.Controls.Add(Me.grpPurchases)
@@ -255,17 +255,17 @@ Namespace Forms.Shopping
         Friend WithEvents CmbFood As RadioButton
         Friend WithEvents CmbDrinks As RadioButton
         Friend WithEvents LstPurchases As ListBox
-        Friend WithEvents lblThirst As Label
+        Friend WithEvents LblThirst As Label
         Friend WithEvents Label4 As Label
         Friend WithEvents BtnPurchase As Button
-        Friend WithEvents lblPrice As Label
+        Friend WithEvents LblPrice As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents lblGold As Label
+        Friend WithEvents LblGold As Label
         Friend WithEvents Label1 As Label
         Friend WithEvents BtnBack As Button
         Friend WithEvents TxtBar As TextBox
         Friend WithEvents BtnClear As Button
-        Friend WithEvents lblHunger As Label
+        Friend WithEvents LblHunger As Label
         Friend WithEvents Label3 As Label
     End Class
 End Namespace

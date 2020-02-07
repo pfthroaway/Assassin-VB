@@ -26,7 +26,7 @@ Namespace Forms
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.cmbRaid = New ComboBox()
+            Me.CmbRaid = New ComboBox()
             Me.Label1 = New Label()
             Me.Label2 = New Label()
             Me.Label3 = New Label()
@@ -44,20 +44,20 @@ Namespace Forms
             Me.txtMax5 = New TextBox()
             Me.txtHenchmenLevel5 = New TextBox()
             Me.Label7 = New Label()
-            Me.btnRaid = New Button()
-            Me.btnClear = New Button()
-            Me.btnBack = New Button()
+            Me.BtnRaid = New Button()
+            Me.BtnClear = New Button()
+            Me.BtnBack = New Button()
             Me.txtRaid = New TextBox()
             Me.SuspendLayout()
             '
-            'cmbRaid
+            'CmbRaid
             '
-            Me.cmbRaid.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.cmbRaid.FormattingEnabled = True
-            Me.cmbRaid.Location = New Point(42, 43)
-            Me.cmbRaid.Name = "cmbRaid"
-            Me.cmbRaid.Size = New Size(200, 26)
-            Me.cmbRaid.TabIndex = 0
+            Me.CmbRaid.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbRaid.FormattingEnabled = True
+            Me.CmbRaid.Location = New Point(42, 43)
+            Me.CmbRaid.Name = "CmbRaid"
+            Me.CmbRaid.Size = New Size(200, 26)
+            Me.CmbRaid.TabIndex = 0
             '
             'Label1
             '
@@ -237,37 +237,37 @@ Namespace Forms
             Me.Label7.Text = "Level 5:"
             Me.Label7.TextAlign = ContentAlignment.MiddleCenter
             '
-            'btnRaid
+            'BtnRaid
             '
-            Me.btnRaid.Enabled = False
-            Me.btnRaid.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnRaid.Location = New Point(39, 302)
-            Me.btnRaid.Name = "btnRaid"
-            Me.btnRaid.Size = New Size(100, 30)
-            Me.btnRaid.TabIndex = 11
-            Me.btnRaid.Text = "&Raid"
-            Me.btnRaid.UseVisualStyleBackColor = True
+            Me.BtnRaid.Enabled = False
+            Me.BtnRaid.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnRaid.Location = New Point(39, 302)
+            Me.BtnRaid.Name = "BtnRaid"
+            Me.BtnRaid.Size = New Size(100, 30)
+            Me.BtnRaid.TabIndex = 11
+            Me.BtnRaid.Text = "&Raid"
+            Me.BtnRaid.UseVisualStyleBackColor = True
             '
-            'btnClear
+            'BtnClear
             '
-            Me.btnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnClear.Location = New Point(145, 302)
-            Me.btnClear.Name = "btnClear"
-            Me.btnClear.Size = New Size(100, 30)
-            Me.btnClear.TabIndex = 12
-            Me.btnClear.Text = "&Clear"
-            Me.btnClear.UseVisualStyleBackColor = True
+            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New Point(145, 302)
+            Me.BtnClear.Name = "BtnClear"
+            Me.BtnClear.Size = New Size(100, 30)
+            Me.BtnClear.TabIndex = 12
+            Me.BtnClear.Text = "&Clear"
+            Me.BtnClear.UseVisualStyleBackColor = True
             '
-            'btnBack
+            'BtnBack
             '
-            Me.btnBack.DialogResult = DialogResult.Cancel
-            Me.btnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.btnBack.Location = New Point(94, 338)
-            Me.btnBack.Name = "btnBack"
-            Me.btnBack.Size = New Size(100, 30)
-            Me.btnBack.TabIndex = 13
-            Me.btnBack.Text = "&Back"
-            Me.btnBack.UseVisualStyleBackColor = True
+            Me.BtnBack.DialogResult = DialogResult.Cancel
+            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New Point(94, 338)
+            Me.BtnBack.Name = "BtnBack"
+            Me.BtnBack.Size = New Size(100, 30)
+            Me.BtnBack.TabIndex = 13
+            Me.BtnBack.Text = "&Back"
+            Me.BtnBack.UseVisualStyleBackColor = True
             '
             'txtRaid
             '
@@ -282,12 +282,12 @@ Namespace Forms
             '
             Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = AutoScaleMode.Font
-            Me.CancelButton = Me.btnBack
+            Me.CancelButton = Me.BtnBack
             Me.ClientSize = New Size(625, 379)
             Me.Controls.Add(Me.txtRaid)
-            Me.Controls.Add(Me.btnBack)
-            Me.Controls.Add(Me.btnClear)
-            Me.Controls.Add(Me.btnRaid)
+            Me.Controls.Add(Me.BtnBack)
+            Me.Controls.Add(Me.BtnClear)
+            Me.Controls.Add(Me.BtnRaid)
             Me.Controls.Add(Me.txtMax5)
             Me.Controls.Add(Me.txtHenchmenLevel5)
             Me.Controls.Add(Me.Label7)
@@ -305,7 +305,7 @@ Namespace Forms
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.cmbRaid)
+            Me.Controls.Add(Me.CmbRaid)
             Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
             Me.Margin = New Padding(4)
             Me.MaximizeBox = False
