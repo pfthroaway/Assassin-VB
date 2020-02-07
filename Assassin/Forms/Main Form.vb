@@ -103,7 +103,7 @@ Namespace Forms
         End Sub
 
         Private Shared Sub KeyChars(sender As Object, e As KeyPressEventArgs) Handles TxtUsername.KeyPress, TxtPswd.KeyPress
-            e.Handled = Not Char.IsLetterOrDigit(e.KeyChar) AndAlso Not e.KeyChar Like " " AndAlso Not e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsLetterOrDigit(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub Txt_TextChanged(sender As Object, e As EventArgs) Handles TxtUsername.TextChanged, TxtPswd.TextChanged

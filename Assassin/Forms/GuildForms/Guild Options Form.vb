@@ -62,11 +62,11 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtEntranceFee_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtEntranceFee.KeyPress
-            e.Handled = Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub TxtName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtName.KeyPress
-            e.Handled = Char.IsLetter(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like "'" OrElse e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsLetter(e.KeyChar) OrElse e.KeyChar Like " " OrElse e.KeyChar Like "'" OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click

@@ -16,7 +16,6 @@ Imports Extensions
 Namespace Forms
 
     Public Class FrmBattle
-
         Dim _blnDone As Boolean = False
         Public BlnJob As Boolean = False
         Dim _blnWin As Boolean = False

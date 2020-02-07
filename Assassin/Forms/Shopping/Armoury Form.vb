@@ -61,7 +61,7 @@ Namespace Forms.Shopping
                 BtnClear.Enabled = True
                 _buyArmor = AllArmor.Find(Function(armor) armor.Name = LstArmor.SelectedItem.ToString)
 
-                BtnPurchase.Enabled = _buyArmor.Value <= CurrentUser.GoldOnHand AndAlso Not _buyArmor.Equals(CurrentUser.Armor)
+                BtnPurchase.Enabled = _buyArmor.Value <= CurrentUser.GoldOnHand AndAlso _buyArmor <> CurrentUser.Armor
                 LblSelected.Text = _buyArmor.Name
                 LblSelectedDefense.Text = _buyArmor.DefenseToString
                 LblPrice.Text = _buyArmor.ValueToString

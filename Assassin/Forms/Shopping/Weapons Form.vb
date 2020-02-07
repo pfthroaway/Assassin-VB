@@ -58,13 +58,13 @@ Namespace Forms.Shopping
             If LstWeapons.SelectedIndex >= 0 Then
                 If CmbLight.Checked Then
                     _selectedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = LstWeapons.SelectedItem.ToString AndAlso weapon.Type = WeaponType.Light)
-                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso Not _selectedWeapon.Equals(CurrentUser.LightWeapon)
+                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso _selectedWeapon <> CurrentUser.LightWeapon
                 ElseIf CmbHeavy.Checked Then
                     _selectedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = LstWeapons.SelectedItem.ToString AndAlso weapon.Type = WeaponType.Heavy)
-                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso Not _selectedWeapon.Equals(CurrentUser.LightWeapon)
+                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso _selectedWeapon <> CurrentUser.LightWeapon
                 ElseIf CmbTwoH.Checked Then
                     _selectedWeapon = AllWeapons.Find(Function(weapon) weapon.Name = LstWeapons.SelectedItem.ToString AndAlso weapon.Type = WeaponType.TwoHanded)
-                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso Not _selectedWeapon.Equals(CurrentUser.LightWeapon)
+                    BtnPurchase.Enabled = _selectedWeapon.Value <= CurrentUser.GoldOnHand AndAlso _selectedWeapon <> CurrentUser.LightWeapon
                 End If
                 BtnClear.Enabled = True
 

@@ -169,7 +169,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TransferKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTransfer1.KeyPress, TxtTransfer2.KeyPress, TxtTransfer3.KeyPress, TxtTransfer4.KeyPress, TxtTransfer5.KeyPress, TxtTransferGold.KeyPress
-            e.Handled = Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub TxtTransfer1_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer1.TextChanged

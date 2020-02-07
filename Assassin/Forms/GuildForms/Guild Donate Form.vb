@@ -173,7 +173,7 @@ Namespace Forms.GuildForms
 #Region "Form Manipulation"
 
         Private Sub DonateKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDonate1.KeyPress, TxtDonate2.KeyPress, TxtDonate3.KeyPress, TxtDonate4.KeyPress, TxtDonate5.KeyPress, TxtDonateGold.KeyPress
-            e.Handled = Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub TxtDonate1_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate1.TextChanged

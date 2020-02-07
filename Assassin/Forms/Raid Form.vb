@@ -256,7 +256,7 @@ Namespace Forms
         End Sub
 
         Private Sub HenchKeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtHenchmenLevel1.KeyPress, TxtHenchmenLevel2.KeyPress, TxtHenchmenLevel3.KeyPress, TxtHenchmenLevel4.KeyPress, TxtHenchmenLevel5.KeyPress
-            e.Handled = Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub CmbRaid_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbRaid.SelectedIndexChanged

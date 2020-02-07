@@ -59,7 +59,7 @@ Namespace Forms
 #Region "Form Management"
 
         Private Sub TxtOldPswd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtOldPswd.KeyPress, TxtNewPswd.KeyPress, TxtConfPswd.KeyPress
-            e.Handled = Not Char.IsLetterOrDigit(e.KeyChar) AndAlso Not e.KeyChar Like Chr(8)
+            e.Handled = Not (Char.IsLetterOrDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
         Private Sub PswdTextChanged(sender As Object, e As EventArgs) Handles TxtOldPswd.TextChanged, TxtNewPswd.TextChanged, TxtConfPswd.TextChanged
