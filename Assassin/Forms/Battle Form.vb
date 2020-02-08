@@ -99,6 +99,9 @@ Namespace Forms
             If plrDamage > eneDefend Then
                 AddText($"You attack your opponent for {plrDamage} damage, but their armor absorbs {eneDefend} damage.")
                 CurrentEnemy.CurrentEndurance -= plrDamage - eneDefend
+                If CurrentEnemy.CurrentEndurance < 0 Then
+                    CurrentEnemy.CurrentEndurance = 0
+                End If
             Else
                 AddText($"You attacks you for {plrDamage} damage, but their armor absorbs all of it.")
             End If
@@ -201,7 +204,8 @@ Namespace Forms
         ''' <summary>The Player loses the battle.</summary>
         Private Sub LoseBattle()
             AddText("You have been slain by your opponent!")
-            CurrentUser.CurrentEndurance = 1
+            CurrentUser.CurrentEndurance = 0
+            CurrentUser.Alive = False
 
             ToggleButtons(False)
             BtnExit.Enabled = True
@@ -534,15 +538,18 @@ Namespace Forms
 #End Region
 
         Private Async Sub FrmBattle_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            If _blnDone = False Then 'don't close the form
+            If _blnDone = False Then
                 e.Cancel = True
                 MessageBox.Show("You must flee or finish the battle first.", "Assassin", MessageBoxButtons.OK)
-            Else                    'close the form
+            Else
                 Await SaveUser(CurrentUser)
                 If BlnJob = False Then
                     FrmGame.Show()
                     FrmGame.Display()
                     FrmGame.AddText(TxtBattle.Text)
+                    If Not CurrentUser.Alive Then
+                        FrmGame.Awaken()
+                    End If
                 Else
                     FrmJobs.Show()
                     FrmJobs.AddText(TxtBattle.Text)

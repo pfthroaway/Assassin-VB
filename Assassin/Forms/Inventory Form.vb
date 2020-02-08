@@ -24,9 +24,9 @@ Namespace Forms
             LblPotion.Text = CurrentUser.Potion.Name
             LblLockpicks.Text = CurrentUser.Lockpicks.ToString
 
-            BtnLight.Enabled = CurrentUser.CurrentWeaponType = WeaponType.Light
-            BtnHeavy.Enabled = CurrentUser.CurrentWeaponType = WeaponType.Heavy
-            BtnTwoH.Enabled = CurrentUser.CurrentWeaponType = WeaponType.TwoHanded
+            BtnLight.Enabled = CurrentUser.CurrentWeaponType <> WeaponType.Light
+            BtnHeavy.Enabled = CurrentUser.CurrentWeaponType <> WeaponType.Heavy
+            BtnTwoH.Enabled = CurrentUser.CurrentWeaponType <> WeaponType.TwoHanded
         End Sub
 
 #Region "Click"

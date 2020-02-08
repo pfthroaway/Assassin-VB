@@ -153,7 +153,7 @@ Namespace Forms
                 Else
                     Dim newUser As New User With {
                         .Name = username,
-                        .Password = Argon2.HashPassword(TxtPass.Text),
+                        .Password = PBKDF2.HashPassword(TxtPass.Text),
                         .CurrentEndurance = _maxEnd,
                         .MaximumEndurance = _maxEnd,
                         .LightWeaponSkill = _light,

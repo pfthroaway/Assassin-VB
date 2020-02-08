@@ -339,7 +339,7 @@ Namespace Forms.Admin
         '                    If _blnNewUser = False Then                                                  'if changing a current user
         '                        If TxtChangePass.TextLength > 0 OrElse TxtConfPass.TextLength > 0 Then  'if changing password
         '                            If TxtChangePass.Text = TxtConfPass.Text Then                       'if passwords are the same
-        '                                hashPw = Argon2.HashPassword(txtChangePass.Text)
+        '                                hashPw = PBKDF2.HashPassword(txtChangePass.Text)
         '                                CurrentUser.Password = ""
         '                                CurrentUser.Password = hashPw
         '                            Else                                                                'if passwords don't match
@@ -482,7 +482,7 @@ Namespace Forms.Admin
         '                        Exit Sub
         '                    Else
         '                        CurrentUser.Name = TxtName.Text                            'save username
-        '                        CurrentUser.Password = Argon2.HashPassword(txtChangePass.Text)   'save password
+        '                        CurrentUser.Password = PBKDF2.HashPassword(txtChangePass.Text)   'save password
 
         '                        SaveUser()      'save user to DataSet
         '                        Await MemberJoinsGuild(CurrentUser, AllGuilds(0))

@@ -22,7 +22,7 @@ Namespace Forms
         ''' <returns>True if successful login</returns>
         Private Function CheckLogin() As Boolean
             Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
-            If NewUser <> New User AndAlso Argon2.ValidatePassword(NewUser.Password, TxtPswd.Text) Then
+            If NewUser <> New User AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
                 CurrentUser = NewUser
                 Return True
             End If

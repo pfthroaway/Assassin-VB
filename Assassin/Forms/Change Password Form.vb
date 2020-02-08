@@ -28,9 +28,9 @@ Namespace Forms
             If Not TxtOldPswd.Text = TxtNewPswd.Text Then
 
                 If TxtNewPswd.Text = TxtConfPswd.Text Then  'if passwords match
-                    Dim newPass As String = Argon2.HashPassword(TxtNewPswd.Text)
+                    Dim newPass As String = PBKDF2.HashPassword(TxtNewPswd.Text)
                     If BlnAdmin = False Then
-                        If Argon2.ValidatePassword(CurrentUser.Password, TxtOldPswd.Text) Then
+                        If PBKDF2.ValidatePassword(TxtOldPswd.Text, CurrentUser.Password) Then
                             CurrentUser.Password = newPass
                             Await SaveUser(CurrentUser)
                             MessageBox.Show("Password successfully changed.", "Assassin", MessageBoxButtons.OK)
@@ -39,7 +39,7 @@ Namespace Forms
                             MessageBox.Show("Please enter the correct current password.", "Assassin", MessageBoxButtons.OK)
                         End If
                     Else
-                        If Argon2.ValidatePassword(AdminPassword, TxtOldPswd.Text) Then
+                        If PBKDF2.ValidatePassword(TxtOldPswd.Text, AdminPassword) Then
                             If Await ChangeAdminPassword(newPass) Then
                                 MessageBox.Show("Password successfully changed.", "Assassin", MessageBoxButtons.OK)
                                 Close()

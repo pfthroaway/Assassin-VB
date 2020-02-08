@@ -32,17 +32,17 @@ Namespace Forms
                 Select Case CurrentUser.CurrentLocation
                     Case SleepLocation.Streets
                         Dim loseEnd As Integer = Functions.GenerateRandomNumber(1, 5)
-                        TxtGame.Text = $"You awaken on the streets. After a rough night sleeping on the ground, you have lost {loseEnd} Endurance."
+                        AddText($"You awaken on the streets. After a rough night sleeping on the ground, you have lost {loseEnd} Endurance.")
                         CurrentUser.CurrentEndurance -= loseEnd
                         If CurrentUser.CurrentEndurance < 1 Then CurrentUser.CurrentEndurance = 1
                     Case SleepLocation.Jail
                         CheckJailed()
                         Exit Sub
                     Case SleepLocation.Inn
-                        TxtGame.Text = "You awaken in the inn. You feel refreshed. You exit to the streets."
+                        AddText("You awaken in the inn. You feel refreshed. You exit to the streets.")
                         CurrentUser.CurrentEndurance += 10
                     Case SleepLocation.Guild
-                        TxtGame.Text = "You awaken in the guild. You exit to the streets."
+                        AddText("You awaken in the guild. You exit to the streets.")
                 End Select
             Else
                 TxtGame.Text = "You were slain. You have been resurrected by the gods."
