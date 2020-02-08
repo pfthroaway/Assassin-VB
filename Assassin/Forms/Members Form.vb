@@ -28,7 +28,7 @@ Namespace Forms
         End Sub
 
         ''' <summary>Loads members of the current <see cref="Guild"/>.</summary>
-        Public Function LoadMembers() As Task
+        Public Sub LoadMembers()
             LstMembers.Items.Clear()
 
             If loc = "Manage" OrElse loc = "Guild" Then
@@ -48,7 +48,7 @@ Namespace Forms
                     LstMembers.Items.Add(user.Name)
                 Next
             End If
-        End Function
+        End Sub
 
         Private Sub BtnAttack_Click(sender As Object, e As EventArgs) Handles BtnAttack.Click
             MessageBox.Show("This feature is currently unavailable.", "Assassin", MessageBoxButtons.OK)
