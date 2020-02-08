@@ -1,4 +1,6 @@
-﻿Namespace Classes.Items
+﻿Imports Assassin.Classes.Entities
+
+Namespace Classes.Items
 
     ''' <summary>Represents a <see cref="Potion"/> that can be consumed to heal a <see cref="LivingEntity"/>.</summary>
     Public Class Potion

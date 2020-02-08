@@ -284,13 +284,9 @@ Namespace Forms.Admin
         '        End If
         '    End Sub
 
-        '    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-        '        '* * * * *
-        '        '* This method closes the form on clicking the Exit button.
-        '        '* * * * *
-
-        '        Me.Close()
-        '    End Sub
+        Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
+            Me.Close()
+        End Sub
 
         '    Private Async Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
         '        ''* * * * *

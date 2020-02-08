@@ -556,13 +556,9 @@ Namespace Forms.Admin
         '            End If
         '        End Sub
 
-        '        Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-        '            '* * * * *
-        '            '* This method closes the form on clicking the Exit button.
-        '            '* * * * *
-
-        '            Me.Close()
-        '        End Sub
+        Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
+            Me.Close()
+        End Sub
 
         '        Private Sub BtnNewUser_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtnNewUser.Click
         '            '    '* * * * *
@@ -767,13 +763,9 @@ Namespace Forms.Admin
         '            LoadAdmin()
         '        End Sub
 
-        '        Private Sub FrmAdmin_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
-        '            '* * * * *
-        '            '* This method shows the main form on form closing.
-        '            '* * * * *
-
-        '            FrmAdmin.Show()
-        '        End Sub
+        Private Sub FrmAdmin_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+            FrmAdmin.Show()
+        End Sub
 
     End Class
 
