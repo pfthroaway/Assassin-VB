@@ -9,6 +9,7 @@ Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums
 Imports Assassin.Forms.GuildForms
 Imports Assassin.Forms.Shopping
@@ -95,9 +96,9 @@ Namespace Forms
             LblWeaponName.Text = CurrentUser.CurrentWeapon.Name
             LblArmorName.Text = CurrentUser.Armor.Name
             LblPotion.Text = CurrentUser.Potion.Name
-            LblGoldHandAmt.Text = CurrentUser.GoldOnHand.ToString("N0")
-            LblGoldBankAmt.Text = CurrentUser.GoldInBank.ToString("N0")
-            LblGoldLoanAmt.Text = CurrentUser.GoldOnLoan.ToString("N0")
+            LblGoldHandAmt.Text = CurrentUser.GoldOnHandToString
+            LblGoldBankAmt.Text = CurrentUser.GoldInBankToString
+            LblGoldLoanAmt.Text = CurrentUser.GoldOnLoanToString
 
             LblLightAmt.Text = CurrentUser.LightWeaponSkillToString
             LblHeavyAmt.Text = CurrentUser.HeavyWeaponSkillToString
@@ -149,7 +150,7 @@ Namespace Forms
         End Sub
 
         Private Async Sub BtnChapel_Click(sender As Object, e As EventArgs) Handles BtnChapel.Click
-            If CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2) Then 'if user has less than 20% health, the priest will heal them
+            If CurrentUser.EnduranceRatio <= 0.2 Then 'if user has less than 20% health, the priest will heal them
                 AddText("The priest welcomes you into his chapel. He sees your grievous injuries and blesses you. You have been healed!")
                 CurrentUser.CurrentEndurance = CurrentUser.MaximumEndurance
                 Display()
@@ -165,7 +166,7 @@ Namespace Forms
 
         Private Sub BtnGuild_Click(sender As Object, e As EventArgs) Handles BtnGuild.Click
             FrmGuildList.Show()
-            FrmGuildList.LblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
+            FrmGuildList.LblGoldOnHand.Text = CurrentUser.GoldOnHandToString
             Hide()
         End Sub
 

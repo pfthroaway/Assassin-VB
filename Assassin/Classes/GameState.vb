@@ -44,130 +44,139 @@ Namespace Classes
 
         ''' <summary>Generates an enemy based on a player's current level.</summary>
         Public Sub GetEnemy()
-            Dim enemyNum As Integer = 0
+            Dim level As Integer = 0
             Dim enemy As Integer = Functions.GenerateRandomNumber(1, 100)
             Select Case CurrentUser.Level
                 Case 1, 2
                     Select Case enemy
                         Case 1 To 55        '55%
-                            enemyNum = 1
+                            level = 1
                         Case 56 To 95       '40%
-                            enemyNum = 2
+                            level = 2
                         Case 96 To 98       '3%
-                            enemyNum = 3
+                            level = 3
                         Case 99 To 100      '2%
-                            enemyNum = 4
+                            level = 4
                     End Select
                 Case 3, 4
                     Select Case enemy
                         Case 1 To 12        '12%
-                            enemyNum = 1
+                            level = 1
                         Case 13 To 24       '12%
-                            enemyNum = 2
+                            level = 2
                         Case 25 To 50       '26%
-                            enemyNum = 3
+                            level = 3
                         Case 51 To 76       '26%
-                            enemyNum = 4
+                            level = 4
                         Case 77 To 88       '12%
-                            enemyNum = 5
+                            level = 5
                         Case 89 To 100      '12%
-                            enemyNum = 6
+                            level = 6
                     End Select
                 Case 5, 6
                     Select Case enemy
                         Case 1 To 6         '6%
-                            enemyNum = 1
+                            level = 1
                         Case 7 To 12        '6%
-                            enemyNum = 2
+                            level = 2
                         Case 13 To 24       '12%
-                            enemyNum = 3
+                            level = 3
                         Case 25 To 36       '12%
-                            enemyNum = 4
+                            level = 4
                         Case 37 To 50       '14%
-                            enemyNum = 5
+                            level = 5
                         Case 51 To 64       '14%
-                            enemyNum = 6
+                            level = 6
                         Case 65 To 76       '12%
-                            enemyNum = 7
+                            level = 7
                         Case 77 To 88       '12%
-                            enemyNum = 8
+                            level = 8
                         Case 89 To 94       '6%
-                            enemyNum = 9
+                            level = 9
                         Case 95 To 100      '6%
-                            enemyNum = 10
+                            level = 10
                     End Select
                 Case 7, 8
                     Select Case enemy
                         Case 1 To 4         '4%
-                            enemyNum = 1
+                            level = 1
                         Case 5 To 8         '4%
-                            enemyNum = 2
+                            level = 2
                         Case 9 To 16        '8%
-                            enemyNum = 3
+                            level = 3
                         Case 17 To 24       '8%
-                            enemyNum = 4
+                            level = 4
                         Case 25 To 36       '12%
-                            enemyNum = 5
+                            level = 5
                         Case 37 To 48       '12%
-                            enemyNum = 6
+                            level = 6
                         Case 49 To 64       '16%
-                            enemyNum = 7
+                            level = 7
                         Case 65 To 80       '16%
-                            enemyNum = 8
+                            level = 8
                         Case 81 To 90       '10%
-                            enemyNum = 9
+                            level = 9
                         Case 91 To 100      '10%
-                            enemyNum = 10
+                            level = 10
                     End Select
                 Case 9, 10
                     Select Case enemy
                         Case 1 To 4         '4%
-                            enemyNum = 1
+                            level = 1
                         Case 5 To 8         '4%
-                            enemyNum = 2
+                            level = 2
                         Case 9 To 14        '6%
-                            enemyNum = 3
+                            level = 3
                         Case 15 To 20       '6%
-                            enemyNum = 4
+                            level = 4
                         Case 21 To 30       '10%
-                            enemyNum = 5
+                            level = 5
                         Case 31 To 40       '10%
-                            enemyNum = 6
+                            level = 6
                         Case 41 To 52       '12%
-                            enemyNum = 7
+                            level = 7
                         Case 53 To 64       '12%
-                            enemyNum = 8
+                            level = 8
                         Case 65 To 82       '18%
-                            enemyNum = 9
+                            level = 9
                         Case 83 To 100      '18%
-                            enemyNum = 10
+                            level = 10
                     End Select
                 Case 11
                     Select Case enemy
                         Case 1 To 4         '4%
-                            enemyNum = 1
+                            level = 1
                         Case 4 To 8         '4%
-                            enemyNum = 2
+                            level = 2
                         Case 9 To 12        '4%
-                            enemyNum = 3
+                            level = 3
                         Case 13 To 16       '4%
-                            enemyNum = 4
+                            level = 4
                         Case 17 To 24       '8%
-                            enemyNum = 5
+                            level = 5
                         Case 25 To 32       '8%
-                            enemyNum = 6
+                            level = 6
                         Case 33 To 44       '12%
-                            enemyNum = 7
+                            level = 7
                         Case 45 To 56       '12%
-                            enemyNum = 8
+                            level = 8
                         Case 57 To 78       '22%
-                            enemyNum = 9
+                            level = 9
                         Case 79 To 100      '22%
-                            enemyNum = 10
+                            level = 10
                     End Select
             End Select
 
-            CurrentEnemy = New Enemy(AllEnemies(enemyNum - 1))
+            Dim availableEnemies As List(Of Enemy) = AllEnemies.Where(Function(availEnemy) availEnemy.Level = level).ToList()
+            If availableEnemies.Count = 0 Then
+                Dim counter As Integer = 1
+                While availableEnemies.Count = 0
+                    availableEnemies = AllEnemies.Where(Function(availEnemy) level - counter >= availEnemy.Level AndAlso availEnemy.Level <= level + counter).ToList()
+                    counter += 1
+                End While
+            End If
+            CurrentEnemy = New Enemy(availableEnemies(Functions.GenerateRandomNumber(0, availableEnemies.Count - 1)))
+            CurrentEnemy.GoldOnHand = Functions.GenerateRandomNumber(CurrentEnemy.GoldOnHand \ 2, CurrentEnemy.GoldOnHand)
         End Sub
 
         ''' <summary>Gets the hunger of a user and returns it as a String.</summary>
@@ -261,7 +270,7 @@ Namespace Classes
             AllDrinks = AllDrinks.OrderBy(Function(obj) obj.Value).ToList()
             AllPotions = AllPotions.OrderBy(Function(obj) obj.Value).ToList()
             AllWeapons = AllWeapons.OrderBy(Function(obj) obj.Value).ToList()
-            AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level).ToList()
+            AllEnemies = AllEnemies.OrderBy(Function(obj) obj.Level).ThenBy(Function(enemy) enemy.Name).ToList()
         End Function
 
 #End Region
@@ -306,25 +315,6 @@ Namespace Classes
         ''' <returns>True if successful</returns>
         Public Async Function SaveUser(userSave As User, newName As String) As Task(Of Boolean)
             Return Await DatabaseInteraction.SaveUser(userSave, newName)
-        End Function
-
-#End Region
-
-#Region "Enemy Management"
-
-        ''' <summary>Saves an Enemy to the database.</summary>
-        ''' <param name="enemySave">Enemy to be saved</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SaveEnemy(enemySave As Enemy) As Task(Of Boolean)
-            Return Await DatabaseInteraction.SaveEnemy(enemySave)
-        End Function
-
-        ''' <summary>Changes an Enemy's name and then saves the Enemy to the database.</summary>
-        ''' <param name="enemySave">Enemy to be saved</param>
-        ''' <param name="newName">New name for Enemy</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SaveEnemy(enemySave As Enemy, newName As String) As Task(Of Boolean)
-            Return Await DatabaseInteraction.SaveEnemy(enemySave, newName)
         End Function
 
 #End Region

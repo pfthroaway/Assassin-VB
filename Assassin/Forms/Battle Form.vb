@@ -218,21 +218,20 @@ Namespace Forms
             If CurrentUser.Experience < 100 Then 'if player can get more experience
                 Dim exp As Integer = CurrentEnemy.Level + 1 - CurrentUser.Level
                 If exp > 0 Then
-                    CurrentUser.GainExperience(exp)
+                    AddText(CurrentUser.GainExperience(exp))
                 End If
             End If
 
             CurrentUser.SkillPoints += 1
             AddText("You have earned a skill point from this battle.")
 
-            Dim gold As Integer = Functions.GenerateRandomNumber(CurrentEnemy.GoldOnHand \ 2, CurrentEnemy.MaximumEndurance)
-            CurrentUser.GoldOnHand += gold
-            AddText($"You frisk your opponent's body and find {gold} gold.")
+            CurrentUser.GoldOnHand += CurrentEnemy.GoldOnHand
+            AddText($"You frisk your opponent's body and find {CurrentEnemy.GoldOnHand} gold.")
 
             ToggleButtons(False)
             BtnDefend.Enabled = False
             BtnExit.Enabled = True
-            _blnDone = True 'allow form to close
+            _blnDone = True
             _blnWin = True
 
             Await SaveUser(CurrentUser)

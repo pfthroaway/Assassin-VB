@@ -59,7 +59,7 @@ Namespace Forms.GuildForms
             TxtHenchmenLevel3.Text = CurrentUser.HenchmenLevel3.ToString("N0")
             TxtHenchmenLevel4.Text = CurrentUser.HenchmenLevel4.ToString("N0")
             TxtHenchmenLevel5.Text = CurrentUser.HenchmenLevel5.ToString("N0")
-            TxtGold.Text = CurrentUser.GoldOnHand.ToString("N0")
+            TxtGold.Text = CurrentUser.GoldOnHandToString
 
             TxtDonate1.Enabled = CurrentUser.HenchmenLevel1 > 0
             TxtDonate2.Enabled = CurrentUser.HenchmenLevel2 > 0

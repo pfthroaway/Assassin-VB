@@ -6,6 +6,7 @@
 ' Description     : This form conducts the court activities after a player has been apprehended.
 
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums
 Imports Extensions
 
@@ -28,7 +29,7 @@ Namespace Forms
         ''' <summary>Displays text from the Arraylist.</summary>
         Public Sub Display()
             If _index < _arrText.Count Then
-                AddText(_arrText(_index))
+                AddText(_arrText(_index).ToString())
                 _index += 1
                 If _index = _arrText.Count Then
                     Timer1.Stop()

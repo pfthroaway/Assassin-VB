@@ -186,13 +186,6 @@ Namespace Classes.Entities
             End Get
         End Property
 
-        ''' <summary>Gold the <see cref="User"/> has on hand, formatted.</summary>
-        Public ReadOnly Property GoldOnHandToString As String
-            Get
-                Return GoldOnHand.ToString("N0")
-            End Get
-        End Property
-
         ''' <summary>The amount of gold the <see cref="User"/> can receive as a loan.</summary>
         Public ReadOnly Property LoanAvailable As Integer
             Get

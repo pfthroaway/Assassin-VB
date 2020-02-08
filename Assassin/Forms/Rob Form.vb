@@ -10,6 +10,7 @@ Option Explicit On
 
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
+Imports Assassin.Classes.Enums
 Imports Extensions
 
 Namespace Forms

@@ -46,7 +46,7 @@ Namespace Forms
             TxtName.Focus()
         End Sub
 
-        ''' <summary>displays all stats.</summary>
+        ''' <summary>Displays all stats.</summary>
         Private Sub Display()
             LblEndCurr.Text = _maxEnd.ToString + "%"
             LblLightCurr.Text = _light.ToString + "%"
@@ -130,7 +130,7 @@ Namespace Forms
 
         Private Sub BtnBlockMinus_Click(sender As Object, e As EventArgs) Handles BtnBlockMinus.Click
             BtnMinus(_blocking)
-            If _blocking = 10 Then BtnBlockMinus.Enabled = False
+            BtnBlockMinus.Enabled = _blocking <> 10
             Display()
         End Sub
 
@@ -172,10 +172,10 @@ Namespace Forms
                     FrmGame.Display()
                     _blnStart = True
                     Close()
-                End If  'end user exists
-            Else        'if passwords don't match
+                End If
+            Else
                 MessageBox.Show("Passwords don't match.", "Assassin", MessageBoxButtons.OK)
-            End If 'end password match
+            End If
         End Sub
 
         Private Sub BtnEndMinus_Click(sender As Object, e As EventArgs) Handles BtnEndMinus.Click
@@ -199,7 +199,7 @@ Namespace Forms
 
         Private Sub BtnHeavyMinus_Click(sender As Object, e As EventArgs) Handles BtnHeavyMinus.Click
             BtnMinus(_heavy)
-            If _heavy = 10 Then BtnHeavyMinus.Enabled = False
+            BtnHeavyMinus.Enabled = _heavy <> 10
             Display()
         End Sub
 
@@ -211,7 +211,7 @@ Namespace Forms
 
         Private Sub BtnLightMinus_Click(sender As Object, e As EventArgs) Handles BtnLightMinus.Click
             BtnMinus(_light)
-            If _light = 10 Then BtnLightMinus.Enabled = False
+            BtnLightMinus.Enabled = _light <> 10
             Display()
         End Sub
 
@@ -223,7 +223,7 @@ Namespace Forms
 
         Private Sub BtnSlippingMinus_Click(sender As Object, e As EventArgs) Handles BtnSlippingMinus.Click
             BtnMinus(_slipping)
-            If _slipping = 10 Then BtnSlippingMinus.Enabled = False
+            BtnSlippingMinus.Enabled = _slipping <> 10
             Display()
         End Sub
 
@@ -235,7 +235,7 @@ Namespace Forms
 
         Private Sub BtnStealthMinus_Click(sender As Object, e As EventArgs) Handles BtnStealthMinus.Click
             BtnMinus(_stealth)
-            If _stealth = 10 Then BtnStealthMinus.Enabled = False
+            BtnStealthMinus.Enabled = _stealth <> 10
             Display()
         End Sub
 
@@ -247,7 +247,7 @@ Namespace Forms
 
         Private Sub BtnTwoMinus_Click(sender As Object, e As EventArgs) Handles BtnTwoMinus.Click
             BtnMinus(_twoH)
-            If _twoH = 10 Then BtnTwoMinus.Enabled = False
+            BtnTwoMinus.Enabled = _twoH <> 10
             Display()
         End Sub
 
@@ -267,13 +267,8 @@ Namespace Forms
         End Sub
 
         Private Sub TextChange(sender As Object, e As EventArgs) Handles TxtName.TextChanged, TxtPass.TextChanged, TxtConfirm.TextChanged
-            If TxtName.TextLength > 0 OrElse TxtPass.TextLength > 0 OrElse TxtConfirm.TextLength > 0 Then
-                BtnClear.Enabled = True
-            End If
-
-            If TxtName.TextLength > 0 AndAlso TxtPass.TextLength > 0 AndAlso TxtConfirm.TextLength > 0 AndAlso _skillPts = 0 Then
-                BtnCreate.Enabled = True
-            End If
+            BtnClear.Enabled = TxtName.TextLength > 0 OrElse TxtPass.TextLength > 0 OrElse TxtConfirm.TextLength > 0
+            BtnCreate.Enabled = TxtName.TextLength > 0 AndAlso TxtPass.TextLength > 0 AndAlso TxtConfirm.TextLength > 0 AndAlso _skillPts = 0
         End Sub
 
         Private Sub FrmNewUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

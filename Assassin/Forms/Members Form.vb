@@ -51,7 +51,7 @@ Namespace Forms
         End Function
 
         Private Sub BtnAttack_Click(sender As Object, e As EventArgs) Handles BtnAttack.Click
-            MessageBox.Show("This feature is currently unavailable.")
+            MessageBox.Show("This feature is currently unavailable.", "Assassin", MessageBoxButtons.OK)
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
@@ -60,7 +60,7 @@ Namespace Forms
 
         Private Async Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
             If Await MemberLeavesGuild(selectedUser, CurrentGuild) Then
-                MessageBox.Show($"{selectedUser.Name} has been expelled from {CurrentGuild.Name}.")
+                MessageBox.Show($"{selectedUser.Name} has been expelled from {CurrentGuild.Name}.", "Assassin", MessageBoxButtons.OK)
             End If
         End Sub
 

@@ -65,7 +65,7 @@ Namespace Forms.GuildForms
             TxtCurrent3.Text = CurrentUser.HenchmenLevel3.ToString("N0")
             TxtCurrent4.Text = CurrentUser.HenchmenLevel4.ToString("N0")
             TxtCurrent5.Text = CurrentUser.HenchmenLevel5.ToString("N0")
-            TxtCurrentGold.Text = CurrentUser.GoldOnHand.ToString("N0")
+            TxtCurrentGold.Text = CurrentUser.GoldOnHandToString
 
             CheckTransfer()
         End Sub

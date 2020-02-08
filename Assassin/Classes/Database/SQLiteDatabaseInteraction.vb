@@ -37,6 +37,180 @@ Namespace Classes.Database
             Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
 
+#Region "Enemy Management"
+
+        ''' <summary>Deletes an <see cref="Enemy"/> from the database.</summary>
+        ''' <param name="enemyDelete"><see cref="Enemy"/> to be deleted from the database</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteEnemy(enemyDelete As Enemy) As Task(Of Boolean) Implements IDatabaseInteraction.DeleteEnemy
+            Dim cmd As New SQLiteCommand With {.CommandText = "DELETE FROM Enemies WHERE [EnemyName] = @name"}
+            cmd.Parameters.AddWithValue("@name", enemyDelete.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Adds a new <see cref="Enemy"/> to the database.</summary>
+        ''' <param name="enemyNew"><see cref="Enemy"/> to be added to the database</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function NewEnemy(enemyNew As Enemy) As Task(Of Boolean) Implements IDatabaseInteraction.NewEnemy
+            Dim cmd As New SQLiteCommand With {.CommandText = "INSERT INTO Enemies([EnemyName], [Level], [Endurance], [Weapon], [Armor], [Gold], [WeaponSkill], [Blocking], [Slipping])VALUES(@name, @level, @endurance, @weapon, @armor, @gold, @weaponSkill, @blocking, @slipping)"}
+
+            cmd.Parameters.AddWithValue("@name", enemyNew.Name)
+            cmd.Parameters.AddWithValue("@level", enemyNew.Level)
+            cmd.Parameters.AddWithValue("@endurance", enemyNew.MaximumEndurance)
+            cmd.Parameters.AddWithValue("@weapon", enemyNew.Weapon.Name)
+            cmd.Parameters.AddWithValue("@armor", enemyNew.Armor.Name)
+            cmd.Parameters.AddWithValue("@gold", enemyNew.GoldOnHand)
+            cmd.Parameters.AddWithValue("@weaponSkill", enemyNew.WeaponSkill)
+            cmd.Parameters.AddWithValue("@blocking", enemyNew.Blocking)
+            cmd.Parameters.AddWithValue("@slipping", enemyNew.Slipping)
+
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Saves an <see cref="Enemy"/> to the database.</summary>
+        ''' <param name="oldEnemy">Enemy to be replaced</param>
+        ''' <param name="newEnemy">Enemy to be saved</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function SaveEnemy(newEnemy As Enemy, oldEnemy As Enemy) As Task(Of Boolean) Implements IDatabaseInteraction.SaveEnemy
+            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Enemies SET [EnemyName] = @name, [Level] = @level, [Endurance] = @endurance, [Weapon] = @weapon, [Armor] = @armor, [Gold] = @gold, [WeaponSkill] = @weaponSkill, [Blocking] = @blocking, [Slipping] = @slipping WHERE [EnemyName] = @oldName"}
+
+            cmd.Parameters.AddWithValue("@name", newEnemy.Name)
+            cmd.Parameters.AddWithValue("@level", newEnemy.Level)
+            cmd.Parameters.AddWithValue("@endurance", newEnemy.MaximumEndurance)
+            cmd.Parameters.AddWithValue("@weapon", newEnemy.Weapon.Name)
+            cmd.Parameters.AddWithValue("@armor", newEnemy.Armor.Name)
+            cmd.Parameters.AddWithValue("@gold", newEnemy.GoldOnHand)
+            cmd.Parameters.AddWithValue("@weaponSkill", newEnemy.WeaponSkill)
+            cmd.Parameters.AddWithValue("@blocking", newEnemy.Blocking)
+            cmd.Parameters.AddWithValue("@slipping", newEnemy.Slipping)
+            cmd.Parameters.AddWithValue("@oldName", oldEnemy.Name)
+
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+#End Region
+
+#Region "Guild Management"
+
+        ''' <summary><see cref="User"/> applies for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="joinUser"><see cref="User"/> applying to join the <see cref="Guild"/>.</param>
+        ''' <param name="joinGuild"><see cref="Guild"/> being applied to</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.ApplyToGuild
+            Dim guildID As String = $"Guild{joinGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Applications([Username], [Guild])VALUES(@name, @guild)"}
+            cmd.Parameters.AddWithValue("@name", joinUser.Name)
+            cmd.Parameters.AddWithValue("@guild", joinGuild.ID)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
+        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
+            Return Await DeleteGuildApplication(approveUser, approveGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), approveGuild.Name, approveUser.Name, $"Your application to join the {approveGuild.Name.Replace("'", "''")} guild has been approved. Welcome!", Now, True)) AndAlso Await MemberJoinsGuild(approveUser, approveGuild)
+        End Function
+
+        ''' <summary>Deletes a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
+        ''' <param name="deleteUser"><see cref="User"/> whose application is deleted</param>
+        ''' <param name="deleteGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was deleted</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteGuildApplication(deleteUser As User, deleteGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.DeleteGuildApplication
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Applications WHERE [Username] = @name AND [Guild] = @guild"}
+            cmd.Parameters.AddWithValue("@name", deleteUser.Name)
+            cmd.Parameters.AddWithValue("@guild", deleteGuild.ID)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Denies a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
+        ''' <param name="denyUser"><see cref="User"/> whose application is denied</param>
+        ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.DenyGuildApplication
+            Return Await DeleteGuildApplication(denyUser, denyGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), denyGuild.Name, denyUser.Name, $"Your application to join the {CurrentGuild.Name.Replace("'", "''")} guild has been denied.", Now, True))
+        End Function
+
+        ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
+        ''' <param name="checkUser"><see cref="User"/> to check if has applied to the <see cref="Guild"/>.</param>
+        ''' <param name="checkGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if has applied</returns>
+        Public Async Function HasAppliedToGuild(checkUser As User, checkGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.HasAppliedToGuild
+            Dim guildID As String = $"Guild{checkGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"SELECT * FROM {guildID} Where [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", checkUser.Name)
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, cmd)
+            Return ds.Tables(0).Rows.Count > 0
+        End Function
+
+        ''' <summary>Member of a <see cref="Guild"/> gains membership with that <see cref="Guild"/>, applied to database.</summary>
+        ''' <param name="joinUser"><see cref="User"/> joining the <see cref="Guild"/>.</param>
+        ''' <param name="joinGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.MemberJoinsGuild
+            Dim guildID As String = $"Guild{joinGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO {guildID}([Username])VALUES(@name)"}
+            cmd.Parameters.AddWithValue("@name", joinUser.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Member of a <see cref="Guild"/> terminates membership with that <see cref="Guild"/>, applied to database.</summary>
+        ''' <param name="leaveUser"><see cref="User"/> leaving the <see cref="Guild"/>.</param>
+        ''' <param name="leaveGuild"><see cref="Guild"/> being left</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function MemberLeavesGuild(leaveUser As User, leaveGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.MemberLeavesGuild
+            Dim guildID As String = $"Guild{leaveGuild.ID}Members"
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM {guildID} WHERE [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", leaveUser.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Saves a <see cref="Guild"/>.</summary>
+        ''' <param name="guildSave"><see cref="Guild"/> to be saved</param>
+        Public Async Function SaveGuild(guildSave As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.SaveGuild
+            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Guilds SET [GuildName] = @guildName, [Guildmaster] = @guildmaster, [GuildFee] = @guildFee, [GuildGold] = @guildGold, [HenchmenLevel1] = @henchmenLevel1, [HenchmenLevel2] = @henchmenLevel2, [HenchmenLevel3] = @henchmenLevel3, [HenchmenLevel4] = @henchmenLevel4, [HenchmenLevel5] = @henchmenLevel5 WHERE [ID] = @id"}
+
+            cmd.Parameters.AddWithValue("@guildName", guildSave.Name)
+            cmd.Parameters.AddWithValue("@guildmaster", guildSave.Master)
+            cmd.Parameters.AddWithValue("@guildFee", guildSave.Fee)
+            cmd.Parameters.AddWithValue("@guildGold", guildSave.Gold)
+            cmd.Parameters.AddWithValue("@henchmenLevel1", guildSave.HenchmenLevel1.ToString())
+            cmd.Parameters.AddWithValue("@henchmenLevel2", guildSave.HenchmenLevel2.ToString())
+            cmd.Parameters.AddWithValue("@henchmenLevel3", guildSave.HenchmenLevel3.ToString())
+            cmd.Parameters.AddWithValue("@henchmenLevel4", guildSave.HenchmenLevel4.ToString())
+            cmd.Parameters.AddWithValue("@henchmenLevel5", guildSave.HenchmenLevel5.ToString())
+            cmd.Parameters.AddWithValue("@id", guildSave.ID)
+
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+#End Region
+
+#Region "Jail Management"
+
+        ''' <summary>Frees a <see cref="JailedUser"/> from Jail.</summary>
+        ''' <param name="jailUser"><see cref="JailedUser"/> to be freed</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function FreeFromJail(jailUser As JailedUser) As Task(Of Boolean) Implements IDatabaseInteraction.FreeFromJail
+            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Jail WHERE [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", jailUser.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+        ''' <summary>Sends a <see cref="JailedUser"/> to Jail.</summary>
+        ''' <param name="jailUser"><see cref="JailedUser"/> to be jailed</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function SendToJail(jailUser As JailedUser) As Task(Of Boolean) Implements IDatabaseInteraction.SendToJail
+            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Jail([Username], [Reason], [Fine], [DateJailed])VALUES(@name, @reason, @fine, @dateJailed)"}
+            cmd.Parameters.AddWithValue("@name", jailUser.Name)
+            cmd.Parameters.AddWithValue("@reason", jailUser.Reason)
+            cmd.Parameters.AddWithValue("@fine", jailUser.Fine)
+            cmd.Parameters.AddWithValue("@dateJailed", jailUser.DateJailed)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
+        End Function
+
+#End Region
+
 #Region "Load"
 
         ''' <summary>Loads the Admin password from the database.</summary>
@@ -63,6 +237,22 @@ Namespace Classes.Database
                 Next
             End If
             Return allArmor
+        End Function
+
+        ''' <summary>Loads all <see cref="Drink"/>s from the database.</summary>
+        ''' <returns>All <see cref="Drink"/>s</returns>
+        Public Async Function LoadDrinks() As Task(Of List(Of Drink)) Implements IDatabaseInteraction.LoadDrinks
+            Dim allDrinks As New List(Of Drink)
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, "SELECT * FROM Drinks")
+            If ds.Tables(0).Rows.Count > 0 Then
+                For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
+                    Dim newDrink As New Drink(ds.Tables(0).Rows(i)("DrinkName").ToString(), Int32Helper.Parse(ds.Tables(0).Rows(i)("RestoreThirst")), Int32Helper.Parse(ds.Tables(0).Rows(i)("DrinkValue")))
+
+                    allDrinks.Add(newDrink)
+                Next
+            End If
+
+            Return allDrinks
         End Function
 
         ''' <summary>Loads all <see cref="Enemy"/>s from the database.</summary>
@@ -92,6 +282,22 @@ Namespace Classes.Database
             Return allEnemies
         End Function
 
+        ''' <summary>Loads all <see cref="Food"/> from the database.</summary>
+        ''' <returns>All <see cref="Food"/></returns>
+        Public Async Function LoadFood() As Task(Of List(Of Food)) Implements IDatabaseInteraction.LoadFood
+            Dim allFood As New List(Of Food)
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, "SELECT * FROM Food")
+            If ds.Tables(0).Rows.Count > 0 Then
+                For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
+                    Dim newFood As New Food(ds.Tables(0).Rows(i)("FoodName").ToString(), Int32Helper.Parse(ds.Tables(0).Rows(i)("RestoreHunger")), Int32Helper.Parse(ds.Tables(0).Rows(i)("FoodValue")))
+
+                    allFood.Add(newFood)
+                Next
+            End If
+
+            Return allFood
+        End Function
+
         ''' <summary>Loads all <see cref="Guild"/>s from the database.</summary>
         ''' <returns>All <see cref="Guild"/>s</returns>
         Public Async Function LoadGuilds() As Task(Of List(Of Guild)) Implements IDatabaseInteraction.LoadGuilds
@@ -117,7 +323,7 @@ Namespace Classes.Database
         ''' <summary>Loads all applicants for a selected <see cref="Guild"/>.</summary>
         ''' <param name="currentGuild"><see cref="Guild"/> whose applicants are to be loaded</param>
         ''' <returns>All applicants for a selected <see cref="Guild"/></returns>
-        Public Async Function LoadGuildApplicants(currentGuild As Guild) As Task(Of List(Of String))
+        Public Async Function LoadGuildApplicants(currentGuild As Guild) As Task(Of List(Of String)) Implements IDatabaseInteraction.LoadGuildApplicants
             Dim applicants As New List(Of String)
             Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM Applications WHERE Guild=""{currentGuild.ID}""")
 
@@ -131,7 +337,7 @@ Namespace Classes.Database
 
         ''' <summary>Loads all <see cref="JailedUser"/>s.</summary>
         ''' <returns>All <see cref="JailedUser"/>s</returns>
-        Public Async Function LoadJailedUsers() As Task(Of List(Of JailedUser))
+        Public Async Function LoadJailedUsers() As Task(Of List(Of JailedUser)) Implements IDatabaseInteraction.LoadJailedUsers
             Dim jailedUsers As New List(Of JailedUser)
             Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM Jail")
 
@@ -146,7 +352,7 @@ Namespace Classes.Database
         ''' <summary>Loads all <see cref="Message"/>s for specified <see cref="User"/>.</summary>
         ''' <param name="loadUser"><see cref="User"/> whose <see cref="Message"/>s are to be loaded</param>
         ''' <returns>List of all <see cref="Message"/>s for the specified <see cref="User"/></returns>
-        Public Async Function LoadMessages(loadUser As User) As Task(Of List(Of Message))
+        Public Async Function LoadMessages(loadUser As User) As Task(Of List(Of Message)) Implements IDatabaseInteraction.LoadMessages
             Dim _messages As List(Of Message) = New List(Of Message)
             Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM Messages WHERE UserTo=""{loadUser.Name}""")
 
@@ -156,38 +362,6 @@ Namespace Classes.Database
                 Next
             End If
             Return _messages
-        End Function
-
-        ''' <summary>Loads all <see cref="Food"/> from the database.</summary>
-        ''' <returns>All <see cref="Food"/></returns>
-        Public Async Function LoadFood() As Task(Of List(Of Food)) Implements IDatabaseInteraction.LoadFood
-            Dim allFood As New List(Of Food)
-            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, "SELECT * FROM Food")
-            If ds.Tables(0).Rows.Count > 0 Then
-                For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
-                    Dim newFood As New Food(ds.Tables(0).Rows(i)("FoodName").ToString(), Int32Helper.Parse(ds.Tables(0).Rows(i)("RestoreHunger")), Int32Helper.Parse(ds.Tables(0).Rows(i)("FoodValue")))
-
-                    allFood.Add(newFood)
-                Next
-            End If
-
-            Return allFood
-        End Function
-
-        ''' <summary>Loads all <see cref="Drink"/>s from the database.</summary>
-        ''' <returns>All <see cref="Drink"/>s</returns>
-        Public Async Function LoadDrinks() As Task(Of List(Of Drink)) Implements IDatabaseInteraction.LoadDrinks
-            Dim allDrinks As New List(Of Drink)
-            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, "SELECT * FROM Drinks")
-            If ds.Tables(0).Rows.Count > 0 Then
-                For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
-                    Dim newDrink As New Drink(ds.Tables(0).Rows(i)("DrinkName").ToString(), Int32Helper.Parse(ds.Tables(0).Rows(i)("RestoreThirst")), Int32Helper.Parse(ds.Tables(0).Rows(i)("DrinkValue")))
-
-                    allDrinks.Add(newDrink)
-                Next
-            End If
-
-            Return allDrinks
         End Function
 
         ''' <summary>Loads all <see cref="Potion"/>s from the database.</summary>
@@ -270,7 +444,7 @@ Namespace Classes.Database
         ''' <summary>Deletes a <see cref="Message"/> from the database.</summary>
         ''' <param name="message"><see cref="Message"/> to be deleted</param>
         ''' <returns>True if successful</returns>
-        Public Async Function DeleteMessage(message As Message) As Task(Of Boolean)
+        Public Async Function DeleteMessage(message As Message) As Task(Of Boolean) Implements IDatabaseInteraction.DeleteMessage
             Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Messages WHERE [ID] = @id"}
             cmd.Parameters.AddWithValue("@id", message.ID)
             Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
@@ -279,7 +453,7 @@ Namespace Classes.Database
         ''' <summary>Sends a <see cref="Message"/> between <see cref="User"/>s.</summary>
         ''' <param name="message"><see cref="Message"/> sent</param>
         ''' <returns>True if successful</returns>
-        Public Async Function SendMessage(message As Message) As Task(Of Boolean)
+        Public Async Function SendMessage(message As Message) As Task(Of Boolean) Implements IDatabaseInteraction.SendMessage
             Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Messages([UserTo], [UserFrom], [Message], [DateSent], [GuildMessage])VALUES(@userTo, @userFrom, @message, @dateSent, @guildMessage)"}
             cmd.Parameters.AddWithValue("@userTo", message.UserTo)
             cmd.Parameters.AddWithValue("@userFrom", message.UserFrom)
@@ -452,170 +626,6 @@ Namespace Classes.Database
             Else
                 Return True
             End If
-        End Function
-
-#End Region
-
-#Region "Jail Management"
-
-        ''' <summary>Frees a <see cref="JailedUser"/> from Jail.</summary>
-        ''' <param name="jailUser"><see cref="JailedUser"/> to be freed</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function FreeFromJail(jailUser As JailedUser) As Task(Of Boolean)
-            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Jail WHERE [Username] = @name"}
-            cmd.Parameters.AddWithValue("@name", jailUser.Name)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary>Sends a <see cref="JailedUser"/> to Jail.</summary>
-        ''' <param name="jailUser"><see cref="JailedUser"/> to be jailed</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SendToJail(jailUser As JailedUser) As Task(Of Boolean)
-            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Jail([Username], [Reason], [Fine], [DateJailed])VALUES(@name, @reason, @fine, @dateJailed)"}
-            cmd.Parameters.AddWithValue("@name", jailUser.Name)
-            cmd.Parameters.AddWithValue("@reason", jailUser.Reason)
-            cmd.Parameters.AddWithValue("@fine", jailUser.Fine)
-            cmd.Parameters.AddWithValue("@dateJailed", jailUser.DateJailed)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-#End Region
-
-#Region "Enemy Management"
-
-        ''' <summary>Saves an <see cref="Enemy"/> to the database.</summary>
-        ''' <param name="enemySave"><see cref="Enemy"/> to be saved</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SaveEnemy(enemySave As Enemy) As Task(Of Boolean) Implements IDatabaseInteraction.SaveEnemy
-            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Enemies SET [Level] = @level, [Endurance] = @endurance, [Weapon] = @weapon, [Armor] = @armor, [Gold] = @gold, [WeaponSkill] = @weaponSkill, [Blocking] = @blocking, [Slipping] = @slipping WHERE [Username] = @name"}
-
-            cmd.Parameters.AddWithValue("@level", enemySave.Level)
-            cmd.Parameters.AddWithValue("@endurance", enemySave.MaximumEndurance)
-            cmd.Parameters.AddWithValue("@weapon", enemySave.Weapon.Name)
-            cmd.Parameters.AddWithValue("@armor", enemySave.Armor.Name)
-            cmd.Parameters.AddWithValue("@gold", enemySave.GoldOnHand)
-            cmd.Parameters.AddWithValue("@weaponSkill", enemySave.WeaponSkill)
-            cmd.Parameters.AddWithValue("@blocking", enemySave.Blocking)
-            cmd.Parameters.AddWithValue("@slipping", enemySave.Slipping)
-            cmd.Parameters.AddWithValue("@name", enemySave.Name)
-
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary>Changes an <see cref="Enemy"/>'s name and then saves the <see cref="Enemy"/> to the database.</summary>
-        ''' <param name="enemySave"><see cref="Enemy"/> to be saved</param>
-        ''' <param name="newName">New name for <see cref="Enemy"/></param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SaveEnemy(enemySave As Enemy, newName As String) As Task(Of Boolean) Implements IDatabaseInteraction.SaveEnemy
-            If enemySave.Name <> newName Then
-                Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Enemies SET [EnemyName] = @newName WHERE [EnemyName] = @oldName"}
-                cmd.Parameters.AddWithValue("@newName", newName)
-                cmd.Parameters.AddWithValue("@oldName", enemySave)
-                If (Await SQLiteHelper.ExecuteCommand(_con, cmd)) Then
-                    enemySave.Name = newName
-                    Return Await SaveEnemy(enemySave)
-                Else
-                    Return False
-                End If
-            Else
-                Return True
-            End If
-        End Function
-
-#End Region
-
-#Region "Guild Management"
-
-        ''' <summary><see cref="User"/> applies for membership with a <see cref="Guild"/>.</summary>
-        ''' <param name="joinUser"><see cref="User"/> applying to join the <see cref="Guild"/>.</param>
-        ''' <param name="joinGuild"><see cref="Guild"/> being applied to</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
-            Dim guildID As String = $"Guild{joinGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO Applications([Username], [Guild])VALUES(@name, @guild)"}
-            cmd.Parameters.AddWithValue("@name", joinUser.Name)
-            cmd.Parameters.AddWithValue("@guild", joinGuild.ID)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
-        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
-        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
-            Return Await DeleteGuildApplication(approveUser, approveGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), approveGuild.Name, approveUser.Name, $"Your application to join the {approveGuild.Name.Replace("'", "''")} guild has been approved. Welcome!", Now, True)) AndAlso Await MemberJoinsGuild(approveUser, approveGuild)
-        End Function
-
-        ''' <summary>Deletes a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
-        ''' <param name="deleteUser"><see cref="User"/> whose application is deleted</param>
-        ''' <param name="deleteGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was deleted</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function DeleteGuildApplication(deleteUser As User, deleteGuild As Guild) As Task(Of Boolean)
-            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM Applications WHERE [Username] = @name AND [Guild] = @guild"}
-            cmd.Parameters.AddWithValue("@name", deleteUser.Name)
-            cmd.Parameters.AddWithValue("@guild", deleteGuild.ID)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary>Denies a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
-        ''' <param name="denyUser"><see cref="User"/> whose application is denied</param>
-        ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean)
-            Return Await DeleteGuildApplication(denyUser, denyGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), denyGuild.Name, denyUser.Name, $"Your application to join the {CurrentGuild.Name.Replace("'", "''")} guild has been denied.", Now, True))
-        End Function
-
-        ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
-        ''' <param name="checkUser"><see cref="User"/> to check if has applied to the <see cref="Guild"/>.</param>
-        ''' <param name="checkGuild"><see cref="Guild"/> being joined</param>
-        ''' <returns>True if has applied</returns>
-        Public Async Function HasAppliedToGuild(checkUser As User, checkGuild As Guild) As Task(Of Boolean)
-            Dim guildID As String = $"Guild{checkGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"SELECT * FROM {guildID} Where [Username] = @name"}
-            cmd.Parameters.AddWithValue("@name", checkUser.Name)
-            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, cmd)
-            Return ds.Tables(0).Rows.Count > 0
-        End Function
-
-        ''' <summary>Member of a <see cref="Guild"/> gains membership with that <see cref="Guild"/>, applied to database.</summary>
-        ''' <param name="joinUser"><see cref="User"/> joining the <see cref="Guild"/>.</param>
-        ''' <param name="joinGuild"><see cref="Guild"/> being joined</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.MemberJoinsGuild
-            Dim guildID As String = $"Guild{joinGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"INSERT INTO {guildID}([Username])VALUES(@name)"}
-            cmd.Parameters.AddWithValue("@name", joinUser.Name)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary>Member of a <see cref="Guild"/> terminates membership with that <see cref="Guild"/>, applied to database.</summary>
-        ''' <param name="leaveUser"><see cref="User"/> leaving the <see cref="Guild"/>.</param>
-        ''' <param name="leaveGuild"><see cref="Guild"/> being left</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function MemberLeavesGuild(leaveUser As User, leaveGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.MemberLeavesGuild
-            Dim guildID As String = $"Guild{leaveGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"DELETE FROM {guildID} WHERE [Username] = @name"}
-            cmd.Parameters.AddWithValue("@name", leaveUser.Name)
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
-        End Function
-
-        ''' <summary>Saves a <see cref="Guild"/>.</summary>
-        ''' <param name="guildSave"><see cref="Guild"/> to be saved</param>
-        Public Async Function SaveGuild(guildSave As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.SaveGuild
-            Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Guilds SET [GuildName] = @guildName, [Guildmaster] = @guildmaster, [GuildFee] = @guildFee, [GuildGold] = @guildGold, [HenchmenLevel1] = @henchmenLevel1, [HenchmenLevel2] = @henchmenLevel2, [HenchmenLevel3] = @henchmenLevel3, [HenchmenLevel4] = @henchmenLevel4, [HenchmenLevel5] = @henchmenLevel5 WHERE [ID] = @id"}
-
-            cmd.Parameters.AddWithValue("@guildName", guildSave.Name)
-            cmd.Parameters.AddWithValue("@guildmaster", guildSave.Master)
-            cmd.Parameters.AddWithValue("@guildFee", guildSave.Fee)
-            cmd.Parameters.AddWithValue("@guildGold", guildSave.Gold)
-            cmd.Parameters.AddWithValue("@henchmenLevel1", guildSave.HenchmenLevel1.ToString())
-            cmd.Parameters.AddWithValue("@henchmenLevel2", guildSave.HenchmenLevel2.ToString())
-            cmd.Parameters.AddWithValue("@henchmenLevel3", guildSave.HenchmenLevel3.ToString())
-            cmd.Parameters.AddWithValue("@henchmenLevel4", guildSave.HenchmenLevel4.ToString())
-            cmd.Parameters.AddWithValue("@henchmenLevel5", guildSave.HenchmenLevel5.ToString())
-            cmd.Parameters.AddWithValue("@id", guildSave.ID)
-
-            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
 
 #End Region

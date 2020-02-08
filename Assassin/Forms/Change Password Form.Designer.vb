@@ -123,7 +123,7 @@ Namespace Forms
             '
             Me.BtnSubmit.Enabled = False
             Me.BtnSubmit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnSubmit.Location = New System.Drawing.Point(141, 138)
+            Me.BtnSubmit.Location = New System.Drawing.Point(142, 138)
             Me.BtnSubmit.Name = "BtnSubmit"
             Me.BtnSubmit.Size = New System.Drawing.Size(125, 30)
             Me.BtnSubmit.TabIndex = 20
@@ -134,7 +134,7 @@ Namespace Forms
             '
             Me.BtnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel
             Me.BtnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnBack.Location = New System.Drawing.Point(141, 174)
+            Me.BtnBack.Location = New System.Drawing.Point(142, 174)
             Me.BtnBack.Name = "BtnBack"
             Me.BtnBack.Size = New System.Drawing.Size(125, 30)
             Me.BtnBack.TabIndex = 21

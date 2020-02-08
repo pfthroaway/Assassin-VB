@@ -33,7 +33,7 @@ Namespace Forms.GuildForms
         Public Async Sub Display()
             If LstGuilds.SelectedIndex >= 0 Then
                 CurrentGuild = AllGuilds.Find(Function(guild) guild.ID = LstGuilds.SelectedIndex + 1)
-                LblGoldOnHand.Text = CurrentUser.GoldOnHand.ToString("N0")
+                LblGoldOnHand.Text = CurrentUser.GoldOnHandToString
                 If CurrentGuild.Master = "Computer" Then
                     Select Case CurrentGuild.ID
                         Case 1
