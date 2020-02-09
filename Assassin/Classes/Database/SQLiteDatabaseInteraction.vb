@@ -358,7 +358,7 @@ Namespace Classes.Database
 
             If ds.Tables(0).Rows.Count > 0 Then
                 For Each dr As DataRow In ds.Tables(0).Rows
-                    _messages.Add(New Message(Int32Helper.Parse(dr("ID")), loadUser.Name, dr("UserFrom").ToString, dr("Message").ToString, DateTimeHelper.Parse(dr("DateSent").ToString), BoolHelper.Parse("GuildMessage")))
+                    _messages.Add(New Message(Int32Helper.Parse(dr("ID")), dr("UserFrom").ToString, loadUser.Name, dr("Message").ToString, DateTimeHelper.Parse(dr("DateSent").ToString), BoolHelper.Parse("GuildMessage")))
                 Next
             End If
             Return _messages

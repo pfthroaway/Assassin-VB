@@ -34,7 +34,7 @@ Namespace Forms
 
         ''' <summary>Displays the message.</summary>
         Private Sub Display()
-            If _messages.Count <= _currentIndex Then
+            If _messages.Count > 0 AndAlso _messages.Count >= _currentIndex Then
                 _currentMessage = _messages(_currentIndex)
                 CmbNames.Text = _currentMessage.UserFrom
                 TxtDate.Text = _currentMessage.DateSent.ToString
@@ -75,6 +75,8 @@ Namespace Forms
             TxtDate.Clear()
 
             ToggleControls(True)
+            TxtMessage.ReadOnly = True
+            CmbNames.Enabled = False
         End Sub
 
         ''' <summary>Sets up the controls for sending a <see cref="Message"/>.</summary>
@@ -86,17 +88,16 @@ Namespace Forms
             TxtDate.Clear()
             TxtMessage.Clear()
             ToggleControls(False)
+            TxtMessage.ReadOnly = False
             BtnDelete.Enabled = True
+            CmbNames.SelectedIndex = 0
         End Sub
 
         ''' <summary>Toggles all Controls on the Form.</summary>
         ''' <param name="enabled">Should the Controls be enabled?</param>
         Private Sub ToggleControls(enabled As Boolean)
-            CmbNames.Enabled = Not enabled
-            TxtMessage.ReadOnly = enabled
-            BtnNext.Enabled = enabled
+            BtnNext.Enabled = enabled AndAlso _messages.Count > 1
             BtnPrev.Enabled = enabled AndAlso _messages.Count > 1
-            BtnBack.Enabled = enabled AndAlso _messages.Count > 1
             BtnNew.Enabled = enabled
         End Sub
 
@@ -109,7 +110,6 @@ Namespace Forms
         Private Async Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
             If BtnDelete.Text = "&Delete" Then 'Delete
                 If Await DatabaseInteraction.DeleteMessage(_currentMessage) Then
-                    MessageBox.Show("Message successfully deleted.", "Assassin", MessageBoxButtons.OK)
                     Await LoadMessages()
                 End If
             Else 'Clear
@@ -121,6 +121,7 @@ Namespace Forms
         Private Sub BtnNew_Click(sender As Object, e As EventArgs) Handles BtnNew.Click
             BtnNew.Enabled = False
             SetUpSend()
+            CmbNames.Enabled = True
         End Sub
 
         Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
@@ -148,13 +149,9 @@ Namespace Forms
                 SetUpSend()
             Else 'Already Clicked Reply
                 If TxtMessage.TextLength > 0 AndAlso Await DatabaseInteraction.SendMessage(New Message(0, CurrentUser.Name, CmbNames.SelectedItem.ToString(), TxtMessage.Text, Date.UtcNow, False)) Then 'If Message Successfully Sent
-                    BtnReply.Text = "&Reply"
-                    BtnDelete.Text = "&Delete"
-                    LblFrom.Text = "From:"
-
+                    SetDefaultControls()
                     ToggleControls(True)
-
-                    MessageBox.Show("Message successfully sent.", "Assassin", MessageBoxButtons.OK)
+                    TxtMessage.ReadOnly = True
                     Display()
                 Else
                     MessageBox.Show("Please ensure you have filled out all fields correctly.", "Assassin", MessageBoxButtons.OK)
@@ -178,10 +175,6 @@ Namespace Forms
             Next
             CmbNames.Items.Remove(CurrentUser)
             Await LoadMessages()
-            If _messages.Count > 1 Then
-                BtnPrev.Enabled = True
-                BtnNext.Enabled = True
-            End If
         End Sub
 
         Private Sub FrmMessages_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

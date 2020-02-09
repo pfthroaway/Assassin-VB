@@ -176,6 +176,7 @@ Namespace Forms
             '
             'CmbNames
             '
+            Me.CmbNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbNames.Enabled = False
             Me.CmbNames.FormattingEnabled = True
             Me.CmbNames.Location = New System.Drawing.Point(71, 48)
@@ -188,7 +189,7 @@ Namespace Forms
             Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnBack
-            Me.ClientSize = New System.Drawing.Size(276, 407)
+            Me.ClientSize = New System.Drawing.Size(276, 408)
             Me.Controls.Add(Me.CmbNames)
             Me.Controls.Add(Me.BtnNew)
             Me.Controls.Add(Me.Label1)
@@ -209,7 +210,7 @@ Namespace Forms
             Me.MinimumSize = New System.Drawing.Size(292, 447)
             Me.Name = "FrmMessages"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "Az"
+            Me.Text = "Messages"
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
