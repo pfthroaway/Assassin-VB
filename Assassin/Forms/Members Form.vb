@@ -66,9 +66,8 @@ Namespace Forms
 
         Private Sub BtnMessage_Click(sender As Object, e As EventArgs) Handles BtnMessage.Click
             FrmMessages.Show()
-            FrmMessages.StartSend()
             FrmMessages.loc = "Members"
-            FrmMessages.TxtFrom.Text = LstMembers.SelectedItem.ToString
+            FrmMessages.CmbNames.SelectedItem = LstMembers.SelectedItem.ToString
             Hide()
         End Sub
 

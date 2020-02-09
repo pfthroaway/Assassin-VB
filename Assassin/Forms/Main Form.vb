@@ -21,13 +21,18 @@ Namespace Forms
         ''' <summary>Checks whether a valid login has occurred.</summary>
         ''' <returns>True if successful login</returns>
         Private Function CheckLogin() As Boolean
-            Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
-            If NewUser <> New User AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
-                CurrentUser = NewUser
-                Return True
+            If AllUsers.Count > 0 Then
+                Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
+                If NewUser <> New User AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
+                    CurrentUser = NewUser
+                    Return True
+                End If
+                MessageBox.Show("Unable to verify credentials.", "Assassin", MessageBoxButtons.OK)
+                Return False
+            Else
+                MessageBox.Show($"There are no users.{ControlChars.NewLine}Please create one to log in.", "Assassin", MessageBoxButtons.OK)
+                Return False
             End If
-            MessageBox.Show("Unable to verify credentials.", "Assassin", MessageBoxButtons.OK)
-            Return False
         End Function
 
         ''' <summary>When a valid login has occurred, log the character in.</summary>

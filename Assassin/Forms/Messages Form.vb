@@ -10,12 +10,13 @@ Option Explicit On
 
 Imports System.Threading.Tasks
 Imports Assassin.Classes
+Imports Assassin.Classes.Entities
 
 Namespace Forms
 
     Public Class FrmMessages
-
         Dim _messages As List(Of Message)
+        Dim _currentMessage As Message
         Dim _currentIndex As Integer = 0
         Public loc As String
 
@@ -26,7 +27,7 @@ Namespace Forms
             BtnDelete.Enabled = False
             BtnReply.Enabled = False
             LblCount.Text = ""
-            TxtFrom.Clear()
+            CmbNames.SelectedIndex = -1
             TxtDate.Clear()
             TxtMessage.Clear()
         End Sub
@@ -34,17 +35,17 @@ Namespace Forms
         ''' <summary>Displays the message.</summary>
         Private Sub Display()
             If _messages.Count <= _currentIndex Then
-                Dim message As Message = _messages(_currentIndex)
-                TxtFrom.Text = message.UserFrom
-                TxtDate.Text = message.DateSent.ToString
+                _currentMessage = _messages(_currentIndex)
+                CmbNames.Text = _currentMessage.UserFrom
+                TxtDate.Text = _currentMessage.DateSent.ToString
 
-                TxtMessage.Text = message.Contents
+                TxtMessage.Text = _currentMessage.Contents
                 LblCount.Text = $"{_currentIndex + 1} / {_messages.Count}"
                 BtnDelete.Enabled = True
                 BtnNext.Enabled = _currentIndex = _messages.Count
                 BtnPrev.Enabled = _currentIndex = _messages.Count
 
-                BtnReply.Enabled = Not message.GuildMessage
+                BtnReply.Enabled = Not _currentMessage.GuildMessage
             Else
                 Clear()
                 BtnNew.Enabled = True
@@ -65,75 +66,61 @@ Namespace Forms
             End If
         End Function
 
-        ''' <summary>This method loads all names into the CmbNames ComboBox to be used in sending new messages.</summary>
-        Private Sub LoadNames()
-            'CmbNames.Items.Clear()
-
-            '_sql1 = "SELECT Username FROM Users ORDER BY ID Asc"
-            '_table1 = "Users"
-            '_ds1 = Await .FillDs(_sql1, _table1)
-
-            'For i As Integer = 0 To _ds1.Tables(0).Rows.Count - 1
-            '    CmbNames.Items.Add(_ds1.Tables(0).Rows(i).Item("Username").ToString)
-            'Next
-
-            'CmbNames.Items.Remove(CurrentUser.Name)
-        End Sub
-
-        ''' <summary>Starts the form being able to send messages.</summary>
-        Public Async Sub StartSend()
-            Await LoadMessages()
-            BtnReply.Enabled = True
-            BtnDelete.Enabled = True
-            BtnReply.Text = "&Send"     'change text to Send
-            BtnDelete.Text = "&Clear"   'change text to Clear
-            LblFrom.Text = "To:"        'change text to To:
-            LblCount.Text = ""          'Clear LblCount
-            TxtMessage.Clear()
+        ''' <summary>Sets the Controls to default.</summary>
+        Private Sub SetDefaultControls()
+            BtnReply.Text = "&Reply"
+            BtnDelete.Text = "&Delete"
+            LblFrom.Text = "From:"
+            LblCount.Text = ""
             TxtDate.Clear()
 
-            LoadNames()
-            TxtMessage.ReadOnly = False 'allow Textbox to be edited
-            BtnNext.Enabled = False     'disable Next button
-            BtnPrev.Enabled = False     'disable Prev button
-            BtnBack.Enabled = False     'disable Back button
+            ToggleControls(True)
         End Sub
+
+        ''' <summary>Sets up the controls for sending a <see cref="Message"/>.</summary>
+        Private Sub SetUpSend()
+            BtnReply.Text = "&Send"
+            BtnDelete.Text = "&Clear"
+            LblFrom.Text = "To:"
+            LblCount.Text = ""
+            TxtDate.Clear()
+            TxtMessage.Clear()
+            ToggleControls(False)
+            BtnDelete.Enabled = True
+        End Sub
+
+        ''' <summary>Toggles all Controls on the Form.</summary>
+        ''' <param name="enabled">Should the Controls be enabled?</param>
+        Private Sub ToggleControls(enabled As Boolean)
+            CmbNames.Enabled = Not enabled
+            TxtMessage.ReadOnly = enabled
+            BtnNext.Enabled = enabled
+            BtnPrev.Enabled = enabled AndAlso _messages.Count > 1
+            BtnBack.Enabled = enabled AndAlso _messages.Count > 1
+            BtnNew.Enabled = enabled
+        End Sub
+
+#Region "Click"
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
             Close()
         End Sub
 
-        Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-            'TODO Re-implement deleting messages
-            'If BtnDelete.Text = "&Delete" Then  'delete
-            '    _sql1 = "SELECT * FROM Messages WHERE UserTo='" & CurrentUser.Name & "' AND UserFrom='" & _userFrom.Replace("'", "''") & "' AND Message='" & _message.Replace("'", "''") & "'"
-            '    _table1 = "Messages"
-            '    _ds1 = Await .FillDs(_sql1, _table1)
-
-            '    .DeleteRecord(_sql1, _table1, _ds1)
-            '    MessageBox.Show("Message successfully deleted.", "Assassin", MessageBoxButtons.OK)
-            '    LoadMessages()
-            'Else                                'Clear
-            '    BtnReply.Text = "&Reply"    'change text to Send
-            '    BtnDelete.Text = "&Delete"  'change text to Clear
-            '    LblFrom.Text = "From:"      'change text to From:
-
-            '    BtnNew.Enabled = True
-            '    CmbNames.Enabled = False
-            '    TxtMessage.ReadOnly = True  'allow Textbox to be edited
-            '    BtnNext.Enabled = True      'disable Next button
-            '    BtnPrev.Enabled = True      'disable Prev button
-            '    BtnBack.Enabled = True      'disable Back button
-            '    Display()
-            'End If
+        Private Async Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+            If BtnDelete.Text = "&Delete" Then 'Delete
+                If Await DatabaseInteraction.DeleteMessage(_currentMessage) Then
+                    MessageBox.Show("Message successfully deleted.", "Assassin", MessageBoxButtons.OK)
+                    Await LoadMessages()
+                End If
+            Else 'Clear
+                Clear()
+                Display()
+            End If
         End Sub
 
         Private Sub BtnNew_Click(sender As Object, e As EventArgs) Handles BtnNew.Click
             BtnNew.Enabled = False
-            StartSend()
+            SetUpSend()
         End Sub
 
         Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
@@ -156,79 +143,56 @@ Namespace Forms
             Display()
         End Sub
 
-        Private Sub BtnReply_Click(sender As Object, e As EventArgs) Handles BtnReply.Click
-            '* * * * *
-            '* This method closes the form on clicking the Back button.
-            '* * * * *
-            'TODO Fix Reply Messages
-            'If BtnReply.Text = "&Reply" Then    'reply
-            '    BtnReply.Text = "&Send"         'change text to Send
-            '    BtnDelete.Text = "&Clear"       'change text to Clear
-            '    LblFrom.Text = "To:"            'change text to To:
-            '    LblCount.Text = ""              'Clear LblCount
-            '    TxtDate.Clear()                 'clear Date TextBox
-            '    TxtMessage.Clear()              'clear Message TextBox
+        Private Async Sub BtnReply_Click(sender As Object, e As EventArgs) Handles BtnReply.Click
+            If BtnReply.Text = "&Reply" Then 'Set Up Send
+                SetUpSend()
+            Else 'Already Clicked Reply
+                If TxtMessage.TextLength > 0 AndAlso Await DatabaseInteraction.SendMessage(New Message(0, CurrentUser.Name, CmbNames.SelectedItem.ToString(), TxtMessage.Text, Date.UtcNow, False)) Then 'If Message Successfully Sent
+                    BtnReply.Text = "&Reply"
+                    BtnDelete.Text = "&Delete"
+                    LblFrom.Text = "From:"
 
-            '    TxtMessage.ReadOnly = False 'allow Textbox to be edited
-            '    BtnNext.Enabled = False     'disable Next button
-            '    BtnPrev.Enabled = False     'disable Prev button
-            '    BtnBack.Enabled = False     'disable Back button
-            '    BtnDelete.Enabled = True    'enable Delete button
-            '    BtnNew.Enabled = False      'disable New button
-            'Else                                'send
-            '    If TxtMessage.TextLength > 0 Then
-            '        _sql1 = "SELECT * FROM Users WHERE Username='" & CmbNames.SelectedItem.ToString & "'"
-            '        _table1 = "Users"
-            '        _ds1 = Await .FillDs(_sql1, _table1)
+                    ToggleControls(True)
 
-            '        If _ds1.Tables(0).Rows.Count > 0 Then   'if user exists
-            '            _sql1 = "SELECT * FROM Messages"
-            '            _table1 = "Messages"
-            '            _ds1 = Await .FillDs(_sql1, _table1)
+                    MessageBox.Show("Message successfully sent.", "Assassin", MessageBoxButtons.OK)
+                    Display()
+                Else
+                    MessageBox.Show("Please ensure you have filled out all fields correctly.", "Assassin", MessageBoxButtons.OK)
+                End If
+            End If
+        End Sub
 
-            '            Dim dsNewRow As DataRow
-            '            dsNewRow = _ds1.Tables(0).NewRow()
-            '            dsNewRow.Item("UserTo") = CmbNames.SelectedItem.ToString
-            '            dsNewRow.Item("UserFrom") = CurrentUser.Name
-            '            dsNewRow.Item("Message") = TxtMessage.Text
-            '            dsNewRow.Item("DateSent") = Now
-            '            _ds1.Tables(0).Rows.Add(dsNewRow)
-            '            .UpdateRecord(_sql1, _table1, _ds1)
+        Private Sub CmbNames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbNames.SelectedIndexChanged
+            If CmbNames.SelectedIndex >= 0 Then
+                BtnReply.Enabled = True
+            End If
+        End Sub
 
-            '            BtnReply.Text = "&Reply"    'change text to Send
-            '            BtnDelete.Text = "&Delete"  'change text to Clear
-            '            LblFrom.Text = "From:"      'change text to From:
+#End Region
 
-            '            BtnNew.Enabled = True       'enable BtnNew
-            '            CmbNames.Enabled = False    'enable CmbNames
-            '            TxtMessage.ReadOnly = True  'allow Textbox to be edited
-            '            BtnNext.Enabled = True      'disable Next button
-            '            BtnPrev.Enabled = True      'disable Prev button
-            '            BtnBack.Enabled = True      'disable Back button
-            '            BtnNew.Enabled = True       'enable New button
+#Region "Form Manipulation"
 
-            '            MessageBox.Show("Message successfully sent.", "Assassin", MessageBoxButtons.OK)
-            '            Display()
-            '        Else
-            '            MessageBox.Show("Please enter a valid username to be the recipient of the message.", "Assassin", MessageBoxButtons.OK)
-            '        End If
-            '    Else
-            '        MessageBox.Show("Please ensure you have filled out all fields correctly.", "Assassin", MessageBoxButtons.OK)
-            '    End If
-            'End If
+        Private Async Sub FrmMessages_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            For Each user As User In AllUsers
+                CmbNames.Items.Add(user)
+            Next
+            CmbNames.Items.Remove(CurrentUser)
+            Await LoadMessages()
+            If _messages.Count > 1 Then
+                BtnPrev.Enabled = True
+                BtnNext.Enabled = True
+            End If
         End Sub
 
         Private Sub FrmMessages_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            '* * * * *
-            '* This method handles closing the form.
-            '* * * * *
-
             If loc = "Streets" Then
                 FrmGame.Show()
             ElseIf loc = "Members" Then
                 FrmMembers.Show()
             End If
         End Sub
+
+#End Region
 
     End Class
 

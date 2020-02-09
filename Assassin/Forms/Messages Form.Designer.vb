@@ -38,7 +38,7 @@ Namespace Forms
             Me.Label1 = New System.Windows.Forms.Label()
             Me.TxtDate = New System.Windows.Forms.TextBox()
             Me.BtnNew = New System.Windows.Forms.Button()
-            Me.TxtFrom = New System.Windows.Forms.TextBox()
+            Me.CmbNames = New System.Windows.Forms.ComboBox()
             Me.SuspendLayout()
             '
             'TxtMessage
@@ -123,7 +123,7 @@ Namespace Forms
             'LblFrom
             '
             Me.LblFrom.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblFrom.Location = New System.Drawing.Point(14, 49)
+            Me.LblFrom.Location = New System.Drawing.Point(15, 50)
             Me.LblFrom.Name = "LblFrom"
             Me.LblFrom.Size = New System.Drawing.Size(50, 20)
             Me.LblFrom.TabIndex = 15
@@ -143,7 +143,7 @@ Namespace Forms
             'Label1
             '
             Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New System.Drawing.Point(14, 83)
+            Me.Label1.Location = New System.Drawing.Point(15, 83)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(50, 20)
             Me.Label1.TabIndex = 18
@@ -174,27 +174,22 @@ Namespace Forms
             Me.BtnNew.Text = "N&ew"
             Me.BtnNew.UseVisualStyleBackColor = True
             '
-            'TxtFrom
+            'CmbNames
             '
-            Me.TxtFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.TxtFrom.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtFrom.Location = New System.Drawing.Point(71, 48)
-            Me.TxtFrom.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtFrom.MaxLength = 30
-            Me.TxtFrom.Name = "TxtFrom"
-            Me.TxtFrom.ReadOnly = True
-            Me.TxtFrom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-            Me.TxtFrom.Size = New System.Drawing.Size(192, 26)
-            Me.TxtFrom.TabIndex = 20
-            Me.TxtFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.CmbNames.Enabled = False
+            Me.CmbNames.FormattingEnabled = True
+            Me.CmbNames.Location = New System.Drawing.Point(71, 48)
+            Me.CmbNames.Name = "CmbNames"
+            Me.CmbNames.Size = New System.Drawing.Size(192, 26)
+            Me.CmbNames.TabIndex = 20
             '
             'FrmMessages
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnBack
-            Me.ClientSize = New System.Drawing.Size(276, 408)
-            Me.Controls.Add(Me.TxtFrom)
+            Me.ClientSize = New System.Drawing.Size(276, 407)
+            Me.Controls.Add(Me.CmbNames)
             Me.Controls.Add(Me.BtnNew)
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.TxtDate)
@@ -214,7 +209,7 @@ Namespace Forms
             Me.MinimumSize = New System.Drawing.Size(292, 447)
             Me.Name = "FrmMessages"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "Messages"
+            Me.Text = "Az"
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -231,6 +226,6 @@ Namespace Forms
         Friend WithEvents Label1 As Label
         Friend WithEvents TxtDate As TextBox
         Friend WithEvents BtnNew As Button
-        Friend WithEvents TxtFrom As TextBox
+        Friend WithEvents CmbNames As ComboBox
     End Class
 End NameSpace
