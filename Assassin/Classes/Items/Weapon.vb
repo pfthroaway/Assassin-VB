@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Weapon.vb
-' Description     : This form contains the statistics for a Weapon.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes.Enums

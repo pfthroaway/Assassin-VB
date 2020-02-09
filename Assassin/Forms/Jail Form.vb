@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 09/29/2012
-' Filename        : Jail Form.vb
-' Description     : This form displays all users currently jailed.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes

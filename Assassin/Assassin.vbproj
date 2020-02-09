@@ -184,12 +184,6 @@
     <Compile Include="Forms\Bank Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NewMessageForm.Designer.vb">
-      <DependentUpon>NewMessageForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\NewMessageForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Shopping\Armoury Form.Designer.vb">
       <DependentUpon>Armoury Form.vb</DependentUpon>
     </Compile>
@@ -429,9 +423,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Bank Form.resx">
       <DependentUpon>Bank Form.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NewMessageForm.resx">
-      <DependentUpon>NewMessageForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shopping\Armoury Form.resx">
       <DependentUpon>Armoury Form.vb</DependentUpon>

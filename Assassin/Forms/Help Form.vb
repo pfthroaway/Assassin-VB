@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 10/11/2012
-' Filename        : Help Form.vb
-' Description     : This form displays help for a specific form.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Namespace Forms

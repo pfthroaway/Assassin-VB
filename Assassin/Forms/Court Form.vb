@@ -1,9 +1,5 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Court Form.vb
-' Description     : This form conducts the court activities after a player has been apprehended.
+﻿Option Strict On
+Option Explicit On
 
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities

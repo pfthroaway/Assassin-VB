@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Guild Form.vb
-' Description     : This forms contains the statistics of a Guild.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Namespace Classes.Entities

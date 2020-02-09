@@ -1,5 +1,5 @@
-﻿Option Explicit On
-Option Strict On
+﻿Option Strict On
+Option Explicit On
 
 Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums

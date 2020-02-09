@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 09/06/2012
-' Filename        : Admin Users Form.vb
-' Description     : This form contains all User administrative functions.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Namespace Forms.Admin

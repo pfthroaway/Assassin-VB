@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Jobs Form.vb
-' Description     : This form allows job opportunities.
-
-Option Explicit On
+﻿Option Explicit On
 Option Strict On
 
 Imports Assassin.Classes

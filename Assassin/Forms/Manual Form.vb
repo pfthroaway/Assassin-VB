@@ -1,9 +1,5 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Manual Form.vb
-' Description     : This form allows the player to read information about the game.
+﻿Option Strict On
+Option Explicit On
 
 Imports Assassin.Classes
 

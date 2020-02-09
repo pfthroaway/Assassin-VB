@@ -1,4 +1,7 @@
-﻿Imports Assassin.Classes.Entities
+﻿Option Strict On
+Option Explicit On
+
+Imports Assassin.Classes.Entities
 
 ''' <summary>Represents a <see cref="Message"/> sent to a <see cref="User"/>.</summary>
 Public Class Message

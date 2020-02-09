@@ -1,4 +1,7 @@
-﻿Namespace Classes.Enums
+﻿Option Strict On
+Option Explicit On
+
+Namespace Classes.Enums
 
     ''' <summary>Represents a <see cref="Stance"/> that can be taken during a round of battle.</summary>
     Public Enum Stance

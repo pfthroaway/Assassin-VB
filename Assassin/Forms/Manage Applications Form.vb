@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Manage Applications Form.vb
-' Description     : This form allows a guildmaster to confirm or deny applications to join the guild.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports System.Threading.Tasks

@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 10/11/2012
-' Filename        : Guild Transfer Form.vb
-' Description     : This form allows a guildmaster to transfer henchmen and gold to and from their guild.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes

@@ -1,4 +1,7 @@
-﻿Imports Assassin.Classes.Items
+﻿Option Strict On
+Option Explicit On
+
+Imports Assassin.Classes.Items
 
 Namespace Classes.Enums
 

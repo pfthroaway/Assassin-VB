@@ -1,14 +1,6 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Members Form.vb
-' Description     : This form contains the list of users.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
-Imports System.Threading.Tasks
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Enums
@@ -18,7 +10,7 @@ Namespace Forms
 
     Public Class FrmMembers
         Dim selectedUser As User
-        Public loc As String            'location
+        Public loc As String
 
         ''' <summary>Disables most buttons.</summary>
         Private Sub DisableButtons()

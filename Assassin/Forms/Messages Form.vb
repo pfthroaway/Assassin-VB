@@ -1,11 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Messages Form.vb
-' Description     : This form allows users to send messages to one another.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports System.Threading.Tasks

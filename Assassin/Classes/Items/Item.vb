@@ -1,4 +1,7 @@
-﻿Namespace Classes.Items
+﻿Option Strict On
+Option Explicit On
+
+Namespace Classes.Items
 
     ''' <summary>Represents an <see cref="Item"/> that can be carried or used.</summary>
     Public Class Item
@@ -24,6 +27,7 @@
                 Return Value.ToString("N0")
             End Get
         End Property
+
         ''' <summary>The sell value of the <see cref="Item"/>.</summary>
         Public ReadOnly Property SellValue As Integer
             Get
@@ -37,6 +41,7 @@
                 Return SellValue.ToString("N0")
             End Get
         End Property
+
 #End Region
 
     End Class

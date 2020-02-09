@@ -1,4 +1,7 @@
-﻿Namespace Forms
+﻿Option Strict On
+Option Explicit On
+
+Namespace Forms
 
     Public Class FrmCharacter
 

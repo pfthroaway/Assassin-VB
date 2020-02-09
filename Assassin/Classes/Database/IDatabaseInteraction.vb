@@ -1,4 +1,7 @@
-﻿Imports Assassin.Classes.Entities
+﻿Option Strict On
+Option Explicit On
+
+Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Items
 Imports System.Threading.Tasks
 

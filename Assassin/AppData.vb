@@ -1,4 +1,7 @@
-﻿Imports System.IO
+﻿Option Strict On
+Option Explicit On
+
+Imports System.IO
 
 Public Class AppData
 

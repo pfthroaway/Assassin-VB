@@ -1,11 +1,5 @@
 ﻿Option Strict On
 Option Explicit On
-' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 09/06/2012
-' Filename        : Admin Guild Form.vb
-' Description     : This form contains all Guild administrative functions.
 
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
@@ -13,7 +7,6 @@ Imports Assassin.Classes.Entities
 Namespace Forms.Admin
 
     Public Class FrmAdminGuilds
-        'TODO Fix Admin Guild
 
         ''' <summary>Clears all information on the Form.</summary>
         Private Sub Clear()
@@ -116,9 +109,10 @@ Namespace Forms.Admin
         Private Sub LoadGuilds()
             Clear()
 
-            For i As Integer = 0 To 4
-                LstGuilds.Items.Add(AllGuilds(i))
+            For Each guild As Guild In AllGuilds
+                LstGuilds.Items.Add(guild)
             Next
+            LstGuilds.SelectedIndex = 0
         End Sub
 
         ''' <summary>Saves the <see cref="Guild"/>.</summary>
@@ -196,19 +190,14 @@ Namespace Forms.Admin
         End Sub
 
         Private Async Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click
-            'Dim dlg As DialogResult
-            'dlg = MessageBox.Show("Are you sure you want to expel this member?", "Assassin", MessageBoxButtons.YesNo)
+            Dim dlg As DialogResult
+            dlg = MessageBox.Show("Are you sure you want to expel this member?", "Assassin", MessageBoxButtons.YesNo)
 
-            'If dlg = DialogResult.Yes Then
-            '    _sql = "SELECT * FROM Guild" & CurrentGuild.ID & "Members WHERE Username='" & LstMembers.SelectedItem.ToString & "'"
-            '    _table = "Members"
-
-            '
-            '    .DeleteRecord(_sql, _table, _ds)
-
-            '    MessageBox.Show("Member successfully expelled.", "Assassin", MessageBoxButtons.OK)
-            '    GetMembers()
-            'End If
+            If dlg = DialogResult.Yes Then
+                Await DatabaseInteraction.MemberLeavesGuild(CurrentUser, CurrentGuild)
+                MessageBox.Show("Member successfully expelled.", "Assassin", MessageBoxButtons.OK)
+                GetMembers()
+            End If
         End Sub
 
         Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -225,6 +214,7 @@ Namespace Forms.Admin
 
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged
             If LstMembers.SelectedIndex >= 0 AndAlso BtnAddMember.Text = "&Add Member" Then
+                CurrentUser = AllUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString())
                 BtnExpel.Enabled = True
             ElseIf LstMembers.SelectedIndex >= 0 AndAlso BtnAddMember.Text = "&Add" Then
                 BtnAddMember.Enabled = True

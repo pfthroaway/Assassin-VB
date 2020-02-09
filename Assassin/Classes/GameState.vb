@@ -1,4 +1,7 @@
-﻿Imports Assassin.Classes.Database
+﻿Option Strict On
+Option Explicit On
+
+Imports Assassin.Classes.Database
 Imports Assassin.Classes.Entities
 Imports Assassin.Classes.Items
 Imports Extensions

@@ -1,12 +1,4 @@
-﻿' Title           : Assassin
-' Programmer      : pfthroaway
-' Version         : 1.0
-' Creation Date:  : 05/25/2012
-' Filename        : Main Form.vb
-' Description     : This game is based on an MS-DOS BBS game created by Kevin MacFarland.
-'                   This form allows a user to log into the game, view the Admin form, or view the Manual.
-
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Imports Assassin.Classes
