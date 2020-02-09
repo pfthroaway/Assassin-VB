@@ -26,271 +26,271 @@ Namespace Forms.Admin
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.LstGuilds = New ListBox()
-            Me.txtName = New TextBox()
-            Me.LblName = New Label()
-            Me.CmbGuildmaster = New ComboBox()
-            Me.LblGuildmaster = New Label()
-            Me.LblFee = New Label()
-            Me.txtEntranceFee = New TextBox()
-            Me.txtGuildGold = New TextBox()
-            Me.LblGuildGold = New Label()
-            Me.txtHenchmenLevel1 = New TextBox()
-            Me.txtHenchmenLevel2 = New TextBox()
-            Me.txtHenchmenLevel3 = New TextBox()
-            Me.txtHenchmenLevel4 = New TextBox()
-            Me.txtHenchmenLevel5 = New TextBox()
-            Me.LblHenchmenLevel5 = New Label()
-            Me.LblHenchmenLevel4 = New Label()
-            Me.LblHenchmenLevel3 = New Label()
-            Me.LblHenchmenLevel2 = New Label()
-            Me.LblHenchmenLevel1 = New Label()
-            Me.BtnClear = New Button()
-            Me.BtnExpel = New Button()
-            Me.BtnExit = New Button()
-            Me.BtnSave = New Button()
-            Me.BtnAddMember = New Button()
-            Me.LblMembers = New Label()
-            Me.LstMembers = New ListBox()
-            Me.LblGuilds = New Label()
+            Me.LstGuilds = New System.Windows.Forms.ListBox()
+            Me.TxtName = New System.Windows.Forms.TextBox()
+            Me.LblName = New System.Windows.Forms.Label()
+            Me.CmbGuildmaster = New System.Windows.Forms.ComboBox()
+            Me.LblGuildmaster = New System.Windows.Forms.Label()
+            Me.LblFee = New System.Windows.Forms.Label()
+            Me.TxtEntranceFee = New System.Windows.Forms.TextBox()
+            Me.TxtGuildGold = New System.Windows.Forms.TextBox()
+            Me.LblGuildGold = New System.Windows.Forms.Label()
+            Me.TxtHenchmenLevel1 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel2 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel3 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel4 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel5 = New System.Windows.Forms.TextBox()
+            Me.LblHenchmenLevel5 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel4 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel3 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel2 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel1 = New System.Windows.Forms.Label()
+            Me.BtnClear = New System.Windows.Forms.Button()
+            Me.BtnExpel = New System.Windows.Forms.Button()
+            Me.BtnExit = New System.Windows.Forms.Button()
+            Me.BtnSave = New System.Windows.Forms.Button()
+            Me.BtnAddMember = New System.Windows.Forms.Button()
+            Me.LblMembers = New System.Windows.Forms.Label()
+            Me.LstMembers = New System.Windows.Forms.ListBox()
+            Me.LblGuilds = New System.Windows.Forms.Label()
             Me.SuspendLayout()
             '
             'LstGuilds
             '
-            Me.LstGuilds.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LstGuilds.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.LstGuilds.FormattingEnabled = True
             Me.LstGuilds.ItemHeight = 18
-            Me.LstGuilds.Location = New Point(13, 37)
-            Me.LstGuilds.Margin = New Padding(4)
+            Me.LstGuilds.Location = New System.Drawing.Point(13, 37)
+            Me.LstGuilds.Margin = New System.Windows.Forms.Padding(4)
             Me.LstGuilds.Name = "LstGuilds"
             Me.LstGuilds.ScrollAlwaysVisible = True
-            Me.LstGuilds.Size = New Size(225, 94)
+            Me.LstGuilds.Size = New System.Drawing.Size(225, 94)
             Me.LstGuilds.TabIndex = 0
             '
-            'txtName
+            'TxtName
             '
-            Me.txtName.Enabled = False
-            Me.txtName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtName.Location = New Point(146, 141)
-            Me.txtName.Margin = New Padding(4)
-            Me.txtName.MaxLength = 30
-            Me.txtName.Name = "txtName"
-            Me.txtName.Size = New Size(175, 22)
-            Me.txtName.TabIndex = 1
-            Me.txtName.TextAlign = HorizontalAlignment.Center
+            Me.TxtName.Enabled = False
+            Me.TxtName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtName.Location = New System.Drawing.Point(146, 141)
+            Me.TxtName.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtName.MaxLength = 30
+            Me.TxtName.Name = "TxtName"
+            Me.TxtName.Size = New System.Drawing.Size(175, 26)
+            Me.TxtName.TabIndex = 1
+            Me.TxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'LblName
             '
-            Me.LblName.BorderStyle = BorderStyle.FixedSingle
-            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblName.Location = New Point(13, 140)
-            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New System.Drawing.Point(13, 140)
+            Me.LblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblName.Name = "LblName"
-            Me.LblName.Size = New Size(125, 24)
+            Me.LblName.Size = New System.Drawing.Size(125, 24)
             Me.LblName.TabIndex = 18
             Me.LblName.Text = "Guild Name:"
-            Me.LblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'CmbGuildmaster
             '
-            Me.CmbGuildmaster.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbGuildmaster.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbGuildmaster.Enabled = False
-            Me.CmbGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbGuildmaster.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbGuildmaster.FormattingEnabled = True
             Me.CmbGuildmaster.Items.AddRange(New Object() {"Computer"})
-            Me.CmbGuildmaster.Location = New Point(145, 171)
+            Me.CmbGuildmaster.Location = New System.Drawing.Point(145, 171)
             Me.CmbGuildmaster.Name = "CmbGuildmaster"
-            Me.CmbGuildmaster.Size = New Size(176, 24)
+            Me.CmbGuildmaster.Size = New System.Drawing.Size(176, 26)
             Me.CmbGuildmaster.TabIndex = 2
             '
             'LblGuildmaster
             '
-            Me.LblGuildmaster.BorderStyle = BorderStyle.FixedSingle
-            Me.LblGuildmaster.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblGuildmaster.Location = New Point(13, 170)
-            Me.LblGuildmaster.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuildmaster.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGuildmaster.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGuildmaster.Location = New System.Drawing.Point(13, 170)
+            Me.LblGuildmaster.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblGuildmaster.Name = "LblGuildmaster"
-            Me.LblGuildmaster.Size = New Size(125, 24)
+            Me.LblGuildmaster.Size = New System.Drawing.Size(125, 24)
             Me.LblGuildmaster.TabIndex = 19
             Me.LblGuildmaster.Text = "Guildmaster:"
-            Me.LblGuildmaster.TextAlign = ContentAlignment.MiddleRight
+            Me.LblGuildmaster.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblFee
             '
-            Me.LblFee.BorderStyle = BorderStyle.FixedSingle
-            Me.LblFee.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblFee.Location = New Point(13, 200)
-            Me.LblFee.Margin = New Padding(4, 0, 4, 0)
+            Me.LblFee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblFee.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblFee.Location = New System.Drawing.Point(13, 200)
+            Me.LblFee.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblFee.Name = "LblFee"
-            Me.LblFee.Size = New Size(125, 24)
+            Me.LblFee.Size = New System.Drawing.Size(125, 24)
             Me.LblFee.TabIndex = 20
             Me.LblFee.Text = "Entrance Fee:"
-            Me.LblFee.TextAlign = ContentAlignment.MiddleRight
+            Me.LblFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtEntranceFee
+            'TxtEntranceFee
             '
-            Me.txtEntranceFee.Enabled = False
-            Me.txtEntranceFee.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtEntranceFee.Location = New Point(146, 201)
-            Me.txtEntranceFee.Margin = New Padding(4)
-            Me.txtEntranceFee.MaxLength = 4
-            Me.txtEntranceFee.Name = "txtEntranceFee"
-            Me.txtEntranceFee.Size = New Size(73, 22)
-            Me.txtEntranceFee.TabIndex = 3
-            Me.txtEntranceFee.TextAlign = HorizontalAlignment.Center
+            Me.TxtEntranceFee.Enabled = False
+            Me.TxtEntranceFee.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtEntranceFee.Location = New System.Drawing.Point(146, 201)
+            Me.TxtEntranceFee.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtEntranceFee.MaxLength = 4
+            Me.TxtEntranceFee.Name = "TxtEntranceFee"
+            Me.TxtEntranceFee.Size = New System.Drawing.Size(73, 26)
+            Me.TxtEntranceFee.TabIndex = 3
+            Me.TxtEntranceFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtGuildGold
+            'TxtGuildGold
             '
-            Me.txtGuildGold.Enabled = False
-            Me.txtGuildGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGuildGold.Location = New Point(146, 231)
-            Me.txtGuildGold.Margin = New Padding(4)
-            Me.txtGuildGold.MaxLength = 6
-            Me.txtGuildGold.Name = "txtGuildGold"
-            Me.txtGuildGold.Size = New Size(73, 22)
-            Me.txtGuildGold.TabIndex = 4
-            Me.txtGuildGold.TextAlign = HorizontalAlignment.Center
+            Me.TxtGuildGold.Enabled = False
+            Me.TxtGuildGold.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGuildGold.Location = New System.Drawing.Point(146, 231)
+            Me.TxtGuildGold.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGuildGold.MaxLength = 6
+            Me.TxtGuildGold.Name = "TxtGuildGold"
+            Me.TxtGuildGold.Size = New System.Drawing.Size(73, 26)
+            Me.TxtGuildGold.TabIndex = 4
+            Me.TxtGuildGold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'LblGuildGold
             '
-            Me.LblGuildGold.BorderStyle = BorderStyle.FixedSingle
-            Me.LblGuildGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblGuildGold.Location = New Point(13, 230)
-            Me.LblGuildGold.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuildGold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGuildGold.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGuildGold.Location = New System.Drawing.Point(13, 230)
+            Me.LblGuildGold.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblGuildGold.Name = "LblGuildGold"
-            Me.LblGuildGold.Size = New Size(125, 24)
+            Me.LblGuildGold.Size = New System.Drawing.Size(125, 24)
             Me.LblGuildGold.TabIndex = 21
             Me.LblGuildGold.Text = "Guild Gold:"
-            Me.LblGuildGold.TextAlign = ContentAlignment.MiddleRight
+            Me.LblGuildGold.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtHenchmenLevel1
+            'TxtHenchmenLevel1
             '
-            Me.txtHenchmenLevel1.Enabled = False
-            Me.txtHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel1.Location = New Point(146, 261)
-            Me.txtHenchmenLevel1.Margin = New Padding(4)
-            Me.txtHenchmenLevel1.MaxLength = 3
-            Me.txtHenchmenLevel1.Name = "txtHenchmenLevel1"
-            Me.txtHenchmenLevel1.Size = New Size(73, 22)
-            Me.txtHenchmenLevel1.TabIndex = 5
-            Me.txtHenchmenLevel1.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel1.Enabled = False
+            Me.TxtHenchmenLevel1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel1.Location = New System.Drawing.Point(146, 261)
+            Me.TxtHenchmenLevel1.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel1.MaxLength = 3
+            Me.TxtHenchmenLevel1.Name = "TxtHenchmenLevel1"
+            Me.TxtHenchmenLevel1.Size = New System.Drawing.Size(73, 26)
+            Me.TxtHenchmenLevel1.TabIndex = 5
+            Me.TxtHenchmenLevel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel2
+            'TxtHenchmenLevel2
             '
-            Me.txtHenchmenLevel2.Enabled = False
-            Me.txtHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel2.Location = New Point(146, 291)
-            Me.txtHenchmenLevel2.Margin = New Padding(4)
-            Me.txtHenchmenLevel2.MaxLength = 3
-            Me.txtHenchmenLevel2.Name = "txtHenchmenLevel2"
-            Me.txtHenchmenLevel2.Size = New Size(73, 22)
-            Me.txtHenchmenLevel2.TabIndex = 6
-            Me.txtHenchmenLevel2.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel2.Enabled = False
+            Me.TxtHenchmenLevel2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel2.Location = New System.Drawing.Point(146, 291)
+            Me.TxtHenchmenLevel2.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel2.MaxLength = 3
+            Me.TxtHenchmenLevel2.Name = "TxtHenchmenLevel2"
+            Me.TxtHenchmenLevel2.Size = New System.Drawing.Size(73, 26)
+            Me.TxtHenchmenLevel2.TabIndex = 6
+            Me.TxtHenchmenLevel2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel3
+            'TxtHenchmenLevel3
             '
-            Me.txtHenchmenLevel3.Enabled = False
-            Me.txtHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel3.Location = New Point(146, 321)
-            Me.txtHenchmenLevel3.Margin = New Padding(4)
-            Me.txtHenchmenLevel3.MaxLength = 3
-            Me.txtHenchmenLevel3.Name = "txtHenchmenLevel3"
-            Me.txtHenchmenLevel3.Size = New Size(73, 22)
-            Me.txtHenchmenLevel3.TabIndex = 7
-            Me.txtHenchmenLevel3.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel3.Enabled = False
+            Me.TxtHenchmenLevel3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel3.Location = New System.Drawing.Point(146, 321)
+            Me.TxtHenchmenLevel3.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel3.MaxLength = 3
+            Me.TxtHenchmenLevel3.Name = "TxtHenchmenLevel3"
+            Me.TxtHenchmenLevel3.Size = New System.Drawing.Size(73, 26)
+            Me.TxtHenchmenLevel3.TabIndex = 7
+            Me.TxtHenchmenLevel3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel4
+            'TxtHenchmenLevel4
             '
-            Me.txtHenchmenLevel4.Enabled = False
-            Me.txtHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel4.Location = New Point(146, 352)
-            Me.txtHenchmenLevel4.Margin = New Padding(4)
-            Me.txtHenchmenLevel4.MaxLength = 3
-            Me.txtHenchmenLevel4.Name = "txtHenchmenLevel4"
-            Me.txtHenchmenLevel4.Size = New Size(73, 22)
-            Me.txtHenchmenLevel4.TabIndex = 8
-            Me.txtHenchmenLevel4.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel4.Enabled = False
+            Me.TxtHenchmenLevel4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel4.Location = New System.Drawing.Point(146, 352)
+            Me.TxtHenchmenLevel4.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel4.MaxLength = 3
+            Me.TxtHenchmenLevel4.Name = "TxtHenchmenLevel4"
+            Me.TxtHenchmenLevel4.Size = New System.Drawing.Size(73, 26)
+            Me.TxtHenchmenLevel4.TabIndex = 8
+            Me.TxtHenchmenLevel4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel5
+            'TxtHenchmenLevel5
             '
-            Me.txtHenchmenLevel5.Enabled = False
-            Me.txtHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel5.Location = New Point(146, 382)
-            Me.txtHenchmenLevel5.Margin = New Padding(4)
-            Me.txtHenchmenLevel5.MaxLength = 3
-            Me.txtHenchmenLevel5.Name = "txtHenchmenLevel5"
-            Me.txtHenchmenLevel5.Size = New Size(73, 22)
-            Me.txtHenchmenLevel5.TabIndex = 9
-            Me.txtHenchmenLevel5.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel5.Enabled = False
+            Me.TxtHenchmenLevel5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel5.Location = New System.Drawing.Point(146, 382)
+            Me.TxtHenchmenLevel5.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel5.MaxLength = 3
+            Me.TxtHenchmenLevel5.Name = "TxtHenchmenLevel5"
+            Me.TxtHenchmenLevel5.Size = New System.Drawing.Size(73, 26)
+            Me.TxtHenchmenLevel5.TabIndex = 9
+            Me.TxtHenchmenLevel5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'LblHenchmenLevel5
             '
-            Me.LblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel5.Location = New Point(13, 381)
-            Me.LblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel5.Location = New System.Drawing.Point(13, 381)
+            Me.LblHenchmenLevel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel5.Name = "LblHenchmenLevel5"
-            Me.LblHenchmenLevel5.Size = New Size(125, 24)
+            Me.LblHenchmenLevel5.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel5.TabIndex = 26
             Me.LblHenchmenLevel5.Text = "Lvl 5 Henchmen:"
-            Me.LblHenchmenLevel5.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel4
             '
-            Me.LblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel4.Location = New Point(13, 351)
-            Me.LblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel4.Location = New System.Drawing.Point(13, 351)
+            Me.LblHenchmenLevel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel4.Name = "LblHenchmenLevel4"
-            Me.LblHenchmenLevel4.Size = New Size(125, 24)
+            Me.LblHenchmenLevel4.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel4.TabIndex = 25
             Me.LblHenchmenLevel4.Text = "Lvl 4 Henchmen:"
-            Me.LblHenchmenLevel4.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel3
             '
-            Me.LblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel3.Location = New Point(13, 320)
-            Me.LblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel3.Location = New System.Drawing.Point(13, 320)
+            Me.LblHenchmenLevel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel3.Name = "LblHenchmenLevel3"
-            Me.LblHenchmenLevel3.Size = New Size(125, 24)
+            Me.LblHenchmenLevel3.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel3.TabIndex = 24
             Me.LblHenchmenLevel3.Text = "Lvl 3 Henchmen:"
-            Me.LblHenchmenLevel3.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel2
             '
-            Me.LblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel2.Location = New Point(13, 290)
-            Me.LblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel2.Location = New System.Drawing.Point(13, 290)
+            Me.LblHenchmenLevel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel2.Name = "LblHenchmenLevel2"
-            Me.LblHenchmenLevel2.Size = New Size(125, 24)
+            Me.LblHenchmenLevel2.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel2.TabIndex = 23
             Me.LblHenchmenLevel2.Text = "Lvl 2 Henchmen:"
-            Me.LblHenchmenLevel2.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel1
             '
-            Me.LblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel1.Location = New Point(13, 260)
-            Me.LblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel1.Location = New System.Drawing.Point(13, 260)
+            Me.LblHenchmenLevel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel1.Name = "LblHenchmenLevel1"
-            Me.LblHenchmenLevel1.Size = New Size(125, 24)
+            Me.LblHenchmenLevel1.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel1.TabIndex = 22
             Me.LblHenchmenLevel1.Text = "Lvl 1 Henchmen:"
-            Me.LblHenchmenLevel1.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'BtnClear
             '
             Me.BtnClear.Enabled = False
-            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnClear.Location = New Point(379, 308)
-            Me.BtnClear.Margin = New Padding(4)
+            Me.BtnClear.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New System.Drawing.Point(379, 308)
+            Me.BtnClear.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnClear.Name = "BtnClear"
-            Me.BtnClear.Size = New Size(125, 30)
+            Me.BtnClear.Size = New System.Drawing.Size(125, 30)
             Me.BtnClear.TabIndex = 13
             Me.BtnClear.Text = "&Clear"
             Me.BtnClear.UseVisualStyleBackColor = True
@@ -298,23 +298,23 @@ Namespace Forms.Admin
             'BtnExpel
             '
             Me.BtnExpel.Enabled = False
-            Me.BtnExpel.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnExpel.Location = New Point(379, 270)
-            Me.BtnExpel.Margin = New Padding(4)
+            Me.BtnExpel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExpel.Location = New System.Drawing.Point(379, 270)
+            Me.BtnExpel.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnExpel.Name = "BtnExpel"
-            Me.BtnExpel.Size = New Size(125, 30)
+            Me.BtnExpel.Size = New System.Drawing.Size(125, 30)
             Me.BtnExpel.TabIndex = 12
             Me.BtnExpel.Text = "&Expel Member"
             Me.BtnExpel.UseVisualStyleBackColor = True
             '
             'BtnExit
             '
-            Me.BtnExit.DialogResult = DialogResult.Cancel
-            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnExit.Location = New Point(379, 384)
-            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.BtnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New System.Drawing.Point(379, 384)
+            Me.BtnExit.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnExit.Name = "BtnExit"
-            Me.BtnExit.Size = New Size(125, 30)
+            Me.BtnExit.Size = New System.Drawing.Size(125, 30)
             Me.BtnExit.TabIndex = 15
             Me.BtnExit.Text = "E&xit"
             Me.BtnExit.UseVisualStyleBackColor = True
@@ -322,11 +322,11 @@ Namespace Forms.Admin
             'BtnSave
             '
             Me.BtnSave.Enabled = False
-            Me.BtnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnSave.Location = New Point(379, 346)
-            Me.BtnSave.Margin = New Padding(4)
+            Me.BtnSave.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSave.Location = New System.Drawing.Point(379, 346)
+            Me.BtnSave.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnSave.Name = "BtnSave"
-            Me.BtnSave.Size = New Size(125, 30)
+            Me.BtnSave.Size = New System.Drawing.Size(125, 30)
             Me.BtnSave.TabIndex = 14
             Me.BtnSave.Text = "&Save"
             Me.BtnSave.UseVisualStyleBackColor = True
@@ -334,59 +334,59 @@ Namespace Forms.Admin
             'BtnAddMember
             '
             Me.BtnAddMember.Enabled = False
-            Me.BtnAddMember.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnAddMember.Location = New Point(379, 232)
-            Me.BtnAddMember.Margin = New Padding(4)
+            Me.BtnAddMember.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnAddMember.Location = New System.Drawing.Point(379, 232)
+            Me.BtnAddMember.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnAddMember.Name = "BtnAddMember"
-            Me.BtnAddMember.Size = New Size(125, 30)
+            Me.BtnAddMember.Size = New System.Drawing.Size(125, 30)
             Me.BtnAddMember.TabIndex = 11
             Me.BtnAddMember.Text = "&Add Member"
             Me.BtnAddMember.UseVisualStyleBackColor = True
             '
             'LblMembers
             '
-            Me.LblMembers.BorderStyle = BorderStyle.FixedSingle
-            Me.LblMembers.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblMembers.Location = New Point(328, 9)
-            Me.LblMembers.Margin = New Padding(4, 0, 4, 0)
+            Me.LblMembers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblMembers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblMembers.Location = New System.Drawing.Point(328, 9)
+            Me.LblMembers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblMembers.Name = "LblMembers"
-            Me.LblMembers.Size = New Size(225, 24)
+            Me.LblMembers.Size = New System.Drawing.Size(225, 24)
             Me.LblMembers.TabIndex = 17
             Me.LblMembers.Text = "Guild Members"
-            Me.LblMembers.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblMembers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'LstMembers
             '
             Me.LstMembers.Enabled = False
-            Me.LstMembers.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LstMembers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.LstMembers.FormattingEnabled = True
             Me.LstMembers.ItemHeight = 18
-            Me.LstMembers.Location = New Point(329, 37)
-            Me.LstMembers.Margin = New Padding(4)
+            Me.LstMembers.Location = New System.Drawing.Point(329, 37)
+            Me.LstMembers.Margin = New System.Windows.Forms.Padding(4)
             Me.LstMembers.Name = "LstMembers"
             Me.LstMembers.ScrollAlwaysVisible = True
-            Me.LstMembers.Size = New Size(225, 184)
+            Me.LstMembers.Size = New System.Drawing.Size(225, 184)
             Me.LstMembers.Sorted = True
             Me.LstMembers.TabIndex = 10
             '
             'LblGuilds
             '
-            Me.LblGuilds.BorderStyle = BorderStyle.FixedSingle
-            Me.LblGuilds.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblGuilds.Location = New Point(13, 9)
-            Me.LblGuilds.Margin = New Padding(4, 0, 4, 0)
+            Me.LblGuilds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGuilds.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGuilds.Location = New System.Drawing.Point(13, 9)
+            Me.LblGuilds.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblGuilds.Name = "LblGuilds"
-            Me.LblGuilds.Size = New Size(225, 24)
+            Me.LblGuilds.Size = New System.Drawing.Size(225, 24)
             Me.LblGuilds.TabIndex = 16
             Me.LblGuilds.Text = "Guilds"
-            Me.LblGuilds.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGuilds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'frmAdminGuilds
+            'FrmAdminGuilds
             '
-            Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
-            Me.AutoScaleMode = AutoScaleMode.Font
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnExit
-            Me.ClientSize = New Size(567, 427)
+            Me.ClientSize = New System.Drawing.Size(567, 426)
             Me.Controls.Add(Me.LblGuilds)
             Me.Controls.Add(Me.LstMembers)
             Me.Controls.Add(Me.LblMembers)
@@ -395,32 +395,32 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.BtnSave)
             Me.Controls.Add(Me.BtnClear)
             Me.Controls.Add(Me.BtnExpel)
-            Me.Controls.Add(Me.txtHenchmenLevel1)
-            Me.Controls.Add(Me.txtHenchmenLevel2)
-            Me.Controls.Add(Me.txtHenchmenLevel3)
-            Me.Controls.Add(Me.txtHenchmenLevel4)
-            Me.Controls.Add(Me.txtHenchmenLevel5)
+            Me.Controls.Add(Me.TxtHenchmenLevel1)
+            Me.Controls.Add(Me.TxtHenchmenLevel2)
+            Me.Controls.Add(Me.TxtHenchmenLevel3)
+            Me.Controls.Add(Me.TxtHenchmenLevel4)
+            Me.Controls.Add(Me.TxtHenchmenLevel5)
             Me.Controls.Add(Me.LblHenchmenLevel5)
             Me.Controls.Add(Me.LblHenchmenLevel4)
             Me.Controls.Add(Me.LblHenchmenLevel3)
             Me.Controls.Add(Me.LblHenchmenLevel2)
             Me.Controls.Add(Me.LblHenchmenLevel1)
-            Me.Controls.Add(Me.txtGuildGold)
+            Me.Controls.Add(Me.TxtGuildGold)
             Me.Controls.Add(Me.LblGuildGold)
-            Me.Controls.Add(Me.txtEntranceFee)
+            Me.Controls.Add(Me.TxtEntranceFee)
             Me.Controls.Add(Me.LblFee)
             Me.Controls.Add(Me.CmbGuildmaster)
             Me.Controls.Add(Me.LblGuildmaster)
-            Me.Controls.Add(Me.txtName)
+            Me.Controls.Add(Me.TxtName)
             Me.Controls.Add(Me.LblName)
             Me.Controls.Add(Me.LstGuilds)
-            Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Margin = New Padding(4)
+            Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Margin = New System.Windows.Forms.Padding(4)
             Me.MaximizeBox = False
-            Me.MaximumSize = New Size(583, 465)
-            Me.MinimumSize = New Size(583, 465)
-            Me.Name = "frmAdminGuilds"
-            Me.StartPosition = FormStartPosition.CenterScreen
+            Me.MaximumSize = New System.Drawing.Size(583, 465)
+            Me.MinimumSize = New System.Drawing.Size(583, 465)
+            Me.Name = "FrmAdminGuilds"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Admin Guilds"
             Me.ResumeLayout(False)
             Me.PerformLayout()

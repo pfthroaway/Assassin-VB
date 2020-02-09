@@ -26,675 +26,675 @@ Namespace Forms.Admin
         'Do not modify it using the code editor.
         <DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.LstUsers = New ListBox()
-            Me.LblName = New Label()
-            Me.LblLevel = New Label()
-            Me.LblMaximumEndurance = New Label()
-            Me.LblCurrentEndurance = New Label()
-            Me.LblSkillPts = New Label()
-            Me.LblExp = New Label()
-            Me.LblAlive = New Label()
-            Me.Label1 = New Label()
-            Me.LblHenchmenLevel1 = New Label()
-            Me.Label3 = New Label()
-            Me.Label4 = New Label()
-            Me.LblLocation = New Label()
-            Me.txtName = New TextBox()
-            Me.LblHenchmenLevel2 = New Label()
-            Me.LblHenchmenLevel3 = New Label()
-            Me.LblHenchmenLevel4 = New Label()
-            Me.LblHenchmenLevel5 = New Label()
-            Me.txtSkillPts = New TextBox()
-            Me.txtGoldBank = New TextBox()
-            Me.txtGoldLoan = New TextBox()
-            Me.txtCurrentEndurance = New TextBox()
-            Me.txtMaximumEndurance = New TextBox()
-            Me.txtExp = New TextBox()
-            Me.txtLevel = New TextBox()
-            Me.txtTwoH = New TextBox()
-            Me.Label2 = New Label()
-            Me.Label5 = New Label()
-            Me.Label6 = New Label()
-            Me.Label7 = New Label()
-            Me.Label8 = New Label()
-            Me.Label9 = New Label()
-            Me.Label10 = New Label()
-            Me.Label11 = New Label()
-            Me.Label12 = New Label()
-            Me.txtGoldHand = New TextBox()
-            Me.txtHeavy = New TextBox()
-            Me.txtLight = New TextBox()
-            Me.txtBlocking = New TextBox()
-            Me.txtHenchmenLevel5 = New TextBox()
-            Me.txtHenchmenLevel4 = New TextBox()
-            Me.txtHenchmenLevel3 = New TextBox()
-            Me.txtHenchmenLevel2 = New TextBox()
-            Me.txtHenchmenLevel1 = New TextBox()
-            Me.txtStealth = New TextBox()
-            Me.txtSlipping = New TextBox()
-            Me.BtnSave = New Button()
-            Me.BtnExit = New Button()
-            Me.BtnNewUser = New Button()
-            Me.BtnDelete = New Button()
-            Me.LblPass = New Label()
-            Me.txtChangePass = New TextBox()
-            Me.Label14 = New Label()
-            Me.Label15 = New Label()
-            Me.Label16 = New Label()
-            Me.BtnClear = New Button()
-            Me.Label18 = New Label()
-            Me.txtLockpicks = New TextBox()
-            Me.Label17 = New Label()
-            Me.txtConfPass = New TextBox()
-            Me.Label19 = New Label()
-            Me.Label20 = New Label()
-            Me.Label21 = New Label()
-            Me.Label22 = New Label()
-            Me.Label23 = New Label()
-            Me.txtHunger = New TextBox()
-            Me.Label24 = New Label()
-            Me.txtThirst = New TextBox()
-            Me.Label25 = New Label()
-            Me.chkAlive = New CheckBox()
-            Me.CmbCurrWeapon = New ComboBox()
-            Me.CmbLoc = New ComboBox()
-            Me.CmbLightWeapon = New ComboBox()
-            Me.CmbHeavyWeapon = New ComboBox()
-            Me.CmbTwoHWeapon = New ComboBox()
-            Me.CmbArmor = New ComboBox()
-            Me.CmbPotion = New ComboBox()
-            Me.chkShovel = New CheckBox()
-            Me.LblShovel = New Label()
-            Me.chkLantern = New CheckBox()
-            Me.LblLantern = New Label()
-            Me.chkAmulet = New CheckBox()
-            Me.LblAmulet = New Label()
+            Me.LstUsers = New System.Windows.Forms.ListBox()
+            Me.LblName = New System.Windows.Forms.Label()
+            Me.LblLevel = New System.Windows.Forms.Label()
+            Me.LblMaximumEndurance = New System.Windows.Forms.Label()
+            Me.LblCurrentEndurance = New System.Windows.Forms.Label()
+            Me.LblSkillPts = New System.Windows.Forms.Label()
+            Me.LblExp = New System.Windows.Forms.Label()
+            Me.LblAlive = New System.Windows.Forms.Label()
+            Me.Label1 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel1 = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.LblLocation = New System.Windows.Forms.Label()
+            Me.TxtName = New System.Windows.Forms.TextBox()
+            Me.LblHenchmenLevel2 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel3 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel4 = New System.Windows.Forms.Label()
+            Me.LblHenchmenLevel5 = New System.Windows.Forms.Label()
+            Me.TxtSkillPts = New System.Windows.Forms.TextBox()
+            Me.TxtGoldBank = New System.Windows.Forms.TextBox()
+            Me.TxtGoldLoan = New System.Windows.Forms.TextBox()
+            Me.TxtCurrentEndurance = New System.Windows.Forms.TextBox()
+            Me.TxtMaximumEndurance = New System.Windows.Forms.TextBox()
+            Me.TxtExp = New System.Windows.Forms.TextBox()
+            Me.TxtLevel = New System.Windows.Forms.TextBox()
+            Me.TxtTwoH = New System.Windows.Forms.TextBox()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.Label5 = New System.Windows.Forms.Label()
+            Me.Label6 = New System.Windows.Forms.Label()
+            Me.Label7 = New System.Windows.Forms.Label()
+            Me.Label8 = New System.Windows.Forms.Label()
+            Me.Label9 = New System.Windows.Forms.Label()
+            Me.Label10 = New System.Windows.Forms.Label()
+            Me.Label11 = New System.Windows.Forms.Label()
+            Me.Label12 = New System.Windows.Forms.Label()
+            Me.TxtGoldHand = New System.Windows.Forms.TextBox()
+            Me.TxtHeavy = New System.Windows.Forms.TextBox()
+            Me.TxtLight = New System.Windows.Forms.TextBox()
+            Me.TxtBlocking = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel5 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel4 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel3 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel2 = New System.Windows.Forms.TextBox()
+            Me.TxtHenchmenLevel1 = New System.Windows.Forms.TextBox()
+            Me.TxtStealth = New System.Windows.Forms.TextBox()
+            Me.TxtSlipping = New System.Windows.Forms.TextBox()
+            Me.BtnSave = New System.Windows.Forms.Button()
+            Me.BtnExit = New System.Windows.Forms.Button()
+            Me.BtnNewUser = New System.Windows.Forms.Button()
+            Me.BtnDelete = New System.Windows.Forms.Button()
+            Me.LblPass = New System.Windows.Forms.Label()
+            Me.TxtChangePass = New System.Windows.Forms.TextBox()
+            Me.Label14 = New System.Windows.Forms.Label()
+            Me.Label15 = New System.Windows.Forms.Label()
+            Me.Label16 = New System.Windows.Forms.Label()
+            Me.BtnClear = New System.Windows.Forms.Button()
+            Me.Label18 = New System.Windows.Forms.Label()
+            Me.TxtLockpicks = New System.Windows.Forms.TextBox()
+            Me.Label17 = New System.Windows.Forms.Label()
+            Me.TxtConfPass = New System.Windows.Forms.TextBox()
+            Me.Label19 = New System.Windows.Forms.Label()
+            Me.Label20 = New System.Windows.Forms.Label()
+            Me.Label21 = New System.Windows.Forms.Label()
+            Me.Label22 = New System.Windows.Forms.Label()
+            Me.Label23 = New System.Windows.Forms.Label()
+            Me.TxtHunger = New System.Windows.Forms.TextBox()
+            Me.Label24 = New System.Windows.Forms.Label()
+            Me.TxtThirst = New System.Windows.Forms.TextBox()
+            Me.Label25 = New System.Windows.Forms.Label()
+            Me.chkAlive = New System.Windows.Forms.CheckBox()
+            Me.CmbCurrWeapon = New System.Windows.Forms.ComboBox()
+            Me.CmbLoc = New System.Windows.Forms.ComboBox()
+            Me.CmbLightWeapon = New System.Windows.Forms.ComboBox()
+            Me.CmbHeavyWeapon = New System.Windows.Forms.ComboBox()
+            Me.CmbTwoHWeapon = New System.Windows.Forms.ComboBox()
+            Me.CmbArmor = New System.Windows.Forms.ComboBox()
+            Me.CmbPotion = New System.Windows.Forms.ComboBox()
+            Me.chkShovel = New System.Windows.Forms.CheckBox()
+            Me.LblShovel = New System.Windows.Forms.Label()
+            Me.chkLantern = New System.Windows.Forms.CheckBox()
+            Me.LblLantern = New System.Windows.Forms.Label()
+            Me.chkAmulet = New System.Windows.Forms.CheckBox()
+            Me.LblAmulet = New System.Windows.Forms.Label()
             Me.SuspendLayout()
             '
             'LstUsers
             '
-            Me.LstUsers.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.LstUsers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.LstUsers.FormattingEnabled = True
             Me.LstUsers.ItemHeight = 18
-            Me.LstUsers.Location = New Point(18, 17)
-            Me.LstUsers.Margin = New Padding(4)
+            Me.LstUsers.Location = New System.Drawing.Point(18, 17)
+            Me.LstUsers.Margin = New System.Windows.Forms.Padding(4)
             Me.LstUsers.Name = "LstUsers"
             Me.LstUsers.ScrollAlwaysVisible = True
-            Me.LstUsers.Size = New Size(225, 364)
+            Me.LstUsers.Size = New System.Drawing.Size(225, 364)
             Me.LstUsers.Sorted = True
             Me.LstUsers.TabIndex = 0
             '
             'LblName
             '
-            Me.LblName.BorderStyle = BorderStyle.FixedSingle
-            Me.LblName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblName.Location = New Point(251, 47)
-            Me.LblName.Margin = New Padding(4, 0, 4, 0)
+            Me.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblName.Location = New System.Drawing.Point(251, 47)
+            Me.LblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblName.Name = "LblName"
-            Me.LblName.Size = New Size(125, 24)
+            Me.LblName.Size = New System.Drawing.Size(125, 24)
             Me.LblName.TabIndex = 2
             Me.LblName.Text = "Name:"
-            Me.LblName.TextAlign = ContentAlignment.MiddleRight
+            Me.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblLevel
             '
-            Me.LblLevel.BorderStyle = BorderStyle.FixedSingle
-            Me.LblLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblLevel.Location = New Point(251, 305)
-            Me.LblLevel.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLevel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLevel.Location = New System.Drawing.Point(251, 305)
+            Me.LblLevel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblLevel.Name = "LblLevel"
-            Me.LblLevel.Size = New Size(125, 24)
+            Me.LblLevel.Size = New System.Drawing.Size(125, 24)
             Me.LblLevel.TabIndex = 3
             Me.LblLevel.Text = "Level:"
-            Me.LblLevel.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLevel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblMaximumEndurance
             '
-            Me.LblMaximumEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.LblMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblMaximumEndurance.Location = New Point(251, 485)
-            Me.LblMaximumEndurance.Margin = New Padding(4, 0, 4, 0)
+            Me.LblMaximumEndurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblMaximumEndurance.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblMaximumEndurance.Location = New System.Drawing.Point(251, 485)
+            Me.LblMaximumEndurance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblMaximumEndurance.Name = "LblMaximumEndurance"
-            Me.LblMaximumEndurance.Size = New Size(125, 24)
+            Me.LblMaximumEndurance.Size = New System.Drawing.Size(125, 24)
             Me.LblMaximumEndurance.TabIndex = 4
             Me.LblMaximumEndurance.Text = "Max Endurance:"
-            Me.LblMaximumEndurance.TextAlign = ContentAlignment.MiddleRight
+            Me.LblMaximumEndurance.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblCurrentEndurance
             '
-            Me.LblCurrentEndurance.BorderStyle = BorderStyle.FixedSingle
-            Me.LblCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblCurrentEndurance.Location = New Point(251, 455)
-            Me.LblCurrentEndurance.Margin = New Padding(4, 0, 4, 0)
+            Me.LblCurrentEndurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblCurrentEndurance.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblCurrentEndurance.Location = New System.Drawing.Point(251, 455)
+            Me.LblCurrentEndurance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblCurrentEndurance.Name = "LblCurrentEndurance"
-            Me.LblCurrentEndurance.Size = New Size(125, 24)
+            Me.LblCurrentEndurance.Size = New System.Drawing.Size(125, 24)
             Me.LblCurrentEndurance.TabIndex = 5
             Me.LblCurrentEndurance.Text = "Curr Endurance:"
-            Me.LblCurrentEndurance.TextAlign = ContentAlignment.MiddleRight
+            Me.LblCurrentEndurance.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblSkillPts
             '
-            Me.LblSkillPts.BorderStyle = BorderStyle.FixedSingle
-            Me.LblSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblSkillPts.Location = New Point(251, 365)
-            Me.LblSkillPts.Margin = New Padding(4, 0, 4, 0)
+            Me.LblSkillPts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblSkillPts.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblSkillPts.Location = New System.Drawing.Point(251, 365)
+            Me.LblSkillPts.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblSkillPts.Name = "LblSkillPts"
-            Me.LblSkillPts.Size = New Size(125, 24)
+            Me.LblSkillPts.Size = New System.Drawing.Size(125, 24)
             Me.LblSkillPts.TabIndex = 6
             Me.LblSkillPts.Text = "Skill Points:"
-            Me.LblSkillPts.TextAlign = ContentAlignment.MiddleRight
+            Me.LblSkillPts.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblExp
             '
-            Me.LblExp.BorderStyle = BorderStyle.FixedSingle
-            Me.LblExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblExp.Location = New Point(251, 335)
-            Me.LblExp.Margin = New Padding(4, 0, 4, 0)
+            Me.LblExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblExp.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblExp.Location = New System.Drawing.Point(251, 335)
+            Me.LblExp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblExp.Name = "LblExp"
-            Me.LblExp.Size = New Size(125, 24)
+            Me.LblExp.Size = New System.Drawing.Size(125, 24)
             Me.LblExp.TabIndex = 7
             Me.LblExp.Text = "Experience:"
-            Me.LblExp.TextAlign = ContentAlignment.MiddleRight
+            Me.LblExp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblAlive
             '
-            Me.LblAlive.BorderStyle = BorderStyle.FixedSingle
-            Me.LblAlive.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblAlive.Location = New Point(251, 395)
-            Me.LblAlive.Margin = New Padding(4, 0, 4, 0)
+            Me.LblAlive.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblAlive.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblAlive.Location = New System.Drawing.Point(251, 395)
+            Me.LblAlive.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblAlive.Name = "LblAlive"
-            Me.LblAlive.Size = New Size(125, 24)
+            Me.LblAlive.Size = New System.Drawing.Size(125, 24)
             Me.LblAlive.TabIndex = 8
             Me.LblAlive.Text = "Alive:"
-            Me.LblAlive.TextAlign = ContentAlignment.MiddleRight
+            Me.LblAlive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label1
             '
-            Me.Label1.BorderStyle = BorderStyle.FixedSingle
-            Me.Label1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New Point(882, 167)
-            Me.Label1.Margin = New Padding(4, 0, 4, 0)
+            Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Location = New System.Drawing.Point(882, 167)
+            Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New Size(125, 24)
+            Me.Label1.Size = New System.Drawing.Size(125, 24)
             Me.Label1.TabIndex = 9
             Me.Label1.Text = "Slipping:"
-            Me.Label1.TextAlign = ContentAlignment.MiddleRight
+            Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel1
             '
-            Me.LblHenchmenLevel1.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel1.Location = New Point(882, 424)
-            Me.LblHenchmenLevel1.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel1.Location = New System.Drawing.Point(882, 424)
+            Me.LblHenchmenLevel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel1.Name = "LblHenchmenLevel1"
-            Me.LblHenchmenLevel1.Size = New Size(125, 24)
+            Me.LblHenchmenLevel1.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel1.TabIndex = 10
             Me.LblHenchmenLevel1.Text = "Lvl 1 Henchmen:"
-            Me.LblHenchmenLevel1.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label3
             '
-            Me.Label3.BorderStyle = BorderStyle.FixedSingle
-            Me.Label3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New Point(882, 197)
-            Me.Label3.Margin = New Padding(4, 0, 4, 0)
+            Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Location = New System.Drawing.Point(882, 197)
+            Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New Size(125, 24)
+            Me.Label3.Size = New System.Drawing.Size(125, 24)
             Me.Label3.TabIndex = 11
             Me.Label3.Text = "Stealth:"
-            Me.Label3.TextAlign = ContentAlignment.MiddleRight
+            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label4
             '
-            Me.Label4.BorderStyle = BorderStyle.FixedSingle
-            Me.Label4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New Point(567, 47)
-            Me.Label4.Margin = New Padding(4, 0, 4, 0)
+            Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label4.Location = New System.Drawing.Point(567, 47)
+            Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New Size(125, 24)
+            Me.Label4.Size = New System.Drawing.Size(125, 24)
             Me.Label4.TabIndex = 12
             Me.Label4.Text = "Current Weapon:"
-            Me.Label4.TextAlign = ContentAlignment.MiddleRight
+            Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblLocation
             '
-            Me.LblLocation.BorderStyle = BorderStyle.FixedSingle
-            Me.LblLocation.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblLocation.Location = New Point(251, 425)
-            Me.LblLocation.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLocation.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLocation.Location = New System.Drawing.Point(251, 425)
+            Me.LblLocation.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblLocation.Name = "LblLocation"
-            Me.LblLocation.Size = New Size(125, 24)
+            Me.LblLocation.Size = New System.Drawing.Size(125, 24)
             Me.LblLocation.TabIndex = 13
             Me.LblLocation.Text = "Location:"
-            Me.LblLocation.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLocation.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtName
+            'TxtName
             '
-            Me.txtName.Enabled = False
-            Me.txtName.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtName.Location = New Point(384, 48)
-            Me.txtName.Margin = New Padding(4)
-            Me.txtName.MaxLength = 30
-            Me.txtName.Name = "txtName"
-            Me.txtName.Size = New Size(175, 22)
-            Me.txtName.TabIndex = 1
-            Me.txtName.TextAlign = HorizontalAlignment.Center
+            Me.TxtName.Enabled = False
+            Me.TxtName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtName.Location = New System.Drawing.Point(384, 48)
+            Me.TxtName.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtName.MaxLength = 30
+            Me.TxtName.Name = "TxtName"
+            Me.TxtName.Size = New System.Drawing.Size(175, 26)
+            Me.TxtName.TabIndex = 1
+            Me.TxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'LblHenchmenLevel2
             '
-            Me.LblHenchmenLevel2.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel2.Location = New Point(882, 454)
-            Me.LblHenchmenLevel2.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel2.Location = New System.Drawing.Point(882, 454)
+            Me.LblHenchmenLevel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel2.Name = "LblHenchmenLevel2"
-            Me.LblHenchmenLevel2.Size = New Size(125, 24)
+            Me.LblHenchmenLevel2.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel2.TabIndex = 15
             Me.LblHenchmenLevel2.Text = "Lvl 2 Henchmen:"
-            Me.LblHenchmenLevel2.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel3
             '
-            Me.LblHenchmenLevel3.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel3.Location = New Point(882, 484)
-            Me.LblHenchmenLevel3.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel3.Location = New System.Drawing.Point(882, 484)
+            Me.LblHenchmenLevel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel3.Name = "LblHenchmenLevel3"
-            Me.LblHenchmenLevel3.Size = New Size(125, 24)
+            Me.LblHenchmenLevel3.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel3.TabIndex = 16
             Me.LblHenchmenLevel3.Text = "Lvl 3 Henchmen:"
-            Me.LblHenchmenLevel3.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel4
             '
-            Me.LblHenchmenLevel4.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel4.Location = New Point(882, 515)
-            Me.LblHenchmenLevel4.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel4.Location = New System.Drawing.Point(882, 515)
+            Me.LblHenchmenLevel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel4.Name = "LblHenchmenLevel4"
-            Me.LblHenchmenLevel4.Size = New Size(125, 24)
+            Me.LblHenchmenLevel4.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel4.TabIndex = 17
             Me.LblHenchmenLevel4.Text = "Lvl 4 Henchmen:"
-            Me.LblHenchmenLevel4.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'LblHenchmenLevel5
             '
-            Me.LblHenchmenLevel5.BorderStyle = BorderStyle.FixedSingle
-            Me.LblHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblHenchmenLevel5.Location = New Point(882, 545)
-            Me.LblHenchmenLevel5.Margin = New Padding(4, 0, 4, 0)
+            Me.LblHenchmenLevel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblHenchmenLevel5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblHenchmenLevel5.Location = New System.Drawing.Point(882, 545)
+            Me.LblHenchmenLevel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblHenchmenLevel5.Name = "LblHenchmenLevel5"
-            Me.LblHenchmenLevel5.Size = New Size(125, 24)
+            Me.LblHenchmenLevel5.Size = New System.Drawing.Size(125, 24)
             Me.LblHenchmenLevel5.TabIndex = 18
             Me.LblHenchmenLevel5.Text = "Lvl 5 Henchmen:"
-            Me.LblHenchmenLevel5.TextAlign = ContentAlignment.MiddleRight
+            Me.LblHenchmenLevel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtSkillPts
+            'TxtSkillPts
             '
-            Me.txtSkillPts.Enabled = False
-            Me.txtSkillPts.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSkillPts.Location = New Point(384, 366)
-            Me.txtSkillPts.Margin = New Padding(4)
-            Me.txtSkillPts.MaxLength = 3
-            Me.txtSkillPts.Name = "txtSkillPts"
-            Me.txtSkillPts.Size = New Size(50, 22)
-            Me.txtSkillPts.TabIndex = 6
-            Me.txtSkillPts.TextAlign = HorizontalAlignment.Center
+            Me.TxtSkillPts.Enabled = False
+            Me.TxtSkillPts.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtSkillPts.Location = New System.Drawing.Point(384, 366)
+            Me.TxtSkillPts.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtSkillPts.MaxLength = 3
+            Me.TxtSkillPts.Name = "TxtSkillPts"
+            Me.TxtSkillPts.Size = New System.Drawing.Size(50, 26)
+            Me.TxtSkillPts.TabIndex = 6
+            Me.TxtSkillPts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtGoldBank
+            'TxtGoldBank
             '
-            Me.txtGoldBank.Enabled = False
-            Me.txtGoldBank.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGoldBank.Location = New Point(699, 288)
-            Me.txtGoldBank.Margin = New Padding(4)
-            Me.txtGoldBank.MaxLength = 6
-            Me.txtGoldBank.Name = "txtGoldBank"
-            Me.txtGoldBank.Size = New Size(60, 22)
-            Me.txtGoldBank.TabIndex = 21
-            Me.txtGoldBank.TextAlign = HorizontalAlignment.Center
+            Me.TxtGoldBank.Enabled = False
+            Me.TxtGoldBank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldBank.Location = New System.Drawing.Point(699, 288)
+            Me.TxtGoldBank.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldBank.MaxLength = 6
+            Me.TxtGoldBank.Name = "TxtGoldBank"
+            Me.TxtGoldBank.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldBank.TabIndex = 21
+            Me.TxtGoldBank.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtGoldLoan
+            'TxtGoldLoan
             '
-            Me.txtGoldLoan.Enabled = False
-            Me.txtGoldLoan.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGoldLoan.Location = New Point(699, 318)
-            Me.txtGoldLoan.Margin = New Padding(4)
-            Me.txtGoldLoan.MaxLength = 6
-            Me.txtGoldLoan.Name = "txtGoldLoan"
-            Me.txtGoldLoan.Size = New Size(60, 22)
-            Me.txtGoldLoan.TabIndex = 22
-            Me.txtGoldLoan.TextAlign = HorizontalAlignment.Center
+            Me.TxtGoldLoan.Enabled = False
+            Me.TxtGoldLoan.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldLoan.Location = New System.Drawing.Point(699, 318)
+            Me.TxtGoldLoan.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldLoan.MaxLength = 6
+            Me.TxtGoldLoan.Name = "TxtGoldLoan"
+            Me.TxtGoldLoan.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldLoan.TabIndex = 22
+            Me.TxtGoldLoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtCurrentEndurance
+            'TxtCurrentEndurance
             '
-            Me.txtCurrentEndurance.Enabled = False
-            Me.txtCurrentEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtCurrentEndurance.Location = New Point(384, 456)
-            Me.txtCurrentEndurance.Margin = New Padding(4)
-            Me.txtCurrentEndurance.MaxLength = 4
-            Me.txtCurrentEndurance.Name = "txtCurrentEndurance"
-            Me.txtCurrentEndurance.Size = New Size(50, 22)
-            Me.txtCurrentEndurance.TabIndex = 9
-            Me.txtCurrentEndurance.TextAlign = HorizontalAlignment.Center
+            Me.TxtCurrentEndurance.Enabled = False
+            Me.TxtCurrentEndurance.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtCurrentEndurance.Location = New System.Drawing.Point(384, 456)
+            Me.TxtCurrentEndurance.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtCurrentEndurance.MaxLength = 4
+            Me.TxtCurrentEndurance.Name = "TxtCurrentEndurance"
+            Me.TxtCurrentEndurance.Size = New System.Drawing.Size(50, 26)
+            Me.TxtCurrentEndurance.TabIndex = 9
+            Me.TxtCurrentEndurance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtMaximumEndurance
+            'TxtMaximumEndurance
             '
-            Me.txtMaximumEndurance.Enabled = False
-            Me.txtMaximumEndurance.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtMaximumEndurance.Location = New Point(384, 486)
-            Me.txtMaximumEndurance.Margin = New Padding(4)
-            Me.txtMaximumEndurance.MaxLength = 4
-            Me.txtMaximumEndurance.Name = "txtMaximumEndurance"
-            Me.txtMaximumEndurance.Size = New Size(50, 22)
-            Me.txtMaximumEndurance.TabIndex = 10
-            Me.txtMaximumEndurance.TextAlign = HorizontalAlignment.Center
+            Me.TxtMaximumEndurance.Enabled = False
+            Me.TxtMaximumEndurance.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtMaximumEndurance.Location = New System.Drawing.Point(384, 486)
+            Me.TxtMaximumEndurance.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtMaximumEndurance.MaxLength = 4
+            Me.TxtMaximumEndurance.Name = "TxtMaximumEndurance"
+            Me.TxtMaximumEndurance.Size = New System.Drawing.Size(50, 26)
+            Me.TxtMaximumEndurance.TabIndex = 10
+            Me.TxtMaximumEndurance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtExp
+            'TxtExp
             '
-            Me.txtExp.Enabled = False
-            Me.txtExp.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtExp.Location = New Point(384, 336)
-            Me.txtExp.Margin = New Padding(4)
-            Me.txtExp.MaxLength = 3
-            Me.txtExp.Name = "txtExp"
-            Me.txtExp.Size = New Size(50, 22)
-            Me.txtExp.TabIndex = 5
-            Me.txtExp.TextAlign = HorizontalAlignment.Center
+            Me.TxtExp.Enabled = False
+            Me.TxtExp.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtExp.Location = New System.Drawing.Point(384, 336)
+            Me.TxtExp.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtExp.MaxLength = 3
+            Me.TxtExp.Name = "TxtExp"
+            Me.TxtExp.Size = New System.Drawing.Size(50, 26)
+            Me.TxtExp.TabIndex = 5
+            Me.TxtExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtLevel
+            'TxtLevel
             '
-            Me.txtLevel.Enabled = False
-            Me.txtLevel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtLevel.Location = New Point(384, 306)
-            Me.txtLevel.Margin = New Padding(4)
-            Me.txtLevel.MaxLength = 2
-            Me.txtLevel.Name = "txtLevel"
-            Me.txtLevel.Size = New Size(50, 22)
-            Me.txtLevel.TabIndex = 4
-            Me.txtLevel.TextAlign = HorizontalAlignment.Center
+            Me.TxtLevel.Enabled = False
+            Me.TxtLevel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtLevel.Location = New System.Drawing.Point(384, 306)
+            Me.TxtLevel.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtLevel.MaxLength = 2
+            Me.TxtLevel.Name = "TxtLevel"
+            Me.TxtLevel.Size = New System.Drawing.Size(50, 26)
+            Me.TxtLevel.TabIndex = 4
+            Me.TxtLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtTwoH
+            'TxtTwoH
             '
-            Me.txtTwoH.Enabled = False
-            Me.txtTwoH.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtTwoH.Location = New Point(1015, 108)
-            Me.txtTwoH.Margin = New Padding(4)
-            Me.txtTwoH.MaxLength = 2
-            Me.txtTwoH.Name = "txtTwoH"
-            Me.txtTwoH.Size = New Size(50, 22)
-            Me.txtTwoH.TabIndex = 25
-            Me.txtTwoH.TextAlign = HorizontalAlignment.Center
+            Me.TxtTwoH.Enabled = False
+            Me.TxtTwoH.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtTwoH.Location = New System.Drawing.Point(1015, 108)
+            Me.TxtTwoH.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtTwoH.MaxLength = 2
+            Me.TxtTwoH.Name = "TxtTwoH"
+            Me.TxtTwoH.Size = New System.Drawing.Size(50, 26)
+            Me.TxtTwoH.TabIndex = 25
+            Me.TxtTwoH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label2
             '
-            Me.Label2.BorderStyle = BorderStyle.FixedSingle
-            Me.Label2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New Point(567, 317)
-            Me.Label2.Margin = New Padding(4, 0, 4, 0)
+            Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label2.Location = New System.Drawing.Point(567, 317)
+            Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New Size(125, 24)
+            Me.Label2.Size = New System.Drawing.Size(125, 24)
             Me.Label2.TabIndex = 27
             Me.Label2.Text = "Gold on Loan:"
-            Me.Label2.TextAlign = ContentAlignment.MiddleRight
+            Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label5
             '
-            Me.Label5.BorderStyle = BorderStyle.FixedSingle
-            Me.Label5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New Point(882, 47)
-            Me.Label5.Margin = New Padding(4, 0, 4, 0)
+            Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label5.Location = New System.Drawing.Point(882, 47)
+            Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New Size(125, 24)
+            Me.Label5.Size = New System.Drawing.Size(125, 24)
             Me.Label5.TabIndex = 28
             Me.Label5.Text = "Light Wpn Skill:"
-            Me.Label5.TextAlign = ContentAlignment.MiddleRight
+            Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label6
             '
-            Me.Label6.BorderStyle = BorderStyle.FixedSingle
-            Me.Label6.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New Point(882, 77)
-            Me.Label6.Margin = New Padding(4, 0, 4, 0)
+            Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label6.Location = New System.Drawing.Point(882, 77)
+            Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label6.Name = "Label6"
-            Me.Label6.Size = New Size(125, 24)
+            Me.Label6.Size = New System.Drawing.Size(125, 24)
             Me.Label6.TabIndex = 29
             Me.Label6.Text = "Heavy Wpn Skill:"
-            Me.Label6.TextAlign = ContentAlignment.MiddleRight
+            Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label7
             '
-            Me.Label7.BorderStyle = BorderStyle.FixedSingle
-            Me.Label7.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New Point(882, 107)
-            Me.Label7.Margin = New Padding(4, 0, 4, 0)
+            Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label7.Location = New System.Drawing.Point(882, 107)
+            Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New Size(125, 24)
+            Me.Label7.Size = New System.Drawing.Size(125, 24)
             Me.Label7.TabIndex = 30
             Me.Label7.Text = "Two-H Wpn Skill:"
-            Me.Label7.TextAlign = ContentAlignment.MiddleRight
+            Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label8
             '
-            Me.Label8.BorderStyle = BorderStyle.FixedSingle
-            Me.Label8.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label8.Location = New Point(882, 137)
-            Me.Label8.Margin = New Padding(4, 0, 4, 0)
+            Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label8.Location = New System.Drawing.Point(882, 137)
+            Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label8.Name = "Label8"
-            Me.Label8.Size = New Size(125, 24)
+            Me.Label8.Size = New System.Drawing.Size(125, 24)
             Me.Label8.TabIndex = 31
             Me.Label8.Text = "Blocking:"
-            Me.Label8.TextAlign = ContentAlignment.MiddleRight
+            Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label9
             '
-            Me.Label9.BorderStyle = BorderStyle.FixedSingle
-            Me.Label9.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label9.Location = New Point(567, 287)
-            Me.Label9.Margin = New Padding(4, 0, 4, 0)
+            Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label9.Location = New System.Drawing.Point(567, 287)
+            Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label9.Name = "Label9"
-            Me.Label9.Size = New Size(125, 24)
+            Me.Label9.Size = New System.Drawing.Size(125, 24)
             Me.Label9.TabIndex = 32
             Me.Label9.Text = "Gold in Bank:"
-            Me.Label9.TextAlign = ContentAlignment.MiddleRight
+            Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label10
             '
-            Me.Label10.BorderStyle = BorderStyle.FixedSingle
-            Me.Label10.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label10.Location = New Point(567, 257)
-            Me.Label10.Margin = New Padding(4, 0, 4, 0)
+            Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label10.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label10.Location = New System.Drawing.Point(567, 257)
+            Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label10.Name = "Label10"
-            Me.Label10.Size = New Size(125, 24)
+            Me.Label10.Size = New System.Drawing.Size(125, 24)
             Me.Label10.TabIndex = 33
             Me.Label10.Text = "Gold on Hand:"
-            Me.Label10.TextAlign = ContentAlignment.MiddleRight
+            Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label11
             '
-            Me.Label11.BorderStyle = BorderStyle.FixedSingle
-            Me.Label11.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label11.Location = New Point(567, 197)
-            Me.Label11.Margin = New Padding(4, 0, 4, 0)
+            Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label11.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label11.Location = New System.Drawing.Point(567, 197)
+            Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label11.Name = "Label11"
-            Me.Label11.Size = New Size(125, 24)
+            Me.Label11.Size = New System.Drawing.Size(125, 24)
             Me.Label11.TabIndex = 34
             Me.Label11.Text = "Potion:"
-            Me.Label11.TextAlign = ContentAlignment.MiddleRight
+            Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label12
             '
-            Me.Label12.BorderStyle = BorderStyle.FixedSingle
-            Me.Label12.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label12.Location = New Point(567, 167)
-            Me.Label12.Margin = New Padding(4, 0, 4, 0)
+            Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label12.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label12.Location = New System.Drawing.Point(567, 167)
+            Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label12.Name = "Label12"
-            Me.Label12.Size = New Size(125, 24)
+            Me.Label12.Size = New System.Drawing.Size(125, 24)
             Me.Label12.TabIndex = 35
             Me.Label12.Text = "Armor:"
-            Me.Label12.TextAlign = ContentAlignment.MiddleRight
+            Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtGoldHand
+            'TxtGoldHand
             '
-            Me.txtGoldHand.Enabled = False
-            Me.txtGoldHand.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtGoldHand.Location = New Point(700, 258)
-            Me.txtGoldHand.Margin = New Padding(4)
-            Me.txtGoldHand.MaxLength = 6
-            Me.txtGoldHand.Name = "txtGoldHand"
-            Me.txtGoldHand.Size = New Size(60, 22)
-            Me.txtGoldHand.TabIndex = 20
-            Me.txtGoldHand.TextAlign = HorizontalAlignment.Center
+            Me.TxtGoldHand.Enabled = False
+            Me.TxtGoldHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldHand.Location = New System.Drawing.Point(700, 258)
+            Me.TxtGoldHand.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldHand.MaxLength = 6
+            Me.TxtGoldHand.Name = "TxtGoldHand"
+            Me.TxtGoldHand.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldHand.TabIndex = 20
+            Me.TxtGoldHand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHeavy
+            'TxtHeavy
             '
-            Me.txtHeavy.Enabled = False
-            Me.txtHeavy.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHeavy.Location = New Point(1015, 78)
-            Me.txtHeavy.Margin = New Padding(4)
-            Me.txtHeavy.MaxLength = 2
-            Me.txtHeavy.Name = "txtHeavy"
-            Me.txtHeavy.Size = New Size(50, 22)
-            Me.txtHeavy.TabIndex = 24
-            Me.txtHeavy.TextAlign = HorizontalAlignment.Center
+            Me.TxtHeavy.Enabled = False
+            Me.TxtHeavy.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHeavy.Location = New System.Drawing.Point(1015, 78)
+            Me.TxtHeavy.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHeavy.MaxLength = 2
+            Me.TxtHeavy.Name = "TxtHeavy"
+            Me.TxtHeavy.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHeavy.TabIndex = 24
+            Me.TxtHeavy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtLight
+            'TxtLight
             '
-            Me.txtLight.Enabled = False
-            Me.txtLight.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtLight.Location = New Point(1015, 48)
-            Me.txtLight.Margin = New Padding(4)
-            Me.txtLight.MaxLength = 2
-            Me.txtLight.Name = "txtLight"
-            Me.txtLight.Size = New Size(50, 22)
-            Me.txtLight.TabIndex = 23
-            Me.txtLight.TextAlign = HorizontalAlignment.Center
+            Me.TxtLight.Enabled = False
+            Me.TxtLight.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtLight.Location = New System.Drawing.Point(1015, 48)
+            Me.TxtLight.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtLight.MaxLength = 2
+            Me.TxtLight.Name = "TxtLight"
+            Me.TxtLight.Size = New System.Drawing.Size(50, 26)
+            Me.TxtLight.TabIndex = 23
+            Me.TxtLight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtBlocking
+            'TxtBlocking
             '
-            Me.txtBlocking.Enabled = False
-            Me.txtBlocking.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtBlocking.Location = New Point(1015, 138)
-            Me.txtBlocking.Margin = New Padding(4)
-            Me.txtBlocking.MaxLength = 2
-            Me.txtBlocking.Name = "txtBlocking"
-            Me.txtBlocking.Size = New Size(50, 22)
-            Me.txtBlocking.TabIndex = 26
-            Me.txtBlocking.TextAlign = HorizontalAlignment.Center
+            Me.TxtBlocking.Enabled = False
+            Me.TxtBlocking.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtBlocking.Location = New System.Drawing.Point(1015, 138)
+            Me.TxtBlocking.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtBlocking.MaxLength = 2
+            Me.TxtBlocking.Name = "TxtBlocking"
+            Me.TxtBlocking.Size = New System.Drawing.Size(50, 26)
+            Me.TxtBlocking.TabIndex = 26
+            Me.TxtBlocking.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel5
+            'TxtHenchmenLevel5
             '
-            Me.txtHenchmenLevel5.Enabled = False
-            Me.txtHenchmenLevel5.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel5.Location = New Point(1015, 546)
-            Me.txtHenchmenLevel5.Margin = New Padding(4)
-            Me.txtHenchmenLevel5.MaxLength = 3
-            Me.txtHenchmenLevel5.Name = "txtHenchmenLevel5"
-            Me.txtHenchmenLevel5.Size = New Size(50, 22)
-            Me.txtHenchmenLevel5.TabIndex = 33
-            Me.txtHenchmenLevel5.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel5.Enabled = False
+            Me.TxtHenchmenLevel5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel5.Location = New System.Drawing.Point(1015, 546)
+            Me.TxtHenchmenLevel5.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel5.MaxLength = 3
+            Me.TxtHenchmenLevel5.Name = "TxtHenchmenLevel5"
+            Me.TxtHenchmenLevel5.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHenchmenLevel5.TabIndex = 33
+            Me.TxtHenchmenLevel5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel4
+            'TxtHenchmenLevel4
             '
-            Me.txtHenchmenLevel4.Enabled = False
-            Me.txtHenchmenLevel4.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel4.Location = New Point(1015, 516)
-            Me.txtHenchmenLevel4.Margin = New Padding(4)
-            Me.txtHenchmenLevel4.MaxLength = 3
-            Me.txtHenchmenLevel4.Name = "txtHenchmenLevel4"
-            Me.txtHenchmenLevel4.Size = New Size(50, 22)
-            Me.txtHenchmenLevel4.TabIndex = 32
-            Me.txtHenchmenLevel4.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel4.Enabled = False
+            Me.TxtHenchmenLevel4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel4.Location = New System.Drawing.Point(1015, 516)
+            Me.TxtHenchmenLevel4.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel4.MaxLength = 3
+            Me.TxtHenchmenLevel4.Name = "TxtHenchmenLevel4"
+            Me.TxtHenchmenLevel4.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHenchmenLevel4.TabIndex = 32
+            Me.TxtHenchmenLevel4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel3
+            'TxtHenchmenLevel3
             '
-            Me.txtHenchmenLevel3.Enabled = False
-            Me.txtHenchmenLevel3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel3.Location = New Point(1015, 485)
-            Me.txtHenchmenLevel3.Margin = New Padding(4)
-            Me.txtHenchmenLevel3.MaxLength = 3
-            Me.txtHenchmenLevel3.Name = "txtHenchmenLevel3"
-            Me.txtHenchmenLevel3.Size = New Size(50, 22)
-            Me.txtHenchmenLevel3.TabIndex = 31
-            Me.txtHenchmenLevel3.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel3.Enabled = False
+            Me.TxtHenchmenLevel3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel3.Location = New System.Drawing.Point(1015, 485)
+            Me.TxtHenchmenLevel3.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel3.MaxLength = 3
+            Me.TxtHenchmenLevel3.Name = "TxtHenchmenLevel3"
+            Me.TxtHenchmenLevel3.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHenchmenLevel3.TabIndex = 31
+            Me.TxtHenchmenLevel3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel2
+            'TxtHenchmenLevel2
             '
-            Me.txtHenchmenLevel2.Enabled = False
-            Me.txtHenchmenLevel2.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel2.Location = New Point(1015, 455)
-            Me.txtHenchmenLevel2.Margin = New Padding(4)
-            Me.txtHenchmenLevel2.MaxLength = 3
-            Me.txtHenchmenLevel2.Name = "txtHenchmenLevel2"
-            Me.txtHenchmenLevel2.Size = New Size(50, 22)
-            Me.txtHenchmenLevel2.TabIndex = 30
-            Me.txtHenchmenLevel2.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel2.Enabled = False
+            Me.TxtHenchmenLevel2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel2.Location = New System.Drawing.Point(1015, 455)
+            Me.TxtHenchmenLevel2.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel2.MaxLength = 3
+            Me.TxtHenchmenLevel2.Name = "TxtHenchmenLevel2"
+            Me.TxtHenchmenLevel2.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHenchmenLevel2.TabIndex = 30
+            Me.TxtHenchmenLevel2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtHenchmenLevel1
+            'TxtHenchmenLevel1
             '
-            Me.txtHenchmenLevel1.Enabled = False
-            Me.txtHenchmenLevel1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHenchmenLevel1.Location = New Point(1015, 425)
-            Me.txtHenchmenLevel1.Margin = New Padding(4)
-            Me.txtHenchmenLevel1.MaxLength = 3
-            Me.txtHenchmenLevel1.Name = "txtHenchmenLevel1"
-            Me.txtHenchmenLevel1.Size = New Size(50, 22)
-            Me.txtHenchmenLevel1.TabIndex = 29
-            Me.txtHenchmenLevel1.TextAlign = HorizontalAlignment.Center
+            Me.TxtHenchmenLevel1.Enabled = False
+            Me.TxtHenchmenLevel1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHenchmenLevel1.Location = New System.Drawing.Point(1015, 425)
+            Me.TxtHenchmenLevel1.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHenchmenLevel1.MaxLength = 3
+            Me.TxtHenchmenLevel1.Name = "TxtHenchmenLevel1"
+            Me.TxtHenchmenLevel1.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHenchmenLevel1.TabIndex = 29
+            Me.TxtHenchmenLevel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtStealth
+            'TxtStealth
             '
-            Me.txtStealth.Enabled = False
-            Me.txtStealth.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtStealth.Location = New Point(1015, 198)
-            Me.txtStealth.Margin = New Padding(4)
-            Me.txtStealth.MaxLength = 2
-            Me.txtStealth.Name = "txtStealth"
-            Me.txtStealth.Size = New Size(50, 22)
-            Me.txtStealth.TabIndex = 28
-            Me.txtStealth.TextAlign = HorizontalAlignment.Center
+            Me.TxtStealth.Enabled = False
+            Me.TxtStealth.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtStealth.Location = New System.Drawing.Point(1015, 198)
+            Me.TxtStealth.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtStealth.MaxLength = 2
+            Me.TxtStealth.Name = "TxtStealth"
+            Me.TxtStealth.Size = New System.Drawing.Size(50, 26)
+            Me.TxtStealth.TabIndex = 28
+            Me.TxtStealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'txtSlipping
+            'TxtSlipping
             '
-            Me.txtSlipping.Enabled = False
-            Me.txtSlipping.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtSlipping.Location = New Point(1015, 168)
-            Me.txtSlipping.Margin = New Padding(4)
-            Me.txtSlipping.MaxLength = 2
-            Me.txtSlipping.Name = "txtSlipping"
-            Me.txtSlipping.Size = New Size(50, 22)
-            Me.txtSlipping.TabIndex = 27
-            Me.txtSlipping.TextAlign = HorizontalAlignment.Center
+            Me.TxtSlipping.Enabled = False
+            Me.TxtSlipping.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtSlipping.Location = New System.Drawing.Point(1015, 168)
+            Me.TxtSlipping.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtSlipping.MaxLength = 2
+            Me.TxtSlipping.Name = "TxtSlipping"
+            Me.TxtSlipping.Size = New System.Drawing.Size(50, 26)
+            Me.TxtSlipping.TabIndex = 27
+            Me.TxtSlipping.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'BtnSave
             '
             Me.BtnSave.Enabled = False
-            Me.BtnSave.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnSave.Location = New Point(61, 503)
-            Me.BtnSave.Margin = New Padding(4)
+            Me.BtnSave.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnSave.Location = New System.Drawing.Point(61, 503)
+            Me.BtnSave.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnSave.Name = "BtnSave"
-            Me.BtnSave.Size = New Size(125, 30)
+            Me.BtnSave.Size = New System.Drawing.Size(125, 30)
             Me.BtnSave.TabIndex = 37
             Me.BtnSave.Text = "&Save"
             Me.BtnSave.UseVisualStyleBackColor = True
             '
             'BtnExit
             '
-            Me.BtnExit.DialogResult = DialogResult.Cancel
-            Me.BtnExit.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnExit.Location = New Point(61, 541)
-            Me.BtnExit.Margin = New Padding(4)
+            Me.BtnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.BtnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnExit.Location = New System.Drawing.Point(61, 541)
+            Me.BtnExit.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnExit.Name = "BtnExit"
-            Me.BtnExit.Size = New Size(125, 30)
+            Me.BtnExit.Size = New System.Drawing.Size(125, 30)
             Me.BtnExit.TabIndex = 38
             Me.BtnExit.Text = "E&xit"
             Me.BtnExit.UseVisualStyleBackColor = True
             '
             'BtnNewUser
             '
-            Me.BtnNewUser.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnNewUser.Location = New Point(61, 389)
-            Me.BtnNewUser.Margin = New Padding(4)
+            Me.BtnNewUser.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnNewUser.Location = New System.Drawing.Point(61, 389)
+            Me.BtnNewUser.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnNewUser.Name = "BtnNewUser"
-            Me.BtnNewUser.Size = New Size(125, 30)
+            Me.BtnNewUser.Size = New System.Drawing.Size(125, 30)
             Me.BtnNewUser.TabIndex = 34
             Me.BtnNewUser.Text = "&New User"
             Me.BtnNewUser.UseVisualStyleBackColor = True
@@ -702,414 +702,414 @@ Namespace Forms.Admin
             'BtnDelete
             '
             Me.BtnDelete.Enabled = False
-            Me.BtnDelete.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnDelete.Location = New Point(61, 427)
-            Me.BtnDelete.Margin = New Padding(4)
+            Me.BtnDelete.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnDelete.Location = New System.Drawing.Point(61, 427)
+            Me.BtnDelete.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnDelete.Name = "BtnDelete"
-            Me.BtnDelete.Size = New Size(125, 30)
+            Me.BtnDelete.Size = New System.Drawing.Size(125, 30)
             Me.BtnDelete.TabIndex = 35
             Me.BtnDelete.Text = "&Delete User"
             Me.BtnDelete.UseVisualStyleBackColor = True
             '
             'LblPass
             '
-            Me.LblPass.BorderStyle = BorderStyle.FixedSingle
-            Me.LblPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPass.Location = New Point(251, 77)
-            Me.LblPass.Margin = New Padding(4, 0, 4, 0)
+            Me.LblPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPass.Location = New System.Drawing.Point(251, 77)
+            Me.LblPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblPass.Name = "LblPass"
-            Me.LblPass.Size = New Size(125, 24)
+            Me.LblPass.Size = New System.Drawing.Size(125, 24)
             Me.LblPass.TabIndex = 46
             Me.LblPass.Text = "Password:"
-            Me.LblPass.TextAlign = ContentAlignment.MiddleRight
+            Me.LblPass.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtChangePass
+            'TxtChangePass
             '
-            Me.txtChangePass.Enabled = False
-            Me.txtChangePass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtChangePass.Location = New Point(384, 78)
-            Me.txtChangePass.Margin = New Padding(4)
-            Me.txtChangePass.MaxLength = 16
-            Me.txtChangePass.Name = "txtChangePass"
-            Me.txtChangePass.Size = New Size(100, 22)
-            Me.txtChangePass.TabIndex = 2
-            Me.txtChangePass.TextAlign = HorizontalAlignment.Center
-            Me.txtChangePass.UseSystemPasswordChar = True
+            Me.TxtChangePass.Enabled = False
+            Me.TxtChangePass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtChangePass.Location = New System.Drawing.Point(384, 78)
+            Me.TxtChangePass.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtChangePass.MaxLength = 16
+            Me.TxtChangePass.Name = "TxtChangePass"
+            Me.TxtChangePass.Size = New System.Drawing.Size(100, 26)
+            Me.TxtChangePass.TabIndex = 2
+            Me.TxtChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtChangePass.UseSystemPasswordChar = True
             '
             'Label14
             '
-            Me.Label14.BorderStyle = BorderStyle.FixedSingle
-            Me.Label14.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label14.Location = New Point(567, 77)
-            Me.Label14.Margin = New Padding(4, 0, 4, 0)
+            Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label14.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label14.Location = New System.Drawing.Point(567, 77)
+            Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label14.Name = "Label14"
-            Me.Label14.Size = New Size(125, 24)
+            Me.Label14.Size = New System.Drawing.Size(125, 24)
             Me.Label14.TabIndex = 47
             Me.Label14.Tag = ""
             Me.Label14.Text = "Light Weapon:"
-            Me.Label14.TextAlign = ContentAlignment.MiddleRight
+            Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label15
             '
-            Me.Label15.BorderStyle = BorderStyle.FixedSingle
-            Me.Label15.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label15.Location = New Point(567, 107)
-            Me.Label15.Margin = New Padding(4, 0, 4, 0)
+            Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label15.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label15.Location = New System.Drawing.Point(567, 107)
+            Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label15.Name = "Label15"
-            Me.Label15.Size = New Size(125, 24)
+            Me.Label15.Size = New System.Drawing.Size(125, 24)
             Me.Label15.TabIndex = 49
             Me.Label15.Text = "Heavy Weapon:"
-            Me.Label15.TextAlign = ContentAlignment.MiddleRight
+            Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label16
             '
-            Me.Label16.BorderStyle = BorderStyle.FixedSingle
-            Me.Label16.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label16.Location = New Point(567, 137)
-            Me.Label16.Margin = New Padding(4, 0, 4, 0)
+            Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label16.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label16.Location = New System.Drawing.Point(567, 137)
+            Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label16.Name = "Label16"
-            Me.Label16.Size = New Size(125, 24)
+            Me.Label16.Size = New System.Drawing.Size(125, 24)
             Me.Label16.TabIndex = 51
             Me.Label16.Text = "Two-H Weapon:"
-            Me.Label16.TextAlign = ContentAlignment.MiddleRight
+            Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'BtnClear
             '
             Me.BtnClear.Enabled = False
-            Me.BtnClear.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnClear.Location = New Point(61, 465)
-            Me.BtnClear.Margin = New Padding(4)
+            Me.BtnClear.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnClear.Location = New System.Drawing.Point(61, 465)
+            Me.BtnClear.Margin = New System.Windows.Forms.Padding(4)
             Me.BtnClear.Name = "BtnClear"
-            Me.BtnClear.Size = New Size(125, 30)
+            Me.BtnClear.Size = New System.Drawing.Size(125, 30)
             Me.BtnClear.TabIndex = 36
             Me.BtnClear.Text = "&Clear"
             Me.BtnClear.UseVisualStyleBackColor = True
             '
             'Label18
             '
-            Me.Label18.BorderStyle = BorderStyle.FixedSingle
-            Me.Label18.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label18.Location = New Point(567, 227)
-            Me.Label18.Margin = New Padding(4, 0, 4, 0)
+            Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label18.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label18.Location = New System.Drawing.Point(567, 227)
+            Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New Size(125, 24)
+            Me.Label18.Size = New System.Drawing.Size(125, 24)
             Me.Label18.TabIndex = 57
             Me.Label18.Text = "Lockpicks:"
-            Me.Label18.TextAlign = ContentAlignment.MiddleRight
+            Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtLockpicks
+            'TxtLockpicks
             '
-            Me.txtLockpicks.Enabled = False
-            Me.txtLockpicks.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtLockpicks.Location = New Point(700, 228)
-            Me.txtLockpicks.Margin = New Padding(4)
-            Me.txtLockpicks.MaxLength = 2
-            Me.txtLockpicks.Name = "txtLockpicks"
-            Me.txtLockpicks.Size = New Size(60, 22)
-            Me.txtLockpicks.TabIndex = 19
-            Me.txtLockpicks.TextAlign = HorizontalAlignment.Center
+            Me.TxtLockpicks.Enabled = False
+            Me.TxtLockpicks.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtLockpicks.Location = New System.Drawing.Point(700, 228)
+            Me.TxtLockpicks.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtLockpicks.MaxLength = 2
+            Me.TxtLockpicks.Name = "TxtLockpicks"
+            Me.TxtLockpicks.Size = New System.Drawing.Size(60, 26)
+            Me.TxtLockpicks.TabIndex = 19
+            Me.TxtLockpicks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label17
             '
-            Me.Label17.BorderStyle = BorderStyle.FixedSingle
-            Me.Label17.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label17.Location = New Point(251, 107)
-            Me.Label17.Margin = New Padding(4, 0, 4, 0)
+            Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label17.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label17.Location = New System.Drawing.Point(251, 107)
+            Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label17.Name = "Label17"
-            Me.Label17.Size = New Size(125, 24)
+            Me.Label17.Size = New System.Drawing.Size(125, 24)
             Me.Label17.TabIndex = 59
             Me.Label17.Text = "Confirm Pass:"
-            Me.Label17.TextAlign = ContentAlignment.MiddleRight
+            Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtConfPass
+            'TxtConfPass
             '
-            Me.txtConfPass.Enabled = False
-            Me.txtConfPass.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtConfPass.Location = New Point(384, 108)
-            Me.txtConfPass.Margin = New Padding(4)
-            Me.txtConfPass.MaxLength = 16
-            Me.txtConfPass.Name = "txtConfPass"
-            Me.txtConfPass.Size = New Size(100, 22)
-            Me.txtConfPass.TabIndex = 3
-            Me.txtConfPass.TextAlign = HorizontalAlignment.Center
-            Me.txtConfPass.UseSystemPasswordChar = True
+            Me.TxtConfPass.Enabled = False
+            Me.TxtConfPass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtConfPass.Location = New System.Drawing.Point(384, 108)
+            Me.TxtConfPass.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtConfPass.MaxLength = 16
+            Me.TxtConfPass.Name = "TxtConfPass"
+            Me.TxtConfPass.Size = New System.Drawing.Size(100, 26)
+            Me.TxtConfPass.TabIndex = 3
+            Me.TxtConfPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtConfPass.UseSystemPasswordChar = True
             '
             'Label19
             '
-            Me.Label19.BorderStyle = BorderStyle.FixedSingle
-            Me.Label19.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label19.Location = New Point(251, 17)
-            Me.Label19.Margin = New Padding(4, 0, 4, 0)
+            Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label19.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label19.Location = New System.Drawing.Point(251, 17)
+            Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label19.Name = "Label19"
-            Me.Label19.Size = New Size(308, 24)
+            Me.Label19.Size = New System.Drawing.Size(308, 24)
             Me.Label19.TabIndex = 60
             Me.Label19.Text = "Login Information:"
-            Me.Label19.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label20
             '
-            Me.Label20.BorderStyle = BorderStyle.FixedSingle
-            Me.Label20.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label20.Location = New Point(251, 275)
-            Me.Label20.Margin = New Padding(4, 0, 4, 0)
+            Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label20.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label20.Location = New System.Drawing.Point(251, 275)
+            Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label20.Name = "Label20"
-            Me.Label20.Size = New Size(308, 24)
+            Me.Label20.Size = New System.Drawing.Size(308, 24)
             Me.Label20.TabIndex = 61
             Me.Label20.Text = "Character:"
-            Me.Label20.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label21
             '
-            Me.Label21.BorderStyle = BorderStyle.FixedSingle
-            Me.Label21.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label21.Location = New Point(567, 17)
-            Me.Label21.Margin = New Padding(4, 0, 4, 0)
+            Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label21.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label21.Location = New System.Drawing.Point(567, 17)
+            Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label21.Name = "Label21"
-            Me.Label21.Size = New Size(307, 24)
+            Me.Label21.Size = New System.Drawing.Size(307, 24)
             Me.Label21.TabIndex = 62
             Me.Label21.Text = "Inventory:"
-            Me.Label21.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label22
             '
-            Me.Label22.BorderStyle = BorderStyle.FixedSingle
-            Me.Label22.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label22.Location = New Point(882, 17)
-            Me.Label22.Margin = New Padding(4, 0, 4, 0)
+            Me.Label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label22.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label22.Location = New System.Drawing.Point(882, 17)
+            Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label22.Name = "Label22"
-            Me.Label22.Size = New Size(183, 24)
+            Me.Label22.Size = New System.Drawing.Size(183, 24)
             Me.Label22.TabIndex = 63
             Me.Label22.Text = "Skills:"
-            Me.Label22.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label23
             '
-            Me.Label23.BorderStyle = BorderStyle.FixedSingle
-            Me.Label23.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label23.Location = New Point(251, 515)
-            Me.Label23.Margin = New Padding(4, 0, 4, 0)
+            Me.Label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label23.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label23.Location = New System.Drawing.Point(251, 515)
+            Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label23.Name = "Label23"
-            Me.Label23.Size = New Size(125, 24)
+            Me.Label23.Size = New System.Drawing.Size(125, 24)
             Me.Label23.TabIndex = 64
             Me.Label23.Text = "Hunger:"
-            Me.Label23.TextAlign = ContentAlignment.MiddleRight
+            Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtHunger
+            'TxtHunger
             '
-            Me.txtHunger.Enabled = False
-            Me.txtHunger.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtHunger.Location = New Point(384, 516)
-            Me.txtHunger.Margin = New Padding(4)
-            Me.txtHunger.MaxLength = 2
-            Me.txtHunger.Name = "txtHunger"
-            Me.txtHunger.Size = New Size(50, 22)
-            Me.txtHunger.TabIndex = 11
-            Me.txtHunger.TextAlign = HorizontalAlignment.Center
+            Me.TxtHunger.Enabled = False
+            Me.TxtHunger.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHunger.Location = New System.Drawing.Point(384, 516)
+            Me.TxtHunger.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHunger.MaxLength = 2
+            Me.TxtHunger.Name = "TxtHunger"
+            Me.TxtHunger.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHunger.TabIndex = 11
+            Me.TxtHunger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label24
             '
-            Me.Label24.BorderStyle = BorderStyle.FixedSingle
-            Me.Label24.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label24.Location = New Point(251, 545)
-            Me.Label24.Margin = New Padding(4, 0, 4, 0)
+            Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label24.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label24.Location = New System.Drawing.Point(251, 545)
+            Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label24.Name = "Label24"
-            Me.Label24.Size = New Size(125, 24)
+            Me.Label24.Size = New System.Drawing.Size(125, 24)
             Me.Label24.TabIndex = 66
             Me.Label24.Text = "Thirst:"
-            Me.Label24.TextAlign = ContentAlignment.MiddleRight
+            Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'txtThirst
+            'TxtThirst
             '
-            Me.txtThirst.Enabled = False
-            Me.txtThirst.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.txtThirst.Location = New Point(384, 546)
-            Me.txtThirst.Margin = New Padding(4)
-            Me.txtThirst.MaxLength = 2
-            Me.txtThirst.Name = "txtThirst"
-            Me.txtThirst.Size = New Size(50, 22)
-            Me.txtThirst.TabIndex = 12
-            Me.txtThirst.TextAlign = HorizontalAlignment.Center
+            Me.TxtThirst.Enabled = False
+            Me.TxtThirst.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtThirst.Location = New System.Drawing.Point(384, 546)
+            Me.TxtThirst.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtThirst.MaxLength = 2
+            Me.TxtThirst.Name = "TxtThirst"
+            Me.TxtThirst.Size = New System.Drawing.Size(50, 26)
+            Me.TxtThirst.TabIndex = 12
+            Me.TxtThirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label25
             '
-            Me.Label25.BorderStyle = BorderStyle.FixedSingle
-            Me.Label25.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label25.Location = New Point(882, 394)
-            Me.Label25.Margin = New Padding(4, 0, 4, 0)
+            Me.Label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label25.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label25.Location = New System.Drawing.Point(882, 394)
+            Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label25.Name = "Label25"
-            Me.Label25.Size = New Size(183, 24)
+            Me.Label25.Size = New System.Drawing.Size(183, 24)
             Me.Label25.TabIndex = 68
             Me.Label25.Text = "HenchmenLevel:"
-            Me.Label25.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'chkAlive
             '
             Me.chkAlive.AutoSize = True
             Me.chkAlive.Enabled = False
-            Me.chkAlive.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.chkAlive.Location = New Point(403, 401)
-            Me.chkAlive.Margin = New Padding(4)
+            Me.chkAlive.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkAlive.Location = New System.Drawing.Point(403, 401)
+            Me.chkAlive.Margin = New System.Windows.Forms.Padding(4)
             Me.chkAlive.Name = "chkAlive"
-            Me.chkAlive.Size = New Size(15, 14)
+            Me.chkAlive.Size = New System.Drawing.Size(15, 14)
             Me.chkAlive.TabIndex = 7
             Me.chkAlive.UseVisualStyleBackColor = True
             '
             'CmbCurrWeapon
             '
-            Me.CmbCurrWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbCurrWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbCurrWeapon.Enabled = False
-            Me.CmbCurrWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbCurrWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbCurrWeapon.FormattingEnabled = True
             Me.CmbCurrWeapon.Items.AddRange(New Object() {"Light", "Heavy", "Two-H"})
-            Me.CmbCurrWeapon.Location = New Point(699, 47)
+            Me.CmbCurrWeapon.Location = New System.Drawing.Point(699, 47)
             Me.CmbCurrWeapon.Name = "CmbCurrWeapon"
-            Me.CmbCurrWeapon.Size = New Size(101, 24)
+            Me.CmbCurrWeapon.Size = New System.Drawing.Size(101, 26)
             Me.CmbCurrWeapon.TabIndex = 13
             '
             'CmbLoc
             '
-            Me.CmbLoc.DropDownStyle = ComboBoxStyle.DropDownList
-            Me.CmbLoc.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.CmbLoc.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbLoc.FormattingEnabled = True
             Me.CmbLoc.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
-            Me.CmbLoc.Location = New Point(383, 425)
+            Me.CmbLoc.Location = New System.Drawing.Point(383, 425)
             Me.CmbLoc.Name = "CmbLoc"
-            Me.CmbLoc.Size = New Size(101, 24)
+            Me.CmbLoc.Size = New System.Drawing.Size(101, 26)
             Me.CmbLoc.TabIndex = 8
             '
             'CmbLightWeapon
             '
-            Me.CmbLightWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbLightWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbLightWeapon.Enabled = False
-            Me.CmbLightWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbLightWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbLightWeapon.FormattingEnabled = True
-            Me.CmbLightWeapon.Location = New Point(699, 77)
+            Me.CmbLightWeapon.Location = New System.Drawing.Point(699, 77)
             Me.CmbLightWeapon.Name = "CmbLightWeapon"
-            Me.CmbLightWeapon.Size = New Size(175, 24)
+            Me.CmbLightWeapon.Size = New System.Drawing.Size(175, 26)
             Me.CmbLightWeapon.TabIndex = 14
             '
             'CmbHeavyWeapon
             '
-            Me.CmbHeavyWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbHeavyWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbHeavyWeapon.Enabled = False
-            Me.CmbHeavyWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbHeavyWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbHeavyWeapon.FormattingEnabled = True
-            Me.CmbHeavyWeapon.Location = New Point(699, 108)
+            Me.CmbHeavyWeapon.Location = New System.Drawing.Point(699, 108)
             Me.CmbHeavyWeapon.Name = "CmbHeavyWeapon"
-            Me.CmbHeavyWeapon.Size = New Size(175, 24)
+            Me.CmbHeavyWeapon.Size = New System.Drawing.Size(175, 26)
             Me.CmbHeavyWeapon.TabIndex = 15
             '
             'CmbTwoHWeapon
             '
-            Me.CmbTwoHWeapon.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbTwoHWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbTwoHWeapon.Enabled = False
-            Me.CmbTwoHWeapon.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbTwoHWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbTwoHWeapon.FormattingEnabled = True
-            Me.CmbTwoHWeapon.Location = New Point(699, 138)
+            Me.CmbTwoHWeapon.Location = New System.Drawing.Point(699, 138)
             Me.CmbTwoHWeapon.Name = "CmbTwoHWeapon"
-            Me.CmbTwoHWeapon.Size = New Size(175, 24)
+            Me.CmbTwoHWeapon.Size = New System.Drawing.Size(175, 26)
             Me.CmbTwoHWeapon.TabIndex = 16
             '
             'CmbArmor
             '
-            Me.CmbArmor.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbArmor.Enabled = False
-            Me.CmbArmor.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbArmor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbArmor.FormattingEnabled = True
-            Me.CmbArmor.Location = New Point(699, 168)
+            Me.CmbArmor.Location = New System.Drawing.Point(699, 168)
             Me.CmbArmor.Name = "CmbArmor"
-            Me.CmbArmor.Size = New Size(175, 24)
+            Me.CmbArmor.Size = New System.Drawing.Size(175, 26)
             Me.CmbArmor.TabIndex = 17
             '
             'CmbPotion
             '
-            Me.CmbPotion.DropDownStyle = ComboBoxStyle.DropDownList
+            Me.CmbPotion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CmbPotion.Enabled = False
-            Me.CmbPotion.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbPotion.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbPotion.FormattingEnabled = True
-            Me.CmbPotion.Location = New Point(699, 198)
+            Me.CmbPotion.Location = New System.Drawing.Point(699, 198)
             Me.CmbPotion.Name = "CmbPotion"
-            Me.CmbPotion.Size = New Size(175, 24)
+            Me.CmbPotion.Size = New System.Drawing.Size(175, 26)
             Me.CmbPotion.TabIndex = 18
             '
             'chkShovel
             '
             Me.chkShovel.AutoSize = True
             Me.chkShovel.Enabled = False
-            Me.chkShovel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.chkShovel.Location = New Point(722, 353)
-            Me.chkShovel.Margin = New Padding(4)
+            Me.chkShovel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkShovel.Location = New System.Drawing.Point(722, 353)
+            Me.chkShovel.Margin = New System.Windows.Forms.Padding(4)
             Me.chkShovel.Name = "chkShovel"
-            Me.chkShovel.Size = New Size(15, 14)
+            Me.chkShovel.Size = New System.Drawing.Size(15, 14)
             Me.chkShovel.TabIndex = 69
             Me.chkShovel.UseVisualStyleBackColor = True
             '
             'LblShovel
             '
-            Me.LblShovel.BorderStyle = BorderStyle.FixedSingle
-            Me.LblShovel.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblShovel.Location = New Point(567, 347)
-            Me.LblShovel.Margin = New Padding(4, 0, 4, 0)
+            Me.LblShovel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblShovel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblShovel.Location = New System.Drawing.Point(567, 347)
+            Me.LblShovel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblShovel.Name = "LblShovel"
-            Me.LblShovel.Size = New Size(125, 24)
+            Me.LblShovel.Size = New System.Drawing.Size(125, 24)
             Me.LblShovel.TabIndex = 70
             Me.LblShovel.Text = "Shovel:"
-            Me.LblShovel.TextAlign = ContentAlignment.MiddleRight
+            Me.LblShovel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'chkLantern
             '
             Me.chkLantern.AutoSize = True
             Me.chkLantern.Enabled = False
-            Me.chkLantern.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.chkLantern.Location = New Point(722, 383)
-            Me.chkLantern.Margin = New Padding(4)
+            Me.chkLantern.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkLantern.Location = New System.Drawing.Point(722, 383)
+            Me.chkLantern.Margin = New System.Windows.Forms.Padding(4)
             Me.chkLantern.Name = "chkLantern"
-            Me.chkLantern.Size = New Size(15, 14)
+            Me.chkLantern.Size = New System.Drawing.Size(15, 14)
             Me.chkLantern.TabIndex = 71
             Me.chkLantern.UseVisualStyleBackColor = True
             '
             'LblLantern
             '
-            Me.LblLantern.BorderStyle = BorderStyle.FixedSingle
-            Me.LblLantern.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblLantern.Location = New Point(567, 377)
-            Me.LblLantern.Margin = New Padding(4, 0, 4, 0)
+            Me.LblLantern.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLantern.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLantern.Location = New System.Drawing.Point(567, 377)
+            Me.LblLantern.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblLantern.Name = "LblLantern"
-            Me.LblLantern.Size = New Size(125, 24)
+            Me.LblLantern.Size = New System.Drawing.Size(125, 24)
             Me.LblLantern.TabIndex = 72
             Me.LblLantern.Text = "Lantern:"
-            Me.LblLantern.TextAlign = ContentAlignment.MiddleRight
+            Me.LblLantern.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'chkAmulet
             '
             Me.chkAmulet.AutoSize = True
             Me.chkAmulet.Enabled = False
-            Me.chkAmulet.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.chkAmulet.Location = New Point(722, 413)
-            Me.chkAmulet.Margin = New Padding(4)
+            Me.chkAmulet.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.chkAmulet.Location = New System.Drawing.Point(722, 413)
+            Me.chkAmulet.Margin = New System.Windows.Forms.Padding(4)
             Me.chkAmulet.Name = "chkAmulet"
-            Me.chkAmulet.Size = New Size(15, 14)
+            Me.chkAmulet.Size = New System.Drawing.Size(15, 14)
             Me.chkAmulet.TabIndex = 73
             Me.chkAmulet.UseVisualStyleBackColor = True
             '
             'LblAmulet
             '
-            Me.LblAmulet.BorderStyle = BorderStyle.FixedSingle
-            Me.LblAmulet.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblAmulet.Location = New Point(567, 407)
-            Me.LblAmulet.Margin = New Padding(4, 0, 4, 0)
+            Me.LblAmulet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblAmulet.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblAmulet.Location = New System.Drawing.Point(567, 407)
+            Me.LblAmulet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.LblAmulet.Name = "LblAmulet"
-            Me.LblAmulet.Size = New Size(125, 24)
+            Me.LblAmulet.Size = New System.Drawing.Size(125, 24)
             Me.LblAmulet.TabIndex = 74
             Me.LblAmulet.Text = "Amulet:"
-            Me.LblAmulet.TextAlign = ContentAlignment.MiddleRight
+            Me.LblAmulet.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'frmAdminUsers
+            'FrmAdminUsers
             '
-            Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
-            Me.AutoScaleMode = AutoScaleMode.Font
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnExit
-            Me.ClientSize = New Size(1141, 583)
+            Me.ClientSize = New System.Drawing.Size(1141, 583)
             Me.Controls.Add(Me.chkAmulet)
             Me.Controls.Add(Me.LblAmulet)
             Me.Controls.Add(Me.chkLantern)
@@ -1125,39 +1125,39 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.CmbCurrWeapon)
             Me.Controls.Add(Me.chkAlive)
             Me.Controls.Add(Me.Label25)
-            Me.Controls.Add(Me.txtThirst)
+            Me.Controls.Add(Me.TxtThirst)
             Me.Controls.Add(Me.Label24)
-            Me.Controls.Add(Me.txtHunger)
+            Me.Controls.Add(Me.TxtHunger)
             Me.Controls.Add(Me.Label23)
             Me.Controls.Add(Me.Label22)
             Me.Controls.Add(Me.Label21)
             Me.Controls.Add(Me.Label20)
             Me.Controls.Add(Me.Label19)
-            Me.Controls.Add(Me.txtConfPass)
+            Me.Controls.Add(Me.TxtConfPass)
             Me.Controls.Add(Me.Label17)
-            Me.Controls.Add(Me.txtLockpicks)
+            Me.Controls.Add(Me.TxtLockpicks)
             Me.Controls.Add(Me.Label18)
             Me.Controls.Add(Me.BtnClear)
             Me.Controls.Add(Me.Label16)
             Me.Controls.Add(Me.Label15)
             Me.Controls.Add(Me.Label14)
-            Me.Controls.Add(Me.txtChangePass)
+            Me.Controls.Add(Me.TxtChangePass)
             Me.Controls.Add(Me.LblPass)
             Me.Controls.Add(Me.BtnDelete)
             Me.Controls.Add(Me.BtnNewUser)
             Me.Controls.Add(Me.BtnExit)
             Me.Controls.Add(Me.BtnSave)
-            Me.Controls.Add(Me.txtSlipping)
-            Me.Controls.Add(Me.txtStealth)
-            Me.Controls.Add(Me.txtHenchmenLevel1)
-            Me.Controls.Add(Me.txtHenchmenLevel2)
-            Me.Controls.Add(Me.txtHenchmenLevel3)
-            Me.Controls.Add(Me.txtHenchmenLevel4)
-            Me.Controls.Add(Me.txtHenchmenLevel5)
-            Me.Controls.Add(Me.txtBlocking)
-            Me.Controls.Add(Me.txtLight)
-            Me.Controls.Add(Me.txtHeavy)
-            Me.Controls.Add(Me.txtGoldHand)
+            Me.Controls.Add(Me.TxtSlipping)
+            Me.Controls.Add(Me.TxtStealth)
+            Me.Controls.Add(Me.TxtHenchmenLevel1)
+            Me.Controls.Add(Me.TxtHenchmenLevel2)
+            Me.Controls.Add(Me.TxtHenchmenLevel3)
+            Me.Controls.Add(Me.TxtHenchmenLevel4)
+            Me.Controls.Add(Me.TxtHenchmenLevel5)
+            Me.Controls.Add(Me.TxtBlocking)
+            Me.Controls.Add(Me.TxtLight)
+            Me.Controls.Add(Me.TxtHeavy)
+            Me.Controls.Add(Me.TxtGoldHand)
             Me.Controls.Add(Me.Label12)
             Me.Controls.Add(Me.Label11)
             Me.Controls.Add(Me.Label10)
@@ -1167,19 +1167,19 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label6)
             Me.Controls.Add(Me.Label5)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.txtTwoH)
-            Me.Controls.Add(Me.txtLevel)
-            Me.Controls.Add(Me.txtExp)
-            Me.Controls.Add(Me.txtMaximumEndurance)
-            Me.Controls.Add(Me.txtCurrentEndurance)
-            Me.Controls.Add(Me.txtGoldLoan)
-            Me.Controls.Add(Me.txtGoldBank)
-            Me.Controls.Add(Me.txtSkillPts)
+            Me.Controls.Add(Me.TxtTwoH)
+            Me.Controls.Add(Me.TxtLevel)
+            Me.Controls.Add(Me.TxtExp)
+            Me.Controls.Add(Me.TxtMaximumEndurance)
+            Me.Controls.Add(Me.TxtCurrentEndurance)
+            Me.Controls.Add(Me.TxtGoldLoan)
+            Me.Controls.Add(Me.TxtGoldBank)
+            Me.Controls.Add(Me.TxtSkillPts)
             Me.Controls.Add(Me.LblHenchmenLevel5)
             Me.Controls.Add(Me.LblHenchmenLevel4)
             Me.Controls.Add(Me.LblHenchmenLevel3)
             Me.Controls.Add(Me.LblHenchmenLevel2)
-            Me.Controls.Add(Me.txtName)
+            Me.Controls.Add(Me.TxtName)
             Me.Controls.Add(Me.LblLocation)
             Me.Controls.Add(Me.Label4)
             Me.Controls.Add(Me.Label3)
@@ -1193,12 +1193,12 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.LblLevel)
             Me.Controls.Add(Me.LblName)
             Me.Controls.Add(Me.LstUsers)
-            Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Margin = New Padding(4)
+            Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Margin = New System.Windows.Forms.Padding(4)
             Me.MaximizeBox = False
-            Me.MinimumSize = New Size(970, 622)
-            Me.Name = "frmAdminUsers"
-            Me.StartPosition = FormStartPosition.CenterScreen
+            Me.MinimumSize = New System.Drawing.Size(970, 622)
+            Me.Name = "FrmAdminUsers"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Admin Users"
             Me.ResumeLayout(False)
             Me.PerformLayout()

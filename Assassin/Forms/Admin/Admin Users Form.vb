@@ -760,6 +760,10 @@ Namespace Forms.Admin
             FrmAdmin.Show()
         End Sub
 
+        Private Sub LstUsers_Leave(sender As Object, e As EventArgs) Handles LstUsers.Leave
+            LstUsers.Update()
+        End Sub
+
     End Class
 
 End Namespace

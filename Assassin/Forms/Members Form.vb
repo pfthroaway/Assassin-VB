@@ -43,6 +43,7 @@ Namespace Forms
         End Sub
 
         Private Sub BtnAttack_Click(sender As Object, e As EventArgs) Handles BtnAttack.Click
+            'TODO Implement attacking from here if User is current location
             MessageBox.Show("This feature is currently unavailable.", "Assassin", MessageBoxButtons.OK)
         End Sub
 
@@ -57,6 +58,7 @@ Namespace Forms
         End Sub
 
         Private Sub BtnMessage_Click(sender As Object, e As EventArgs) Handles BtnMessage.Click
+            'TODO Implement going to New Message from this Form
             FrmMessages.Show()
             FrmMessages.loc = "Members"
             FrmMessages.CmbNames.SelectedItem = LstMembers.SelectedItem.ToString

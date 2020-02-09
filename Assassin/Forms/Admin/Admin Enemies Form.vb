@@ -228,6 +228,10 @@ Namespace Forms.Admin
             FrmAdmin.Show()
         End Sub
 
+        Private Sub LstEnemies_Leave(sender As Object, e As EventArgs) Handles LstEnemies.Leave
+            LstEnemies.Update()
+        End Sub
+
 #End Region
 
     End Class

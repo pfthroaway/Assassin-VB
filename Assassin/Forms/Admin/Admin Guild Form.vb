@@ -201,7 +201,6 @@ Namespace Forms.Admin
 
             If dlg = DialogResult.Yes Then
                 Await DatabaseInteraction.MemberLeavesGuild(CurrentUser, CurrentGuild)
-                MessageBox.Show("Member successfully expelled.", "Assassin", MessageBoxButtons.OK)
                 CurrentGuild.Members.Remove(CurrentUser.Name)
                 GetMembers()
             End If
@@ -222,14 +221,8 @@ Namespace Forms.Admin
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged
             If LstMembers.SelectedIndex >= 0 Then
                 CurrentUser = AllUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString())
-                If BtnAddMember.Text = "&Add Member" Then
-                    BtnExpel.Enabled = True
-                ElseIf BtnAddMember.Text = "&Add" Then
-                    BtnAddMember.Enabled = True
-                    BtnExpel.Enabled = False
-                Else
-                    BtnExpel.Enabled = False
-                End If
+                BtnExpel.Enabled = LstMembers.SelectedIndex >= 0 AndAlso BtnAddMember.Text = "&Add Member"
+                BtnAddMember.Enabled = LstMembers.SelectedIndex >= 0 OrElse BtnAddMember.Text = "&Add"
             End If
         End Sub
 
@@ -243,6 +236,14 @@ Namespace Forms.Admin
 
         Private Sub FrmAdminGuilds_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmAdmin.Show()
+        End Sub
+
+        Private Sub LstGuilds_Leave(sender As Object, e As EventArgs) Handles LstGuilds.Leave
+            LstGuilds.Update()
+        End Sub
+
+        Private Sub LstMembers_Leave(sender As Object, e As EventArgs) Handles LstMembers.Leave
+            LstMembers.Update()
         End Sub
 
 #End Region
