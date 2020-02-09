@@ -150,7 +150,7 @@ Namespace Forms.Admin
 
 #Region "Click"
 
-        Private Sub BtnAddMember_Click(sender As Object, e As EventArgs) Handles BtnAddMember.Click
+        Private Async Sub BtnAddMember_Click(sender As Object, e As EventArgs) Handles BtnAddMember.Click
             If BtnAddMember.Text <> "&Add" Then
                 If BtnAddMember.Text = "&Add Member" Then
                     Disable()
@@ -160,15 +160,21 @@ Namespace Forms.Admin
                     BtnClear.Enabled = True
                     LstMembers.Enabled = True
                     LstMembers.Items.Clear()
-
+                    For Each user In AllUsers
+                        If Not CurrentGuild.Members.Contains(user.Name) Then
+                            LstMembers.Items.Add(user.Name)
+                        End If
+                    Next
                     BtnAddMember.Enabled = False
                 End If
             Else
                 If LstMembers.SelectedIndex >= 0 Then
-                    MessageBox.Show("Member successfully added.", "Assassin", MessageBoxButtons.OK)
-                    GetMembers()
-                    Enable()
-                    BtnAddMember.Text = "&Add Member"
+                    If Await DatabaseInteraction.MemberJoinsGuild(CurrentUser, CurrentGuild) Then
+                        CurrentGuild.Members.Add(CurrentUser.Name)
+                        GetMembers()
+                        Enable()
+                        BtnAddMember.Text = "&Add Member"
+                    End If
                 Else
                     MessageBox.Show("Please select a member to add to the guild.", "Assassin", MessageBoxButtons.OK)
                 End If
@@ -196,6 +202,7 @@ Namespace Forms.Admin
             If dlg = DialogResult.Yes Then
                 Await DatabaseInteraction.MemberLeavesGuild(CurrentUser, CurrentGuild)
                 MessageBox.Show("Member successfully expelled.", "Assassin", MessageBoxButtons.OK)
+                CurrentGuild.Members.Remove(CurrentUser.Name)
                 GetMembers()
             End If
         End Sub
@@ -213,14 +220,16 @@ Namespace Forms.Admin
         End Sub
 
         Private Sub LstMembers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstMembers.SelectedIndexChanged
-            If LstMembers.SelectedIndex >= 0 AndAlso BtnAddMember.Text = "&Add Member" Then
+            If LstMembers.SelectedIndex >= 0 Then
                 CurrentUser = AllUsers.Find(Function(user) user.Name = LstMembers.SelectedItem.ToString())
-                BtnExpel.Enabled = True
-            ElseIf LstMembers.SelectedIndex >= 0 AndAlso BtnAddMember.Text = "&Add" Then
-                BtnAddMember.Enabled = True
-                BtnExpel.Enabled = False
-            Else
-                BtnExpel.Enabled = False
+                If BtnAddMember.Text = "&Add Member" Then
+                    BtnExpel.Enabled = True
+                ElseIf BtnAddMember.Text = "&Add" Then
+                    BtnAddMember.Enabled = True
+                    BtnExpel.Enabled = False
+                Else
+                    BtnExpel.Enabled = False
+                End If
             End If
         End Sub
 
