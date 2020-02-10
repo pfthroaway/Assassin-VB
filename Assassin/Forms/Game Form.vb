@@ -79,11 +79,8 @@ Namespace Forms
             LblEndAmt.Text = CurrentUser.EnduranceToString
 
             LblHunger.Text = GetHunger(CurrentUser.Hunger)
-
             LblHunger.ForeColor = If(CurrentUser.Hunger < 20, Color.Black, Color.Red)
-
             LblThirst.Text = GetThirst(CurrentUser.Thirst)
-
             LblThirst.ForeColor = If(CurrentUser.Thirst < 20, Color.Black, Color.Red)
 
             LblWeaponName.Text = CurrentUser.CurrentWeapon.Name
@@ -101,9 +98,7 @@ Namespace Forms
             LblStealthAmt.Text = CurrentUser.StealthToString
 
             LblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
-
             LblArmorName.ForeColor = If(CurrentUser.Armor.Name = "Clothes", Color.Red, Color.Black)
-
             LblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
         End Sub
 

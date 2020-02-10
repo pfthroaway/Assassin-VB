@@ -10,9 +10,9 @@ Namespace Forms
 
     Public Class FrmRaid
 
-        Dim _raidGuild As New Guild              'guild selected to be raided
-        Dim _playerHenchmen As New Henchman            'player's henchmen
-        Dim _enemyHenchmen As New Henchman            'enemy's henchmen
+        Dim _raidGuild As New Guild
+        Dim _playerHenchmen As New Henchman
+        Dim _enemyHenchmen As New Henchman
 
         ''' <summary>Determines the highest level of henchmen the enemy has.</summary>
         ''' <returns>the highest level of henchmen the enemy has</returns>

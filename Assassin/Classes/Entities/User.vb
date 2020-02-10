@@ -232,7 +232,7 @@ Namespace Classes.Entities
             Dim levelText As String = ""
 
             Experience += experienceGain
-            If oldExperience / 10 < Experience / 10 Then
+            If oldExperience \ 10 < Experience \ 10 Then
                 Level += 1
                 levelText = $" You have gained a level! You are now a {Rank}!"
             End If

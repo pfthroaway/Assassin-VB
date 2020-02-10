@@ -4,9 +4,8 @@ Option Explicit On
 Imports System.Threading.Tasks
 Imports Assassin.Classes
 Imports Assassin.Classes.Entities
-Imports Assassin.Forms.GuildForms
 
-Namespace Forms
+Namespace Forms.GuildForms
 
     Public Class FrmManageApplications
         Dim _applicant As User

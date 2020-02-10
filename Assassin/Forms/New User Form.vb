@@ -8,16 +8,16 @@ Imports Extensions.Encryption
 Namespace Forms
 
     Public Class FrmNewUser
-        Dim _skillPts As Integer = 5                 'current skill points
-        Dim _maxEnd As Integer = 100                 'maximum endurance
-        Dim _light As Integer = 10                   'light weapon skill
-        Dim _heavy As Integer = 10                   'heavy weapon skill
-        Dim _twoH As Integer = 10                    'two handed weapon skill
-        Dim _blocking As Integer = 10                'blocking skill
-        Dim _slipping As Integer = 10                'slipping skill
-        Dim _stealth As Integer = 10                 'stealth skill
+        Dim _skillPts As Integer = 5
+        Dim _maxEnd As Integer = 100
+        Dim _light As Integer = 10
+        Dim _heavy As Integer = 10
+        Dim _twoH As Integer = 10
+        Dim _blocking As Integer = 10
+        Dim _slipping As Integer = 10
+        Dim _stealth As Integer = 10
 
-        Dim _blnStart As Boolean = False             'start game on form close
+        Dim _blnStart As Boolean = False
 
         ''' <summary>Resets all stats.</summary>
         Private Sub Clear()
@@ -159,7 +159,7 @@ Namespace Forms
                     }
                     Await GameState.NewUser(newUser)
                     Await MemberJoinsGuild(newUser, AllGuilds(0))
-
+                    AllGuilds(0).Members.Add(newUser.Name)
                     FrmGame.Show()
                     FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}!{ControlChars.NewLine}{ControlChars.NewLine}You enter the city of thieves to take your place among the legends!"
                     FrmGame.Display()

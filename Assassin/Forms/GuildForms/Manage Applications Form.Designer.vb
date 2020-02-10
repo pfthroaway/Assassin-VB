@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports Microsoft.VisualBasic.CompilerServices
 
-Namespace Forms
+Namespace Forms.GuildForms
     <DesignerGenerated()> _
     Partial Class FrmManageApplications
         Inherits Form

@@ -6,6 +6,7 @@ Imports Assassin.Classes
 Namespace Forms.Shopping
 
     Public Class FrmThievesGuild
+        'TODO Find out why Thieves' Guild takes a couple seconds to load.
 
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>

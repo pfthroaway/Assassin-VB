@@ -117,6 +117,8 @@ Namespace Forms
             GetJob()
         End Sub
 
+#Region "Click"
+
         Private Sub BtnAccept_Click(sender As Object, e As EventArgs) Handles BtnAccept.Click
             CurrentUser.Hunger += 1
             CurrentUser.Thirst += 1
@@ -138,6 +140,8 @@ Namespace Forms
         Private Sub BtnLeave_Click(sender As Object, e As EventArgs) Handles BtnLeave.Click
             Close()
         End Sub
+
+#End Region
 
         Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
             CycleText()

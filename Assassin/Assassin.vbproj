@@ -202,12 +202,6 @@
     <Compile Include="Forms\Shopping\Bar Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Character Form.Designer.vb">
-      <DependentUpon>Character Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Character Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Classes\GameState.vb" />
     <Compile Include="Forms\GuildForms\Guild Options Form.Designer.vb">
       <DependentUpon>Guild Options Form.vb</DependentUpon>
@@ -239,10 +233,10 @@
     <Compile Include="Forms\Help Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Manage Applications Form.Designer.vb">
+    <Compile Include="Forms\GuildForms\Manage Applications Form.Designer.vb">
       <DependentUpon>Manage Applications Form.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Manage Applications Form.vb">
+    <Compile Include="Forms\GuildForms\Manage Applications Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GuildForms\Guild Manage Form.Designer.vb">
@@ -433,9 +427,6 @@
     <EmbeddedResource Include="Forms\Shopping\Bar Form.resx">
       <DependentUpon>Bar Form.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Character Form.resx">
-      <DependentUpon>Character Form.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GuildForms\Guild Options Form.resx">
       <DependentUpon>Guild Options Form.vb</DependentUpon>
     </EmbeddedResource>
@@ -451,7 +442,7 @@
     <EmbeddedResource Include="Forms\Help Form.resx">
       <DependentUpon>Help Form.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Manage Applications Form.resx">
+    <EmbeddedResource Include="Forms\GuildForms\Manage Applications Form.resx">
       <DependentUpon>Manage Applications Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GuildForms\Guild Manage Form.resx">
