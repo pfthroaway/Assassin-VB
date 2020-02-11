@@ -195,7 +195,7 @@ Namespace Forms
                 Await SaveUser(CurrentUser)
                 FrmGame.Display()
                 AddText("You return to the streets.")
-                FrmGame.AddText(TxtRob.Text)
+                FrmGame.AddText(TxtRob.Text.Trim())
             Else
                 FrmCourt.Show()
                 FrmCourt.Reason = _reason

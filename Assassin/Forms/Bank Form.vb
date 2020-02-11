@@ -110,7 +110,7 @@ Namespace Forms
             AddText("You exit the bank.")
             FrmGame.Show()
             FrmGame.Display()
-            FrmGame.AddText(TxtBank.Text)
+            FrmGame.AddText(TxtBank.Text.Trim())
         End Sub
 
     End Class

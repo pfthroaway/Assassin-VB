@@ -10,7 +10,7 @@ Namespace Forms.Admin
         Dim _blnAdmin As Boolean = False
 
         Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-            If PBKDF2.ValidatePassword(TxtPassword.Text, AdminPassword) Then
+            If PBKDF2.ValidatePassword(TxtPassword.Text.Trim(), AdminPassword) Then
                 _blnAdmin = True
                 Close()
             Else

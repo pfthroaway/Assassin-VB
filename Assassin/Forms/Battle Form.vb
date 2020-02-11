@@ -535,7 +535,7 @@ Namespace Forms
 #End Region
 
         Private Async Sub FrmBattle_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            Dim text As String = TxtBattle.Text
+            Dim text As String = TxtBattle.Text.Trim()
             If _blnDone = False Then
                 e.Cancel = True
                 MessageBox.Show("You must flee or finish the battle first.", "Assassin", MessageBoxButtons.OK)
@@ -547,7 +547,7 @@ Namespace Forms
                     FrmAssassinate.FinishBattle()
                 Else
                     FrmJobs.Show()
-                    FrmJobs.AddText(TxtBattle.Text)
+                    FrmJobs.AddText(TxtBattle.Text.Trim())
                     FrmJobs.BtnLeave.Enabled = True
                     If _blnWin = True Then
                         FrmJobs.ArrText.Add("You take your opponent's engraved weapon back to your employer.")

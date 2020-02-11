@@ -14,8 +14,8 @@ Namespace Forms
         ''' <returns>True if successful login</returns>
         Private Function CheckLogin() As Boolean
             If AllUsers.Count > 0 Then
-                Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
-                If Not NewUser Is Nothing AndAlso NewUser <> New User() AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
+                Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text.Trim(), StringComparison.OrdinalIgnoreCase))
+                If Not NewUser Is Nothing AndAlso NewUser <> New User() AndAlso PBKDF2.ValidatePassword(TxtPswd.Text.Trim(), NewUser.Password) Then
                     CurrentUser = NewUser
                     Return True
                 End If
@@ -104,7 +104,7 @@ Namespace Forms
         End Sub
 
         Private Sub Txt_TextChanged(sender As Object, e As EventArgs) Handles TxtUsername.TextChanged, TxtPswd.TextChanged
-            BtnLogin.Enabled = TxtUsername.TextLength > 0 AndAlso TxtPswd.TextLength > 0
+            BtnLogin.Enabled = TxtUsername.Text.Trim().Length > 0 AndAlso TxtPswd.Text.Trim().Length > 0
         End Sub
 
 #End Region

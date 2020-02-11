@@ -141,7 +141,7 @@ Namespace Forms
             If BtnReply.Text = "&Reply" Then 'Set Up Send
                 SetUpSend()
             Else 'Already Clicked Reply
-                If TxtMessage.TextLength > 0 AndAlso Await DatabaseInteraction.SendMessage(New Message(0, CurrentUser.Name, CmbNames.SelectedItem.ToString(), TxtMessage.Text, Date.UtcNow, False)) Then 'If Message Successfully Sent
+                If TxtMessage.TextLength > 0 AndAlso Await DatabaseInteraction.SendMessage(New Message(0, CurrentUser.Name, CmbNames.SelectedItem.ToString(), TxtMessage.Text.Trim(), Date.UtcNow, False)) Then 'If Message Successfully Sent
                     SetDefaultControls()
                     ToggleControls(True)
                     TxtMessage.ReadOnly = True

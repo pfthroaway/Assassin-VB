@@ -416,15 +416,15 @@ Namespace Forms.Admin
         '            '* * * * *
 
         '            'character
-        '            Integer.TryParse(txtLevel.Text, CurrentUser.Level)
-        '            Integer.TryParse(txtExp.Text, CurrentUser.Experience)
-        '            Integer.TryParse(txtSkillPts.Text, CurrentUser.SkillPoints)
+        '            Integer.TryParse(txtLevel.Text.Trim(), CurrentUser.Level)
+        '            Integer.TryParse(txtExp.Text.Trim(), CurrentUser.Experience)
+        '            Integer.TryParse(txtSkillPts.Text.Trim(), CurrentUser.SkillPoints)
         '            CurrentUser.Alive = chkAlive.Checked
-        '            Integer.TryParse(txtCurrentEndurance.Text, CurrentUser.CurrentEndurance)
+        '            Integer.TryParse(txtCurrentEndurance.Text.Trim(), CurrentUser.CurrentEndurance)
         '            CurrentUser.CurrentLocation = CmbLoc.SelectedItem.ToString
-        '            Integer.TryParse(txtMaximumEndurance.Text, CurrentUser.MaximumEndurance)
-        '            Integer.TryParse(txtHunger.Text, CurrentUser.Hunger)
-        '            Integer.TryParse(txtThirst.Text, CurrentUser.Thirst)
+        '            Integer.TryParse(txtMaximumEndurance.Text.Trim(), CurrentUser.MaximumEndurance)
+        '            Integer.TryParse(txtHunger.Text.Trim(), CurrentUser.Hunger)
+        '            Integer.TryParse(txtThirst.Text.Trim(), CurrentUser.Thirst)
 
         '            'inventory
         '            CurrentUser.CurrentWeaponType = CmbCurrWeapon.SelectedItem.ToString
@@ -433,28 +433,28 @@ Namespace Forms.Admin
         '            CurrentUser.TwoHandedWeapon.Name = CmbTwoHWeapon.SelectedItem.ToString
         '            CurrentUser.Armor.Name = CmbArmor.SelectedItem.ToString
         '            CurrentUser.Potion = CmbPotion.SelectedItem.ToString
-        '            Integer.TryParse(txtLockpicks.Text, CurrentUser.Lockpicks)
-        '            Integer.TryParse(txtGoldHand.Text, CurrentUser.GoldOnHand)
-        '            Integer.TryParse(txtGoldBank.Text, CurrentUser.GoldInBank)
-        '            Integer.TryParse(txtGoldLoan.Text, CurrentUser.GoldOnLoan)
+        '            Integer.TryParse(txtLockpicks.Text.Trim(), CurrentUser.Lockpicks)
+        '            Integer.TryParse(txtGoldHand.Text.Trim(), CurrentUser.GoldOnHand)
+        '            Integer.TryParse(txtGoldBank.Text.Trim(), CurrentUser.GoldInBank)
+        '            Integer.TryParse(txtGoldLoan.Text.Trim(), CurrentUser.GoldOnLoan)
         '            CurrentUser.Shovel = chkShovel.Checked
         '            CurrentUser.Lantern = chkLantern.Checked
         '            CurrentUser.Amulet = chkAmulet.Checked
 
         '            'skills
-        '            Integer.TryParse(txtLight.Text, CurrentUser.LightWeaponSkill)
-        '            Integer.TryParse(txtHeavy.Text, CurrentUser.HeavyWeaponSkill)
-        '            Integer.TryParse(txtTwoH.Text, CurrentUser.TwoHandedWeaponSkill)
-        '            Integer.TryParse(txtBlocking.Text, CurrentUser.Blocking)
-        '            Integer.TryParse(txtSlipping.Text, CurrentUser.Slipping)
-        '            Integer.TryParse(txtStealth.Text, CurrentUser.Stealth)
+        '            Integer.TryParse(txtLight.Text.Trim(), CurrentUser.LightWeaponSkill)
+        '            Integer.TryParse(txtHeavy.Text.Trim(), CurrentUser.HeavyWeaponSkill)
+        '            Integer.TryParse(txtTwoH.Text.Trim(), CurrentUser.TwoHandedWeaponSkill)
+        '            Integer.TryParse(txtBlocking.Text.Trim(), CurrentUser.Blocking)
+        '            Integer.TryParse(txtSlipping.Text.Trim(), CurrentUser.Slipping)
+        '            Integer.TryParse(txtStealth.Text.Trim(), CurrentUser.Stealth)
 
         '            'henchmen
-        '            Integer.TryParse(txtHenchmenLevel1.Text, CurrentUser.HenchmenLevel1)
-        '            Integer.TryParse(txtHenchmenLevel2.Text, CurrentUser.HenchmenLevel2)
-        '            Integer.TryParse(txtHenchmenLevel3.Text, CurrentUser.HenchmenLevel3)
-        '            Integer.TryParse(txtHenchmenLevel4.Text, CurrentUser.HenchmenLevel4)
-        '            Integer.TryParse(txtHenchmenLevel5.Text, CurrentUser.HenchmenLevel5)
+        '            Integer.TryParse(txtHenchmenLevel1.Text.Trim(), CurrentUser.HenchmenLevel1)
+        '            Integer.TryParse(txtHenchmenLevel2.Text.Trim(), CurrentUser.HenchmenLevel2)
+        '            Integer.TryParse(txtHenchmenLevel3.Text.Trim(), CurrentUser.HenchmenLevel3)
+        '            Integer.TryParse(txtHenchmenLevel4.Text.Trim(), CurrentUser.HenchmenLevel4)
+        '            Integer.TryParse(txtHenchmenLevel5.Text.Trim(), CurrentUser.HenchmenLevel5)
         '        End Sub
 
         '        Private Async Sub SaveNewUser()

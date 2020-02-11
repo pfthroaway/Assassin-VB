@@ -149,7 +149,7 @@ Namespace Forms
 
         Private Sub FrmJobs_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGuild.Show()
-            FrmGuild.AddText(TxtJobs.Text)
+            FrmGuild.AddText(TxtJobs.Text.Trim())
         End Sub
 
     End Class

@@ -88,7 +88,7 @@ Namespace Forms
         Private Async Sub FrmAssassinate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGame.Show()
             FrmGame.Display()
-            FrmGame.AddText(TxtAssassinate.Text)
+            FrmGame.AddText(TxtAssassinate.Text.Trim())
             If Not CurrentUser.Alive Then
                 FrmGame.Awaken()
             End If

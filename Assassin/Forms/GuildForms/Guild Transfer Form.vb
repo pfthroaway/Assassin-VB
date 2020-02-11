@@ -166,7 +166,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer1_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer1.TextChanged
-            Integer.TryParse(TxtTransfer1.Text, _henchmenLevel1)
+            Integer.TryParse(TxtTransfer1.Text.Trim(), _henchmenLevel1)
 
             If radGuild.Checked = True Then
                 If _henchmenLevel1 <= CurrentUser.HenchmenLevel1 Then
@@ -186,7 +186,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer2_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer2.TextChanged
-            Integer.TryParse(TxtTransfer2.Text, _henchmenLevel2)
+            Integer.TryParse(TxtTransfer2.Text.Trim(), _henchmenLevel2)
 
             If radGuild.Checked = True Then
                 If _henchmenLevel2 <= CurrentUser.HenchmenLevel2 Then
@@ -206,7 +206,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer3_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer3.TextChanged
-            Integer.TryParse(TxtTransfer3.Text, _henchmenLevel3)
+            Integer.TryParse(TxtTransfer3.Text.Trim(), _henchmenLevel3)
 
             If radGuild.Checked = True Then
                 If _henchmenLevel3 <= CurrentUser.HenchmenLevel3 Then
@@ -226,7 +226,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer4_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer4.TextChanged
-            Integer.TryParse(TxtTransfer4.Text, _henchmenLevel4)
+            Integer.TryParse(TxtTransfer4.Text.Trim(), _henchmenLevel4)
 
             If radGuild.Checked = True Then
                 If _henchmenLevel4 <= CurrentUser.HenchmenLevel4 Then
@@ -246,7 +246,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransfer5_TextChanged(sender As Object, e As EventArgs) Handles TxtTransfer5.TextChanged
-            Integer.TryParse(TxtTransfer5.Text, _henchmenLevel5)
+            Integer.TryParse(TxtTransfer5.Text.Trim(), _henchmenLevel5)
 
             If radGuild.Checked = True Then
                 If _henchmenLevel5 <= CurrentUser.HenchmenLevel5 Then
@@ -266,7 +266,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtTransferGold_TextChanged(sender As Object, e As EventArgs) Handles TxtTransferGold.TextChanged
-            Integer.TryParse(TxtTransferGold.Text, _gold)
+            Integer.TryParse(TxtTransferGold.Text.Trim(), _gold)
 
             If radGuild.Checked = True Then
                 If _gold <= CurrentUser.GoldOnHand Then

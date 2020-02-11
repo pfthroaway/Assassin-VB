@@ -429,10 +429,10 @@ Namespace Forms
         Private Sub FrmHireHenchmen_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             If BlnGuild = True Then
                 FrmGuildManage.Show()
-                FrmGuildManage.AddText(TxtHire.Text)
+                FrmGuildManage.AddText(TxtHire.Text.Trim())
             Else
                 FrmGuild.Show()
-                FrmGuild.AddText(TxtHire.Text)
+                FrmGuild.AddText(TxtHire.Text.Trim())
             End If
         End Sub
 

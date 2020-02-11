@@ -215,7 +215,7 @@ Namespace Forms.Shopping
         Private Sub FrmWeapons_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             AddText("You exit the weapon shop.")
             FrmShops.Show()
-            FrmShops.AddText(TxtWeapons.Text)
+            FrmShops.AddText(TxtWeapons.Text.Trim())
         End Sub
 
     End Class

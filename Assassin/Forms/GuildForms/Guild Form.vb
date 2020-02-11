@@ -154,7 +154,7 @@ Namespace Forms.GuildForms
         Private Async Sub FrmGuild_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGame.Show()
             FrmGame.Display()
-            FrmGame.AddText(TxtGuild.Text)
+            FrmGame.AddText(TxtGuild.Text.Trim())
             Await SaveUser(CurrentUser)
         End Sub
 

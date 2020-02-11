@@ -69,7 +69,7 @@ Namespace Forms.GuildForms
         Private Async Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
             CurrentGuild.Name = TxtName.Text
             CurrentGuild.Master = CmbGuildmaster.SelectedItem.ToString
-            Integer.TryParse(TxtEntranceFee.Text, CurrentGuild.Fee)
+            Integer.TryParse(TxtEntranceFee.Text.Trim(), CurrentGuild.Fee)
 
             Await SaveGuild(CurrentGuild)
 
@@ -97,7 +97,7 @@ Namespace Forms.GuildForms
 
         Private Sub FrmGuildOptions_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGuildManage.Show()
-            FrmGuildManage.AddText(TxtOptions.Text)
+            FrmGuildManage.AddText(TxtOptions.Text.Trim())
             If _blnMasterChanged = True Then
                 FrmGuildManage.Disable()
             End If

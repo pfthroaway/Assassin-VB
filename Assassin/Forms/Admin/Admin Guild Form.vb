@@ -117,15 +117,15 @@ Namespace Forms.Admin
 
         ''' <summary>Saves the <see cref="Guild"/>.</summary>
         Private Async Sub Save()
-            CurrentGuild.Name = TxtName.Text
+            CurrentGuild.Name = TxtName.Text.Trim()
             CurrentGuild.Master = CmbGuildmaster.SelectedItem.ToString
-            Integer.TryParse(TxtEntranceFee.Text, CurrentGuild.Fee)
-            Integer.TryParse(TxtGuildGold.Text, CurrentGuild.Gold)
-            Integer.TryParse(TxtHenchmenLevel1.Text, CurrentGuild.HenchmenLevel1)
-            Integer.TryParse(TxtHenchmenLevel2.Text, CurrentGuild.HenchmenLevel2)
-            Integer.TryParse(TxtHenchmenLevel3.Text, CurrentGuild.HenchmenLevel3)
-            Integer.TryParse(TxtHenchmenLevel4.Text, CurrentGuild.HenchmenLevel4)
-            Integer.TryParse(TxtHenchmenLevel5.Text, CurrentGuild.HenchmenLevel5)
+            Integer.TryParse(TxtEntranceFee.Text.Trim(), CurrentGuild.Fee)
+            Integer.TryParse(TxtGuildGold.Text.Trim(), CurrentGuild.Gold)
+            Integer.TryParse(TxtHenchmenLevel1.Text.Trim(), CurrentGuild.HenchmenLevel1)
+            Integer.TryParse(TxtHenchmenLevel2.Text.Trim(), CurrentGuild.HenchmenLevel2)
+            Integer.TryParse(TxtHenchmenLevel3.Text.Trim(), CurrentGuild.HenchmenLevel3)
+            Integer.TryParse(TxtHenchmenLevel4.Text.Trim(), CurrentGuild.HenchmenLevel4)
+            Integer.TryParse(TxtHenchmenLevel5.Text.Trim(), CurrentGuild.HenchmenLevel5)
 
             Await DatabaseInteraction.SaveGuild(CurrentGuild)
             LoadGuilds()
@@ -142,7 +142,7 @@ Namespace Forms.Admin
 
         Private Sub TxtEntranceFee_TextChanged(sender As Object, e As EventArgs) Handles TxtEntranceFee.TextChanged
             If TxtEntranceFee.TextLength > 0 Then
-                If (CInt(TxtEntranceFee.Text) > 1000) Then
+                If (CInt(TxtEntranceFee.Text.Trim()) > 1000) Then
                     TxtEntranceFee.Clear()
                 End If
             End If

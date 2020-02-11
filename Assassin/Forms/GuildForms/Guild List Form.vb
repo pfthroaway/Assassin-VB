@@ -135,17 +135,18 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub FrmGuildList_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            If _blnGuild = False Then    'return to Game form
+            'TODO Hide Guild List Form
+            If _blnGuild = False Then 'return to Game form
                 FrmGame.Show()
                 If FrmGame.TxtGame.TextLength > 0 Then
-                    FrmGame.AddText(TxtGuilds.Text)
+                    FrmGame.AddText(TxtGuilds.Text.Trim())
                 Else
-                    FrmGame.Text = TxtGuilds.Text
+                    FrmGame.Text = TxtGuilds.Text.Trim()
                 End If
-            Else                        'enter Guild
+            Else 'enter Guild
                 FrmGuild.Show()
                 CurrentGuild = CurrentGuild
-                FrmGuild.TxtGuild.Text = TxtGuilds.Text
+                FrmGuild.TxtGuild.Text = TxtGuilds.Text.Trim()
                 FrmGuild.LoadGuild()
             End If
         End Sub

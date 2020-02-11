@@ -138,15 +138,15 @@ Namespace Forms
         End Sub
 
         Private Async Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
-            Dim username As String = TxtName.Text
+            Dim username As String = TxtName.Text.Trim()
 
-            If TxtPass.Text = TxtConfirm.Text Then
+            If TxtPass.Text.Trim() = TxtConfirm.Text.Trim() Then
                 If AllUsers.Exists(Function(user As User) user.Name = username) OrElse username = "Computer" Then
                     MessageBox.Show("This username has already been used.", "Assassin", MessageBoxButtons.OK)
                 Else
                     Dim newUser As New User With {
                         .Name = username,
-                        .Password = PBKDF2.HashPassword(TxtPass.Text),
+                        .Password = PBKDF2.HashPassword(TxtPass.Text.Trim()),
                         .CurrentEndurance = _maxEnd,
                         .MaximumEndurance = _maxEnd,
                         .LightWeaponSkill = _light,
@@ -263,8 +263,8 @@ Namespace Forms
         End Sub
 
         Private Sub TextChange(sender As Object, e As EventArgs) Handles TxtName.TextChanged, TxtPass.TextChanged, TxtConfirm.TextChanged
-            BtnClear.Enabled = TxtName.TextLength > 0 OrElse TxtPass.TextLength > 0 OrElse TxtConfirm.TextLength > 0
-            BtnCreate.Enabled = TxtName.TextLength > 0 AndAlso TxtPass.TextLength > 0 AndAlso TxtConfirm.TextLength > 0 AndAlso _skillPts = 0
+            BtnClear.Enabled = TxtName.Text.Trim().Length > 0 OrElse TxtPass.Text.Trim().Length > 0 OrElse TxtConfirm.Text.Trim().Length > 0
+            BtnCreate.Enabled = TxtName.Text.Trim().Length > 0 AndAlso TxtPass.Text.Trim().Length > 0 AndAlso TxtConfirm.Text.Trim().Length > 0 AndAlso _skillPts = 0
         End Sub
 
         Private Sub FrmNewUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

@@ -183,7 +183,7 @@ Namespace Forms.Admin
 
         Private Sub TxtBlocking_TextChanged(sender As Object, e As EventArgs) Handles TxtBlocking.TextChanged
             If TxtBlocking.TextLength > 0 Then
-                If CInt(TxtBlocking.Text) > 90 Then
+                If CInt(TxtBlocking.Text.Trim()) > 90 Then
                     TxtBlocking.Clear()
                 End If
             End If
@@ -191,7 +191,7 @@ Namespace Forms.Admin
 
         Private Sub TxtLevel_TextChanged(sender As Object, e As EventArgs) Handles TxtLevel.TextChanged
             If TxtLevel.TextLength > 0 Then
-                If CInt(TxtLevel.Text) > 10 Then
+                If CInt(TxtLevel.Text.Trim()) > 10 Then
                     TxtLevel.Clear()
                 End If
             End If
@@ -199,7 +199,7 @@ Namespace Forms.Admin
 
         Private Sub TxtSlipping_TextChanged(sender As Object, e As EventArgs) Handles TxtSlipping.TextChanged
             If TxtSlipping.TextLength > 0 Then
-                If CInt(TxtSlipping.Text) > 90 Then
+                If CInt(TxtSlipping.Text.Trim()) > 90 Then
                     TxtSlipping.Clear()
                 End If
             End If
@@ -207,7 +207,7 @@ Namespace Forms.Admin
 
         Private Sub TxtWeaponSkill_TextChanged(sender As Object, e As EventArgs) Handles TxtWeaponSkill.TextChanged
             If TxtWeaponSkill.TextLength > 0 Then
-                If CInt(TxtWeaponSkill.Text) > 90 Then
+                If CInt(TxtWeaponSkill.Text.Trim()) > 90 Then
                     TxtWeaponSkill.Clear()
                 End If
             End If

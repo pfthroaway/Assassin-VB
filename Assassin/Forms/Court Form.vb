@@ -133,7 +133,7 @@ Namespace Forms
             If _blnFinished = True Then
                 FrmGame.Show()
                 FrmGame.Display()
-                FrmGame.AddText(TxtCourt.Text)
+                FrmGame.AddText(TxtCourt.Text.Trim())
                 If CurrentUser.CurrentLocation = SleepLocation.Jail Then
                     FrmGame.CheckJailed()
                 End If

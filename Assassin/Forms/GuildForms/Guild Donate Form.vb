@@ -170,7 +170,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonate1_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate1.TextChanged
-            Integer.TryParse(TxtDonate1.Text, _henchmenLevel1)
+            Integer.TryParse(TxtDonate1.Text.Trim(), _henchmenLevel1)
 
             If _henchmenLevel1 <= CurrentUser.HenchmenLevel1 Then
                 CheckDonate()
@@ -181,7 +181,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonate2_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate2.TextChanged
-            Integer.TryParse(TxtDonate1.Text, _henchmenLevel2)
+            Integer.TryParse(TxtDonate1.Text.Trim(), _henchmenLevel2)
 
             If _henchmenLevel2 <= CurrentUser.HenchmenLevel2 Then
                 CheckDonate()
@@ -192,7 +192,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonate3_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate3.TextChanged
-            Integer.TryParse(TxtDonate1.Text, _henchmenLevel3)
+            Integer.TryParse(TxtDonate1.Text.Trim(), _henchmenLevel3)
 
             If _henchmenLevel3 <= CurrentUser.HenchmenLevel3 Then
                 CheckDonate()
@@ -203,7 +203,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonate4_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate4.TextChanged
-            Integer.TryParse(TxtDonate1.Text, _henchmenLevel4)
+            Integer.TryParse(TxtDonate1.Text.Trim(), _henchmenLevel4)
 
             If _henchmenLevel4 <= CurrentUser.HenchmenLevel4 Then
                 CheckDonate()
@@ -214,7 +214,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonate5_TextChanged(sender As Object, e As EventArgs) Handles TxtDonate5.TextChanged
-            Integer.TryParse(TxtDonate5.Text, _henchmenLevel1)
+            Integer.TryParse(TxtDonate5.Text.Trim(), _henchmenLevel1)
 
             If _henchmenLevel5 <= CurrentUser.HenchmenLevel5 Then
                 CheckDonate()
@@ -225,7 +225,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub TxtDonateGold_TextChanged(sender As Object, e As EventArgs) Handles TxtDonateGold.TextChanged
-            Integer.TryParse(TxtDonateGold.Text, _gold)
+            Integer.TryParse(TxtDonateGold.Text.Trim(), _gold)
 
             If _gold <= CurrentUser.GoldOnHand Then
                 CheckDonate()
@@ -237,7 +237,7 @@ Namespace Forms.GuildForms
 
         Private Sub FrmGuildDonate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGuild.Show()
-            FrmGuild.AddText(TxtDonate.Text)
+            FrmGuild.AddText(TxtDonate.Text.Trim())
         End Sub
 
 #End Region

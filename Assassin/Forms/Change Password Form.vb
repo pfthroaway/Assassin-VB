@@ -18,12 +18,12 @@ Namespace Forms
         End Sub
 
         Private Async Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-            If Not TxtOldPswd.Text = TxtNewPswd.Text Then
+            If Not TxtOldPswd.Text.Trim() = TxtNewPswd.Text.Trim() Then
 
                 If TxtNewPswd.Text = TxtConfPswd.Text Then  'if passwords match
-                    Dim newPass As String = PBKDF2.HashPassword(TxtNewPswd.Text)
+                    Dim newPass As String = PBKDF2.HashPassword(TxtNewPswd.Text.Trim())
                     If BlnAdmin = False Then
-                        If PBKDF2.ValidatePassword(TxtOldPswd.Text, CurrentUser.Password) Then
+                        If PBKDF2.ValidatePassword(TxtOldPswd.Text.Trim(), CurrentUser.Password) Then
                             CurrentUser.Password = newPass
                             Await SaveUser(CurrentUser)
                             MessageBox.Show("Password successfully changed.", "Assassin", MessageBoxButtons.OK)
@@ -32,7 +32,7 @@ Namespace Forms
                             MessageBox.Show("Please enter the correct current password.", "Assassin", MessageBoxButtons.OK)
                         End If
                     Else
-                        If PBKDF2.ValidatePassword(TxtOldPswd.Text, AdminPassword) Then
+                        If PBKDF2.ValidatePassword(TxtOldPswd.Text.Trim(), AdminPassword) Then
                             If Await ChangeAdminPassword(newPass) Then
                                 MessageBox.Show("Password successfully changed.", "Assassin", MessageBoxButtons.OK)
                                 Close()

@@ -129,7 +129,7 @@ Namespace Forms.Shopping
                 'frmPub.Show()
             ElseIf loc = "Guild" Then
                 FrmGuild.Show()
-                FrmGuild.AddText(TxtBar.Text)
+                FrmGuild.AddText(TxtBar.Text.Trim())
             ElseIf loc = "Inn" Then
                 'frmInn.Show()
             End If

@@ -49,7 +49,7 @@ Namespace Forms.Shopping
             AddText("You leave the shopping district and return to the streets.")
             FrmGame.Show()
             FrmGame.Display()
-            FrmGame.AddText(TxtShops.Text)
+            FrmGame.AddText(TxtShops.Text.Trim())
         End Sub
 
     End Class

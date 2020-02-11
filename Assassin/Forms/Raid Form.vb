@@ -105,11 +105,11 @@ Namespace Forms
                 Dim henchmenLevel3 As Integer
                 Dim henchmenLevel4 As Integer
                 Dim henchmenLevel5 As Integer
-                Integer.TryParse(TxtHenchmenLevel1.Text, henchmenLevel1)
-                Integer.TryParse(TxtHenchmenLevel2.Text, henchmenLevel2)
-                Integer.TryParse(TxtHenchmenLevel3.Text, henchmenLevel3)
-                Integer.TryParse(TxtHenchmenLevel4.Text, henchmenLevel4)
-                Integer.TryParse(TxtHenchmenLevel5.Text, henchmenLevel5)
+                Integer.TryParse(TxtHenchmenLevel1.Text.Trim(), henchmenLevel1)
+                Integer.TryParse(TxtHenchmenLevel2.Text.Trim(), henchmenLevel2)
+                Integer.TryParse(TxtHenchmenLevel3.Text.Trim(), henchmenLevel3)
+                Integer.TryParse(TxtHenchmenLevel4.Text.Trim(), henchmenLevel4)
+                Integer.TryParse(TxtHenchmenLevel5.Text.Trim(), henchmenLevel5)
 
                 BtnRaid.Enabled = (henchmenLevel1 + henchmenLevel2 + henchmenLevel3 + henchmenLevel4 + henchmenLevel5) > 0 AndAlso CmbRaid.SelectedIndex >= 0
             ElseIf CmbRaid.SelectedIndex = 1 Then
@@ -258,7 +258,7 @@ Namespace Forms
 
         Private Sub TxtHenchmenLevel1_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel1.TextChanged
             Dim currHench As Integer
-            Integer.TryParse(TxtHenchmenLevel1.Text, currHench)
+            Integer.TryParse(TxtHenchmenLevel1.Text.Trim(), currHench)
             If currHench > CurrentUser.HenchmenLevel1 Then
                 TxtHenchmenLevel1.Text = ""
             End If
@@ -268,7 +268,7 @@ Namespace Forms
 
         Private Sub TxtHenchmenLevel2_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel2.TextChanged
             Dim currHench As Integer
-            Integer.TryParse(TxtHenchmenLevel2.Text, currHench)
+            Integer.TryParse(TxtHenchmenLevel2.Text.Trim(), currHench)
             If currHench > CurrentUser.HenchmenLevel2 Then
                 TxtHenchmenLevel2.Text = ""
             End If
@@ -278,7 +278,7 @@ Namespace Forms
 
         Private Sub TxtHenchmenLevel3_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel3.TextChanged
             Dim currHench As Integer
-            Integer.TryParse(TxtHenchmenLevel3.Text, currHench)
+            Integer.TryParse(TxtHenchmenLevel3.Text.Trim(), currHench)
             If currHench > CurrentUser.HenchmenLevel3 Then
                 TxtHenchmenLevel3.Text = ""
             End If
@@ -288,7 +288,7 @@ Namespace Forms
 
         Private Sub TxtHenchmenLevel4_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel4.TextChanged
             Dim currHench As Integer
-            Integer.TryParse(TxtHenchmenLevel4.Text, currHench)
+            Integer.TryParse(TxtHenchmenLevel4.Text.Trim(), currHench)
             If currHench > CurrentUser.HenchmenLevel4 Then
                 TxtHenchmenLevel4.Text = ""
             End If
@@ -298,7 +298,7 @@ Namespace Forms
 
         Private Sub TxtHenchmenLevel5_TextChanged(sender As Object, e As EventArgs) Handles TxtHenchmenLevel5.TextChanged
             Dim currHench As Integer
-            Integer.TryParse(TxtHenchmenLevel5.Text, currHench)
+            Integer.TryParse(TxtHenchmenLevel5.Text.Trim(), currHench)
             If currHench > CurrentUser.HenchmenLevel5 Then
                 TxtHenchmenLevel5.Text = ""
             End If

@@ -65,7 +65,7 @@ Namespace Forms.GuildForms
 
         Private Sub FrmGuildManage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
             FrmGuild.Show()
-            FrmGuild.AddText(TxtGuild.Text)
+            FrmGuild.AddText(TxtGuild.Text.Trim())
             FrmGuild.LoadGuild()
         End Sub
 

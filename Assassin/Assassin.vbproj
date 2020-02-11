@@ -164,7 +164,7 @@
     <Compile Include="Forms\Admin\Admin Guild Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Admin Users Form.designer.vb">
+    <Compile Include="Forms\Admin\Admin Users Form.Designer.vb">
       <DependentUpon>Admin Users Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Admin Users Form.vb">
@@ -331,7 +331,7 @@
     <Compile Include="Forms\Manual Form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\New User Form.designer.vb">
+    <Compile Include="Forms\New User Form.Designer.vb">
       <DependentUpon>New User Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\New User Form.vb">
@@ -384,7 +384,7 @@
     <Compile Include="Forms\Splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Train Form.designer.vb">
+    <Compile Include="Forms\Train Form.Designer.vb">
       <DependentUpon>Train Form.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Train Form.vb">
