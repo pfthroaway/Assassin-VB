@@ -3,8 +3,8 @@ Option Explicit On
 
 Namespace Forms.Shopping
 
-    Public Class FrmMystic
-        'TODO Implement the Mystic
+    Public Class FrmGeneralStore
+        'TODO Implement the General Store.
     End Class
 
 End Namespace
