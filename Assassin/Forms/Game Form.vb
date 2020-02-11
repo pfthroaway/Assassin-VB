@@ -127,7 +127,6 @@ Namespace Forms
         Private Sub BtnAssassinate_Click(sender As Object, e As EventArgs) Handles BtnAssassinate.Click
             FrmAssassinate.Show()
             FrmAssassinate.NewEnemy()
-            FrmAssassinate.CheckHungerThirst()
             Hide()
         End Sub
 

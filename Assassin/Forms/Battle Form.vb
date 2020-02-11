@@ -32,7 +32,7 @@ Namespace Forms
 
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
-        Public Sub AddText(newText As String)
+        Private Sub AddText(newText As String)
             AddTextToTextBox(TxtBattle, newText)
         End Sub
 
@@ -77,8 +77,9 @@ Namespace Forms
             Dim eneDamage As Integer = Functions.GenerateRandomNumber(_enemyDamage \ 2, _enemyDamage)
             Dim plrDefend As Integer = Functions.GenerateRandomNumber(CurrentUser.Armor.Defense \ 2, CurrentUser.Armor.Defense)
             If eneDamage > plrDefend Then
-                AddText($"Your opponent attacks you for {eneDamage} damage, but your armor absorbs {plrDefend} damage.")
-                CurrentUser.CurrentEndurance -= eneDamage - plrDefend
+                Dim actualDamage As Integer = eneDamage - plrDefend
+                AddText($"Your opponent attacks you for {eneDamage} damage, but your armor absorbs {plrDefend} damage. You take {actualDamage} total damage.")
+                CurrentUser.CurrentEndurance -= actualDamage
             Else
                 AddText($"Your opponent attacks you for {eneDamage} damage, but your armor absorbs all of it.")
             End If
@@ -90,13 +91,14 @@ Namespace Forms
             Dim eneDefend As Integer = Functions.GenerateRandomNumber(CurrentEnemy.Armor.Defense \ 2, CurrentEnemy.Armor.Defense)
 
             If plrDamage > eneDefend Then
-                AddText($"You attack your opponent for {plrDamage} damage, but their armor absorbs {eneDefend} damage.")
-                CurrentEnemy.CurrentEndurance -= plrDamage - eneDefend
+                Dim actualDamage As Integer = plrDamage - eneDefend
+                AddText($"You attack your opponent for {plrDamage} damage, but their armor absorbs {eneDefend} damage. You do {actualDamage} total damage.")
+                CurrentEnemy.CurrentEndurance -= actualDamage
                 If CurrentEnemy.CurrentEndurance < 0 Then
                     CurrentEnemy.CurrentEndurance = 0
                 End If
             Else
-                AddText($"You attacks you for {plrDamage} damage, but their armor absorbs all of it.")
+                AddText($"You attack your opponent for {plrDamage} damage, but their armor absorbs all of it.")
             End If
         End Sub
 
@@ -215,8 +217,10 @@ Namespace Forms
                 End If
             End If
 
-            CurrentUser.SkillPoints += 1
-            AddText("You have earned a skill point from this battle.")
+            If CurrentUser.Level - CurrentEnemy.Level >= -2 Then
+                CurrentUser.SkillPoints += 1
+                AddText("You have earned a skill point from this battle.")
+            End If
 
             CurrentUser.GoldOnHand += CurrentEnemy.GoldOnHand
             AddText($"You frisk your opponent's body and find {CurrentEnemy.GoldOnHand} gold.")
@@ -457,6 +461,7 @@ Namespace Forms
         ''' <summary>Determines if you surprise the <see cref="Enemy"/> when first attacking them.</summary>
         Public Sub Surprise()
             LoadBattle()
+            AddText($"You approach the {CurrentEnemy.Name}.")
             If SkillCheck(CurrentUser.Stealth + Bonus()) Then
                 _playerDamage *= 2
                 AddText("You surprise your opponent!")
@@ -537,12 +542,9 @@ Namespace Forms
             Else
                 Await SaveUser(CurrentUser)
                 If BlnJob = False Then
-                    FrmGame.Show()
-                    FrmGame.Display()
-                    FrmGame.AddText(text)
-                    If Not CurrentUser.Alive Then
-                        FrmGame.Awaken()
-                    End If
+                    FrmAssassinate.Show()
+                    FrmAssassinate.AddText(text)
+                    FrmAssassinate.FinishBattle()
                 Else
                     FrmJobs.Show()
                     FrmJobs.AddText(TxtBattle.Text)
