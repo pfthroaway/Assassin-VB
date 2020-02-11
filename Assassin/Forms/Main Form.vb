@@ -15,7 +15,7 @@ Namespace Forms
         Private Function CheckLogin() As Boolean
             If AllUsers.Count > 0 Then
                 Dim NewUser As User = AllUsers.Find(Function(user) String.Equals(user.Name, TxtUsername.Text, StringComparison.OrdinalIgnoreCase))
-                If NewUser <> New User AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
+                If Not NewUser Is Nothing AndAlso NewUser <> New User() AndAlso PBKDF2.ValidatePassword(TxtPswd.Text, NewUser.Password) Then
                     CurrentUser = NewUser
                     Return True
                 End If

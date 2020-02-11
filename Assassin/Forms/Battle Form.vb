@@ -530,6 +530,7 @@ Namespace Forms
 #End Region
 
         Private Async Sub FrmBattle_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+            Dim text As String = TxtBattle.Text
             If _blnDone = False Then
                 e.Cancel = True
                 MessageBox.Show("You must flee or finish the battle first.", "Assassin", MessageBoxButtons.OK)
@@ -538,7 +539,7 @@ Namespace Forms
                 If BlnJob = False Then
                     FrmGame.Show()
                     FrmGame.Display()
-                    FrmGame.AddText(TxtBattle.Text)
+                    FrmGame.AddText(text)
                     If Not CurrentUser.Alive Then
                         FrmGame.Awaken()
                     End If

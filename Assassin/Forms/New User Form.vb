@@ -159,7 +159,10 @@ Namespace Forms
                     }
                     Await GameState.NewUser(newUser)
                     Await MemberJoinsGuild(newUser, AllGuilds(0))
+                    AllUsers.Add(newUser)
+                    AllUsers = AllUsers.OrderBy(Function(user) user.Name).ToList()
                     AllGuilds(0).Members.Add(newUser.Name)
+                    CurrentUser = AllUsers.Find(Function(user) user = newUser)
                     FrmGame.Show()
                     FrmGame.TxtGame.Text = $"Creare An Vita, {TxtName.Text}!{ControlChars.NewLine}{ControlChars.NewLine}You enter the city of thieves to take your place among the legends!"
                     FrmGame.Display()
