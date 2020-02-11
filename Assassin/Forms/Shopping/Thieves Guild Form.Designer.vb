@@ -26,99 +26,99 @@ Namespace Forms.Shopping
         'Do not modify it using the code editor.
         <DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim resources As ComponentResourceManager = New ComponentResourceManager(GetType(FrmThievesGuild))
-            Me.LblGold = New Label()
-            Me.Label1 = New Label()
-            Me.TxtThievesGuild = New TextBox()
-            Me.LblLockpicks = New Label()
-            Me.Label3 = New Label()
-            Me.BtnPurchase = New Button()
-            Me.BtnBack = New Button()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmThievesGuild))
+            Me.LblGold = New System.Windows.Forms.Label()
+            Me.Label1 = New System.Windows.Forms.Label()
+            Me.TxtThievesGuild = New System.Windows.Forms.TextBox()
+            Me.LblLockpicks = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
+            Me.BtnPurchase = New System.Windows.Forms.Button()
+            Me.BtnBack = New System.Windows.Forms.Button()
             Me.SuspendLayout()
             '
             'LblGold
             '
-            Me.LblGold.BorderStyle = BorderStyle.FixedSingle
-            Me.LblGold.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblGold.Location = New Point(12, 180)
+            Me.LblGold.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblGold.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblGold.Location = New System.Drawing.Point(12, 180)
             Me.LblGold.Name = "LblGold"
-            Me.LblGold.Size = New Size(150, 25)
-            Me.LblGold.TabIndex = 11
-            Me.LblGold.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblGold.Size = New System.Drawing.Size(150, 25)
+            Me.LblGold.TabIndex = 4
+            Me.LblGold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label1
             '
-            Me.Label1.BorderStyle = BorderStyle.FixedSingle
-            Me.Label1.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label1.Location = New Point(12, 158)
+            Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Location = New System.Drawing.Point(12, 158)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New Size(150, 25)
-            Me.Label1.TabIndex = 10
+            Me.Label1.Size = New System.Drawing.Size(150, 25)
+            Me.Label1.TabIndex = 3
             Me.Label1.Text = "Current Gold:"
-            Me.Label1.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
-            'txtThievesGuild
+            'TxtThievesGuild
             '
-            Me.TxtThievesGuild.BorderStyle = BorderStyle.FixedSingle
-            Me.TxtThievesGuild.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtThievesGuild.Location = New Point(12, 12)
+            Me.TxtThievesGuild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.TxtThievesGuild.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtThievesGuild.Location = New System.Drawing.Point(12, 12)
             Me.TxtThievesGuild.Multiline = True
-            Me.TxtThievesGuild.Name = "txtThievesGuild"
+            Me.TxtThievesGuild.Name = "TxtThievesGuild"
             Me.TxtThievesGuild.ReadOnly = True
-            Me.TxtThievesGuild.ScrollBars = ScrollBars.Vertical
-            Me.TxtThievesGuild.Size = New Size(402, 143)
-            Me.TxtThievesGuild.TabIndex = 12
-            Me.TxtThievesGuild.Text = resources.GetString("txtThievesGuild.Text")
+            Me.TxtThievesGuild.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+            Me.TxtThievesGuild.Size = New System.Drawing.Size(402, 143)
+            Me.TxtThievesGuild.TabIndex = 2
+            Me.TxtThievesGuild.Text = resources.GetString("TxtThievesGuild.Text")
             '
             'LblLockpicks
             '
-            Me.LblLockpicks.BorderStyle = BorderStyle.FixedSingle
-            Me.LblLockpicks.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.LblLockpicks.Location = New Point(264, 180)
+            Me.LblLockpicks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblLockpicks.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblLockpicks.Location = New System.Drawing.Point(264, 180)
             Me.LblLockpicks.Name = "LblLockpicks"
-            Me.LblLockpicks.Size = New Size(150, 25)
-            Me.LblLockpicks.TabIndex = 14
-            Me.LblLockpicks.TextAlign = ContentAlignment.MiddleCenter
+            Me.LblLockpicks.Size = New System.Drawing.Size(150, 25)
+            Me.LblLockpicks.TabIndex = 6
+            Me.LblLockpicks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label3
             '
-            Me.Label3.BorderStyle = BorderStyle.FixedSingle
-            Me.Label3.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New Point(264, 158)
+            Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label3.Location = New System.Drawing.Point(264, 158)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New Size(150, 25)
-            Me.Label3.TabIndex = 13
+            Me.Label3.Size = New System.Drawing.Size(150, 25)
+            Me.Label3.TabIndex = 5
             Me.Label3.Text = "Lockpicks Owned:"
-            Me.Label3.TextAlign = ContentAlignment.MiddleCenter
+            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'BtnPurchase
             '
             Me.BtnPurchase.Enabled = False
-            Me.BtnPurchase.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnPurchase.Location = New Point(129, 208)
+            Me.BtnPurchase.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnPurchase.Location = New System.Drawing.Point(129, 208)
             Me.BtnPurchase.Name = "BtnPurchase"
-            Me.BtnPurchase.Size = New Size(150, 35)
-            Me.BtnPurchase.TabIndex = 15
+            Me.BtnPurchase.Size = New System.Drawing.Size(150, 35)
+            Me.BtnPurchase.TabIndex = 0
             Me.BtnPurchase.Text = "&Purchase"
             Me.BtnPurchase.UseVisualStyleBackColor = True
             '
             'BtnBack
             '
-            Me.BtnBack.DialogResult = DialogResult.Cancel
-            Me.BtnBack.Font = New Font("Arial", 12.0!, FontStyle.Bold, GraphicsUnit.Point, CType(0, Byte))
-            Me.BtnBack.Location = New Point(129, 249)
+            Me.BtnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            Me.BtnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.BtnBack.Location = New System.Drawing.Point(129, 249)
             Me.BtnBack.Name = "BtnBack"
-            Me.BtnBack.Size = New Size(150, 35)
-            Me.BtnBack.TabIndex = 16
+            Me.BtnBack.Size = New System.Drawing.Size(150, 35)
+            Me.BtnBack.TabIndex = 1
             Me.BtnBack.Text = "&Back"
             Me.BtnBack.UseVisualStyleBackColor = True
             '
-            'frmThievesGuild
+            'FrmThievesGuild
             '
-            Me.AutoScaleDimensions = New SizeF(9.0!, 18.0!)
-            Me.AutoScaleMode = AutoScaleMode.Font
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.CancelButton = Me.BtnBack
-            Me.ClientSize = New Size(426, 296)
+            Me.ClientSize = New System.Drawing.Size(426, 296)
             Me.Controls.Add(Me.BtnBack)
             Me.Controls.Add(Me.BtnPurchase)
             Me.Controls.Add(Me.LblLockpicks)
@@ -126,13 +126,13 @@ Namespace Forms.Shopping
             Me.Controls.Add(Me.TxtThievesGuild)
             Me.Controls.Add(Me.LblGold)
             Me.Controls.Add(Me.Label1)
-            Me.Font = New Font("Arial", 12.0!, FontStyle.Regular, GraphicsUnit.Point, CType(0, Byte))
-            Me.Margin = New Padding(4)
+            Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Margin = New System.Windows.Forms.Padding(4)
             Me.MaximizeBox = False
-            Me.MaximumSize = New Size(442, 335)
-            Me.MinimumSize = New Size(442, 335)
-            Me.Name = "frmThievesGuild"
-            Me.StartPosition = FormStartPosition.CenterScreen
+            Me.MaximumSize = New System.Drawing.Size(442, 335)
+            Me.MinimumSize = New System.Drawing.Size(442, 335)
+            Me.Name = "FrmThievesGuild"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Thieves' Guild"
             Me.ResumeLayout(False)
             Me.PerformLayout()

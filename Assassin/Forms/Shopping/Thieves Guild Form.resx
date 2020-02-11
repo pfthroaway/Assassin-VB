@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtThievesGuild.Text" xml:space="preserve">
+  <data name="TxtThievesGuild.Text" xml:space="preserve">
     <value>As you enter, a hooded figure emerges from the shadow.
 
 "Sorry to disappoint you, but after a raid by the King's Men, all I have left is a few lockpicks. I can sell them to you for 300 gold each? Are you interested?"</value>

@@ -6,7 +6,6 @@ Imports Assassin.Classes
 Namespace Forms.Shopping
 
     Public Class FrmThievesGuild
-        'TODO Find out why Thieves' Guild takes a couple seconds to load.
 
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
@@ -16,9 +15,6 @@ Namespace Forms.Shopping
 
         ''' <summary>Displays the player's current gold and number of lockpicks.</summary>
         Public Sub Display()
-            TxtThievesGuild.Select(0, 0)
-            TxtThievesGuild.ScrollToCaret()
-
             LblGold.Text = CurrentUser.GoldOnHandToString
             LblLockpicks.Text = CurrentUser.Lockpicks.ToString("N0")
 
