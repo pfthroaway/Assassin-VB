@@ -54,7 +54,7 @@ Namespace Forms.GuildForms
                     BtnApply.Enabled = False
                 Else
                     'if CurrentUser isn't a member
-                    If Await HasAppliedToGuild(CurrentUser, CurrentGuild) Then
+                    If Await DatabaseInteraction.HasAppliedToGuild(CurrentUser, CurrentGuild) Then
                         'user has already applied
                         BtnEnter.Enabled = False
                         BtnApply.Enabled = False
@@ -105,14 +105,14 @@ Namespace Forms.GuildForms
                     BtnEnter.Enabled = True
                 Else
                     'submit new application
-                    Await ApplyToGuild(CurrentUser, CurrentGuild)
+                    Await DatabaseInteraction.ApplyToGuild(CurrentUser, CurrentGuild)
                     AddText($"You paid {CurrentGuild.Fee} gold and applied for the {CurrentGuild.Name} guild.")
                 End If
 
                 BtnApply.Enabled = False
                 CurrentUser.GoldOnHand -= CurrentGuild.Fee
                 CurrentGuild.Gold += CurrentGuild.Fee
-                Await SaveGuild(CurrentGuild)
+                Await DatabaseInteraction.SaveGuild(CurrentGuild)
                 Await SaveUser(CurrentUser)
 
                 Display()

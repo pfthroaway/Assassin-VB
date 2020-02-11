@@ -406,7 +406,7 @@ Namespace Forms
                 CurrentGuild.HenchmenLevel4 += _buy4
                 CurrentGuild.HenchmenLevel5 += _buy5
                 CurrentGuild.Gold = _goldRemaining
-                Await SaveGuild(CurrentGuild)
+                Await DatabaseInteraction.SaveGuild(CurrentGuild)
                 SetGuild()
             Else
                 CurrentUser.HenchmenLevel1 += _buy1

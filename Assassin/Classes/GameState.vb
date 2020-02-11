@@ -278,31 +278,19 @@ Namespace Classes
 
 #End Region
 
-#Region "Message Management"
-
-        ''' <summary>Deletes a <see cref="Message"/> from the database.</summary>
-        ''' <param name="message"><see cref="Message"/> to be deleted</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function DeleteMessage(message As Message) As Task(Of Boolean)
-            Return Await DatabaseInteraction.DeleteMessage(message)
-        End Function
-
-        ''' <summary>Sends a <see cref="Message"/> between <see cref="User"/>s.</summary>
-        ''' <param name="message"><see cref="Message"/> sent</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SendMessage(message As Message) As Task(Of Boolean)
-            Return Await DatabaseInteraction.SendMessage(message)
-        End Function
-
-#End Region
-
 #Region "User Management"
 
         ''' <summary>Adds a User.</summary>
         ''' <param name="userNew">User to be added</param>
         ''' <returns>True if successful</returns>
         Public Async Function NewUser(userNew As User) As Task(Of Boolean)
-            Return Await DatabaseInteraction.NewUser(userNew)
+            If Await DatabaseInteraction.NewUser(userNew) AndAlso Await MemberJoinsGuild(userNew, AllGuilds(0)) Then
+                AllUsers.Add(userNew)
+                AllUsers = AllUsers.OrderBy(Function(user) user.Name).ToList()
+                AllGuilds(0).Members.Add(userNew.Name)
+                Return True
+            End If
+            Return False
         End Function
 
         ''' <summary>Saves a User.</summary>
@@ -312,56 +300,20 @@ Namespace Classes
             Return Await DatabaseInteraction.SaveUser(userSave)
         End Function
 
-        ''' <summary>Changes an User's name and then saves the User to the database.</summary>
-        ''' <param name="userSave">User to be saved</param>
-        ''' <param name="newName">New name for User</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function SaveUser(userSave As User, newName As String) As Task(Of Boolean)
-            Return Await DatabaseInteraction.SaveUser(userSave, newName)
-        End Function
-
 #End Region
 
 #Region "Guild Management"
-
-        ''' <summary><see cref="User"/> applies for membership with a <see cref="Guild"/>.</summary>
-        ''' <param name="joinUser"><see cref="User"/> applying to join the <see cref="Guild"/>.</param>
-        ''' <param name="joinGuild"><see cref="Guild"/> being applied to</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.ApplyToGuild(joinUser, joinGuild)
-        End Function
-
-        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
-        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
-        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.ApproveGuildApplication(approveUser, approveGuild)
-        End Function
-
-        ''' <summary>Denies a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
-        ''' <param name="denyUser"><see cref="User"/> whose application is denied</param>
-        ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.DenyGuildApplication(denyUser, denyGuild)
-        End Function
-
-        ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
-        ''' <param name="joinUser">User joining the Guild.</param>
-        ''' <param name="joinGuild">Guild being joined</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function HasAppliedToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.HasAppliedToGuild(joinUser, joinGuild)
-        End Function
 
         ''' <summary>Member of a Guild gains membership with that Guild, applied to database.</summary>
         ''' <param name="joinUser">User joining the Guild.</param>
         ''' <param name="joinGuild">Guild being joined</param>
         ''' <returns>True if successful</returns>
         Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.MemberJoinsGuild(joinUser, joinGuild)
+            If Await DatabaseInteraction.MemberJoinsGuild(joinUser, joinGuild) Then
+                joinGuild.Members.Add(joinUser.Name)
+                Return True
+            End If
+            Return False
         End Function
 
         ''' <summary>Member of a Guild terminates membership with that Guild, applied to database.</summary>
@@ -374,12 +326,6 @@ Namespace Classes
                 Return True
             End If
             Return False
-        End Function
-
-        ''' <summary>Saves a Guild.</summary>
-        ''' <param name="guildSave">Guild to be saved</param>
-        Public Async Function SaveGuild(guildSave As Guild) As Task(Of Boolean)
-            Return Await DatabaseInteraction.SaveGuild(guildSave)
         End Function
 
 #End Region

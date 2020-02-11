@@ -8,6 +8,7 @@ Imports Extensions
 
 Namespace Forms
 
+    'TODO Fix raiding
     Public Class FrmRaid
 
         Dim _raidGuild As New Guild
@@ -223,7 +224,7 @@ Namespace Forms
                 _raidGuild.HenchmenLevel4 = 0
                 _raidGuild.HenchmenLevel5 = 0
 
-                Await SaveGuild(_raidGuild)
+                Await DatabaseInteraction.SaveGuild(_raidGuild)
             Else
                 stolenGold = number * 100
             End If

@@ -142,7 +142,7 @@ Namespace Forms.Admin
 
         Private Sub TxtEntranceFee_TextChanged(sender As Object, e As EventArgs) Handles TxtEntranceFee.TextChanged
             If TxtEntranceFee.TextLength > 0 Then
-                If (CInt(TxtEntranceFee.Text.Trim()) > 1000) Then
+                If CInt(TxtEntranceFee.Text.Trim()) > 1000 Then
                     TxtEntranceFee.Clear()
                 End If
             End If
@@ -200,8 +200,7 @@ Namespace Forms.Admin
             dlg = MessageBox.Show("Are you sure you want to expel this member?", "Assassin", MessageBoxButtons.YesNo)
 
             If dlg = DialogResult.Yes Then
-                Await DatabaseInteraction.MemberLeavesGuild(CurrentUser, CurrentGuild)
-                CurrentGuild.Members.Remove(CurrentUser.Name)
+                Await MemberLeavesGuild(CurrentUser, CurrentGuild)
                 GetMembers()
             End If
         End Sub

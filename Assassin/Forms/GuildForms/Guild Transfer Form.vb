@@ -101,7 +101,7 @@ Namespace Forms.GuildForms
             End If
 
             Await SaveUser(CurrentUser)
-            Await SaveGuild(CurrentGuild)
+            Await DatabaseInteraction.SaveGuild(CurrentGuild)
             MessageBox.Show("Transfer successful.", "Assassin", MessageBoxButtons.OK)
             TransferText()
             Clear()

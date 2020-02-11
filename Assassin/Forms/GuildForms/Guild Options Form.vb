@@ -71,7 +71,7 @@ Namespace Forms.GuildForms
             CurrentGuild.Master = CmbGuildmaster.SelectedItem.ToString
             Integer.TryParse(TxtEntranceFee.Text.Trim(), CurrentGuild.Fee)
 
-            Await SaveGuild(CurrentGuild)
+            Await DatabaseInteraction.SaveGuild(CurrentGuild)
 
             If CurrentGuild.Name <> _oldName Then
                 AddText($"You change the name of the guild to {CurrentGuild.Name}.")

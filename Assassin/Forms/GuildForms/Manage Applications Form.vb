@@ -20,7 +20,7 @@ Namespace Forms.GuildForms
 
         ''' <summary>Confirms an applicant.</summary>
         Private Async Sub Confirm()
-            Await DenyGuildApplication(_applicant, CurrentGuild)
+            Await DatabaseInteraction.DenyGuildApplication(_applicant, CurrentGuild)
             MessageBox.Show("Application successfully approved.", "Assassin", MessageBoxButtons.OK)
             Await GetApplicants()
             FrmGuildManage.AddText($"{_applicant.Name} has been accepted to the guild.")
@@ -28,7 +28,7 @@ Namespace Forms.GuildForms
 
         ''' <summary>Denies an applicant.</summary>
         Private Async Sub Deny()
-            Await DenyGuildApplication(_applicant, CurrentGuild)
+            Await DatabaseInteraction.DenyGuildApplication(_applicant, CurrentGuild)
             MessageBox.Show("Application successfully denied.", "Assassin", MessageBoxButtons.OK)
             Await GetApplicants()
             FrmGuildManage.AddText($"{_applicant.Name} has been denied access to the guild.")
@@ -37,7 +37,7 @@ Namespace Forms.GuildForms
         ''' <summary>Gets all applicants for the current <see cref="Guild"/>.</summary>
         Public Async Function GetApplicants() As Task
             Clear()
-            Dim applicants As List(Of String) = Await GameState.DatabaseInteraction.LoadGuildApplicants(CurrentGuild)
+            Dim applicants As List(Of String) = Await DatabaseInteraction.LoadGuildApplicants(CurrentGuild)
 
             If applicants.Count > 0 Then
                 For Each applicant As Integer In applicants

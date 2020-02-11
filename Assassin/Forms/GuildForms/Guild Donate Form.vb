@@ -84,7 +84,7 @@ Namespace Forms.GuildForms
             End If
 
             Await SaveUser(CurrentUser)
-            Await SaveGuild(CurrentGuild)
+            Await DatabaseInteraction.SaveGuild(CurrentGuild)
             Clear()
         End Sub
 

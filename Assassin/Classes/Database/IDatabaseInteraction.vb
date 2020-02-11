@@ -45,6 +45,12 @@ Namespace Classes.Database
         ''' <returns>True if successful</returns>
         Function ApplyToGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
 
+        ''' <summary><see cref="User"/> is approved for membership with a <see cref="Guild"/>.</summary>
+        ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
+        ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
+        ''' <returns>True if successful</returns>
+        Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
+
         ''' <summary>Deletes a <see cref="User"/>'s application to a <see cref="Guild"/>.</summary>
         ''' <param name="deleteUser"><see cref="User"/> whose application is deleted</param>
         ''' <param name="deleteGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was deleted</param>
@@ -173,6 +179,11 @@ Namespace Classes.Database
 #End Region
 
 #Region "User Management"
+
+        ''' <summary>Deletes a <see cref="User"/> from the database.</summary>
+        ''' <param name="userDelete"><see cref="User"/> to be deleted.</param>
+        ''' <returns>True if successful</returns>
+        Function DeleteUser(userDelete As User) As Task(Of Boolean)
 
         ''' <summary>Adds a User.</summary>
         ''' <param name="userNew">User to be added</param>

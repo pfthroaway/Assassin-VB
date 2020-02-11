@@ -108,7 +108,7 @@ Namespace Classes.Database
         ''' <param name="approveUser"><see cref="User"/> approved to join the <see cref="Guild"/>.</param>
         ''' <param name="approveGuild"><see cref="Guild"/> being joined</param>
         ''' <returns>True if successful</returns>
-        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean)
+        Public Async Function ApproveGuildApplication(approveUser As User, approveGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.ApproveGuildApplication
             Return Await DeleteGuildApplication(approveUser, approveGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), approveGuild.Name, approveUser.Name, $"Your application to join the {approveGuild.Name.Replace("'", "''")} guild has been approved. Welcome!", Now, True)) AndAlso Await MemberJoinsGuild(approveUser, approveGuild)
         End Function
 
@@ -516,6 +516,15 @@ Namespace Classes.Database
             'inventory
 
             Return newUser
+        End Function
+
+        ''' <summary>Deletes a <see cref="User"/> from the database.</summary>
+        ''' <param name="userDelete"><see cref="User"/> to be deleted.</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function DeleteUser(userDelete As User) As Task(Of Boolean) Implements IDatabaseInteraction.DeleteUser
+            Dim cmd As New SQLiteCommand With {.CommandText = "DELETE FROM Users WHERE [Username] = @name"}
+            cmd.Parameters.AddWithValue("@name", userDelete.Name)
+            Return Await SQLiteHelper.ExecuteCommand(_con, cmd)
         End Function
 
         ''' <summary>Adds a <see cref="User"/> to the database.</summary>

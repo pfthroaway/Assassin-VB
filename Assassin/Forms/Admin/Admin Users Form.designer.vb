@@ -85,7 +85,7 @@ Namespace Forms.Admin
             Me.Label18 = New System.Windows.Forms.Label()
             Me.TxtLockpicks = New System.Windows.Forms.TextBox()
             Me.Label17 = New System.Windows.Forms.Label()
-            Me.TxtConfPass = New System.Windows.Forms.TextBox()
+            Me.TxtConfirmPass = New System.Windows.Forms.TextBox()
             Me.Label19 = New System.Windows.Forms.Label()
             Me.Label20 = New System.Windows.Forms.Label()
             Me.Label21 = New System.Windows.Forms.Label()
@@ -821,18 +821,18 @@ Namespace Forms.Admin
             Me.Label17.Text = "Confirm Pass:"
             Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'TxtConfPass
+            'TxtConfirmPass
             '
-            Me.TxtConfPass.Enabled = False
-            Me.TxtConfPass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtConfPass.Location = New System.Drawing.Point(394, 115)
-            Me.TxtConfPass.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtConfPass.MaxLength = 16
-            Me.TxtConfPass.Name = "TxtConfPass"
-            Me.TxtConfPass.Size = New System.Drawing.Size(175, 26)
-            Me.TxtConfPass.TabIndex = 3
-            Me.TxtConfPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            Me.TxtConfPass.UseSystemPasswordChar = True
+            Me.TxtConfirmPass.Enabled = False
+            Me.TxtConfirmPass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtConfirmPass.Location = New System.Drawing.Point(394, 115)
+            Me.TxtConfirmPass.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtConfirmPass.MaxLength = 16
+            Me.TxtConfirmPass.Name = "TxtConfirmPass"
+            Me.TxtConfirmPass.Size = New System.Drawing.Size(175, 26)
+            Me.TxtConfirmPass.TabIndex = 3
+            Me.TxtConfirmPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtConfirmPass.UseSystemPasswordChar = True
             '
             'Label19
             '
@@ -1133,7 +1133,7 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label21)
             Me.Controls.Add(Me.Label20)
             Me.Controls.Add(Me.Label19)
-            Me.Controls.Add(Me.TxtConfPass)
+            Me.Controls.Add(Me.TxtConfirmPass)
             Me.Controls.Add(Me.Label17)
             Me.Controls.Add(Me.TxtLockpicks)
             Me.Controls.Add(Me.Label18)
@@ -1263,7 +1263,7 @@ Namespace Forms.Admin
         Friend WithEvents Label18 As Label
         Friend WithEvents TxtLockpicks As TextBox
         Friend WithEvents Label17 As Label
-        Friend WithEvents TxtConfPass As TextBox
+        Friend WithEvents TxtConfirmPass As TextBox
         Friend WithEvents Label19 As Label
         Friend WithEvents Label20 As Label
         Friend WithEvents Label21 As Label

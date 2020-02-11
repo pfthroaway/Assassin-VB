@@ -15,6 +15,7 @@ Namespace Forms
 
         ''' <summary>Clears all the information on the form.</summary>
         Private Sub Clear()
+            LoadNames()
             BtnNext.Enabled = False
             BtnPrev.Enabled = False
             BtnDelete.Enabled = False
@@ -28,17 +29,23 @@ Namespace Forms
         ''' <summary>Displays the message.</summary>
         Private Sub Display()
             If _messages.Count > 0 AndAlso _messages.Count >= _currentIndex Then
+                LoadNames()
                 _currentMessage = _messages(_currentIndex)
+                Dim blnDeleted As Boolean
+                If Not CmbNames.Items.Contains(_currentMessage.UserFrom) Then
+                    CmbNames.Items.Add(_currentMessage.UserFrom)
+                    blnDeleted = True
+                End If
                 CmbNames.Text = _currentMessage.UserFrom
                 TxtDate.Text = _currentMessage.DateSent.ToString
 
                 TxtMessage.Text = _currentMessage.Contents
                 LblCount.Text = $"{_currentIndex + 1} / {_messages.Count}"
                 BtnDelete.Enabled = True
-                BtnNext.Enabled = _currentIndex = _messages.Count
-                BtnPrev.Enabled = _currentIndex = _messages.Count
+                BtnNext.Enabled = _messages.Count > 1
+                BtnPrev.Enabled = _messages.Count > 1
 
-                BtnReply.Enabled = Not _currentMessage.GuildMessage
+                BtnReply.Enabled = Not _currentMessage.GuildMessage AndAlso Not blnDeleted
             Else
                 Clear()
                 BtnNew.Enabled = True
@@ -58,6 +65,15 @@ Namespace Forms
                 TxtMessage.Text = "You have no messages."
             End If
         End Function
+
+        ''' <summary>Loads all names and stores them in the CmbNames ComboBox.</summary>
+        Private Sub LoadNames()
+            CmbNames.Items.Clear()
+            For Each user As User In AllUsers
+                CmbNames.Items.Add(user.Name)
+            Next
+            CmbNames.Items.Remove(CurrentUser)
+        End Sub
 
         ''' <summary>Sets the Controls to default.</summary>
         Private Sub SetDefaultControls()
@@ -163,10 +179,7 @@ Namespace Forms
 #Region "Form Manipulation"
 
         Private Async Sub FrmMessages_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            For Each user As User In AllUsers
-                CmbNames.Items.Add(user)
-            Next
-            CmbNames.Items.Remove(CurrentUser)
+            LoadNames()
             Await LoadMessages()
         End Sub
 
