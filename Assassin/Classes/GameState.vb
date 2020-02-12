@@ -27,6 +27,8 @@ Namespace Classes
         Friend AllJailedUsers As List(Of JailedUser)
         Public ReadOnly DatabaseInteraction As New SQLiteDatabaseInteraction
 
+        'TODO Consider allowing more than 5 Guilds.
+
 #Region "Control Manipulation"
 
         ''' <summary>Adds a blank line between a TextBox's current text and the text to be added.</summary>

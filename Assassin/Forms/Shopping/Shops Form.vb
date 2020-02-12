@@ -6,7 +6,6 @@ Imports Assassin.Classes
 Namespace Forms.Shopping
 
     Public Class FrmShops
-        Dim _nl As String = ControlChars.NewLine 'new line
 
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>

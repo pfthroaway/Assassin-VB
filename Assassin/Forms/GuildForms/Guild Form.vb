@@ -89,6 +89,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnChallenge_Click(sender As Object, e As EventArgs) Handles BtnChallenge.Click
+            'TODO Implement challenging the Guildmaster.
             AddText("This feature is currently unavailable.")
         End Sub
 
@@ -146,6 +147,7 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnTransfer_Click(sender As Object, e As EventArgs) Handles BtnTransfer.Click
+            'TODO Implement transferring henchmen and gold.
             AddText("This feature is currently unavailable.")
         End Sub
 
