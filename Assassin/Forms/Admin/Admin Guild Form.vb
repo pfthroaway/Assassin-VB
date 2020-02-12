@@ -161,7 +161,7 @@ Namespace Forms.Admin
                     LstMembers.Enabled = True
                     LstMembers.Items.Clear()
                     For Each user In AllUsers
-                        If Not CurrentGuild.Members.Contains(user.Name) Then
+                        If Not CurrentGuild.HasMember(user) Then
                             LstMembers.Items.Add(user.Name)
                         End If
                     Next
@@ -192,7 +192,7 @@ Namespace Forms.Admin
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-            Me.Close()
+            Close()
         End Sub
 
         Private Async Sub BtnExpel_Click(sender As Object, e As EventArgs) Handles BtnExpel.Click

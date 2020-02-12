@@ -43,6 +43,13 @@ Namespace Classes.Entities
 
 #End Region
 
+        ''' <summary>Determines whether the <see cref="Guild "/> has a specific <see cref="User"/> as a member.</summary>
+        ''' <param name="member"><see cref="User"/> being checked</param>
+        ''' <returns>True if <see cref="User"/> is a member</returns>
+        Public Function HasMember(member As User) As Boolean
+            Return Members.Contains(member.Name)
+        End Function
+
 #Region "Override Operators"
 
         Public Overloads Function Equals(left As Guild, right As Guild) As Boolean

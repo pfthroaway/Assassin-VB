@@ -8,14 +8,6 @@ Namespace Forms.GuildForms
 
     Public Class FrmGuildList
 
-        Dim _blnGuild As Boolean = False
-
-        ''' <summary>Determines if the current <see cref="User"/> is a member of the selected <see cref="Guild"/>.</summary>
-        ''' <returns>True if a member</returns>
-        Private Function IsMember() As Boolean
-            Return CurrentGuild.Members.Contains(CurrentUser.Name)
-        End Function
-
         ''' <summary>Add text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
         Public Sub AddText(newText As String)
@@ -48,7 +40,7 @@ Namespace Forms.GuildForms
                 LblHenchmenLevel4.Text = CurrentGuild.HenchmenLevel4.ToString("N0")
                 LblHenchmenLevel5.Text = CurrentGuild.HenchmenLevel5.ToString("N0")
 
-                If IsMember() Then
+                If CurrentGuild.HasMember(CurrentUser) Then
                     'if CurrentUser is a member of selected guild
                     BtnEnter.Enabled = True
                     BtnApply.Enabled = False
@@ -120,12 +112,13 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnEnter_Click(sender As Object, e As EventArgs) Handles BtnEnter.Click
-            _blnGuild = True
-            Me.Close()
+            FrmGuild.Show()
+            FrmGuild.LoadGuild()
+            Hide()
         End Sub
 
 #End Region
@@ -135,20 +128,9 @@ Namespace Forms.GuildForms
         End Sub
 
         Private Sub FrmGuildList_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-            'TODO Hide Guild List Form
-            If _blnGuild = False Then 'return to Game form
-                FrmGame.Show()
-                If FrmGame.TxtGame.TextLength > 0 Then
-                    FrmGame.AddText(TxtGuilds.Text.Trim())
-                Else
-                    FrmGame.Text = TxtGuilds.Text.Trim()
-                End If
-            Else 'enter Guild
-                FrmGuild.Show()
-                CurrentGuild = CurrentGuild
-                FrmGuild.TxtGuild.Text = TxtGuilds.Text.Trim()
-                FrmGuild.LoadGuild()
-            End If
+            FrmGame.Show()
+            FrmGame.Display()
+            FrmGame.AddText(TxtGuilds.Text.Trim())
         End Sub
 
     End Class

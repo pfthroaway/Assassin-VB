@@ -311,7 +311,7 @@ Namespace Forms.Admin
 
             If blnChangeName AndAlso Await DatabaseInteraction.SaveUser(_selectedUser, TxtName.Text) Then
                 For Each guild As Guild In AllGuilds
-                    If guild.Members.Contains(CurrentUser.Name) Then
+                    If guild.HasMember(CurrentUser) Then
                         Await MemberLeavesGuild(CurrentUser, guild)
                         Await MemberJoinsGuild(_selectedUser, guild)
                     End If
@@ -434,7 +434,7 @@ Namespace Forms.Admin
         End Sub
 
         Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-            Me.Close()
+            Close()
         End Sub
 
         Private Sub BtnNewUser_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtnNewUser.Click
