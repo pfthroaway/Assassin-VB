@@ -223,6 +223,29 @@ Namespace Classes.Entities
 
 #End Region
 
+        ''' <summary>Determines if the <see cref="User"/> can do an action.</summary>
+        ''' <returns>If the <see cref="User"/> can do an action</returns>
+        Friend Function CanDoAction() As Boolean
+            Return CurrentUser.Hunger < 24 AndAlso CurrentUser.Thirst < 24
+        End Function
+
+        ''' <summary>Displays text about the <see cref="User"/>'s current hunger and thirst.</summary>
+        ''' <returns>text about the <see cref="User"/>'s current hunger and thirst</returns>
+        Friend Function DisplayHungerThirstText() As String
+            If Hunger >= 24 AndAlso Thirst >= 24 Then
+                Return "You are too hungry and thirsty to continue."
+            ElseIf Hunger >= 24 Then
+                Return "You are too hungry to continue."
+            ElseIf Thirst >= 24 Then
+                Return "You are too thirsty to continue."
+            ElseIf Hunger > 0 AndAlso Hunger Mod 5 = 0 Then
+                Return $"You are {GetHunger(Hunger).ToLower}."
+            ElseIf Thirst > 0 AndAlso Thirst Mod 5 = 0 Then
+                Return $"You are {GetThirst(Thirst).ToLower}."
+            End If
+            Return ""
+        End Function
+
         ''' <summary>Gains experience for the User.</summary>
         ''' <param name="experienceGain">Experience gained</param>
         ''' <returns>String based on experience gain</returns>
@@ -244,6 +267,14 @@ Namespace Classes.Entities
             End If
 
             Return experienceText & levelText
+        End Function
+
+        ''' <summary>Gains hunger and thirst, and returns text regarding their new hunger and thirst states.</summary>
+        ''' <returns>Text regarding new hunger and thirst states</returns>
+        Friend Function GainHungerThirst() As String
+            Hunger += 1
+            Thirst += 1
+            Return DisplayHungerThirstText()
         End Function
 
 #Region "Health Manipulation"

@@ -6,7 +6,6 @@ Imports Assassin.Classes
 Namespace Forms
 
     Public Class FrmAssassinate
-        Dim _blnBattle As Boolean = False
 
         ''' <summary>Adds text to the TextBox.</summary>
         ''' <param name="newText">Text to be added</param>
@@ -16,26 +15,12 @@ Namespace Forms
 
         ''' <summary>Checks a user's hunger and thirst.</summary>
         Public Function CheckHungerThirst() As Boolean
-            If CurrentUser.Hunger >= 24 OrElse CurrentUser.Thirst >= 24 Then
-                DisableButtons()
-
-                If CurrentUser.Hunger >= 24 AndAlso CurrentUser.Thirst >= 24 Then
-                    AddText("You are too hungry and thirsty to continue.")
-                ElseIf CurrentUser.Hunger >= 24 Then
-                    AddText("You are too hungry to continue.")
-                ElseIf CurrentUser.Thirst >= 24 Then
-                    AddText("You are too thirsty to continue.")
-                End If
-                Return False
-            Else
-                If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
-                End If
-                If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
-                End If
+            AddText(CurrentUser.DisplayHungerThirstText())
+            If CurrentUser.CanDoAction() Then
                 Return True
             End If
+            DisableButtons()
+            Return False
         End Function
 
         ''' <summary>Disables the Assassin and New Victim Buttons.</summary>
@@ -58,8 +43,7 @@ Namespace Forms
         Public Sub NewEnemy()
             If CheckHungerThirst() Then
                 GetEnemy()
-                CurrentUser.Hunger += 1
-                CurrentUser.Thirst += 1
+                CurrentUser.GainHungerThirst()
 
                 AddText($"You spot a {CurrentEnemy.Name}.")
                 BtnAssassinate.Enabled = True

@@ -23,27 +23,15 @@ Namespace Forms
         End Sub
 
         ''' <summary>Checks a user's hunger and thirst.</summary>
-        Public Sub CheckHungerThirst()
-            If CurrentUser.Hunger >= 24 OrElse CurrentUser.Thirst >= 24 Then
-                BtnAccept.Enabled = False
-                BtnDecline.Enabled = False
-
-                If CurrentUser.Hunger >= 24 AndAlso CurrentUser.Thirst >= 24 Then
-                    AddText("You are too hungry and thirsty to continue.")
-                ElseIf CurrentUser.Hunger >= 24 Then
-                    AddText("You are too hungry to continue.")
-                ElseIf CurrentUser.Thirst >= 24 Then
-                    AddText("You are too thirsty to continue.")
-                End If
-            Else
-                If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
-                End If
-                If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
-                End If
+        Public Function CheckHungerThirst() As Boolean
+            AddText(CurrentUser.DisplayHungerThirstText())
+            If CurrentUser.CanDoAction() Then
+                Return True
             End If
-        End Sub
+            BtnAccept.Enabled = False
+            BtnDecline.Enabled = False
+            Return False
+        End Function
 
         ''' <summary>Cycles the text in the ArrayList on the Timer's tick.</summary>
         Private Sub CycleText()
@@ -86,6 +74,7 @@ Namespace Forms
 
         ''' <summary>Gets a job opportunity from an employer.</summary>
         Private Sub GetJob()
+            CurrentUser.GainHungerThirst()
             ToggleButtons(False)
             Dim employer As Integer = Functions.GenerateRandomNumber(0, 5)
             _currEmployer = _employers(employer).ToString
@@ -114,27 +103,36 @@ Namespace Forms
         Public Sub LoadJobs()
             TxtJobs.ScrollToCaret()
             GetEmployers()
-            GetJob()
+            If CheckHungerThirst() Then
+                GetJob()
+            Else
+                BtnLeave.Enabled = True
+            End If
         End Sub
 
 #Region "Click"
 
         Private Sub BtnAccept_Click(sender As Object, e As EventArgs) Handles BtnAccept.Click
-            CurrentUser.Hunger += 1
-            CurrentUser.Thirst += 1
-            FrmBattle.Show()
-            FrmBattle.Surprise()
-            If FrmBattle.TxtBattle.TextLength = 0 Then FrmBattle.TxtBattle.Text = "You stalk your opponent."
-            FrmBattle.Display()
-            FrmBattle.BlnJob = True
-            Hide()
+            If CheckHungerThirst() Then
+                CurrentUser.GainHungerThirst()
+                FrmBattle.Show()
+                FrmBattle.Surprise()
+                If FrmBattle.TxtBattle.TextLength = 0 Then FrmBattle.TxtBattle.Text = "You stalk your opponent."
+                FrmBattle.Display()
+                FrmBattle.BlnJob = True
+                Hide()
+            Else
+                BtnLeave.Enabled = True
+            End If
         End Sub
 
         Private Sub BtnDecline_Click(sender As Object, e As EventArgs) Handles BtnDecline.Click
-            CurrentUser.Hunger += 1
-            CurrentUser.Thirst += 1
-            GetJob()
-            CheckHungerThirst()
+            If CheckHungerThirst() Then
+                CurrentUser.GainHungerThirst()
+                GetJob()
+            Else
+                BtnLeave.Enabled = True
+            End If
         End Sub
 
         Private Sub BtnLeave_Click(sender As Object, e As EventArgs) Handles BtnLeave.Click

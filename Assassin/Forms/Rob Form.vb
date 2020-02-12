@@ -9,7 +9,6 @@ Imports Extensions
 Namespace Forms
 
     Public Class FrmRob
-
         Dim _blnCourt As Boolean = False
         Dim _arrText As New ArrayList
         Dim _index As Integer
@@ -21,6 +20,17 @@ Namespace Forms
             AddTextToTextBox(TxtRob, newText)
         End Sub
 
+        ''' <summary>Checks a user's hunger and thirst.</summary>
+        Public Function CheckHungerThirst() As Boolean
+            AddText(CurrentUser.DisplayHungerThirstText())
+            If CurrentUser.CanDoAction() Then
+                Return True
+            End If
+            ToggleButtons(False)
+            BtnBack.Enabled = True
+            Return False
+        End Function
+
         ''' <summary>Loads the Robbery Form.</summary>
         Public Sub LoadRobbery()
             If CheckHungerThirst() Then
@@ -28,31 +38,6 @@ Namespace Forms
                 GetEnemy()
             End If
         End Sub
-
-        ''' <summary>Checks a user's hunger and thirst.</summary>
-        Public Function CheckHungerThirst() As Boolean
-            If CurrentUser.Hunger >= 24 OrElse CurrentUser.Thirst >= 24 Then
-                ToggleButtons(False)
-                BtnBack.Enabled = True
-
-                If CurrentUser.Hunger >= 24 AndAlso CurrentUser.Thirst >= 24 Then
-                    AddText("You are too hungry and thirsty to continue.")
-                ElseIf CurrentUser.Hunger >= 24 Then
-                    AddText("You are too hungry to continue.")
-                ElseIf CurrentUser.Thirst >= 24 Then
-                    AddText("You are too thirsty to continue.")
-                End If
-            Else
-                If CurrentUser.Hunger > 0 AndAlso CurrentUser.Hunger Mod 5 = 0 Then
-                    AddText($"You are {GetHunger(CurrentUser.Hunger).ToLower}.")
-                End If
-                If CurrentUser.Thirst > 0 AndAlso CurrentUser.Thirst Mod 5 = 0 Then
-                    AddText($"You are {GetThirst(CurrentUser.Thirst).ToLower}.")
-                End If
-            End If
-
-            Return CurrentUser.Hunger < 24 AndAlso CurrentUser.Thirst < 24
-        End Function
 
 #Region "Display Manipulation"
 
@@ -117,9 +102,7 @@ Namespace Forms
         ''' <summary>Starts a robbery.</summary>
         Private Sub StartRobbery()
             ToggleButtons(False)
-            CurrentUser.Hunger += 1
-            CurrentUser.Thirst += 1
-
+            CurrentUser.GainHungerThirst()
         End Sub
 
 #Region "Click"
