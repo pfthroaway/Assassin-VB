@@ -88,7 +88,7 @@ Namespace Classes.Entities
 
 #End Region
 
-        ''' <summary>Initializes a new instance of the Guild class.</summary>
+        ''' <summary>Initializes a new instance of the <see cref="Guild"/> class.</summary>
         Friend Sub New()
             ID = 0
             Name = ""
@@ -103,18 +103,18 @@ Namespace Classes.Entities
             HenchmenLevel5 = 0
         End Sub
 
-        ''' <summary>Initializes a new instance of the Guild class using Property values.</summary>
-        ''' <param name="newID">ID of Guild</param>
-        ''' <param name="newName">Name of Guild</param>
+        ''' <summary>Initializes a new instance of the <see cref="Guild"/> class using Property values.</summary>
+        ''' <param name="newID">ID of <see cref="Guild"/></param>
+        ''' <param name="newName">Name of <see cref="Guild"/></param>
         ''' <param name="newMaster">Name of Guildmaster</param>
-        ''' <param name="newFee">Fee to enter Guild</param>
-        ''' <param name="newGold">Amount of Gold owned by Guild</param>
-        ''' <param name="newMembers">Names of Users who are a member of the Guild</param>
-        ''' <param name="newHenchmenLevel1">Amount of Level 1 Henchmen the Guild employs</param>
-        ''' <param name="newHenchmenLevel2">Amount of Level 2 Henchmen the Guild employs</param>
-        ''' <param name="newHenchmenLevel3">Amount of Level 3 Henchmen the Guild employs</param>
-        ''' <param name="newHenchmenLevel4">Amount of Level 4 Henchmen the Guild employs</param>
-        ''' <param name="newHenchmenLevel5">Amount of Level 5 Henchmen the Guild employs</param>
+        ''' <param name="newFee">Fee to enter <see cref="Guild"/></param>
+        ''' <param name="newGold">Amount of Gold owned by <see cref="Guild"/></param>
+        ''' <param name="newMembers">Names of <see cref="User"/>s who are a member of the <see cref="Guild"/></param>
+        ''' <param name="newHenchmenLevel1">Amount of Level 1 Henchmen the <see cref="Guild"/> employs</param>
+        ''' <param name="newHenchmenLevel2">Amount of Level 2 Henchmen the <see cref="Guild"/> employs</param>
+        ''' <param name="newHenchmenLevel3">Amount of Level 3 Henchmen the <see cref="Guild"/> employs</param>
+        ''' <param name="newHenchmenLevel4">Amount of Level 4 Henchmen the <see cref="Guild"/> employs</param>
+        ''' <param name="newHenchmenLevel5">Amount of Level 5 Henchmen the <see cref="Guild"/> employs</param>
         Friend Sub New(newID As Integer, newName As String, newMaster As String, newFee As Integer, newGold As Integer, newMembers As List(Of [String]), newHenchmenLevel1 As Integer, newHenchmenLevel2 As Integer, newHenchmenLevel3 As Integer, newHenchmenLevel4 As Integer, newHenchmenLevel5 As Integer)
             ID = newID
             Name = newName

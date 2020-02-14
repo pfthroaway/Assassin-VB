@@ -14,9 +14,6 @@ Namespace Classes.Entities
         ''' <summary>The <see cref="Enemy"/>'s Weapon.</summary>
         Public Property Weapon As New Weapon()
 
-        ''' <summary>The <see cref="Enemy"/>'s Armor.</summary>
-        Public Property Armor As New Armor()
-
         ''' <summary>The <see cref="Enemy"/>'s skill with their Weapon.</summary>
         Public Property WeaponSkill As Integer
 
@@ -115,16 +112,7 @@ Namespace Classes.Entities
         ''' <summary>Replaces this instance of <see cref="Enemy"/> with another instance.</summary>
         ''' <param name="otherEnemy"><see cref="Enemy"/> to replace this instance</param>
         Friend Sub New(otherEnemy As Enemy)
-            Name = otherEnemy.Name
-            Level = otherEnemy.Level
-            CurrentEndurance = otherEnemy.CurrentEndurance
-            MaximumEndurance = otherEnemy.MaximumEndurance
-            Weapon = otherEnemy.Weapon
-            Armor = otherEnemy.Armor
-            GoldOnHand = otherEnemy.GoldOnHand
-            WeaponSkill = otherEnemy.WeaponSkill
-            Blocking = otherEnemy.Blocking
-            Slipping = otherEnemy.Slipping
+            Me.New(otherEnemy.Name, otherEnemy.Level, otherEnemy.CurrentEndurance, otherEnemy.MaximumEndurance, otherEnemy.Weapon, otherEnemy.Armor, otherEnemy.GoldOnHand, otherEnemy.WeaponSkill, otherEnemy.Blocking, otherEnemy.Slipping)
         End Sub
 
 #End Region

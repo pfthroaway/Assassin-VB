@@ -79,10 +79,7 @@ Namespace Classes.Items
         ''' <summary>Replaces this instance of <see cref="Armor"/> with a new instance.</summary>
         ''' <param name="otherArmor">Instance of <see cref="Armor"/> to replace this instance.</param>
         Public Sub New(otherArmor As Armor)
-            Name = otherArmor.Name
-            Defense = otherArmor.Defense
-            Value = otherArmor.Value
-            Hidden = otherArmor.Hidden
+            Me.New(otherArmor.Name, otherArmor.Defense, otherArmor.Value, otherArmor.Hidden)
         End Sub
 
 #End Region

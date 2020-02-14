@@ -87,11 +87,7 @@ Namespace Classes.Items
         ''' <summary>Replaces this instance of <see cref="Weapon"/> with a new instance.</summary>
         ''' <param name="otherWeapon">Instance of <see cref="Weapon"/> to replace this instance.</param>
         Public Sub New(otherWeapon As Weapon)
-            Name = otherWeapon.Name
-            Damage = otherWeapon.Damage
-            Value = otherWeapon.Value
-            Hidden = otherWeapon.Hidden
-            Type = otherWeapon.Type
+            Me.New(otherWeapon.Name, otherWeapon.Damage, otherWeapon.Value, otherWeapon.Hidden, otherWeapon.Type)
         End Sub
 
 #End Region

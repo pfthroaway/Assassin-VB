@@ -45,6 +45,20 @@ Namespace Classes
 
 #End Region
 
+#Region "Database"
+
+        ''' <summary>Manages all the necessary files for the application.</summary>
+        Public Sub FileManagement()
+
+            If Not Directory.Exists(AppData.Location) Then
+                Directory.CreateDirectory(AppData.Location)
+            End If
+
+            DatabaseInteraction.VerifyDatabaseIntegrity()
+        End Sub
+
+#End Region
+
 #Region "Display Stuff"
 
         ''' <summary>Generates an enemy based on a player's current level.</summary>
@@ -226,26 +240,40 @@ Namespace Classes
 
 #End Region
 
-#Region "Database"
-
-        ''' <summary>Manages all the necessary files for the application.</summary>
-        Public Sub FileManagement()
-
-            If Not Directory.Exists(AppData.Location) Then
-                Directory.CreateDirectory(AppData.Location)
-            End If
-
-            DatabaseInteraction.VerifyDatabaseIntegrity()
-        End Sub
-
-#End Region
-
         ''' <summary>Changes the admin password in the database.</summary>
         ''' <param name="newPass">New password</param>
         ''' <returns>True if successful</returns>
         Public Async Function ChangeAdminPassword(newPass As String) As Task(Of Boolean)
             Return Await DatabaseInteraction.ChangeAdminPassword(newPass)
         End Function
+
+#Region "Guild Management"
+
+        ''' <summary>Member of a Guild gains membership with that Guild, applied to database.</summary>
+        ''' <param name="joinUser">User joining the Guild.</param>
+        ''' <param name="joinGuild">Guild being joined</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
+            If Await DatabaseInteraction.MemberJoinsGuild(joinUser, joinGuild) Then
+                joinGuild.Members.Add(joinUser.Name)
+                Return True
+            End If
+            Return False
+        End Function
+
+        ''' <summary>Member of a Guild terminates membership with that Guild, applied to database.</summary>
+        ''' <param name="leaveUser">User leaving the Guild.</param>
+        ''' <param name="leaveGuild">Guild being left</param>
+        ''' <returns>True if successful</returns>
+        Public Async Function MemberLeavesGuild(leaveUser As User, leaveGuild As Guild) As Task(Of Boolean)
+            If Await DatabaseInteraction.MemberLeavesGuild(leaveUser, leaveGuild) Then
+                leaveGuild.Members.Remove(leaveUser.Name)
+                Return True
+            End If
+            Return False
+        End Function
+
+#End Region
 
 #Region "Load"
 
@@ -289,7 +317,6 @@ Namespace Classes
             If Await DatabaseInteraction.NewUser(userNew) AndAlso Await MemberJoinsGuild(userNew, AllGuilds(0)) Then
                 AllUsers.Add(userNew)
                 AllUsers = AllUsers.OrderBy(Function(user) user.Name).ToList()
-                AllGuilds(0).Members.Add(userNew.Name)
                 Return True
             End If
             Return False
@@ -300,34 +327,6 @@ Namespace Classes
         ''' <returns>True if successful</returns>
         Public Async Function SaveUser(userSave As User) As Task(Of Boolean)
             Return Await DatabaseInteraction.SaveUser(userSave)
-        End Function
-
-#End Region
-
-#Region "Guild Management"
-
-        ''' <summary>Member of a Guild gains membership with that Guild, applied to database.</summary>
-        ''' <param name="joinUser">User joining the Guild.</param>
-        ''' <param name="joinGuild">Guild being joined</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function MemberJoinsGuild(joinUser As User, joinGuild As Guild) As Task(Of Boolean)
-            If Await DatabaseInteraction.MemberJoinsGuild(joinUser, joinGuild) Then
-                joinGuild.Members.Add(joinUser.Name)
-                Return True
-            End If
-            Return False
-        End Function
-
-        ''' <summary>Member of a Guild terminates membership with that Guild, applied to database.</summary>
-        ''' <param name="leaveUser">User leaving the Guild.</param>
-        ''' <param name="leaveGuild">Guild being left</param>
-        ''' <returns>True if successful</returns>
-        Public Async Function MemberLeavesGuild(leaveUser As User, leaveGuild As Guild) As Task(Of Boolean)
-            If Await DatabaseInteraction.MemberLeavesGuild(leaveUser, leaveGuild) Then
-                leaveGuild.Members.Remove(leaveUser.Name)
-                Return True
-            End If
-            Return False
         End Function
 
 #End Region

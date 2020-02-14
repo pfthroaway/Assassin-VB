@@ -1,6 +1,7 @@
 ﻿Option Strict On
 Option Explicit On
 
+Imports Assassin.Classes.Items
 Imports Extensions.DataTypeHelpers
 
 Namespace Classes.Entities
@@ -24,6 +25,9 @@ Namespace Classes.Entities
 
         ''' <summary>Gold the Entity has on hand.</summary>
         Public Property GoldOnHand As Integer
+
+        ''' <summary>The <see cref="Enemy"/>'s Armor.</summary>
+        Public Property Armor As New Armor()
 
         ''' <summary>Blocking skill of the Entity.</summary>
         Public Property Blocking As Integer

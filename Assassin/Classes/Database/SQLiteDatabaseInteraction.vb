@@ -625,16 +625,14 @@ Namespace Classes.Database
             If userSave.Name <> newName Then
                 Dim cmd As New SQLiteCommand With {.CommandText = "UPDATE Users SET [Username] = @newName WHERE [Username] = @oldName"}
                 cmd.Parameters.AddWithValue("@newName", newName)
-                cmd.Parameters.AddWithValue("@oldName", userSave)
+                cmd.Parameters.AddWithValue("@oldName", userSave.Name)
                 If (Await SQLiteHelper.ExecuteCommand(_con, cmd)) Then
                     userSave.Name = newName
                     Return Await SaveUser(userSave)
-                Else
-                    Return False
                 End If
-            Else
-                Return True
+                Return False
             End If
+            Return True
         End Function
 
 #End Region

@@ -45,9 +45,6 @@ Namespace Classes.Entities
         ''' <summary>The <see cref="User"/>'s Two-Handed <see cref="Weapon"/>.</summary>
         Public Property TwoHandedWeapon As Weapon
 
-        ''' <summary>The <see cref="User"/>'s Armor.</summary>
-        Public Property Armor As New Armor()
-
         ''' <summary>The <see cref="User"/>'s held Potion.</summary>
         Public Property Potion As Potion
 
@@ -226,7 +223,7 @@ Namespace Classes.Entities
         ''' <summary>Determines if the <see cref="User"/> can do an action.</summary>
         ''' <returns>If the <see cref="User"/> can do an action</returns>
         Friend Function CanDoAction() As Boolean
-            Return CurrentUser.Hunger < 24 AndAlso CurrentUser.Thirst < 24
+            Return Hunger < 24 AndAlso Thirst < 24
         End Function
 
         ''' <summary>Displays text about the <see cref="User"/>'s current hunger and thirst.</summary>
@@ -260,9 +257,8 @@ Namespace Classes.Entities
                 levelText = $" You have gained a level! You are now a {Rank}!"
             End If
 
-            'if past maximum exp
+            'if past maximum exp, set to maximum
             If Experience > 100 Then
-                'set to maximum
                 Experience = 100
             End If
 
@@ -287,7 +283,7 @@ Namespace Classes.Entities
             If CurrentEndurance > MaximumEndurance Then
                 CurrentEndurance = MaximumEndurance
             End If
-            Return $"You heal for {healAmount:N0} damage."
+            Return $"You heal {healAmount:N0} damage."
         End Function
 
         ''' <summary>The User takes damage.</summary>
@@ -462,44 +458,7 @@ Namespace Classes.Entities
         ''' <summary>Initializes a new instance of the <see cref="User"/> class using another <see cref="User"/>.</summary>
         ''' <param name="otherUser"><see cref="User"/> to replace this instance.</param>
         Friend Sub New(otherUser As User)
-            Name = otherUser.Name
-            Password = otherUser.Password
-            Level = otherUser.Level
-            Experience = otherUser.Experience
-            SkillPoints = otherUser.SkillPoints
-            Alive = otherUser.Alive
-            CurrentLocation = otherUser.CurrentLocation
-            CurrentEndurance = otherUser.CurrentEndurance
-            MaximumEndurance = otherUser.MaximumEndurance
-            Hunger = otherUser.Hunger
-            Thirst = otherUser.Thirst
-
-            CurrentWeaponType = otherUser.CurrentWeaponType
-            LightWeapon = otherUser.LightWeapon
-            HeavyWeapon = otherUser.HeavyWeapon
-            TwoHandedWeapon = otherUser.TwoHandedWeapon
-            Armor = otherUser.Armor
-            Potion = otherUser.Potion
-            Lockpicks = otherUser.Lockpicks
-            GoldOnHand = otherUser.GoldOnHand
-            GoldInBank = otherUser.GoldInBank
-            GoldOnLoan = otherUser.GoldOnLoan
-            Shovel = otherUser.Shovel
-            Lantern = otherUser.Lantern
-            Amulet = otherUser.Amulet
-
-            LightWeaponSkill = otherUser.LightWeaponSkill
-            HeavyWeaponSkill = otherUser.HeavyWeaponSkill
-            TwoHandedWeaponSkill = otherUser.TwoHandedWeaponSkill
-            Blocking = otherUser.Blocking
-            Slipping = otherUser.Slipping
-            Stealth = otherUser.Stealth
-
-            HenchmenLevel1 = otherUser.HenchmenLevel1
-            HenchmenLevel2 = otherUser.HenchmenLevel2
-            HenchmenLevel3 = otherUser.HenchmenLevel3
-            HenchmenLevel4 = otherUser.HenchmenLevel4
-            HenchmenLevel5 = otherUser.HenchmenLevel5
+            Me.New(otherUser.Name, otherUser.Password, otherUser.Level, otherUser.Experience, otherUser.SkillPoints, otherUser.Alive, otherUser.CurrentLocation, otherUser.CurrentEndurance, otherUser.MaximumEndurance, otherUser.Hunger, otherUser.Thirst, otherUser.CurrentWeaponType, otherUser.LightWeapon, otherUser.HeavyWeapon, otherUser.TwoHandedWeapon, otherUser.Armor, otherUser.Potion, otherUser.Lockpicks, otherUser.GoldOnHand, otherUser.GoldInBank, otherUser.GoldOnLoan, otherUser.Shovel, otherUser.Lantern, otherUser.Amulet, otherUser.LightWeaponSkill, otherUser.HeavyWeaponSkill, otherUser.TwoHandedWeaponSkill, otherUser.Blocking, otherUser.Slipping, otherUser.Stealth, otherUser.HenchmenLevel1, otherUser.HenchmenLevel2, otherUser.HenchmenLevel3, otherUser.HenchmenLevel4, otherUser.HenchmenLevel5)
         End Sub
 
 #End Region

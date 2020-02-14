@@ -42,12 +42,7 @@ Public Class Message
     ''' <summary>Constructs a new instance of <see cref="Message"/> by copying another <see cref="Message"/>.</summary>
     ''' <param name="other"><see cref="Message"/> to be copied</param>
     Public Sub New(other As Message)
-        ID = other.ID
-        UserFrom = other.UserFrom
-        UserTo = other.UserTo
-        Contents = other.Contents
-        DateSent = other.DateSent
-        GuildMessage = other.GuildMessage
+        Me.New(other.ID, other.UserFrom, other.UserTo, other.Contents, other.DateSent, other.GuildMessage)
     End Sub
 
 End Class

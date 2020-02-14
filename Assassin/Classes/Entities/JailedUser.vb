@@ -90,10 +90,7 @@ Namespace Classes.Entities
         ''' <summary>Replaces this instance of <see cref="JailedUser"/> with another instance.</summary>
         ''' <param name="other">Instance of <see cref="JailedUser"/> to replace this instance</param>
         Public Sub New(other As JailedUser)
-            Name = other.Name
-            Reason = other.Reason
-            Fine = other.Fine
-            DateJailed = other.DateJailed
+            Me.New(other.Name, other.Reason, other.Fine, other.DateJailed)
         End Sub
 
 #End Region
