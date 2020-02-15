@@ -37,7 +37,7 @@ Namespace Forms
                     blnDeleted = True
                 End If
                 CmbNames.Text = _currentMessage.UserFrom
-                TxtDate.Text = _currentMessage.DateSent.ToString
+                TxtDate.Text = _currentMessage.LocalDateSentToString
 
                 TxtMessage.Text = _currentMessage.Contents
                 LblCount.Text = $"{_currentIndex + 1} / {_messages.Count}"

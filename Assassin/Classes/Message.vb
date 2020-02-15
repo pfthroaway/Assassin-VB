@@ -6,6 +6,8 @@ Imports Assassin.Classes.Entities
 ''' <summary>Represents a <see cref="Message"/> sent to a <see cref="User"/>.</summary>
 Public Class Message
 
+#Region "Modifying Properties"
+
     ''' <summary>ID of the <see cref="Message"/>.</summary>
     Public Property ID As Integer
 
@@ -18,11 +20,31 @@ Public Class Message
     ''' <summary>What the <see cref="Message"/> says.</summary>
     Public Property Contents As String
 
-    ''' <summary>Date the <see cref="Message"/> was sent.</summary>
+    ''' <summary>Date the <see cref="Message"/> was sent in UTC.</summary>
     Public Property DateSent As Date
 
     ''' <summary>Was this <see cref="Message"/> sent by a guild leader?</summary>
     Public Property GuildMessage As Boolean
+
+#End Region
+
+#Region "Helper Properties"
+
+    ''' <summary>Date the <see cref="Message"/> was sent in local time.</summary>
+    Public ReadOnly Property LocalDateSent As Date
+        Get
+            Return TimeZone.CurrentTimeZone.ToLocalTime(DateSent)
+        End Get
+    End Property
+
+    ''' <summary>Date the <see cref="Message"/> was sent in local time, formatted.</summary>
+    Public ReadOnly Property LocalDateSentToString As String
+        Get
+            Return LocalDateSent.ToString("yyyy-MM-dd hh\:mm\:ss tt")
+        End Get
+    End Property
+
+#End Region
 
     ''' <summary>Constructs a new instance of <see cref="Message"/> by assigning property values.</summary>
     ''' <param name="sentFrom"><see cref="User"/> who sent the <see cref="Message"/></param>

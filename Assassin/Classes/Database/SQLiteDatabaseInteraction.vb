@@ -339,7 +339,7 @@ Namespace Classes.Database
         ''' <returns>All <see cref="JailedUser"/>s</returns>
         Public Async Function LoadJailedUsers() As Task(Of List(Of JailedUser)) Implements IDatabaseInteraction.LoadJailedUsers
             Dim jailedUsers As New List(Of JailedUser)
-            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM Jail")
+            Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, "SELECT * FROM Jail")
 
             If ds.Tables(0).Rows.Count > 0 Then
                 For Each dr As DataRow In ds.Tables(0).Rows

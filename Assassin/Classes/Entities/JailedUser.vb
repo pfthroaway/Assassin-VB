@@ -33,6 +33,13 @@ Namespace Classes.Entities
             End Get
         End Property
 
+        ''' <summary>Date the <see cref="JailedUser"/> was incarcerated in local time, formatted.</summary>
+        Public ReadOnly Property LocalDateJailedToString As String
+            Get
+                Return LocalDateJailed.ToString("yyyy-MM-dd hh\:mm\:ss tt")
+            End Get
+        End Property
+
 #End Region
 
 #Region "Override Operators"

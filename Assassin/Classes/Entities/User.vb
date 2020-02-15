@@ -283,7 +283,7 @@ Namespace Classes.Entities
             If CurrentEndurance > MaximumEndurance Then
                 CurrentEndurance = MaximumEndurance
             End If
-            Return $"You heal {healAmount:N0} damage."
+            Return $"You restore {healAmount:N0} endurance."
         End Function
 
         ''' <summary>The User takes damage.</summary>
