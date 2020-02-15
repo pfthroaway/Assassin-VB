@@ -91,7 +91,7 @@ Namespace Forms.Shopping
                 If CurrentUser.Hunger < 0 Then CurrentUser.Hunger = 0
             End If
 
-            AddText($"You purchase the {_selectedItem.Name}  for {_selectedItem.ValueToString} gold.")
+            AddText($"You purchase the {_selectedItem.Name} for {_selectedItem.ValueToString} gold.")
 
             Display()
             Await SaveUser(CurrentUser)
