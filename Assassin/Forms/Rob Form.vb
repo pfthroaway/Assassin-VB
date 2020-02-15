@@ -10,7 +10,7 @@ Namespace Forms
 
     Public Class FrmRob
         Dim _blnCourt As Boolean = False
-        Dim _arrText As New ArrayList
+        Dim _arrText As New List(Of String)
         Dim _index As Integer
         Dim _reason As Crime
 
@@ -44,7 +44,7 @@ Namespace Forms
         ''' <summary>Displays text while the Timer is active.</summary>
         Private Sub Display()
             If _index < _arrText.Count Then
-                AddText(_arrText(_index).ToString)
+                AddText(_arrText(_index))
                 _index += 1
                 If _index = _arrText.Count Then
                     _arrText.Clear()
@@ -61,13 +61,14 @@ Namespace Forms
             End If
         End Sub
 
-        ''' <summary>Toggles the Back and New Victim Buttons .</summary>
+        ''' <summary>Toggles the Back and New Victim Buttons.</summary>
         Private Sub ToggleBackNewVictim(enabled As Boolean)
             BtnNewVictim.Enabled = enabled
             BtnBack.Enabled = enabled
         End Sub
 
         ''' <summary>Toggles all the Buttons.</summary>
+        ''' <param name="enabled">Should the Buttons be enabled?</param>
         Private Sub ToggleButtons(enabled As Boolean)
             ToggleBackNewVictim(enabled)
             BtnPickpocket.Enabled = enabled
@@ -80,18 +81,18 @@ Namespace Forms
         Private Sub FailedRobbery()
             AddText("You have failed miserably!")
             Dim noticed As Integer = Functions.GenerateRandomNumber(1, 100)
-            If noticed <= CurrentUser.Stealth Then 'not caught
+            If noticed <= CurrentUser.Stealth Then 'not spotted
                 AddText("You got away without being noticed.")
                 ToggleBackNewVictim(True)
-            Else 'caught
+            Else 'spotted
                 _arrText.Add("You have been noticed!")
                 _arrText.Add($"The {CurrentEnemy.Name} cries out, ""Guards, a thief!""")
                 _arrText.Add("You hide. . .")
                 Dim spot As Integer = Functions.GenerateRandomNumber(1, 100)
-                If spot <= CurrentUser.Stealth Then 'not spotted
+                If spot <= CurrentUser.Stealth Then 'not caught
                     _arrText.Add("It appears you have escaped!")
                     Timer1.Start()
-                Else 'spotted
+                Else 'caught
                     _blnCourt = True
                     _arrText.Add("You have been caught!")
                     Timer1.Start()
