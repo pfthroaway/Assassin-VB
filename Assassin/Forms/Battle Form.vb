@@ -13,9 +13,9 @@ Namespace Forms
         Public BlnJob As Boolean = False
         Dim _blnWin As Boolean = False
         ReadOnly _maxStamina As Integer = 100
-        Dim _userStamina As Integer = _maxStamina
+        Dim _playerStamina As Integer = _maxStamina
         Dim _enemyStamina As Integer = _maxStamina
-        Dim _userStance As Stance
+        Dim _playerStance As Stance
         Dim _enemyStance As Stance
         Dim _playerBlocking As Integer = 0
         Dim _enemyBlocking As Integer = 0
@@ -38,36 +38,36 @@ Namespace Forms
 
         ''' <summary>Displays all the displayable information in the labels on the form.</summary>
         Public Sub Display()
-            LblPlrName.Text = CurrentUser.Name
-            LblPlrEnd.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            LblPlrEnd.Text = CurrentUser.EnduranceToString
-            LblPlrStatus.Text = GetStatusText(_userStamina)
-            LblPlrStatus.ForeColor = If(_userStamina < 3, Color.Red, Color.Black)
-            LblPlrWeapon.Text = CurrentUser.CurrentWeapon.Name
-            LblPlrArmor.Text = CurrentUser.Armor.Name
+            LblPlayerName.Text = CurrentUser.Name
+            LblPlayerEndurance.ForeColor = If(CurrentUser.EnduranceRatio <= 0.2, Color.Red, Color.Black)
+            LblPlayerEndurance.Text = CurrentUser.EnduranceToString
+            LblPlayerStatus.Text = GetStatusText(_playerStamina)
+            LblPlayerStatus.ForeColor = If(_playerStamina < 3, Color.Red, Color.Black)
+            LblPlayerWeapon.Text = CurrentUser.CurrentWeapon.Name
+            LblPlayerArmor.Text = CurrentUser.Armor.Name
 
             LblEnemyName.Text = CurrentEnemy.Name
-            LblEneEnd.ForeColor = If(CurrentEnemy.CurrentEndurance <= (CurrentEnemy.MaximumEndurance * 0.2), Color.Red, Color.Black)
-            LblEneEnd.Text = CurrentEnemy.EnduranceToString
-            LblEneStatus.Text = GetStatusText(_enemyStamina)
-            LblEneStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
-            LblEneWeapon.Text = CurrentEnemy.Weapon.Name
-            LblEneArmor.Text = CurrentEnemy.Armor.Name
+            LblEnemyEndurance.ForeColor = If(CurrentEnemy.EnduranceRatio <= 0.2, Color.Red, Color.Black)
+            LblEnemyEndurance.Text = CurrentEnemy.EnduranceToString
+            LblEnemyStatus.Text = GetStatusText(_enemyStamina)
+            LblEnemyStatus.ForeColor = If(_enemyStamina < 3, Color.Red, Color.Black)
+            LblEnemyWeapon.Text = CurrentEnemy.Weapon.Name
+            LblEnemyArmor.Text = CurrentEnemy.Armor.Name
 
-            ToggleButtons(_userStamina > 0 AndAlso Not _blnDone)
+            ToggleButtons(_playerStamina > 0 AndAlso Not _blnDone)
         End Sub
 
         ''' <summary>Toggles all buttons.</summary>
         ''' <param name="enabled"></param>
         Private Sub ToggleButtons(enabled As Boolean)
             BtnAttack.Enabled = enabled
-            BtnBerserk.Enabled = enabled AndAlso _userStamina >= 2
+            BtnBerserk.Enabled = enabled AndAlso _playerStamina >= 2
+            BtnDefend.Enabled = Not _blnDone
             BtnFlee.Enabled = enabled
+            BtnInventory.Enabled = Not _blnDone
             BtnLunge.Enabled = enabled
             BtnParry.Enabled = enabled
             BtnQuickCombat.Enabled = enabled
-            BtnInventory.Enabled = Not _blnDone
-            BtnDefend.Enabled = Not _blnDone
         End Sub
 
 #Region "Hit"
@@ -109,7 +109,7 @@ Namespace Forms
         ''' <summary>Handle's an <see cref="Enemy"/>'s attack.</summary>
         Private Sub EnemyAttack()
 
-            If _userStance <> Stance.Parry Then
+            If _playerStance <> Stance.Parry Then
                 HitPlayer()
             Else
                 If SkillCheck(CurrentUser.CurrentWeaponSkill + Bonus()) Then
@@ -329,7 +329,7 @@ Namespace Forms
 
         ''' <summary>Resets <see cref="User"/> and <see cref="Enemy"/> stats after a round.</summary>
         Private Sub RoundReset()
-            AdjustStamina(_userStance, _userStamina)
+            AdjustStamina(_playerStance, _playerStamina)
             _playerBlocking = CurrentUser.Blocking
             _playerDamage = CurrentUser.CurrentWeapon.Damage
             _playerWeaponSkill = CurrentUser.CurrentWeaponSkill
@@ -354,9 +354,9 @@ Namespace Forms
         ''' <summary>Sets the <see cref="User"/>'s <see cref="Stance"/>.</summary>
         ''' <param name="stance"><see cref="Stance"/> to be set</param>
         Private Sub SetPlayerStance(stance As Stance)
-            _userStance = stance
+            _playerStance = stance
 
-            Select Case _userStance
+            Select Case _playerStance
                 Case Stance.Berserk
                     _playerDamage *= 2
                 Case Stance.Lunge
@@ -411,7 +411,7 @@ Namespace Forms
 
         ''' <summary>Handles the <see cref="User"/>'s <see cref="Stance"/> in QuickCombat.</summary>
         Private Sub QuickCombatPlayerStance()
-            Select Case _userStamina
+            Select Case _playerStamina
                 Case > 2
                     Dim percent As Integer = Functions.GenerateRandomNumber(1, 100)
                     Select Case percent
@@ -445,7 +445,7 @@ Namespace Forms
 
         ''' <summary>The <see cref="User"/>'s turn.</summary>
         Private Sub PlayerTurn()
-            If _userStance <> Stance.Defend AndAlso _userStance <> Stance.Flee Then
+            If _playerStance <> Stance.Defend AndAlso _playerStance <> Stance.Flee Then
                 If SkillCheck(_playerWeaponSkill + Bonus()) Then
                     If SkillCheck(_enemyBlocking) = False Then
                         PlayerAttack()
@@ -496,12 +496,12 @@ Namespace Forms
                 If SkillCheck(_enemyBlocking - Bonus()) Then  'successful flee
                     PlayerFlee()
                 Else 'blocked flee
-                    _userStance = Stance.Flee
+                    _playerStance = Stance.Flee
                     AddText("Your opponent blocked your attempt to flee.")
                     NewRound()
                 End If
             Else
-                _userStance = Stance.Flee
+                _playerStance = Stance.Flee
                 AddText("Your attempt at flight failed miserably.")
                 NewRound()
             End If

@@ -42,15 +42,15 @@ Namespace Forms
                 TxtGame.Text = "You were slain. You have been resurrected by the gods."
                 CurrentUser.Alive = True
                 CurrentUser.CurrentEndurance = 1
-                Await SaveUser(CurrentUser)
             End If
 
             CurrentUser.CurrentLocation = SleepLocation.Streets
+            Await SaveUser(CurrentUser)
 
             Display()
         End Sub
 
-        ''' <summary>Checks whether a jailed user has served their time.</summary>
+        ''' <summary>Checks whether a <see cref="JailedUser"/> has served their time.</summary>
         Public Async Sub CheckJailed()
             jailedUser = AllJailedUsers.Find(Function(user) user.Name = CurrentUser.Name)
             jailTimeSpan = Date.UtcNow - jailedUser.DateJailed
@@ -99,7 +99,7 @@ Namespace Forms
 
             LblWeaponName.ForeColor = If(CurrentUser.CurrentWeapon.Name = "Hands", Color.Red, Color.Black)
             LblArmorName.ForeColor = If(CurrentUser.Armor.Name = "Clothes", Color.Red, Color.Black)
-            LblEndAmt.ForeColor = If(CurrentUser.CurrentEndurance <= (CurrentUser.MaximumEndurance * 0.2), Color.Red, Color.Black)
+            LblEndAmt.ForeColor = If(CurrentUser.EnduranceRatio <= 0.2, Color.Red, Color.Black)
         End Sub
 
         ''' <summary>Toggles all the Buttons on the Form.</summary>

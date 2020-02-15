@@ -82,11 +82,6 @@ Namespace Forms
                 _blnGuilty = True
             End If
 
-            Start()
-        End Sub
-
-        ''' <summary>Starts the Timer.</summary>
-        Public Sub Start()
             Timer1.Start()
         End Sub
 

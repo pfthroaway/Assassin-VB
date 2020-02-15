@@ -49,7 +49,7 @@ Namespace Classes.Entities
         ''' <summary>Ratio of current to maximum endurance.</summary>
         Public ReadOnly Property EnduranceRatio As Decimal
             Get
-                Return DecimalHelper.Parse(CurrentEndurance / MaximumEndurance)
+                Return Decimal.Divide(CurrentEndurance, MaximumEndurance)
             End Get
         End Property
 
@@ -68,13 +68,10 @@ Namespace Classes.Entities
         End Property
 
         ''' <summary>Slipping skill of the Entity, formatted.</summary>
-        Public Property SlippingToString As String
+        Public ReadOnly Property SlippingToString As String
             Get
                 Return $"{Slipping:N0}%"
             End Get
-            Set(value As String)
-
-            End Set
         End Property
 
 #End Region

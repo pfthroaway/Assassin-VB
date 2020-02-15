@@ -27,21 +27,21 @@ Namespace Forms
         <DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.TxtBattle = New System.Windows.Forms.TextBox()
-            Me.LblPlrArmor = New System.Windows.Forms.Label()
+            Me.LblPlayerArmor = New System.Windows.Forms.Label()
             Me.Label8 = New System.Windows.Forms.Label()
-            Me.LblPlrWeapon = New System.Windows.Forms.Label()
-            Me.LblPlrStatus = New System.Windows.Forms.Label()
+            Me.LblPlayerWeapon = New System.Windows.Forms.Label()
+            Me.LblPlayerStatus = New System.Windows.Forms.Label()
             Me.Label6 = New System.Windows.Forms.Label()
-            Me.LblPlrEnd = New System.Windows.Forms.Label()
+            Me.LblPlayerEndurance = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
-            Me.LblPlrName = New System.Windows.Forms.Label()
+            Me.LblPlayerName = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
-            Me.LblEneArmor = New System.Windows.Forms.Label()
+            Me.LblEnemyArmor = New System.Windows.Forms.Label()
             Me.Label10 = New System.Windows.Forms.Label()
-            Me.LblEneWeapon = New System.Windows.Forms.Label()
-            Me.LblEneStatus = New System.Windows.Forms.Label()
+            Me.LblEnemyWeapon = New System.Windows.Forms.Label()
+            Me.LblEnemyStatus = New System.Windows.Forms.Label()
             Me.Label13 = New System.Windows.Forms.Label()
-            Me.LblEneEnd = New System.Windows.Forms.Label()
+            Me.LblEnemyEndurance = New System.Windows.Forms.Label()
             Me.Label15 = New System.Windows.Forms.Label()
             Me.Label16 = New System.Windows.Forms.Label()
             Me.LblEnemyName = New System.Windows.Forms.Label()
@@ -71,13 +71,13 @@ Namespace Forms
             '
             'LblPlrArmor
             '
-            Me.LblPlrArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblPlrArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPlrArmor.Location = New System.Drawing.Point(528, 100)
-            Me.LblPlrArmor.Name = "LblPlrArmor"
-            Me.LblPlrArmor.Size = New System.Drawing.Size(101, 23)
-            Me.LblPlrArmor.TabIndex = 42
-            Me.LblPlrArmor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPlayerArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPlayerArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlayerArmor.Location = New System.Drawing.Point(528, 100)
+            Me.LblPlayerArmor.Name = "LblPlrArmor"
+            Me.LblPlayerArmor.Size = New System.Drawing.Size(101, 23)
+            Me.LblPlayerArmor.TabIndex = 42
+            Me.LblPlayerArmor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label8
             '
@@ -92,23 +92,23 @@ Namespace Forms
             '
             'LblPlrWeapon
             '
-            Me.LblPlrWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblPlrWeapon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPlrWeapon.Location = New System.Drawing.Point(528, 78)
-            Me.LblPlrWeapon.Name = "LblPlrWeapon"
-            Me.LblPlrWeapon.Size = New System.Drawing.Size(101, 23)
-            Me.LblPlrWeapon.TabIndex = 40
-            Me.LblPlrWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPlayerWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPlayerWeapon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlayerWeapon.Location = New System.Drawing.Point(528, 78)
+            Me.LblPlayerWeapon.Name = "LblPlrWeapon"
+            Me.LblPlayerWeapon.Size = New System.Drawing.Size(101, 23)
+            Me.LblPlayerWeapon.TabIndex = 40
+            Me.LblPlayerWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'LblPlrStatus
             '
-            Me.LblPlrStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblPlrStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPlrStatus.Location = New System.Drawing.Point(528, 56)
-            Me.LblPlrStatus.Name = "LblPlrStatus"
-            Me.LblPlrStatus.Size = New System.Drawing.Size(101, 23)
-            Me.LblPlrStatus.TabIndex = 38
-            Me.LblPlrStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPlayerStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPlayerStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlayerStatus.Location = New System.Drawing.Point(528, 56)
+            Me.LblPlayerStatus.Name = "LblPlrStatus"
+            Me.LblPlayerStatus.Size = New System.Drawing.Size(101, 23)
+            Me.LblPlayerStatus.TabIndex = 38
+            Me.LblPlayerStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label6
             '
@@ -123,13 +123,13 @@ Namespace Forms
             '
             'LblPlrEnd
             '
-            Me.LblPlrEnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblPlrEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPlrEnd.Location = New System.Drawing.Point(528, 34)
-            Me.LblPlrEnd.Name = "LblPlrEnd"
-            Me.LblPlrEnd.Size = New System.Drawing.Size(101, 23)
-            Me.LblPlrEnd.TabIndex = 36
-            Me.LblPlrEnd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPlayerEndurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPlayerEndurance.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlayerEndurance.Location = New System.Drawing.Point(528, 34)
+            Me.LblPlayerEndurance.Name = "LblPlrEnd"
+            Me.LblPlayerEndurance.Size = New System.Drawing.Size(101, 23)
+            Me.LblPlayerEndurance.TabIndex = 36
+            Me.LblPlayerEndurance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label4
             '
@@ -144,13 +144,13 @@ Namespace Forms
             '
             'LblPlrName
             '
-            Me.LblPlrName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblPlrName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblPlrName.Location = New System.Drawing.Point(428, 12)
-            Me.LblPlrName.Name = "LblPlrName"
-            Me.LblPlrName.Size = New System.Drawing.Size(201, 23)
-            Me.LblPlrName.TabIndex = 35
-            Me.LblPlrName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblPlayerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblPlayerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblPlayerName.Location = New System.Drawing.Point(428, 12)
+            Me.LblPlayerName.Name = "LblPlrName"
+            Me.LblPlayerName.Size = New System.Drawing.Size(201, 23)
+            Me.LblPlayerName.TabIndex = 35
+            Me.LblPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label2
             '
@@ -165,13 +165,13 @@ Namespace Forms
             '
             'LblEneArmor
             '
-            Me.LblEneArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblEneArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblEneArmor.Location = New System.Drawing.Point(528, 311)
-            Me.LblEneArmor.Name = "LblEneArmor"
-            Me.LblEneArmor.Size = New System.Drawing.Size(101, 23)
-            Me.LblEneArmor.TabIndex = 51
-            Me.LblEneArmor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblEnemyArmor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblEnemyArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnemyArmor.Location = New System.Drawing.Point(528, 311)
+            Me.LblEnemyArmor.Name = "LblEneArmor"
+            Me.LblEnemyArmor.Size = New System.Drawing.Size(101, 23)
+            Me.LblEnemyArmor.TabIndex = 51
+            Me.LblEnemyArmor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label10
             '
@@ -186,23 +186,23 @@ Namespace Forms
             '
             'LblEneWeapon
             '
-            Me.LblEneWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblEneWeapon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblEneWeapon.Location = New System.Drawing.Point(528, 289)
-            Me.LblEneWeapon.Name = "LblEneWeapon"
-            Me.LblEneWeapon.Size = New System.Drawing.Size(101, 23)
-            Me.LblEneWeapon.TabIndex = 49
-            Me.LblEneWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblEnemyWeapon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblEnemyWeapon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnemyWeapon.Location = New System.Drawing.Point(528, 289)
+            Me.LblEnemyWeapon.Name = "LblEneWeapon"
+            Me.LblEnemyWeapon.Size = New System.Drawing.Size(101, 23)
+            Me.LblEnemyWeapon.TabIndex = 49
+            Me.LblEnemyWeapon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'LblEneStatus
             '
-            Me.LblEneStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblEneStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblEneStatus.Location = New System.Drawing.Point(528, 267)
-            Me.LblEneStatus.Name = "LblEneStatus"
-            Me.LblEneStatus.Size = New System.Drawing.Size(101, 23)
-            Me.LblEneStatus.TabIndex = 47
-            Me.LblEneStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblEnemyStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblEnemyStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnemyStatus.Location = New System.Drawing.Point(528, 267)
+            Me.LblEnemyStatus.Name = "LblEneStatus"
+            Me.LblEnemyStatus.Size = New System.Drawing.Size(101, 23)
+            Me.LblEnemyStatus.TabIndex = 47
+            Me.LblEnemyStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label13
             '
@@ -217,13 +217,13 @@ Namespace Forms
             '
             'LblEneEnd
             '
-            Me.LblEneEnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.LblEneEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.LblEneEnd.Location = New System.Drawing.Point(528, 245)
-            Me.LblEneEnd.Name = "LblEneEnd"
-            Me.LblEneEnd.Size = New System.Drawing.Size(101, 23)
-            Me.LblEneEnd.TabIndex = 45
-            Me.LblEneEnd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LblEnemyEndurance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.LblEnemyEndurance.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.LblEnemyEndurance.Location = New System.Drawing.Point(528, 245)
+            Me.LblEnemyEndurance.Name = "LblEneEnd"
+            Me.LblEnemyEndurance.Size = New System.Drawing.Size(101, 23)
+            Me.LblEnemyEndurance.TabIndex = 45
+            Me.LblEnemyEndurance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label15
             '
@@ -364,23 +364,23 @@ Namespace Forms
             Me.Controls.Add(Me.BtnDefend)
             Me.Controls.Add(Me.BtnBerserk)
             Me.Controls.Add(Me.BtnAttack)
-            Me.Controls.Add(Me.LblEneArmor)
+            Me.Controls.Add(Me.LblEnemyArmor)
             Me.Controls.Add(Me.Label10)
-            Me.Controls.Add(Me.LblEneWeapon)
-            Me.Controls.Add(Me.LblEneStatus)
+            Me.Controls.Add(Me.LblEnemyWeapon)
+            Me.Controls.Add(Me.LblEnemyStatus)
             Me.Controls.Add(Me.Label13)
-            Me.Controls.Add(Me.LblEneEnd)
+            Me.Controls.Add(Me.LblEnemyEndurance)
             Me.Controls.Add(Me.Label15)
             Me.Controls.Add(Me.Label16)
             Me.Controls.Add(Me.LblEnemyName)
-            Me.Controls.Add(Me.LblPlrArmor)
+            Me.Controls.Add(Me.LblPlayerArmor)
             Me.Controls.Add(Me.Label8)
-            Me.Controls.Add(Me.LblPlrWeapon)
-            Me.Controls.Add(Me.LblPlrStatus)
+            Me.Controls.Add(Me.LblPlayerWeapon)
+            Me.Controls.Add(Me.LblPlayerStatus)
             Me.Controls.Add(Me.Label6)
-            Me.Controls.Add(Me.LblPlrEnd)
+            Me.Controls.Add(Me.LblPlayerEndurance)
             Me.Controls.Add(Me.Label4)
-            Me.Controls.Add(Me.LblPlrName)
+            Me.Controls.Add(Me.LblPlayerName)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.TxtBattle)
             Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -396,21 +396,21 @@ Namespace Forms
 
         End Sub
         Friend WithEvents TxtBattle As TextBox
-        Friend WithEvents LblPlrArmor As Label
+        Friend WithEvents LblPlayerArmor As Label
         Friend WithEvents Label8 As Label
-        Friend WithEvents LblPlrWeapon As Label
-        Friend WithEvents LblPlrStatus As Label
+        Friend WithEvents LblPlayerWeapon As Label
+        Friend WithEvents LblPlayerStatus As Label
         Friend WithEvents Label6 As Label
-        Friend WithEvents LblPlrEnd As Label
+        Friend WithEvents LblPlayerEndurance As Label
         Friend WithEvents Label4 As Label
-        Friend WithEvents LblPlrName As Label
+        Friend WithEvents LblPlayerName As Label
         Friend WithEvents Label2 As Label
-        Friend WithEvents LblEneArmor As Label
+        Friend WithEvents LblEnemyArmor As Label
         Friend WithEvents Label10 As Label
-        Friend WithEvents LblEneWeapon As Label
-        Friend WithEvents LblEneStatus As Label
+        Friend WithEvents LblEnemyWeapon As Label
+        Friend WithEvents LblEnemyStatus As Label
         Friend WithEvents Label13 As Label
-        Friend WithEvents LblEneEnd As Label
+        Friend WithEvents LblEnemyEndurance As Label
         Friend WithEvents Label15 As Label
         Friend WithEvents Label16 As Label
         Friend WithEvents LblEnemyName As Label

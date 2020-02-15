@@ -13,18 +13,18 @@ Namespace Classes
     Public Module GameState
         Friend AdminPassword As String
         Friend AllArmor As List(Of Armor)
-        Friend AllWeapons As List(Of Weapon)
-        Friend AllGuilds As List(Of Guild)
-        Friend AllPotions As List(Of Potion)
-        Friend AllFood As List(Of Food)
         Friend AllDrinks As List(Of Drink)
-        Friend AllRanks As List(Of String)
         Friend AllEnemies As List(Of Enemy)
+        Friend AllFood As List(Of Food)
+        Friend AllGuilds As List(Of Guild)
+        Friend AllJailedUsers As List(Of JailedUser)
+        Friend AllPotions As List(Of Potion)
+        Friend AllRanks As List(Of String)
         Friend AllUsers As List(Of User)
-        Friend CurrentUser As New User
+        Friend AllWeapons As List(Of Weapon)
         Friend CurrentEnemy As New Enemy
         Friend CurrentGuild As New Guild
-        Friend AllJailedUsers As List(Of JailedUser)
+        Friend CurrentUser As New User
         Public ReadOnly DatabaseInteraction As New SQLiteDatabaseInteraction
 
         'TODO Consider allowing more than 5 Guilds.
