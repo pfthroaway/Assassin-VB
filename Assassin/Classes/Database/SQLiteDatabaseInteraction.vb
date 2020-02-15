@@ -136,9 +136,9 @@ Namespace Classes.Database
         ''' <param name="checkGuild"><see cref="Guild"/> being joined</param>
         ''' <returns>True if has applied</returns>
         Public Async Function HasAppliedToGuild(checkUser As User, checkGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.HasAppliedToGuild
-            Dim guildID As String = $"Guild{checkGuild.ID}Members"
-            Dim cmd As New SQLiteCommand With {.CommandText = $"SELECT * FROM {guildID} Where [Username] = @name"}
+            Dim cmd As New SQLiteCommand With {.CommandText = "SELECT * FROM Applications WHERE [Username] = @name AND [Guild] = @guild"}
             cmd.Parameters.AddWithValue("@name", checkUser.Name)
+            cmd.Parameters.AddWithValue("@guild", checkGuild.ID)
             Dim ds As DataSet = Await SQLiteHelper.FillDataSet(_con, cmd)
             Return ds.Tables(0).Rows.Count > 0
         End Function
