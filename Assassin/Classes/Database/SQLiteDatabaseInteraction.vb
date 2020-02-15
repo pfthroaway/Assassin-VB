@@ -128,7 +128,7 @@ Namespace Classes.Database
         ''' <param name="denyGuild"><see cref="Guild"/> from which the <see cref="User"/>'s application was denied</param>
         ''' <returns>True if successful</returns>
         Public Async Function DenyGuildApplication(denyUser As User, denyGuild As Guild) As Task(Of Boolean) Implements IDatabaseInteraction.DenyGuildApplication
-            Return Await DeleteGuildApplication(denyUser, denyGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), denyGuild.Name, denyUser.Name, $"Your application to join the {CurrentGuild.Name.Replace("'", "''")} guild has been denied.", Now, True))
+            Return Await DeleteGuildApplication(denyUser, denyGuild) AndAlso Await SendMessage(New Message(Await SQLiteHelper.GetNextIndex(_con, "Messages"), denyGuild.Name, denyUser.Name, $"Your application to join the {denyGuild.Name.Replace("'", "''")} guild has been denied.", Now, True))
         End Function
 
         ''' <summary>Checks whether the <see cref="User"/> has applied to the selected <see cref="Guild"/>.</summary>
