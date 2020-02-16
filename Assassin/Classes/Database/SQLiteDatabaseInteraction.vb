@@ -539,7 +539,7 @@ Namespace Classes.Database
             cmd.Parameters.AddWithValue("@experience", userNew.Experience.ToString())
             cmd.Parameters.AddWithValue("@skillPoints", userNew.SkillPoints.ToString())
             cmd.Parameters.AddWithValue("@alive", Int32Helper.Parse(userNew.Alive))
-            cmd.Parameters.AddWithValue("@location", userNew.CurrentLocation)
+            cmd.Parameters.AddWithValue("@location", userNew.CurrentLocation.ToString())
             cmd.Parameters.AddWithValue("@currentEndurance", userNew.CurrentEndurance.ToString())
             cmd.Parameters.AddWithValue("@maximumEndurance", userNew.MaximumEndurance.ToString())
             cmd.Parameters.AddWithValue("@hunger", userNew.Hunger.ToString())
