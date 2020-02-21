@@ -97,7 +97,6 @@ Namespace Forms.Admin
             Me.CmbGuildmaster.Enabled = False
             Me.CmbGuildmaster.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CmbGuildmaster.FormattingEnabled = True
-            Me.CmbGuildmaster.Items.AddRange(New Object() {"Computer"})
             Me.CmbGuildmaster.Location = New System.Drawing.Point(145, 171)
             Me.CmbGuildmaster.Name = "CmbGuildmaster"
             Me.CmbGuildmaster.Size = New System.Drawing.Size(176, 26)

@@ -141,7 +141,7 @@ Namespace Forms
             Dim username As String = TxtName.Text.Trim()
 
             If TxtPass.Text.Trim() = TxtConfirm.Text.Trim() Then
-                If AllUsers.Exists(Function(user As User) user.Name = username) OrElse username = "Computer" Then
+                If AllUsers.Exists(Function(user As User) user.Name = username) OrElse username = "Computer" OrElse username = "Rathskeller" OrElse username = "The Master" Then
                     MessageBox.Show("This username has already been used.", "Assassin", MessageBoxButtons.OK)
                 Else
                     Dim newUser As New User With {

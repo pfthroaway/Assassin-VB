@@ -19,19 +19,7 @@ Namespace Forms.GuildForms
             If LstGuilds.SelectedIndex >= 0 Then
                 CurrentGuild = AllGuilds.Find(Function(guild) guild.ID = LstGuilds.SelectedIndex + 1)
                 LblGoldOnHand.Text = CurrentUser.GoldOnHandToString
-                If CurrentGuild.Master = "Computer" Then
-                    Select Case CurrentGuild.ID
-                        Case 1
-                            LblGuildmaster.Text = "The Master"
-                        Case 2
-                            LblGuildmaster.Text = "Rathskeller"
-                        Case Else
-                            LblGuildmaster.Text = $"{CurrentGuild.Name} Master"
-                    End Select
-                Else
-                    LblGuildmaster.Text = CurrentGuild.Master.ToString
-                End If
-
+                LblGuildmaster.Text = CurrentGuild.Master.ToString
                 LblFee.Text = CurrentGuild.Fee.ToString("N0")
                 LblGuildGold.Text = CurrentGuild.Gold.ToString("N0")
                 LblHenchmenLevel1.Text = CurrentGuild.HenchmenLevel1.ToString("N0")
@@ -89,7 +77,7 @@ Namespace Forms.GuildForms
             dlg = MessageBox.Show($"Are you sure you want to apply for this guild? It will cost {CurrentGuild.Fee} gold.", "Assassin", MessageBoxButtons.YesNo)
 
             If dlg = DialogResult.Yes Then  'if applying
-                If CurrentGuild.Master = "Computer" Then
+                If CurrentGuild.Master = CurrentGuild.DefaultMaster Then
                     'if guildmaster is Computer, always accept
                     Await MemberJoinsGuild(CurrentUser, CurrentGuild)
                     AddText($"You paid {CurrentGuild.Fee} gold to join the {CurrentGuild.Name} guild, and have been accepted!")

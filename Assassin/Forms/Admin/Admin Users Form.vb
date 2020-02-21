@@ -19,42 +19,42 @@ Namespace Forms.Admin
         Private Sub AssignSelectedUser(Optional hashPassword As Boolean = False)
             _selectedUser.Name = TxtName.Text.Trim()
             If hashPassword Then
-                _selectedUser.Password = PBKDF2.HashPassword(TxtChangePass.Text.Trim())
+                _selectedUser.Password = PBKDF2.HashPassword(PswdPassword.Text.Trim())
             End If
 
             'character
             Integer.TryParse(TxtLevel.Text.Trim(), _selectedUser.Level)
-            Integer.TryParse(TxtExp.Text.Trim(), _selectedUser.Experience)
-            Integer.TryParse(TxtSkillPts.Text.Trim(), _selectedUser.SkillPoints)
+            Integer.TryParse(TxtExperience.Text.Trim(), _selectedUser.Experience)
+            Integer.TryParse(TxtSkillPoints.Text.Trim(), _selectedUser.SkillPoints)
             _selectedUser.Alive = chkAlive.Checked
             Integer.TryParse(TxtCurrentEndurance.Text.Trim(), _selectedUser.CurrentEndurance)
-            _selectedUser.CurrentLocation = EnumHelper.Parse(Of SleepLocation)(CmbLoc.SelectedItem.ToString)
+            _selectedUser.CurrentLocation = EnumHelper.Parse(Of SleepLocation)(CmbLocation.SelectedItem.ToString)
             Integer.TryParse(TxtMaximumEndurance.Text.Trim(), _selectedUser.MaximumEndurance)
             Integer.TryParse(TxtHunger.Text.Trim(), _selectedUser.Hunger)
             Integer.TryParse(TxtThirst.Text.Trim(), _selectedUser.Thirst)
 
             'inventory
-            _selectedUser.CurrentWeaponType = EnumHelper.Parse(Of WeaponType)(CmbCurrWeapon.SelectedItem.ToString)
+            _selectedUser.CurrentWeaponType = EnumHelper.Parse(Of WeaponType)(CmbCurrentWeapon.SelectedItem.ToString)
             _selectedUser.LightWeapon = CType(CmbLightWeapon.SelectedItem, Weapon)
             _selectedUser.HeavyWeapon = CType(CmbHeavyWeapon.SelectedItem, Weapon)
             _selectedUser.TwoHandedWeapon = CType(CmbTwoHWeapon.SelectedItem, Weapon)
             _selectedUser.Armor = CType(CmbArmor.SelectedItem, Armor)
             _selectedUser.Potion = CType(CmbPotion.SelectedItem, Potion)
             Integer.TryParse(TxtLockpicks.Text.Trim(), _selectedUser.Lockpicks)
-            Integer.TryParse(TxtGoldHand.Text.Trim(), _selectedUser.GoldOnHand)
-            Integer.TryParse(TxtGoldBank.Text.Trim(), _selectedUser.GoldInBank)
-            Integer.TryParse(TxtGoldLoan.Text.Trim(), _selectedUser.GoldOnLoan)
+            Integer.TryParse(TxtGoldOnHand.Text.Trim(), _selectedUser.GoldOnHand)
+            Integer.TryParse(TxtGoldinBank.Text.Trim(), _selectedUser.GoldInBank)
+            Integer.TryParse(TxtGoldOnLoan.Text.Trim(), _selectedUser.GoldOnLoan)
             _selectedUser.Shovel = chkShovel.Checked
             _selectedUser.Lantern = chkLantern.Checked
             _selectedUser.Amulet = chkAmulet.Checked
 
             'skills
-            Integer.TryParse(TxtLight.Text.Trim(), _selectedUser.LightWeaponSkill)
-            Integer.TryParse(TxtHeavy.Text.Trim(), _selectedUser.HeavyWeaponSkill)
-            Integer.TryParse(TxtTwoH.Text.Trim(), _selectedUser.TwoHandedWeaponSkill)
-            Integer.TryParse(TxtBlocking.Text.Trim(), _selectedUser.Blocking)
-            Integer.TryParse(TxtSlipping.Text.Trim(), _selectedUser.Slipping)
-            Integer.TryParse(TxtStealth.Text.Trim(), _selectedUser.Stealth)
+            Integer.TryParse(TxtLightWeaponSkill.Text.Trim(), _selectedUser.LightWeaponSkill)
+            Integer.TryParse(TxtHeavyWeaponSkill.Text.Trim(), _selectedUser.HeavyWeaponSkill)
+            Integer.TryParse(TxtTwoHWeaponSkill.Text.Trim(), _selectedUser.TwoHandedWeaponSkill)
+            Integer.TryParse(TxtBlockingSkill.Text.Trim(), _selectedUser.Blocking)
+            Integer.TryParse(TxtSlippingSkill.Text.Trim(), _selectedUser.Slipping)
+            Integer.TryParse(TxtStealthSkill.Text.Trim(), _selectedUser.Stealth)
 
             'henchmen
             Integer.TryParse(TxtHenchmenLevel1.Text.Trim(), _selectedUser.HenchmenLevel1)
@@ -83,37 +83,37 @@ Namespace Forms.Admin
             'character
             TxtName.Clear()
             TxtLevel.Clear()
-            TxtExp.Clear()
-            TxtSkillPts.Clear()
+            TxtExperience.Clear()
+            TxtSkillPoints.Clear()
             chkAlive.Checked = False
-            CmbLoc.SelectedItem = "Streets"
+            CmbLocation.SelectedItem = "Streets"
             TxtCurrentEndurance.Clear()
             TxtMaximumEndurance.Clear()
             TxtHunger.Clear()
             TxtThirst.Clear()
 
             'inventory
-            CmbCurrWeapon.SelectedIndex = 0
+            CmbCurrentWeapon.SelectedIndex = 0
             CmbLightWeapon.SelectedIndex = 0
             CmbHeavyWeapon.SelectedIndex = 0
             CmbTwoHWeapon.SelectedIndex = 0
             CmbArmor.SelectedIndex = 0
             CmbPotion.SelectedIndex = 0
             TxtLockpicks.Clear()
-            TxtGoldHand.Clear()
-            TxtGoldBank.Clear()
-            TxtGoldLoan.Clear()
+            TxtGoldOnHand.Clear()
+            TxtGoldinBank.Clear()
+            TxtGoldOnLoan.Clear()
             chkShovel.Checked = False
             chkLantern.Checked = False
             chkAmulet.Checked = False
 
             'stats
-            TxtLight.Clear()
-            TxtHeavy.Clear()
-            TxtTwoH.Clear()
-            TxtBlocking.Clear()
-            TxtSlipping.Clear()
-            TxtStealth.Clear()
+            TxtLightWeaponSkill.Clear()
+            TxtHeavyWeaponSkill.Clear()
+            TxtTwoHWeaponSkill.Clear()
+            TxtBlockingSkill.Clear()
+            TxtSlippingSkill.Clear()
+            TxtStealthSkill.Clear()
 
             'henchmen
             TxtHenchmenLevel1.Clear()
@@ -123,8 +123,8 @@ Namespace Forms.Admin
             TxtHenchmenLevel5.Clear()
 
             'password change fields
-            TxtChangePass.Clear()
-            TxtConfirmPass.Clear()
+            PswdPassword.Clear()
+            PswdConfirm.Clear()
 
             ToggleControls(False)
         End Sub
@@ -142,37 +142,37 @@ Namespace Forms.Admin
             'character
             TxtName.Text = CurrentUser.Name.ToString
             TxtLevel.Text = CurrentUser.Level.ToString
-            TxtExp.Text = CurrentUser.Experience.ToString
-            TxtSkillPts.Text = CurrentUser.SkillPoints.ToString
+            TxtExperience.Text = CurrentUser.Experience.ToString
+            TxtSkillPoints.Text = CurrentUser.SkillPoints.ToString
             chkAlive.Checked = CurrentUser.Alive
-            CmbLoc.SelectedItem = CurrentUser.CurrentLocation.ToString
+            CmbLocation.SelectedItem = CurrentUser.CurrentLocation.ToString
             TxtCurrentEndurance.Text = CurrentUser.CurrentEndurance.ToString
             TxtMaximumEndurance.Text = CurrentUser.MaximumEndurance.ToString
             TxtHunger.Text = CurrentUser.Hunger.ToString
             TxtThirst.Text = CurrentUser.Thirst.ToString
 
             'inventory
-            CmbCurrWeapon.SelectedItem = CurrentUser.CurrentWeaponType.ToString
+            CmbCurrentWeapon.SelectedItem = CurrentUser.CurrentWeaponType.ToString
             CmbLightWeapon.SelectedItem = CurrentUser.LightWeapon
             CmbHeavyWeapon.SelectedItem = CurrentUser.HeavyWeapon
             CmbTwoHWeapon.SelectedItem = CurrentUser.TwoHandedWeapon
             CmbArmor.SelectedItem = CurrentUser.Armor
             CmbPotion.SelectedItem = CurrentUser.Potion
             TxtLockpicks.Text = CurrentUser.Lockpicks.ToString
-            TxtGoldHand.Text = CurrentUser.GoldOnHand.ToString
-            TxtGoldBank.Text = CurrentUser.GoldInBank.ToString
-            TxtGoldLoan.Text = CurrentUser.GoldOnLoan.ToString
+            TxtGoldOnHand.Text = CurrentUser.GoldOnHand.ToString
+            TxtGoldinBank.Text = CurrentUser.GoldInBank.ToString
+            TxtGoldOnLoan.Text = CurrentUser.GoldOnLoan.ToString
             chkShovel.Checked = CurrentUser.Shovel
             chkLantern.Checked = CurrentUser.Lantern
             chkAmulet.Checked = CurrentUser.Amulet
 
             'skills
-            TxtLight.Text = CurrentUser.LightWeaponSkill.ToString
-            TxtHeavy.Text = CurrentUser.HeavyWeaponSkill.ToString
-            TxtTwoH.Text = CurrentUser.TwoHandedWeaponSkill.ToString
-            TxtBlocking.Text = CurrentUser.Blocking.ToString
-            TxtSlipping.Text = CurrentUser.Slipping.ToString
-            TxtStealth.Text = CurrentUser.Stealth.ToString
+            TxtLightWeaponSkill.Text = CurrentUser.LightWeaponSkill.ToString
+            TxtHeavyWeaponSkill.Text = CurrentUser.HeavyWeaponSkill.ToString
+            TxtTwoHWeaponSkill.Text = CurrentUser.TwoHandedWeaponSkill.ToString
+            TxtBlockingSkill.Text = CurrentUser.Blocking.ToString
+            TxtSlippingSkill.Text = CurrentUser.Slipping.ToString
+            TxtStealthSkill.Text = CurrentUser.Stealth.ToString
 
             'henchmen
             TxtHenchmenLevel1.Text = CurrentUser.HenchmenLevel1.ToString
@@ -188,19 +188,18 @@ Namespace Forms.Admin
             'character
             TxtName.Enabled = enabled
             TxtLevel.Enabled = enabled
-            TxtExp.Enabled = enabled
-            TxtSkillPts.Enabled = enabled
+            TxtExperience.Enabled = enabled
+            TxtSkillPoints.Enabled = enabled
             chkAlive.Enabled = enabled
-            CmbLoc.Enabled = enabled
-            CmbLoc.Enabled = enabled
+            CmbLocation.Enabled = enabled
+            CmbLocation.Enabled = enabled
             TxtCurrentEndurance.Enabled = enabled
             TxtMaximumEndurance.Enabled = enabled
             TxtHunger.Enabled = enabled
             TxtThirst.Enabled = enabled
 
             'inventory
-            CmbCurrWeapon.Enabled = enabled
-            CmbCurrWeapon.Enabled = enabled
+            CmbCurrentWeapon.Enabled = enabled
             CmbLightWeapon.Enabled = enabled
             CmbLightWeapon.Enabled = enabled
             CmbHeavyWeapon.Enabled = enabled
@@ -212,20 +211,20 @@ Namespace Forms.Admin
             CmbPotion.Enabled = enabled
             CmbPotion.Enabled = enabled
             TxtLockpicks.Enabled = enabled
-            TxtGoldHand.Enabled = enabled
-            TxtGoldBank.Enabled = enabled
-            TxtGoldLoan.Enabled = enabled
+            TxtGoldOnHand.Enabled = enabled
+            TxtGoldinBank.Enabled = enabled
+            TxtGoldOnLoan.Enabled = enabled
             chkShovel.Enabled = enabled
             chkLantern.Enabled = enabled
             chkAmulet.Enabled = enabled
 
             'stats
-            TxtLight.Enabled = enabled
-            TxtHeavy.Enabled = enabled
-            TxtTwoH.Enabled = enabled
-            TxtBlocking.Enabled = enabled
-            TxtSlipping.Enabled = enabled
-            TxtStealth.Enabled = enabled
+            TxtLightWeaponSkill.Enabled = enabled
+            TxtHeavyWeaponSkill.Enabled = enabled
+            TxtTwoHWeaponSkill.Enabled = enabled
+            TxtBlockingSkill.Enabled = enabled
+            TxtSlippingSkill.Enabled = enabled
+            TxtStealthSkill.Enabled = enabled
 
             'henchmen
             TxtHenchmenLevel1.Enabled = enabled
@@ -235,8 +234,8 @@ Namespace Forms.Admin
             TxtHenchmenLevel5.Enabled = enabled
 
             'password change fields
-            TxtChangePass.Enabled = enabled
-            TxtConfirmPass.Enabled = enabled
+            PswdPassword.Enabled = enabled
+            PswdConfirm.Enabled = enabled
 
             'buttons
             BtnClear.Enabled = enabled
@@ -284,13 +283,13 @@ Namespace Forms.Admin
         Private Async Sub ModifyExistingUser()
             'if changing password
             Dim blnChangePass As Boolean
-            If TxtChangePass.Text.Trim().Length > 0 AndAlso TxtConfirmPass.Text.Trim().Length > 0 AndAlso TxtChangePass.Text.Trim() = TxtConfirmPass.Text.Trim() Then
+            If PswdPassword.Text.Trim().Length > 0 AndAlso PswdConfirm.Text.Trim().Length > 0 AndAlso PswdPassword.Text.Trim() = PswdConfirm.Text.Trim() Then
                 blnChangePass = True
-            ElseIf TxtChangePass.Text.Trim() <> TxtConfirmPass.Text.Trim() Then
+            ElseIf PswdPassword.Text.Trim() <> PswdConfirm.Text.Trim() Then
                 MessageBox.Show("Your passwords don't match.", "Assassin", MessageBoxButtons.OK)
-                TxtChangePass.Clear()
-                TxtConfirmPass.Clear()
-                TxtChangePass.Focus()
+                PswdPassword.Clear()
+                PswdConfirm.Clear()
+                PswdPassword.Focus()
                 Exit Sub
             End If
 
@@ -354,7 +353,7 @@ Namespace Forms.Admin
         ''' <summary>Checks to make sure all the fields have text and then saves the <see cref="User"/>.</summary>
         Private Sub Save()
             If LstUsers.SelectedIndex >= 0 OrElse _blnNewUser = True Then
-                If TxtBlocking.TextLength > 0 AndAlso TxtCurrentEndurance.TextLength > 0 AndAlso TxtExp.TextLength > 0 AndAlso TxtGoldBank.TextLength > 0 AndAlso TxtGoldHand.TextLength > 0 AndAlso TxtGoldLoan.TextLength > 0 AndAlso TxtHeavy.TextLength > 0 AndAlso TxtHenchmenLevel1.TextLength > 0 AndAlso TxtHenchmenLevel2.TextLength > 0 AndAlso TxtHenchmenLevel3.TextLength > 0 AndAlso TxtHenchmenLevel4.TextLength > 0 AndAlso TxtHenchmenLevel5.TextLength > 0 AndAlso TxtLevel.TextLength > 0 AndAlso TxtLight.TextLength > 0 AndAlso TxtLockpicks.TextLength > 0 AndAlso TxtMaximumEndurance.TextLength > 0 AndAlso TxtName.TextLength > 0 AndAlso TxtSkillPts.TextLength > 0 AndAlso TxtSlipping.TextLength > 0 AndAlso TxtStealth.TextLength > 0 AndAlso TxtTwoH.TextLength > 0 AndAlso CmbArmor.SelectedIndex > -1 AndAlso CmbLoc.SelectedIndex > -1 AndAlso CmbPotion.SelectedIndex > -1 AndAlso CmbCurrWeapon.SelectedIndex > -1 AndAlso CmbLightWeapon.SelectedIndex > -1 AndAlso CmbHeavyWeapon.SelectedIndex > -1 AndAlso CmbTwoHWeapon.SelectedIndex > -1 Then
+                If TxtBlockingSkill.TextLength > 0 AndAlso TxtCurrentEndurance.TextLength > 0 AndAlso TxtExperience.TextLength > 0 AndAlso TxtGoldinBank.TextLength > 0 AndAlso TxtGoldOnHand.TextLength > 0 AndAlso TxtGoldOnLoan.TextLength > 0 AndAlso TxtHeavyWeaponSkill.TextLength > 0 AndAlso TxtHenchmenLevel1.TextLength > 0 AndAlso TxtHenchmenLevel2.TextLength > 0 AndAlso TxtHenchmenLevel3.TextLength > 0 AndAlso TxtHenchmenLevel4.TextLength > 0 AndAlso TxtHenchmenLevel5.TextLength > 0 AndAlso TxtLevel.TextLength > 0 AndAlso TxtLightWeaponSkill.TextLength > 0 AndAlso TxtLockpicks.TextLength > 0 AndAlso TxtMaximumEndurance.TextLength > 0 AndAlso TxtName.TextLength > 0 AndAlso TxtSkillPoints.TextLength > 0 AndAlso TxtSlippingSkill.TextLength > 0 AndAlso TxtStealthSkill.TextLength > 0 AndAlso TxtTwoHWeaponSkill.TextLength > 0 AndAlso CmbArmor.SelectedIndex > -1 AndAlso CmbLocation.SelectedIndex > -1 AndAlso CmbPotion.SelectedIndex > -1 AndAlso CmbCurrentWeapon.SelectedIndex > -1 AndAlso CmbLightWeapon.SelectedIndex > -1 AndAlso CmbHeavyWeapon.SelectedIndex > -1 AndAlso CmbTwoHWeapon.SelectedIndex > -1 Then
                     If _blnNewUser Then
                         SaveNewUser()
                     Else
@@ -372,8 +371,8 @@ Namespace Forms.Admin
 
         ''' <summary>Saves a new <see cref="User"/> to the database.</summary>
         Private Async Sub SaveNewUser()
-            If TxtChangePass.Text.Trim().Length > 0 AndAlso TxtConfirmPass.Text.Trim().Length > 0 Then
-                If TxtChangePass.Text.Trim() = TxtConfirmPass.Text.Trim() Then
+            If PswdPassword.Text.Trim().Length > 0 AndAlso PswdConfirm.Text.Trim().Length > 0 Then
+                If PswdPassword.Text.Trim() = PswdConfirm.Text.Trim() Then
                     If Not AllUsers.Exists(Function(user) user.Name = TxtName.Text.Trim()) Then
                         AssignSelectedUser(True)
                         If Await NewUser(_selectedUser) Then
@@ -388,9 +387,9 @@ Namespace Forms.Admin
                     End If
                 Else
                     MessageBox.Show("Your passwords don't match.", "Assassin", MessageBoxButtons.OK)
-                    TxtChangePass.Clear()
-                    TxtConfirmPass.Clear()
-                    TxtChangePass.Focus()
+                    PswdPassword.Clear()
+                    PswdConfirm.Clear()
+                    PswdPassword.Focus()
                     Exit Sub
                 End If
             Else
@@ -414,7 +413,7 @@ Namespace Forms.Admin
                             Await MemberLeavesGuild(CurrentUser, guild)
                             Await DatabaseInteraction.DenyGuildApplication(CurrentUser, guild)
                             If guild.Master = CurrentUser.Name Then
-                                guild.Master = "Computer"
+                                guild.Master = guild.DefaultMaster
                             End If
                         Next
                         Dim messages As List(Of Message) = Await DatabaseInteraction.LoadMessages(CurrentUser)
@@ -474,11 +473,11 @@ Namespace Forms.Admin
             End If
         End Sub
 
-        Private Sub NumChars(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TxtTwoH.KeyPress, TxtThirst.KeyPress, TxtStealth.KeyPress, TxtSlipping.KeyPress, TxtSkillPts.KeyPress, TxtMaximumEndurance.KeyPress, TxtLockpicks.KeyPress, TxtLight.KeyPress, TxtLevel.KeyPress, TxtHunger.KeyPress, TxtHenchmenLevel5.KeyPress, TxtHenchmenLevel4.KeyPress, TxtHenchmenLevel3.KeyPress, TxtHenchmenLevel2.KeyPress, TxtHenchmenLevel1.KeyPress, TxtHeavy.KeyPress, TxtGoldLoan.KeyPress, TxtGoldHand.KeyPress, TxtGoldBank.KeyPress, TxtExp.KeyPress, TxtCurrentEndurance.KeyPress, TxtBlocking.KeyPress
+        Private Sub NumChars(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TxtTwoHWeaponSkill.KeyPress, TxtThirst.KeyPress, TxtStealthSkill.KeyPress, TxtSlippingSkill.KeyPress, TxtSkillPoints.KeyPress, TxtMaximumEndurance.KeyPress, TxtLockpicks.KeyPress, TxtLightWeaponSkill.KeyPress, TxtLevel.KeyPress, TxtHunger.KeyPress, TxtHenchmenLevel5.KeyPress, TxtHenchmenLevel4.KeyPress, TxtHenchmenLevel3.KeyPress, TxtHenchmenLevel2.KeyPress, TxtHenchmenLevel1.KeyPress, TxtHeavyWeaponSkill.KeyPress, TxtGoldOnLoan.KeyPress, TxtGoldOnHand.KeyPress, TxtGoldinBank.KeyPress, TxtExperience.KeyPress, TxtCurrentEndurance.KeyPress, TxtBlockingSkill.KeyPress
             e.Handled = Not (Char.IsDigit(e.KeyChar) OrElse e.KeyChar Like Chr(8))
         End Sub
 
-        Private Sub TxtExp_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TxtExp.TextChanged
+        Private Sub TxtExp_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TxtExperience.TextChanged
             HandleIntTextBox(sender, 100)
         End Sub
 
@@ -490,7 +489,7 @@ Namespace Forms.Admin
             HandleIntTextBox(sender, 11)
         End Sub
 
-        Private Sub TxtSkill_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TxtLight.TextChanged, TxtHeavy.TextChanged, TxtTwoH.TextChanged, TxtBlocking.TextChanged, TxtSlipping.TextChanged, TxtStealth.TextChanged
+        Private Sub TxtSkill_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TxtLightWeaponSkill.TextChanged, TxtHeavyWeaponSkill.TextChanged, TxtTwoHWeaponSkill.TextChanged, TxtBlockingSkill.TextChanged, TxtSlippingSkill.TextChanged, TxtStealthSkill.TextChanged
             HandleIntTextBox(sender, 90)
         End Sub
 

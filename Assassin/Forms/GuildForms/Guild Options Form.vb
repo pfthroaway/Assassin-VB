@@ -35,7 +35,7 @@ Namespace Forms.GuildForms
         ''' <summary>Gets the members of a guild.</summary>
         Private Sub GetMembers()
             CmbGuildmaster.Items.Clear()
-            CmbGuildmaster.Items.Add("Computer")
+            CmbGuildmaster.Items.Add(CurrentGuild.DefaultMaster)
 
             For Each member As String In CurrentGuild.Members
                 CmbGuildmaster.Items.Add(member)

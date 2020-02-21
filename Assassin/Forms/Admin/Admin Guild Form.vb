@@ -92,7 +92,7 @@ Namespace Forms.Admin
             CmbGuildmaster.Items.Clear()
             LstMembers.Items.Clear()
             LstMembers.ClearSelected()
-            CmbGuildmaster.Items.Add("Computer")
+            CmbGuildmaster.Items.Add(CurrentGuild.DefaultMaster)
 
             DisplayCurrentGuildMembers()
 

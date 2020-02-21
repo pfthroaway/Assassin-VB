@@ -44,14 +44,14 @@ Namespace Forms.Admin
             Me.LblHenchmenLevel3 = New System.Windows.Forms.Label()
             Me.LblHenchmenLevel4 = New System.Windows.Forms.Label()
             Me.LblHenchmenLevel5 = New System.Windows.Forms.Label()
-            Me.TxtSkillPts = New System.Windows.Forms.TextBox()
-            Me.TxtGoldBank = New System.Windows.Forms.TextBox()
-            Me.TxtGoldLoan = New System.Windows.Forms.TextBox()
+            Me.TxtSkillPoints = New System.Windows.Forms.TextBox()
+            Me.TxtGoldinBank = New System.Windows.Forms.TextBox()
+            Me.TxtGoldOnLoan = New System.Windows.Forms.TextBox()
             Me.TxtCurrentEndurance = New System.Windows.Forms.TextBox()
             Me.TxtMaximumEndurance = New System.Windows.Forms.TextBox()
-            Me.TxtExp = New System.Windows.Forms.TextBox()
+            Me.TxtExperience = New System.Windows.Forms.TextBox()
             Me.TxtLevel = New System.Windows.Forms.TextBox()
-            Me.TxtTwoH = New System.Windows.Forms.TextBox()
+            Me.TxtTwoHWeaponSkill = New System.Windows.Forms.TextBox()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.Label5 = New System.Windows.Forms.Label()
             Me.Label6 = New System.Windows.Forms.Label()
@@ -61,23 +61,23 @@ Namespace Forms.Admin
             Me.Label10 = New System.Windows.Forms.Label()
             Me.Label11 = New System.Windows.Forms.Label()
             Me.Label12 = New System.Windows.Forms.Label()
-            Me.TxtGoldHand = New System.Windows.Forms.TextBox()
-            Me.TxtHeavy = New System.Windows.Forms.TextBox()
-            Me.TxtLight = New System.Windows.Forms.TextBox()
-            Me.TxtBlocking = New System.Windows.Forms.TextBox()
+            Me.TxtGoldOnHand = New System.Windows.Forms.TextBox()
+            Me.TxtHeavyWeaponSkill = New System.Windows.Forms.TextBox()
+            Me.TxtLightWeaponSkill = New System.Windows.Forms.TextBox()
+            Me.TxtBlockingSkill = New System.Windows.Forms.TextBox()
             Me.TxtHenchmenLevel5 = New System.Windows.Forms.TextBox()
             Me.TxtHenchmenLevel4 = New System.Windows.Forms.TextBox()
             Me.TxtHenchmenLevel3 = New System.Windows.Forms.TextBox()
             Me.TxtHenchmenLevel2 = New System.Windows.Forms.TextBox()
             Me.TxtHenchmenLevel1 = New System.Windows.Forms.TextBox()
-            Me.TxtStealth = New System.Windows.Forms.TextBox()
-            Me.TxtSlipping = New System.Windows.Forms.TextBox()
+            Me.TxtStealthSkill = New System.Windows.Forms.TextBox()
+            Me.TxtSlippingSkill = New System.Windows.Forms.TextBox()
             Me.BtnSave = New System.Windows.Forms.Button()
             Me.BtnExit = New System.Windows.Forms.Button()
             Me.BtnNewUser = New System.Windows.Forms.Button()
             Me.BtnDelete = New System.Windows.Forms.Button()
             Me.LblPass = New System.Windows.Forms.Label()
-            Me.TxtChangePass = New System.Windows.Forms.TextBox()
+            Me.PswdPassword = New System.Windows.Forms.TextBox()
             Me.Label14 = New System.Windows.Forms.Label()
             Me.Label15 = New System.Windows.Forms.Label()
             Me.Label16 = New System.Windows.Forms.Label()
@@ -85,7 +85,7 @@ Namespace Forms.Admin
             Me.Label18 = New System.Windows.Forms.Label()
             Me.TxtLockpicks = New System.Windows.Forms.TextBox()
             Me.Label17 = New System.Windows.Forms.Label()
-            Me.TxtConfirmPass = New System.Windows.Forms.TextBox()
+            Me.PswdConfirm = New System.Windows.Forms.TextBox()
             Me.Label19 = New System.Windows.Forms.Label()
             Me.Label20 = New System.Windows.Forms.Label()
             Me.Label21 = New System.Windows.Forms.Label()
@@ -96,8 +96,8 @@ Namespace Forms.Admin
             Me.TxtThirst = New System.Windows.Forms.TextBox()
             Me.Label25 = New System.Windows.Forms.Label()
             Me.chkAlive = New System.Windows.Forms.CheckBox()
-            Me.CmbCurrWeapon = New System.Windows.Forms.ComboBox()
-            Me.CmbLoc = New System.Windows.Forms.ComboBox()
+            Me.CmbCurrentWeapon = New System.Windows.Forms.ComboBox()
+            Me.CmbLocation = New System.Windows.Forms.ComboBox()
             Me.CmbLightWeapon = New System.Windows.Forms.ComboBox()
             Me.CmbHeavyWeapon = New System.Windows.Forms.ComboBox()
             Me.CmbTwoHWeapon = New System.Windows.Forms.ComboBox()
@@ -330,39 +330,39 @@ Namespace Forms.Admin
             '
             'TxtSkillPts
             '
-            Me.TxtSkillPts.Enabled = False
-            Me.TxtSkillPts.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtSkillPts.Location = New System.Drawing.Point(394, 285)
-            Me.TxtSkillPts.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtSkillPts.MaxLength = 3
-            Me.TxtSkillPts.Name = "TxtSkillPts"
-            Me.TxtSkillPts.Size = New System.Drawing.Size(50, 26)
-            Me.TxtSkillPts.TabIndex = 6
-            Me.TxtSkillPts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtSkillPoints.Enabled = False
+            Me.TxtSkillPoints.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtSkillPoints.Location = New System.Drawing.Point(394, 285)
+            Me.TxtSkillPoints.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtSkillPoints.MaxLength = 3
+            Me.TxtSkillPoints.Name = "TxtSkillPts"
+            Me.TxtSkillPoints.Size = New System.Drawing.Size(50, 26)
+            Me.TxtSkillPoints.TabIndex = 6
+            Me.TxtSkillPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtGoldBank
             '
-            Me.TxtGoldBank.Enabled = False
-            Me.TxtGoldBank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtGoldBank.Location = New System.Drawing.Point(720, 320)
-            Me.TxtGoldBank.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtGoldBank.MaxLength = 6
-            Me.TxtGoldBank.Name = "TxtGoldBank"
-            Me.TxtGoldBank.Size = New System.Drawing.Size(60, 26)
-            Me.TxtGoldBank.TabIndex = 21
-            Me.TxtGoldBank.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtGoldinBank.Enabled = False
+            Me.TxtGoldinBank.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldinBank.Location = New System.Drawing.Point(720, 320)
+            Me.TxtGoldinBank.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldinBank.MaxLength = 6
+            Me.TxtGoldinBank.Name = "TxtGoldBank"
+            Me.TxtGoldinBank.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldinBank.TabIndex = 21
+            Me.TxtGoldinBank.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtGoldLoan
             '
-            Me.TxtGoldLoan.Enabled = False
-            Me.TxtGoldLoan.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtGoldLoan.Location = New System.Drawing.Point(720, 354)
-            Me.TxtGoldLoan.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtGoldLoan.MaxLength = 6
-            Me.TxtGoldLoan.Name = "TxtGoldLoan"
-            Me.TxtGoldLoan.Size = New System.Drawing.Size(60, 26)
-            Me.TxtGoldLoan.TabIndex = 22
-            Me.TxtGoldLoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtGoldOnLoan.Enabled = False
+            Me.TxtGoldOnLoan.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldOnLoan.Location = New System.Drawing.Point(720, 354)
+            Me.TxtGoldOnLoan.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldOnLoan.MaxLength = 6
+            Me.TxtGoldOnLoan.Name = "TxtGoldLoan"
+            Me.TxtGoldOnLoan.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldOnLoan.TabIndex = 22
+            Me.TxtGoldOnLoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtCurrentEndurance
             '
@@ -390,15 +390,15 @@ Namespace Forms.Admin
             '
             'TxtExp
             '
-            Me.TxtExp.Enabled = False
-            Me.TxtExp.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtExp.Location = New System.Drawing.Point(394, 251)
-            Me.TxtExp.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtExp.MaxLength = 3
-            Me.TxtExp.Name = "TxtExp"
-            Me.TxtExp.Size = New System.Drawing.Size(50, 26)
-            Me.TxtExp.TabIndex = 5
-            Me.TxtExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtExperience.Enabled = False
+            Me.TxtExperience.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtExperience.Location = New System.Drawing.Point(394, 251)
+            Me.TxtExperience.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtExperience.MaxLength = 3
+            Me.TxtExperience.Name = "TxtExp"
+            Me.TxtExperience.Size = New System.Drawing.Size(50, 26)
+            Me.TxtExperience.TabIndex = 5
+            Me.TxtExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtLevel
             '
@@ -414,15 +414,15 @@ Namespace Forms.Admin
             '
             'TxtTwoH
             '
-            Me.TxtTwoH.Enabled = False
-            Me.TxtTwoH.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtTwoH.Location = New System.Drawing.Point(1045, 115)
-            Me.TxtTwoH.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtTwoH.MaxLength = 2
-            Me.TxtTwoH.Name = "TxtTwoH"
-            Me.TxtTwoH.Size = New System.Drawing.Size(50, 26)
-            Me.TxtTwoH.TabIndex = 25
-            Me.TxtTwoH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtTwoHWeaponSkill.Enabled = False
+            Me.TxtTwoHWeaponSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtTwoHWeaponSkill.Location = New System.Drawing.Point(1045, 115)
+            Me.TxtTwoHWeaponSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtTwoHWeaponSkill.MaxLength = 2
+            Me.TxtTwoHWeaponSkill.Name = "TxtTwoH"
+            Me.TxtTwoHWeaponSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtTwoHWeaponSkill.TabIndex = 25
+            Me.TxtTwoHWeaponSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'Label2
             '
@@ -534,51 +534,51 @@ Namespace Forms.Admin
             '
             'TxtGoldHand
             '
-            Me.TxtGoldHand.Enabled = False
-            Me.TxtGoldHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtGoldHand.Location = New System.Drawing.Point(720, 285)
-            Me.TxtGoldHand.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtGoldHand.MaxLength = 6
-            Me.TxtGoldHand.Name = "TxtGoldHand"
-            Me.TxtGoldHand.Size = New System.Drawing.Size(60, 26)
-            Me.TxtGoldHand.TabIndex = 20
-            Me.TxtGoldHand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtGoldOnHand.Enabled = False
+            Me.TxtGoldOnHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtGoldOnHand.Location = New System.Drawing.Point(720, 285)
+            Me.TxtGoldOnHand.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtGoldOnHand.MaxLength = 6
+            Me.TxtGoldOnHand.Name = "TxtGoldHand"
+            Me.TxtGoldOnHand.Size = New System.Drawing.Size(60, 26)
+            Me.TxtGoldOnHand.TabIndex = 20
+            Me.TxtGoldOnHand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtHeavy
             '
-            Me.TxtHeavy.Enabled = False
-            Me.TxtHeavy.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtHeavy.Location = New System.Drawing.Point(1045, 81)
-            Me.TxtHeavy.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtHeavy.MaxLength = 2
-            Me.TxtHeavy.Name = "TxtHeavy"
-            Me.TxtHeavy.Size = New System.Drawing.Size(50, 26)
-            Me.TxtHeavy.TabIndex = 24
-            Me.TxtHeavy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtHeavyWeaponSkill.Enabled = False
+            Me.TxtHeavyWeaponSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtHeavyWeaponSkill.Location = New System.Drawing.Point(1045, 81)
+            Me.TxtHeavyWeaponSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtHeavyWeaponSkill.MaxLength = 2
+            Me.TxtHeavyWeaponSkill.Name = "TxtHeavy"
+            Me.TxtHeavyWeaponSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtHeavyWeaponSkill.TabIndex = 24
+            Me.TxtHeavyWeaponSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtLight
             '
-            Me.TxtLight.Enabled = False
-            Me.TxtLight.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtLight.Location = New System.Drawing.Point(1045, 47)
-            Me.TxtLight.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtLight.MaxLength = 2
-            Me.TxtLight.Name = "TxtLight"
-            Me.TxtLight.Size = New System.Drawing.Size(50, 26)
-            Me.TxtLight.TabIndex = 23
-            Me.TxtLight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtLightWeaponSkill.Enabled = False
+            Me.TxtLightWeaponSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtLightWeaponSkill.Location = New System.Drawing.Point(1045, 47)
+            Me.TxtLightWeaponSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtLightWeaponSkill.MaxLength = 2
+            Me.TxtLightWeaponSkill.Name = "TxtLight"
+            Me.TxtLightWeaponSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtLightWeaponSkill.TabIndex = 23
+            Me.TxtLightWeaponSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtBlocking
             '
-            Me.TxtBlocking.Enabled = False
-            Me.TxtBlocking.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtBlocking.Location = New System.Drawing.Point(1045, 149)
-            Me.TxtBlocking.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtBlocking.MaxLength = 2
-            Me.TxtBlocking.Name = "TxtBlocking"
-            Me.TxtBlocking.Size = New System.Drawing.Size(50, 26)
-            Me.TxtBlocking.TabIndex = 26
-            Me.TxtBlocking.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtBlockingSkill.Enabled = False
+            Me.TxtBlockingSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtBlockingSkill.Location = New System.Drawing.Point(1045, 149)
+            Me.TxtBlockingSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtBlockingSkill.MaxLength = 2
+            Me.TxtBlockingSkill.Name = "TxtBlocking"
+            Me.TxtBlockingSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtBlockingSkill.TabIndex = 26
+            Me.TxtBlockingSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtHenchmenLevel5
             '
@@ -642,27 +642,27 @@ Namespace Forms.Admin
             '
             'TxtStealth
             '
-            Me.TxtStealth.Enabled = False
-            Me.TxtStealth.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtStealth.Location = New System.Drawing.Point(1045, 217)
-            Me.TxtStealth.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtStealth.MaxLength = 2
-            Me.TxtStealth.Name = "TxtStealth"
-            Me.TxtStealth.Size = New System.Drawing.Size(50, 26)
-            Me.TxtStealth.TabIndex = 28
-            Me.TxtStealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtStealthSkill.Enabled = False
+            Me.TxtStealthSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtStealthSkill.Location = New System.Drawing.Point(1045, 217)
+            Me.TxtStealthSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtStealthSkill.MaxLength = 2
+            Me.TxtStealthSkill.Name = "TxtStealth"
+            Me.TxtStealthSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtStealthSkill.TabIndex = 28
+            Me.TxtStealthSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'TxtSlipping
             '
-            Me.TxtSlipping.Enabled = False
-            Me.TxtSlipping.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtSlipping.Location = New System.Drawing.Point(1045, 183)
-            Me.TxtSlipping.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtSlipping.MaxLength = 2
-            Me.TxtSlipping.Name = "TxtSlipping"
-            Me.TxtSlipping.Size = New System.Drawing.Size(50, 26)
-            Me.TxtSlipping.TabIndex = 27
-            Me.TxtSlipping.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.TxtSlippingSkill.Enabled = False
+            Me.TxtSlippingSkill.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TxtSlippingSkill.Location = New System.Drawing.Point(1045, 183)
+            Me.TxtSlippingSkill.Margin = New System.Windows.Forms.Padding(4)
+            Me.TxtSlippingSkill.MaxLength = 2
+            Me.TxtSlippingSkill.Name = "TxtSlipping"
+            Me.TxtSlippingSkill.Size = New System.Drawing.Size(50, 26)
+            Me.TxtSlippingSkill.TabIndex = 27
+            Me.TxtSlippingSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
             'BtnSave
             '
@@ -725,16 +725,16 @@ Namespace Forms.Admin
             '
             'TxtChangePass
             '
-            Me.TxtChangePass.Enabled = False
-            Me.TxtChangePass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtChangePass.Location = New System.Drawing.Point(394, 81)
-            Me.TxtChangePass.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtChangePass.MaxLength = 16
-            Me.TxtChangePass.Name = "TxtChangePass"
-            Me.TxtChangePass.Size = New System.Drawing.Size(175, 26)
-            Me.TxtChangePass.TabIndex = 2
-            Me.TxtChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            Me.TxtChangePass.UseSystemPasswordChar = True
+            Me.PswdPassword.Enabled = False
+            Me.PswdPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PswdPassword.Location = New System.Drawing.Point(394, 81)
+            Me.PswdPassword.Margin = New System.Windows.Forms.Padding(4)
+            Me.PswdPassword.MaxLength = 16
+            Me.PswdPassword.Name = "TxtChangePass"
+            Me.PswdPassword.Size = New System.Drawing.Size(175, 26)
+            Me.PswdPassword.TabIndex = 2
+            Me.PswdPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.PswdPassword.UseSystemPasswordChar = True
             '
             'Label14
             '
@@ -823,16 +823,16 @@ Namespace Forms.Admin
             '
             'TxtConfirmPass
             '
-            Me.TxtConfirmPass.Enabled = False
-            Me.TxtConfirmPass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TxtConfirmPass.Location = New System.Drawing.Point(394, 115)
-            Me.TxtConfirmPass.Margin = New System.Windows.Forms.Padding(4)
-            Me.TxtConfirmPass.MaxLength = 16
-            Me.TxtConfirmPass.Name = "TxtConfirmPass"
-            Me.TxtConfirmPass.Size = New System.Drawing.Size(175, 26)
-            Me.TxtConfirmPass.TabIndex = 3
-            Me.TxtConfirmPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-            Me.TxtConfirmPass.UseSystemPasswordChar = True
+            Me.PswdConfirm.Enabled = False
+            Me.PswdConfirm.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PswdConfirm.Location = New System.Drawing.Point(394, 115)
+            Me.PswdConfirm.Margin = New System.Windows.Forms.Padding(4)
+            Me.PswdConfirm.MaxLength = 16
+            Me.PswdConfirm.Name = "TxtConfirmPass"
+            Me.PswdConfirm.Size = New System.Drawing.Size(175, 26)
+            Me.PswdConfirm.TabIndex = 3
+            Me.PswdConfirm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+            Me.PswdConfirm.UseSystemPasswordChar = True
             '
             'Label19
             '
@@ -937,9 +937,9 @@ Namespace Forms.Admin
             Me.Label25.Location = New System.Drawing.Point(901, 285)
             Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label25.Name = "Label25"
-            Me.Label25.Size = New System.Drawing.Size(183, 24)
+            Me.Label25.Size = New System.Drawing.Size(193, 24)
             Me.Label25.TabIndex = 68
-            Me.Label25.Text = "HenchmenLevel:"
+            Me.Label25.Text = "Henchmen:"
             Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'chkAlive
@@ -956,26 +956,26 @@ Namespace Forms.Admin
             '
             'CmbCurrWeapon
             '
-            Me.CmbCurrWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.CmbCurrWeapon.Enabled = False
-            Me.CmbCurrWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CmbCurrWeapon.FormattingEnabled = True
-            Me.CmbCurrWeapon.Items.AddRange(New Object() {"Light", "Heavy", "TwoHanded"})
-            Me.CmbCurrWeapon.Location = New System.Drawing.Point(719, 48)
-            Me.CmbCurrWeapon.Name = "CmbCurrWeapon"
-            Me.CmbCurrWeapon.Size = New System.Drawing.Size(101, 26)
-            Me.CmbCurrWeapon.TabIndex = 13
+            Me.CmbCurrentWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.CmbCurrentWeapon.Enabled = False
+            Me.CmbCurrentWeapon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbCurrentWeapon.FormattingEnabled = True
+            Me.CmbCurrentWeapon.Items.AddRange(New Object() {"Light", "Heavy", "TwoHanded"})
+            Me.CmbCurrentWeapon.Location = New System.Drawing.Point(719, 48)
+            Me.CmbCurrentWeapon.Name = "CmbCurrWeapon"
+            Me.CmbCurrentWeapon.Size = New System.Drawing.Size(101, 26)
+            Me.CmbCurrentWeapon.TabIndex = 13
             '
             'CmbLoc
             '
-            Me.CmbLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.CmbLoc.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CmbLoc.FormattingEnabled = True
-            Me.CmbLoc.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
-            Me.CmbLoc.Location = New System.Drawing.Point(395, 350)
-            Me.CmbLoc.Name = "CmbLoc"
-            Me.CmbLoc.Size = New System.Drawing.Size(101, 26)
-            Me.CmbLoc.TabIndex = 8
+            Me.CmbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.CmbLocation.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CmbLocation.FormattingEnabled = True
+            Me.CmbLocation.Items.AddRange(New Object() {"Streets", "Inn", "Guild", "Jail"})
+            Me.CmbLocation.Location = New System.Drawing.Point(395, 350)
+            Me.CmbLocation.Name = "CmbLoc"
+            Me.CmbLocation.Size = New System.Drawing.Size(101, 26)
+            Me.CmbLocation.TabIndex = 8
             '
             'CmbLightWeapon
             '
@@ -1121,8 +1121,8 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.CmbTwoHWeapon)
             Me.Controls.Add(Me.CmbHeavyWeapon)
             Me.Controls.Add(Me.CmbLightWeapon)
-            Me.Controls.Add(Me.CmbLoc)
-            Me.Controls.Add(Me.CmbCurrWeapon)
+            Me.Controls.Add(Me.CmbLocation)
+            Me.Controls.Add(Me.CmbCurrentWeapon)
             Me.Controls.Add(Me.chkAlive)
             Me.Controls.Add(Me.Label25)
             Me.Controls.Add(Me.TxtThirst)
@@ -1133,7 +1133,7 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label21)
             Me.Controls.Add(Me.Label20)
             Me.Controls.Add(Me.Label19)
-            Me.Controls.Add(Me.TxtConfirmPass)
+            Me.Controls.Add(Me.PswdConfirm)
             Me.Controls.Add(Me.Label17)
             Me.Controls.Add(Me.TxtLockpicks)
             Me.Controls.Add(Me.Label18)
@@ -1141,23 +1141,23 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label16)
             Me.Controls.Add(Me.Label15)
             Me.Controls.Add(Me.Label14)
-            Me.Controls.Add(Me.TxtChangePass)
+            Me.Controls.Add(Me.PswdPassword)
             Me.Controls.Add(Me.LblPass)
             Me.Controls.Add(Me.BtnDelete)
             Me.Controls.Add(Me.BtnNewUser)
             Me.Controls.Add(Me.BtnExit)
             Me.Controls.Add(Me.BtnSave)
-            Me.Controls.Add(Me.TxtSlipping)
-            Me.Controls.Add(Me.TxtStealth)
+            Me.Controls.Add(Me.TxtSlippingSkill)
+            Me.Controls.Add(Me.TxtStealthSkill)
             Me.Controls.Add(Me.TxtHenchmenLevel1)
             Me.Controls.Add(Me.TxtHenchmenLevel2)
             Me.Controls.Add(Me.TxtHenchmenLevel3)
             Me.Controls.Add(Me.TxtHenchmenLevel4)
             Me.Controls.Add(Me.TxtHenchmenLevel5)
-            Me.Controls.Add(Me.TxtBlocking)
-            Me.Controls.Add(Me.TxtLight)
-            Me.Controls.Add(Me.TxtHeavy)
-            Me.Controls.Add(Me.TxtGoldHand)
+            Me.Controls.Add(Me.TxtBlockingSkill)
+            Me.Controls.Add(Me.TxtLightWeaponSkill)
+            Me.Controls.Add(Me.TxtHeavyWeaponSkill)
+            Me.Controls.Add(Me.TxtGoldOnHand)
             Me.Controls.Add(Me.Label12)
             Me.Controls.Add(Me.Label11)
             Me.Controls.Add(Me.Label10)
@@ -1167,14 +1167,14 @@ Namespace Forms.Admin
             Me.Controls.Add(Me.Label6)
             Me.Controls.Add(Me.Label5)
             Me.Controls.Add(Me.Label2)
-            Me.Controls.Add(Me.TxtTwoH)
+            Me.Controls.Add(Me.TxtTwoHWeaponSkill)
             Me.Controls.Add(Me.TxtLevel)
-            Me.Controls.Add(Me.TxtExp)
+            Me.Controls.Add(Me.TxtExperience)
             Me.Controls.Add(Me.TxtMaximumEndurance)
             Me.Controls.Add(Me.TxtCurrentEndurance)
-            Me.Controls.Add(Me.TxtGoldLoan)
-            Me.Controls.Add(Me.TxtGoldBank)
-            Me.Controls.Add(Me.TxtSkillPts)
+            Me.Controls.Add(Me.TxtGoldOnLoan)
+            Me.Controls.Add(Me.TxtGoldinBank)
+            Me.Controls.Add(Me.TxtSkillPoints)
             Me.Controls.Add(Me.LblHenchmenLevel5)
             Me.Controls.Add(Me.LblHenchmenLevel4)
             Me.Controls.Add(Me.LblHenchmenLevel3)
@@ -1222,14 +1222,14 @@ Namespace Forms.Admin
         Friend WithEvents LblHenchmenLevel3 As Label
         Friend WithEvents LblHenchmenLevel4 As Label
         Friend WithEvents LblHenchmenLevel5 As Label
-        Friend WithEvents TxtSkillPts As TextBox
-        Friend WithEvents TxtGoldBank As TextBox
-        Friend WithEvents TxtGoldLoan As TextBox
+        Friend WithEvents TxtSkillPoints As TextBox
+        Friend WithEvents TxtGoldinBank As TextBox
+        Friend WithEvents TxtGoldOnLoan As TextBox
         Friend WithEvents TxtCurrentEndurance As TextBox
         Friend WithEvents TxtMaximumEndurance As TextBox
-        Friend WithEvents TxtExp As TextBox
+        Friend WithEvents TxtExperience As TextBox
         Friend WithEvents TxtLevel As TextBox
-        Friend WithEvents TxtTwoH As TextBox
+        Friend WithEvents TxtTwoHWeaponSkill As TextBox
         Friend WithEvents Label2 As Label
         Friend WithEvents Label5 As Label
         Friend WithEvents Label6 As Label
@@ -1239,23 +1239,23 @@ Namespace Forms.Admin
         Friend WithEvents Label10 As Label
         Friend WithEvents Label11 As Label
         Friend WithEvents Label12 As Label
-        Friend WithEvents TxtGoldHand As TextBox
-        Friend WithEvents TxtHeavy As TextBox
-        Friend WithEvents TxtLight As TextBox
-        Friend WithEvents TxtBlocking As TextBox
+        Friend WithEvents TxtGoldOnHand As TextBox
+        Friend WithEvents TxtHeavyWeaponSkill As TextBox
+        Friend WithEvents TxtLightWeaponSkill As TextBox
+        Friend WithEvents TxtBlockingSkill As TextBox
         Friend WithEvents TxtHenchmenLevel5 As TextBox
         Friend WithEvents TxtHenchmenLevel4 As TextBox
         Friend WithEvents TxtHenchmenLevel3 As TextBox
         Friend WithEvents TxtHenchmenLevel2 As TextBox
         Friend WithEvents TxtHenchmenLevel1 As TextBox
-        Friend WithEvents TxtStealth As TextBox
-        Friend WithEvents TxtSlipping As TextBox
+        Friend WithEvents TxtStealthSkill As TextBox
+        Friend WithEvents TxtSlippingSkill As TextBox
         Friend WithEvents BtnSave As Button
         Friend WithEvents BtnExit As Button
         Friend WithEvents BtnNewUser As Button
         Friend WithEvents BtnDelete As Button
         Friend WithEvents LblPass As Label
-        Friend WithEvents TxtChangePass As TextBox
+        Friend WithEvents PswdPassword As TextBox
         Friend WithEvents Label14 As Label
         Friend WithEvents Label15 As Label
         Friend WithEvents Label16 As Label
@@ -1263,7 +1263,7 @@ Namespace Forms.Admin
         Friend WithEvents Label18 As Label
         Friend WithEvents TxtLockpicks As TextBox
         Friend WithEvents Label17 As Label
-        Friend WithEvents TxtConfirmPass As TextBox
+        Friend WithEvents PswdConfirm As TextBox
         Friend WithEvents Label19 As Label
         Friend WithEvents Label20 As Label
         Friend WithEvents Label21 As Label
@@ -1274,8 +1274,8 @@ Namespace Forms.Admin
         Friend WithEvents TxtThirst As TextBox
         Friend WithEvents Label25 As Label
         Friend WithEvents chkAlive As CheckBox
-        Friend WithEvents CmbCurrWeapon As ComboBox
-        Friend WithEvents CmbLoc As ComboBox
+        Friend WithEvents CmbCurrentWeapon As ComboBox
+        Friend WithEvents CmbLocation As ComboBox
         Friend WithEvents CmbLightWeapon As ComboBox
         Friend WithEvents CmbHeavyWeapon As ComboBox
         Friend WithEvents CmbTwoHWeapon As ComboBox

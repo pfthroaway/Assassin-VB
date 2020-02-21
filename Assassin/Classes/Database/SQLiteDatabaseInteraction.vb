@@ -306,7 +306,7 @@ Namespace Classes.Database
 
             If ds.Tables(0).Rows.Count > 0 Then
                 For Each dr As DataRow In ds.Tables(0).Rows
-                    Dim newGuild As New Guild(Int32Helper.Parse(dr("ID")), dr("GuildName").ToString(), dr("Guildmaster").ToString(), Int32Helper.Parse(dr("GuildFee")), Int32Helper.Parse(dr("GuildGold")), New List(Of String)(), Int32Helper.Parse(dr("HenchmenLevel1")), Int32Helper.Parse(dr("HenchmenLevel2")), Int32Helper.Parse(dr("HenchmenLevel3")), Int32Helper.Parse(dr("HenchmenLevel4")), Int32Helper.Parse(dr("HenchmenLevel5")))
+                    Dim newGuild As New Guild(Int32Helper.Parse(dr("ID")), dr("GuildName").ToString(), dr("Guildmaster").ToString(), dr("DefaultGuildmaster").ToString(), Int32Helper.Parse(dr("GuildFee")), Int32Helper.Parse(dr("GuildGold")), New List(Of String)(), Int32Helper.Parse(dr("HenchmenLevel1")), Int32Helper.Parse(dr("HenchmenLevel2")), Int32Helper.Parse(dr("HenchmenLevel3")), Int32Helper.Parse(dr("HenchmenLevel4")), Int32Helper.Parse(dr("HenchmenLevel5")))
                     Dim members As String = $"Guild{Int32Helper.Parse(dr("ID"))}Members"
                     Dim membersDS As DataSet = Await SQLiteHelper.FillDataSet(_con, $"SELECT * FROM {members}")
                     If membersDS.Tables(0).Rows.Count > 0 Then

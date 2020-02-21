@@ -17,6 +17,9 @@ Namespace Classes.Entities
         ''' <summary>The master of the <see cref="Guild"/>.</summary>
         Public Property Master As String
 
+        ''' <summary>The default master of the <see cref="Guild"/>.</summary>
+        Public Property DefaultMaster As String
+
         ''' <summary>The fee required to join the <see cref="Guild"/>.</summary>
         Public Property Fee As Integer
 
@@ -59,7 +62,7 @@ Namespace Classes.Entities
             If left Is Nothing Xor right Is Nothing Then
                 Return False
             End If
-            Return left.ID = right.ID AndAlso left.Name = right.Name AndAlso left.Master = right.Master AndAlso left.Fee = right.Fee AndAlso left.Gold = right.Gold AndAlso left.HenchmenLevel1 = right.HenchmenLevel1 AndAlso left.HenchmenLevel2 = right.HenchmenLevel2 AndAlso left.HenchmenLevel3 = right.HenchmenLevel3 AndAlso left.HenchmenLevel4 = right.HenchmenLevel4 AndAlso left.HenchmenLevel5 = right.HenchmenLevel5 AndAlso Not left.Members.Except(right.Members).Any() AndAlso Not right.Members.Except(left.Members).Any()
+            Return left.ID = right.ID AndAlso String.Equals(left.Name, right.Name, StringComparison.OrdinalIgnoreCase) AndAlso String.Equals(left.Master, right.Master, StringComparison.OrdinalIgnoreCase) AndAlso String.Equals(left.DefaultMaster, right.DefaultMaster, StringComparison.OrdinalIgnoreCase) AndAlso left.Fee = right.Fee AndAlso left.Gold = right.Gold AndAlso left.HenchmenLevel1 = right.HenchmenLevel1 AndAlso left.HenchmenLevel2 = right.HenchmenLevel2 AndAlso left.HenchmenLevel3 = right.HenchmenLevel3 AndAlso left.HenchmenLevel4 = right.HenchmenLevel4 AndAlso left.HenchmenLevel5 = right.HenchmenLevel5 AndAlso Not left.Members.Except(right.Members).Any() AndAlso Not right.Members.Except(left.Members).Any()
         End Function
 
         Public Overloads Function Equals(otherGuild As Guild) As Boolean
@@ -93,6 +96,7 @@ Namespace Classes.Entities
             ID = 0
             Name = ""
             Master = "Computer"
+            DefaultMaster = "Computer"
             Fee = 50
             Gold = 500
             Members = New List(Of String)
@@ -115,10 +119,11 @@ Namespace Classes.Entities
         ''' <param name="newHenchmenLevel3">Amount of Level 3 Henchmen the <see cref="Guild"/> employs</param>
         ''' <param name="newHenchmenLevel4">Amount of Level 4 Henchmen the <see cref="Guild"/> employs</param>
         ''' <param name="newHenchmenLevel5">Amount of Level 5 Henchmen the <see cref="Guild"/> employs</param>
-        Friend Sub New(newID As Integer, newName As String, newMaster As String, newFee As Integer, newGold As Integer, newMembers As List(Of [String]), newHenchmenLevel1 As Integer, newHenchmenLevel2 As Integer, newHenchmenLevel3 As Integer, newHenchmenLevel4 As Integer, newHenchmenLevel5 As Integer)
+        Friend Sub New(newID As Integer, newName As String, newMaster As String, newDefaultMaster As String, newFee As Integer, newGold As Integer, newMembers As List(Of [String]), newHenchmenLevel1 As Integer, newHenchmenLevel2 As Integer, newHenchmenLevel3 As Integer, newHenchmenLevel4 As Integer, newHenchmenLevel5 As Integer)
             ID = newID
             Name = newName
             Master = newMaster
+            DefaultMaster = newDefaultMaster
             Fee = newFee
             Gold = newGold
             Members = newMembers
